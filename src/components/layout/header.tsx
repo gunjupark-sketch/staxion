@@ -47,7 +47,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="MEDI STAXION" width={140} height={40} priority />
+          <Image src="/logo.png" alt="MEDI STAXION" width={160} height={40} priority className="h-8 w-auto" />
         </Link>
 
         {/* Desktop Navigation */}

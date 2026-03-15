@@ -31,7 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Image src="/logo.svg" alt="MEDI STAXION" width={120} height={34} />
+            <Image src="/logo.png" alt="MEDI STAXION" width={140} height={34} className="h-7 w-auto" />
             <p className="mt-3 text-sm leading-relaxed text-text-muted">
               미용치과, 시작이 다르면
               <br />
