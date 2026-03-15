@@ -11,9 +11,9 @@ const footerLinks = {
   ],
   정보: [
     { label: "미용치과 소개", href: "/about-beauty" },
+    { label: "소식", href: "/news" },
     { label: "블로그", href: "/blog" },
     { label: "회사소개", href: "/about" },
-    { label: "해외환자유치", href: "/global" },
   ],
   지원: [
     { label: "상담신청", href: "/contact" },
@@ -68,7 +68,10 @@ export function Footer() {
           <div className="text-center md:text-left">
             <p>(주)더스테이션 | 대표: 박건주</p>
             <p className="mt-1">
-              사업자등록번호: 000-00-00000 | 통신판매업신고: 제0000-서울강남-00000호
+              사업자등록번호: 650-81-03586 | 통신판매업신고: 제2025-서울서초-2513호
+            </p>
+            <p className="mt-0.5">
+              서울 서초구 효령로53길 45, 233호 | 0502-5552-0492
             </p>
           </div>
           <p>&copy; {new Date().getFullYear()} STAXION. All rights reserved.</p>

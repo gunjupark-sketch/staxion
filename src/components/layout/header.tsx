@@ -13,6 +13,7 @@ const navItems = [
   { label: "교육/세미나", href: "/education" },
   { label: "스토어", href: "/store" },
   { label: "서비스", href: "/services" },
+  { label: "소식", href: "/news" },
   { label: "블로그", href: "/blog" },
   { label: "커뮤니티", href: "/community" },
 ];
