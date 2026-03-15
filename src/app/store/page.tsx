@@ -46,7 +46,7 @@ export default function StorePage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3">
             {products.map((product) => (
               <Link key={product.id} href={`/store/${product.slug}`}>
                 <Card className="h-full border-border/50 transition-shadow hover:shadow-lg">

@@ -53,8 +53,8 @@ export default function EducationPage() {
               <Card key={seminar.id} className="border-border/50 transition-shadow hover:shadow-md">
                 <CardContent className="flex flex-col gap-4 p-6 md:flex-row md:items-center md:justify-between">
                   <div className="flex-1">
-                    <div className="flex items-center gap-2">
-                      <h3 className="text-lg font-bold text-text-primary">{seminar.title}</h3>
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="text-base font-bold text-text-primary sm:text-lg">{seminar.title}</h3>
                       <Badge variant="secondary" className="bg-brand-lime-safe/10 text-brand-lime-safe">
                         {seminar.status}
                       </Badge>
@@ -65,13 +65,13 @@ export default function EducationPage() {
                       <span>{seminar.seats}석</span>
                     </div>
                   </div>
-                  <div className="flex items-center gap-4">
+                  <div className="flex w-full items-center gap-4 md:w-auto">
                     <p className="text-lg font-bold text-text-primary">
                       {seminar.price === 0 ? "무료" : `${seminar.price.toLocaleString()}원`}
                     </p>
                     <Link
                       href={`/contact`}
-                      className="rounded-lg bg-brand-lime-safe px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+                      className="ml-auto inline-flex min-h-[44px] items-center justify-center rounded-lg bg-brand-lime-safe px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
                     >
                       신청하기
                     </Link>

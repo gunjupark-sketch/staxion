@@ -88,7 +88,7 @@ export default function SignupPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full bg-brand-lime-safe text-white hover:bg-brand-lime-safe/90"
+              className="w-full min-h-[48px] bg-brand-lime-safe text-base font-semibold text-white hover:bg-brand-lime-safe/90"
             >
               {loading ? "가입 중..." : "가입하기"}
             </Button>
@@ -102,7 +102,7 @@ export default function SignupPage() {
 
           <p className="mt-4 text-center text-sm text-text-muted">
             이미 계정이 있으신가요?{" "}
-            <Link href="/login" className="font-medium text-brand-lime-safe hover:underline">
+            <Link href="/login" className="inline-flex min-h-[44px] items-center font-medium text-brand-lime-safe hover:underline">
               로그인
             </Link>
           </p>

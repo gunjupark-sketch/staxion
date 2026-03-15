@@ -100,7 +100,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger className="lg:hidden rounded-md p-2 text-text-secondary hover:bg-surface-secondary">
+          <SheetTrigger className="lg:hidden rounded-md p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-text-secondary hover:bg-surface-secondary">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"

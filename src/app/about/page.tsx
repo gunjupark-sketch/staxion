@@ -16,7 +16,7 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 sm:gap-8">
             {[
               { title: "미션", desc: "치과에서 미용시술을 시작하는 가장 확실한 방법을 제공합니다." },
               { title: "비전", desc: "대한민국 미용치과 도입의 표준을 만들어갑니다." },

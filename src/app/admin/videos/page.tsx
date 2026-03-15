@@ -22,7 +22,7 @@ export default async function VideosPage() {
       <h1 className="text-2xl font-bold text-text-primary">대기실 영상</h1>
       <p className="mt-1 text-sm text-text-muted">대기실 디스플레이 영상 관리</p>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -34,32 +34,34 @@ export default async function VideosPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {videos?.map((video) => (
-              <TableRow key={video.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      video.is_published
-                        ? "bg-green-50 text-green-600"
-                        : "bg-gray-100 text-gray-500"
-                    }
-                  >
-                    {video.is_published ? "공개" : "비공개"}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {video.sort_order}
-                </TableCell>
-                <TableCell className="font-medium">{video.title}</TableCell>
-                <TableCell className="max-w-xs truncate text-text-muted">
-                  {video.video_url}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(video.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {videos && videos.length > 0 ? (
+              videos.map((video) => (
+                <TableRow key={video.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        video.is_published
+                          ? "bg-green-50 text-green-600"
+                          : "bg-gray-100 text-gray-500"
+                      }
+                    >
+                      {video.is_published ? "공개" : "비공개"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {video.sort_order}
+                  </TableCell>
+                  <TableCell className="font-medium">{video.title}</TableCell>
+                  <TableCell className="max-w-xs truncate text-text-muted">
+                    {video.video_url}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(video.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={5}

@@ -17,10 +17,10 @@ export default function GuidebookPage() {
             <br />
             시술 선택부터 수익 모델까지 한 권에.
           </p>
-          <div className="mt-10 flex flex-col items-center gap-3">
+          <div className="mt-10 flex flex-col items-center gap-3 px-4 sm:px-0">
             <Link
               href="#purchase"
-              className="inline-flex h-12 items-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
             >
               지금 구매하기
             </Link>
@@ -101,10 +101,10 @@ export default function GuidebookPage() {
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <h2 className="text-2xl font-bold text-white">미용치과 도입, 지금 시작하세요</h2>
           <p className="mt-3 text-gray-400">가이드북 한 권으로 시행착오를 줄이세요.</p>
-          <div className="mt-8 flex flex-col items-center gap-3">
+          <div className="mt-8 flex flex-col items-center gap-3 px-4 sm:px-0">
             <Link
               href="#"
-              className="inline-flex h-12 items-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
             >
               30만원 — 지금 구매하기
             </Link>

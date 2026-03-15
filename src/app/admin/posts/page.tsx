@@ -33,7 +33,7 @@ export default async function PostsPage() {
         </div>
       </div>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -46,39 +46,41 @@ export default async function PostsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {posts?.map((post) => (
-              <TableRow key={post.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      post.is_published
-                        ? "bg-green-50 text-green-600"
-                        : "bg-gray-100 text-gray-500"
-                    }
-                  >
-                    {post.is_published ? "공개" : "비공개"}
-                  </Badge>
-                </TableCell>
-                <TableCell>
-                  <Badge variant="secondary">
-                    {categoryLabel[post.category]}
-                  </Badge>
-                </TableCell>
-                <TableCell className="font-medium max-w-xs truncate">
-                  {post.title}
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {post.author_name || "-"}
-                </TableCell>
-                <TableCell className="text-right text-text-muted">
-                  {post.view_count}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(post.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {posts && posts.length > 0 ? (
+              posts.map((post) => (
+                <TableRow key={post.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        post.is_published
+                          ? "bg-green-50 text-green-600"
+                          : "bg-gray-100 text-gray-500"
+                      }
+                    >
+                      {post.is_published ? "공개" : "비공개"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary">
+                      {categoryLabel[post.category]}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="font-medium max-w-xs truncate">
+                    {post.title}
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {post.author_name || "-"}
+                  </TableCell>
+                  <TableCell className="text-right text-text-muted">
+                    {post.view_count}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(post.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={6}

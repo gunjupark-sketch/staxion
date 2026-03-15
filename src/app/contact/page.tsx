@@ -111,7 +111,7 @@ export default function ContactPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full bg-brand-lime-safe py-3 text-base font-semibold text-white hover:bg-brand-lime-safe/90"
+                className="w-full min-h-[48px] bg-brand-lime-safe py-3 text-base font-semibold text-white hover:bg-brand-lime-safe/90"
               >
                 {loading ? "전송 중..." : "상담 신청하기"}
               </Button>

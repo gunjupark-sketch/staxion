@@ -38,7 +38,7 @@ export default async function OrdersPage() {
       <h1 className="text-2xl font-bold text-text-primary">주문 관리</h1>
       <p className="mt-1 text-sm text-text-muted">전체 주문 내역</p>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -51,33 +51,35 @@ export default async function OrdersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {orders?.map((order) => (
-              <TableRow key={order.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={statusColors[order.status]}
-                  >
-                    {statusLabel[order.status]}
-                  </Badge>
-                </TableCell>
-                <TableCell className="font-medium">
-                  {order.profiles?.name || "-"}
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {order.profiles?.email || "-"}
-                </TableCell>
-                <TableCell className="text-right font-medium">
-                  {order.total_amount.toLocaleString()}원
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {order.payment_method || "-"}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(order.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {orders && orders.length > 0 ? (
+              orders.map((order) => (
+                <TableRow key={order.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={statusColors[order.status]}
+                    >
+                      {statusLabel[order.status]}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="font-medium">
+                    {order.profiles?.name || "-"}
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {order.profiles?.email || "-"}
+                  </TableCell>
+                  <TableCell className="text-right font-medium whitespace-nowrap">
+                    {order.total_amount.toLocaleString()}원
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {order.payment_method || "-"}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(order.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={6}

@@ -27,7 +27,7 @@ export default async function ProductsPage() {
         </div>
       </div>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -41,40 +41,42 @@ export default async function ProductsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {products?.map((product) => (
-              <TableRow key={product.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      product.is_published
-                        ? "bg-green-50 text-green-600"
-                        : "bg-gray-100 text-gray-500"
-                    }
-                  >
-                    {product.is_published ? "판매중" : "비공개"}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {product.product_categories?.name || "-"}
-                </TableCell>
-                <TableCell className="font-medium">{product.name}</TableCell>
-                <TableCell className="text-right text-text-muted">
-                  {product.price.toLocaleString()}원
-                </TableCell>
-                <TableCell className="text-right">
-                  {product.sale_price
-                    ? `${product.sale_price.toLocaleString()}원`
-                    : "-"}
-                </TableCell>
-                <TableCell className="text-right text-text-muted">
-                  {product.is_digital ? "디지털" : product.stock ?? "-"}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(product.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {products && products.length > 0 ? (
+              products.map((product) => (
+                <TableRow key={product.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        product.is_published
+                          ? "bg-green-50 text-green-600"
+                          : "bg-gray-100 text-gray-500"
+                      }
+                    >
+                      {product.is_published ? "판매중" : "비공개"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {product.product_categories?.name || "-"}
+                  </TableCell>
+                  <TableCell className="font-medium">{product.name}</TableCell>
+                  <TableCell className="text-right text-text-muted whitespace-nowrap">
+                    {product.price.toLocaleString()}원
+                  </TableCell>
+                  <TableCell className="text-right whitespace-nowrap">
+                    {product.sale_price
+                      ? `${product.sale_price.toLocaleString()}원`
+                      : "-"}
+                  </TableCell>
+                  <TableCell className="text-right text-text-muted">
+                    {product.is_digital ? "디지털" : product.stock ?? "-"}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(product.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={7}

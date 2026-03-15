@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       {/* ========== Hero — 다크 배경 풀스크린 ========== */}
-      <section className="relative flex min-h-[85vh] items-center justify-center bg-surface-dark px-6 text-center">
+      <section className="relative flex min-h-[85vh] items-center justify-center bg-surface-dark px-5 text-center md:px-6">
         <div className="max-w-3xl">
           <p className="mb-4 text-sm font-medium tracking-widest text-brand-lime uppercase">
             Beauty Dental Ecosystem
@@ -24,13 +24,13 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/guidebook"
-              className="inline-flex h-12 items-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+              className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
             >
               가이드북 보기
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-12 items-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-safe"
+              className="inline-flex h-12 w-full items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-safe sm:w-auto"
             >
               상담 신청
             </Link>
@@ -90,7 +90,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={item.href}
-                    className="mt-6 inline-block text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                    className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
                   >
                     {item.cta} &rarr;
                   </Link>
@@ -201,7 +201,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-3">
             <Link
               href="/guidebook"
-              className="inline-flex h-12 items-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
             >
               가이드북 구매하기
             </Link>

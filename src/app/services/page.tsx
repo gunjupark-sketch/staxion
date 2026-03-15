@@ -25,7 +25,7 @@ export default function ServicesPage() {
 
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((service) => (
               <Link key={service.name} href={service.href}>
                 <Card className="h-full border-border/50 transition-all hover:border-brand-lime-safe/30 hover:shadow-lg">

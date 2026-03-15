@@ -18,17 +18,17 @@ export default async function SettingsPage() {
         {settings && settings.length > 0 ? (
           settings.map((setting) => (
             <Card key={setting.key} className="border-border/50">
-              <CardContent className="p-6">
-                <div className="flex items-start justify-between">
-                  <div>
+              <CardContent className="p-4 sm:p-6">
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+                  <div className="min-w-0 flex-1">
                     <h3 className="font-medium text-text-primary">
                       {setting.key}
                     </h3>
-                    <pre className="mt-2 text-sm text-text-muted bg-gray-50 rounded p-3 overflow-auto max-w-2xl">
+                    <pre className="mt-2 text-sm text-text-muted bg-gray-50 rounded p-3 overflow-auto max-w-full">
                       {JSON.stringify(setting.value, null, 2)}
                     </pre>
                   </div>
-                  <span className="text-xs text-text-muted">
+                  <span className="text-xs text-text-muted shrink-0">
                     {new Date(setting.updated_at).toLocaleDateString("ko-KR")}
                   </span>
                 </div>

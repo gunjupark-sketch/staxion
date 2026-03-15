@@ -52,7 +52,7 @@ export default function AboutBeautyPage() {
             <div className="text-center">
               <Link
                 href="/guidebook"
-                className="inline-flex h-12 items-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+                className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
               >
                 가이드북으로 시작하기
               </Link>

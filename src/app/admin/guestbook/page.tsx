@@ -22,7 +22,7 @@ export default async function GuestbookPage() {
       <h1 className="text-2xl font-bold text-text-primary">커뮤니티 관리</h1>
       <p className="mt-1 text-sm text-text-muted">방명록 및 커뮤니티 글 관리</p>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -33,29 +33,31 @@ export default async function GuestbookPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {entries?.map((entry) => (
-              <TableRow key={entry.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      entry.is_visible
-                        ? "bg-green-50 text-green-600"
-                        : "bg-red-50 text-red-600"
-                    }
-                  >
-                    {entry.is_visible ? "공개" : "숨김"}
-                  </Badge>
-                </TableCell>
-                <TableCell className="font-medium">{entry.name}</TableCell>
-                <TableCell className="max-w-md truncate text-text-muted">
-                  {entry.content}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(entry.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {entries && entries.length > 0 ? (
+              entries.map((entry) => (
+                <TableRow key={entry.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        entry.is_visible
+                          ? "bg-green-50 text-green-600"
+                          : "bg-red-50 text-red-600"
+                      }
+                    >
+                      {entry.is_visible ? "공개" : "숨김"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="font-medium">{entry.name}</TableCell>
+                  <TableCell className="max-w-md truncate text-text-muted">
+                    {entry.content}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(entry.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={4}

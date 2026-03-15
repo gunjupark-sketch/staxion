@@ -27,7 +27,7 @@ export default async function SeminarsPage() {
         </div>
       </div>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -41,44 +41,46 @@ export default async function SeminarsPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {seminars?.map((seminar) => (
-              <TableRow key={seminar.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      seminar.is_published
-                        ? "bg-green-50 text-green-600"
-                        : "bg-gray-100 text-gray-500"
-                    }
-                  >
-                    {seminar.is_published ? "공개" : "비공개"}
-                  </Badge>
-                </TableCell>
-                <TableCell className="font-medium max-w-xs truncate">
-                  {seminar.title}
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {seminar.date
-                    ? new Date(seminar.date).toLocaleDateString("ko-KR")
-                    : "-"}
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {seminar.location || "-"}
-                </TableCell>
-                <TableCell className="text-right text-text-muted">
-                  {seminar.current_seats}/{seminar.max_seats ?? "∞"}
-                </TableCell>
-                <TableCell className="text-right">
-                  {seminar.price === 0
-                    ? "무료"
-                    : `${seminar.price.toLocaleString()}원`}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(seminar.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {seminars && seminars.length > 0 ? (
+              seminars.map((seminar) => (
+                <TableRow key={seminar.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        seminar.is_published
+                          ? "bg-green-50 text-green-600"
+                          : "bg-gray-100 text-gray-500"
+                      }
+                    >
+                      {seminar.is_published ? "공개" : "비공개"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="font-medium max-w-xs truncate">
+                    {seminar.title}
+                  </TableCell>
+                  <TableCell className="text-text-muted whitespace-nowrap">
+                    {seminar.date
+                      ? new Date(seminar.date).toLocaleDateString("ko-KR")
+                      : "-"}
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {seminar.location || "-"}
+                  </TableCell>
+                  <TableCell className="text-right text-text-muted whitespace-nowrap">
+                    {seminar.current_seats}/{seminar.max_seats ?? "\u221E"}
+                  </TableCell>
+                  <TableCell className="text-right whitespace-nowrap">
+                    {seminar.price === 0
+                      ? "무료"
+                      : `${seminar.price.toLocaleString()}원`}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(seminar.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={7}

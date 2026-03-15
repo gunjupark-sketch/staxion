@@ -22,7 +22,7 @@ export default async function ServicesPage() {
       <h1 className="text-2xl font-bold text-text-primary">서비스 관리</h1>
       <p className="mt-1 text-sm text-text-muted">서비스 소개 페이지 관리</p>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -34,32 +34,34 @@ export default async function ServicesPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {services?.map((service) => (
-              <TableRow key={service.id}>
-                <TableCell>
-                  <Badge
-                    variant="secondary"
-                    className={
-                      service.is_published
-                        ? "bg-green-50 text-green-600"
-                        : "bg-gray-100 text-gray-500"
-                    }
-                  >
-                    {service.is_published ? "공개" : "비공개"}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-text-muted">
-                  {service.sort_order}
-                </TableCell>
-                <TableCell className="font-medium">{service.name}</TableCell>
-                <TableCell className="max-w-xs truncate text-text-muted">
-                  {service.description || "-"}
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(service.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {services && services.length > 0 ? (
+              services.map((service) => (
+                <TableRow key={service.id}>
+                  <TableCell>
+                    <Badge
+                      variant="secondary"
+                      className={
+                        service.is_published
+                          ? "bg-green-50 text-green-600"
+                          : "bg-gray-100 text-gray-500"
+                      }
+                    >
+                      {service.is_published ? "공개" : "비공개"}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    {service.sort_order}
+                  </TableCell>
+                  <TableCell className="font-medium">{service.name}</TableCell>
+                  <TableCell className="max-w-xs truncate text-text-muted">
+                    {service.description || "-"}
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(service.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell
                   colSpan={5}

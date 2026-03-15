@@ -37,7 +37,7 @@ export default function CommunityPage() {
                 rows={3}
               />
               <div className="mt-3 flex justify-end">
-                <Button className="bg-brand-lime-safe text-white hover:bg-brand-lime-safe/90">
+                <Button className="min-h-[44px] bg-brand-lime-safe px-6 text-sm font-semibold text-white hover:bg-brand-lime-safe/90">
                   작성하기
                 </Button>
               </div>

@@ -48,7 +48,7 @@ export default async function MembersPage() {
       <h1 className="text-2xl font-bold text-text-primary">회원 관리</h1>
       <p className="mt-1 text-sm text-text-muted">전체 회원 목록 및 면허 승인 관리</p>
 
-      <div className="mt-8 rounded-lg border">
+      <div className="mt-8 overflow-x-auto rounded-lg border">
         <Table>
           <TableHeader>
             <TableRow>
@@ -61,26 +61,28 @@ export default async function MembersPage() {
             </TableRow>
           </TableHeader>
           <TableBody>
-            {members?.map((member) => (
-              <TableRow key={member.id}>
-                <TableCell className="font-medium">{member.name || "-"}</TableCell>
-                <TableCell className="text-text-muted">{member.email}</TableCell>
-                <TableCell>{member.clinic_name || "-"}</TableCell>
-                <TableCell>
-                  <Badge variant="secondary" className={roleColors[member.role]}>
-                    {roleLabel[member.role]}
-                  </Badge>
-                </TableCell>
-                <TableCell>
-                  <Badge variant="secondary" className={licenseColors[member.license_status]}>
-                    {licenseLabel[member.license_status]}
-                  </Badge>
-                </TableCell>
-                <TableCell className="text-text-muted text-sm">
-                  {new Date(member.created_at).toLocaleDateString("ko-KR")}
-                </TableCell>
-              </TableRow>
-            )) ?? (
+            {members && members.length > 0 ? (
+              members.map((member) => (
+                <TableRow key={member.id}>
+                  <TableCell className="font-medium">{member.name || "-"}</TableCell>
+                  <TableCell className="text-text-muted">{member.email}</TableCell>
+                  <TableCell>{member.clinic_name || "-"}</TableCell>
+                  <TableCell>
+                    <Badge variant="secondary" className={roleColors[member.role]}>
+                      {roleLabel[member.role]}
+                    </Badge>
+                  </TableCell>
+                  <TableCell>
+                    <Badge variant="secondary" className={licenseColors[member.license_status]}>
+                      {licenseLabel[member.license_status]}
+                    </Badge>
+                  </TableCell>
+                  <TableCell className="text-text-muted text-sm whitespace-nowrap">
+                    {new Date(member.created_at).toLocaleDateString("ko-KR")}
+                  </TableCell>
+                </TableRow>
+              ))
+            ) : (
               <TableRow>
                 <TableCell colSpan={6} className="text-center text-text-muted py-8">
                   회원이 없습니다.
