@@ -1,14 +1,57 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
+import { createClient } from "@/lib/supabase/client";
 
 export default function SignupPage() {
-  // TODO: Supabase Auth 연결
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+
+    const form = new FormData(e.currentTarget);
+    const email = form.get("email") as string;
+    const password = form.get("password") as string;
+    const name = form.get("name") as string;
+    const clinic = form.get("clinic") as string;
+
+    const supabase = createClient();
+
+    const { error: signUpError } = await supabase.auth.signUp({
+      email,
+      password,
+      options: {
+        data: { name, clinic_name: clinic },
+      },
+    });
+
+    if (signUpError) {
+      setError(signUpError.message);
+      setLoading(false);
+      return;
+    }
+
+    // 프로필에 이름/치과명 업데이트
+    const { data: { user } } = await supabase.auth.getUser();
+    if (user) {
+      await supabase.from("profiles").update({
+        name,
+        clinic_name: clinic,
+      }).eq("id", user.id);
+    }
+
+    router.push("/signup/complete");
+  }
 
   return (
     <section className="flex min-h-[70vh] items-center justify-center px-4 py-20">
@@ -19,45 +62,35 @@ export default function SignupPage() {
             <p className="mt-1 text-sm text-text-muted">치과 의료인 전용 서비스입니다</p>
           </div>
 
-          {/* 소셜 가입 */}
-          <div className="mt-8 grid gap-3">
-            <button className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#FEE500] text-sm font-medium text-[#191919] transition-opacity hover:opacity-90">
-              카카오로 가입하기
-            </button>
-            <button className="flex h-11 w-full items-center justify-center gap-2 rounded-lg bg-[#03C75A] text-sm font-medium text-white transition-opacity hover:opacity-90">
-              네이버로 가입하기
-            </button>
-            <button className="flex h-11 w-full items-center justify-center gap-2 rounded-lg border border-border bg-white text-sm font-medium text-text-primary transition-colors hover:bg-surface-secondary">
-              Google로 가입하기
-            </button>
-          </div>
+          {error && (
+            <div className="mt-4 rounded-lg bg-red-50 p-3 text-sm text-red-600">
+              {error}
+            </div>
+          )}
 
-          <div className="my-6 flex items-center gap-3">
-            <Separator className="flex-1" />
-            <span className="text-xs text-text-muted">또는</span>
-            <Separator className="flex-1" />
-          </div>
-
-          {/* 이메일 가입 */}
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
             <div className="space-y-2">
-              <Label htmlFor="name">이름</Label>
-              <Input id="name" placeholder="홍길동" />
+              <Label htmlFor="name">이름 *</Label>
+              <Input id="name" name="name" required placeholder="홍길동" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="email">이메일</Label>
-              <Input id="email" type="email" placeholder="example@clinic.com" />
+              <Label htmlFor="email">이메일 *</Label>
+              <Input id="email" name="email" type="email" required placeholder="example@clinic.com" />
             </div>
             <div className="space-y-2">
-              <Label htmlFor="password">비밀번호</Label>
-              <Input id="password" type="password" placeholder="8자 이상" />
+              <Label htmlFor="password">비밀번호 *</Label>
+              <Input id="password" name="password" type="password" required minLength={8} placeholder="8자 이상" />
             </div>
             <div className="space-y-2">
               <Label htmlFor="clinic">치과명</Label>
-              <Input id="clinic" placeholder="OO치과의원" />
+              <Input id="clinic" name="clinic" placeholder="OO치과의원" />
             </div>
-            <Button className="w-full bg-brand-lime-safe text-white hover:bg-brand-lime-safe/90">
-              가입하기
+            <Button
+              type="submit"
+              disabled={loading}
+              className="w-full bg-brand-lime-safe text-white hover:bg-brand-lime-safe/90"
+            >
+              {loading ? "가입 중..." : "가입하기"}
             </Button>
           </form>
 
