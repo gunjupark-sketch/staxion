@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 
 const footerLinks = {
@@ -30,9 +31,7 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <span className="text-lg font-bold text-text-primary">
-              STAX<span className="text-brand-lime-safe">I</span>ON
-            </span>
+            <Image src="/logo.svg" alt="MEDI STAXION" width={120} height={34} />
             <p className="mt-3 text-sm leading-relaxed text-text-muted">
               미용치과, 시작이 다르면
               <br />

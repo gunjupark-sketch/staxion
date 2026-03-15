@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 60" fill="none">
+  <!-- Cross symbol -->
+  <g transform="translate(0,2)">
+    <!-- Horizontal bar -->
+    <polygon points="0,28 8,22 38,22 38,16 30,8 30,0 36,0 44,8 44,22 56,22 56,36 44,36 44,56 38,56 30,48 30,36 8,36" fill="#212121"/>
+    <!-- Lime leaf accent -->
+    <path d="M36,0 C36,0 44,8 44,22 L38,22 L38,16 L30,8 L30,0 Z" fill="#BDFF06"/>
+  </g>
+  <!-- MEDI text -->
+  <text x="68" y="26" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="1" fill="#212121">MEDI</text>
+  <!-- STAXION text -->
+  <text x="68" y="52" font-family="'Inter','Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="800" letter-spacing="1" fill="#212121">STAXION</text>
+</svg>

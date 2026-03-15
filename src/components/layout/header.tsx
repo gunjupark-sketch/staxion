@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -22,9 +23,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <span className="text-xl font-bold tracking-tight text-text-primary">
-            STAX<span className="text-brand-lime-safe">I</span>ON
-          </span>
+          <Image src="/logo.svg" alt="MEDI STAXION" width={140} height={40} priority />
         </Link>
 
         {/* Desktop Navigation */}
