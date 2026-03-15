@@ -2,8 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { createClient } from "@/lib/supabase/client";
 
 const navItems = [
   { label: "미용치과 소개", href: "/about-beauty" },
@@ -17,6 +19,28 @@ const navItems = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [user, setUser] = useState<{ email?: string } | null>(null);
+  const router = useRouter();
+  const supabase = createClient();
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      setUser(data.user);
+    });
+
+    const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+      setUser(session?.user ?? null);
+    });
+
+    return () => subscription.unsubscribe();
+  }, []);
+
+  async function handleLogout() {
+    await supabase.auth.signOut();
+    setUser(null);
+    router.push("/");
+    router.refresh();
+  }
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-white/80 backdrop-blur-md">
@@ -41,18 +65,37 @@ export function Header() {
 
         {/* Desktop Auth Buttons */}
         <div className="hidden items-center gap-2 lg:flex">
-          <Link
-            href="/login"
-            className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary"
-          >
-            로그인
-          </Link>
-          <Link
-            href="/signup"
-            className="rounded-md bg-brand-lime-safe px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
-          >
-            회원가입
-          </Link>
+          {user ? (
+            <>
+              <Link
+                href="/admin"
+                className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary"
+              >
+                마이페이지
+              </Link>
+              <button
+                onClick={handleLogout}
+                className="rounded-md px-3 py-2 text-sm font-medium text-text-muted transition-colors hover:bg-surface-secondary"
+              >
+                로그아웃
+              </button>
+            </>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary"
+              >
+                로그인
+              </Link>
+              <Link
+                href="/signup"
+                className="rounded-md bg-brand-lime-safe px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+              >
+                회원가입
+              </Link>
+            </>
+          )}
         </div>
 
         {/* Mobile Menu */}
@@ -88,20 +131,40 @@ export function Header() {
                 </Link>
               ))}
               <div className="my-4 border-t" />
-              <Link
-                href="/login"
-                onClick={() => setOpen(false)}
-                className="rounded-md px-4 py-3 text-base font-medium text-text-secondary"
-              >
-                로그인
-              </Link>
-              <Link
-                href="/signup"
-                onClick={() => setOpen(false)}
-                className="mx-4 rounded-md bg-brand-lime-safe py-3 text-center text-base font-semibold text-white"
-              >
-                회원가입
-              </Link>
+              {user ? (
+                <>
+                  <Link
+                    href="/admin"
+                    onClick={() => setOpen(false)}
+                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary"
+                  >
+                    마이페이지
+                  </Link>
+                  <button
+                    onClick={() => { handleLogout(); setOpen(false); }}
+                    className="rounded-md px-4 py-3 text-left text-base font-medium text-text-muted"
+                  >
+                    로그아웃
+                  </button>
+                </>
+              ) : (
+                <>
+                  <Link
+                    href="/login"
+                    onClick={() => setOpen(false)}
+                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary"
+                  >
+                    로그인
+                  </Link>
+                  <Link
+                    href="/signup"
+                    onClick={() => setOpen(false)}
+                    className="mx-4 rounded-md bg-brand-lime-safe py-3 text-center text-base font-semibold text-white"
+                  >
+                    회원가입
+                  </Link>
+                </>
+              )}
             </nav>
           </SheetContent>
         </Sheet>

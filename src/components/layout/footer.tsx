@@ -71,7 +71,7 @@ export function Footer() {
               사업자등록번호: 000-00-00000 | 통신판매업신고: 제0000-서울강남-00000호
             </p>
           </div>
-          <p>&copy; {new Date().getFullYear()} THE STATION. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} STAXION. All rights reserved.</p>
         </div>
       </div>
     </footer>
