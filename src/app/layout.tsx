@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { Geist } from "next/font/google";
+import { cn } from "@/lib/utils";
+
+const geist = Geist({subsets:['latin'],variable:'--font-sans'});
 
 export const metadata: Metadata = {
   title: "STAXION | 미용치과, 시작이 다르면 결과가 다릅니다",
@@ -22,7 +26,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ko">
+    <html lang="ko" className={cn("font-sans", geist.variable)}>
       <body>{children}</body>
     </html>
   );
