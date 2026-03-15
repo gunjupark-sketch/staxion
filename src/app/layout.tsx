@@ -2,8 +2,10 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
+import { Header } from "@/components/layout/header";
+import { Footer } from "@/components/layout/footer";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
   title: "STAXION | 미용치과, 시작이 다르면 결과가 다릅니다",
@@ -27,7 +29,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko" className={cn("font-sans", geist.variable)}>
-      <body>{children}</body>
+      <body className="flex min-h-screen flex-col">
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
