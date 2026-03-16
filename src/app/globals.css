@@ -5,7 +5,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Brand Colors - staxion.co.kr "Clean Authority" */
+  /* Brand Colors - medistaxion.com "Clean Authority" */
   --color-brand-lime: #82ff00;
   --color-brand-lime-safe: #8EC31F;
   --color-brand-lime-sub: #bdff06;

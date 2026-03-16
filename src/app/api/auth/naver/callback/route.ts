@@ -25,7 +25,7 @@ export async function GET(request: Request) {
   const code = searchParams.get("code");
   const state = searchParams.get("state");
   const errorParam = searchParams.get("error");
-  const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://staxion.co.kr";
+  const origin = process.env.NEXT_PUBLIC_SITE_URL || "https://medistaxion.com";
 
   // 에러 또는 코드 없음
   if (errorParam || !code) {

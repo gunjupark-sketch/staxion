@@ -16,7 +16,7 @@ export default function TermsPage() {
           <section>
             <h2 className="mb-4 text-xl font-semibold text-text-primary">제1조 (목적)</h2>
             <p>
-              이 약관은 (주)더스테이션(이하 &quot;회사&quot;)이 운영하는 MEDI STAXION 웹사이트(https://staxion.co.kr, 이하 &quot;사이트&quot;)에서 제공하는 서비스의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+              이 약관은 (주)더스테이션(이하 &quot;회사&quot;)이 운영하는 MEDI STAXION 웹사이트(https://medistaxion.com, 이하 &quot;사이트&quot;)에서 제공하는 서비스의 이용과 관련하여 회사와 이용자 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
             </p>
           </section>
 

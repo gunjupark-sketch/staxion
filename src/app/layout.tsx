@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     title: "MEDI STAXION | 미용치과 도입 전문",
     description:
       "치과에서 미용시술을 시작하는 가장 확실한 방법. 가이드북, 교육, 컨설팅까지.",
-    url: "https://staxion.co.kr",
+    url: "https://medistaxion.com",
     siteName: "MEDI STAXION",
     locale: "ko_KR",
     type: "website",

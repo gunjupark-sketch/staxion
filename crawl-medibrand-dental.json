@@ -1,0 +1,1354 @@
+[
+  {
+    "category": "개원&리뉴얼패키지",
+    "subcategory": "퍼펙트 패키지",
+    "name": "[병원 개원 & 리뉴얼] 330 - 퍼펙트 패키지",
+    "price": 3300000,
+    "options": [
+      {"name": "기획 의뢰 (상담 후 별도견적)", "price": "별도견적"}
+    ],
+    "description": "병원 개원/리뉴얼 종합 패키지. 디자인 컨설팅 및 제작 포함. 시안 작업 전 100% 환불, 시안 작업 후 30% 환불, 인쇄 진행 후 환불 불가. 납품기간 결제일로부터 최대 3개월.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6671/image/detail/6671_detail_097.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6671"
+  },
+  {
+    "category": "개원&리뉴얼패키지",
+    "subcategory": "컴팩트 패키지",
+    "name": "[병원 개원 & 리뉴얼] 110 - 컴팩트 패키지",
+    "price": 1100000,
+    "options": [
+      {"name": "기획 의뢰 (필요시 추가, 상담 후 별도견적)", "price": "별도견적"}
+    ],
+    "description": "병원 개원/리뉴얼 컴팩트 패키지. 시안 작업 전 100% 환불, 시안 작업 후 30% 환불, 인쇄 진행 후 환불 불가.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6670/image/detail/6670_detail_032.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6670"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 배너] 맞춤 디자인",
+    "price": 95000,
+    "options": [
+      {"name": "코팅: 무광코팅", "price": 0},
+      {"name": "코팅: 유광코팅", "price": 0},
+      {"name": "거치대 없이 출력만", "price": 0},
+      {"name": "실내용 X배너 거치대", "price": 20000},
+      {"name": "실외용 단면 거치대", "price": 33000},
+      {"name": "실외용 양면 거치대", "price": 44000}
+    ],
+    "description": "맞춤 병원 배너 디자인. 배송비 5,000원. 시안 작업 전 100% 환불 가능.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6488/image/detail/6488_detail_039.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6488"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 배너] 재주문",
+    "price": 25000,
+    "options": [
+      {"name": "코팅: 무광코팅", "price": 0},
+      {"name": "코팅: 유광코팅", "price": 0},
+      {"name": "거치대 없이 출력만", "price": 0},
+      {"name": "실내용 X배너 거치대", "price": 20000},
+      {"name": "실외용 단면 거치대", "price": 33000},
+      {"name": "실외용 양면 거치대", "price": 44000}
+    ],
+    "description": "기존 디자인 배너 재주문. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6489/image/detail/6489_detail_088.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6489"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 배너] 맞춤 디자인 (실내용 X배너 거치대 포함)",
+    "price": 121000,
+    "options": [
+      {"name": "코팅: 무광코팅", "price": 0},
+      {"name": "코팅: 유광코팅", "price": 0}
+    ],
+    "description": "실내용 X배너 거치대 포함 맞춤 디자인. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4729/image/detail/4729_detail_057.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4729"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 배너] 맞춤 디자인 (양면 디자인)",
+    "price": 120000,
+    "options": [
+      {"name": "코팅: 무광코팅", "price": 0},
+      {"name": "코팅: 유광코팅", "price": 0},
+      {"name": "거치대 없이 출력만", "price": 0},
+      {"name": "실외용 양면 거치대", "price": 44000}
+    ],
+    "description": "양면 디자인 배너. 배송비 5,000원 (2개당 추가 5,000원).",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4731/image/detail/4731_detail_089.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4731"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 배너] 맞춤 디자인 (롤업배너 거치대 포함)",
+    "price": 187000,
+    "options": [],
+    "description": "롤업배너 거치대 포함 맞춤 디자인. 품절 상태. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4732/image/detail/4732_detail_097.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4732"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "배너",
+    "name": "[병원 미니배너] 맞춤 디자인 (미니배너 거치대 포함)",
+    "price": 23500,
+    "options": [
+      {"name": "사이즈: 소(150X300mm)+거치대 포함", "price": 0},
+      {"name": "사이즈: 중(180X420mm)+거치대 포함", "price": 11000},
+      {"name": "미니배너 (샘플그대로)", "price": 10000},
+      {"name": "미니배너 (새로디자인)", "price": 44000},
+      {"name": "미니배너 (재주문)", "price": 0}
+    ],
+    "description": "미니배너 거치대 포함 맞춤 디자인. 소/중 사이즈 선택 가능.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4521/image/detail/4521_detail_089.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4521"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 전단지] 맞춤 디자인 (단면)",
+    "price": 55000,
+    "options": [
+      {"name": "매수: 2,000매", "price": 33000},
+      {"name": "매수: 4,000매", "price": 0},
+      {"name": "매수: 8,000매", "price": 107800},
+      {"name": "매수: 12,000매", "price": 182600},
+      {"name": "맞춤디자인", "price": 80000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "단면 맞춤 병원 전단지 디자인. 배송비 9,000원. 기본 4,000매 기준.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4532/image/detail/4532_detail_053.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4532"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 전단지] 맞춤 디자인 (양면)",
+    "price": 77000,
+    "options": [
+      {"name": "매수: 2,000매", "price": 0},
+      {"name": "매수: 4,000매", "price": 26200},
+      {"name": "매수: 8,000매", "price": 117800},
+      {"name": "매수: 12,000매", "price": 209400},
+      {"name": "양면 맞춤디자인", "price": 140000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "양면 맞춤 병원 전단지 디자인. 기본 2,000매 기준. 시안 작업 전 100% 환불, 시안 작업 후 30% 환불.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6431/image/detail/6431_detail_072.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6431"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 리플렛] 맞춤 디자인 (2단) 500부 기준",
+    "price": 270000,
+    "options": [
+      {"name": "재질: 스노우지 150g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 150g (양면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (양면무광코팅)", "price": 0},
+      {"name": "재질: 랑데뷰 160g비코팅 / UV인쇄", "price": 0},
+      {"name": "재질: 아르떼 210g", "price": 0},
+      {"name": "리플렛2단 (맞춤디자인)", "price": 180000},
+      {"name": "리플렛2단 (재주문)", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "2단 리플렛 맞춤 디자인. 500부 기준. 다양한 재질 선택 가능.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/401/image/detail/401_detail_015.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=401"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 리플렛] 맞춤 디자인 (3단) 500부",
+    "price": 435000,
+    "options": [
+      {"name": "재질: 스노우지 150g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 150g (양면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (양면무광코팅)", "price": 0},
+      {"name": "재질: 랑데뷰 160g비코팅", "price": 0},
+      {"name": "재질: 아르떼 210g", "price": 0},
+      {"name": "3단 리플렛 맞춤디자인", "price": 350000},
+      {"name": "재주문", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "3단 리플렛 맞춤 디자인. 500부 기준. 시안 작업 전 100% 환불.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6869/image/detail/6869_detail_060.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6869"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 리플렛] 맞춤 디자인 (4단) 500부 기준",
+    "price": 480000,
+    "options": [
+      {"name": "재질: 스노우지 150g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 150g (양면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (단면무광코팅)", "price": 0},
+      {"name": "재질: 스노우지 200g (양면무광코팅)", "price": 0},
+      {"name": "재질: 랑데뷰 160g비코팅", "price": 0},
+      {"name": "재질: 아르떼 210g", "price": 0},
+      {"name": "4단 리플렛 맞춤디자인", "price": 420000},
+      {"name": "4단 리플렛 재주문", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "4단 리플렛 맞춤 디자인. 500부 기준.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/402/image/detail/402_detail_045.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=402"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "리플렛/브로슈어/전단",
+    "name": "[병원 브로슈어] 맞춤 디자인",
+    "price": "견적문의",
+    "options": [
+      {"name": "컨텐츠 기획의뢰 (상담 후 별도견적)", "price": "별도견적"}
+    ],
+    "description": "병원 브로슈어 맞춤 디자인. 가격은 상담 후 견적. 배송비 무료.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6965/image/detail/6965_detail_077.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6965"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 게시물] 맞춤 디자인 (A4)",
+    "price": 82000,
+    "options": [
+      {"name": "용지: 인화지 1매", "price": 0},
+      {"name": "1매 이상/다른 용지: 견적문의", "price": "견적문의"}
+    ],
+    "description": "A4 사이즈 맞춤 게시물 디자인. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6434/image/detail/6434_detail_079.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6434"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3)",
+    "price": 113000,
+    "options": [
+      {"name": "용지: 인화지 1매", "price": 0},
+      {"name": "1매 이상/다른 용지: 견적문의", "price": "견적문의"}
+    ],
+    "description": "A3 사이즈 맞춤 포스터 디자인. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6433/image/detail/6433_detail_025.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6433"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2)",
+    "price": 135000,
+    "options": [
+      {"name": "용지: 인화지 1매", "price": 0}
+    ],
+    "description": "A2 사이즈 맞춤 포스터 디자인. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6432/image/detail/6432_detail_021.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6432"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1)",
+    "price": 168000,
+    "options": [
+      {"name": "용지: 인화지 1매", "price": 0}
+    ],
+    "description": "A1 사이즈 맞춤 포스터 디자인. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4750/image/detail/4750_detail_042.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4750"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A4 / 알루미늄 프레임+무광코팅)",
+    "price": 92000,
+    "options": [
+      {"name": "프레임: Black", "price": 0},
+      {"name": "프레임: White", "price": 0},
+      {"name": "프레임: Silver", "price": 0},
+      {"name": "프레임: Gold Gloss", "price": 0},
+      {"name": "프레임: Gold Matte", "price": 0}
+    ],
+    "description": "A4 포스터 + 알루미늄 프레임 + 무광코팅 포함. 배송비 6,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4749/image/detail/4749_detail_023.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4749"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3 / 알루미늄 프레임+무광코팅)",
+    "price": 132000,
+    "options": [
+      {"name": "프레임: Black/White/Silver/Gold Gloss/Gold Matte", "price": 0}
+    ],
+    "description": "A3 포스터 + 알루미늄 프레임 + 무광코팅 포함. 배송비 6,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4748/image/detail/4748_detail_023.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4748"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2 / 알루미늄 프레임+무광코팅)",
+    "price": 193000,
+    "options": [
+      {"name": "프레임: Black/White/Silver/Gold Gloss/Gold Matte", "price": 0}
+    ],
+    "description": "A2 포스터 + 알루미늄 프레임 + 무광코팅 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4747"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1 / 알루미늄 프레임+무광코팅)",
+    "price": 236000,
+    "options": [
+      {"name": "프레임: Black", "price": 0},
+      {"name": "프레임: White", "price": 0},
+      {"name": "프레임: Silver", "price": 0},
+      {"name": "프레임: Gold Gloss", "price": 0},
+      {"name": "프레임: Gold Matte", "price": 0}
+    ],
+    "description": "A1 포스터 + 알루미늄 프레임 + 무광코팅 포함. 배송비 6,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4746/image/detail/4746_detail_09.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4746"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A4 / 알루미늄 프레임 아크릴 덮개 액자)",
+    "price": 99000,
+    "options": [
+      {"name": "프레임: Black/White/Silver/Gold Gloss/Gold Matte", "price": 0}
+    ],
+    "description": "A4 포스터 + 알루미늄 프레임 아크릴 덮개 액자 포함. 배송비 6,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4742/image/detail/4742_detail_045.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4742"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3 / 알루미늄 프레임 아크릴 덮개 액자)",
+    "price": 187000,
+    "options": [],
+    "description": "A3 포스터 + 알루미늄 프레임 아크릴 덮개 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4741"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2 / 알루미늄 프레임 아크릴 덮개 액자)",
+    "price": 198000,
+    "options": [],
+    "description": "A2 포스터 + 알루미늄 프레임 아크릴 덮개 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4740"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1 / 알루미늄 프레임 아크릴 덮개 액자)",
+    "price": 253000,
+    "options": [],
+    "description": "A1 포스터 + 알루미늄 프레임 아크릴 덮개 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4725"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A4 / 캔버스 액자 포함)",
+    "price": 104000,
+    "options": [],
+    "description": "A4 포스터 + 캔버스 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6440"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3 / 캔버스 액자 포함)",
+    "price": 135000,
+    "options": [],
+    "description": "A3 포스터 + 캔버스 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6439"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2 / 캔버스 액자 포함)",
+    "price": 176000,
+    "options": [],
+    "description": "A2 포스터 + 캔버스 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6438"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1 / 캔버스 액자 포함)",
+    "price": 242000,
+    "options": [],
+    "description": "A1 포스터 + 캔버스 액자 포함. 배송비 6,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4722"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A4 / 개폐식 액자 포함)",
+    "price": 110000,
+    "options": [
+      {"name": "프레임: Silver/Black/White", "price": 0}
+    ],
+    "description": "A4 포스터 + 개폐식 액자 포함. 배송비 6,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6443/image/detail/6443_detail_022.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6443"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3 / 개폐식 액자 포함)",
+    "price": 139000,
+    "options": [],
+    "description": "A3 포스터 + 개폐식 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6442"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2 / 개폐식 액자 포함)",
+    "price": 209000,
+    "options": [],
+    "description": "A2 포스터 + 개폐식 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6441"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1 / 개폐식 액자 포함)",
+    "price": 264000,
+    "options": [],
+    "description": "A1 포스터 + 개폐식 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4719"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A4 / 다보 아크릴 액자 포함)",
+    "price": 132000,
+    "options": [],
+    "description": "A4 포스터 + 다보 아크릴 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6437"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A3 / 다보 아크릴 액자 포함)",
+    "price": 220000,
+    "options": [],
+    "description": "A3 포스터 + 다보 아크릴 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6436"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A2 / 다보 아크릴 액자 포함)",
+    "price": 253000,
+    "options": [],
+    "description": "A2 포스터 + 다보 아크릴 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6435"
+  },
+  {
+    "category": "홍보물",
+    "subcategory": "포스터/게시물",
+    "name": "[병원 포스터] 맞춤 디자인 (A1 / 다보 아크릴 액자 포함)",
+    "price": 341000,
+    "options": [],
+    "description": "A1 포스터 + 다보 아크릴 액자 포함.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4728"
+  },
+  {
+    "category": "맞춤 디자인 상품",
+    "subcategory": "명함",
+    "name": "[병원 명함] 맞춤 디자인",
+    "price": 46000,
+    "options": [
+      {"name": "재질: 스노우지 250g", "price": 0},
+      {"name": "재질: 스노우지 300g", "price": 0},
+      {"name": "재질: 리넨커버 216g", "price": 0},
+      {"name": "재질: 반포 227g", "price": 0},
+      {"name": "재질: 펄키칼 230g", "price": 0},
+      {"name": "재질: 스타드림 240g", "price": 0},
+      {"name": "재질: 아르미 310g", "price": 0},
+      {"name": "재질: 엑스트라매트 350g", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "병원 명함 맞춤 디자인. 담당디자이너 배정. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6782/image/detail/6782_detail_063.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6782"
+  },
+  {
+    "category": "맞춤 디자인 상품",
+    "subcategory": "봉투",
+    "name": "[병원 봉투] 소봉투 맞춤 디자인",
+    "price": 69000,
+    "options": [
+      {"name": "재질: 모조지 120g", "price": 0},
+      {"name": "재질: 페스티발 110g", "price": 0},
+      {"name": "봉투 새로디자인", "price": 30000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "소봉투 맞춤 디자인. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4512/image/detail/4512_detail_073.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4512"
+  },
+  {
+    "category": "맞춤 디자인 상품",
+    "subcategory": "봉투",
+    "name": "[병원 봉투] 자켓봉투 맞춤 디자인",
+    "price": 69000,
+    "options": [
+      {"name": "재질: 모조지 120g", "price": 0},
+      {"name": "재질: 페스티발 110g", "price": 0},
+      {"name": "봉투 새로디자인", "price": 30000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "자켓봉투 맞춤 디자인. 창가공 옵션 있음. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4511/image/detail/4511_detail_088.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4511"
+  },
+  {
+    "category": "맞춤 디자인 상품",
+    "subcategory": "봉투",
+    "name": "[병원 봉투] 대봉투 / 서류봉투 맞춤 디자인",
+    "price": 138000,
+    "options": [
+      {"name": "재질: 모조지 120g", "price": 0},
+      {"name": "재질: 페스티발 110g", "price": 0},
+      {"name": "봉투 새로디자인", "price": 30000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "대봉투/서류봉투 맞춤 디자인. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4510/image/detail/4510_detail_041.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4510"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "맞춤 디자인",
+    "name": "[병원 서식] 1P 맞춤 디자인 (단면)",
+    "price": 154000,
+    "options": [
+      {"name": "컬러: 흑백", "price": 0},
+      {"name": "컬러: 컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "단면 서식 맞춤 디자인. 용지/떡제본/매수 순차 선택. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4522/image/detail/4522_detail_045.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4522"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "맞춤 디자인",
+    "name": "[병원 서식] 2P 맞춤 디자인 (양면)",
+    "price": 253000,
+    "options": [
+      {"name": "컬러: 흑백", "price": 0},
+      {"name": "컬러: 컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "양면 서식 맞춤 디자인. 용지/떡제본/매수 순차 선택. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4523/image/detail/4523_detail_027.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4523"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "맞춤 디자인",
+    "name": "[병원 서식] 접이식 4P 차트 맞춤 디자인",
+    "price": 402000,
+    "options": [
+      {"name": "컬러: 흑백", "price": 0},
+      {"name": "컬러: 컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "접이식 4P 차트 맞춤 디자인. 용지/매수 순차 선택. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8360/image/detail/8360_detail_065.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8360"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "맞춤 디자인",
+    "name": "[병원 서식] 2P 줄 차트 (양면 속지) 맞춤 디자인",
+    "price": 175000,
+    "options": [
+      {"name": "컬러: 흑백", "price": 0},
+      {"name": "컬러: 컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "양면 속지 줄 차트 맞춤 디자인. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6647/image/detail/6647_detail_062.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6647"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서",
+    "name": "[병원 서식] 동의서 맞춤 디자인",
+    "price": 154000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "동의서 맞춤 디자인. 용지/떡제본/매수 순차 선택. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4517/image/detail/4517_detail_071.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4517"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "보증서",
+    "name": "[병원 서식] 보증서 맞춤 디자인",
+    "price": 154000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "보증서 맞춤 디자인. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4518/image/detail/4518_detail_026.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4518"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "접수증",
+    "name": "[병원 서식] 접수증 맞춤 디자인",
+    "price": 65000,
+    "options": [
+      {"name": "매수: 4,000매 (기본)", "price": 0},
+      {"name": "매수: 8,000매", "price": 48000},
+      {"name": "매수: 12,000매", "price": 93000},
+      {"name": "매수: 16,000매", "price": 133000},
+      {"name": "매수: 20,000매", "price": 177000},
+      {"name": "새로디자인", "price": 30000},
+      {"name": "재주문", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "접수증 맞춤 디자인. 기본 4,000매. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4509/image/detail/4509_detail_048.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4509"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "주의사항 안내문",
+    "name": "[병원 서식] 주의사항 맞춤 디자인 (명함형)",
+    "price": 63000,
+    "options": [
+      {"name": "모서리: 직각모서리", "price": 0},
+      {"name": "모서리: 둥근모서리", "price": 0}
+    ],
+    "description": "명함형 주의사항 안내문 맞춤 디자인. 배송비 3,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4589/image/detail/4589_detail_055.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4589"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "주의사항 안내문",
+    "name": "[병원 서식] A5 주의사항 맞춤 디자인",
+    "price": 110000,
+    "options": [
+      {"name": "코팅: 코팅없음(필기용)", "price": 0},
+      {"name": "코팅: 무광코팅", "price": 0}
+    ],
+    "description": "A5 사이즈 주의사항 안내문 맞춤 디자인. 배송비 4,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4516/image/detail/4516_detail_012.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4516"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "재주문",
+    "name": "[병원 서식] 재주문 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "재주문 (수정없음)", "price": 0},
+      {"name": "내용수정", "price": 10000},
+      {"name": "디자인수정", "price": 30000}
+    ],
+    "description": "단면 서식 재주문. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6623/image/detail/6623_detail_039.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6623"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "재주문",
+    "name": "[병원 서식] 재주문 (양면)",
+    "price": 112000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "재주문 (수정없음)", "price": 0},
+      {"name": "내용수정", "price": 10000},
+      {"name": "디자인수정", "price": 30000}
+    ],
+    "description": "양면 서식 재주문. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6624/image/detail/6624_detail_0100.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6624"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "재주문",
+    "name": "[병원 서식] 접이식 4P 차트 재주문",
+    "price": 201000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "재주문 (수정없음)", "price": 0},
+      {"name": "내용수정", "price": 10000},
+      {"name": "디자인수정", "price": 30000}
+    ],
+    "description": "접이식 4P 차트 재주문. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8362/image/detail/8362_detail_017.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8362"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.1",
+    "price": 83000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "디자인: 재주문", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "동의서 템플릿 Type.1. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4482/image/detail/121_detail_080.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4482"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.2",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "동의서 템플릿 Type.2. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4481"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.3",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "동의서 템플릿 Type.3. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4480"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.4",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "동의서 템플릿 Type.4. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=121"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.5",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "동의서 템플릿 Type.5. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4483"
+  },
+  {
+    "category": "서식류",
+    "subcategory": "동의서 템플릿",
+    "name": "[병원 서식] 동의서 템플릿 디자인 Type.6",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "동의서 템플릿 Type.6. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4484"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "접수동의서",
+    "name": "[병원 서식] 치과 접수동의서 (법적대리인동의)",
+    "price": 83000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 1P/단면 차트 샘플그대로", "price": 10000},
+      {"name": "디자인: 1P/단면 차트 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 접수동의서 (법적대리인동의 포함). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6499/image/detail/6499_detail_077.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6499"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "접수동의서",
+    "name": "[병원 서식] 치과 접수동의서 (병력체크)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 접수동의서 (병력체크). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6500/image/detail/6500_detail_017.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6500"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "접수증/접수동의서",
+    "name": "[병원 서식] 치과 접수증 / 접수동의서 (양면)",
+    "price": 112000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 2P/양면 차트 샘플그대로", "price": 20000},
+      {"name": "디자인: 2P/양면 차트 새로디자인", "price": 110000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 접수증/접수동의서 양면. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6509/image/detail/6509_detail_033.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6509"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "4P 차트",
+    "name": "[병원 서식] 치과 접이식 4P 차트 Type.1 (초진문진표+접수동의서+줄차트)",
+    "price": 201000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 4P/양면 차트 샘플그대로", "price": 30000},
+      {"name": "디자인: 4P/양면 차트 새로디자인", "price": 160000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 접이식 4P 차트 Type.1. 초진문진표+접수동의서+줄차트 포함. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8364/image/detail/8364_detail_049.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8364"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "4P 차트",
+    "name": "[병원 서식] 치과 접이식 4P 차트 Type.2 (초진문진표+진료기록부+줄차트)",
+    "price": 201000,
+    "options": [
+      {"name": "디자인: 4P/양면 차트 샘플그대로", "price": 30000},
+      {"name": "디자인: 4P/양면 차트 새로디자인", "price": 160000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 접이식 4P 차트 Type.2. 초진문진표+진료기록부+줄차트. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8363/image/detail/8363_detail_036.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8363"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "4P 차트",
+    "name": "[병원 서식] 치과 접이식 4P 차트 Type.3 (초진문진표+진료기록부+줄차트)",
+    "price": 201000,
+    "options": [
+      {"name": "디자인: 4P/양면 차트 샘플그대로", "price": 30000},
+      {"name": "디자인: 4P/양면 차트 새로디자인", "price": 160000},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 접이식 4P 차트 Type.3. 초진문진표+진료기록부+줄차트. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8365/image/detail/8365_detail_097.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8365"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "초진문진표",
+    "name": "[병원 서식] 치과 초진문진표 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 초진문진표 (단면). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6495/image/detail/6495_detail_038.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6495"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "초진문진표",
+    "name": "[병원 서식] 치과 초진문진표 type.2 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 초진문진표 Type.2 (단면). 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6496"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "초진문진표",
+    "name": "[병원 서식] 치과 초진문진표 type.3 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 초진문진표 Type.3 (단면). 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6497"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "초진문진표",
+    "name": "[병원 서식] 치과 초진문진표 type.4 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 초진문진표 Type.4 (단면). 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6498"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "초진문진표",
+    "name": "[병원 서식] 치과 / 치아교정 초진문진표 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000}
+    ],
+    "description": "치과/치아교정 초진문진표 (단면). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6503/image/detail/6503_detail_099.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6503"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "설문지",
+    "name": "[병원 서식] 치과 설문지 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "컬러: 흑백/컬러", "price": 0},
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000}
+    ],
+    "description": "치과 설문지 (단면). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6506/image/detail/6506_detail_048.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6506"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "진료기록부",
+    "name": "[병원 서식] 치과 진료기록부 (단면)",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 60000},
+      {"name": "재주문", "price": 0}
+    ],
+    "description": "치과 진료기록부 (단면). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6502/image/detail/6502_detail_041.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6502"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "진료기록부",
+    "name": "[병원 서식] 치과 진료기록부 (양면) - 1",
+    "price": 112000,
+    "options": [
+      {"name": "디자인: 2P/양면 차트 샘플그대로", "price": 20000},
+      {"name": "디자인: 2P/양면 차트 새로디자인", "price": 110000},
+      {"name": "재주문", "price": 0}
+    ],
+    "description": "치과 진료기록부 (양면). 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6507/image/detail/6507_detail_057.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6507"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "진료기록부",
+    "name": "[병원 서식] 치과 진료기록부 (양면) - 2",
+    "price": 112000,
+    "options": [
+      {"name": "디자인: 2P/양면 차트 샘플그대로", "price": 20000},
+      {"name": "디자인: 2P/양면 차트 새로디자인", "price": 110000}
+    ],
+    "description": "치과 진료기록부 (양면) 다른 디자인. 배송비 5,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6508"
+  },
+  {
+    "category": "서식류 (치과 전용)",
+    "subcategory": "보증서",
+    "name": "[병원 서식] 치과 진료 보증서",
+    "price": 83000,
+    "options": [
+      {"name": "디자인: 샘플그대로", "price": 10000},
+      {"name": "디자인: 새로디자인", "price": 55000},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 진료 보증서. 배송비 5,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4488/image/detail/4488_detail_055.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4488"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "맞춤 디자인",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 맞춤 디자인",
+    "price": 159000,
+    "options": [
+      {"name": "사이즈: A4 (297X210mm)", "price": 0},
+      {"name": "사이즈: 360X220mm", "price": 0},
+      {"name": "사이즈: 420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 맞춤 디자인. 재질/매수 순차 선택. 배송비 9,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/4519/image/detail/4519_detail_029.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4519"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "재주문",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 재주문",
+    "price": 129000,
+    "options": [
+      {"name": "사이즈: A4 (297X210mm)", "price": 0},
+      {"name": "사이즈: 360X220mm", "price": 0},
+      {"name": "사이즈: 420X250mm", "price": 0}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 재주문. 배송비 9,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/6728/image/detail/6728_detail_040.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=6728"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.1 (치아 모식도 포함)",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4 (297X210mm)", "price": 0},
+      {"name": "사이즈: 360X220mm", "price": 0},
+      {"name": "사이즈: 420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000},
+      {"name": "로고복원 안함", "price": 0}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.1. 치아 모식도 포함. 배송비 9,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/3996/image/detail/3996_detail_074.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=3996"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.2",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.2. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4007"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.3 (차팅공간 포함)",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.3. 차팅공간 포함. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4008"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.4",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.4. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4009"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.5 (차팅공간 포함)",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.5. 차팅공간 포함. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4010"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.6",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.6. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4011"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.7",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.7. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4012"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.8",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.8. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4013"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.9",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.9. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4014"
+  },
+  {
+    "category": "치과 테이블세팅지",
+    "subcategory": "템플릿",
+    "name": "[병원 세팅지] 치과 브라켓 테이블 세팅지 Type.10",
+    "price": 134000,
+    "options": [
+      {"name": "사이즈: A4/360X220mm/420X250mm", "price": 0},
+      {"name": "로고복원 추가", "price": 20000}
+    ],
+    "description": "치과 브라켓 테이블 세팅지 Type.10. 배송비 9,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=4015"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "브로슈어",
+    "name": "치과 브로슈어",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 실 주문은 맞춤 디자인 상품으로 진행.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/10189/image/main/10189_main_067.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=10189"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "브로슈어",
+    "name": "치과 교정 관리수첩",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. A4 브로슈어 레이아웃.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/7480/image/detail/7480_detail_064.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7480"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "리플렛",
+    "name": "치과 4단 리플렛 (포트폴리오)",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 4단 리플렛.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/10091/image/detail/10091_detail_015.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=10091"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "리플렛",
+    "name": "치과 3단 리플렛 (포트폴리오)",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 3단 리플렛.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/10087/image/detail/10087_detail_015.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=10087"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "리플렛",
+    "name": "치과 2단 리플렛 (포트폴리오)",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 2단 리플렛.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/7704/image/detail/7704_detail_055.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7704"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "포스터",
+    "name": "치과 포스터 (포트폴리오) - 7502",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: A3 113,000원 / A2 135,000원 / A1 168,000원 / A4 82,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/7502/image/detail/7502_detail_035.png",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7502"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "포스터",
+    "name": "치과병원 임플란트 포스터 (포트폴리오)",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: A4 82,000원 / A3 113,000원 / A2 135,000원 / A1 168,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/7455/image/detail/7455_detail_049.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7455"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "포스터",
+    "name": "치과병원 충치치료 포스터 (포트폴리오)",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7454"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "배너",
+    "name": "치과 배너 (포트폴리오) - 8966",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: 배너 맞춤 디자인 95,000원 / X배너 거치대 포함 121,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8966/image/magnify/8966_magnify_047.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8966"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "전단지",
+    "name": "치과 전단지 (포트폴리오) - 7759",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: 단면 전단지 55,000원 / 양면 전단지 77,000원.",
+    "imageUrl": "",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7759"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "전단지",
+    "name": "치과 전단지 (포트폴리오) - 8939",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: 단면 55,000원 / 양면 77,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/8939/image/detail/8939_detail_051.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=8939"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "개원패키지",
+    "name": "치과 개원패키지 (포트폴리오) - 7401",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: 퍼펙트 패키지 3,300,000원 / 컴팩트 패키지 1,100,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/7401/image/detail/7401_detail_051.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=7401"
+  },
+  {
+    "category": "포트폴리오 (치과)",
+    "subcategory": "개원패키지",
+    "name": "치과 개원패키지 (포트폴리오) - 10254",
+    "price": 0,
+    "options": [],
+    "description": "포트폴리오 디자인 샘플. 관련 구매상품: 퍼펙트 패키지 3,300,000원 / 컴팩트 패키지 1,100,000원.",
+    "imageUrl": "https://godomall.speedycdn.net/db820eca0b681e249ba83f3d3b809290/goods/10254/image/detail/10254_detail_081.jpg",
+    "sourceUrl": "https://www.medibrand.co.kr/goods/goods_view.php?goodsNo=10254"
+  }
+]

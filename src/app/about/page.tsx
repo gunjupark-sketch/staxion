@@ -136,7 +136,7 @@ export default function AboutPage() {
               ["통신판매업 신고번호", "제 2025-서울서초-2513 호"],
               ["주소", "서울특별시 서초구 효령로 53길 45, 233호"],
               ["전화", "0502-5552-0492"],
-              ["이메일", "contact@staxion.co.kr"],
+              ["이메일", "contact@medistaxion.com"],
               ["운영시간", "평일 9시~19시 / 토요일 9시~15시"],
             ].map(([label, value]) => (
               <div key={label} className="flex gap-4 border-b border-border/30 pb-3">
