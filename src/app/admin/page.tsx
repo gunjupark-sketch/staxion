@@ -10,9 +10,12 @@ export default async function AdminDashboard() {
   let orderCount = 0;
   let inquiryCount = 0;
   let postCount = 0;
-  let recentOrders: Awaited<ReturnType<typeof supabase.from<"orders">>>["data"] = [];
-  let recentInquiries: Awaited<ReturnType<typeof supabase.from<"inquiries">>>["data"] = [];
-  let recentMembers: Awaited<ReturnType<typeof supabase.from<"profiles">>>["data"] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let recentOrders: any[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let recentInquiries: any[] = [];
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  let recentMembers: any[] = [];
 
   try {
     const results = await Promise.all([
