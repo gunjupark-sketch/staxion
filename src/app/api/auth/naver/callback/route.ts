@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { createClient } from "@supabase/supabase-js";
-import { createClient as createServerClient } from "@/lib/supabase/server";
+import { createServerClient } from "@supabase/ssr";
 
 // 네이버 프로필 타입
 interface NaverProfile {
@@ -33,8 +33,8 @@ export async function GET(request: Request) {
   }
 
   // state 검증
-  const cookies = request.headers.get("cookie") || "";
-  const stateMatch = cookies.match(/naver_oauth_state=([^;]+)/);
+  const cookieHeader = request.headers.get("cookie") || "";
+  const stateMatch = cookieHeader.match(/naver_oauth_state=([^;]+)/);
   if (!stateMatch || stateMatch[1] !== state) {
     return NextResponse.redirect(`${origin}/login?error=naver_state_mismatch`);
   }
@@ -88,7 +88,6 @@ export async function GET(request: Request) {
 
     if (existingUser) {
       userId = existingUser.id;
-      // 메타데이터 업데이트
       await admin.auth.admin.updateUserById(userId, {
         user_metadata: {
           ...existingUser.user_metadata,
@@ -98,7 +97,6 @@ export async function GET(request: Request) {
         },
       });
     } else {
-      // 신규 유저 생성
       const { data: newUser, error: createError } = await admin.auth.admin.createUser({
         email,
         email_confirm: true,
@@ -125,39 +123,64 @@ export async function GET(request: Request) {
       }, { onConflict: "id" });
     }
 
-    // 4. 매직링크 생성 → 자동 로그인
+    // 4. 매직링크 생성
     const { data: linkData, error: linkError } = await admin.auth.admin.generateLink({
       type: "magiclink",
       email,
-      options: {
-        redirectTo: origin,
-      },
     });
 
-    if (linkError || !linkData) {
+    if (linkError || !linkData?.properties?.hashed_token) {
       return NextResponse.redirect(`${origin}/login?error=naver_link_failed`);
     }
 
-    // Supabase 매직링크의 토큰 추출 → auth/callback으로 리다이렉트
-    const hashed = linkData.properties?.hashed_token;
-    if (hashed) {
-      // verify 타입으로 Supabase auth callback에 전달
-      const verifyUrl = `${process.env.NEXT_PUBLIC_SUPABASE_URL}/auth/v1/verify?token=${hashed}&type=magiclink&redirect_to=${encodeURIComponent(origin)}`;
-      const response = NextResponse.redirect(verifyUrl);
-      // state 쿠키 삭제
-      response.cookies.delete("naver_oauth_state");
-      return response;
+    // 5. 리다이렉트 응답 준비 (쿠키 설정용)
+    const response = NextResponse.redirect(origin);
+
+    // 6. Supabase 서버 클라이언트 생성 (응답 쿠키에 세션 저장)
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          getAll() {
+            // 요청에서 기존 쿠키 파싱
+            const pairs = cookieHeader.split(";").map((c) => c.trim());
+            return pairs
+              .filter((p) => p.includes("="))
+              .map((p) => {
+                const [name, ...rest] = p.split("=");
+                return { name: name.trim(), value: rest.join("=") };
+              });
+          },
+          setAll(cookies) {
+            cookies.forEach(({ name, value, options }) => {
+              response.cookies.set(name, value, {
+                ...options,
+                httpOnly: true,
+                secure: true,
+                sameSite: "lax",
+              });
+            });
+          },
+        },
+      }
+    );
+
+    // 7. OTP 검증으로 세션 수립 → 쿠키 자동 설정
+    const { error: verifyError } = await supabase.auth.verifyOtp({
+      token_hash: linkData.properties.hashed_token,
+      type: "magiclink",
+    });
+
+    if (verifyError) {
+      console.error("Naver verifyOtp error:", verifyError);
+      return NextResponse.redirect(`${origin}/login?error=naver_session_failed`);
     }
 
-    // 토큰 없으면 action_link 사용
-    const actionLink = linkData.properties?.action_link;
-    if (actionLink) {
-      const response = NextResponse.redirect(actionLink);
-      response.cookies.delete("naver_oauth_state");
-      return response;
-    }
+    // state 쿠키 삭제
+    response.cookies.delete("naver_oauth_state");
 
-    return NextResponse.redirect(`${origin}/login?error=naver_link_failed`);
+    return response;
   } catch (err) {
     console.error("Naver OAuth error:", err);
     return NextResponse.redirect(`${origin}/login?error=naver_server_error`);
