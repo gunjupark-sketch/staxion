@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "메디컨시어지 서비스 | MEDI STAXION",
+  description: "미용치과 도입을 위한 올인원 컨시어지 서비스. 컨설팅, 장비 셋업, 교육, 마케팅까지.",
+};
 
 export default function ServicesPage() {
   return (

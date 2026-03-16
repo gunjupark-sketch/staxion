@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "회사소개 | MEDI STAXION",
+  description: "(주)더스테이션 - 미용치과 도입의 시작부터 성장까지 함께하는 전문 파트너",
+};
 
 export default function AboutPage() {
   return (
@@ -45,7 +51,7 @@ export default function AboutPage() {
               Core Values
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
-              메디스테이션의 3가지 핵심
+              MEDI STAXION의 3가지 핵심
             </h2>
           </div>
 

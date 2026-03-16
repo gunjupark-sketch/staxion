@@ -105,10 +105,10 @@ export default function Home() {
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
             <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
-              STAXION Store
+              MEDI STAXION Store
             </p>
             <h2 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">
-              스테이션몰 하이라이트
+              MEDI STAXION 스토어 하이라이트
             </h2>
           </div>
 
@@ -167,7 +167,7 @@ export default function Home() {
               href="/store"
               className="inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
             >
-              스테이션몰 전체 보기 &rarr;
+              MEDI STAXION 스토어 전체 보기 &rarr;
             </Link>
           </div>
         </div>

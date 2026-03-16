@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://staxion.co.kr/sitemap.xml

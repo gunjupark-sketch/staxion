@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+
+export const metadata: Metadata = {
+  title: "미용치과 장비/재료 스토어 | MEDI STAXION",
+  description: "미용치과 시술에 필요한 장비와 재료를 합리적인 가격에. 검증된 제품만 엄선.",
+};
 
 export default function StorePage() {
   // TODO: Supabase에서 products fetch

@@ -12,12 +12,10 @@ const footerLinks = {
   정보: [
     { label: "미용치과 소개", href: "/about-beauty" },
     { label: "소식", href: "/news" },
-    { label: "블로그", href: "/blog" },
     { label: "회사소개", href: "/about" },
   ],
   지원: [
     { label: "상담신청", href: "/contact" },
-    { label: "커뮤니티", href: "/community" },
     { label: "이용약관", href: "/terms" },
     { label: "개인정보처리방침", href: "/privacy" },
   ],

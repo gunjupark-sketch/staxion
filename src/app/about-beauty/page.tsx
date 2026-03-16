@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "미용치과란? | MEDI STAXION",
+  description: "치과에서 미용시술을 도입하는 이유와 가능성. 법적 근거, 시술 범위, 시장 전망까지 한눈에.",
+};
 
 export default function AboutBeautyPage() {
   return (
@@ -129,7 +135,7 @@ export default function AboutBeautyPage() {
               },
               {
                 title: "Nose Lifting",
-                desc: "비수술 코 리프팅 및 코 성형(Reshaping) 시술.",
+                desc: "비수술적 코 윤곽 개선 (필러, 실 등을 활용한 비침습 시술).",
               },
               {
                 title: "Neck Lifting",

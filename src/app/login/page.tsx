@@ -44,7 +44,7 @@ export default function LoginPage() {
         <CardContent className="p-8">
           <div className="text-center">
             <h1 className="text-2xl font-bold text-text-primary">로그인</h1>
-            <p className="mt-1 text-sm text-text-muted">STAXION 계정으로 로그인하세요</p>
+            <p className="mt-1 text-sm text-text-muted">MEDI STAXION 계정으로 로그인하세요</p>
           </div>
 
           {error && (

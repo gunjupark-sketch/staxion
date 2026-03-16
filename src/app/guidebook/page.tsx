@@ -1,6 +1,12 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+export const metadata: Metadata = {
+  title: "미용치과 도입 실무 마스터 가이드북 | MEDI STAXION",
+  description: "미용치과 도입을 위한 실무 가이드북. 법적 근거부터 시술 도입, 운영, 마케팅까지 체계적 로드맵.",
+};
 
 export default function GuidebookPage() {
   return (
@@ -19,10 +25,10 @@ export default function GuidebookPage() {
           </p>
           <div className="mt-10 flex flex-col items-center gap-3 px-4 sm:px-0">
             <Link
-              href="#purchase"
+              href="/contact?type=guidebook"
               className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
             >
-              지금 구매하기
+              구매 문의하기
             </Link>
             <p className="text-sm text-gray-500">20~30만원대 (VAT 포함)</p>
           </div>
@@ -207,10 +213,10 @@ export default function GuidebookPage() {
           <p className="mt-3 text-gray-400">가이드북 한 권으로 시행착오를 줄이세요.</p>
           <div className="mt-8 flex flex-col items-center gap-3 px-4 sm:px-0">
             <Link
-              href="#"
+              href="/contact?type=guidebook"
               className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
             >
-              가이드북 구매하기
+              가이드북 구매 문의
             </Link>
             <p className="text-xs text-gray-500">20~30만원대 (VAT 포함) · PDF 즉시 다운로드 · 세미나 우선 등록 혜택</p>
           </div>

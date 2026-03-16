@@ -76,7 +76,7 @@ export default async function AdminDashboard() {
   return (
     <div>
       <h1 className="text-2xl font-bold text-text-primary">대시보드</h1>
-      <p className="mt-1 text-sm text-text-muted">STAXION 관리자 페이지</p>
+      <p className="mt-1 text-sm text-text-muted">MEDI STAXION 관리자 페이지</p>
 
       {/* Stats */}
       <div className="mt-8 grid gap-4 grid-cols-2 lg:grid-cols-4">

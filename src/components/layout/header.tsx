@@ -8,14 +8,14 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { createClient } from "@/lib/supabase/client";
 
 const navItems = [
-  { label: "미용치과 소개", href: "/about-beauty" },
-  { label: "가이드북", href: "/guidebook" },
-  { label: "교육/세미나", href: "/education" },
-  { label: "스토어", href: "/store" },
+  { label: "미용치과", href: "/about-beauty" },
+  { label: "권역분석", href: "/area-analysis" },
   { label: "서비스", href: "/services" },
+  { label: "가이드북", href: "/guidebook" },
+  { label: "교육", href: "/education" },
+  { label: "스토어", href: "/store" },
   { label: "소식", href: "/news" },
-  { label: "블로그", href: "/blog" },
-  { label: "커뮤니티", href: "/community" },
+  { label: "회사소개", href: "/about" },
 ];
 
 export function Header() {
@@ -64,7 +64,7 @@ export function Header() {
           ))}
         </nav>
 
-        {/* Desktop Auth Buttons */}
+        {/* Desktop Auth + CTA */}
         <div className="hidden items-center gap-2 lg:flex">
           {user ? (
             <>
@@ -89,14 +89,14 @@ export function Header() {
               >
                 로그인
               </Link>
-              <Link
-                href="/signup"
-                className="rounded-md bg-brand-lime-safe px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
-              >
-                회원가입
-              </Link>
             </>
           )}
+          <Link
+            href="/contact"
+            className="rounded-md bg-brand-lime-safe px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+          >
+            상담 신청
+          </Link>
         </div>
 
         {/* Mobile Menu */}
@@ -132,18 +132,25 @@ export function Header() {
                 </Link>
               ))}
               <div className="my-4 border-t" />
+              <Link
+                href="/contact"
+                onClick={() => setOpen(false)}
+                className="mx-4 rounded-md bg-brand-lime-safe py-3 text-center text-base font-semibold text-white min-h-[44px] flex items-center justify-center"
+              >
+                상담 신청
+              </Link>
               {user ? (
                 <>
                   <Link
                     href="/admin"
                     onClick={() => setOpen(false)}
-                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary"
+                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary min-h-[44px]"
                   >
                     마이페이지
                   </Link>
                   <button
                     onClick={() => { handleLogout(); setOpen(false); }}
-                    className="rounded-md px-4 py-3 text-left text-base font-medium text-text-muted"
+                    className="rounded-md px-4 py-3 text-left text-base font-medium text-text-muted min-h-[44px]"
                   >
                     로그아웃
                   </button>
@@ -153,16 +160,9 @@ export function Header() {
                   <Link
                     href="/login"
                     onClick={() => setOpen(false)}
-                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary"
+                    className="rounded-md px-4 py-3 text-base font-medium text-text-secondary min-h-[44px]"
                   >
                     로그인
-                  </Link>
-                  <Link
-                    href="/signup"
-                    onClick={() => setOpen(false)}
-                    className="mx-4 rounded-md bg-brand-lime-safe py-3 text-center text-base font-semibold text-white"
-                  >
-                    회원가입
                   </Link>
                 </>
               )}

@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "미용치과 교육/세미나 | MEDI STAXION",
+  description: "미용치과 시술 실습 교육과 세미나. 보톡스, 필러, 스킨부스터 등 핵심 시술 교육 프로그램.",
+};
 
 export default function EducationPage() {
   return (
@@ -109,7 +115,7 @@ export default function EducationPage() {
               <br />
               연자가 되는 일은 결코 어렵지 않습니다. 어려운 것은 세미나 전문 기획과 부가적인 준비과정입니다.
               <br />
-              어떤 내용을 어떤 구조로 할지 선정하는 것부터 홍보, 운영까지 메디스테이션이 해드립니다.
+              어떤 내용을 어떤 구조로 할지 선정하는 것부터 홍보, 운영까지 MEDI STAXION이 해드립니다.
             </p>
           </div>
         </div>
@@ -240,7 +246,7 @@ export default function EducationPage() {
           <p className="mt-3 text-gray-400">
             연자님은 콘텐츠의 방향에 집중하세요.
             <br />
-            A부터 Z까지의 준비와 운영은 당신만의 전담 사무장인 메디스테이션이 함께합니다.
+            A부터 Z까지의 준비와 운영은 당신만의 전담 사무장인 MEDI STAXION이 함께합니다.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link

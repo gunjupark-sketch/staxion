@@ -8,6 +8,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+import Link from "next/link";
 
 export default async function InquiriesPage() {
   const supabase = await createClient();
@@ -16,6 +17,8 @@ export default async function InquiriesPage() {
     .from("inquiries")
     .select("*")
     .order("created_at", { ascending: false });
+
+  const newCount = inquiries?.filter((inq) => !inq.is_read).length ?? 0;
 
   const typeLabel: Record<string, string> = {
     general: "일반",
@@ -26,7 +29,17 @@ export default async function InquiriesPage() {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold text-text-primary">상담 관리</h1>
+      <div className="flex items-center gap-3">
+        <h1 className="text-2xl font-bold text-text-primary">상담 관리</h1>
+        {newCount > 0 && (
+          <Badge
+            variant="secondary"
+            className="bg-red-50 text-red-600"
+          >
+            새 문의 {newCount}건
+          </Badge>
+        )}
+      </div>
       <p className="mt-1 text-sm text-text-muted">상담 신청 목록</p>
 
       <div className="mt-8 overflow-x-auto rounded-lg border">
@@ -37,6 +50,7 @@ export default async function InquiriesPage() {
               <TableHead>유형</TableHead>
               <TableHead>이름</TableHead>
               <TableHead>연락처</TableHead>
+              <TableHead>이메일</TableHead>
               <TableHead>치과명</TableHead>
               <TableHead>내용</TableHead>
               <TableHead>신청일</TableHead>
@@ -45,27 +59,57 @@ export default async function InquiriesPage() {
           <TableBody>
             {inquiries && inquiries.length > 0 ? (
               inquiries.map((inq) => (
-                <TableRow key={inq.id}>
+                <TableRow
+                  key={inq.id}
+                  className="cursor-pointer hover:bg-surface-secondary/50 transition-colors"
+                >
                   <TableCell>
-                    <Badge variant="secondary" className={inq.is_read ? "bg-gray-100 text-gray-500" : "bg-red-50 text-red-600"}>
-                      {inq.is_read ? "읽음" : "새 문의"}
-                    </Badge>
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      <Badge variant="secondary" className={inq.is_read ? "bg-gray-100 text-gray-500" : "bg-red-50 text-red-600"}>
+                        {inq.is_read ? "읽음" : "새 문의"}
+                      </Badge>
+                    </Link>
                   </TableCell>
                   <TableCell>
-                    <Badge variant="secondary">{typeLabel[inq.type]}</Badge>
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      <Badge variant="secondary">{typeLabel[inq.type]}</Badge>
+                    </Link>
                   </TableCell>
-                  <TableCell className="font-medium">{inq.name}</TableCell>
-                  <TableCell className="text-text-muted whitespace-nowrap">{inq.phone || "-"}</TableCell>
-                  <TableCell>{inq.clinic_name || "-"}</TableCell>
-                  <TableCell className="max-w-xs truncate text-text-muted">{inq.message || "-"}</TableCell>
+                  <TableCell className="font-medium">
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      {inq.name}
+                    </Link>
+                  </TableCell>
+                  <TableCell className="text-text-muted whitespace-nowrap">
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      {inq.phone || "-"}
+                    </Link>
+                  </TableCell>
+                  <TableCell className="text-text-muted">
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      {inq.email || "-"}
+                    </Link>
+                  </TableCell>
+                  <TableCell>
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      {inq.clinic_name || "-"}
+                    </Link>
+                  </TableCell>
+                  <TableCell className="max-w-xs truncate text-text-muted">
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      <span className="truncate">{inq.message || "-"}</span>
+                    </Link>
+                  </TableCell>
                   <TableCell className="text-text-muted text-sm whitespace-nowrap">
-                    {new Date(inq.created_at).toLocaleDateString("ko-KR")}
+                    <Link href={`/admin/inquiries/${inq.id}`} className="block min-h-[44px] flex items-center">
+                      {new Date(inq.created_at).toLocaleDateString("ko-KR")}
+                    </Link>
                   </TableCell>
                 </TableRow>
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={7} className="text-center text-text-muted py-8">
+                <TableCell colSpan={8} className="text-center text-text-muted py-8">
                   상담 신청이 없습니다.
                 </TableCell>
               </TableRow>
