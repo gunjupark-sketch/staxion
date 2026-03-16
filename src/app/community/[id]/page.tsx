@@ -94,9 +94,11 @@ export default function CommunityDetailPage() {
   useEffect(() => {
     async function loadPost() {
       // 조회수 증가 (RPC 없이 간단 처리)
-      await supabase.rpc("increment_community_view", { post_id: postId }).catch(() => {
+      try {
+        await supabase.rpc("increment_community_view", { post_id: postId });
+      } catch {
         // RPC가 없으면 무시 — 아래에서 직접 처리
-      });
+      }
 
       const { data, error } = await supabase
         .from("community_posts")
