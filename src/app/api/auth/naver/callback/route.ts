@@ -78,24 +78,41 @@ export async function GET(request: Request) {
     // 3. Supabase에서 기존 유저 찾기 또는 생성
     const admin = createAdminClient();
 
-    // 이메일로 기존 유저 검색
-    const { data: existingUsers } = await admin.auth.admin.listUsers();
-    const existingUser = existingUsers?.users?.find(
-      (u) => u.email === email
-    );
+    // 이메일로 기존 유저 검색 (profiles 테이블에서 직접 조회 — listUsers 전체 스캔 방지)
+    const { data: existingProfile } = await admin
+      .from("profiles")
+      .select("id")
+      .eq("email", email)
+      .maybeSingle();
+
+    // 프로필이 있으면 해당 auth 유저 조회
+    let existingUser = null;
+    if (existingProfile) {
+      const { data } = await admin.auth.admin.getUserById(existingProfile.id);
+      existingUser = data?.user || null;
+    }
 
     let userId: string;
 
     if (existingUser) {
       userId = existingUser.id;
+      const updatedName = profile.name || existingUser.user_metadata?.name;
+      const updatedAvatar = profile.profile_image || existingUser.user_metadata?.avatar_url;
+
       await admin.auth.admin.updateUserById(userId, {
         user_metadata: {
           ...existingUser.user_metadata,
           naver_id: profile.id,
-          name: profile.name || existingUser.user_metadata?.name,
-          avatar_url: profile.profile_image || existingUser.user_metadata?.avatar_url,
+          name: updatedName,
+          avatar_url: updatedAvatar,
         },
       });
+
+      // profiles 테이블도 동기화
+      await admin.from("profiles").update({
+        name: updatedName,
+        avatar_url: updatedAvatar,
+      }).eq("id", userId);
     } else {
       const { data: newUser, error: createError } = await admin.auth.admin.createUser({
         email,

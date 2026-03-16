@@ -12,7 +12,15 @@ interface Profile {
   id: string;
   name: string;
   email: string;
+  phone: string | null;
+  birth_date: string | null;
+  address: string | null;
   clinic_name: string | null;
+  clinic_address: string | null;
+  university: string | null;
+  major: string | null;
+  referral_source: string | null;
+  is_clinic_owner: string | null;
   role: string;
   created_at: string;
 }
@@ -44,7 +52,15 @@ export default function MypageProfilePage() {
   const [provider, setProvider] = useState<string>("email");
   const [editing, setEditing] = useState(false);
   const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [birthDate, setBirthDate] = useState("");
+  const [address, setAddress] = useState("");
   const [clinicName, setClinicName] = useState("");
+  const [clinicAddress, setClinicAddress] = useState("");
+  const [university, setUniversity] = useState("");
+  const [major, setMajor] = useState("");
+  const [referralSource, setReferralSource] = useState("");
+  const [isClinicOwner, setIsClinicOwner] = useState("");
   const [saving, setSaving] = useState(false);
   const [message, setMessage] = useState("");
 
@@ -67,14 +83,22 @@ export default function MypageProfilePage() {
 
       const { data } = await supabase
         .from("profiles")
-        .select("id, name, email, clinic_name, role, created_at")
+        .select("id, name, email, phone, birth_date, address, clinic_name, clinic_address, university, major, referral_source, is_clinic_owner, role, created_at")
         .eq("id", user.id)
         .single();
 
       if (data) {
         setProfile(data);
         setName(data.name || "");
+        setPhone(data.phone || "");
+        setBirthDate(data.birth_date || "");
+        setAddress(data.address || "");
         setClinicName(data.clinic_name || "");
+        setClinicAddress(data.clinic_address || "");
+        setUniversity(data.university || "");
+        setMajor(data.major || "");
+        setReferralSource(data.referral_source || "");
+        setIsClinicOwner(data.is_clinic_owner || "");
       }
     }
     loadProfile();
@@ -85,16 +109,29 @@ export default function MypageProfilePage() {
     setSaving(true);
     setMessage("");
 
+    const updates = {
+      name,
+      phone: phone || null,
+      birth_date: birthDate || null,
+      address: address || null,
+      clinic_name: clinicName || null,
+      clinic_address: clinicAddress || null,
+      university: university || null,
+      major: major || null,
+      referral_source: referralSource || null,
+      is_clinic_owner: isClinicOwner || null,
+    };
+
     const { error } = await supabase
       .from("profiles")
-      .update({ name, clinic_name: clinicName })
+      .update(updates)
       .eq("id", profile.id);
 
     if (error) {
       setMessage("저장에 실패했습니다. 다시 시도해주세요.");
     } else {
       setMessage("저장되었습니다.");
-      setProfile({ ...profile, name, clinic_name: clinicName });
+      setProfile({ ...profile, ...updates });
       setEditing(false);
     }
     setSaving(false);
@@ -187,16 +224,84 @@ export default function MypageProfilePage() {
             </div>
 
             <div className="space-y-2">
+              <Label>전화번호</Label>
+              {editing ? (
+                <Input value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="010-0000-0000" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.phone || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>생년월일</Label>
+              {editing ? (
+                <Input type="date" value={birthDate} onChange={(e) => setBirthDate(e.target.value)} />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.birth_date || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>주소</Label>
+              {editing ? (
+                <Input value={address} onChange={(e) => setAddress(e.target.value)} placeholder="주소를 입력하세요" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.address || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
               <Label>치과명</Label>
               {editing ? (
-                <Input
-                  value={clinicName}
-                  onChange={(e) => setClinicName(e.target.value)}
-                  placeholder="치과명을 입력하세요"
-                />
+                <Input value={clinicName} onChange={(e) => setClinicName(e.target.value)} placeholder="치과명을 입력하세요" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.clinic_name || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>치과 주소</Label>
+              {editing ? (
+                <Input value={clinicAddress} onChange={(e) => setClinicAddress(e.target.value)} placeholder="치과 주소를 입력하세요" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.clinic_address || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>대학교</Label>
+              {editing ? (
+                <Input value={university} onChange={(e) => setUniversity(e.target.value)} placeholder="출신 대학교" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.university || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>전공</Label>
+              {editing ? (
+                <Input value={major} onChange={(e) => setMajor(e.target.value)} placeholder="전공" />
+              ) : (
+                <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">{profile.major || "-"}</p>
+              )}
+            </div>
+
+            <div className="space-y-2">
+              <Label>개원 여부</Label>
+              {editing ? (
+                <select
+                  value={isClinicOwner}
+                  onChange={(e) => setIsClinicOwner(e.target.value)}
+                  className="w-full rounded-lg border bg-transparent px-3 py-2.5 text-sm min-h-[44px]"
+                >
+                  <option value="">선택</option>
+                  <option value="yes">개원</option>
+                  <option value="no">미개원</option>
+                  <option value="planning">개원 준비 중</option>
+                </select>
               ) : (
                 <p className="rounded-lg bg-surface-secondary px-3 py-2.5 text-sm text-text-primary">
-                  {profile.clinic_name || "-"}
+                  {profile.is_clinic_owner === "yes" ? "개원" : profile.is_clinic_owner === "no" ? "미개원" : profile.is_clinic_owner === "planning" ? "개원 준비 중" : "-"}
                 </p>
               )}
             </div>
@@ -227,7 +332,15 @@ export default function MypageProfilePage() {
                 onClick={() => {
                   setEditing(false);
                   setName(profile.name || "");
+                  setPhone(profile.phone || "");
+                  setBirthDate(profile.birth_date || "");
+                  setAddress(profile.address || "");
                   setClinicName(profile.clinic_name || "");
+                  setClinicAddress(profile.clinic_address || "");
+                  setUniversity(profile.university || "");
+                  setMajor(profile.major || "");
+                  setReferralSource(profile.referral_source || "");
+                  setIsClinicOwner(profile.is_clinic_owner || "");
                   setMessage("");
                 }}
               >

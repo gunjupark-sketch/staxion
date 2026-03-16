@@ -69,9 +69,11 @@ export default function CommunityEditPage() {
       });
   }, []);
 
-  // 기존 게시물 로드
+  // 기존 게시물 로드 + 작성자 검증
   useEffect(() => {
     async function loadPost() {
+      if (!user) return; // user 로드 전이면 대기
+
       const { data } = await supabase
         .from("community_posts")
         .select("*")
@@ -83,6 +85,13 @@ export default function CommunityEditPage() {
         return;
       }
 
+      // 작성자 본인 또는 관리자만 수정 가능
+      if (data.author_id !== user.id && userRole !== "admin") {
+        alert("수정 권한이 없습니다.");
+        router.replace(`/community/${postId}`);
+        return;
+      }
+
       setTitle(data.title);
       setContent(data.content);
       setCategory(data.category);
@@ -90,7 +99,7 @@ export default function CommunityEditPage() {
       setLoading(false);
     }
     loadPost();
-  }, [postId, router]);
+  }, [postId, router, user, userRole]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
