@@ -17,50 +17,26 @@ export default function AdminLayout({
   useEffect(() => {
     const supabase = createClient();
 
-    const { data: { subscription } } = supabase.auth.onAuthStateChange(
-      async (event, session) => {
-        if (!session?.user) {
-          if (event === "INITIAL_SESSION") {
-            // 세션 없음 확인 → 로그인 페이지로
-            const { data } = await supabase.auth.getUser();
-            if (!data.user) {
-              router.replace("/login");
-              return;
-            }
-            // getUser로 유저 찾음 → role 체크
-            const { data: profile } = await supabase
-              .from("profiles")
-              .select("role")
-              .eq("id", data.user.id)
-              .single();
-
-            if (profile?.role !== "admin") {
-              router.replace("/");
-              return;
-            }
-            setAuthorized(true);
-            setLoading(false);
-          }
-          return;
-        }
-
-        // 세션 있음 → role 체크
-        const { data: profile } = await supabase
-          .from("profiles")
-          .select("role")
-          .eq("id", session.user.id)
-          .single();
-
-        if (profile?.role !== "admin") {
-          router.replace("/");
-          return;
-        }
-        setAuthorized(true);
-        setLoading(false);
+    supabase.auth.getSession().then(async ({ data: { session } }) => {
+      if (!session?.user) {
+        router.replace("/login");
+        return;
       }
-    );
 
-    return () => subscription.unsubscribe();
+      const { data: profile } = await supabase
+        .from("profiles")
+        .select("role")
+        .eq("id", session.user.id)
+        .single();
+
+      if (profile?.role !== "admin") {
+        router.replace("/");
+        return;
+      }
+
+      setAuthorized(true);
+      setLoading(false);
+    });
   }, [router]);
 
   if (loading || !authorized) {
