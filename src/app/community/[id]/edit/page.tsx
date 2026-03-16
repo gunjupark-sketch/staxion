@@ -173,7 +173,7 @@ export default function CommunityEditPage() {
           {/* 카테고리 */}
           <div className="space-y-2">
             <Label htmlFor="category">카테고리</Label>
-            <Select value={category} onValueChange={setCategory}>
+            <Select value={category} onValueChange={(val) => val !== null && setCategory(val)}>
               <SelectTrigger className="min-h-[44px]">
                 <SelectValue placeholder="카테고리를 선택하세요" />
               </SelectTrigger>
