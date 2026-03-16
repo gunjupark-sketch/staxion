@@ -29,12 +29,7 @@ export async function GET(request: Request) {
           },
           setAll(cookies) {
             cookies.forEach(({ name, value, options }) => {
-              response.cookies.set(name, value, {
-                ...options,
-                httpOnly: true,
-                secure: true,
-                sameSite: "lax",
-              });
+              response.cookies.set(name, value, options);
             });
           },
         },
