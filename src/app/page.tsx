@@ -4,9 +4,9 @@ import Image from "next/image";
 export default function Home() {
   return (
     <>
-      {/* ========== Hero — 텍스처 배경 + 그라데이션 오버레이 ========== */}
-      <section className="relative flex min-h-[90vh] items-center justify-center overflow-hidden px-5 text-center md:px-6">
-        {/* 배경 이미지 */}
+      {/* ========== Hero — 다크 텍스처 + 캐릭터 ========== */}
+      <section className="relative flex min-h-[92vh] items-center overflow-hidden">
+        {/* 배경 텍스처 — 오버레이 최소화로 텍스처 질감 살림 */}
         <Image
           src="/images/bg/medi-bg-nologo.png"
           alt=""
@@ -15,38 +15,62 @@ export default function Home() {
           priority
           quality={90}
         />
-        {/* 그라데이션 오버레이 — 좌하단 어둡게, 우상단 약간 밝게 */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-black/70 via-black/40 to-transparent" />
-        {/* 하단 페이드 */}
-        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent" />
+        {/* 텍스처 위 그라데이션 — 왼쪽만 살짝 어둡게 (텍스트 영역) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
+        {/* 하단 페이드 to white */}
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
 
-        <div className="relative z-10 max-w-3xl">
-          <p className="mb-4 text-sm font-medium tracking-[0.25em] text-brand-lime uppercase">
-            A Platform for Experts
-          </p>
-          <h1 className="text-4xl font-bold leading-tight tracking-tight text-white md:text-6xl lg:text-7xl">
-            전문성이 머무는 곳,
-            <br />
-            <span className="text-brand-lime">성장</span>이 시작되는 곳
-          </h1>
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-gray-300 md:text-lg">
-            치과를 위한 의료성장연구소 MEDI STAXION.
-            <br />
-            배움부터 실행까지 치과 혼자 두지 않습니다.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-            <Link
-              href="/services"
-              className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white shadow-lg shadow-brand-lime-safe/25 transition-all hover:bg-brand-lime-safe/90 hover:shadow-xl hover:shadow-brand-lime-safe/30 sm:w-auto"
+        <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-5 md:px-8">
+          {/* 텍스트 영역 */}
+          <div className="max-w-2xl py-20">
+            <p
+              className="mb-5 text-sm font-semibold tracking-[0.3em] uppercase"
+              style={{ color: "#82ff00", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
             >
-              서비스 보기
-            </Link>
-            <Link
-              href="/contact"
-              className="inline-flex h-12 w-full items-center justify-center rounded-lg border-2 border-white/30 px-8 text-base text-white backdrop-blur-sm transition-all hover:border-brand-lime-safe hover:text-brand-lime sm:w-auto"
+              Medical Growth Research Lab
+            </p>
+            <h1
+              className="text-4xl font-extrabold leading-[1.15] tracking-tight text-white md:text-5xl lg:text-6xl"
+              style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}
             >
-              상담 신청
-            </Link>
+              전문성이 머무는 곳,
+              <br />
+              <span style={{ color: "#82ff00" }}>성장</span>이 시작되는 곳
+            </h1>
+            <p
+              className="mt-6 max-w-lg text-base leading-relaxed text-gray-200 md:text-lg"
+              style={{ textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}
+            >
+              치과를 위한 의료성장연구소 MEDI STAXION.
+              <br />
+              배움부터 실행까지, 치과를 혼자 두지 않습니다.
+            </p>
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/services"
+                className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-safe px-8 text-base font-bold text-white shadow-lg shadow-brand-lime-safe/30 transition-all hover:brightness-110 hover:shadow-xl hover:shadow-brand-lime-safe/40 sm:w-auto"
+              >
+                서비스 보기
+              </Link>
+              <Link
+                href="/contact"
+                className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-white/40 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-brand-lime hover:bg-white/5 sm:w-auto"
+              >
+                상담 신청
+              </Link>
+            </div>
+          </div>
+
+          {/* 우측 닥터 캐릭터 — 데스크탑만 */}
+          <div className="pointer-events-none hidden flex-1 items-end justify-end md:flex">
+            <div className="relative h-[440px] w-[300px] lg:h-[520px] lg:w-[360px]">
+              <Image
+                src="/images/misc/doctor.png"
+                alt="MEDI STAXION Doctor"
+                fill
+                className="object-contain object-bottom drop-shadow-2xl"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -55,10 +79,10 @@ export default function Home() {
       <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
               How it works
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
               치과 성장을 위한 3단계 서비스
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-muted">
@@ -98,7 +122,7 @@ export default function Home() {
                 className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
               >
                 {/* 카드 이미지 */}
-                <div className="relative aspect-square overflow-hidden bg-surface-dark">
+                <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -109,7 +133,7 @@ export default function Home() {
                 {/* 카드 본문 */}
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-8 w-8 items-center justify-center rounded-full bg-brand-lime-safe/10 text-sm font-bold text-brand-lime-safe">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-lime-safe text-sm font-bold text-white">
                       {item.step}
                     </span>
                     <h3 className="text-lg font-bold text-text-primary">
@@ -121,10 +145,10 @@ export default function Home() {
                   </p>
                   <Link
                     href={item.href}
-                    className="mt-5 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                    className="mt-5 inline-flex min-h-[44px] items-center text-sm font-bold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
                   >
                     {item.cta}
-                    <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -139,10 +163,10 @@ export default function Home() {
       <section className="bg-surface-secondary py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
               MEDI STAXION Store
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
               스토어 하이라이트
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-text-muted">
@@ -203,7 +227,9 @@ export default function Home() {
             ].map((section) => (
               <div key={section.category}>
                 <div className="flex items-center gap-2 text-text-primary">
-                  <span className="text-brand-lime-safe">{section.icon}</span>
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-lime-safe/15 text-brand-lime-safe">
+                    {section.icon}
+                  </span>
                   <h3 className="text-sm font-bold">{section.category}</h3>
                 </div>
                 <div className="mt-4 space-y-3">
@@ -229,7 +255,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/store"
-              className="inline-flex h-11 items-center justify-center rounded-lg border-2 border-brand-lime-safe/30 px-8 text-sm font-semibold text-brand-lime-safe transition-all hover:border-brand-lime-safe hover:bg-brand-lime-safe/5"
+              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-safe transition-all hover:border-brand-lime-safe hover:bg-brand-lime-safe/5"
             >
               스토어 전체 보기
               <svg className="ml-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -240,14 +266,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== 세미나 CTA — 배너 이미지 활용 ========== */}
-      <section className="relative overflow-hidden bg-white py-20 md:py-28">
+      {/* ========== 세미나 CTA — 배너 이미지 + 카테고리 ========== */}
+      <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
               MEDI STAXION Seminar
             </p>
-            <h2 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">
+            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
               치과의 새로운 성장동력, 세미나
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-text-muted">
@@ -256,7 +282,7 @@ export default function Home() {
             </p>
           </div>
 
-          {/* 세미나 배너 이미지 슬라이드 */}
+          {/* 세미나 배너 이미지 */}
           <div className="mt-12 overflow-hidden rounded-2xl shadow-lg">
             <div className="relative aspect-[3/1] w-full md:aspect-[4/1]">
               <Image
@@ -323,7 +349,7 @@ export default function Home() {
           <div className="mt-10 text-center">
             <Link
               href="/education"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white shadow-md shadow-brand-lime-safe/20 transition-all hover:bg-brand-lime-safe/90 hover:shadow-lg sm:w-auto"
+              className="inline-flex h-12 items-center justify-center rounded-xl bg-brand-lime-safe px-8 text-base font-bold text-white shadow-md shadow-brand-lime-safe/20 transition-all hover:brightness-110 hover:shadow-lg sm:w-auto"
             >
               세미나 일정 보기
             </Link>
@@ -331,17 +357,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ========== 통계 배너 — 패턴 배경 ========== */}
-      <section className="relative overflow-hidden py-16 md:py-20">
+      {/* ========== 통계 배너 — 다크 텍스처 (오버레이 최소) ========== */}
+      <section className="relative overflow-hidden py-20 md:py-24">
         <Image
           src="/images/bg/pattern.jpg"
           alt=""
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        {/* 매우 얇은 오버레이 — 텍스처 자체가 이미 어둡기 때문 */}
+        <div className="absolute inset-0 bg-black/20" />
         <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-6">
-          <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4">
+          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4">
             {[
               { number: "6가지", label: "골든시그널 분석 영역" },
               { number: "9모듈", label: "핀셋마케팅 실행 모듈" },
@@ -349,17 +376,28 @@ export default function Home() {
               { number: "200+", label: "가이드북 페이지" },
             ].map((stat) => (
               <div key={stat.label}>
-                <p className="text-3xl font-black text-brand-lime md:text-5xl">
+                <p
+                  className="text-4xl font-black md:text-5xl lg:text-6xl"
+                  style={{
+                    color: "#82ff00",
+                    textShadow: "0 0 30px rgba(130,255,0,0.3), 0 2px 10px rgba(0,0,0,0.5)",
+                  }}
+                >
                   {stat.number}
                 </p>
-                <p className="mt-2 text-sm text-gray-300">{stat.label}</p>
+                <p
+                  className="mt-3 text-sm font-medium text-gray-200 md:text-base"
+                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
+                >
+                  {stat.label}
+                </p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* ========== 가이드북 CTA — medi_bg_logo 배경 ========== */}
+      {/* ========== 가이드북 CTA — 로고 텍스처 배경 ========== */}
       <section className="relative overflow-hidden py-20 md:py-28">
         <Image
           src="/images/bg/medi-bg-logo.png"
@@ -367,15 +405,25 @@ export default function Home() {
           fill
           className="object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60" />
+        {/* 얇은 오버레이 — 로고가 은은하게 보이도록 */}
+        <div className="absolute inset-0 bg-black/15" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-[0.25em] text-brand-lime uppercase">
+          <p
+            className="text-sm font-bold tracking-[0.3em] uppercase"
+            style={{ color: "#82ff00", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
+          >
             Guidebook
           </p>
-          <h2 className="mt-4 text-3xl font-bold text-white md:text-5xl">
+          <h2
+            className="mt-5 text-3xl font-extrabold text-white md:text-5xl"
+            style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}
+          >
             미용치과 도입 실무 마스터
           </h2>
-          <p className="mx-auto mt-5 max-w-xl text-base text-gray-300">
+          <p
+            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-gray-200 md:text-lg"
+            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}
+          >
             시술 선택, 장비 구매, 인력 구성, 마케팅, 수익 모델까지.
             <br />
             200~250페이지에 담긴 실전 가이드.
@@ -383,11 +431,16 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-4">
             <Link
               href="/guidebook"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark shadow-lg shadow-brand-lime/25 transition-all hover:bg-brand-lime/90 hover:shadow-xl sm:w-auto"
+              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime px-10 text-base font-bold text-surface-dark shadow-lg shadow-brand-lime/30 transition-all hover:brightness-110 hover:shadow-xl sm:w-auto"
             >
               가이드북 보기
             </Link>
-            <p className="text-sm text-gray-400">20~30만원대 (VAT 포함)</p>
+            <p
+              className="text-sm text-gray-300"
+              style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
+            >
+              20~30만원대 (VAT 포함)
+            </p>
           </div>
         </div>
       </section>
