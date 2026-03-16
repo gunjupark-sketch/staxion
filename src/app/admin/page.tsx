@@ -6,35 +6,47 @@ import Link from "next/link";
 export default async function AdminDashboard() {
   const supabase = await createClient();
 
-  const [
-    { count: memberCount },
-    { count: orderCount },
-    { count: inquiryCount },
-    { count: postCount },
-    { data: recentOrders },
-    { data: recentInquiries },
-    { data: recentMembers },
-  ] = await Promise.all([
-    supabase.from("profiles").select("*", { count: "exact", head: true }),
-    supabase.from("orders").select("*", { count: "exact", head: true }),
-    supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("is_read", false),
-    supabase.from("posts").select("*", { count: "exact", head: true }),
-    supabase
-      .from("orders")
-      .select("id, status, total_amount, created_at, profiles(name)")
-      .order("created_at", { ascending: false })
-      .limit(5),
-    supabase
-      .from("inquiries")
-      .select("id, name, type, is_read, created_at")
-      .order("created_at", { ascending: false })
-      .limit(5),
-    supabase
-      .from("profiles")
-      .select("id, name, email, created_at")
-      .order("created_at", { ascending: false })
-      .limit(5),
-  ]);
+  let memberCount = 0;
+  let orderCount = 0;
+  let inquiryCount = 0;
+  let postCount = 0;
+  let recentOrders: Awaited<ReturnType<typeof supabase.from<"orders">>>["data"] = [];
+  let recentInquiries: Awaited<ReturnType<typeof supabase.from<"inquiries">>>["data"] = [];
+  let recentMembers: Awaited<ReturnType<typeof supabase.from<"profiles">>>["data"] = [];
+
+  try {
+    const results = await Promise.all([
+      supabase.from("profiles").select("*", { count: "exact", head: true }),
+      supabase.from("orders").select("*", { count: "exact", head: true }),
+      supabase.from("inquiries").select("*", { count: "exact", head: true }).eq("is_read", false),
+      supabase.from("posts").select("*", { count: "exact", head: true }),
+      supabase
+        .from("orders")
+        .select("id, status, total_amount, created_at, profiles(name)")
+        .order("created_at", { ascending: false })
+        .limit(5),
+      supabase
+        .from("inquiries")
+        .select("id, name, type, is_read, created_at")
+        .order("created_at", { ascending: false })
+        .limit(5),
+      supabase
+        .from("profiles")
+        .select("id, name, email, created_at")
+        .order("created_at", { ascending: false })
+        .limit(5),
+    ]);
+
+    if (!results[0].error) memberCount = results[0].count ?? 0;
+    if (!results[1].error) orderCount = results[1].count ?? 0;
+    if (!results[2].error) inquiryCount = results[2].count ?? 0;
+    if (!results[3].error) postCount = results[3].count ?? 0;
+    if (!results[4].error) recentOrders = results[4].data;
+    if (!results[5].error) recentInquiries = results[5].data;
+    if (!results[6].error) recentMembers = results[6].data;
+  } catch {
+    // All values remain at safe defaults
+  }
 
   const stats = [
     { label: "전체 회원", value: memberCount ?? 0, href: "/admin/members" },

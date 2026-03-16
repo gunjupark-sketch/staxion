@@ -431,7 +431,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-4">
             <Link
               href="/guidebook"
-              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime px-10 text-base font-bold text-surface-dark shadow-lg shadow-brand-lime/30 transition-all hover:brightness-110 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
+              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-10 text-base font-bold text-white shadow-lg shadow-brand-lime-btn/30 transition-all hover:brightness-110 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
             >
               가이드북 보기
             </Link>
