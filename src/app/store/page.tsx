@@ -4,6 +4,7 @@ import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { createClient } from "@/lib/supabase/server";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "미용치과 장비/재료 스토어 | MEDI STAXION",
@@ -25,13 +26,7 @@ export default async function StorePage() {
 
   return (
     <>
-      <section className="bg-surface-dark py-20">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">Store</p>
-          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">스토어</h1>
-          <p className="mx-auto mt-4 max-w-xl text-gray-400">미용치과 도입에 필요한 가이드북, 장비, 재료</p>
-        </div>
-      </section>
+      <PageBanner pageSlug="store" />
 
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">

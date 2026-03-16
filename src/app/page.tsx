@@ -1,79 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import PopupModal from "@/components/PopupModal";
+import HomeBanner from "@/components/HomeBanner";
 
 export default function Home() {
   return (
     <>
       <PopupModal />
-      {/* ========== Hero — 다크 텍스처 + 캐릭터 ========== */}
-      <section className="relative flex min-h-[92vh] items-center overflow-hidden">
-        {/* 배경 텍스처 — 오버레이 최소화로 텍스처 질감 살림 */}
-        <Image
-          src="/images/bg/medi-bg-nologo.png"
-          alt=""
-          fill
-          className="object-cover"
-          priority
-          quality={90}
-        />
-        {/* 오버레이 — 텍스트 가독성용 단색 */}
-        <div className="absolute inset-0 bg-black/40" />
-
-        <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-5 md:px-8">
-          {/* 텍스트 영역 */}
-          <div className="max-w-2xl py-20">
-            <p
-              className="mb-5 text-sm font-semibold tracking-[0.3em] uppercase"
-              style={{ color: "#82ff00", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
-            >
-              Medical Growth Research Lab
-            </p>
-            <h1
-              className="text-4xl font-extrabold leading-[1.15] tracking-tight text-white md:text-5xl lg:text-6xl"
-              style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}
-            >
-              전문성이 머무는 곳,
-              <br />
-              <span style={{ color: "#82ff00" }}>성장</span>이 시작되는 곳
-            </h1>
-            <p
-              className="mt-6 max-w-lg text-base leading-relaxed text-gray-200 md:text-lg"
-              style={{ textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}
-            >
-              치과를 위한 의료성장연구소 MEDI STAXION.
-              <br />
-              배움부터 실행까지, 치과를 혼자 두지 않습니다.
-            </p>
-            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/services"
-                className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-lg shadow-brand-lime-btn/30 transition-all hover:brightness-110 hover:shadow-xl hover:shadow-brand-lime-btn/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
-              >
-                서비스 보기
-              </Link>
-              <Link
-                href="/contact"
-                className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-white/40 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-brand-lime hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
-              >
-                상담 신청
-              </Link>
-            </div>
-          </div>
-
-          {/* 우측 닥터 캐릭터 — 데스크탑만 */}
-          <div className="pointer-events-none hidden flex-1 items-end justify-end md:flex">
-            <div className="relative h-[440px] w-[300px] lg:h-[520px] lg:w-[360px]">
-              <Image
-                src="/images/misc/doctor.png"
-                alt="MEDI STAXION Doctor"
-                fill
-                className="object-contain object-bottom drop-shadow-2xl"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ========== Hero — 배너 이미지 슬라이드 ========== */}
+      <HomeBanner />
 
       {/* ========== 서비스 3단계 — 이미지 카드 ========== */}
       <section className="bg-white py-20 md:py-28">

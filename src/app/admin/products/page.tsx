@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
+import RichTextEditor from "@/components/editor/RichTextEditor";
 import {
   Table,
   TableBody,
@@ -37,6 +38,7 @@ interface Product {
   name: string;
   slug: string;
   description: string | null;
+  detail_content: string | null;
   price: number;
   sale_price: number | null;
   image_url: string | null;
@@ -61,6 +63,7 @@ interface ProductForm {
   name: string;
   slug: string;
   description: string;
+  detail_content: string;
   price: number;
   sale_price: string;
   category_id: string;
@@ -84,6 +87,7 @@ const EMPTY_FORM: ProductForm = {
   name: "",
   slug: "",
   description: "",
+  detail_content: "",
   price: 0,
   sale_price: "",
   category_id: "",
@@ -150,6 +154,7 @@ export default function AdminProductsPage() {
       name: product.name,
       slug: product.slug,
       description: product.description || "",
+      detail_content: product.detail_content || "",
       price: product.price,
       sale_price: product.sale_price != null ? String(product.sale_price) : "",
       category_id: product.category_id || "",
@@ -195,6 +200,7 @@ export default function AdminProductsPage() {
         name: form.name.trim(),
         slug: form.slug.trim(),
         description: form.description.trim() || null,
+        detail_content: form.detail_content.trim() || null,
         price: form.price,
         sale_price: form.sale_price !== "" ? Number(form.sale_price) : null,
         category_id: form.category_id || null,
@@ -400,7 +406,7 @@ export default function AdminProductsPage() {
 
       {/* Create/Edit Dialog */}
       <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
-        <DialogContent className="sm:max-w-lg max-h-[90vh] overflow-y-auto">
+        <DialogContent className="sm:max-w-3xl max-h-[90vh] overflow-y-auto">
           <DialogHeader>
             <DialogTitle>
               {editingProduct ? "상품 수정" : "상품 등록"}
@@ -556,6 +562,17 @@ export default function AdminProductsPage() {
                   setForm((prev) => ({ ...prev, image_url: e.target.value }))
                 }
                 placeholder="https://..."
+              />
+            </div>
+
+            {/* Detail Content — Rich Text Editor */}
+            <div className="space-y-1.5">
+              <Label>상세 설명 (상품 상세페이지에 표시)</Label>
+              <RichTextEditor
+                value={form.detail_content}
+                onChange={(html) =>
+                  setForm((prev) => ({ ...prev, detail_content: html }))
+                }
               />
             </div>
 

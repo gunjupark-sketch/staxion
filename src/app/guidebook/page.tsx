@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "미용치과 도입 실무 마스터 가이드북 | MEDI STAXION",
@@ -11,29 +12,7 @@ export const metadata: Metadata = {
 export default function GuidebookPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">Guidebook</p>
-          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
-            미용치과 도입 실무 마스터
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-            200~250페이지, 이미지와 도표 포함.
-            <br />
-            미용치과 도입 준비를 위한 완전한 로드맵.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-3 px-4 sm:px-0">
-            <Link
-              href="/contact?type=guidebook"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
-            >
-              구매 문의하기
-            </Link>
-            <p className="text-sm text-gray-500">20~30만원대 (VAT 포함)</p>
-          </div>
-        </div>
-      </section>
+      <PageBanner pageSlug="guidebook" />
 
       {/* 이 가이드북이 필요한 이유 */}
       <section className="bg-white py-20">

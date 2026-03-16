@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "메디컨시어지 서비스 | MEDI STAXION",
@@ -10,22 +11,7 @@ export const metadata: Metadata = {
 export default function ServicesPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">
-            MEDI CONCIERGE
-          </p>
-          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
-            숨은 전략을 현실로 만드는
-            <br />
-            프리미엄 서비스
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-            권역 내 숨겨진 골든시그널 감지 + 캐치전략 + 브랜드 정체성
-          </p>
-        </div>
-      </section>
+      <PageBanner pageSlug="services" />
 
       {/* 서비스 흐름도 */}
       <section className="bg-white py-20">

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
+import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "미용치과 교육/세미나 | MEDI STAXION",
@@ -10,22 +11,7 @@ export const metadata: Metadata = {
 export default function EducationPage() {
   return (
     <>
-      {/* Hero */}
-      <section className="bg-surface-dark py-20 md:py-28">
-        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">
-            MEDI STAXION SEMINAR
-          </p>
-          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
-            치과의 새로운 성장동력
-          </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
-            현장에서 바로 적용되는 실전 교육.
-            <br />
-            치과를 만드는 모든 전문가가 함께 성장하는 세미나입니다.
-          </p>
-        </div>
-      </section>
+      <PageBanner pageSlug="education" />
 
       {/* 4가지 세미나 */}
       <section className="bg-white py-20">

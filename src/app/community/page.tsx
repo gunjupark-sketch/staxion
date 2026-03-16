@@ -14,6 +14,7 @@ import {
   ChevronRightIcon,
   MegaphoneIcon,
 } from "lucide-react";
+import PageBanner from "@/components/PageBanner";
 
 const PAGE_SIZE = 20;
 
@@ -167,20 +168,7 @@ function CommunityContent() {
 
   return (
     <>
-      {/* 히어로 */}
-      <section className="bg-surface-dark py-16 sm:py-20">
-        <div className="mx-auto max-w-5xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">
-            Community
-          </p>
-          <h1 className="mt-3 text-3xl font-bold text-white md:text-4xl">
-            커뮤니티
-          </h1>
-          <p className="mx-auto mt-3 max-w-lg text-gray-400">
-            미용치과에 관한 정보와 경험을 나누는 공간입니다
-          </p>
-        </div>
-      </section>
+      <PageBanner pageSlug="community" />
 
       {/* 메인 콘텐츠 */}
       <section className="py-8 sm:py-12">
