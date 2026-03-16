@@ -172,10 +172,11 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           ref={editorRef}
           contentEditable
           suppressContentEditableWarning
+          dir="ltr"
           onInput={handleInput}
           onBlur={handleInput}
           dangerouslySetInnerHTML={{ __html: value }}
-          className="prose prose-sm max-w-none p-4 min-h-[300px] focus:outline-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-3 [&_h3]:mb-1 [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-text-muted [&_a]:text-brand-lime-text [&_a]:underline"
+          className="prose prose-sm max-w-none p-4 min-h-[300px] focus:outline-none text-left [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-3 [&_h3]:mb-1 [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_blockquote]:text-text-muted [&_a]:text-brand-lime-text [&_a]:underline"
           data-placeholder="내용을 입력하세요..."
         />
       )}

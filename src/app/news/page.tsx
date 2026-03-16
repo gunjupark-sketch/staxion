@@ -192,7 +192,7 @@ export default function NewsPage() {
           ) : (
             <div className="space-y-3">
               {filtered.map((post) => (
-                <Link key={post.id} href={`/blog/${post.slug}`} className="block group">
+                <Link key={post.id} href={`/news/${post.slug}`} className="block group">
                   <Card className="border-border/40 transition-all hover:border-border hover:shadow-md group-hover:bg-surface-secondary/30">
                     <CardContent className="p-5 sm:p-6">
                       <div className="flex items-start gap-4">
