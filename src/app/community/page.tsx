@@ -72,7 +72,11 @@ function CommunityContent() {
       .from("community_categories")
       .select("slug, name")
       .order("sort_order")
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("카테고리 로드 실패:", error);
+          return;
+        }
         if (data) setCategories(data);
       });
   }, []);
@@ -94,20 +98,34 @@ function CommunityContent() {
       query = query.eq("category", currentCategory);
     }
 
-    const { data, count } = await query;
+    const { data, count, error } = await query;
+
+    if (error) {
+      console.error("게시물 로드 실패:", error);
+      setPosts([]);
+      setTotalCount(0);
+      setLoading(false);
+      return;
+    }
 
     if (data) {
       // 댓글 수 가져오기
       const postIds = data.map((p) => p.id);
-      const { data: commentCounts } = await supabase
-        .from("community_comments")
-        .select("post_id")
-        .in("post_id", postIds);
+      let countMap: Record<string, number> = {};
+      if (postIds.length > 0) {
+        const { data: commentCounts, error: commentError } = await supabase
+          .from("community_comments")
+          .select("post_id")
+          .in("post_id", postIds);
 
-      const countMap: Record<string, number> = {};
-      commentCounts?.forEach((c) => {
-        countMap[c.post_id] = (countMap[c.post_id] || 0) + 1;
-      });
+        if (commentError) {
+          console.error("댓글 수 로드 실패:", commentError);
+        } else {
+          commentCounts?.forEach((c) => {
+            countMap[c.post_id] = (countMap[c.post_id] || 0) + 1;
+          });
+        }
+      }
 
       setPosts(
         data.map((p) => ({

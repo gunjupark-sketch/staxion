@@ -1,7 +1,7 @@
 -- ============================================================
 -- 배너 관리 테이블
 -- ============================================================
-create table public.banners (
+create table if not exists public.banners (
   id uuid primary key default uuid_generate_v4(),
   page_slug text not null,
   title text,

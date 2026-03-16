@@ -67,10 +67,13 @@ export default function PopupsPage() {
   const [deleting, setDeleting] = useState(false);
 
   const fetchPopups = useCallback(async () => {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("popups")
       .select("*")
       .order("created_at", { ascending: false });
+    if (error) {
+      console.error("팝업 목록 로드 실패:", error);
+    }
     setPopups(data || []);
     setLoading(false);
   }, [supabase]);

@@ -10,6 +10,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
   DialogFooter,
 } from "@/components/ui/dialog";
 import {
@@ -75,11 +76,14 @@ export default function AdminBannersPage() {
 
   const fetchBanners = useCallback(async () => {
     setLoading(true);
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("banners")
       .select("*")
       .eq("page_slug", selectedPage)
       .order("sort_order", { ascending: true });
+    if (error) {
+      console.error("배너 목록 로드 실패:", error);
+    }
     setBanners(data || []);
     setLoading(false);
   }, [selectedPage]);
@@ -389,6 +393,9 @@ export default function AdminBannersPage() {
             <DialogTitle>
               {editingBanner ? "배너 수정" : "배너 등록"}
             </DialogTitle>
+            <DialogDescription>
+              배너 이미지와 표시 설정을 관리합니다.
+            </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4">

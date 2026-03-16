@@ -60,7 +60,11 @@ export default function CommunityEditPage() {
       .from("community_categories")
       .select("slug, name")
       .order("sort_order")
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("카테고리 로드 실패:", error);
+          return;
+        }
         if (data) setCategories(data);
       });
   }, []);

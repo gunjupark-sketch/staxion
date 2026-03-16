@@ -397,29 +397,9 @@ create policy "관리자 수정" on public.site_settings
   );
 
 -- ============================================================
--- 12. updated_at 자동 갱신 트리거
+-- 12. 팝업 관리
 -- ============================================================
-create or replace function public.update_updated_at()
-returns trigger as $$
-begin
-  new.updated_at = now();
-  return new;
-end;
-$$ language plpgsql;
-
--- 각 테이블에 트리거 적용
-create trigger set_updated_at before update on public.profiles for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.products for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.orders for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.posts for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.seminars for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.services for each row execute function public.update_updated_at();
-create trigger set_updated_at before update on public.popups for each row execute function public.update_updated_at();
-
--- ============================================================
--- 팝업 관리
--- ============================================================
-create table public.popups (
+create table if not exists public.popups (
   id uuid primary key default uuid_generate_v4(),
   title text not null,
   image_url text not null,
@@ -449,3 +429,23 @@ create policy "관리자 팝업 CUD" on public.popups
   for all using (
     exists (select 1 from public.profiles where id = auth.uid() and role = 'admin')
   );
+
+-- ============================================================
+-- 13. updated_at 자동 갱신 트리거
+-- ============================================================
+create or replace function public.update_updated_at()
+returns trigger as $$
+begin
+  new.updated_at = now();
+  return new;
+end;
+$$ language plpgsql;
+
+-- 각 테이블에 트리거 적용
+create trigger set_updated_at before update on public.profiles for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.products for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.orders for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.posts for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.seminars for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.services for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.popups for each row execute function public.update_updated_at();

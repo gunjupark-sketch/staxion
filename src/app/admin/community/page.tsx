@@ -52,7 +52,11 @@ export default function AdminCommunityPage() {
       .from("community_categories")
       .select("slug, name")
       .order("sort_order")
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("카테고리 로드 실패:", error);
+          return;
+        }
         if (data) setCategories(data);
       });
   }, []);
@@ -68,7 +72,13 @@ export default function AdminCommunityPage() {
       query = query.eq("post_type", filter);
     }
 
-    const { data } = await query;
+    const { data, error } = await query;
+    if (error) {
+      console.error("게시물 로드 실패:", error);
+      setPosts([]);
+      setLoading(false);
+      return;
+    }
     if (data) {
       setPosts(
         data.map((p) => ({

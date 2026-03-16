@@ -1,7 +1,7 @@
 -- ============================================================
 -- 팝업 관리 테이블
 -- ============================================================
-create table public.popups (
+create table if not exists public.popups (
   id uuid primary key default uuid_generate_v4(),
   title text not null,
   image_url text not null,

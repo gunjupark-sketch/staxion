@@ -81,7 +81,11 @@ export default function CommunityDetailPage() {
       .from("community_categories")
       .select("slug, name")
       .order("sort_order")
-      .then(({ data }) => {
+      .then(({ data, error }) => {
+        if (error) {
+          console.error("카테고리 로드 실패:", error);
+          return;
+        }
         if (data) setCategories(data);
       });
   }, []);
@@ -94,11 +98,17 @@ export default function CommunityDetailPage() {
         // RPC가 없으면 무시 — 아래에서 직접 처리
       });
 
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("community_posts")
         .select("*, profiles(name, avatar_url)")
         .eq("id", postId)
         .single();
+
+      if (error) {
+        console.error("게시물 로드 실패:", error);
+        setLoading(false);
+        return;
+      }
 
       if (data) {
         setPost({
@@ -112,11 +122,16 @@ export default function CommunityDetailPage() {
   }, [postId]);
 
   const fetchComments = useCallback(async () => {
-    const { data } = await supabase
+    const { data, error } = await supabase
       .from("community_comments")
       .select("*, profiles(name, avatar_url)")
       .eq("post_id", postId)
       .order("created_at", { ascending: true });
+
+    if (error) {
+      console.error("댓글 로드 실패:", error);
+      return;
+    }
 
     if (data) {
       setComments(
