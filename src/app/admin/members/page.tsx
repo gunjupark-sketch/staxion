@@ -18,7 +18,7 @@ export default async function MembersPage() {
     .order("created_at", { ascending: false });
 
   const roleColors: Record<string, string> = {
-    admin: "bg-brand-lime-safe/10 text-brand-lime-safe",
+    admin: "bg-brand-lime-safe/10 text-brand-lime-text",
     member: "bg-blue-50 text-blue-600",
     pending: "bg-yellow-50 text-yellow-600",
   };

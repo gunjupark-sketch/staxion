@@ -59,7 +59,7 @@ export default function StorePage() {
                   <div className="aspect-square bg-surface-secondary" />
                   <CardContent className="p-6">
                     {product.is_digital && (
-                      <Badge variant="secondary" className="mb-2 bg-brand-lime-safe/10 text-brand-lime-safe">
+                      <Badge variant="secondary" className="mb-2 bg-brand-lime-safe/10 text-brand-lime-text">
                         디지털
                       </Badge>
                     )}
@@ -70,7 +70,7 @@ export default function StorePage() {
                           <span className="text-sm text-text-muted line-through">
                             {product.price.toLocaleString()}원
                           </span>
-                          <span className="text-lg font-bold text-brand-lime-safe">
+                          <span className="text-lg font-bold text-brand-lime-text">
                             {product.sale_price.toLocaleString()}원
                           </span>
                         </>

@@ -47,7 +47,7 @@ export default function AboutPage() {
       <section className="bg-surface-secondary py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               Core Values
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -75,7 +75,7 @@ export default function AboutPage() {
             ].map((item) => (
               <Card key={item.num} className="border-border/50 transition-shadow hover:shadow-lg">
                 <CardContent className="p-8">
-                  <span className="text-4xl font-black text-brand-lime-safe/20">{item.num}</span>
+                  <span className="text-4xl font-black text-brand-lime-text/20">{item.num}</span>
                   <h3 className="mt-4 text-lg font-bold text-text-primary">{item.title}</h3>
                   <p className="mt-3 text-sm leading-relaxed text-text-muted">{item.desc}</p>
                 </CardContent>
@@ -90,7 +90,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-2xl border border-border/50 p-8">
-              <p className="text-xs font-semibold tracking-widest text-brand-lime-safe uppercase">
+              <p className="text-xs font-semibold tracking-widest text-brand-lime-text uppercase">
                 Beyond Growth Seminar
               </p>
               <h3 className="mt-3 text-xl font-bold text-text-primary">세미나</h3>
@@ -99,14 +99,14 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/education"
-                className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-text transition-colors hover:text-brand-lime-text/80"
               >
                 세미나 보기 &rarr;
               </Link>
             </div>
 
             <div className="rounded-2xl border border-border/50 p-8">
-              <p className="text-xs font-semibold tracking-widest text-brand-lime-safe uppercase">
+              <p className="text-xs font-semibold tracking-widest text-brand-lime-text uppercase">
                 Premium &amp; Branding
               </p>
               <h3 className="mt-3 text-xl font-bold text-text-primary">메디컨시어지</h3>
@@ -115,7 +115,7 @@ export default function AboutPage() {
               </p>
               <Link
                 href="/services"
-                className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-text transition-colors hover:text-brand-lime-text/80"
               >
                 서비스 보기 &rarr;
               </Link>
@@ -158,7 +158,7 @@ export default function AboutPage() {
           <div className="mt-8">
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               상담 신청하기
             </Link>

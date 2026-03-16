@@ -22,7 +22,7 @@ export default function MypageWaitingRoomPage() {
               strokeWidth="1.5"
               strokeLinecap="round"
               strokeLinejoin="round"
-              className="text-brand-lime-safe"
+              className="text-brand-lime-text"
             >
               <rect width="20" height="15" x="2" y="7" rx="2" ry="2" />
               <polyline points="17 2 12 7 7 2" />
@@ -47,19 +47,19 @@ export default function MypageWaitingRoomPage() {
           </h3>
           <div className="space-y-3 text-sm text-text-secondary">
             <div className="flex gap-3">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-safe">
+              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
                 1
               </span>
               <p>치과 대기실에서 환자에게 보여줄 미용시술 안내 영상을 제공합니다.</p>
             </div>
             <div className="flex gap-3">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-safe">
+              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
                 2
               </span>
               <p>시술별 맞춤 콘텐츠로 자연스러운 미용시술 안내가 가능합니다.</p>
             </div>
             <div className="flex gap-3">
-              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-safe">
+              <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
                 3
               </span>
               <p>구독 기반으로 항상 최신 콘텐츠가 업데이트됩니다.</p>
@@ -67,7 +67,7 @@ export default function MypageWaitingRoomPage() {
           </div>
           <div className="pt-2">
             <Link href="/contact">
-              <Button className="min-h-[44px] w-full bg-brand-lime-safe text-white hover:bg-brand-lime-safe/90 sm:w-auto">
+              <Button className="min-h-[44px] w-full bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90 sm:w-auto">
                 상담 신청하기
               </Button>
             </Link>

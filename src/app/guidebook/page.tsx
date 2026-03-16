@@ -104,7 +104,7 @@ export default function GuidebookPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               Growth Path
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -144,7 +144,7 @@ export default function GuidebookPage() {
                     : "border-border/50"
                 }`}
               >
-                <span className={`text-xs font-bold ${item.active ? "text-brand-lime-safe" : "text-text-muted"}`}>
+                <span className={`text-xs font-bold ${item.active ? "text-brand-lime-text" : "text-text-muted"}`}>
                   {item.step}
                 </span>
                 <h3 className="mt-2 text-xl font-bold text-text-primary">{item.title}</h3>
@@ -152,7 +152,7 @@ export default function GuidebookPage() {
                 <span
                   className={`mt-4 inline-block rounded-full px-3 py-1 text-xs font-semibold ${
                     item.active
-                      ? "bg-brand-lime-safe/10 text-brand-lime-safe"
+                      ? "bg-brand-lime-safe/10 text-brand-lime-text"
                       : "bg-surface-secondary text-text-muted"
                   }`}
                 >
@@ -171,7 +171,7 @@ export default function GuidebookPage() {
           <Card className="mt-10 border-border/50">
             <CardContent className="p-8">
               <h3 className="text-xl font-bold text-text-primary">최재영 원장</h3>
-              <p className="mt-1 text-sm text-brand-lime-safe">아름다운얼굴치과 대표원장</p>
+              <p className="mt-1 text-sm text-brand-lime-text">아름다운얼굴치과 대표원장</p>
               <p className="mt-4 text-sm leading-relaxed text-text-secondary">
                 치과에서 미용시술을 성공적으로 도입한 선구자. 수년간의 실전 경험과 수백 명의
                 교육 수료생을 배출한 노하우를 이 가이드북에 담았습니다.

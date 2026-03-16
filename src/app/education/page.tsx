@@ -31,7 +31,7 @@ export default function EducationPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               Programs
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -72,7 +72,7 @@ export default function EducationPage() {
             ].map((seminar) => (
               <Card key={seminar.title} className="border-border/50 transition-shadow hover:shadow-lg">
                 <CardContent className="p-8">
-                  <span className="inline-block rounded-full bg-brand-lime-safe/10 px-3 py-1 text-xs font-semibold text-brand-lime-safe">
+                  <span className="inline-block rounded-full bg-brand-lime-safe/10 px-3 py-1 text-xs font-semibold text-brand-lime-text">
                     {seminar.target}
                   </span>
                   <h3 className="mt-4 text-xl font-bold text-text-primary">{seminar.title}</h3>
@@ -80,7 +80,7 @@ export default function EducationPage() {
                   <ul className="mt-4 space-y-2">
                     {seminar.parts.map((part) => (
                       <li key={part} className="flex items-start gap-2 text-sm text-text-muted">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-safe" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-btn" />
                         {part}
                       </li>
                     ))}
@@ -89,7 +89,7 @@ export default function EducationPage() {
                     href={seminar.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                    className="mt-6 inline-flex min-h-[44px] items-center text-sm font-semibold text-brand-lime-text transition-colors hover:text-brand-lime-text/80"
                   >
                     자세히 보기 &rarr;
                   </a>
@@ -163,7 +163,7 @@ export default function EducationPage() {
                 className="rounded-lg border-l-4 border-brand-lime-safe bg-surface-secondary p-5"
               >
                 <p className="text-sm font-semibold text-text-primary">
-                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-lime-safe text-xs font-bold text-white">
+                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-lime-btn text-xs font-bold text-white">
                     {i + 1}
                   </span>
                   {item.check}
@@ -251,13 +251,13 @@ export default function EducationPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               연자 신청하기
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-safe sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
             >
               세미나 문의하기
             </Link>

@@ -126,7 +126,7 @@ export default function CommunityWritePage() {
                   onClick={() => setPostType("community")}
                   className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors min-h-[44px] ${
                     postType === "community"
-                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-safe"
+                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-text"
                       : "text-text-muted hover:border-border"
                   }`}
                 >
@@ -137,7 +137,7 @@ export default function CommunityWritePage() {
                   onClick={() => setPostType("notice")}
                   className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors min-h-[44px] ${
                     postType === "notice"
-                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-safe"
+                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-text"
                       : "text-text-muted hover:border-border"
                   }`}
                 >
@@ -188,7 +188,7 @@ export default function CommunityWritePage() {
             <Button
               type="submit"
               disabled={saving || !title.trim() || !content.trim()}
-              className="min-h-[44px] gap-2 bg-brand-lime-safe px-8 text-sm font-semibold text-white hover:bg-brand-lime-safe/90"
+              className="min-h-[44px] gap-2 bg-brand-lime-btn px-8 text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
             >
               {saving && <Loader2Icon className="size-4 animate-spin" />}
               {saving ? "등록 중..." : "게시물 등록"}

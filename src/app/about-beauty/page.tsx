@@ -93,7 +93,7 @@ export default function AboutBeautyPage() {
                   "임의비급여와 비급여 미용시술은 구분 필수 (실손보험 청구 불가)",
                 ].map((point) => (
                   <li key={point} className="flex items-start gap-3 text-sm text-text-secondary">
-                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-lime-safe" />
+                    <span className="mt-1 h-2 w-2 shrink-0 rounded-full bg-brand-lime-btn" />
                     {point}
                   </li>
                 ))}
@@ -197,13 +197,13 @@ export default function AboutBeautyPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/guidebook"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               가이드북 보기
             </Link>
             <Link
               href="/education"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-safe sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
             >
               세미나 보기
             </Link>

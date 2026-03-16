@@ -17,7 +17,7 @@ export default function SignupCompletePage() {
         </p>
         <Link
           href="/login"
-          className="mt-8 inline-flex h-10 items-center rounded-lg bg-brand-lime-safe px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+          className="mt-8 inline-flex h-10 items-center rounded-lg bg-brand-lime-btn px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-btn/90"
         >
           로그인하기
         </Link>

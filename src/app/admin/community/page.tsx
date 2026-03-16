@@ -111,7 +111,7 @@ export default function AdminCommunityPage() {
           </p>
         </div>
         <Link href="/community/write">
-          <Button className="min-h-[44px] gap-2 bg-brand-lime-safe text-sm font-semibold text-white hover:bg-brand-lime-safe/90">
+          <Button className="min-h-[44px] gap-2 bg-brand-lime-btn text-sm font-semibold text-white hover:bg-brand-lime-btn/90">
             <PenSquareIcon className="size-4" />
             새 글 작성
           </Button>
@@ -126,7 +126,7 @@ export default function AdminCommunityPage() {
             onClick={() => setFilter(f)}
             className={`rounded-full px-4 py-2 text-sm font-medium transition-colors min-h-[40px] ${
               filter === f
-                ? "bg-brand-lime-safe text-white"
+                ? "bg-brand-lime-btn text-white"
                 : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
             }`}
           >
@@ -179,7 +179,7 @@ export default function AdminCommunityPage() {
                     </TableCell>
                     <TableCell>
                       {post.post_type === "notice" ? (
-                        <Badge className="bg-brand-lime-safe/10 text-brand-lime-safe border-brand-lime-safe/30 text-xs gap-1">
+                        <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 text-xs gap-1">
                           <MegaphoneIcon className="size-3" />
                           공지
                         </Badge>
@@ -197,7 +197,7 @@ export default function AdminCommunityPage() {
                     <TableCell>
                       <Link
                         href={`/community/${post.id}`}
-                        className="font-medium text-text-primary hover:text-brand-lime-safe transition-colors max-w-[300px] truncate block"
+                        className="font-medium text-text-primary hover:text-brand-lime-text transition-colors max-w-[300px] truncate block"
                       >
                         {post.title}
                       </Link>

@@ -200,7 +200,7 @@ export default function CommunityDetailPage() {
         <article>
           <div className="flex items-center gap-2 flex-wrap mb-3">
             {post.post_type === "notice" && (
-              <Badge className="bg-brand-lime-safe/10 text-brand-lime-safe border-brand-lime-safe/30 gap-1">
+              <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 gap-1">
                 <MegaphoneIcon className="size-3" />
                 공지
               </Badge>
@@ -267,7 +267,7 @@ export default function CommunityDetailPage() {
 
           {/* 본문 */}
           <div
-            className="prose prose-sm sm:prose max-w-none mt-6 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:text-lg [&_h3]:font-semibold [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-lime-safe [&_a]:underline"
+            className="prose prose-sm sm:prose max-w-none mt-6 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:text-lg [&_h3]:font-semibold [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-lime-text [&_a]:underline"
             dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
           />
         </article>
@@ -275,7 +275,7 @@ export default function CommunityDetailPage() {
         {/* 댓글 섹션 */}
         <div className="mt-12 border-t pt-8">
           <h2 className="text-lg font-bold text-text-primary">
-            댓글 {comments.length > 0 && <span className="text-brand-lime-safe">{comments.length}</span>}
+            댓글 {comments.length > 0 && <span className="text-brand-lime-text">{comments.length}</span>}
           </h2>
 
           {/* 댓글 작성 */}
@@ -292,7 +292,7 @@ export default function CommunityDetailPage() {
                 <Button
                   onClick={handleCommentSubmit}
                   disabled={!commentText.trim() || submitting}
-                  className="min-h-[40px] gap-2 bg-brand-lime-safe px-5 text-sm font-semibold text-white hover:bg-brand-lime-safe/90"
+                  className="min-h-[40px] gap-2 bg-brand-lime-btn px-5 text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
                 >
                   <SendIcon className="size-4" />
                   {submitting ? "등록 중..." : "댓글 등록"}
@@ -303,7 +303,7 @@ export default function CommunityDetailPage() {
             <div className="mt-4 rounded-lg border bg-surface-secondary/50 p-4 text-center">
               <p className="text-sm text-text-muted">
                 댓글을 작성하려면{" "}
-                <Link href="/login" className="text-brand-lime-safe underline">
+                <Link href="/login" className="text-brand-lime-text underline">
                   로그인
                 </Link>
                 이 필요합니다.

@@ -501,7 +501,7 @@ export default function AdminBannersPage() {
                   onChange={(e) =>
                     setForm({ ...form, is_active: e.target.checked })
                   }
-                  className="size-4 rounded border-gray-300 text-brand-lime-safe accent-[#8EC31F]"
+                  className="size-4 rounded border-gray-300 text-brand-lime-text accent-[#8EC31F]"
                 />
                 <span className="text-sm font-medium">활성</span>
               </label>

@@ -237,7 +237,7 @@ export default function MypageProfilePage() {
           )}
 
           {message && (
-            <p className={`text-sm ${message.includes("실패") ? "text-red-500" : "text-brand-lime-safe"}`}>
+            <p className={`text-sm ${message.includes("실패") ? "text-red-500" : "text-brand-lime-text"}`}>
               {message}
             </p>
           )}
@@ -305,7 +305,7 @@ export default function MypageProfilePage() {
             )}
 
             {passwordMessage && (
-              <p className={`text-sm ${passwordMessage.includes("실패") || passwordMessage.includes("일치") || passwordMessage.includes("이상") ? "text-red-500" : "text-brand-lime-safe"}`}>
+              <p className={`text-sm ${passwordMessage.includes("실패") || passwordMessage.includes("일치") || passwordMessage.includes("이상") ? "text-red-500" : "text-brand-lime-text"}`}>
                 {passwordMessage}
               </p>
             )}

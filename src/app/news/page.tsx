@@ -210,7 +210,7 @@ export default function NewsPage() {
                               </span>
                             )}
                           </div>
-                          <h3 className="mt-2 text-base font-bold leading-snug text-text-primary group-hover:text-brand-lime-safe transition-colors sm:text-lg">
+                          <h3 className="mt-2 text-base font-bold leading-snug text-text-primary group-hover:text-brand-lime-text transition-colors sm:text-lg">
                             {post.title}
                           </h3>
                           {post.excerpt && (

@@ -31,7 +31,7 @@ export default function ServicesPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               Service Flow
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -92,7 +92,7 @@ export default function ServicesPage() {
                   <ul className="mt-3 space-y-2">
                     {area.items.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-text-muted">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-safe" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-btn" />
                         {item}
                       </li>
                     ))}
@@ -239,7 +239,7 @@ export default function ServicesPage() {
           <div className="mt-8 flex flex-col items-center gap-3">
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               상담 신청하기
             </Link>

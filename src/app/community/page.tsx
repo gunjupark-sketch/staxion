@@ -174,7 +174,7 @@ function CommunityContent() {
                 onClick={() => navigateTo("all", 1)}
                 className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                   currentCategory === "all"
-                    ? "bg-brand-lime-safe text-white"
+                    ? "bg-brand-lime-btn text-white"
                     : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
                 }`}
               >
@@ -186,7 +186,7 @@ function CommunityContent() {
                   onClick={() => navigateTo(cat.slug, 1)}
                   className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
                     currentCategory === cat.slug
-                      ? "bg-brand-lime-safe text-white"
+                      ? "bg-brand-lime-btn text-white"
                       : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
                   }`}
                 >
@@ -197,7 +197,7 @@ function CommunityContent() {
 
             {user ? (
               <Link href="/community/write">
-                <Button className="min-h-[44px] gap-2 bg-brand-lime-safe px-5 text-sm font-semibold text-white hover:bg-brand-lime-safe/90">
+                <Button className="min-h-[44px] gap-2 bg-brand-lime-btn px-5 text-sm font-semibold text-white hover:bg-brand-lime-btn/90">
                   <PenSquareIcon className="size-4" />
                   글쓰기
                 </Button>
@@ -233,7 +233,7 @@ function CommunityContent() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         {post.post_type === "notice" && (
-                          <Badge className="bg-brand-lime-safe/10 text-brand-lime-safe border-brand-lime-safe/30 text-xs gap-1">
+                          <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 text-xs gap-1">
                             <MegaphoneIcon className="size-3" />
                             공지
                           </Badge>
@@ -287,7 +287,7 @@ function CommunityContent() {
                       onClick={() => navigateTo(currentCategory, p)}
                       className={`inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium min-h-[44px] min-w-[44px] ${
                         p === currentPage
-                          ? "bg-brand-lime-safe text-white"
+                          ? "bg-brand-lime-btn text-white"
                           : "text-text-secondary hover:bg-surface-secondary"
                       }`}
                     >

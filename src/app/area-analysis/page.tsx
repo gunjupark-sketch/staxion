@@ -23,7 +23,7 @@ export default function AreaAnalysisPage() {
           <div className="mt-8">
             <Link
               href="/contact?type=consulting"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               권역분석 상담 신청
             </Link>
@@ -35,7 +35,7 @@ export default function AreaAnalysisPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               PROBLEM
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -87,7 +87,7 @@ export default function AreaAnalysisPage() {
       <section className="bg-surface-secondary py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               6 ANALYSIS AREAS
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -165,7 +165,7 @@ export default function AreaAnalysisPage() {
             ].map((area) => (
               <Card key={area.num} className="border-border/50 transition-colors hover:border-brand-lime-safe/30">
                 <CardContent className="p-6">
-                  <span className="text-xs font-bold text-brand-lime-safe">
+                  <span className="text-xs font-bold text-brand-lime-text">
                     {area.num}
                   </span>
                   <h3 className="mt-2 text-lg font-bold text-text-primary">
@@ -178,7 +178,7 @@ export default function AreaAnalysisPage() {
                         key={item}
                         className="flex items-start gap-2 text-sm text-text-secondary"
                       >
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-safe" />
+                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-lime-btn" />
                         {item}
                       </li>
                     ))}
@@ -194,7 +194,7 @@ export default function AreaAnalysisPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               PROCESS
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -307,7 +307,7 @@ export default function AreaAnalysisPage() {
             {/* 골든시그널 권역분석 */}
             <div className="rounded-xl border-2 border-brand-lime-safe/50 bg-brand-lime-safe/5 p-6 md:p-8">
               <div className="mb-6">
-                <span className="inline-block rounded-full bg-brand-lime-safe px-3 py-1 text-xs font-semibold text-white">
+                <span className="inline-block rounded-full bg-brand-lime-btn px-3 py-1 text-xs font-semibold text-white">
                   골든시그널 권역분석
                 </span>
               </div>
@@ -326,7 +326,7 @@ export default function AreaAnalysisPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-6 text-xs text-brand-lime-safe">
+              <p className="mt-6 text-xs text-brand-lime-text">
                 골든시그널만의 인사이트. 전략이 되는 분석.
               </p>
             </div>
@@ -338,7 +338,7 @@ export default function AreaAnalysisPage() {
       <section className="bg-white py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
               VISUALIZATION
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -363,7 +363,7 @@ export default function AreaAnalysisPage() {
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-brand-lime-safe"
+                  className="text-brand-lime-text"
                 >
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                   <circle cx="12" cy="10" r="3" />
@@ -398,7 +398,7 @@ export default function AreaAnalysisPage() {
           <div className="mt-8 flex flex-col items-center gap-3">
             <Link
               href="/contact?type=consulting"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-safe px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-safe/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
             >
               상담 신청하기
             </Link>

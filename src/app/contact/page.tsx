@@ -58,7 +58,7 @@ export default function ContactPage() {
     <section className="py-20">
       <div className="mx-auto max-w-2xl px-4 md:px-6">
         <div className="text-center">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime-safe uppercase">Contact</p>
+          <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">Contact</p>
           <h1 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">상담 신청</h1>
           <p className="mt-3 text-text-muted">미용치과 도입에 관한 궁금한 점을 남겨주세요.</p>
         </div>
@@ -111,7 +111,7 @@ export default function ContactPage() {
               <Button
                 type="submit"
                 disabled={loading}
-                className="w-full min-h-[48px] bg-brand-lime-safe py-3 text-base font-semibold text-white hover:bg-brand-lime-safe/90"
+                className="w-full min-h-[48px] bg-brand-lime-btn py-3 text-base font-semibold text-white hover:bg-brand-lime-btn/90"
               >
                 {loading ? "전송 중..." : "상담 신청하기"}
               </Button>

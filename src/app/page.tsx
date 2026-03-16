@@ -257,7 +257,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/store"
-              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-text transition-all hover:border-brand-lime-safe hover:bg-brand-lime-safe/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-text transition-all hover:border-brand-lime-safe hover:bg-brand-lime-btn/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
             >
               스토어 전체 보기
               <svg className="ml-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -339,7 +339,7 @@ export default function Home() {
                 key={seminar.title}
                 className="group rounded-xl border border-gray-100 bg-surface-secondary p-6 text-center transition-all hover:border-brand-lime-safe/30 hover:shadow-md"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime-safe/10 text-brand-lime-text transition-colors group-hover:bg-brand-lime-safe/20">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime-safe/10 text-brand-lime-text transition-colors group-hover:bg-brand-lime-btn/20">
                   {seminar.icon}
                 </div>
                 <h3 className="mt-4 text-sm font-bold text-text-primary">{seminar.title}</h3>
