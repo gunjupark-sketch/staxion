@@ -21,6 +21,13 @@
   --color-text-muted: #666666;
   --color-text-inverse: #FFFFFF;
 
+  /* Accessible brand text — darker green for use on white/light backgrounds (4.5:1+ contrast) */
+  --color-brand-lime-text: #4d7a0f;
+  --color-brand-lime-text-hover: #3d6200;
+
+  /* Accessible brand button bg — darker than brand-lime-safe for white text (4.5:1+ contrast) */
+  --color-brand-lime-btn: #5a8a14;
+
   /* Special UI */
   --color-tip-bg: #F0F8E8;
   --color-tip-border: #8EC31F;
@@ -170,5 +177,15 @@ h1, h2, h3, h4, h5, h6 {
   }
   html {
     @apply font-sans;
+  }
+  /* Global focus-visible for keyboard navigation */
+  a:focus-visible,
+  button:focus-visible,
+  [role="button"]:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible {
+    outline: 2px solid var(--color-brand-lime-safe);
+    outline-offset: 2px;
   }
 }

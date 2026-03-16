@@ -135,7 +135,7 @@ export default function MypageLayout({
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                   isActive(item.href)
-                    ? "bg-brand-lime-safe/10 text-brand-lime-safe"
+                    ? "bg-brand-lime-safe/10 text-brand-lime-text"
                     : "text-text-secondary hover:bg-surface-secondary hover:text-text-primary"
                 )}
               >
@@ -155,7 +155,7 @@ export default function MypageLayout({
               className={cn(
                 "flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors min-h-[44px]",
                 isActive(item.href)
-                  ? "bg-brand-lime-safe/10 text-brand-lime-safe"
+                  ? "bg-brand-lime-safe/10 text-brand-lime-text"
                   : "text-text-secondary hover:bg-surface-secondary"
               )}
             >

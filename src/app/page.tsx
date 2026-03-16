@@ -1,9 +1,11 @@
 import Link from "next/link";
 import Image from "next/image";
+import PopupModal from "@/components/PopupModal";
 
 export default function Home() {
   return (
     <>
+      <PopupModal />
       {/* ========== Hero — 다크 텍스처 + 캐릭터 ========== */}
       <section className="relative flex min-h-[92vh] items-center overflow-hidden">
         {/* 배경 텍스처 — 오버레이 최소화로 텍스처 질감 살림 */}
@@ -48,13 +50,13 @@ export default function Home() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
                 href="/services"
-                className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-safe px-8 text-base font-bold text-white shadow-lg shadow-brand-lime-safe/30 transition-all hover:brightness-110 hover:shadow-xl hover:shadow-brand-lime-safe/40 sm:w-auto"
+                className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-lg shadow-brand-lime-btn/30 transition-all hover:brightness-110 hover:shadow-xl hover:shadow-brand-lime-btn/40 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
               >
                 서비스 보기
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-white/40 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-brand-lime hover:bg-white/5 sm:w-auto"
+                className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-white/40 px-8 text-base font-semibold text-white backdrop-blur-sm transition-all hover:border-brand-lime hover:bg-white/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
               >
                 상담 신청
               </Link>
@@ -79,7 +81,7 @@ export default function Home() {
       <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
               How it works
             </p>
             <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
@@ -133,7 +135,7 @@ export default function Home() {
                 {/* 카드 본문 */}
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-lime-safe text-sm font-bold text-white">
+                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-lime-text text-sm font-bold text-white">
                       {item.step}
                     </span>
                     <h3 className="text-lg font-bold text-text-primary">
@@ -145,7 +147,7 @@ export default function Home() {
                   </p>
                   <Link
                     href={item.href}
-                    className="mt-5 inline-flex min-h-[44px] items-center text-sm font-bold text-brand-lime-safe transition-colors hover:text-brand-lime-safe/80"
+                    className="mt-5 inline-flex min-h-[44px] items-center text-sm font-bold text-brand-lime-text transition-colors hover:text-brand-lime-text-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
                   >
                     {item.cta}
                     <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -163,7 +165,7 @@ export default function Home() {
       <section className="bg-surface-secondary py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
               MEDI STAXION Store
             </p>
             <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
@@ -227,7 +229,7 @@ export default function Home() {
             ].map((section) => (
               <div key={section.category}>
                 <div className="flex items-center gap-2 text-text-primary">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-lime-safe/15 text-brand-lime-safe">
+                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-lime-safe/15 text-brand-lime-text">
                     {section.icon}
                   </span>
                   <h3 className="text-sm font-bold">{section.category}</h3>
@@ -240,7 +242,7 @@ export default function Home() {
                     >
                       <p className="text-sm font-medium text-text-primary">{item.name}</p>
                       <div className="mt-2 flex items-center gap-2">
-                        <p className="text-sm font-bold text-brand-lime-safe">{item.price}</p>
+                        <p className="text-sm font-bold text-brand-lime-text">{item.price}</p>
                         {item.original && (
                           <p className="text-xs text-text-muted line-through">{item.original}</p>
                         )}
@@ -255,7 +257,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/store"
-              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-safe transition-all hover:border-brand-lime-safe hover:bg-brand-lime-safe/5"
+              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-text transition-all hover:border-brand-lime-safe hover:bg-brand-lime-safe/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
             >
               스토어 전체 보기
               <svg className="ml-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -270,7 +272,7 @@ export default function Home() {
       <section className="bg-white py-20 md:py-28">
         <div className="mx-auto max-w-7xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-safe uppercase">
+            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
               MEDI STAXION Seminar
             </p>
             <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
@@ -337,7 +339,7 @@ export default function Home() {
                 key={seminar.title}
                 className="group rounded-xl border border-gray-100 bg-surface-secondary p-6 text-center transition-all hover:border-brand-lime-safe/30 hover:shadow-md"
               >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime-safe/10 text-brand-lime-safe transition-colors group-hover:bg-brand-lime-safe/20">
+                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime-safe/10 text-brand-lime-text transition-colors group-hover:bg-brand-lime-safe/20">
                   {seminar.icon}
                 </div>
                 <h3 className="mt-4 text-sm font-bold text-text-primary">{seminar.title}</h3>
@@ -349,7 +351,7 @@ export default function Home() {
           <div className="mt-10 text-center">
             <Link
               href="/education"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-brand-lime-safe px-8 text-base font-bold text-white shadow-md shadow-brand-lime-safe/20 transition-all hover:brightness-110 hover:shadow-lg sm:w-auto"
+              className="inline-flex h-12 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-md shadow-brand-lime-btn/20 transition-all hover:brightness-110 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe sm:w-auto"
             >
               세미나 일정 보기
             </Link>
@@ -431,7 +433,7 @@ export default function Home() {
           <div className="mt-10 flex flex-col items-center gap-4">
             <Link
               href="/guidebook"
-              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime px-10 text-base font-bold text-surface-dark shadow-lg shadow-brand-lime/30 transition-all hover:brightness-110 hover:shadow-xl sm:w-auto"
+              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime px-10 text-base font-bold text-surface-dark shadow-lg shadow-brand-lime/30 transition-all hover:brightness-110 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
             >
               가이드북 보기
             </Link>

@@ -14,6 +14,7 @@ const navItems = [
   { label: "가이드북", href: "/guidebook" },
   { label: "교육", href: "/education" },
   { label: "스토어", href: "/store" },
+  { label: "커뮤니티", href: "/community" },
   { label: "소식", href: "/news" },
   { label: "회사소개", href: "/about" },
 ];
@@ -22,9 +23,9 @@ export function Header() {
   const [open, setOpen] = useState(false);
   const [user, setUser] = useState<{ email?: string } | null>(null);
   const router = useRouter();
-  const supabase = createClient();
 
   useEffect(() => {
+    const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
     });
@@ -37,6 +38,7 @@ export function Header() {
   }, []);
 
   async function handleLogout() {
+    const supabase = createClient();
     await supabase.auth.signOut();
     setUser(null);
     router.push("/");
@@ -57,7 +59,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
+              className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
             >
               {item.label}
             </Link>
@@ -93,7 +95,7 @@ export function Header() {
           )}
           <Link
             href="/contact"
-            className="rounded-md bg-brand-lime-safe px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-safe/90"
+            className="rounded-md bg-brand-lime-btn px-4 py-2 text-sm font-semibold text-white transition-colors hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
           >
             상담 신청
           </Link>
@@ -101,7 +103,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger className="lg:hidden rounded-md p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-text-secondary hover:bg-surface-secondary">
+          <SheetTrigger aria-label="메뉴 열기" className="lg:hidden rounded-md p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-text-secondary hover:bg-surface-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -135,7 +137,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mx-4 rounded-md bg-brand-lime-safe py-3 text-center text-base font-semibold text-white min-h-[44px] flex items-center justify-center"
+                className="mx-4 rounded-md bg-brand-lime-btn py-3 text-center text-base font-semibold text-white min-h-[44px] flex items-center justify-center"
               >
                 상담 신청
               </Link>

@@ -12,11 +12,13 @@ import {
   GraduationCapIcon,
   BriefcaseIcon,
   MessageSquareIcon,
+  NewspaperIcon,
   BookOpenIcon,
   VideoIcon,
   SettingsIcon,
   MenuIcon,
   XIcon,
+  ImageIcon,
 } from "lucide-react";
 
 const adminNav = [
@@ -28,8 +30,11 @@ const adminNav = [
   { label: "세미나 관리", href: "/admin/seminars", icon: GraduationCapIcon },
   { label: "서비스 관리", href: "/admin/services", icon: BriefcaseIcon },
   { label: "상담 관리", href: "/admin/inquiries", icon: MessageSquareIcon },
-  { label: "커뮤니티 관리", href: "/admin/guestbook", icon: BookOpenIcon },
+  { label: "게시물 관리", href: "/admin/community", icon: NewspaperIcon },
+  { label: "방명록 관리", href: "/admin/guestbook", icon: BookOpenIcon },
   { label: "대기실 영상", href: "/admin/videos", icon: VideoIcon },
+  { label: "배너 관리", href: "/admin/banners", icon: ImageIcon },
+  { label: "팝업 관리", href: "/admin/popups", icon: ImageIcon },
   { label: "사이트 설정", href: "/admin/settings", icon: SettingsIcon },
 ];
 

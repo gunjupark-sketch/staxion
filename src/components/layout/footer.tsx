@@ -48,7 +48,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block min-h-[44px] py-2 text-sm text-text-muted transition-colors hover:text-text-primary"
+                      className="inline-block min-h-[44px] py-2 text-sm text-text-muted transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
                     >
                       {link.label}
                     </Link>

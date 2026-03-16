@@ -414,3 +414,38 @@ create trigger set_updated_at before update on public.orders for each row execut
 create trigger set_updated_at before update on public.posts for each row execute function public.update_updated_at();
 create trigger set_updated_at before update on public.seminars for each row execute function public.update_updated_at();
 create trigger set_updated_at before update on public.services for each row execute function public.update_updated_at();
+create trigger set_updated_at before update on public.popups for each row execute function public.update_updated_at();
+
+-- ============================================================
+-- 팝업 관리
+-- ============================================================
+create table public.popups (
+  id uuid primary key default uuid_generate_v4(),
+  title text not null,
+  image_url text not null,
+  link_url text,
+  start_date timestamptz not null,
+  end_date timestamptz not null,
+  is_active boolean not null default true,
+  created_at timestamptz not null default now(),
+  updated_at timestamptz not null default now()
+);
+
+alter table public.popups enable row level security;
+
+create policy "활성 팝업 조회" on public.popups
+  for select using (
+    is_active = true
+    and now() >= start_date
+    and now() <= end_date
+  );
+
+create policy "관리자 팝업 전체 조회" on public.popups
+  for select using (
+    exists (select 1 from public.profiles where id = auth.uid() and role = 'admin')
+  );
+
+create policy "관리자 팝업 CUD" on public.popups
+  for all using (
+    exists (select 1 from public.profiles where id = auth.uid() and role = 'admin')
+  );
