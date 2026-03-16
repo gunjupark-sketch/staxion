@@ -21,21 +21,44 @@ const navItems = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
-  const [user, setUser] = useState<{ email?: string } | null>(null);
+  const [user, setUser] = useState<{ email?: string; id?: string } | null>(null);
+  const [cartCount, setCartCount] = useState(0);
   const router = useRouter();
 
   useEffect(() => {
     const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
+      if (data.user) fetchCartCount(data.user.id);
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
+      if (session?.user) fetchCartCount(session.user.id);
+      else setCartCount(0);
     });
 
-    return () => subscription.unsubscribe();
+    // 장바구니 변경 이벤트 수신
+    const handleCartUpdate = () => {
+      if (user?.id) fetchCartCount(user.id);
+    };
+    window.addEventListener("cart-updated", handleCartUpdate);
+
+    return () => {
+      subscription.unsubscribe();
+      window.removeEventListener("cart-updated", handleCartUpdate);
+    };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  async function fetchCartCount(userId: string) {
+    const supabase = createClient();
+    const { count } = await supabase
+      .from("cart_items")
+      .select("*", { count: "exact", head: true })
+      .eq("user_id", userId);
+    setCartCount(count || 0);
+  }
 
   async function handleLogout() {
     const supabase = createClient();
@@ -68,6 +91,23 @@ export function Header() {
 
         {/* Desktop Auth + CTA */}
         <div className="hidden items-center gap-2 lg:flex">
+          {user && (
+            <Link
+              href="/cart"
+              className="relative rounded-md p-2 text-text-secondary transition-colors hover:bg-surface-secondary"
+              aria-label="장바구니"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/>
+                <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+              </svg>
+              {cartCount > 0 && (
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-lime-btn px-1 text-[10px] font-bold text-white">
+                  {cartCount}
+                </span>
+              )}
+            </Link>
+          )}
           {user ? (
             <>
               <Link
@@ -143,6 +183,18 @@ export function Header() {
               </Link>
               {user ? (
                 <>
+                  <Link
+                    href="/cart"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center gap-2 rounded-md px-4 py-3 text-base font-medium text-text-secondary min-h-[44px]"
+                  >
+                    장바구니
+                    {cartCount > 0 && (
+                      <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-lime-btn px-1 text-xs font-bold text-white">
+                        {cartCount}
+                      </span>
+                    )}
+                  </Link>
                   <Link
                     href="/mypage"
                     onClick={() => setOpen(false)}

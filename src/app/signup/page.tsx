@@ -214,7 +214,7 @@ export default function SignupPage() {
       return;
     }
 
-    // 3. Update profiles table with available columns
+    // 3. Update profiles table with all signup fields
     const {
       data: { user },
     } = await supabase.auth.getUser();
@@ -223,7 +223,18 @@ export default function SignupPage() {
         .from("profiles")
         .update({
           name,
+          phone,
+          birth_date: birth_date || null,
+          address: address || null,
           clinic_name,
+          clinic_address: clinic_address || null,
+          university: university || null,
+          major: major || null,
+          referral_source: referral_source || null,
+          is_clinic_owner: is_clinic_owner || null,
+          interests: interests.length > 0 ? interests : [],
+          license_file_path: filePath,
+          license_status: "uploaded",
         })
         .eq("id", user.id);
     }

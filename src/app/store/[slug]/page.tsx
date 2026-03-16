@@ -4,6 +4,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { Badge } from "@/components/ui/badge";
+import PaymentButton from "@/components/PaymentButton";
+import AddToCartButton from "@/components/AddToCartButton";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -139,23 +141,17 @@ export default async function ProductDetailPage({ params }: Props) {
 
               {/* 구매 버튼 */}
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link
-                  href="/contact"
-                  className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-md shadow-brand-lime-btn/20 transition-all hover:brightness-110 hover:shadow-lg"
-                >
-                  구매 문의
-                </Link>
-                <Link
-                  href="/contact"
-                  className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-border px-8 text-base font-semibold text-text-primary transition-all hover:border-brand-lime-safe hover:bg-brand-lime-btn/5"
-                >
-                  상담 신청
-                </Link>
+                <PaymentButton
+                  productId={product.id}
+                  productName={product.name}
+                  price={displayPrice}
+                  isOutOfStock={product.stock !== null && product.stock <= 0}
+                />
+                <AddToCartButton
+                  productId={product.id}
+                  isOutOfStock={product.stock !== null && product.stock <= 0}
+                />
               </div>
-
-              <p className="mt-3 text-xs text-text-muted">
-                * 결제 시스템 준비 중입니다. 구매를 원하시면 상담을 신청해주세요.
-              </p>
             </div>
           </div>
 
