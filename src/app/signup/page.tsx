@@ -18,6 +18,16 @@ export default function SignupPage() {
   const [socialLoading, setSocialLoading] = useState<string | null>(null);
   const [error, setError] = useState("");
 
+  // 이미 로그인된 유저는 홈으로 리다이렉트
+  useEffect(() => {
+    const supabase = createClient();
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        router.replace("/");
+      }
+    });
+  }, [router]);
+
   // 뒤로가기 시 "연결 중..." 상태 해제
   useEffect(() => {
     const handlePageShow = (e: PageTransitionEvent) => {
