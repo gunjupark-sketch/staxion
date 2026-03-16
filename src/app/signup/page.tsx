@@ -10,7 +10,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { createClient } from "@/lib/supabase/client";
 
-type OAuthProvider = "kakao" | "google";
+type OAuthProvider = "kakao" | "google" | "naver";
 
 export default function SignupPage() {
   const router = useRouter();
@@ -21,6 +21,12 @@ export default function SignupPage() {
   async function handleSocialLogin(provider: OAuthProvider) {
     setSocialLoading(provider);
     setError("");
+
+    // 네이버는 커스텀 OAuth (Supabase 미지원)
+    if (provider === "naver") {
+      window.location.href = "/api/auth/naver";
+      return;
+    }
 
     const supabase = createClient();
     const { error: oauthError } = await supabase.auth.signInWithOAuth({
@@ -105,6 +111,23 @@ export default function SignupPage() {
                     <path d="M9 1C4.58 1 1 3.79 1 7.21c0 2.17 1.44 4.08 3.62 5.18l-.93 3.44c-.08.3.26.54.52.37l4.1-2.72c.22.02.45.03.69.03 4.42 0 8-2.79 8-6.3C17 3.79 13.42 1 9 1z" fill="#191919"/>
                   </svg>
                   카카오로 시작하기
+                </>
+              )}
+            </button>
+
+            <button
+              onClick={() => handleSocialLogin("naver")}
+              disabled={!!socialLoading}
+              className="flex h-12 w-full items-center justify-center gap-2 rounded-lg bg-[#03C75A] text-sm font-semibold text-white transition-colors hover:bg-[#02b351] disabled:opacity-50 min-h-[48px]"
+            >
+              {socialLoading === "naver" ? (
+                <span>연결 중...</span>
+              ) : (
+                <>
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                    <path d="M12.17 9.57L5.59 0H0v18h5.83V8.43L12.41 18H18V0h-5.83v9.57z" fill="white"/>
+                  </svg>
+                  네이버로 시작하기
                 </>
               )}
             </button>
