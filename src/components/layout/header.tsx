@@ -69,7 +69,7 @@ export function Header() {
           {user ? (
             <>
               <Link
-                href="/admin"
+                href="/mypage"
                 className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary"
               >
                 마이페이지
@@ -142,7 +142,7 @@ export function Header() {
               {user ? (
                 <>
                   <Link
-                    href="/admin"
+                    href="/mypage"
                     onClick={() => setOpen(false)}
                     className="rounded-md px-4 py-3 text-base font-medium text-text-secondary min-h-[44px]"
                   >
