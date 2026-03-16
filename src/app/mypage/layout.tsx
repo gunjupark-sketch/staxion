@@ -81,21 +81,42 @@ export default function MypageLayout({
 
   useEffect(() => {
     const supabase = createClient();
-    supabase.auth.getUser().then(({ data }) => {
-      if (!data.user) {
-        router.replace("/login");
-        return;
+
+    // onAuthStateChange로 세션 확인 (getUser보다 안정적)
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
+      async (event, session) => {
+        if (!session?.user) {
+          // 초기 로드 시 세션 없으면 잠시 대기 후 재확인
+          if (event === "INITIAL_SESSION") {
+            const { data } = await supabase.auth.getUser();
+            if (!data.user) {
+              router.replace("/login");
+              return;
+            }
+            // getUser로 유저 찾음 → 프로필 로드
+            const { data: profile } = await supabase
+              .from("profiles")
+              .select("name")
+              .eq("id", data.user.id)
+              .single();
+            setUserName(profile?.name || "회원");
+            setLoading(false);
+          }
+          return;
+        }
+
+        // 세션 있음 → 프로필 로드
+        const { data: profile } = await supabase
+          .from("profiles")
+          .select("name")
+          .eq("id", session.user.id)
+          .single();
+        setUserName(profile?.name || "회원");
+        setLoading(false);
       }
-      supabase
-        .from("profiles")
-        .select("name")
-        .eq("id", data.user.id)
-        .single()
-        .then(({ data: profile }) => {
-          setUserName(profile?.name || "회원");
-          setLoading(false);
-        });
-    });
+    );
+
+    return () => subscription.unsubscribe();
   }, [router]);
 
   if (loading) {
