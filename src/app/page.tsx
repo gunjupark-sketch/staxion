@@ -17,10 +17,8 @@ export default function Home() {
           priority
           quality={90}
         />
-        {/* 텍스처 위 그라데이션 — 왼쪽만 살짝 어둡게 (텍스트 영역) */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/25 to-transparent" />
-        {/* 하단 페이드 to white */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-white via-white/60 to-transparent" />
+        {/* 오버레이 — 텍스트 가독성용 단색 */}
+        <div className="absolute inset-0 bg-black/40" />
 
         <div className="relative z-10 mx-auto flex w-full max-w-7xl items-center px-5 md:px-8">
           {/* 텍스트 영역 */}

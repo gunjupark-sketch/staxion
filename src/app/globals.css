@@ -53,9 +53,7 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-text-primary);
-}
+/* h1~h6 기본색은 body에서 상속. Tailwind text-* 클래스로 개별 제어 */
 
 :root {
   --background: oklch(1 0 0);
