@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { createServerClient } from "@supabase/ssr";
 
 export async function GET(request: Request) {
   const { searchParams, origin } = new URL(request.url);
@@ -7,7 +7,40 @@ export async function GET(request: Request) {
   const next = searchParams.get("next") ?? "/";
 
   if (code) {
-    const supabase = await createClient();
+    // 리다이렉트 응답을 먼저 생성
+    const response = NextResponse.redirect(`${origin}${next}`);
+
+    // 요청 쿠키 파싱
+    const cookieHeader = request.headers.get("cookie") || "";
+
+    const supabase = createServerClient(
+      process.env.NEXT_PUBLIC_SUPABASE_URL!,
+      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!,
+      {
+        cookies: {
+          getAll() {
+            const pairs = cookieHeader.split(";").map((c) => c.trim());
+            return pairs
+              .filter((p) => p.includes("="))
+              .map((p) => {
+                const [name, ...rest] = p.split("=");
+                return { name: name.trim(), value: rest.join("=") };
+              });
+          },
+          setAll(cookies) {
+            cookies.forEach(({ name, value, options }) => {
+              response.cookies.set(name, value, {
+                ...options,
+                httpOnly: true,
+                secure: true,
+                sameSite: "lax",
+              });
+            });
+          },
+        },
+      }
+    );
+
     const { error } = await supabase.auth.exchangeCodeForSession(code);
 
     if (!error) {
@@ -23,7 +56,7 @@ export async function GET(request: Request) {
         }, { onConflict: "id" });
       }
 
-      return NextResponse.redirect(`${origin}${next}`);
+      return response;
     }
   }
 

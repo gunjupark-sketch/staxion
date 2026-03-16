@@ -11,6 +11,7 @@ const menuItems = [
   { label: "내가 쓴 글", href: "/mypage/posts", icon: PenIcon },
   { label: "구매 내역", href: "/mypage/orders", icon: ShoppingBagIcon },
   { label: "나의 대기실", href: "/mypage/waiting-room", icon: TvIcon },
+  { label: "수강 이력", href: "/mypage/enrollments", icon: GraduationCapIcon },
   { label: "상담 내역", href: "/mypage/inquiries", icon: MessageSquareIcon },
 ];
 
@@ -46,6 +47,16 @@ function TvIcon({ className }: { className?: string }) {
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
       <rect width="20" height="15" x="2" y="7" rx="2" ry="2" />
       <polyline points="17 2 12 7 7 2" />
+    </svg>
+  );
+}
+
+function GraduationCapIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.962 5.267a2 2 0 0 0-1.924 0L2.6 9.084a1 1 0 0 0 0 1.832l8.438 3.817a2 2 0 0 0 1.924 0z" />
+      <path d="M22 10v6" />
+      <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
     </svg>
   );
 }
