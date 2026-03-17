@@ -158,7 +158,7 @@ export default async function InquiryDetailPage({
         </Card>
       </div>
 
-      {/* 관리자 메모 + 삭제 */}
+      {/* 관리자 답변 + 삭제 */}
       <InquiryActions
         inquiryId={inquiry.id}
         initialNote={inquiry.admin_note ?? ""}

@@ -65,14 +65,14 @@ export function InquiryActions({
 
   return (
     <div className="mt-6 grid gap-6 lg:grid-cols-2">
-      {/* 관리자 메모 */}
+      {/* 관리자 답변 */}
       <Card className="border-border/50">
         <CardContent className="p-4 sm:p-6">
-          <h2 className="font-semibold text-text-primary mb-4">관리자 메모</h2>
+          <h2 className="font-semibold text-text-primary mb-4">관리자 답변</h2>
           <Textarea
             value={note}
             onChange={(e) => setNote(e.target.value)}
-            placeholder="답변이나 메모를 입력하세요..."
+            placeholder="답변 내용을 입력하세요..."
             className="min-h-[120px]"
           />
           <div className="mt-3 flex items-center gap-3">
@@ -81,7 +81,7 @@ export function InquiryActions({
               disabled={isSaving}
               className="min-h-[44px]"
             >
-              {isSaving ? "저장 중..." : "메모 저장"}
+              {isSaving ? "저장 중..." : "답변 저장"}
             </Button>
             {saveMessage && (
               <span className="text-sm text-green-600">{saveMessage}</span>

@@ -31,7 +31,7 @@ async function getPost(slug: string) {
   const { data } = await supabase
     .from("posts")
     .select("*")
-    .eq("slug", slug)
+    .eq("slug", decodeURIComponent(slug))
     .eq("is_published", true)
     .is("deleted_at", null)
     .single();

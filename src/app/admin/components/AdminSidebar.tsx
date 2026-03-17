@@ -12,26 +12,63 @@ import {
   BriefcaseIcon,
   MessageSquareIcon,
   NewspaperIcon,
+  FileTextIcon,
   VideoIcon,
   SettingsIcon,
   MenuIcon,
   XIcon,
   ImageIcon,
+  type LucideIcon,
 } from "lucide-react";
 
-const adminNav = [
-  { label: "대시보드", href: "/admin", icon: LayoutDashboardIcon },
-  { label: "회원 관리", href: "/admin/members", icon: UsersIcon },
-  { label: "상품 관리", href: "/admin/products", icon: PackageIcon },
-  { label: "주문 관리", href: "/admin/orders", icon: ShoppingCartIcon },
-  { label: "세미나 관리", href: "/admin/seminars", icon: GraduationCapIcon },
-  { label: "서비스 관리", href: "/admin/services", icon: BriefcaseIcon },
-  { label: "상담 관리", href: "/admin/inquiries", icon: MessageSquareIcon },
-  { label: "커뮤니티 관리", href: "/admin/community", icon: NewspaperIcon },
-  { label: "대기실 영상", href: "/admin/videos", icon: VideoIcon },
-  { label: "배너 관리", href: "/admin/banners", icon: ImageIcon },
-  { label: "팝업 관리", href: "/admin/popups", icon: ImageIcon },
-  { label: "사이트 설정", href: "/admin/settings", icon: SettingsIcon },
+interface NavItem {
+  label: string;
+  href: string;
+  icon: LucideIcon;
+}
+
+interface NavGroup {
+  title?: string;
+  items: NavItem[];
+}
+
+const adminNavGroups: NavGroup[] = [
+  {
+    items: [
+      { label: "대시보드", href: "/admin", icon: LayoutDashboardIcon },
+    ],
+  },
+  {
+    items: [
+      { label: "회원 관리", href: "/admin/members", icon: UsersIcon },
+      { label: "주문 관리", href: "/admin/orders", icon: ShoppingCartIcon },
+    ],
+  },
+  {
+    title: "콘텐츠",
+    items: [
+      { label: "소식 관리", href: "/admin/posts", icon: FileTextIcon },
+      { label: "커뮤니티 관리", href: "/admin/community", icon: NewspaperIcon },
+    ],
+  },
+  {
+    title: "서비스",
+    items: [
+      { label: "상품 관리", href: "/admin/products", icon: PackageIcon },
+      { label: "세미나 관리", href: "/admin/seminars", icon: GraduationCapIcon },
+      { label: "서비스 관리", href: "/admin/services", icon: BriefcaseIcon },
+      { label: "상담 관리", href: "/admin/inquiries", icon: MessageSquareIcon },
+      { label: "대기실 영상", href: "/admin/videos", icon: VideoIcon },
+    ],
+  },
+  {
+    title: "사이트 설정",
+    items: [
+      { label: "배너 관리", href: "/admin/banners", icon: ImageIcon },
+      { label: "팝업 관리", href: "/admin/popups", icon: ImageIcon },
+      { label: "기본 설정", href: "/admin/settings", icon: SettingsIcon },
+    ],
+  },
 ];
 
 export default function AdminSidebar() {
@@ -44,26 +81,37 @@ export default function AdminSidebar() {
   };
 
   const navContent = (
-    <nav className="space-y-0.5 px-2 pb-4">
-      {adminNav.map((item) => {
-        const Icon = item.icon;
-        const active = isActive(item.href);
-        return (
-          <Link
-            key={item.href}
-            href={item.href}
-            onClick={() => setMobileOpen(false)}
-            className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
-              active
-                ? "bg-white text-text-primary font-medium shadow-sm"
-                : "text-text-secondary hover:bg-white hover:text-text-primary"
-            }`}
-          >
-            <Icon className="size-4 shrink-0" />
-            {item.label}
-          </Link>
-        );
-      })}
+    <nav className="space-y-4 px-2 pb-4">
+      {adminNavGroups.map((group, gi) => (
+        <div key={gi}>
+          {group.title && (
+            <p className="mb-1 px-3 text-[11px] font-semibold uppercase tracking-wider text-text-muted">
+              {group.title}
+            </p>
+          )}
+          <div className="space-y-0.5">
+            {group.items.map((item) => {
+              const Icon = item.icon;
+              const active = isActive(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setMobileOpen(false)}
+                  className={`flex items-center gap-2.5 rounded-md px-3 py-2 text-sm transition-colors ${
+                    active
+                      ? "bg-white text-text-primary font-medium shadow-sm"
+                      : "text-text-secondary hover:bg-white hover:text-text-primary"
+                  }`}
+                >
+                  <Icon className="size-4 shrink-0" />
+                  {item.label}
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+      ))}
     </nav>
   );
 
