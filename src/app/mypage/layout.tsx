@@ -10,7 +10,7 @@ const menuItems = [
   { label: "내 정보", href: "/mypage", icon: UserIcon },
   { label: "내가 쓴 글", href: "/mypage/posts", icon: PenIcon },
   { label: "구매 내역", href: "/mypage/orders", icon: ShoppingBagIcon },
-  { label: "나의 대기실", href: "/mypage/waiting-room", icon: TvIcon },
+  { label: "내 치과 대기실", href: "/mypage/waiting-room", icon: TvIcon },
   { label: "수강 이력", href: "/mypage/enrollments", icon: GraduationCapIcon },
   { label: "상담 내역", href: "/mypage/inquiries", icon: MessageSquareIcon },
 ];

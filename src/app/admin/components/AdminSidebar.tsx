@@ -18,6 +18,7 @@ import {
   MenuIcon,
   XIcon,
   ImageIcon,
+  CrownIcon,
   type LucideIcon,
 } from "lucide-react";
 
@@ -59,6 +60,7 @@ const adminNavGroups: NavGroup[] = [
       { label: "서비스 관리", href: "/admin/services", icon: BriefcaseIcon },
       { label: "상담 관리", href: "/admin/inquiries", icon: MessageSquareIcon },
       { label: "대기실 영상", href: "/admin/videos", icon: VideoIcon },
+      { label: "구독 관리", href: "/admin/subscriptions", icon: CrownIcon },
     ],
   },
   {
