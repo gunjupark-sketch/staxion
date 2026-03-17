@@ -171,9 +171,15 @@ export default function AdminSubscriptionsPage() {
 
                 <div className="flex items-center gap-2">
                   <Link
+                    href={`/admin/subscriptions/${sub.id}`}
+                    className="inline-flex items-center gap-1 text-xs text-brand-lime-text hover:underline"
+                  >
+                    상세
+                  </Link>
+                  <Link
                     href={`/wr/${sub.waiting_room_code}`}
                     target="_blank"
-                    className="inline-flex items-center gap-1 text-xs text-brand-lime-text hover:underline"
+                    className="inline-flex items-center gap-1 text-xs text-text-muted hover:underline"
                   >
                     <ExternalLinkIcon className="size-3" /> 재생
                   </Link>

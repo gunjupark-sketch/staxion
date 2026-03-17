@@ -3,6 +3,18 @@
 import { useEffect, useState, useRef, useCallback } from "react";
 import Image from "next/image";
 
+function extractYoutubeId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+    /^([a-zA-Z0-9_-]{11})$/,
+  ];
+  for (const p of patterns) {
+    const match = url.trim().match(p);
+    if (match) return match[1];
+  }
+  return null;
+}
+
 interface MediaItem {
   id: string;
   file_url: string;
@@ -23,6 +35,7 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
   const [showCurrent, setShowCurrent] = useState(true);
   const [cursorVisible, setCursorVisible] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
+  const ytIframeRef = useRef<HTMLIFrameElement>(null);
   const playCountRef = useRef(0);
   const cursorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -73,7 +86,7 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
   useEffect(() => {
     if (media.length === 0) return;
     const item = media[currentIndex];
-    if (!item || item.file_type === "video") return;
+    if (!item || item.file_type === "video" || item.file_type === "youtube") return;
 
     // Single static image — no timer needed
     if (media.length === 1) return;
@@ -116,6 +129,41 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
     }
   }, [currentIndex, media, advanceToNext]);
 
+  // YouTube ended detection via postMessage
+  useEffect(() => {
+    const handleMessage = (e: MessageEvent) => {
+      if (e.origin !== "https://www.youtube.com") return;
+      try {
+        const data = typeof e.data === "string" ? JSON.parse(e.data) : e.data;
+        // YT player state 0 = ended
+        if (data?.event === "onStateChange" && data?.info === 0) {
+          const item = media[currentIndex];
+          if (item?.file_type === "youtube") {
+            handleVideoEnded();
+          }
+        }
+      } catch {
+        // ignore parse errors
+      }
+    };
+    window.addEventListener("message", handleMessage);
+    return () => window.removeEventListener("message", handleMessage);
+  }, [currentIndex, media, handleVideoEnded]);
+
+  // Listen for YT state changes by enabling JS API
+  useEffect(() => {
+    const iframe = ytIframeRef.current;
+    if (!iframe) return;
+    // Tell YouTube iframe to send events
+    const timer = setTimeout(() => {
+      iframe.contentWindow?.postMessage(
+        JSON.stringify({ event: "listening", id: 1 }),
+        "https://www.youtube.com"
+      );
+    }, 1000);
+    return () => clearTimeout(timer);
+  }, [currentIndex]);
+
   // Reset play count when index changes
   useEffect(() => {
     playCountRef.current = 0;
@@ -144,7 +192,17 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
         className="absolute inset-0 transition-opacity duration-500"
         style={{ opacity: showCurrent ? 1 : 0 }}
       >
-        {currentItem.file_type === "video" ? (
+        {currentItem.file_type === "youtube" ? (
+          <iframe
+            ref={ytIframeRef}
+            key={currentItem.id + "-" + currentIndex}
+            src={`https://www.youtube.com/embed/${extractYoutubeId(currentItem.file_url)}?autoplay=1&mute=1&controls=0&modestbranding=1&rel=0&showinfo=0&enablejsapi=1&origin=${typeof window !== "undefined" ? window.location.origin : ""}${currentItem.video_loop_mode === "loop" ? "&loop=1&playlist=" + extractYoutubeId(currentItem.file_url) : ""}`}
+            className="w-full h-full"
+            allow="autoplay; encrypted-media"
+            allowFullScreen
+            style={{ border: "none" }}
+          />
+        ) : currentItem.file_type === "video" ? (
           <video
             ref={videoRef}
             key={currentItem.id + "-" + currentIndex}

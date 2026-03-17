@@ -17,7 +17,10 @@ import {
   SettingsIcon,
   ExternalLinkIcon,
   QrCodeIcon,
-  GripVerticalIcon,
+  ChevronUpIcon,
+  ChevronDownIcon,
+  LinkIcon,
+  YoutubeIcon,
 } from "lucide-react";
 
 interface Subscription {
@@ -67,6 +70,22 @@ function formatFileSize(bytes: number): string {
   return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
+function extractYoutubeId(url: string): string | null {
+  const patterns = [
+    /(?:youtube\.com\/watch\?v=|youtu\.be\/|youtube\.com\/embed\/|youtube\.com\/shorts\/)([a-zA-Z0-9_-]{11})/,
+    /^([a-zA-Z0-9_-]{11})$/,
+  ];
+  for (const p of patterns) {
+    const match = url.trim().match(p);
+    if (match) return match[1];
+  }
+  return null;
+}
+
+function getYoutubeThumbnail(videoId: string): string {
+  return `https://img.youtube.com/vi/${videoId}/mqdefault.jpg`;
+}
+
 export default function MypageWaitingRoomPage() {
   const supabase = createClient();
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -78,6 +97,8 @@ export default function MypageWaitingRoomPage() {
   const [mediaItems, setMediaItems] = useState<MediaItem[]>([]);
   const [uploading, setUploading] = useState(false);
   const [error, setError] = useState("");
+  const [showYoutubeInput, setShowYoutubeInput] = useState(false);
+  const [youtubeUrl, setYoutubeUrl] = useState("");
 
   // 데이터 로드
   const loadData = useCallback(async () => {
@@ -219,17 +240,68 @@ export default function MypageWaitingRoomPage() {
     if (fileInputRef.current) fileInputRef.current.value = "";
   }
 
+  // 유튜브 링크 등록
+  async function handleYoutubeSubmit() {
+    if (!userId || !youtubeUrl.trim()) return;
+    setError("");
+
+    const videoId = extractYoutubeId(youtubeUrl);
+    if (!videoId) {
+      setError("올바른 유튜브 링크를 입력해 주세요.");
+      return;
+    }
+
+    // 개수 체크
+    if (plan && mediaItems.length >= plan.max_media_count) {
+      setError(`미디어 최대 개수(${plan.max_media_count}개)를 초과했습니다.`);
+      return;
+    }
+
+    setUploading(true);
+
+    const nextOrder =
+      mediaItems.length > 0
+        ? Math.max(...mediaItems.map((m) => m.sort_order)) + 1
+        : 0;
+
+    const { error: insertError } = await supabase
+      .from("waiting_room_media")
+      .insert({
+        user_id: userId,
+        file_url: youtubeUrl.trim(),
+        file_name: `YouTube: ${videoId}`,
+        file_type: "youtube",
+        file_size_bytes: 0,
+        display_duration: 0,
+        video_loop_mode: "once",
+        sort_order: nextOrder,
+        is_active: true,
+      });
+
+    if (insertError) {
+      setError("유튜브 링크 저장에 실패했습니다.");
+    } else {
+      setYoutubeUrl("");
+      setShowYoutubeInput(false);
+      await loadData();
+    }
+
+    setUploading(false);
+  }
+
   // 미디어 삭제
   async function handleDelete(item: MediaItem) {
     if (!confirm(`"${item.file_name}"을(를) 삭제하시겠습니까?`)) return;
 
-    // storage에서 파일 경로 추출
-    const url = new URL(item.file_url);
-    const pathParts = url.pathname.split("/waiting-room/");
-    const storagePath = pathParts[1] ? decodeURIComponent(pathParts[1]) : null;
+    // youtube는 스토리지 파일 없음
+    if (item.file_type !== "youtube") {
+      const url = new URL(item.file_url);
+      const pathParts = url.pathname.split("/waiting-room/");
+      const storagePath = pathParts[1] ? decodeURIComponent(pathParts[1]) : null;
 
-    if (storagePath) {
-      await supabase.storage.from("waiting-room").remove([storagePath]);
+      if (storagePath) {
+        await supabase.storage.from("waiting-room").remove([storagePath]);
+      }
     }
 
     await supabase.from("waiting_room_media").delete().eq("id", item.id);
@@ -245,6 +317,32 @@ export default function MypageWaitingRoomPage() {
     setMediaItems((prev) =>
       prev.map((m) => (m.id === id ? { ...m, ...updates } : m))
     );
+  }
+
+  // 순서 변경
+  async function handleMoveMedia(index: number, direction: "up" | "down") {
+    const targetIndex = direction === "up" ? index - 1 : index + 1;
+    if (targetIndex < 0 || targetIndex >= mediaItems.length) return;
+
+    const newItems = [...mediaItems];
+    const [moved] = newItems.splice(index, 1);
+    newItems.splice(targetIndex, 0, moved);
+
+    // sort_order 업데이트
+    const updates = newItems.map((item, i) => ({
+      id: item.id,
+      sort_order: i,
+    }));
+
+    setMediaItems(newItems.map((item, i) => ({ ...item, sort_order: i })));
+
+    // DB 업데이트
+    for (const u of updates) {
+      await supabase
+        .from("waiting_room_media")
+        .update({ sort_order: u.sort_order })
+        .eq("id", u.id);
+    }
   }
 
   // 로딩
@@ -426,7 +524,7 @@ export default function MypageWaitingRoomPage() {
         <p className="text-sm font-medium text-text-secondary">
           미디어 목록
         </p>
-        <div>
+        <div className="flex gap-2">
           <input
             ref={fileInputRef}
             type="file"
@@ -443,14 +541,49 @@ export default function MypageWaitingRoomPage() {
             <UploadIcon className="size-4" />
             {uploading ? "업로드 중..." : "파일 업로드"}
           </Button>
+          <Button
+            variant="outline"
+            className="min-h-[44px] gap-2"
+            onClick={() => setShowYoutubeInput(!showYoutubeInput)}
+            disabled={uploading}
+          >
+            <LinkIcon className="size-4" />
+            유튜브 링크
+          </Button>
         </div>
       </div>
+
+      {showYoutubeInput && (
+        <Card>
+          <CardContent className="space-y-3 pt-2">
+            <Label className="text-xs text-text-muted">유튜브 영상 링크</Label>
+            <div className="flex gap-2">
+              <Input
+                value={youtubeUrl}
+                onChange={(e) => setYoutubeUrl(e.target.value)}
+                placeholder="https://www.youtube.com/watch?v=..."
+                className="flex-1"
+              />
+              <Button
+                onClick={handleYoutubeSubmit}
+                disabled={uploading || !youtubeUrl.trim()}
+                className="min-h-[44px] shrink-0 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90"
+              >
+                등록
+              </Button>
+            </div>
+            <p className="text-[10px] text-text-muted">
+              youtube.com/watch?v=..., youtu.be/..., youtube.com/shorts/... 형식 지원
+            </p>
+          </CardContent>
+        </Card>
+      )}
 
       {error && (
         <p className="text-sm text-red-500">{error}</p>
       )}
 
-      {/* 미디어 그리드 */}
+      {/* 미디어 리스트 */}
       {mediaItems.length === 0 ? (
         <Card>
           <CardContent className="flex min-h-[160px] flex-col items-center justify-center gap-3 py-10">
@@ -461,13 +594,16 @@ export default function MypageWaitingRoomPage() {
           </CardContent>
         </Card>
       ) : (
-        <div className="grid gap-4 sm:grid-cols-2">
-          {mediaItems.map((item) => (
-            <MediaCard
+        <div className="space-y-2">
+          {mediaItems.map((item, index) => (
+            <MediaListItem
               key={item.id}
               item={item}
+              index={index}
+              total={mediaItems.length}
               onDelete={handleDelete}
               onUpdate={handleUpdateMedia}
+              onMove={handleMoveMedia}
             />
           ))}
         </div>
@@ -477,154 +613,191 @@ export default function MypageWaitingRoomPage() {
 }
 
 // ---------------------
-// 미디어 카드 컴포넌트
+// 미디어 리스트 아이템
 // ---------------------
-function MediaCard({
+function MediaListItem({
   item,
+  index,
+  total,
   onDelete,
   onUpdate,
+  onMove,
 }: {
   item: MediaItem;
+  index: number;
+  total: number;
   onDelete: (item: MediaItem) => void;
   onUpdate: (
     id: string,
     updates: Partial<Pick<MediaItem, "display_duration" | "video_loop_mode" | "is_active">>
   ) => void;
+  onMove: (index: number, direction: "up" | "down") => void;
 }) {
   const [showSettings, setShowSettings] = useState(false);
   const isVideo = item.file_type === "video";
+  const isYoutube = item.file_type === "youtube";
+  const youtubeId = isYoutube ? extractYoutubeId(item.file_url) : null;
 
   return (
-    <Card className={!item.is_active ? "opacity-50" : ""}>
-      <CardContent className="space-y-3 pt-2">
-        {/* 상단: 썸네일 + 정보 */}
-        <div className="flex gap-3">
-          {/* 드래그 핸들 */}
-          <div className="flex shrink-0 cursor-grab items-center text-text-muted">
-            <GripVerticalIcon className="size-4" />
-          </div>
+    <div className={`rounded-xl border p-3 ${!item.is_active ? "opacity-50" : ""}`}>
+      <div className="flex items-center gap-3">
+        {/* 순서 번호 + 위아래 버튼 */}
+        <div className="flex shrink-0 flex-col items-center gap-0.5">
+          <button
+            type="button"
+            onClick={() => onMove(index, "up")}
+            disabled={index === 0}
+            className="rounded p-0.5 text-text-muted transition-colors hover:bg-surface-secondary hover:text-text-primary disabled:opacity-30 disabled:hover:bg-transparent"
+          >
+            <ChevronUpIcon className="size-4" />
+          </button>
+          <span className="text-[10px] font-bold text-text-muted">{index + 1}</span>
+          <button
+            type="button"
+            onClick={() => onMove(index, "down")}
+            disabled={index === total - 1}
+            className="rounded p-0.5 text-text-muted transition-colors hover:bg-surface-secondary hover:text-text-primary disabled:opacity-30 disabled:hover:bg-transparent"
+          >
+            <ChevronDownIcon className="size-4" />
+          </button>
+        </div>
 
-          {/* 썸네일 */}
-          <div className="flex size-16 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-surface-secondary">
-            {isVideo ? (
-              <VideoIcon className="size-6 text-text-muted" />
-            ) : (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={item.file_url}
-                alt={item.file_name}
-                className="size-full object-cover"
-              />
-            )}
-          </div>
+        {/* 썸네일 */}
+        <div className="flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-surface-secondary">
+          {isYoutube && youtubeId ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={getYoutubeThumbnail(youtubeId)}
+              alt={item.file_name}
+              className="size-full object-cover"
+            />
+          ) : isVideo ? (
+            <VideoIcon className="size-5 text-text-muted" />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={item.file_url}
+              alt={item.file_name}
+              className="size-full object-cover"
+            />
+          )}
+        </div>
 
-          {/* 파일 정보 */}
-          <div className="min-w-0 flex-1">
-            <p className="truncate text-sm font-medium text-text-primary">
-              {item.file_name}
-            </p>
-            <div className="mt-1 flex flex-wrap items-center gap-1.5">
-              <Badge variant="secondary" className="text-[10px]">
-                {isVideo ? (
-                  <><VideoIcon className="mr-0.5 size-2.5" /> 영상</>
-                ) : (
-                  <><ImageIcon className="mr-0.5 size-2.5" /> 이미지</>
-                )}
-              </Badge>
+        {/* 파일 정보 */}
+        <div className="min-w-0 flex-1">
+          <p className="truncate text-sm font-medium text-text-primary">
+            {item.file_name}
+          </p>
+          <div className="mt-1 flex flex-wrap items-center gap-1.5">
+            <Badge variant="secondary" className="text-[10px]">
+              {isYoutube ? (
+                <><YoutubeIcon className="mr-0.5 size-2.5" /> 유튜브</>
+              ) : isVideo ? (
+                <><VideoIcon className="mr-0.5 size-2.5" /> 영상</>
+              ) : (
+                <><ImageIcon className="mr-0.5 size-2.5" /> 이미지</>
+              )}
+            </Badge>
+            {!isYoutube && (
               <span className="text-xs text-text-muted">
                 {formatFileSize(item.file_size_bytes)}
               </span>
-            </div>
-          </div>
-
-          {/* 액션 버튼들 */}
-          <div className="flex shrink-0 items-start gap-1">
-            <button
-              type="button"
-              onClick={() => setShowSettings(!showSettings)}
-              className="rounded-lg p-1.5 text-text-muted transition-colors hover:bg-surface-secondary hover:text-text-primary"
-              title="설정"
-            >
-              <SettingsIcon className="size-4" />
-            </button>
-            <button
-              type="button"
-              onClick={() => onDelete(item)}
-              className="rounded-lg p-1.5 text-text-muted transition-colors hover:bg-red-50 hover:text-red-500"
-              title="삭제"
-            >
-              <TrashIcon className="size-4" />
-            </button>
+            )}
+            {!item.is_active && (
+              <Badge variant="secondary" className="bg-red-50 text-[10px] text-red-500">
+                비활성
+              </Badge>
+            )}
           </div>
         </div>
 
-        {/* 설정 패널 */}
-        {showSettings && (
-          <div className="space-y-3 rounded-lg bg-surface-secondary p-3">
-            {/* 활성/비활성 토글 */}
-            <div className="flex items-center justify-between">
-              <Label className="text-xs">활성 상태</Label>
-              <button
-                type="button"
-                onClick={() =>
-                  onUpdate(item.id, { is_active: !item.is_active })
-                }
-                className={`relative h-6 w-11 rounded-full transition-colors ${
-                  item.is_active ? "bg-brand-lime-btn" : "bg-gray-300"
+        {/* 액션 버튼들 */}
+        <div className="flex shrink-0 items-center gap-1">
+          <button
+            type="button"
+            onClick={() => setShowSettings(!showSettings)}
+            className="rounded-lg p-1.5 text-text-muted transition-colors hover:bg-surface-secondary hover:text-text-primary"
+            title="설정"
+          >
+            <SettingsIcon className="size-4" />
+          </button>
+          <button
+            type="button"
+            onClick={() => onDelete(item)}
+            className="rounded-lg p-1.5 text-text-muted transition-colors hover:bg-red-50 hover:text-red-500"
+            title="삭제"
+          >
+            <TrashIcon className="size-4" />
+          </button>
+        </div>
+      </div>
+
+      {/* 설정 패널 */}
+      {showSettings && (
+        <div className="mt-3 space-y-3 rounded-lg bg-surface-secondary p-3">
+          {/* 활성/비활성 토글 */}
+          <div className="flex items-center justify-between">
+            <Label className="text-xs">활성 상태</Label>
+            <button
+              type="button"
+              onClick={() =>
+                onUpdate(item.id, { is_active: !item.is_active })
+              }
+              className={`relative h-6 w-11 rounded-full transition-colors ${
+                item.is_active ? "bg-brand-lime-btn" : "bg-gray-300"
+              }`}
+            >
+              <span
+                className={`absolute top-0.5 left-0.5 size-5 rounded-full bg-white transition-transform ${
+                  item.is_active ? "translate-x-5" : "translate-x-0"
                 }`}
-              >
-                <span
-                  className={`absolute top-0.5 left-0.5 size-5 rounded-full bg-white transition-transform ${
-                    item.is_active ? "translate-x-5" : "translate-x-0"
-                  }`}
-                />
-              </button>
-            </div>
-
-            {/* 이미지: 표시 시간 */}
-            {!isVideo && (
-              <div className="space-y-1.5">
-                <Label className="text-xs">표시 시간 (초)</Label>
-                <Input
-                  type="number"
-                  min={3}
-                  max={30}
-                  value={item.display_duration}
-                  onChange={(e) => {
-                    const val = Math.min(
-                      30,
-                      Math.max(3, parseInt(e.target.value) || 3)
-                    );
-                    onUpdate(item.id, { display_duration: val });
-                  }}
-                  className="h-9 text-sm"
-                />
-                <p className="text-[10px] text-text-muted">3초 ~ 30초</p>
-              </div>
-            )}
-
-            {/* 영상: 반복 모드 */}
-            {isVideo && (
-              <div className="space-y-1.5">
-                <Label className="text-xs">재생 반복</Label>
-                <select
-                  value={item.video_loop_mode}
-                  onChange={(e) =>
-                    onUpdate(item.id, { video_loop_mode: e.target.value })
-                  }
-                  className="h-9 w-full rounded-lg border bg-transparent px-3 text-sm"
-                >
-                  {VIDEO_LOOP_OPTIONS.map((opt) => (
-                    <option key={opt.value} value={opt.value}>
-                      {opt.label}
-                    </option>
-                  ))}
-                </select>
-              </div>
-            )}
+              />
+            </button>
           </div>
-        )}
-      </CardContent>
-    </Card>
+
+          {/* 이미지: 표시 시간 */}
+          {!isVideo && !isYoutube && (
+            <div className="space-y-1.5">
+              <Label className="text-xs">표시 시간 (초)</Label>
+              <Input
+                type="number"
+                min={3}
+                max={30}
+                value={item.display_duration}
+                onChange={(e) => {
+                  const val = Math.min(
+                    30,
+                    Math.max(3, parseInt(e.target.value) || 3)
+                  );
+                  onUpdate(item.id, { display_duration: val });
+                }}
+                className="h-9 text-sm"
+              />
+              <p className="text-[10px] text-text-muted">3초 ~ 30초</p>
+            </div>
+          )}
+
+          {/* 영상/유튜브: 반복 모드 */}
+          {(isVideo || isYoutube) && (
+            <div className="space-y-1.5">
+              <Label className="text-xs">재생 반복</Label>
+              <select
+                value={item.video_loop_mode}
+                onChange={(e) =>
+                  onUpdate(item.id, { video_loop_mode: e.target.value })
+                }
+                className="h-9 w-full rounded-lg border bg-transparent px-3 text-sm"
+              >
+                {VIDEO_LOOP_OPTIONS.map((opt) => (
+                  <option key={opt.value} value={opt.value}>
+                    {opt.label}
+                  </option>
+                ))}
+              </select>
+            </div>
+          )}
+        </div>
+      )}
+    </div>
   );
 }
