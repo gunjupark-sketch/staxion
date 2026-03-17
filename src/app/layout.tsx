@@ -1,8 +1,7 @@
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import "./globals.css";
-import { Header } from "@/components/layout/header";
-import { Footer } from "@/components/layout/footer";
+import { LayoutShell } from "@/components/layout/LayoutShell";
 import { SeoScripts } from "@/components/seo/SeoScripts";
 
 /* ── DB에서 SEO 설정 로드 ── */
@@ -101,9 +100,7 @@ export default async function RootLayout({
       </head>
       <body className="flex min-h-screen flex-col">
         <SeoScripts analytics={analytics} />
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <LayoutShell>{children}</LayoutShell>
       </body>
     </html>
   );
