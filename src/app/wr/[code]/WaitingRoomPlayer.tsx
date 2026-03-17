@@ -34,8 +34,10 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [showCurrent, setShowCurrent] = useState(true);
   const [cursorVisible, setCursorVisible] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const ytIframeRef = useRef<HTMLIFrameElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const playCountRef = useRef(0);
   const cursorTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -69,6 +71,28 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
       window.removeEventListener("mousemove", handleMouseMove);
       if (cursorTimerRef.current) clearTimeout(cursorTimerRef.current);
     };
+  }, []);
+
+  // Fullscreen toggle
+  const toggleFullscreen = useCallback(async () => {
+    try {
+      if (!document.fullscreenElement) {
+        await containerRef.current?.requestFullscreen();
+      } else {
+        await document.exitFullscreen();
+      }
+    } catch {
+      // ignore fullscreen errors
+    }
+  }, []);
+
+  // Track fullscreen state
+  useEffect(() => {
+    const handleChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener("fullscreenchange", handleChange);
+    return () => document.removeEventListener("fullscreenchange", handleChange);
   }, []);
 
   const advanceToNext = useCallback(() => {
@@ -185,9 +209,39 @@ export function WaitingRoomPlayer({ media: initialMedia, code }: Props) {
 
   return (
     <div
+      ref={containerRef}
       className="fixed inset-0 bg-black overflow-hidden"
       style={{ cursor: cursorVisible ? "auto" : "none" }}
     >
+      {/* 전체화면 버튼 — 마우스 움직이면 나타남 */}
+      <button
+        type="button"
+        onClick={toggleFullscreen}
+        className="absolute right-4 top-4 z-50 flex size-10 items-center justify-center rounded-lg bg-white/10 text-white/70 backdrop-blur-sm transition-all hover:bg-white/20 hover:text-white"
+        style={{
+          opacity: cursorVisible ? 1 : 0,
+          pointerEvents: cursorVisible ? "auto" : "none",
+          transition: "opacity 0.3s",
+        }}
+        title={isFullscreen ? "전체화면 종료" : "전체화면"}
+      >
+        {isFullscreen ? (
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="4 14 10 14 10 20" />
+            <polyline points="20 10 14 10 14 4" />
+            <line x1="14" y1="10" x2="21" y2="3" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        ) : (
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="15 3 21 3 21 9" />
+            <polyline points="9 21 3 21 3 15" />
+            <line x1="21" y1="3" x2="14" y2="10" />
+            <line x1="3" y1="21" x2="10" y2="14" />
+          </svg>
+        )}
+      </button>
+
       <div
         className="absolute inset-0 transition-opacity duration-500"
         style={{ opacity: showCurrent ? 1 : 0 }}
