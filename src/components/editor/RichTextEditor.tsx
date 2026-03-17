@@ -13,11 +13,6 @@ import {
   type JSONContent,
   handleCommandNavigation,
   createSuggestionItems,
-  renderItems,
-  createImageUpload,
-  handleImageDrop,
-  handleImagePaste,
-  type UploadFn,
   StarterKit,
   TiptapImage,
   TiptapUnderline,
@@ -27,8 +22,6 @@ import {
   TaskItem,
   HorizontalRule,
   HighlightExtension,
-  UpdatedImage,
-  CodeBlockLowlight,
 } from "novel";
 import { generateJSON } from "@tiptap/html";
 import { createClient } from "@/lib/supabase/client";
@@ -65,20 +58,17 @@ async function uploadToSupabase(file: File): Promise<string> {
   return data.publicUrl;
 }
 
-const uploadFn = createImageUpload({
-  onUpload: uploadToSupabase,
-  validateFn: (file) => {
-    if (!file.type.startsWith("image/")) {
-      alert("이미지 파일만 업로드 가능합니다.");
-      return false;
-    }
-    if (file.size > 10 * 1024 * 1024) {
-      alert("10MB 이하 파일만 가능합니다.");
-      return false;
-    }
-    return true;
-  },
-});
+function validateImage(file: File): boolean {
+  if (!file.type.startsWith("image/")) {
+    alert("이미지 파일만 업로드 가능합니다.");
+    return false;
+  }
+  if (file.size > 10 * 1024 * 1024) {
+    alert("10MB 이하 파일만 가능합니다.");
+    return false;
+  }
+  return true;
+}
 
 // ── Slash 커맨드 ──
 const suggestionItems = createSuggestionItems([
@@ -157,9 +147,13 @@ const suggestionItems = createSuggestionItems([
       input.accept = "image/*";
       input.onchange = async () => {
         const file = input.files?.[0];
-        if (!file) return;
-        const pos = editor.view.state.selection.from;
-        uploadFn(file, editor.view, pos);
+        if (!file || !validateImage(file)) return;
+        try {
+          const url = await uploadToSupabase(file);
+          editor.chain().focus().setImage({ src: url }).run();
+        } catch (err) {
+          alert("이미지 업로드 실패: " + (err instanceof Error ? err.message : "알 수 없는 오류"));
+        }
       };
       input.click();
     },
@@ -206,6 +200,8 @@ interface RichTextEditorProps {
 export default function RichTextEditor({ value, onChange }: RichTextEditorProps) {
   const [initialContent, setInitialContent] = useState<JSONContent | null>(null);
   const initialized = useRef(false);
+  const editorRef = useRef<{ getHTML: () => string; chain: () => unknown } | null>(null);
+  const imageInputRef = useRef<HTMLInputElement>(null);
 
   // HTML → JSON 변환 (최초 1회)
   useEffect(() => {
@@ -236,8 +232,33 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
     );
   }
 
+  const handleToolbarImage = () => {
+    imageInputRef.current?.click();
+  };
+
+  const handleToolbarImageChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file || !validateImage(file)) return;
+    if (imageInputRef.current) imageInputRef.current.value = "";
+    try {
+      const url = await uploadToSupabase(file);
+      if (editorRef.current) {
+        (editorRef.current as unknown as { chain: () => { focus: () => { setImage: (opts: { src: string }) => { run: () => void } } } }).chain().focus().setImage({ src: url }).run();
+      }
+    } catch (err) {
+      alert("이미지 업로드 실패: " + (err instanceof Error ? err.message : "알 수 없는 오류"));
+    }
+  };
+
   return (
     <div className="rounded-lg border border-border">
+      <input
+        ref={imageInputRef}
+        type="file"
+        accept="image/*"
+        onChange={handleToolbarImageChange}
+        className="hidden"
+      />
       <EditorRoot>
         <EditorContent
           initialContent={initialContent}
@@ -247,16 +268,95 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
             handleDOMEvents: {
               keydown: (_view, event) => handleCommandNavigation(event),
             },
-            handlePaste: (view, event) => handleImagePaste(view, event, uploadFn),
-            handleDrop: (view, event, _slice, moved) => handleImageDrop(view, event, moved, uploadFn),
+            handlePaste: (view, event) => {
+              const items = event.clipboardData?.items;
+              if (!items) return false;
+              for (const item of items) {
+                if (item.type.startsWith("image/")) {
+                  event.preventDefault();
+                  const file = item.getAsFile();
+                  if (!file || !validateImage(file)) return true;
+                  const pos = view.state.selection.from;
+                  uploadToSupabase(file).then((url) => {
+                    const node = view.state.schema.nodes.image.create({ src: url });
+                    const tr = view.state.tr.insert(pos, node);
+                    view.dispatch(tr);
+                  }).catch((err) => {
+                    alert("이미지 업로드 실패: " + (err instanceof Error ? err.message : ""));
+                  });
+                  return true;
+                }
+              }
+              return false;
+            },
+            handleDrop: (view, event, _slice, moved) => {
+              if (moved || !event.dataTransfer?.files?.length) return false;
+              const file = event.dataTransfer.files[0];
+              if (!file.type.startsWith("image/") || !validateImage(file)) return false;
+              event.preventDefault();
+              const coords = view.posAtCoords({ left: event.clientX, top: event.clientY });
+              const pos = coords?.pos ?? view.state.selection.from;
+              uploadToSupabase(file).then((url) => {
+                const node = view.state.schema.nodes.image.create({ src: url });
+                const tr = view.state.tr.insert(pos, node);
+                view.dispatch(tr);
+              }).catch((err) => {
+                alert("이미지 업로드 실패: " + (err instanceof Error ? err.message : ""));
+              });
+              return true;
+            },
             attributes: {
               class: "focus:outline-none",
             },
           }}
+          onCreate={({ editor }) => {
+            editorRef.current = editor as unknown as typeof editorRef.current;
+          }}
           onUpdate={({ editor }) => {
+            editorRef.current = editor as unknown as typeof editorRef.current;
             onChange(editor.getHTML());
           }}
         >
+          {/* 상단 툴바 */}
+          <div className="flex items-center gap-0.5 border-b border-border px-2 py-1.5 bg-surface-secondary/30">
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleBold().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="굵게">
+              <BoldIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleItalic().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="기울임">
+              <ItalicIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleUnderline().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="밑줄">
+              <UnderlineIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleStrike().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="취소선">
+              <StrikethroughIcon className="size-4" />
+            </button>
+            <div className="mx-1 h-5 w-px bg-border" />
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleHeading({ level: 2 }).run()} className="rounded p-1.5 hover:bg-surface-secondary" title="제목">
+              <Heading2Icon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleHeading({ level: 3 }).run()} className="rounded p-1.5 hover:bg-surface-secondary" title="소제목">
+              <Heading3Icon className="size-4" />
+            </button>
+            <div className="mx-1 h-5 w-px bg-border" />
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleBulletList().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="목록">
+              <ListIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleOrderedList().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="번호 목록">
+              <ListOrderedIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().toggleBlockquote().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="인용">
+              <TextQuoteIcon className="size-4" />
+            </button>
+            <div className="mx-1 h-5 w-px bg-border" />
+            <button type="button" onClick={handleToolbarImage} className="rounded p-1.5 hover:bg-surface-secondary" title="이미지 업로드">
+              <ImageIcon className="size-4" />
+            </button>
+            <button type="button" onClick={() => (editorRef.current as any)?.chain().focus().setHorizontalRule().run()} className="rounded p-1.5 hover:bg-surface-secondary" title="구분선">
+              <MinusIcon className="size-4" />
+            </button>
+          </div>
+
           {/* 버블 메뉴 (텍스트 선택 시) */}
           <EditorBubble className="flex items-center gap-0.5 rounded-lg border border-border bg-white p-1 shadow-lg">
             <EditorBubbleItem

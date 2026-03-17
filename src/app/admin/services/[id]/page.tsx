@@ -141,9 +141,7 @@ export default function ServiceDetailPage() {
       name: form.name.trim(),
       slug: form.slug.trim() || null,
       description: form.description.trim() || null,
-      detail_content: form.detail_content.trim() || null,
       content: form.detail_content.trim() || null,
-      icon_url: form.icon_url.trim() || null,
       icon: form.icon_url.trim() || null,
       image_url: form.image_url.trim() || null,
       mobile_image_url: form.mobile_image_url.trim() || null,
@@ -179,7 +177,8 @@ export default function ServiceDetailPage() {
         fetchService();
       }
     } catch (err: unknown) {
-      alert(err instanceof Error ? err.message : "저장 중 오류가 발생했습니다.");
+      const msg = err instanceof Error ? err.message : (err as { message?: string })?.message || JSON.stringify(err);
+      alert("저장 실패: " + msg);
     } finally {
       setSaving(false);
     }
