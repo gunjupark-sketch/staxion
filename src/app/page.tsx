@@ -1,384 +1,195 @@
+"use client";
+
 import Link from "next/link";
-import Image from "next/image";
+import { C } from "@/lib/design-tokens";
 import PopupModal from "@/components/PopupModal";
-import HomeBanner from "@/components/HomeBanner";
+
+/* ── 더미 데이터 ── */
+const PRODUCTS = Array.from({ length: 20 }, (_, i) => ({
+  id: i + 1,
+  name: `상품 ${i + 1}`,
+}));
+
+const POSTS_POPULAR = [
+  { id: 1, category: "케이스 공유", title: "보톡스 시술 후 브루징 최소화 팁 공유합니다", likes: 45, comments: 22 },
+  { id: 2, category: "경영/마케팅", title: "개원 3년차 매출 2배 만든 마케팅 전략", likes: 41, comments: 23 },
+  { id: 3, category: "케이스 공유", title: "실리프팅 전후 비교 케이스 — 40대 여성", likes: 38, comments: 19 },
+  { id: 4, category: "시술 Q&A", title: "필러 합병증 대응 가이드 정리했습니다", likes: 35, comments: 15 },
+  { id: 5, category: "경영/마케팅", title: "2026 미용시술 트렌드 분석 리포트", likes: 32, comments: 12 },
+];
+
+const POSTS_LATEST = [
+  { id: 6, category: "시술 Q&A", title: "필러 시술 시 혈관 회피 테크닉 질문드립니다", author: "신규회원", time: "15분 전" },
+  { id: 7, category: "자유게시판", title: "요즘 보톡스 단가 어떻게 잡고 계신가요?", author: "강남이", time: "1시간 전" },
+  { id: 8, category: "시술 Q&A", title: "입술 필러 시술 시 주의사항 공유 부탁드려요", author: "하늘치과", time: "2시간 전" },
+  { id: 9, category: "케이스 공유", title: "스킨부스터 3회차 경과 보고합니다", author: "Dr.Lee", time: "3시간 전" },
+  { id: 10, category: "자유게시판", title: "미용시술 가이드북 후기 — 솔직히 말합니다", author: "열공의사", time: "4시간 전" },
+];
 
 export default function Home() {
   return (
     <>
       <PopupModal />
-      {/* ========== Hero — 배너 이미지 슬라이드 ========== */}
-      <HomeBanner />
 
-      {/* ========== 서비스 3단계 — 이미지 카드 ========== */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
-              How it works
-            </p>
-            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
-              치과 성장을 위한 3단계 서비스
+      {/* 히어로 배너 */}
+      <div className="mb-5 overflow-hidden rounded-2xl relative" style={{ height: 420 }}>
+        <div className="absolute inset-0" style={{
+          background: `linear-gradient(135deg, ${C.surface} 0%, #e8eaed 100%)`,
+        }} />
+        <div className="relative z-10 flex h-full items-center px-10">
+          <div>
+            <h2 className="mb-2 text-[28px] font-bold leading-tight" style={{ color: C.textBody }}>
+              치과 미용시술의 새로운 기준
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-text-muted">
-              권역분석부터 마케팅, 브랜딩까지. 단계별로 치과의 성장을 설계합니다.
+            <p className="mb-5 text-base" style={{ color: C.dark }}>
+              보톡스·필러·실리프팅 전문가 커뮤니티
             </p>
-          </div>
-
-          <div className="mt-14 grid gap-8 md:grid-cols-3">
-            {[
-              {
-                step: "01",
-                title: "골든시그널 권역분석",
-                desc: "치과가 위치한 지역의 6가지 분석으로 숨겨진 골든시그널을 감지합니다. 캐치전략으로 우리 치과만의 성공전략을 수립합니다.",
-                cta: "서비스 보기",
-                href: "/services",
-                image: "/images/home/frame-1.png",
-              },
-              {
-                step: "02",
-                title: "핀셋마케팅",
-                desc: "골든시그널에 깃발을 꽂는 지속 가능한 마케팅. 실행형 9모듈로 신환 & 매출이 나오는 솔루션만 제공합니다.",
-                cta: "핀셋마케팅 보기",
-                href: "/services",
-                image: "/images/home/frame-2.png",
-              },
-              {
-                step: "03",
-                title: "메디컨시어지",
-                desc: "권역분석 + 캐치전략 + BI 정립 + 디자인 정렬. 치과의 전문성을 브랜드와 마케팅으로 완성하는 프리미엄 통합 서비스.",
-                cta: "상담 신청",
-                href: "/contact",
-                image: "/images/home/frame-3.png",
-              },
-            ].map((item) => (
-              <div
-                key={item.step}
-                className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
-              >
-                {/* 카드 이미지 */}
-                <div className="relative aspect-[4/3] overflow-hidden bg-gray-50">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-                {/* 카드 본문 */}
-                <div className="p-6 md:p-8">
-                  <div className="flex items-center gap-3">
-                    <span className="flex h-9 w-9 items-center justify-center rounded-full bg-brand-lime-text text-sm font-bold text-white">
-                      {item.step}
-                    </span>
-                    <h3 className="text-lg font-bold text-text-primary">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="mt-3 text-sm leading-relaxed text-text-muted">
-                    {item.desc}
-                  </p>
-                  <Link
-                    href={item.href}
-                    className="mt-5 inline-flex min-h-[44px] items-center text-sm font-bold text-brand-lime-text transition-colors hover:text-brand-lime-text-hover focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
-                  >
-                    {item.cta}
-                    <svg className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ========== 스토어 하이라이트 ========== */}
-      <section className="bg-surface-secondary py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
-              MEDI STAXION Store
-            </p>
-            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
-              스토어 하이라이트
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-text-muted">
-              미용치과 도입에 필요한 장비, 컨설팅, 마케팅, 디자인을 한 곳에서.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                category: "검증된 장비와 재료",
-                icon: (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 0 1-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 0 1 4.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0 1 12 15a9.065 9.065 0 0 0-6.23.693L5 14.5m14.8.8 1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0 1 12 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5" />
-                  </svg>
-                ),
-                items: [
-                  { name: "루세라 3종 세트 (10대 한정)", price: "18,500,000원", original: "28,000,000원" },
-                  { name: "ULTIHGT", price: "5,500,000원", original: null },
-                ],
-              },
-              {
-                category: "개원부터 리뉴얼까지",
-                icon: (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 21h19.5m-18-18v18m10.5-18v18m6-13.5V21M6.75 6.75h.75m-.75 3h.75m-.75 3h.75m3-6h.75m-.75 3h.75m-.75 3h.75M6.75 21v-3.375c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21M3 3h12m-.75 4.5H21m-3.75 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Zm0 3h.008v.008h-.008v-.008Z" />
-                  </svg>
-                ),
-                items: [
-                  { name: "미용치과 컨설팅", price: "5,000,000원", original: null },
-                  { name: "골든시그널 권역분석 X 캐치전략", price: "3,000,000원", original: null },
-                ],
-              },
-              {
-                category: "환자 잡는 비결",
-                icon: (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                  </svg>
-                ),
-                items: [
-                  { name: "정밀 타깃 문자 메시지", price: "260원~", original: null },
-                  { name: "의학 인터뷰 상위 보장", price: "2,600,000원", original: null },
-                ],
-              },
-              {
-                category: "치과의 얼굴",
-                icon: (
-                  <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
-                  </svg>
-                ),
-                items: [
-                  { name: "개원 서식 패키지 (18종)", price: "1,500,000원", original: null },
-                  { name: "홈페이지 제작", price: "가격문의", original: null },
-                ],
-              },
-            ].map((section) => (
-              <div key={section.category}>
-                <div className="flex items-center gap-2 text-text-primary">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-brand-lime-safe/15 text-brand-lime-text">
-                    {section.icon}
-                  </span>
-                  <h3 className="text-sm font-bold">{section.category}</h3>
-                </div>
-                <div className="mt-4 space-y-3">
-                  {section.items.map((item) => (
-                    <div
-                      key={item.name}
-                      className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm transition-shadow hover:shadow-md"
-                    >
-                      <p className="text-sm font-medium text-text-primary">{item.name}</p>
-                      <div className="mt-2 flex items-center gap-2">
-                        <p className="text-sm font-bold text-brand-lime-text">{item.price}</p>
-                        {item.original && (
-                          <p className="text-xs text-text-muted line-through">{item.original}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              href="/store"
-              className="inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-text transition-all hover:border-brand-lime-safe hover:bg-brand-lime-btn/5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
-            >
-              스토어 전체 보기
-              <svg className="ml-1.5 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
+            <Link href="/guidebook"
+              className="inline-block rounded-lg px-6 py-3 text-sm font-bold transition-all duration-200 hover:brightness-110 hover:shadow-md hover:-translate-y-0.5"
+              style={{ background: C.neon, color: C.dark }}>
+              가이드북 보기 →
             </Link>
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* ========== 세미나 CTA — 배너 이미지 + 카테고리 ========== */}
-      <section className="bg-white py-20 md:py-28">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-bold tracking-widest text-brand-lime-text uppercase">
-              MEDI STAXION Seminar
-            </p>
-            <h2 className="mt-3 text-3xl font-extrabold text-text-primary md:text-4xl">
-              치과의 새로운 성장동력, 세미나
-            </h2>
-            <p className="mx-auto mt-4 max-w-xl text-text-muted">
-              현장에서 바로 적용되는 실전 교육. 기초 세미나부터 전문가 과정,
-              미용장비 세미나, 학술포럼까지.
-            </p>
+      {/* 2단 프로모 배너 */}
+      <div className="mb-5 grid grid-cols-1 md:grid-cols-2 gap-3">
+        <Link href="/guidebook" className="group relative overflow-hidden rounded-xl p-6 transition-all hover:shadow-lg" style={{ background: C.dark, minHeight: 140 }}>
+          <div className="relative z-10">
+            <span className="inline-block rounded-full px-2 py-0.5 text-[10px] font-bold mb-2" style={{ background: C.neon, color: C.dark }}>BEST</span>
+            <p className="text-lg font-bold text-white">미용시술 가이드북</p>
+            <p className="mt-1 text-xs text-white/50">치과의사를 위한 실전 매뉴얼 — 보톡스·필러·실리프팅</p>
+            <span className="mt-3 inline-block text-xs font-semibold" style={{ color: C.neon }}>자세히 보기 →</span>
           </div>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 text-6xl opacity-20 group-hover:opacity-30 transition-opacity">📖</div>
+        </Link>
 
-          {/* 세미나 배너 이미지 */}
-          <div className="mt-12 overflow-hidden rounded-2xl shadow-lg">
-            <div className="relative aspect-[3/1] w-full md:aspect-[4/1]">
-              <Image
-                src="/images/seminar/banner-01.png"
-                alt="2025 KADA 미용치과협회 학술포럼"
-                fill
-                className="object-cover"
-              />
+        <Link href="/education" className="group relative overflow-hidden rounded-xl p-6 transition-all hover:shadow-lg" style={{ background: `linear-gradient(135deg, ${C.darkMid}, ${C.darkLight})`, minHeight: 140 }}>
+          <div className="relative z-10">
+            <span className="inline-block rounded-full px-2 py-0.5 text-[10px] font-bold mb-2" style={{ background: C.salmon, color: "#fff" }}>모집중</span>
+            <p className="text-lg font-bold text-white">보톡스 심화 과정</p>
+            <p className="mt-1 text-xs text-white/50">2026.04.05 · 서울 강남 · 선착순 20명</p>
+            <span className="mt-3 inline-block text-xs font-semibold" style={{ color: C.neon }}>신청하기 →</span>
+          </div>
+          <div className="absolute right-4 top-1/2 -translate-y-1/2 text-6xl opacity-20 group-hover:opacity-30 transition-opacity">🎓</div>
+        </Link>
+      </div>
+
+      {/* 상품 카드 */}
+      <div className="mb-5 overflow-x-auto">
+        <div className="flex gap-3">
+          {PRODUCTS.map(product => (
+            <div key={product.id} className="shrink-0 flex-1 min-w-[120px] max-w-[180px] group cursor-pointer">
+              <div className="mb-2 aspect-square w-full rounded-xl overflow-hidden transition-transform duration-200 group-hover:-translate-y-1 group-hover:shadow-md" style={{ background: `linear-gradient(135deg, #e2e4ea 0%, #d1d4dc 100%)` }}>
+                <div className="h-full w-full flex items-center justify-center text-xs font-medium" style={{ color: C.textMuted }}>
+                  {product.name}
+                </div>
+              </div>
+              <p className="text-[13px] font-semibold" style={{ color: C.dark }}>{product.name}</p>
             </div>
-          </div>
+          ))}
+        </div>
+      </div>
 
-          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              {
-                title: "기초 세미나",
-                desc: "실리프팅, 보톡스, 필러의 통합적 이해",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342" />
-                  </svg>
-                ),
-              },
-              {
-                title: "전문가 과정",
-                desc: "부위별 실리프팅 심화 커리큘럼",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 0 1 1.04 0l2.125 5.111a.563.563 0 0 0 .475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 0 0-.182.557l1.285 5.385a.562.562 0 0 1-.84.61l-4.725-2.885a.562.562 0 0 0-.586 0L6.982 20.54a.562.562 0 0 1-.84-.61l1.285-5.386a.562.562 0 0 0-.182-.557l-4.204-3.602a.562.562 0 0 1 .321-.988l5.518-.442a.563.563 0 0 0 .475-.345L11.48 3.5Z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "미용장비 세미나",
-                desc: "최신 장비 도입 및 활용 가이드",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M11.42 15.17 9.025 12.78a.563.563 0 0 0-.795 0l-2.395 2.392a.563.563 0 0 0 .795.796l1.998-1.998 2.395 2.393m4.592-5.607-2.395-2.392a.563.563 0 0 0-.795 0l-2.396 2.392a.563.563 0 0 0 .796.796l1.997-1.998 2.396 2.393m2.888-7.108A48.578 48.578 0 0 0 12 2.25c-2.688 0-5.332.187-7.907.56a1.686 1.686 0 0 0-1.405 1.436 49.24 49.24 0 0 0-.268 5.89 1.687 1.687 0 0 0 .618 1.217 49.59 49.59 0 0 0 8.962 5.068.565.565 0 0 0 .546-.03 49.533 49.533 0 0 0 8.414-5.038 1.687 1.687 0 0 0 .618-1.217 49.285 49.285 0 0 0-.268-5.89 1.686 1.686 0 0 0-1.405-1.436Z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "학술포럼",
-                desc: "최신 임상 데이터 및 네트워킹",
-                icon: (
-                  <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z" />
-                  </svg>
-                ),
-              },
-            ].map((seminar) => (
-              <div
-                key={seminar.title}
-                className="group rounded-xl border border-gray-100 bg-surface-secondary p-6 text-center transition-all hover:border-brand-lime-safe/30 hover:shadow-md"
-              >
-                <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-xl bg-brand-lime-safe/10 text-brand-lime-text transition-colors group-hover:bg-brand-lime-btn/20">
-                  {seminar.icon}
+      {/* 게시글 2단: 인기글 + 최신글 */}
+      <div className="mb-5 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="rounded-xl bg-white p-5">
+          <div className="mb-3 flex items-center justify-between">
+            <h3 className="text-base font-bold" style={{ color: C.dark }}>🔥 인기글</h3>
+            <Link href="/community" className="text-xs" style={{ color: C.textMuted }}>더보기 →</Link>
+          </div>
+          <div className="space-y-3">
+            {POSTS_POPULAR.map((post, i) => (
+              <Link key={post.id} href="/community" className="flex items-start gap-3 group cursor-pointer rounded-lg px-2 py-1.5 -mx-2 transition-colors duration-150 hover:bg-gray-50">
+                <span className="mt-0.5 text-sm font-black shrink-0" style={{ color: i < 3 ? C.salmon : C.textMuted }}>{i + 1}</span>
+                <div className="min-w-0">
+                  <p className="text-[14px] font-medium line-clamp-1 group-hover:underline" style={{ color: C.dark }}>{post.title}</p>
+                  <p className="text-[11px] mt-0.5" style={{ color: C.textMuted }}>{post.category} · 👍 {post.likes}  💬 {post.comments}</p>
                 </div>
-                <h3 className="mt-4 text-sm font-bold text-text-primary">{seminar.title}</h3>
-                <p className="mt-2 text-xs leading-relaxed text-text-muted">{seminar.desc}</p>
-              </div>
+              </Link>
             ))}
           </div>
+        </div>
 
-          <div className="mt-10 text-center">
-            <Link
-              href="/education"
-              className="inline-flex h-12 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-md shadow-brand-lime-btn/20 transition-all hover:brightness-110 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe sm:w-auto"
-            >
-              세미나 일정 보기
-            </Link>
+        <div className="rounded-xl bg-white p-5">
+          <div className="mb-3 flex items-center justify-between">
+            <h3 className="text-base font-bold" style={{ color: C.dark }}>🕐 최신글</h3>
+            <Link href="/community" className="text-xs" style={{ color: C.textMuted }}>더보기 →</Link>
+          </div>
+          <div className="space-y-3">
+            {POSTS_LATEST.map((post, i) => (
+              <Link key={post.id} href="/community" className="flex items-start gap-3 group cursor-pointer rounded-lg px-2 py-1.5 -mx-2 transition-colors duration-150 hover:bg-gray-50">
+                <span className="mt-0.5 text-sm font-black shrink-0" style={{ color: C.textMuted }}>{i + 1}</span>
+                <div className="min-w-0">
+                  <p className="text-[14px] font-medium line-clamp-1 group-hover:underline" style={{ color: C.dark }}>{post.title}</p>
+                  <p className="text-[11px] mt-0.5" style={{ color: C.textMuted }}>{post.category} · {post.author} · {post.time}</p>
+                </div>
+              </Link>
+            ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* ========== 통계 배너 — 다크 텍스처 (오버레이 최소) ========== */}
-      <section className="relative overflow-hidden py-20 md:py-24">
-        <Image
-          src="/images/bg/pattern.jpg"
-          alt=""
-          fill
-          className="object-cover"
-        />
-        {/* 매우 얇은 오버레이 — 텍스처 자체가 이미 어둡기 때문 */}
-        <div className="absolute inset-0 bg-black/20" />
-        <div className="relative z-10 mx-auto max-w-5xl px-4 md:px-6">
-          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4">
-            {[
-              { number: "6가지", label: "골든시그널 분석 영역" },
-              { number: "9모듈", label: "핀셋마케팅 실행 모듈" },
-              { number: "A~Z", label: "세미나 기획 원스톱" },
-              { number: "200+", label: "가이드북 페이지" },
-            ].map((stat) => (
-              <div key={stat.label}>
-                <p
-                  className="text-4xl font-black md:text-5xl lg:text-6xl"
-                  style={{
-                    color: "#82ff00",
-                    textShadow: "0 0 30px rgba(130,255,0,0.3), 0 2px 10px rgba(0,0,0,0.5)",
-                  }}
-                >
-                  {stat.number}
-                </p>
-                <p
-                  className="mt-3 text-sm font-medium text-gray-200 md:text-base"
-                  style={{ textShadow: "0 1px 4px rgba(0,0,0,0.6)" }}
-                >
-                  {stat.label}
-                </p>
+      {/* Shorts */}
+      <div className="mb-5">
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="text-base font-bold" style={{ color: C.dark }}>🎬 Shorts</h3>
+          <Link href="/shorts" className="text-xs" style={{ color: C.textMuted }}>더보기 →</Link>
+        </div>
+        <div className="overflow-x-auto">
+          <div className="flex gap-3">
+            {Array.from({ length: 20 }, (_, i) => (
+              <div key={i} className="shrink-0 flex-1 min-w-[170px] max-w-[240px] overflow-hidden rounded-xl cursor-pointer transition-all duration-200 hover:-translate-y-1 hover:shadow-lg" style={{ background: `linear-gradient(160deg, #d1d4dc 0%, #b8bcc6 100%)` }}>
+                <div className="aspect-[2/3] flex items-end p-3">
+                  <p className="text-xs font-semibold text-white drop-shadow">Shorts {i + 1}</p>
+                </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
+      </div>
 
-      {/* ========== 가이드북 CTA — 로고 텍스처 배경 ========== */}
-      <section className="relative overflow-hidden py-20 md:py-28">
-        <Image
-          src="/images/bg/medi-bg-logo.png"
-          alt=""
-          fill
-          className="object-cover"
-        />
-        {/* 얇은 오버레이 — 로고가 은은하게 보이도록 */}
-        <div className="absolute inset-0 bg-black/15" />
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p
-            className="text-sm font-bold tracking-[0.3em] uppercase"
-            style={{ color: "#82ff00", textShadow: "0 1px 8px rgba(0,0,0,0.5)" }}
-          >
-            Guidebook
-          </p>
-          <h2
-            className="mt-5 text-3xl font-extrabold text-white md:text-5xl"
-            style={{ textShadow: "0 2px 16px rgba(0,0,0,0.6)" }}
-          >
-            미용치과 도입 실무 마스터
-          </h2>
-          <p
-            className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-gray-200 md:text-lg"
-            style={{ textShadow: "0 1px 6px rgba(0,0,0,0.5)" }}
-          >
-            시술 선택, 장비 구매, 인력 구성, 마케팅, 수익 모델까지.
-            <br />
-            200~250페이지에 담긴 실전 가이드.
-          </p>
-          <div className="mt-10 flex flex-col items-center gap-4">
-            <Link
-              href="/guidebook"
-              className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-10 text-base font-bold text-white shadow-lg shadow-brand-lime-btn/30 transition-all hover:brightness-110 hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:w-auto"
-            >
-              가이드북 보기
-            </Link>
-            <p
-              className="text-sm text-gray-300"
-              style={{ textShadow: "0 1px 4px rgba(0,0,0,0.5)" }}
-            >
-              20~30만원대 (VAT 포함)
-            </p>
-          </div>
+      {/* 메디포스트 */}
+      <div className="mb-5">
+        <div className="mb-3 flex items-center justify-between">
+          <h3 className="text-base font-bold" style={{ color: C.dark }}>📝 메디포스트</h3>
+          <Link href="/news" className="text-xs" style={{ color: C.textMuted }}>더보기 →</Link>
         </div>
-      </section>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+          {[
+            { title: "치과에서 보톡스, 왜 지금인가?", desc: "2016년 대법원 판결 이후 치과 미용시술 시장의 변화와 기회를 분석합니다.", author: "STAXION 에디터", time: "3일 전", readTime: "5분" },
+            { title: "필러 시술 전 반드시 알아야 할 해부학", desc: "안전한 필러 시술을 위한 안면 혈관 해부학 핵심 정리.", author: "Dr.Park", time: "5일 전", readTime: "8분" },
+            { title: "미용시술 매출, 구조가 답이다", desc: "단순 시술 추가가 아닌 경영 구조 설계로 접근하는 방법.", author: "원장A", time: "1주 전", readTime: "6분" },
+          ].map(article => (
+            <Link key={article.title} href="/news" className="group rounded-xl bg-white p-5 transition-all duration-200 hover:-translate-y-1 hover:shadow-md cursor-pointer">
+              <div className="mb-3 h-[120px] rounded-lg flex items-center justify-center" style={{ background: `linear-gradient(135deg, #e2e4ea 0%, #d1d4dc 100%)` }}>
+                <span className="text-2xl">📄</span>
+              </div>
+              <h4 className="text-[14px] font-bold line-clamp-2 group-hover:underline mb-1" style={{ color: C.dark }}>{article.title}</h4>
+              <p className="text-[12px] line-clamp-2 mb-2" style={{ color: C.textMuted }}>{article.desc}</p>
+              <div className="flex items-center gap-2 text-[11px]" style={{ color: C.textMuted }}>
+                <span className="font-medium" style={{ color: C.textSecondary }}>{article.author}</span>
+                <span>·</span>
+                <span>{article.time}</span>
+                <span>·</span>
+                <span>읽기 {article.readTime}</span>
+              </div>
+            </Link>
+          ))}
+        </div>
+      </div>
+
+      {/* 모바일 전용: 가이드북 위젯 */}
+      <div className="mt-6 xl:hidden">
+        <div className="overflow-hidden rounded-xl p-5" style={{ background: C.dark }}>
+          <p className="text-base font-bold text-white">미용시술 가이드북</p>
+          <p className="mt-1 text-xs text-white/50">치과의사를 위한 실전 매뉴얼</p>
+          <Link href="/guidebook" className="mt-3 inline-block rounded-md px-4 py-2 text-xs font-bold" style={{ background: C.neon, color: C.dark }}>
+            자세히 보기
+          </Link>
+        </div>
+      </div>
     </>
   );
 }

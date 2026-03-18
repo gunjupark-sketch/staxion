@@ -349,10 +349,10 @@ export default function AreaAnalysisPage() {
             </p>
           </div>
 
-          <div className="mt-10 flex items-center justify-center rounded-xl border-2 border-dashed border-border bg-surface-secondary"
+          <div className="mt-10 flex items-center justify-center rounded-xl border border-border bg-surface-secondary"
                style={{ minHeight: "360px" }}>
             <div className="text-center p-8">
-              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-white">
+              <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-brand-lime/10">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -363,20 +363,27 @@ export default function AreaAnalysisPage() {
                   strokeWidth="1.5"
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  className="text-brand-lime-text"
+                  className="text-brand-lime-btn"
                 >
                   <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                   <circle cx="12" cy="10" r="3" />
                 </svg>
               </div>
-              <p className="mt-4 text-sm font-semibold text-text-primary">
-                지도 API 연동 예정
+              <p className="mt-4 text-base font-bold text-text-primary">
+                권역분석 도구로 직접 확인하세요
               </p>
-              <p className="mt-2 text-xs text-text-muted">
-                분석 지역의 권역 구조, 경쟁 현황, 유동 패턴을
+              <p className="mt-2 text-sm text-text-muted">
+                인구 구성, 경쟁 현황, 상권 특성, 소득 수준을
                 <br />
-                지도 위에 시각화하여 제공합니다.
+                지도 위에서 한눈에 분석합니다.
               </p>
+              <a
+                href="/area-analysis/map"
+                className="mt-6 inline-flex items-center gap-2 rounded-lg bg-brand-lime-btn px-6 py-3 text-sm font-semibold text-white hover:opacity-90 transition-opacity"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                권역분석 시작하기
+              </a>
             </div>
           </div>
         </div>

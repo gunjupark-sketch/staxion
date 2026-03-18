@@ -2,6 +2,32 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+/* 스크롤바 전역 숨김 */
+*::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none !important;
+}
+* {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+html, body {
+  overflow: -moz-scrollbars-none;
+}
+
+/* 위로 슬라이드 애니메이션 */
+@keyframes slideUp {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-50%); }
+}
+.animate-slide-up {
+  animation: slideUp 30s linear infinite;
+}
+.animate-slide-up:hover {
+  animation-play-state: paused;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 @theme {

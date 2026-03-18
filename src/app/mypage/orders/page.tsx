@@ -1,11 +1,12 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { createClient } from "@/lib/supabase/client";
-import { PackageIcon } from "lucide-react";
+import { PackageIcon, CheckCircle2, XCircle } from "lucide-react";
 
 interface Order {
   id: string;
@@ -28,8 +29,25 @@ const statusMap: Record<string, { label: string; color: string }> = {
 
 export default function MypageOrdersPage() {
   const supabase = createClient();
+  const searchParams = useSearchParams();
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState(true);
+  const [paymentMsg, setPaymentMsg] = useState<{ type: "success" | "failed"; text: string } | null>(null);
+
+  // 결제 결과 메시지
+  useEffect(() => {
+    const payment = searchParams.get("payment");
+    if (payment === "success") {
+      setPaymentMsg({ type: "success", text: "결제가 완료되었습니다." });
+    } else if (payment === "failed") {
+      const msg = searchParams.get("msg");
+      setPaymentMsg({ type: "failed", text: msg || "결제에 실패했습니다." });
+    }
+    // URL에서 쿼리 제거 (히스토리 정리)
+    if (payment) {
+      window.history.replaceState({}, "", "/mypage/orders");
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     async function load() {
@@ -58,6 +76,29 @@ export default function MypageOrdersPage() {
 
   return (
     <div className="space-y-6">
+      {paymentMsg && (
+        <div
+          className={`flex items-center gap-3 rounded-xl p-4 ${
+            paymentMsg.type === "success"
+              ? "bg-green-50 text-green-700"
+              : "bg-red-50 text-red-700"
+          }`}
+        >
+          {paymentMsg.type === "success" ? (
+            <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+          ) : (
+            <XCircle className="w-5 h-5 flex-shrink-0" />
+          )}
+          <p className="text-sm font-medium">{paymentMsg.text}</p>
+          <button
+            onClick={() => setPaymentMsg(null)}
+            className="ml-auto text-xs opacity-60 hover:opacity-100"
+          >
+            닫기
+          </button>
+        </div>
+      )}
+
       <h2 className="text-lg font-semibold text-text-primary">구매 내역</h2>
 
       {orders.length === 0 ? (
