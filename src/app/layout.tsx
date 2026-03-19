@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
 import "./globals.css";
+import { ThemeProvider } from "@/components/ThemeProvider";
 import { LayoutShell } from "@/components/layout/LayoutShell";
 import { SeoScripts } from "@/components/seo/SeoScripts";
 
@@ -89,7 +90,7 @@ export default async function RootLayout({
   const analytics = (settings.seo_analytics || {}) as Record<string, string>;
 
   return (
-    <html lang="ko">
+    <html lang="ko" suppressHydrationWarning>
       <head>
         <link
           rel="stylesheet"
@@ -99,8 +100,10 @@ export default async function RootLayout({
         />
       </head>
       <body className="flex min-h-screen flex-col">
-        <SeoScripts analytics={analytics} />
-        <LayoutShell>{children}</LayoutShell>
+        <ThemeProvider>
+          <SeoScripts analytics={analytics} />
+          <LayoutShell>{children}</LayoutShell>
+        </ThemeProvider>
       </body>
     </html>
   );

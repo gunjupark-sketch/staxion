@@ -358,7 +358,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           </div>
 
           {/* 버블 메뉴 (텍스트 선택 시) */}
-          <EditorBubble className="flex items-center gap-0.5 rounded-lg border border-border bg-white p-1 shadow-lg">
+          <EditorBubble className="flex items-center gap-0.5 rounded-lg border border-border bg-card p-1 shadow-lg">
             <EditorBubbleItem
               onSelect={(editor) => editor.chain().focus().toggleBold().run()}
             >
@@ -397,7 +397,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
           </EditorBubble>
 
           {/* Slash 커맨드 메뉴 */}
-          <EditorCommand className="z-50 w-64 rounded-lg border border-border bg-white shadow-lg">
+          <EditorCommand className="z-50 w-64 rounded-lg border border-border bg-card shadow-lg">
             <EditorCommandEmpty className="px-3 py-2 text-sm text-text-muted">
               결과 없음
             </EditorCommandEmpty>

@@ -7,6 +7,8 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { createClient } from "@/lib/supabase/client";
+import { useThemeSync } from "@/hooks/useThemeSync";
+import { Sun, Moon } from "lucide-react";
 
 interface Profile {
   id: string;
@@ -73,6 +75,9 @@ export default function MypageProfilePage() {
 
   // 회원 탈퇴
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+
+  // 테마
+  const { theme: currentTheme, updateTheme } = useThemeSync();
 
   useEffect(() => {
     async function loadProfile() {
@@ -425,6 +430,44 @@ export default function MypageProfilePage() {
           </CardContent>
         </Card>
       )}
+
+      {/* 화면 설정 */}
+      <Card>
+        <CardContent className="space-y-4 pt-2">
+          <h2 className="text-lg font-semibold text-text-primary">화면 설정</h2>
+          <Separator />
+          <div className="flex items-center justify-between">
+            <div>
+              <p className="text-sm font-medium text-text-primary">테마</p>
+              <p className="text-xs text-text-muted">화면 모드를 선택합니다</p>
+            </div>
+            <div className="flex gap-2">
+              <button
+                onClick={() => updateTheme("light")}
+                className={`flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium border transition-colors ${
+                  currentTheme === "light"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-text-secondary border-border hover:bg-secondary"
+                }`}
+              >
+                <Sun className="h-4 w-4" />
+                라이트
+              </button>
+              <button
+                onClick={() => updateTheme("dark")}
+                className={`flex items-center gap-1.5 rounded-lg px-4 py-2 text-sm font-medium border transition-colors ${
+                  currentTheme === "dark"
+                    ? "bg-primary text-primary-foreground border-primary"
+                    : "bg-card text-text-secondary border-border hover:bg-secondary"
+                }`}
+              >
+                <Moon className="h-4 w-4" />
+                다크
+              </button>
+            </div>
+          </div>
+        </CardContent>
+      </Card>
 
       {/* 회원 탈퇴 */}
       <Card>

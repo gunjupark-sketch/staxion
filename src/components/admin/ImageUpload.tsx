@@ -89,7 +89,7 @@ export default function ImageUpload({
               <button
                 type="button"
                 onClick={() => inputRef.current?.click()}
-                className="rounded-full bg-white/90 p-1.5 shadow-sm hover:bg-white transition-colors"
+                className="rounded-full bg-card/90 p-1.5 shadow-sm hover:bg-card transition-colors"
                 title="이미지 변경"
               >
                 <UploadIcon className="size-3.5 text-text-secondary" />
@@ -97,7 +97,7 @@ export default function ImageUpload({
               <button
                 type="button"
                 onClick={handleRemove}
-                className="rounded-full bg-white/90 p-1.5 shadow-sm hover:bg-red-50 transition-colors"
+                className="rounded-full bg-card/90 p-1.5 shadow-sm hover:bg-red-50 transition-colors"
                 title="이미지 삭제"
               >
                 <XIcon className="size-3.5 text-red-500" />
@@ -116,7 +116,7 @@ export default function ImageUpload({
           className={`flex h-40 w-full max-w-xs flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed transition-colors ${
             dragOver
               ? "border-brand-lime-safe bg-brand-lime-safe/5"
-              : "border-gray-200 hover:border-gray-300 hover:bg-surface-secondary/50"
+              : "border-border hover:border-border hover:bg-surface-secondary/50"
           } ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
         >
           {uploading ? (

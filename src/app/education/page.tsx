@@ -39,8 +39,28 @@ export default async function EducationPage() {
     <>
       <PageBanner pageSlug="education" />
 
+      {/* 히어로 섹션 */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <Image
+          src="/images/bg/education-banner.png"
+          alt="미용치과 교육/세미나"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
+          <h1 className="text-3xl font-bold text-white md:text-5xl">
+            미용치과 교육 · 세미나
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
+            보톡스, 필러, 스킨부스터 등 핵심 시술 실습 중심 교육 프로그램
+          </p>
+        </div>
+      </section>
+
       {/* 세미나 프로그램 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
             <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
@@ -135,7 +155,7 @@ export default async function EducationPage() {
             <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">
               강연의 뜻을 펼칠 연자를 모집합니다
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-gray-400">
+            <p className="mx-auto mt-4 max-w-2xl text-text-muted">
               전문지식과 철학을 공유하며 함께 성장하고, 성공을 만들어갈 분의 지원을 기다립니다.
               <br />
               연자가 되는 일은 결코 어렵지 않습니다. 어려운 것은 세미나 전문 기획과 부가적인 준비과정입니다.
@@ -147,7 +167,7 @@ export default async function EducationPage() {
       </section>
 
       {/* 연자 자격 체크리스트 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -239,7 +259,7 @@ export default async function EducationPage() {
       </section>
 
       {/* 대상 분야 */}
-      <section className="bg-white py-16">
+      <section className="bg-card py-16">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
           <h3 className="text-lg font-bold text-text-primary">
             치과와 연결된 전문 분야 환영합니다
@@ -268,7 +288,7 @@ export default async function EducationPage() {
             <br />
             지금 바로 시작해보세요.
           </h2>
-          <p className="mt-3 text-gray-400">
+          <p className="mt-3 text-text-muted">
             연자님은 콘텐츠의 방향에 집중하세요.
             <br />
             A부터 Z까지의 준비와 운영은 당신만의 전담 사무장인 MEDI STAXION이 함께합니다.
@@ -282,7 +302,7 @@ export default async function EducationPage() {
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-border px-8 text-base text-text-muted transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
             >
               세미나 문의하기
             </Link>

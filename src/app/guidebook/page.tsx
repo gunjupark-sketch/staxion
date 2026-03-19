@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -14,8 +15,28 @@ export default function GuidebookPage() {
     <>
       <PageBanner pageSlug="guidebook" />
 
+      {/* 히어로 섹션 */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <Image
+          src="/images/bg/guidebook-banner.png"
+          alt="미용치과 도입 실무 마스터 가이드북"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
+          <h1 className="text-3xl font-bold text-white md:text-5xl">
+            미용치과 도입 실무 마스터 가이드북
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
+            법적 근거부터 시술 도입, 운영, 마케팅까지 체계적 로드맵
+          </p>
+        </div>
+      </section>
+
       {/* 이 가이드북이 필요한 이유 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -80,7 +101,7 @@ export default function GuidebookPage() {
       </section>
 
       {/* 퍼널: 가이드북 → 교육 → 컨설팅 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
@@ -161,7 +182,7 @@ export default function GuidebookPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">자주 묻는 질문</h2>
           <Accordion className="mt-10">

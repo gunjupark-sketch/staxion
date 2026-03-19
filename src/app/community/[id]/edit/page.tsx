@@ -147,91 +147,93 @@ export default function CommunityEditPage() {
 
         <h1 className="text-2xl font-bold text-text-primary">게시물 수정</h1>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
-          {/* 관리자: 글 타입 선택 */}
-          {userRole === "admin" && (
-            <div className="space-y-2">
-              <Label>글 유형</Label>
-              <div className="flex gap-3">
-                <button
-                  type="button"
-                  onClick={() => setPostType("community")}
-                  className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors min-h-[44px] ${
-                    postType === "community"
-                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-text"
-                      : "text-text-muted hover:border-border"
-                  }`}
-                >
-                  일반 게시물
-                </button>
-                <button
-                  type="button"
-                  onClick={() => setPostType("notice")}
-                  className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-colors min-h-[44px] ${
-                    postType === "notice"
-                      ? "border-brand-lime-safe bg-brand-lime-safe/10 text-brand-lime-text"
-                      : "text-text-muted hover:border-border"
-                  }`}
-                >
-                  공지/소식
-                </button>
+        <div className="mt-8 rounded-xl border border-border/50 bg-card p-6 shadow-sm">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            {/* 관리자: 글 타입 선택 */}
+            {userRole === "admin" && (
+              <div className="space-y-2">
+                <Label>글 유형</Label>
+                <div className="flex gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setPostType("community")}
+                    className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-all duration-200 min-h-[44px] ${
+                      postType === "community"
+                        ? "border-primary bg-primary/10 text-primary shadow-sm"
+                        : "border-border/50 text-text-muted hover:border-primary/30 hover:bg-primary/5"
+                    }`}
+                  >
+                    일반 게시물
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setPostType("notice")}
+                    className={`rounded-lg border px-4 py-2.5 text-sm font-medium transition-all duration-200 min-h-[44px] ${
+                      postType === "notice"
+                        ? "border-primary bg-primary/10 text-primary shadow-sm"
+                        : "border-border/50 text-text-muted hover:border-primary/30 hover:bg-primary/5"
+                    }`}
+                  >
+                    공지/소식
+                  </button>
+                </div>
               </div>
+            )}
+
+            {/* 카테고리 */}
+            <div className="space-y-2">
+              <Label htmlFor="category">카테고리</Label>
+              <Select value={category} onValueChange={(val) => val !== null && setCategory(val)}>
+                <SelectTrigger className="min-h-[44px] focus:ring-2 focus:ring-primary/50 focus:border-primary">
+                  <SelectValue placeholder="카테고리를 선택하세요" />
+                </SelectTrigger>
+                <SelectContent>
+                  {categories.map((cat) => (
+                    <SelectItem key={cat.slug} value={cat.slug}>
+                      {cat.name}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
             </div>
-          )}
 
-          {/* 카테고리 */}
-          <div className="space-y-2">
-            <Label htmlFor="category">카테고리</Label>
-            <Select value={category} onValueChange={(val) => val !== null && setCategory(val)}>
-              <SelectTrigger className="min-h-[44px]">
-                <SelectValue placeholder="카테고리를 선택하세요" />
-              </SelectTrigger>
-              <SelectContent>
-                {categories.map((cat) => (
-                  <SelectItem key={cat.slug} value={cat.slug}>
-                    {cat.name}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+            {/* 제목 */}
+            <div className="space-y-2">
+              <Label htmlFor="title">제목</Label>
+              <Input
+                id="title"
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
+                placeholder="제목을 입력하세요"
+                className="min-h-[44px] focus:ring-2 focus:ring-primary/50 focus:border-primary"
+                required
+              />
+            </div>
 
-          {/* 제목 */}
-          <div className="space-y-2">
-            <Label htmlFor="title">제목</Label>
-            <Input
-              id="title"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              placeholder="제목을 입력하세요"
-              className="min-h-[44px]"
-              required
-            />
-          </div>
+            {/* 본문 에디터 */}
+            <div className="space-y-2">
+              <Label>내용</Label>
+              <RichTextEditor value={content} onChange={setContent} />
+            </div>
 
-          {/* 본문 에디터 */}
-          <div className="space-y-2">
-            <Label>내용</Label>
-            <RichTextEditor value={content} onChange={setContent} />
-          </div>
-
-          {/* 버튼 */}
-          <div className="flex items-center gap-3 pt-4">
-            <Button
-              type="submit"
-              disabled={saving || !title.trim() || !content.trim()}
-              className="min-h-[44px] gap-2 bg-brand-lime-btn px-8 text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
-            >
-              {saving && <Loader2Icon className="size-4 animate-spin" />}
-              {saving ? "수정 중..." : "수정 완료"}
-            </Button>
-            <Link href={`/community/${postId}`}>
-              <Button type="button" variant="outline" className="min-h-[44px]">
-                취소
+            {/* 버튼 */}
+            <div className="flex items-center gap-3 pt-4 border-t border-border/50">
+              <Button
+                type="submit"
+                disabled={saving || !title.trim() || !content.trim()}
+                className="min-h-[44px] gap-2 bg-primary px-8 text-sm font-semibold text-primary-foreground hover:bg-primary/90 shadow-sm"
+              >
+                {saving && <Loader2Icon className="size-4 animate-spin" />}
+                {saving ? "수정 중..." : "수정 완료"}
               </Button>
-            </Link>
-          </div>
-        </form>
+              <Link href={`/community/${postId}`}>
+                <Button type="button" variant="outline" className="min-h-[44px]">
+                  취소
+                </Button>
+              </Link>
+            </div>
+          </form>
+        </div>
       </div>
     </section>
   );

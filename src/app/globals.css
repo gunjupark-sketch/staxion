@@ -31,47 +31,43 @@ html, body {
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* Brand Colors - medistaxion.com "Clean Authority" */
-  --color-brand-lime: #82ff00;
-  --color-brand-lime-safe: #8EC31F;
-  --color-brand-lime-sub: #bdff06;
+  /* ── Brand: Neon Green ── */
+  --color-brand-neon: #BDFF06;
+  --color-brand-neon-hover: #a8e600;
+  --color-brand-neon-safe: #8EC31F;
+  --color-brand-neon-sub: #bdff06;
+  --color-brand-neon-text: #4d7a0f;
+  --color-brand-neon-text-hover: #3d6200;
+  --color-brand-neon-btn: #5a8a14;
 
-  /* Surface */
-  --color-surface-primary: #FFFFFF;
-  --color-surface-secondary: #F5F5F5;
-  --color-surface-dark: #2a2a2a;
+  /* ── Semantic Colors (양쪽 테마 공통) ── */
+  --color-info: #4A9FFF;
+  --color-success: #7ED957;
+  --color-danger: #FF6565;
+  --color-premium: #A78BFA;
+  --color-highlight: #22D3EE;
+  --color-caution: #FB923C;
 
-  /* Text */
-  --color-text-primary: #212121;
-  --color-text-secondary: #333333;
-  --color-text-muted: #666666;
-  --color-text-inverse: #FFFFFF;
+  /* ── Accent ── */
+  --color-accent-salmon: #FF6565;
+  --color-accent-salmon-light: #fff0f0;
 
-  /* Accessible brand text — darker green for use on white/light backgrounds (4.5:1+ contrast) */
-  --color-brand-lime-text: #4d7a0f;
-  --color-brand-lime-text-hover: #3d6200;
-
-  /* Accessible brand button bg — darker than brand-lime-safe for white text (4.5:1+ contrast) */
-  --color-brand-lime-btn: #5a8a14;
-
-  /* Special UI */
+  /* ── Tip / Warn ── */
   --color-tip-bg: #F0F8E8;
   --color-tip-border: #8EC31F;
   --color-warn-bg: #FFF3CD;
   --color-warn-border: #FF6B35;
 
-  /* Fonts */
+  /* ── Fonts ── */
   --font-sans: "Pretendard", "IBM Plex Sans", system-ui, sans-serif;
 }
 
-/* Base styles */
+/* ── Base styles ── */
 html {
   overflow-x: hidden;
 }
 
 body {
-  color: var(--color-text-secondary);
-  background: var(--color-surface-primary);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -79,110 +75,199 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-/* h1~h6 기본색은 body에서 상속. Tailwind text-* 클래스로 개별 제어 */
-
+/* ═══════════════════════════════════════
+   LIGHT MODE
+   ═══════════════════════════════════════ */
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
+  --background: #FFFFFF;
+  --foreground: #212121;
+
+  --card: #FFFFFF;
+  --card-foreground: #212121;
+  --popover: #FFFFFF;
+  --popover-foreground: #212121;
+
+  /* Primary = 접근성 확보된 진한 그린 (라이트 배경에서 4.5:1+) */
+  --primary: #5a8a14;
+  --primary-foreground: #FFFFFF;
+
+  --secondary: #F5F5F5;
+  --secondary-foreground: #212121;
+
+  --muted: #F5F5F5;
+  --muted-foreground: #666666;
+
+  --accent: #f0ffc0;
+  --accent-foreground: #333333;
+
+  --destructive: #dc2626;
+
+  --border: #e8eaed;
+  --input: #e8eaed;
+  --ring: #BDFF06;
+
+  /* Surface (design-tokens.ts 대체) */
+  --surface: #f8f9ff;
+  --surface-secondary: #F5F5F5;
+
+  /* Text (design-tokens.ts 대체) */
+  --text-primary: #1a1a2e;
+  --text-body: #333340;
+  --text-secondary: #666673;
+  --text-muted: #8c8c99;
+  --text-placeholder: #9999a6;
+  --text-inverse: #FFFFFF;
+
+  /* Layout (design-tokens.ts 대체) */
+  --layout-dark: #1a1a2e;
+  --layout-dark-mid: #2d2d44;
+  --layout-dark-light: #3a3a55;
+
   --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+
+  /* Sidebar */
+  --sidebar: #FAFAFA;
+  --sidebar-foreground: #212121;
+  --sidebar-primary: #5a8a14;
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: #F5F5F5;
+  --sidebar-accent-foreground: #212121;
+  --sidebar-border: #e8eaed;
+  --sidebar-ring: #BDFF06;
+
+  /* Charts */
+  --chart-1: #4A9FFF;
+  --chart-2: #7ED957;
+  --chart-3: #BDFF06;
+  --chart-4: #A78BFA;
+  --chart-5: #FB923C;
 }
 
+/* ═══════════════════════════════════════
+   DARK MODE (소솜치과 대시보드 참고)
+   ═══════════════════════════════════════ */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.809 0.105 251.813);
-  --chart-2: oklch(0.623 0.214 259.815);
-  --chart-3: oklch(0.546 0.245 262.881);
-  --chart-4: oklch(0.488 0.243 264.376);
-  --chart-5: oklch(0.424 0.199 265.638);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: #0e0e0e;
+  --foreground: #eaeaea;
+
+  --card: #1a1a1a;
+  --card-foreground: #eaeaea;
+  --popover: #1a1a1a;
+  --popover-foreground: #eaeaea;
+
+  /* Primary = 네온그린 (다크 배경에서 그대로 빛남) */
+  --primary: #BDFF06;
+  --primary-foreground: #0e0e0e;
+
+  --secondary: #1f1f1f;
+  --secondary-foreground: #eaeaea;
+
+  --muted: #1f1f1f;
+  --muted-foreground: #aaaaaa;
+
+  --accent: #1a2600;
+  --accent-foreground: #BDFF06;
+
+  --destructive: #FF6565;
+
+  --border: #262626;
+  --input: #333333;
+  --ring: #BDFF06;
+
+  /* Surface */
+  --surface: #141414;
+  --surface-secondary: #1a1a1a;
+
+  /* Text */
+  --text-primary: #eaeaea;
+  --text-body: #eaeaea;
+  --text-secondary: #aaaaaa;
+  --text-muted: #666666;
+  --text-placeholder: #555555;
+  --text-inverse: #0e0e0e;
+
+  /* Layout */
+  --layout-dark: #eaeaea;
+  --layout-dark-mid: #1a1a1a;
+  --layout-dark-light: #2a2a2a;
+
+  /* Sidebar */
+  --sidebar: #141414;
+  --sidebar-foreground: #eaeaea;
+  --sidebar-primary: #BDFF06;
+  --sidebar-primary-foreground: #0e0e0e;
+  --sidebar-accent: #1f1f1f;
+  --sidebar-accent-foreground: #eaeaea;
+  --sidebar-border: #262626;
+  --sidebar-ring: #BDFF06;
+
+  /* Charts (다크에서도 동일 — 충분히 밝음) */
+  --chart-1: #4A9FFF;
+  --chart-2: #7ED957;
+  --chart-3: #BDFF06;
+  --chart-4: #A78BFA;
+  --chart-5: #FB923C;
 }
 
+/* ── Tailwind 토큰 연결 ── */
 @theme inline {
   --font-sans: var(--font-sans);
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --color-foreground: var(--foreground);
+
+  /* shadcn 기본 */
   --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Surface (bg-surface, bg-surface-secondary) */
+  --color-surface: var(--surface);
+  --color-surface-secondary: var(--surface-secondary);
+
+  /* Text (text-text-primary 등) */
+  --color-text-primary: var(--text-primary);
+  --color-text-body: var(--text-body);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-text-inverse: var(--text-inverse);
+
+  /* Layout */
+  --color-layout-dark: var(--layout-dark);
+  --color-layout-dark-mid: var(--layout-dark-mid);
+  --color-layout-dark-light: var(--layout-dark-light);
+
+  /* Sidebar */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Charts */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Radius */
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -209,7 +294,7 @@ body {
   input:focus-visible,
   select:focus-visible,
   textarea:focus-visible {
-    outline: 2px solid var(--color-brand-lime-safe);
+    outline: 2px solid var(--color-brand-neon-safe);
     outline-offset: 2px;
   }
 }

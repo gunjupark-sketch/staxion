@@ -84,15 +84,15 @@ export default function PopupModal() {
         {/* Close button */}
         <button
           onClick={handleClose}
-          className="absolute -top-3 -right-3 z-20 flex size-8 items-center justify-center rounded-full bg-white shadow-lg transition-transform hover:scale-110"
+          className="absolute -top-3 -right-3 z-20 flex size-8 items-center justify-center rounded-full bg-card shadow-lg transition-transform hover:scale-110"
           aria-label="닫기"
         >
-          <XIcon className="size-4 text-gray-700" />
+          <XIcon className="size-4 text-text-body" />
         </button>
 
         {/* Image */}
         <div
-          className={`relative overflow-hidden rounded-2xl bg-white shadow-2xl ${
+          className={`relative overflow-hidden rounded-2xl bg-card shadow-2xl ${
             current.link_url ? "cursor-pointer" : ""
           }`}
           onClick={current.link_url ? handleImageClick : undefined}
@@ -111,13 +111,13 @@ export default function PopupModal() {
         <div className="mt-3 flex items-center justify-between">
           <button
             onClick={handleDismissToday}
-            className="rounded-lg bg-white/90 px-4 py-2 text-sm text-gray-600 shadow-sm backdrop-blur-sm transition-colors hover:bg-white hover:text-gray-900"
+            className="rounded-lg bg-card/90 px-4 py-2 text-sm text-text-secondary shadow-sm backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
           >
             오늘 하루 안보기
           </button>
           <button
             onClick={handleClose}
-            className="rounded-lg bg-white/90 px-4 py-2 text-sm text-gray-600 shadow-sm backdrop-blur-sm transition-colors hover:bg-white hover:text-gray-900"
+            className="rounded-lg bg-card/90 px-4 py-2 text-sm text-text-secondary shadow-sm backdrop-blur-sm transition-colors hover:bg-card hover:text-foreground"
           >
             닫기
           </button>

@@ -19,7 +19,7 @@ export default function AboutPage() {
           <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
             의료성장연구소
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted">
             전문성이 머무는 곳, 성장이 시작되는 곳
             <br />
             MEDI STAXION
@@ -28,7 +28,7 @@ export default function AboutPage() {
       </section>
 
       {/* 소개 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -86,7 +86,7 @@ export default function AboutPage() {
       </section>
 
       {/* 세미나 & 브랜드컨시어지 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="grid gap-8 md:grid-cols-2">
             <div className="rounded-2xl border border-border/50 p-8">
@@ -152,7 +152,7 @@ export default function AboutPage() {
       <section className="bg-surface-dark py-16">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <h2 className="text-2xl font-bold text-white">상담이 필요하신가요?</h2>
-          <p className="mt-3 text-gray-400">
+          <p className="mt-3 text-text-muted">
             관심사항 폼을 작성해주세요. 즉시 연락 드립니다.
           </p>
           <div className="mt-8">

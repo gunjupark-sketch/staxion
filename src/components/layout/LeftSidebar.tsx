@@ -1,6 +1,5 @@
 "use client";
 
-import { C } from "@/lib/design-tokens";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -47,16 +46,12 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
 
     const content = (
       <span
-        className="flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] transition-all duration-150 mb-0.5 hover:bg-gray-50 hover:translate-x-0.5"
-        style={{
-          color: active ? C.dark : C.textSecondary,
-          fontWeight: active ? 600 : 400,
-          background: active ? `${C.neon}15` : undefined,
-        }}
+        className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] transition-all duration-150 mb-0.5 hover:bg-secondary hover:translate-x-0.5 ${
+          active ? "text-foreground font-semibold bg-brand-neon/15" : "text-text-secondary font-normal"
+        }`}
       >
         <Icon
-          className="h-4 w-4 transition-colors duration-150"
-          style={{ color: active ? C.dark : C.textMuted }}
+          className={`h-4 w-4 transition-colors duration-150 ${active ? "text-foreground" : "text-text-muted"}`}
         />
         {label}
       </span>
@@ -74,8 +69,9 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
     return (
       <Link
         href={href}
-        className="block ml-[30px] py-1.5 text-[12px] transition-colors hover:opacity-80"
-        style={{ color: active ? C.dark : C.textMuted, fontWeight: active ? 600 : 400 }}
+        className={`block ml-[30px] py-1.5 text-[12px] transition-colors hover:opacity-80 ${
+          active ? "text-foreground font-semibold" : "text-text-muted font-normal"
+        }`}
       >
         {label}
       </Link>
@@ -84,8 +80,7 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
 
   const GroupLabel = ({ children }: { children: string }) => (
     <p
-      className="mb-2 mt-1 px-3 text-[10px] font-semibold uppercase tracking-wider"
-      style={{ color: C.textMuted }}
+      className="mb-2 mt-1 px-3 text-[10px] font-semibold uppercase tracking-wider text-text-muted"
     >
       {children}
     </p>
@@ -129,7 +124,7 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
 
       <div className="flex-1" />
 
-      <div className="pt-4 border-t" style={{ borderColor: C.border }}>
+      <div className="pt-4 border-t border-border">
         <div className="flex flex-wrap gap-x-3 gap-y-1 px-3 mb-2">
           {[
             { label: "이용약관", href: "/terms" },
@@ -139,14 +134,13 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
             <Link
               key={l.label}
               href={l.href}
-              className="text-[10px]"
-              style={{ color: C.textMuted }}
+              className="text-[10px] text-text-muted"
             >
               {l.label}
             </Link>
           ))}
         </div>
-        <p className="px-3 text-[9px]" style={{ color: C.textMuted }}>
+        <p className="px-3 text-[9px] text-text-muted">
           © 2026 MEDI STAXION
         </p>
       </div>

@@ -119,7 +119,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ═══ 2. 핵심 정보 + CTA ═══ */}
-      <section className="bg-white py-16 md:py-24">
+      <section className="bg-card py-16 md:py-24">
         <div className="mx-auto max-w-5xl px-5 md:px-8">
           {infoItems.length > 0 && (
             <div className="grid gap-4 grid-cols-2 md:grid-cols-4">
@@ -171,7 +171,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ═══ 4. 법적 고시 ═══ */}
       {(disclosures.length > 0 || service.disclaimer) && (
-        <section className="bg-white py-16 md:py-24">
+        <section className="bg-card py-16 md:py-24">
           <div className="mx-auto max-w-4xl px-5 md:px-8">
             <h2 className="text-lg font-bold text-text-primary mb-8">서비스 정보 고시</h2>
 

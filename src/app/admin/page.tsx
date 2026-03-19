@@ -77,7 +77,7 @@ export default async function AdminDashboard() {
     pending: "bg-yellow-50 text-yellow-600",
     paid: "bg-green-50 text-green-600",
     failed: "bg-red-50 text-red-600",
-    cancelled: "bg-gray-100 text-gray-500",
+    cancelled: "bg-secondary text-text-secondary",
     refunded: "bg-blue-50 text-blue-600",
   };
 
@@ -115,7 +115,7 @@ export default async function AdminDashboard() {
             <Link
               key={link.href}
               href={link.href}
-              className="inline-flex items-center rounded-lg border border-border/50 bg-white px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
+              className="inline-flex items-center rounded-lg border border-border/50 bg-card px-4 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary"
             >
               {link.label}
             </Link>
@@ -174,7 +174,7 @@ export default async function AdminDashboard() {
                     <div className="flex items-center gap-2 min-w-0">
                       <Badge
                         variant="secondary"
-                        className={`shrink-0 ${inq.is_read ? "bg-gray-100 text-gray-500" : "bg-red-50 text-red-600"}`}
+                        className={`shrink-0 ${inq.is_read ? "bg-secondary text-text-secondary" : "bg-red-50 text-red-600"}`}
                       >
                         {inq.is_read ? "읽음" : "새 문의"}
                       </Badge>

@@ -1,7 +1,5 @@
 "use client";
 
-import { C } from "@/lib/design-tokens";
-
 const CLINICS = [
   { name: "미소플러스치과", location: "서울 강남", since: "2024" },
   { name: "뉴스마일치과", location: "서울 서초", since: "2024" },
@@ -20,8 +18,8 @@ const CLINICS = [
 export default function RightSidebar() {
   return (
     <aside
-      className="hidden xl:block w-[280px] shrink-0 bg-white border-l"
-      style={{ borderColor: C.border, minHeight: "calc(100vh - 76px)" }}
+      className="hidden xl:block w-[280px] shrink-0 bg-card border-l border-border"
+      style={{ minHeight: "calc(100vh - 76px)" }}
     >
       <div
         className="sticky top-[76px] overflow-y-auto p-4 space-y-4"
@@ -29,13 +27,12 @@ export default function RightSidebar() {
       >
         {/* 미용치과 도입 원장 — 위로 슬라이드 */}
         <div
-          className="rounded-xl p-4"
-          style={{ border: `1px solid ${C.borderLight}` }}
+          className="rounded-xl p-4 border border-border"
         >
-          <p className="mb-1 text-[13px] font-bold" style={{ color: C.dark }}>
+          <p className="mb-1 text-[13px] font-bold text-foreground">
             미용치과 도입 원장
           </p>
-          <p className="mb-4 text-[11px]" style={{ color: C.textMuted }}>
+          <p className="mb-4 text-[11px] text-text-muted">
             MEDI STAXION과 함께하는 치과
           </p>
 
@@ -44,8 +41,7 @@ export default function RightSidebar() {
               {CLINICS.map((clinic, i) => (
                 <div
                   key={i}
-                  className="flex items-center gap-3 rounded-lg p-2.5 transition-all duration-200 hover:shadow-sm hover:bg-white cursor-pointer"
-                  style={{ background: C.surface }}
+                  className="flex items-center gap-3 rounded-lg p-2.5 transition-all duration-200 hover:shadow-sm hover:bg-card cursor-pointer bg-surface"
                 >
                   <div
                     className="h-10 w-10 shrink-0 rounded-lg flex items-center justify-center"
@@ -54,20 +50,18 @@ export default function RightSidebar() {
                     }}
                   >
                     <span
-                      className="text-[10px] font-bold"
-                      style={{ color: C.textMuted }}
+                      className="text-[10px] font-bold text-text-muted"
                     >
                       LOGO
                     </span>
                   </div>
                   <div className="min-w-0">
                     <p
-                      className="text-[13px] font-semibold truncate"
-                      style={{ color: C.dark }}
+                      className="text-[13px] font-semibold truncate text-foreground"
                     >
                       {clinic.name}
                     </p>
-                    <p className="text-[10px]" style={{ color: C.textMuted }}>
+                    <p className="text-[10px] text-text-muted">
                       {clinic.location} · {clinic.since}년 도입
                     </p>
                   </div>

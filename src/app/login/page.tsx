@@ -140,7 +140,7 @@ export default function LoginPage() {
             <button
               onClick={() => handleSocialLogin("google")}
               disabled={!!socialLoading}
-              className="flex h-12 w-full items-center justify-center gap-2 rounded-lg border border-border bg-white text-sm font-semibold text-text-primary transition-colors hover:bg-gray-50 disabled:opacity-50 min-h-[48px]"
+              className="flex h-12 w-full items-center justify-center gap-2 rounded-lg border border-border bg-card text-sm font-semibold text-text-primary transition-colors hover:bg-secondary disabled:opacity-50 min-h-[48px]"
             >
               {socialLoading === "google" ? (
                 <span>연결 중...</span>

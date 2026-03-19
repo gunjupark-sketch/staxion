@@ -175,13 +175,13 @@ function CommunityContent() {
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           {/* 카테고리 탭 + 글쓰기 버튼 */}
           <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex flex-wrap gap-1.5">
+            <div className="flex flex-wrap gap-1 border-b border-border/50">
               <button
                 onClick={() => navigateTo("all", 1)}
-                className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                className={`relative px-4 py-2.5 text-sm font-medium transition-colors ${
                   currentCategory === "all"
-                    ? "bg-brand-lime-btn text-white"
-                    : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
+                    ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
+                    : "text-text-secondary hover:text-text-primary"
                 }`}
               >
                 전체
@@ -190,10 +190,10 @@ function CommunityContent() {
                 <button
                   key={cat.slug}
                   onClick={() => navigateTo(cat.slug, 1)}
-                  className={`rounded-full px-4 py-2 text-sm font-medium transition-colors ${
+                  className={`relative px-4 py-2.5 text-sm font-medium transition-colors ${
                     currentCategory === cat.slug
-                      ? "bg-brand-lime-btn text-white"
-                      : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
+                      ? "text-primary after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:bg-primary after:rounded-full"
+                      : "text-text-secondary hover:text-text-primary"
                   }`}
                 >
                   {cat.name}
@@ -225,16 +225,22 @@ function CommunityContent() {
                 <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
               </div>
             ) : posts.length === 0 ? (
-              <div className="rounded-lg border py-20 text-center text-text-muted">
-                게시물이 없습니다.
+              <div className="flex flex-col items-center justify-center rounded-xl border border-border/50 bg-card py-20 text-center shadow-sm">
+                <div className="mb-3 flex size-12 items-center justify-center rounded-full bg-primary/10">
+                  <PenSquareIcon className="size-5 text-primary" />
+                </div>
+                <p className="text-sm font-medium text-text-secondary">게시물이 없습니다</p>
+                <p className="mt-1 text-xs text-text-muted">첫 번째 글을 작성해 보세요!</p>
               </div>
             ) : (
-              <div className="divide-y rounded-lg border">
+              <div className="space-y-3">
                 {posts.map((post) => (
                   <Link
                     key={post.id}
                     href={`/community/${post.id}`}
-                    className="flex items-start gap-3 px-4 py-4 transition-colors hover:bg-surface-secondary/50 sm:items-center sm:gap-4"
+                    className={`flex items-start gap-3 rounded-lg border border-border/50 bg-card px-4 py-4 shadow-sm transition-all duration-200 hover:shadow-md hover:border-primary/30 sm:items-center sm:gap-4 ${
+                      post.post_type === "notice" ? "border-l-2 border-l-primary" : ""
+                    }`}
                   >
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
@@ -256,12 +262,12 @@ function CommunityContent() {
                         <span>{formatDate(post.created_at)}</span>
                       </div>
                     </div>
-                    <div className="flex shrink-0 items-center gap-3 text-xs text-text-muted">
-                      <span className="flex items-center gap-1">
+                    <div className="flex shrink-0 items-center gap-2 text-xs">
+                      <span className="inline-flex items-center gap-1 rounded-md bg-primary/10 px-1.5 py-0.5 text-xs text-text-secondary">
                         <EyeIcon className="size-3.5" />
                         {post.view_count}
                       </span>
-                      <span className="flex items-center gap-1">
+                      <span className="inline-flex items-center gap-1 rounded-md bg-primary/10 px-1.5 py-0.5 text-xs text-text-secondary">
                         <MessageSquareIcon className="size-3.5" />
                         {post.comment_count}
                       </span>

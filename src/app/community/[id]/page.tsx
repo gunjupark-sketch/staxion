@@ -17,6 +17,7 @@ import {
   MegaphoneIcon,
   SendIcon,
   UserIcon,
+  MessageSquareIcon,
 } from "lucide-react";
 
 interface Post {
@@ -214,7 +215,7 @@ export default function CommunityDetailPage() {
         </Link>
 
         {/* 게시물 헤더 */}
-        <article>
+        <article className="rounded-xl border border-border/50 bg-card p-6 shadow-sm">
           <div className="flex items-center gap-2 flex-wrap mb-3">
             {post.post_type === "notice" && (
               <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 gap-1">
@@ -229,16 +230,16 @@ export default function CommunityDetailPage() {
             {post.title}
           </h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-text-muted border-b pb-4">
+          <div className="mt-4 flex flex-wrap items-center gap-4 text-sm text-text-muted border-b border-border/50 pb-4">
             <div className="flex items-center gap-2">
               {post.profiles?.avatar_url ? (
                 <img
                   src={post.profiles.avatar_url}
                   alt=""
-                  className="size-7 rounded-full object-cover"
+                  className="size-7 rounded-full object-cover ring-2 ring-primary/20"
                 />
               ) : (
-                <div className="flex size-7 items-center justify-center rounded-full bg-surface-secondary">
+                <div className="flex size-7 items-center justify-center rounded-full bg-surface-secondary ring-2 ring-primary/20">
                   <UserIcon className="size-4 text-text-muted" />
                 </div>
               )}
@@ -254,7 +255,7 @@ export default function CommunityDetailPage() {
                 day: "numeric",
               })}
             </span>
-            <span className="flex items-center gap-1">
+            <span className="inline-flex items-center gap-1 rounded-md bg-primary/10 px-1.5 py-0.5 text-xs">
               <EyeIcon className="size-3.5" />
               {post.view_count}
             </span>
@@ -264,7 +265,7 @@ export default function CommunityDetailPage() {
           {canEdit && (
             <div className="mt-3 flex items-center gap-2 justify-end">
               <Link href={`/community/${post.id}/edit`}>
-                <Button variant="outline" size="sm" className="gap-1.5 text-xs min-h-[36px]">
+                <Button variant="outline" size="sm" className="gap-1.5 text-xs min-h-[36px] hover:bg-primary/10 hover:text-primary hover:border-primary/30 transition-colors">
                   <PencilIcon className="size-3.5" />
                   수정
                 </Button>
@@ -272,7 +273,7 @@ export default function CommunityDetailPage() {
               <Button
                 variant="outline"
                 size="sm"
-                className="gap-1.5 text-xs text-red-500 hover:text-red-600 min-h-[36px]"
+                className="gap-1.5 text-xs text-red-500 hover:text-red-600 hover:bg-red-500/10 hover:border-red-500/30 min-h-[36px] transition-colors"
                 onClick={handleDelete}
                 disabled={deleting}
               >
@@ -284,7 +285,7 @@ export default function CommunityDetailPage() {
 
           {/* 본문 */}
           <div
-            className="prose prose-sm sm:prose max-w-none mt-6 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:text-lg [&_h3]:font-semibold [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-lime-text [&_a]:underline"
+            className="prose prose-sm dark:prose-invert sm:prose max-w-none mt-6 [&_h2]:text-xl [&_h2]:font-bold [&_h3]:text-lg [&_h3]:font-semibold [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-lime-text [&_a]:underline"
             dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content) }}
           />
         </article>
@@ -303,7 +304,7 @@ export default function CommunityDetailPage() {
                 value={commentText}
                 onChange={(e) => setCommentText(e.target.value)}
                 rows={3}
-                className="resize-none"
+                className="resize-none focus:ring-2 focus:ring-primary/50 focus:border-primary"
               />
               <div className="mt-2 flex justify-end">
                 <Button
@@ -329,24 +330,29 @@ export default function CommunityDetailPage() {
           )}
 
           {/* 댓글 목록 */}
-          <div className="mt-6 space-y-4">
+          <div className="mt-6 space-y-3">
             {comments.length === 0 ? (
-              <p className="py-8 text-center text-sm text-text-muted">
-                아직 댓글이 없습니다. 첫 댓글을 남겨보세요!
-              </p>
+              <div className="flex flex-col items-center py-10 text-center">
+                <div className="mb-2 flex size-10 items-center justify-center rounded-full bg-primary/10">
+                  <MessageSquareIcon className="size-4 text-primary" />
+                </div>
+                <p className="text-sm text-text-muted">
+                  아직 댓글이 없습니다. 첫 댓글을 남겨보세요!
+                </p>
+              </div>
             ) : (
               comments.map((comment) => (
-                <div key={comment.id} className="rounded-lg border p-4">
+                <div key={comment.id} className="rounded-lg bg-surface-secondary/50 p-4 transition-colors hover:bg-surface-secondary">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       {comment.profiles?.avatar_url ? (
                         <img
                           src={comment.profiles.avatar_url}
                           alt=""
-                          className="size-6 rounded-full object-cover"
+                          className="size-6 rounded-full object-cover ring-2 ring-primary/20"
                         />
                       ) : (
-                        <div className="flex size-6 items-center justify-center rounded-full bg-surface-secondary">
+                        <div className="flex size-6 items-center justify-center rounded-full bg-surface-secondary ring-2 ring-primary/20">
                           <UserIcon className="size-3 text-text-muted" />
                         </div>
                       )}

@@ -21,14 +21,14 @@ export default function AboutBeautyPage() {
             <br />
             왜 지금인가?
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-gray-400">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted">
             치과의사의 미용시술 합법성, 비급여 수익 다각화, 그리고 선점의 기회
           </p>
         </div>
       </section>
 
       {/* 미용치과 도입의 필요성 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -72,7 +72,7 @@ export default function AboutBeautyPage() {
           </div>
 
           <div className="mt-10 space-y-6">
-            <div className="rounded-lg border-l-4 border-brand-lime-safe bg-white p-6">
+            <div className="rounded-lg border-l-4 border-brand-lime-safe bg-card p-6">
               <h3 className="text-lg font-bold text-text-primary">
                 2016년 대법원 판결 (2013도850)
               </h3>
@@ -83,7 +83,7 @@ export default function AboutBeautyPage() {
               </p>
             </div>
 
-            <div className="rounded-lg border border-border/50 bg-white p-6">
+            <div className="rounded-lg border border-border/50 bg-card p-6">
               <h3 className="font-bold text-text-primary">핵심 포인트</h3>
               <ul className="mt-4 space-y-3">
                 {[
@@ -104,7 +104,7 @@ export default function AboutBeautyPage() {
       </section>
 
       {/* 시술 영역 */}
-      <section className="bg-white py-20">
+      <section className="bg-card py-20">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -176,7 +176,7 @@ export default function AboutBeautyPage() {
             ].map((question) => (
               <div
                 key={question}
-                className="rounded-lg border-l-4 border-brand-lime-safe bg-white p-5"
+                className="rounded-lg border-l-4 border-brand-lime-safe bg-card p-5"
               >
                 <p className="text-sm text-text-secondary">{question}</p>
               </div>
@@ -191,7 +191,7 @@ export default function AboutBeautyPage() {
           <h2 className="text-2xl font-bold text-white">
             미용치과 도입, 체계적으로 시작하세요
           </h2>
-          <p className="mt-3 text-gray-400">
+          <p className="mt-3 text-text-muted">
             가이드북 한 권으로 도입 전 로드맵을 완성하세요.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
@@ -203,7 +203,7 @@ export default function AboutBeautyPage() {
             </Link>
             <Link
               href="/education"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-gray-600 px-8 text-base text-gray-300 transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-border px-8 text-base text-text-muted transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
             >
               세미나 보기
             </Link>

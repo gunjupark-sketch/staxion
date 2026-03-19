@@ -27,8 +27,28 @@ export default async function ServicesPage() {
     <>
       <PageBanner pageSlug="services" />
 
+      {/* 히어로 섹션 */}
+      <section className="relative overflow-hidden py-24 md:py-32">
+        <Image
+          src="/images/bg/services-banner.png"
+          alt="메디컨시어지 서비스"
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
+          <h1 className="text-3xl font-bold text-white md:text-5xl">
+            메디컨시어지 서비스
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
+            미용치과 도입을 위한 올인원 컨시어지. 컨설팅, 장비 셋업, 교육, 마케팅까지.
+          </p>
+        </div>
+      </section>
+
       {/* ═══ 1. 서비스 흐름도 — 풀 와이드 ═══ */}
-      <section className="relative bg-white py-24 md:py-32">
+      <section className="relative bg-card py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <div className="text-center">
             <p className="text-xs font-semibold tracking-[0.25em] text-brand-lime-text uppercase">
@@ -150,7 +170,7 @@ export default async function ServicesPage() {
             <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {services.map((service) => (
                 <Link key={service.id} href={`/services/${service.slug || service.id}`} className="group">
-                  <Card className="h-full overflow-hidden border-border/50 bg-white transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
+                  <Card className="h-full overflow-hidden border-border/50 bg-card transition-all duration-300 group-hover:shadow-xl group-hover:-translate-y-1">
                     {service.image_url ? (
                       <div className="relative aspect-[4/3] overflow-hidden">
                         <Image

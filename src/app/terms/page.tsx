@@ -7,7 +7,7 @@ export const metadata: Metadata = {
 
 export default function TermsPage() {
   return (
-    <div className="bg-white">
+    <div className="bg-card">
       <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
         <h1 className="mb-8 text-3xl font-bold text-text-primary">이용약관</h1>
         <p className="mb-8 text-sm text-text-muted">시행일: 2025년 3월 1일</p>
