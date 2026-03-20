@@ -22,17 +22,17 @@ export default function RightSidebar() {
       style={{ minHeight: "calc(100vh - 76px)" }}
     >
       <div
-        className="sticky top-[76px] overflow-y-auto p-4 space-y-4"
+        className="sticky top-[76px] overflow-y-auto p-4 pt-2 space-y-4"
         style={{ maxHeight: "calc(100vh - 76px)" }}
       >
         {/* 미용 진료중인 치과 — 위로 슬라이드 */}
         <div
-          className="rounded-xl p-4 border border-border"
+          className="rounded-xl p-4 pt-3 border border-border"
         >
-          <p className="mb-1 text-[13px] font-bold text-foreground">
+          <p className="mb-0.5 text-[13px] font-bold text-foreground">
             미용 진료중인 치과
           </p>
-          <p className="mb-4 text-[11px] text-text-muted">
+          <p className="mb-3 text-[11px] text-text-muted">
             MEDI STAXION과 함께하는 치과
           </p>
 

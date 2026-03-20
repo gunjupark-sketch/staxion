@@ -96,34 +96,32 @@ export default async function SeminarDetailPage({ params }: Props) {
   return (
     <>
       {/* 히어로 이미지 */}
-      {seminar.image_url && (
-        <div className="relative w-full bg-surface-secondary">
-          <div className="hidden sm:block">
-            <div className="relative mx-auto max-w-5xl" style={{ paddingBottom: "min(400px, 30%)" }}>
-              <Image
-                src={seminar.image_url}
-                alt={seminar.title}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                priority
-              />
-            </div>
-          </div>
-          <div className="block sm:hidden">
-            <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
-              <Image
-                src={seminar.mobile_image_url || seminar.image_url}
-                alt={seminar.title}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                priority
-              />
-            </div>
+      <div className="relative w-full bg-layout-dark">
+        <div className="hidden sm:block">
+          <div className="relative mx-auto max-w-5xl" style={{ paddingBottom: "min(400px, 30%)" }}>
+            <Image
+              src={seminar.image_url || "/images/bg/education-banner.png"}
+              alt={seminar.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
           </div>
         </div>
-      )}
+        <div className="block sm:hidden">
+          <div className="relative w-full" style={{ paddingBottom: "56.25%" }}>
+            <Image
+              src={seminar.mobile_image_url || seminar.image_url || "/images/bg/education-banner.png"}
+              alt={seminar.title}
+              fill
+              className="object-cover"
+              sizes="100vw"
+              priority
+            />
+          </div>
+        </div>
+      </div>
 
       <article className="py-12 sm:py-20">
         <div className="mx-auto max-w-3xl px-4 md:px-6">

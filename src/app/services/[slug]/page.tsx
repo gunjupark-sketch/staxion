@@ -77,34 +77,30 @@ export default async function ServiceDetailPage({ params }: Props) {
     <>
       {/* ═══ 1. 풀 와이드 히어로 ═══ */}
       <section className="relative bg-layout-dark">
-        {service.image_url ? (
-          <>
-            <div className="relative hidden sm:block" style={{ paddingBottom: "35%" }}>
-              <Image
-                src={service.image_url}
-                alt={service.name}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
-            </div>
-            <div className="relative block sm:hidden" style={{ paddingBottom: "56.25%" }}>
-              <Image
-                src={service.mobile_image_url || service.image_url}
-                alt={service.name}
-                fill
-                className="object-cover"
-                sizes="100vw"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
-            </div>
-          </>
-        ) : (
-          <div className="h-56 md:h-80 bg-gradient-to-br from-layout-dark via-layout-dark-mid to-layout-dark" />
-        )}
+        {/* 데스크탑 배경 */}
+        <div className="relative hidden sm:block" style={{ paddingBottom: "35%" }}>
+          <Image
+            src={service.image_url || "/images/bg/services-banner.png"}
+            alt={service.name}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
+        </div>
+        {/* 모바일 배경 */}
+        <div className="relative block sm:hidden" style={{ paddingBottom: "56.25%" }}>
+          <Image
+            src={service.mobile_image_url || service.image_url || "/images/bg/services-banner.png"}
+            alt={service.name}
+            fill
+            className="object-cover"
+            sizes="100vw"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
+        </div>
 
         <div className="relative z-10 -mt-32 pb-16 md:-mt-40 md:pb-24">
           <div className="mx-auto max-w-5xl px-5 md:px-8">
@@ -238,8 +234,17 @@ export default async function ServiceDetailPage({ params }: Props) {
       )}
 
       {/* ═══ 5. 하단 CTA ═══ */}
-      <section className="bg-layout-dark py-24 md:py-32">
-        <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
+      <section className="relative bg-layout-dark py-24 md:py-32 overflow-hidden">
+        {/* 배경 이미지 */}
+        <Image
+          src="/images/bg/services-banner.png"
+          alt=""
+          fill
+          className="object-cover opacity-20"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-layout-dark/80 via-layout-dark/60 to-layout-dark/80" />
+        <div className="relative z-10 mx-auto max-w-3xl px-5 text-center md:px-8">
           <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
             Get Started
           </p>
