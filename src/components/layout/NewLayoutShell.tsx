@@ -55,7 +55,7 @@ export default function NewLayoutShell({ children, showRightSidebar = false }: P
               <p className="text-[12px] text-text-muted">로그인 후 이용해주세요</p>
             </div>
             <Link href="/mypage" onClick={() => setSidebarOpen(false)}
-              className="rounded-lg px-3 py-1.5 text-xs font-semibold bg-brand-neon text-foreground">
+              className="rounded-lg px-3 py-1.5 text-xs font-semibold bg-brand-neon text-[#1a1a1a]">
               마이페이지
             </Link>
           </div>

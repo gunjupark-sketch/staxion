@@ -180,7 +180,7 @@ export default function MypageProfilePage() {
   if (!profile) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -355,7 +355,7 @@ export default function MypageProfilePage() {
           )}
 
           {message && (
-            <p className={`text-sm ${message.includes("실패") ? "text-red-500" : "text-brand-lime-text"}`}>
+            <p className={`text-sm ${message.includes("실패") ? "text-red-500" : "text-brand-neon-text"}`}>
               {message}
             </p>
           )}
@@ -423,7 +423,7 @@ export default function MypageProfilePage() {
             )}
 
             {passwordMessage && (
-              <p className={`text-sm ${passwordMessage.includes("실패") || passwordMessage.includes("일치") || passwordMessage.includes("이상") ? "text-red-500" : "text-brand-lime-text"}`}>
+              <p className={`text-sm ${passwordMessage.includes("실패") || passwordMessage.includes("일치") || passwordMessage.includes("이상") ? "text-red-500" : "text-brand-neon-text"}`}>
                 {passwordMessage}
               </p>
             )}

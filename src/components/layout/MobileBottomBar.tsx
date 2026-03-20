@@ -49,7 +49,7 @@ export default function MobileBottomBar() {
       {/* 모바일 글쓰기 FAB */}
       <Link
         href="/community/write"
-        className="fixed bottom-20 right-4 z-50 flex h-13 w-13 items-center justify-center rounded-full shadow-lg md:hidden bg-brand-neon text-foreground"
+        className="fixed bottom-20 right-4 z-50 flex h-13 w-13 items-center justify-center rounded-full shadow-lg md:hidden bg-brand-neon text-[#1a1a1a]"
       >
         <Plus className="h-5 w-5" strokeWidth={3} />
       </Link>

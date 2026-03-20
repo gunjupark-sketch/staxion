@@ -4,7 +4,7 @@ export default function SignupCompletePage() {
   return (
     <section className="flex min-h-[60vh] items-center justify-center px-4">
       <div className="text-center">
-        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-lime-safe/10">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-neon-safe/10">
           <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8EC31F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <polyline points="20 6 9 17 4 12" />
           </svg>
@@ -17,7 +17,7 @@ export default function SignupCompletePage() {
         </p>
         <Link
           href="/login"
-          className="mt-8 inline-flex h-10 items-center rounded-lg bg-brand-lime-btn px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-btn/90"
+          className="mt-8 inline-flex h-10 items-center rounded-lg bg-brand-neon-btn px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-neon-btn/90"
         >
           로그인하기
         </Link>

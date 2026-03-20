@@ -349,7 +349,7 @@ export default function MypageWaitingRoomPage() {
   if (loading) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -364,8 +364,8 @@ export default function MypageWaitingRoomPage() {
 
         <Card>
           <CardContent className="flex min-h-[240px] flex-col items-center justify-center gap-4 py-12">
-            <div className="flex size-16 items-center justify-center rounded-full bg-brand-lime-safe/10">
-              <PlayIcon className="size-7 text-brand-lime-text" />
+            <div className="flex size-16 items-center justify-center rounded-full bg-brand-neon-safe/10">
+              <PlayIcon className="size-7 text-brand-neon-text" />
             </div>
             <div className="text-center">
               <p className="text-sm font-medium text-text-secondary">
@@ -376,7 +376,7 @@ export default function MypageWaitingRoomPage() {
               </p>
             </div>
             <Link href="/contact">
-              <Button className="mt-2 min-h-[44px] bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90">
+              <Button className="mt-2 min-h-[44px] bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90">
                 구독 문의하기
               </Button>
             </Link>
@@ -390,7 +390,7 @@ export default function MypageWaitingRoomPage() {
             </h3>
             <div className="space-y-3 text-sm text-text-secondary">
               <div className="flex gap-3">
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-neon-safe/10 text-xs font-bold text-brand-neon-text">
                   1
                 </span>
                 <p>
@@ -399,7 +399,7 @@ export default function MypageWaitingRoomPage() {
                 </p>
               </div>
               <div className="flex gap-3">
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-neon-safe/10 text-xs font-bold text-brand-neon-text">
                   2
                 </span>
                 <p>
@@ -407,7 +407,7 @@ export default function MypageWaitingRoomPage() {
                 </p>
               </div>
               <div className="flex gap-3">
-                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-lime-safe/10 text-xs font-bold text-brand-lime-text">
+                <span className="flex size-6 shrink-0 items-center justify-center rounded-full bg-brand-neon-safe/10 text-xs font-bold text-brand-neon-text">
                   3
                 </span>
                 <p>
@@ -418,7 +418,7 @@ export default function MypageWaitingRoomPage() {
             </div>
             <div className="pt-2">
               <Link href="/contact">
-                <Button className="min-h-[44px] w-full bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90 sm:w-auto">
+                <Button className="min-h-[44px] w-full bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90 sm:w-auto">
                   상담 신청하기
                 </Button>
               </Link>
@@ -439,7 +439,7 @@ export default function MypageWaitingRoomPage() {
         <h2 className="text-lg font-semibold text-text-primary">
           내 치과 대기실
         </h2>
-        <Badge variant="secondary" className="bg-brand-lime-safe/10 text-brand-lime-text">
+        <Badge variant="secondary" className="bg-brand-neon-safe/10 text-brand-neon-text">
           {plan.name} 구독중
         </Badge>
       </div>
@@ -459,7 +459,7 @@ export default function MypageWaitingRoomPage() {
                 <button
                   type="button"
                   onClick={() => navigator.clipboard.writeText(waitingRoomUrl)}
-                  className="shrink-0 text-xs text-brand-lime-text hover:underline"
+                  className="shrink-0 text-xs text-brand-neon-text hover:underline"
                 >
                   복사
                 </button>
@@ -474,7 +474,7 @@ export default function MypageWaitingRoomPage() {
                     "fullscreen=yes"
                   )
                 }
-                className="min-h-[44px] gap-2 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90"
+                className="min-h-[44px] gap-2 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90"
               >
                 <PlayIcon className="size-4" />
                 대기실 시작
@@ -508,7 +508,7 @@ export default function MypageWaitingRoomPage() {
           </div>
           <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-secondary">
             <div
-              className="h-full rounded-full bg-brand-lime-btn transition-all"
+              className="h-full rounded-full bg-brand-neon-btn transition-all"
               style={{ width: `${usagePercent}%` }}
             />
           </div>
@@ -567,7 +567,7 @@ export default function MypageWaitingRoomPage() {
               <Button
                 onClick={handleYoutubeSubmit}
                 disabled={uploading || !youtubeUrl.trim()}
-                className="min-h-[44px] shrink-0 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90"
+                className="min-h-[44px] shrink-0 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90"
               >
                 등록
               </Button>
@@ -744,7 +744,7 @@ function MediaListItem({
                 onUpdate(item.id, { is_active: !item.is_active })
               }
               className={`relative h-6 w-11 rounded-full transition-colors ${
-                item.is_active ? "bg-brand-lime-btn" : "bg-gray-300"
+                item.is_active ? "bg-brand-neon-btn" : "bg-gray-300"
               }`}
             >
               <span

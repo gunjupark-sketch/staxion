@@ -77,17 +77,23 @@ export default function NewHeader({ onMenuToggle }: NewHeaderProps) {
         </button>
 
         {/* 로고 */}
-        <Link href="/" className="mr-6 flex items-center gap-2 shrink-0">
-          <div className="flex items-center gap-1">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg text-sm font-black bg-brand-neon text-foreground">
-              M
-            </div>
-            <div className="hidden sm:block">
-              <span className="text-[11px] font-bold tracking-wider text-accent-salmon">MEDI</span>
-              <br />
-              <span className="text-base font-black tracking-tight text-foreground">STAXION</span>
-            </div>
-          </div>
+        <Link href="/" className="mr-6 flex items-center shrink-0">
+          <Image
+            src="/logo.png"
+            alt="MEDISTAXION"
+            width={140}
+            height={30}
+            className="h-8 w-auto dark:hidden"
+            priority
+          />
+          <Image
+            src="/logo-white.png"
+            alt="MEDISTAXION"
+            width={140}
+            height={30}
+            className="h-8 w-auto hidden dark:block"
+            priority
+          />
         </Link>
 
         {/* 공지사항 바 */}

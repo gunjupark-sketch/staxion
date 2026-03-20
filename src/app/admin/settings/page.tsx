@@ -258,7 +258,7 @@ export default function AdminSettingsPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-24">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -273,7 +273,7 @@ export default function AdminSettingsPage() {
         <Button
           onClick={handleSave}
           disabled={saving}
-          className="min-h-[44px] gap-2 bg-brand-lime-btn text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
+          className="min-h-[44px] gap-2 bg-brand-neon-btn text-sm font-semibold text-white hover:bg-brand-neon-btn/90"
         >
           {saving ? (
             <Loader2Icon className="size-4 animate-spin" />
@@ -294,7 +294,7 @@ export default function AdminSettingsPage() {
             onClick={() => setActiveTab(tab.key)}
             className={`flex items-center gap-1.5 px-3 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px whitespace-nowrap ${
               activeTab === tab.key
-                ? "border-brand-lime-safe text-text-primary"
+                ? "border-brand-neon-safe text-text-primary"
                 : "border-transparent text-text-muted hover:text-text-primary"
             }`}
           >
@@ -601,7 +601,7 @@ export default function AdminSettingsPage() {
                 <button
                   onClick={() => setCrawl((p) => ({ ...p, allow_indexing: !p.allow_indexing }))}
                   className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-                    crawl.allow_indexing ? "bg-brand-lime-btn" : "bg-gray-300"
+                    crawl.allow_indexing ? "bg-brand-neon-btn" : "bg-gray-300"
                   }`}
                 >
                   <span

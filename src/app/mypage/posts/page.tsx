@@ -41,7 +41,7 @@ export default function MypagePostsPage() {
   if (loading) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -64,7 +64,7 @@ export default function MypagePostsPage() {
         <div className="space-y-3">
           {posts.map((post) => (
             <Link key={post.id} href={`/community/${post.id}`}>
-              <Card className="transition-colors hover:border-brand-lime-safe/50">
+              <Card className="transition-colors hover:border-brand-neon-safe/50">
                 <CardContent className="flex items-center justify-between pt-2">
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center gap-2">

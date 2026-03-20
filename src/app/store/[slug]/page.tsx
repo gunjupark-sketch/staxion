@@ -92,7 +92,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="flex flex-col">
               <div className="flex flex-wrap items-center gap-2">
                 {product.is_digital && (
-                  <Badge variant="secondary" className="bg-brand-lime-safe/10 text-brand-lime-text">
+                  <Badge variant="secondary" className="bg-brand-neon-safe/10 text-brand-neon-text">
                     디지털
                   </Badge>
                 )}
@@ -162,7 +162,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="mt-16 border-t pt-12">
               <h2 className="text-xl font-bold text-text-primary">상세 정보</h2>
               <div
-                className="prose prose-sm mt-6 max-w-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_img]:max-w-full [&_img]:rounded-lg [&_a]:text-brand-lime-text [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic"
+                className="prose prose-sm mt-6 max-w-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_img]:max-w-full [&_img]:rounded-lg [&_a]:text-brand-neon-text [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-brand-neon-safe [&_blockquote]:pl-4 [&_blockquote]:italic"
                 dangerouslySetInnerHTML={{ __html: product.detail_content }}
               />
             </div>
@@ -185,7 +185,7 @@ export default async function ProductDetailPage({ params }: Props) {
           <p className="text-sm text-text-muted">더 많은 상품을 확인해보세요</p>
           <Link
             href="/store"
-            className="mt-4 inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-lime-safe/30 px-8 text-sm font-bold text-brand-lime-text transition-all hover:border-brand-lime-safe hover:bg-brand-lime-btn/5"
+            className="mt-4 inline-flex h-11 items-center justify-center rounded-xl border-2 border-brand-neon-safe/30 px-8 text-sm font-bold text-brand-neon-text transition-all hover:border-brand-neon-safe hover:bg-brand-neon-btn/5"
           >
             스토어로 돌아가기
           </Link>

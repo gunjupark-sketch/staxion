@@ -252,7 +252,7 @@ export default function AdminCommunityPage() {
             onClick={() => setActiveTab(tab.key)}
             className={`px-4 py-2.5 text-sm font-medium transition-colors border-b-2 -mb-px ${
               activeTab === tab.key
-                ? "border-brand-lime-safe text-text-primary"
+                ? "border-brand-neon-safe text-text-primary"
                 : "border-transparent text-text-muted hover:text-text-primary"
             }`}
           >
@@ -299,14 +299,14 @@ export default function AdminCommunityPage() {
           <div className="mt-4 overflow-x-auto rounded-lg border">
             {postsLoading ? (
               <div className="flex items-center justify-center py-12">
-                <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+                <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
               </div>
             ) : (
               <Table>
                 <TableHeader>
                   <TableRow>
                     <TableHead className="w-[44px]">
-                      <input type="checkbox" checked={allChecked} onChange={toggleAll} className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe" />
+                      <input type="checkbox" checked={allChecked} onChange={toggleAll} className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe" />
                     </TableHead>
                     <TableHead className="w-[80px]">상태</TableHead>
                     <TableHead className="w-[80px]">유형</TableHead>
@@ -337,7 +337,7 @@ export default function AdminCommunityPage() {
                             type="checkbox"
                             checked={selectedIds.has(post.id)}
                             onChange={() => toggleOne(post.id)}
-                            className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe"
+                            className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe"
                           />
                         </TableCell>
                         <TableCell>
@@ -347,7 +347,7 @@ export default function AdminCommunityPage() {
                         </TableCell>
                         <TableCell>
                           {post.post_type === "notice" ? (
-                            <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 text-xs gap-1">
+                            <Badge className="bg-brand-neon-safe/10 text-brand-neon-text border-brand-neon-safe/30 text-xs gap-1">
                               <MegaphoneIcon className="size-3" />
                               공지
                             </Badge>
@@ -386,7 +386,7 @@ export default function AdminCommunityPage() {
             <p className="text-sm text-text-muted">전체 {categories.length}개</p>
             <Button
               onClick={openCatCreate}
-              className="min-h-[44px] gap-2 bg-brand-lime-btn text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
+              className="min-h-[44px] gap-2 bg-brand-neon-btn text-sm font-semibold text-white hover:bg-brand-neon-btn/90"
             >
               <PlusIcon className="size-4" />
               카테고리 추가
@@ -396,7 +396,7 @@ export default function AdminCommunityPage() {
           <div className="mt-4 overflow-x-auto rounded-lg border">
             {catLoading ? (
               <div className="flex items-center justify-center py-12">
-                <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+                <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
               </div>
             ) : (
               <Table>
@@ -497,7 +497,7 @@ export default function AdminCommunityPage() {
             <Button variant="outline" onClick={() => setCatDialogOpen(false)} disabled={catSaving}>
               취소
             </Button>
-            <Button onClick={handleCatSave} disabled={catSaving} className="gap-1.5 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90">
+            <Button onClick={handleCatSave} disabled={catSaving} className="gap-1.5 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90">
               {catSaving ? "저장 중..." : "저장"}
             </Button>
           </DialogFooter>

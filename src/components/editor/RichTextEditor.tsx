@@ -181,7 +181,7 @@ const extensions = [
   }),
   TiptapLink.configure({
     openOnClick: false,
-    HTMLAttributes: { class: "text-brand-lime-text underline cursor-pointer" },
+    HTMLAttributes: { class: "text-brand-neon-text underline cursor-pointer" },
   }),
   TiptapUnderline,
   Placeholder.configure({ placeholder: "'/' 입력으로 블록 추가..." }),
@@ -227,7 +227,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
   if (!initialContent) {
     return (
       <div className="flex min-h-[300px] items-center justify-center rounded-lg border border-border">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -263,7 +263,7 @@ export default function RichTextEditor({ value, onChange }: RichTextEditorProps)
         <EditorContent
           initialContent={initialContent}
           extensions={extensions}
-          className="prose prose-sm max-w-none p-4 min-h-[300px] focus:outline-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-3 [&_h3]:mb-1 [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-lime-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-lime-text [&_a]:underline [&_.is-empty]:before:content-[attr(data-placeholder)] [&_.is-empty]:before:text-text-muted [&_.is-empty]:before:float-left [&_.is-empty]:before:h-0 [&_.is-empty]:before:pointer-events-none"
+          className="prose prose-sm max-w-none p-4 min-h-[300px] focus:outline-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-4 [&_h2]:mb-2 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-3 [&_h3]:mb-1 [&_img]:max-w-full [&_img]:rounded-lg [&_blockquote]:border-l-4 [&_blockquote]:border-brand-neon-safe [&_blockquote]:pl-4 [&_blockquote]:italic [&_a]:text-brand-neon-text [&_a]:underline [&_.is-empty]:before:content-[attr(data-placeholder)] [&_.is-empty]:before:text-text-muted [&_.is-empty]:before:float-left [&_.is-empty]:before:h-0 [&_.is-empty]:before:pointer-events-none"
           editorProps={{
             handleDOMEvents: {
               keydown: (_view, event) => handleCommandNavigation(event),

@@ -96,7 +96,7 @@ export default function PaymentButton({
       <button
         onClick={handlePayment}
         disabled={disabled}
-        className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-lime-btn px-8 text-base font-bold text-white shadow-md shadow-brand-lime-btn/20 transition-all hover:brightness-110 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
+        className="inline-flex h-13 items-center justify-center rounded-xl bg-brand-neon-btn px-8 text-base font-bold text-white shadow-md shadow-brand-neon-btn/20 transition-all hover:brightness-110 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-50"
       >
         {loading ? "처리 중..." : isOutOfStock ? "품절" : `${price.toLocaleString()}원 결제하기`}
       </button>

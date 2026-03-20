@@ -115,12 +115,12 @@ export default function ImageUpload({
           onDrop={handleDrop}
           className={`flex h-40 w-full max-w-xs flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed transition-colors ${
             dragOver
-              ? "border-brand-lime-safe bg-brand-lime-safe/5"
+              ? "border-brand-neon-safe bg-brand-neon-safe/5"
               : "border-border hover:border-border hover:bg-surface-secondary/50"
           } ${disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"}`}
         >
           {uploading ? (
-            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
           ) : (
             <>
               <ImageIcon className="size-8 text-text-muted" />

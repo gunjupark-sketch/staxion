@@ -124,7 +124,7 @@ export default function AdminSubscriptionsPage() {
       {/* 목록 */}
       {loading ? (
         <div className="mt-10 flex justify-center">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+          <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
         </div>
       ) : filtered.length === 0 ? (
         <div className="mt-10 text-center text-sm text-text-muted">
@@ -141,7 +141,7 @@ export default function AdminSubscriptionsPage() {
               >
                 <div className="flex items-start gap-3">
                   <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark">
-                    <CrownIcon className="size-4 text-brand-lime" />
+                    <CrownIcon className="size-4 text-brand-neon" />
                   </div>
                   <div>
                     <div className="flex items-center gap-2">
@@ -172,7 +172,7 @@ export default function AdminSubscriptionsPage() {
                 <div className="flex items-center gap-2">
                   <Link
                     href={`/admin/subscriptions/${sub.id}`}
-                    className="inline-flex items-center gap-1 text-xs text-brand-lime-text hover:underline"
+                    className="inline-flex items-center gap-1 text-xs text-brand-neon-text hover:underline"
                   >
                     상세
                   </Link>

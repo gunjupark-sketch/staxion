@@ -50,7 +50,7 @@ export default function GlobalPage() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/50" />
+        <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 mx-auto max-w-5xl px-4 text-center md:px-6">
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-brand-neon/30 bg-brand-neon/10 px-4 py-1.5 backdrop-blur-sm">
             <Globe className="h-4 w-4 text-brand-neon" />
@@ -72,7 +72,7 @@ export default function GlobalPage() {
           <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
             <Link
               href="/global/clinics"
-              className="inline-flex h-14 items-center gap-2 rounded-xl bg-brand-neon px-8 text-base font-bold text-layout-dark transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
+              className="inline-flex h-14 items-center gap-2 rounded-xl bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
             >
               <MapPin className="h-5 w-5" />
               Find a Clinic
@@ -93,7 +93,7 @@ export default function GlobalPage() {
       </section>
 
       {/* Treatments */}
-      <section className="py-16 md:py-20">
+      <section className="py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">Popular Treatments</h2>
@@ -115,8 +115,54 @@ export default function GlobalPage() {
         </div>
       </section>
 
+      {/* 서비스 상세 (B2B) */}
+      <section className="bg-card py-24 md:py-32">
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
+              Our Services
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-foreground md:text-3xl">
+              글로벌 메디컬 컨시어지 시스템
+            </h2>
+            <p className="mt-2 text-text-muted">
+              복잡한 해외 환자 유치의 모든 과정을 A부터 Z까지 책임집니다
+            </p>
+          </div>
+
+          <div className="grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "해외 환자 네트워크",
+                desc: "현지 유명 의료 플랫폼 및 에이전시와의 제휴, 인플루언서 마케팅으로 국가별 타깃 맞춤형 유입 네트워크를 구축합니다.",
+                targets: "중국, 일본, 태국, 필리핀, 말레이시아, 베트남",
+              },
+              {
+                title: "현지화 콘텐츠 제작",
+                desc: "타겟 국가에 맞는 의료 문화와 트렌드를 반영한 현지 언어·비주얼 중심의 프로모션 콘텐츠를 기획합니다.",
+                targets: "SNS, 유튜브, 현지 의료 플랫폼",
+              },
+              {
+                title: "프리미엄 의전 서비스",
+                desc: "공항 픽업, 통역, 특급 호텔 제휴 숙박, 수술 후 프리미엄 케어, 보호자 관광 프로그램까지 연계하는 VVIP 패키지",
+                targets: "All-in-One Package",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-border/50 p-6 transition-all hover:shadow-md hover:-translate-y-0.5"
+              >
+                <h3 className="text-lg font-bold text-foreground">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-text-secondary">{item.desc}</p>
+                <p className="mt-4 text-xs font-medium text-brand-neon-text">{item.targets}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
-      <section className="bg-surface-secondary py-16 md:py-20 dark:bg-secondary">
+      <section className="bg-surface-secondary py-24 md:py-32 dark:bg-secondary">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center mb-12">
             <h2 className="text-2xl font-bold text-foreground md:text-3xl">Why Choose Us?</h2>
@@ -142,7 +188,7 @@ export default function GlobalPage() {
       </section>
 
       {/* Map Preview / Clinic Finder CTA */}
-      <section className="py-16 md:py-20">
+      <section className="py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="overflow-hidden rounded-2xl bg-layout-dark p-8 md:p-12 relative">
             <div className="absolute inset-0 bg-gradient-to-r from-brand-neon/10 via-transparent to-info/10" />
@@ -168,7 +214,7 @@ export default function GlobalPage() {
               </div>
               <Link
                 href="/global/clinics"
-                className="shrink-0 inline-flex h-14 items-center gap-2 rounded-xl bg-brand-neon px-8 text-base font-bold text-layout-dark transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
+                className="shrink-0 inline-flex h-14 items-center gap-2 rounded-xl bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
               >
                 <MapPin className="h-5 w-5" />
                 Explore Map
@@ -179,7 +225,7 @@ export default function GlobalPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="border-t border-border py-16">
+      <section className="border-t border-border py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
           <p className="text-sm font-semibold text-primary tracking-wider uppercase mb-4">For Clinics</p>
           <h2 className="text-2xl font-bold text-foreground md:text-3xl">

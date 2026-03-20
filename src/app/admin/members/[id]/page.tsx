@@ -162,7 +162,7 @@ export default function MemberDetailPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -203,7 +203,7 @@ export default function MemberDetailPage() {
                 size="sm"
                 onClick={handleSave}
                 disabled={saving}
-                className="gap-1.5 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90"
+                className="gap-1.5 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90"
               >
                 <SaveIcon className="size-3.5" />
                 저장
@@ -242,7 +242,7 @@ export default function MemberDetailPage() {
                 {gradeOptions.find((g) => g.value === (editMode ? grade : member.member_grade))?.label || "준회원"}
               </Badge>
               <Badge variant="secondary" className={
-                member.role === "admin" ? "bg-brand-lime-safe/10 text-brand-lime-text" :
+                member.role === "admin" ? "bg-brand-neon-safe/10 text-brand-neon-text" :
                 member.role === "member" ? "bg-blue-50 text-blue-600" :
                 "bg-yellow-50 text-yellow-600"
               }>

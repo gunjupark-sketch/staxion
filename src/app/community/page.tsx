@@ -41,7 +41,7 @@ export default function CommunityPage() {
     <Suspense
       fallback={
         <div className="flex min-h-[60vh] items-center justify-center">
-          <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+          <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
         </div>
       }
     >
@@ -203,7 +203,7 @@ function CommunityContent() {
 
             {user ? (
               <Link href="/community/write">
-                <Button className="min-h-[44px] gap-2 bg-brand-lime-btn px-5 text-sm font-semibold text-white hover:bg-brand-lime-btn/90">
+                <Button className="min-h-[44px] gap-2 bg-brand-neon-btn px-5 text-sm font-semibold text-white hover:bg-brand-neon-btn/90">
                   <PenSquareIcon className="size-4" />
                   글쓰기
                 </Button>
@@ -222,7 +222,7 @@ function CommunityContent() {
           <div className="mt-6">
             {loading ? (
               <div className="flex items-center justify-center py-20">
-                <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+                <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
               </div>
             ) : posts.length === 0 ? (
               <div className="flex flex-col items-center justify-center rounded-xl border border-border/50 bg-card py-20 text-center shadow-sm">
@@ -245,7 +245,7 @@ function CommunityContent() {
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         {post.post_type === "notice" && (
-                          <Badge className="bg-brand-lime-safe/10 text-brand-lime-text border-brand-lime-safe/30 text-xs gap-1">
+                          <Badge className="bg-brand-neon-safe/10 text-brand-neon-text border-brand-neon-safe/30 text-xs gap-1">
                             <MegaphoneIcon className="size-3" />
                             공지
                           </Badge>
@@ -299,7 +299,7 @@ function CommunityContent() {
                       onClick={() => navigateTo(currentCategory, p)}
                       className={`inline-flex items-center justify-center rounded-md px-3 py-2 text-sm font-medium min-h-[44px] min-w-[44px] ${
                         p === currentPage
-                          ? "bg-brand-lime-btn text-white"
+                          ? "bg-brand-neon-btn text-white"
                           : "text-text-secondary hover:bg-surface-secondary"
                       }`}
                     >

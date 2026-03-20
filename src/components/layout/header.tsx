@@ -73,7 +73,8 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.png" alt="MEDI STAXION" width={160} height={40} priority className="h-8 w-auto" />
+          <Image src="/logo.png" alt="MEDI STAXION" width={160} height={40} priority className="h-8 w-auto dark:hidden" />
+          <Image src="/logo-white.png" alt="MEDI STAXION" width={160} height={40} priority className="h-8 w-auto hidden dark:block" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -82,7 +83,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+              className="rounded-md px-3 py-2 text-sm font-medium text-text-secondary transition-colors hover:bg-surface-secondary hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
             >
               {item.label}
             </Link>
@@ -102,7 +103,7 @@ export function Header() {
                 <path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
               </svg>
               {cartCount > 0 && (
-                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-lime-btn px-1 text-[10px] font-bold text-white">
+                <span className="absolute -right-0.5 -top-0.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-brand-neon-btn px-1 text-[10px] font-bold text-white">
                   {cartCount}
                 </span>
               )}
@@ -135,7 +136,7 @@ export function Header() {
           )}
           <Link
             href="/contact"
-            className="rounded-md bg-brand-lime-btn px-4 py-2 text-sm font-semibold text-white transition-colors hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+            className="rounded-md bg-brand-neon-btn px-4 py-2 text-sm font-semibold text-white transition-colors hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
           >
             상담 신청
           </Link>
@@ -143,7 +144,7 @@ export function Header() {
 
         {/* Mobile Menu */}
         <Sheet open={open} onOpenChange={setOpen}>
-          <SheetTrigger aria-label="메뉴 열기" className="lg:hidden rounded-md p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-text-secondary hover:bg-surface-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe">
+          <SheetTrigger aria-label="메뉴 열기" className="lg:hidden rounded-md p-2.5 min-h-[44px] min-w-[44px] flex items-center justify-center text-text-secondary hover:bg-surface-secondary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -177,7 +178,7 @@ export function Header() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mx-4 rounded-md bg-brand-lime-btn py-3 text-center text-base font-semibold text-white min-h-[44px] flex items-center justify-center"
+                className="mx-4 rounded-md bg-brand-neon-btn py-3 text-center text-base font-semibold text-white min-h-[44px] flex items-center justify-center"
               >
                 상담 신청
               </Link>
@@ -190,7 +191,7 @@ export function Header() {
                   >
                     장바구니
                     {cartCount > 0 && (
-                      <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-lime-btn px-1 text-xs font-bold text-white">
+                      <span className="flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-neon-btn px-1 text-xs font-bold text-white">
                         {cartCount}
                       </span>
                     )}

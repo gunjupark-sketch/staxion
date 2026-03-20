@@ -176,7 +176,7 @@ export default function LoginPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full min-h-[48px] bg-brand-lime-btn text-base font-semibold text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+              className="w-full min-h-[48px] bg-brand-neon-btn text-base font-semibold text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
             >
               {loading ? "로그인 중..." : "로그인"}
             </Button>
@@ -184,7 +184,7 @@ export default function LoginPage() {
 
           <p className="mt-6 text-center text-sm text-text-muted">
             아직 계정이 없으신가요?{" "}
-            <Link href="/signup" className="inline-flex min-h-[44px] items-center font-medium text-brand-lime-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe">
+            <Link href="/signup" className="inline-flex min-h-[44px] items-center font-medium text-brand-neon-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe">
               회원가입
             </Link>
           </p>

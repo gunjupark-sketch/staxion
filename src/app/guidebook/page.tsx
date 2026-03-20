@@ -6,8 +6,8 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
-  title: "미용치과 도입 실무 마스터 가이드북 | MEDI STAXION",
-  description: "미용치과 도입을 위한 실무 가이드북. 법적 근거부터 시술 도입, 운영, 마케팅까지 체계적 로드맵.",
+  title: "미용치과 실무 마스터 가이드북 | MEDI STAXION",
+  description: "미용 진료를 위한 실무 가이드북. 법적 근거부터 시술 도입, 운영, 마케팅까지 체계적 로드맵.",
 };
 
 export default function GuidebookPage() {
@@ -16,34 +16,37 @@ export default function GuidebookPage() {
       <PageBanner pageSlug="guidebook" />
 
       {/* 히어로 섹션 */}
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden bg-layout-dark py-24 md:py-32">
         <Image
           src="/images/bg/guidebook-banner.png"
-          alt="미용치과 도입 실무 마스터 가이드북"
+          alt="미용치과 실무 마스터 가이드북"
           fill
           className="object-cover"
           priority
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <h1 className="text-3xl font-bold text-white md:text-5xl">
-            미용치과 도입 실무 마스터 가이드북
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            Guidebook
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
+            미용치과 실무 마스터 가이드북
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
+          <p className="mx-auto mt-4 max-w-2xl text-white/60">
             법적 근거부터 시술 도입, 운영, 마케팅까지 체계적 로드맵
           </p>
         </div>
       </section>
 
       {/* 이 가이드북이 필요한 이유 */}
-      <section className="bg-card py-20">
+      <section className="bg-card py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
               컨설팅 전, 먼저 읽는 가이드북
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-muted">
-              일을 모르고 맡길 수 없는 시대입니다. 미용치과 도입의 전체 그림을 먼저 이해하고,
+              일을 모르고 맡길 수 없는 시대입니다. 미용 진료의 전체 그림을 먼저 이해하고,
               체계적으로 준비하세요.
             </p>
           </div>
@@ -75,7 +78,7 @@ export default function GuidebookPage() {
       </section>
 
       {/* 목차 */}
-      <section className="bg-surface-secondary py-20">
+      <section className="bg-surface-secondary py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">목차 미리보기</h2>
           <Accordion className="mt-10">
@@ -101,10 +104,10 @@ export default function GuidebookPage() {
       </section>
 
       {/* 퍼널: 가이드북 → 교육 → 컨설팅 */}
-      <section className="bg-card py-20">
+      <section className="bg-card py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
               Growth Path
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -117,7 +120,7 @@ export default function GuidebookPage() {
               {
                 step: "STEP 1",
                 title: "가이드북",
-                desc: "미용치과 도입의 전체 로드맵을 이해합니다. 시술 선택, 장비, 인력, 마케팅, 수익 관리까지.",
+                desc: "미용 진료의 전체 로드맵을 이해합니다. 시술 선택, 장비, 인력, 마케팅, 수익 관리까지.",
                 status: "현재 단계",
                 active: true,
               },
@@ -140,11 +143,11 @@ export default function GuidebookPage() {
                 key={item.step}
                 className={`rounded-2xl border-2 p-8 ${
                   item.active
-                    ? "border-brand-lime-safe bg-brand-lime-safe/5"
+                    ? "border-brand-neon-safe bg-brand-neon-safe/5"
                     : "border-border/50"
                 }`}
               >
-                <span className={`text-xs font-bold ${item.active ? "text-brand-lime-text" : "text-text-muted"}`}>
+                <span className={`text-xs font-bold ${item.active ? "text-brand-neon-text" : "text-text-muted"}`}>
                   {item.step}
                 </span>
                 <h3 className="mt-2 text-xl font-bold text-text-primary">{item.title}</h3>
@@ -152,7 +155,7 @@ export default function GuidebookPage() {
                 <span
                   className={`mt-4 inline-block rounded-full px-3 py-1 text-xs font-semibold ${
                     item.active
-                      ? "bg-brand-lime-safe/10 text-brand-lime-text"
+                      ? "bg-brand-neon-safe/10 text-brand-neon-text"
                       : "bg-surface-secondary text-text-muted"
                   }`}
                 >
@@ -164,17 +167,17 @@ export default function GuidebookPage() {
         </div>
       </section>
 
-      {/* 저자 */}
-      <section className="bg-surface-secondary py-20">
+      {/* 감수 */}
+      <section className="bg-surface-secondary py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
-          <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">저자 소개</h2>
+          <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">감수</h2>
           <Card className="mt-10 border-border/50">
             <CardContent className="p-8">
-              <h3 className="text-xl font-bold text-text-primary">최재영 원장</h3>
-              <p className="mt-1 text-sm text-brand-lime-text">아름다운얼굴치과 대표원장</p>
+              <h3 className="text-xl font-bold text-text-primary">MEDI STAXION</h3>
+              <p className="mt-1 text-sm text-brand-neon-text">의료성장연구소</p>
               <p className="mt-4 text-sm leading-relaxed text-text-secondary">
-                치과에서 미용시술을 성공적으로 도입한 선구자. 수년간의 실전 경험과 수백 명의
-                교육 수료생을 배출한 노하우를 이 가이드북에 담았습니다.
+                의료 교육, 브랜딩, 마케팅 전문가들이 현장 경험과 데이터 분석을 바탕으로
+                치과 미용시술 도입의 전 과정을 체계적으로 정리했습니다.
               </p>
             </CardContent>
           </Card>
@@ -182,7 +185,7 @@ export default function GuidebookPage() {
       </section>
 
       {/* FAQ */}
-      <section className="bg-card py-20">
+      <section className="bg-card py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">자주 묻는 질문</h2>
           <Accordion className="mt-10">
@@ -209,16 +212,16 @@ export default function GuidebookPage() {
       {/* 구매 CTA */}
       <section id="purchase" className="bg-surface-dark py-16">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
-          <h2 className="text-2xl font-bold text-white">미용치과 도입, 지금 시작하세요</h2>
-          <p className="mt-3 text-gray-400">가이드북 한 권으로 시행착오를 줄이세요.</p>
+          <h2 className="text-2xl font-bold text-white">미용 진료, 지금 시작하세요</h2>
+          <p className="mt-3 text-white/60">가이드북 한 권으로 시행착오를 줄이세요.</p>
           <div className="mt-8 flex flex-col items-center gap-3 px-4 sm:px-0">
             <Link
               href="/contact?type=guidebook"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-lime/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-neon px-10 text-base font-bold text-surface-dark transition-colors hover:bg-brand-neon/90 sm:w-auto"
             >
               가이드북 구매 문의
             </Link>
-            <p className="text-xs text-gray-500">20~30만원대 (VAT 포함) · PDF 즉시 다운로드 · 세미나 우선 등록 혜택</p>
+            <p className="text-xs text-white/40">20~30만원대 (VAT 포함) · PDF 즉시 다운로드 · 세미나 우선 등록 혜택</p>
           </div>
         </div>
       </section>

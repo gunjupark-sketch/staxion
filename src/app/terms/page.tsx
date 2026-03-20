@@ -42,9 +42,9 @@ export default function TermsPage() {
             <h2 className="mb-4 text-xl font-semibold text-text-primary">제4조 (서비스의 제공)</h2>
             <p className="mb-3">회사는 다음의 서비스를 제공합니다.</p>
             <ol className="list-decimal space-y-2 pl-5">
-              <li>미용치과 도입 가이드북 판매</li>
+              <li>미용치과 가이드북 판매</li>
               <li>미용치과 관련 교육 및 세미나</li>
-              <li>미용치과 도입 컨설팅</li>
+              <li>미용치과 컨설팅</li>
               <li>미용치과 장비 및 재료 판매 (스토어)</li>
               <li>권역 분석 서비스</li>
               <li>기타 회사가 정하는 서비스</li>

@@ -492,8 +492,8 @@ export default function SignupPage() {
                   onClick={() => fileInputRef.current?.click()}
                   className={`flex min-h-[100px] cursor-pointer flex-col items-center justify-center rounded-lg border-2 border-dashed p-4 transition-colors ${
                     dragActive
-                      ? "border-brand-lime-safe bg-brand-lime-safe/5"
-                      : "border-border hover:border-brand-lime-safe/50"
+                      ? "border-brand-neon-safe bg-brand-neon-safe/5"
+                      : "border-border hover:border-brand-neon-safe/50"
                   }`}
                 >
                   <input
@@ -568,7 +568,7 @@ export default function SignupPage() {
                 <select
                   id="referral_source"
                   name="referral_source"
-                  className="flex min-h-[44px] w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-text-primary shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-brand-lime-safe focus:ring-offset-1"
+                  className="flex min-h-[44px] w-full rounded-md border border-border bg-background px-3 py-2 text-sm text-text-primary shadow-sm transition-colors focus:outline-none focus:ring-2 focus:ring-brand-neon-safe focus:ring-offset-1"
                 >
                   {REFERRAL_OPTIONS.map((opt) => (
                     <option key={opt.value} value={opt.value}>
@@ -590,7 +590,7 @@ export default function SignupPage() {
                         type="radio"
                         name="is_clinic_owner"
                         value={option}
-                        className="h-4 w-4 accent-brand-lime-safe"
+                        className="h-4 w-4 accent-brand-neon-safe"
                       />
                       {option}
                     </label>
@@ -615,8 +615,8 @@ export default function SignupPage() {
                         onClick={() => handleInterestToggle(option)}
                         className={`rounded-full border px-3 py-1.5 text-sm transition-colors min-h-[36px] ${
                           selected
-                            ? "border-brand-lime-safe bg-brand-lime-safe/10 font-medium text-text-primary"
-                            : "border-border text-text-muted hover:border-brand-lime-safe/50"
+                            ? "border-brand-neon-safe bg-brand-neon-safe/10 font-medium text-text-primary"
+                            : "border-border text-text-muted hover:border-brand-neon-safe/50"
                         } ${
                           !selected && interests.length >= 3
                             ? "cursor-not-allowed opacity-40"
@@ -634,7 +634,7 @@ export default function SignupPage() {
             <Button
               type="submit"
               disabled={loading}
-              className="w-full min-h-[48px] bg-brand-lime-btn text-base font-semibold text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+              className="w-full min-h-[48px] bg-brand-neon-btn text-base font-semibold text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
             >
               {loading ? "가입 중..." : "가입하기"}
             </Button>
@@ -650,7 +650,7 @@ export default function SignupPage() {
             이미 계정이 있으신가요?{" "}
             <Link
               href="/login"
-              className="inline-flex min-h-[44px] items-center font-medium text-brand-lime-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+              className="inline-flex min-h-[44px] items-center font-medium text-brand-neon-text hover:underline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
             >
               로그인
             </Link>

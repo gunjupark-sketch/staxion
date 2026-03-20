@@ -1,18 +1,18 @@
 "use client";
 
 const CLINICS = [
-  { name: "미소플러스치과", location: "서울 강남", since: "2024" },
-  { name: "뉴스마일치과", location: "서울 서초", since: "2024" },
-  { name: "하늘치과의원", location: "경기 분당", since: "2025" },
-  { name: "예쁜미소치과", location: "서울 송파", since: "2025" },
-  { name: "더좋은치과", location: "인천 연수", since: "2025" },
-  { name: "강남밝은치과", location: "서울 강남", since: "2025" },
-  { name: "푸른하늘치과", location: "경기 수원", since: "2026" },
-  { name: "행복한치과", location: "서울 마포", since: "2026" },
-  { name: "미래치과의원", location: "대전 유성", since: "2026" },
-  { name: "연세밝은치과", location: "서울 영등포", since: "2026" },
-  { name: "미소플러스치과", location: "서울 강남", since: "2024" },
-  { name: "뉴스마일치과", location: "서울 서초", since: "2024" },
+  { name: "더스테이션 치과", location: "서울 강남", since: "2024" },
+  { name: "더스테이션 치과", location: "서울 서초", since: "2024" },
+  { name: "더스테이션 치과", location: "경기 분당", since: "2025" },
+  { name: "더스테이션 치과", location: "서울 송파", since: "2025" },
+  { name: "더스테이션 치과", location: "인천 연수", since: "2025" },
+  { name: "더스테이션 치과", location: "서울 강남", since: "2025" },
+  { name: "더스테이션 치과", location: "경기 수원", since: "2026" },
+  { name: "더스테이션 치과", location: "서울 마포", since: "2026" },
+  { name: "더스테이션 치과", location: "대전 유성", since: "2026" },
+  { name: "더스테이션 치과", location: "서울 영등포", since: "2026" },
+  { name: "더스테이션 치과", location: "서울 강남", since: "2024" },
+  { name: "더스테이션 치과", location: "서울 서초", since: "2024" },
 ];
 
 export default function RightSidebar() {
@@ -25,12 +25,12 @@ export default function RightSidebar() {
         className="sticky top-[76px] overflow-y-auto p-4 space-y-4"
         style={{ maxHeight: "calc(100vh - 76px)" }}
       >
-        {/* 미용치과 도입 원장 — 위로 슬라이드 */}
+        {/* 미용 진료중인 치과 — 위로 슬라이드 */}
         <div
           className="rounded-xl p-4 border border-border"
         >
           <p className="mb-1 text-[13px] font-bold text-foreground">
-            미용치과 도입 원장
+            미용 진료중인 치과
           </p>
           <p className="mb-4 text-[11px] text-text-muted">
             MEDI STAXION과 함께하는 치과
@@ -62,7 +62,7 @@ export default function RightSidebar() {
                       {clinic.name}
                     </p>
                     <p className="text-[10px] text-text-muted">
-                      {clinic.location} · {clinic.since}년 도입
+                      {clinic.location} · {clinic.since}년 시작
                     </p>
                   </div>
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { createClient } from "@/lib/supabase/client";
@@ -97,18 +98,18 @@ export default function NewsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-surface-dark py-16 md:py-20">
+      <section className="bg-layout-dark py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">News & Insights</p>
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">News & Insights</p>
           <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">소식</h1>
-          <p className="mx-auto mt-4 max-w-xl text-gray-400">
+          <p className="mx-auto mt-4 max-w-xl text-white/60">
             미용치과 업계 소식, 인사이트, 실무 노하우를 한눈에
           </p>
         </div>
       </section>
 
       {/* Filter Bar */}
-      <section className="sticky top-16 z-30 border-b bg-white/95 backdrop-blur-sm">
+      <section className="sticky top-16 z-30 border-b border-border bg-card/95 backdrop-blur-sm">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           {/* Search */}
           <div className="py-3">
@@ -133,7 +134,7 @@ export default function NewsPage() {
                 placeholder="제목, 내용으로 검색..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="h-11 w-full rounded-lg border border-border/60 bg-surface-secondary/50 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-muted focus:border-brand-lime-safe focus:outline-none focus:ring-2 focus:ring-brand-lime-safe/20"
+                className="h-11 w-full rounded-lg border border-border/60 bg-surface-secondary/50 pl-10 pr-4 text-sm text-text-primary placeholder:text-text-muted focus:border-brand-neon-safe focus:outline-none focus:ring-2 focus:ring-brand-neon-safe/20"
               />
             </div>
           </div>
@@ -146,7 +147,7 @@ export default function NewsPage() {
                 className={`shrink-0 rounded-full px-4 py-2 text-sm font-medium transition-colors min-h-[40px] ${
                   activeCategory === cat.value
                     ? "bg-text-primary text-white"
-                    : "bg-surface-secondary text-text-secondary hover:bg-gray-200"
+                    : "bg-surface-secondary text-text-secondary hover:bg-surface-secondary/80"
                 }`}
               >
                 {cat.label}
@@ -170,12 +171,12 @@ export default function NewsPage() {
             <div className="space-y-4">
               {[1, 2, 3].map((i) => (
                 <div key={i} className="animate-pulse rounded-xl border border-border/30 p-5">
-                  <div className="h-4 w-16 rounded bg-gray-200" />
-                  <div className="mt-3 h-5 w-3/4 rounded bg-gray-200" />
-                  <div className="mt-2 h-4 w-full rounded bg-gray-100" />
+                  <div className="h-4 w-16 rounded bg-surface-secondary" />
+                  <div className="mt-3 h-5 w-3/4 rounded bg-surface-secondary" />
+                  <div className="mt-2 h-4 w-full rounded bg-surface-secondary/50" />
                   <div className="mt-4 flex gap-4">
-                    <div className="h-3 w-20 rounded bg-gray-100" />
-                    <div className="h-3 w-16 rounded bg-gray-100" />
+                    <div className="h-3 w-20 rounded bg-surface-secondary/50" />
+                    <div className="h-3 w-16 rounded bg-surface-secondary/50" />
                   </div>
                 </div>
               ))}
@@ -210,7 +211,7 @@ export default function NewsPage() {
                               </span>
                             )}
                           </div>
-                          <h3 className="mt-2 text-base font-bold leading-snug text-text-primary group-hover:text-brand-lime-text transition-colors sm:text-lg">
+                          <h3 className="mt-2 text-base font-bold leading-snug text-text-primary group-hover:text-brand-neon-text transition-colors sm:text-lg">
                             {post.title}
                           </h3>
                           {post.excerpt && (
@@ -236,11 +237,13 @@ export default function NewsPage() {
                         {/* Thumbnail */}
                         {post.cover_image && (
                           <div className="hidden shrink-0 sm:block">
-                            <div className="h-20 w-28 overflow-hidden rounded-lg bg-surface-secondary">
-                              <img
+                            <div className="relative h-20 w-28 overflow-hidden rounded-lg bg-surface-secondary">
+                              <Image
                                 src={post.cover_image}
                                 alt=""
-                                className="h-full w-full object-cover"
+                                fill
+                                className="object-cover"
+                                sizes="112px"
                               />
                             </div>
                           </div>

@@ -8,7 +8,7 @@ import PageBanner from "@/components/PageBanner";
 
 export const metadata: Metadata = {
   title: "메디컨시어지 서비스 | MEDI STAXION",
-  description: "미용치과 도입을 위한 올인원 컨시어지 서비스. 컨설팅, 장비 셋업, 교육, 마케팅까지.",
+  description: "미용 진료를 위한 올인원 컨시어지 서비스. 컨설팅, 장비 셋업, 교육, 마케팅까지.",
 };
 
 export default async function ServicesPage() {
@@ -28,7 +28,7 @@ export default async function ServicesPage() {
       <PageBanner pageSlug="services" />
 
       {/* 히어로 섹션 */}
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden bg-layout-dark py-24 md:py-32">
         <Image
           src="/images/bg/services-banner.png"
           alt="메디컨시어지 서비스"
@@ -38,11 +38,14 @@ export default async function ServicesPage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <h1 className="text-3xl font-bold text-white md:text-5xl">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            Medi-Concierge
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
             메디컨시어지 서비스
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-            미용치과 도입을 위한 올인원 컨시어지. 컨설팅, 장비 셋업, 교육, 마케팅까지.
+          <p className="mx-auto mt-4 max-w-2xl text-white/60">
+            미용 진료를 위한 올인원 컨시어지. 컨설팅, 장비 셋업, 교육, 마케팅까지.
           </p>
         </div>
       </section>
@@ -51,7 +54,7 @@ export default async function ServicesPage() {
       <section className="relative bg-card py-24 md:py-32">
         <div className="mx-auto max-w-6xl px-5 md:px-8">
           <div className="text-center">
-            <p className="text-xs font-semibold tracking-[0.25em] text-brand-lime-text uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
               Service Flow
             </p>
             <h2 className="mt-3 text-3xl font-bold text-text-primary md:text-4xl">
@@ -78,7 +81,7 @@ export default async function ServicesPage() {
                   <div className="absolute top-8 left-[calc(50%+2rem)] h-px w-[calc(100%-4rem)] bg-border" />
                 )}
                 <div className="relative z-10 flex h-16 w-16 items-center justify-center rounded-full bg-surface-dark shadow-lg">
-                  <span className="text-sm font-bold text-brand-lime">{item.step}</span>
+                  <span className="text-sm font-bold text-brand-neon">{item.step}</span>
                 </div>
                 <h3 className="mt-5 text-sm font-bold leading-snug text-text-primary whitespace-pre-line">
                   {item.title}
@@ -104,7 +107,7 @@ export default async function ServicesPage() {
               ].map((item) => (
                 <div key={item.step} className="relative flex gap-5 pl-1">
                   <div className="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-dark shadow-md">
-                    <span className="text-xs font-bold text-brand-lime">{item.step}</span>
+                    <span className="text-xs font-bold text-brand-neon">{item.step}</span>
                   </div>
                   <div className="pt-1">
                     <h3 className="text-sm font-bold text-text-primary">{item.title}</h3>
@@ -121,13 +124,13 @@ export default async function ServicesPage() {
       <section className="bg-surface-dark py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-5 md:px-8">
           <div className="text-center">
-            <p className="text-xs font-semibold tracking-[0.25em] text-brand-lime uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
               Why Clinics Fail
             </p>
             <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
               많은 치과들이 폐원하는 이유
             </h2>
-            <p className="mx-auto mt-4 max-w-lg text-gray-400">
+            <p className="mx-auto mt-4 max-w-lg text-white/60">
               마케팅 대행사에 의존하고, 데이터 없이 감으로 운영하면 결과는 같습니다.
             </p>
           </div>
@@ -144,7 +147,7 @@ export default async function ServicesPage() {
                 className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur-sm"
               >
                 <span className="text-2xl">{item.icon}</span>
-                <p className="mt-3 text-sm leading-relaxed text-gray-300">{item.reason}</p>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">{item.reason}</p>
               </div>
             ))}
           </div>
@@ -156,7 +159,7 @@ export default async function ServicesPage() {
         <section className="bg-surface-secondary py-24 md:py-32">
           <div className="mx-auto max-w-6xl px-5 md:px-8">
             <div className="text-center">
-              <p className="text-xs font-semibold tracking-[0.25em] text-brand-lime-text uppercase">
+              <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
                 Our Services
               </p>
               <h2 className="mt-3 text-3xl font-bold text-text-primary md:text-4xl">
@@ -189,7 +192,7 @@ export default async function ServicesPage() {
                     <CardContent className="p-6">
                       <div className="flex flex-wrap gap-1.5 mb-3">
                         {service.category && (
-                          <Badge variant="secondary" className="bg-brand-lime-safe/10 text-brand-lime-text text-xs">
+                          <Badge variant="secondary" className="bg-brand-neon-safe/10 text-brand-neon-text text-xs">
                             {service.category}
                           </Badge>
                         )}
@@ -197,7 +200,7 @@ export default async function ServicesPage() {
                           <Badge variant="outline" className="text-xs">{service.delivery_type}</Badge>
                         )}
                       </div>
-                      <h3 className="text-lg font-bold text-text-primary group-hover:text-brand-lime-text transition-colors">
+                      <h3 className="text-lg font-bold text-text-primary group-hover:text-brand-neon-text transition-colors">
                         {service.name}
                       </h3>
                       {service.description && (
@@ -206,14 +209,14 @@ export default async function ServicesPage() {
                         </p>
                       )}
                       {service.price != null && Number(service.price) > 0 && (
-                        <p className="mt-4 text-xl font-bold text-brand-lime-text">
+                        <p className="mt-4 text-xl font-bold text-brand-neon-text">
                           {Number(service.price).toLocaleString()}
                           <span className="text-sm font-normal text-text-muted ml-0.5">
                             {service.price_unit || "원"}
                           </span>
                         </p>
                       )}
-                      <div className="mt-4 flex items-center text-sm font-medium text-brand-lime-text opacity-0 transition-opacity group-hover:opacity-100">
+                      <div className="mt-4 flex items-center text-sm font-medium text-brand-neon-text opacity-0 transition-opacity group-hover:opacity-100">
                         자세히 보기
                         <svg className="ml-1 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -231,19 +234,19 @@ export default async function ServicesPage() {
       {/* ═══ 4. CTA — 풀 와이드 ═══ */}
       <section className="bg-surface-dark py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-5 text-center md:px-8">
-          <p className="text-xs font-semibold tracking-[0.25em] text-brand-lime uppercase">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
             Get Started
           </p>
           <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
             치과의 골든시그널을 찾는 의료성장연구소
           </h2>
-          <p className="mt-4 text-gray-400">
+          <p className="mt-4 text-white/60">
             데이터 기반 분석과 실행 전략으로 치과의 성장을 설계합니다.
           </p>
           <div className="mt-10">
             <Link
               href="/contact"
-              className="inline-flex h-14 items-center justify-center rounded-xl bg-brand-lime-btn px-10 text-base font-semibold text-white transition-all hover:bg-brand-lime-btn/90 hover:shadow-lg hover:shadow-brand-lime-btn/20"
+              className="inline-flex h-14 items-center justify-center rounded-xl bg-brand-neon-btn px-10 text-base font-semibold text-white transition-all hover:bg-brand-neon-btn/90 hover:shadow-lg hover:shadow-brand-neon-btn/20"
             >
               상담 신청하기
             </Link>

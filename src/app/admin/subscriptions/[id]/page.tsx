@@ -267,7 +267,7 @@ export default function AdminSubscriptionDetailPage() {
   if (loading) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -309,7 +309,7 @@ export default function AdminSubscriptionDetailPage() {
         <CardContent className="space-y-4 pt-2">
           <div className="flex items-start gap-3">
             <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-surface-dark">
-              <CrownIcon className="size-5 text-brand-lime" />
+              <CrownIcon className="size-5 text-brand-neon" />
             </div>
             <div className="flex-1">
               <div className="flex flex-wrap items-center gap-2">
@@ -356,7 +356,7 @@ export default function AdminSubscriptionDetailPage() {
             <Link
               href={`/wr/${sub.waiting_room_code}`}
               target="_blank"
-              className="inline-flex items-center gap-1 text-xs text-brand-lime-text hover:underline"
+              className="inline-flex items-center gap-1 text-xs text-brand-neon-text hover:underline"
             >
               <ExternalLinkIcon className="size-3" /> 대기실 재생
             </Link>
@@ -394,7 +394,7 @@ export default function AdminSubscriptionDetailPage() {
           </div>
           <div className="mt-2 h-2 overflow-hidden rounded-full bg-surface-secondary">
             <div
-              className="h-full rounded-full bg-brand-lime-btn transition-all"
+              className="h-full rounded-full bg-brand-neon-btn transition-all"
               style={{ width: `${usagePercent}%` }}
             />
           </div>
@@ -461,7 +461,7 @@ export default function AdminSubscriptionDetailPage() {
                 size="sm"
                 onClick={handleYoutubeSubmit}
                 disabled={uploading || !youtubeUrl.trim()}
-                className="bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90"
+                className="bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90"
               >
                 등록
               </Button>

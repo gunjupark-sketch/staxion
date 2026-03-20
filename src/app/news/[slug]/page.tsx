@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
@@ -83,11 +84,11 @@ export default async function NewsDetailPage({
   return (
     <>
       {/* Hero */}
-      <section className="bg-surface-dark py-16 md:py-20">
+      <section className="bg-layout-dark py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <Link
             href="/news"
-            className="inline-flex items-center gap-1.5 text-sm text-gray-400 transition-colors hover:text-brand-lime"
+            className="inline-flex items-center gap-1.5 text-sm text-white/60 transition-colors hover:text-brand-neon"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -117,9 +118,9 @@ export default async function NewsDetailPage({
             {post.title}
           </h1>
 
-          <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-gray-400">
+          <div className="mt-5 flex flex-wrap items-center gap-3 text-sm text-white/60">
             {post.author_name && (
-              <span className="font-medium text-gray-300">
+              <span className="font-medium text-white/80">
                 {post.author_name}
               </span>
             )}
@@ -150,11 +151,13 @@ export default async function NewsDetailPage({
       {/* Cover Image */}
       {post.cover_image && (
         <div className="mx-auto max-w-3xl px-4 md:px-6">
-          <div className="-mt-2 overflow-hidden rounded-xl">
-            <img
+          <div className="-mt-2 relative aspect-[2/1] overflow-hidden rounded-xl">
+            <Image
               src={post.cover_image}
               alt={post.title}
-              className="w-full object-cover"
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, 768px"
             />
           </div>
         </div>
@@ -164,7 +167,7 @@ export default async function NewsDetailPage({
       <article className="py-10 md:py-14">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <div
-            className="prose prose-lg max-w-none prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-brand-lime-safe prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-strong:text-text-primary"
+            className="prose prose-lg max-w-none prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-brand-neon-safe prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-strong:text-text-primary"
             dangerouslySetInnerHTML={{ __html: post.content || "" }}
           />
         </div>

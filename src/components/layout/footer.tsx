@@ -29,7 +29,8 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4">
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
-            <Image src="/logo.png" alt="MEDI STAXION" width={140} height={34} className="h-7 w-auto" />
+            <Image src="/logo.png" alt="MEDI STAXION" width={140} height={34} className="h-7 w-auto dark:hidden" />
+            <Image src="/logo-white.png" alt="MEDI STAXION" width={140} height={34} className="h-7 w-auto hidden dark:block" />
             <p className="mt-3 text-sm leading-relaxed text-text-muted">
               미용치과, 시작이 다르면
               <br />
@@ -48,7 +49,7 @@ export function Footer() {
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="inline-block min-h-[44px] py-2 text-sm text-text-muted transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-lime-safe"
+                      className="inline-block min-h-[44px] py-2 text-sm text-text-muted transition-colors hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-neon-safe"
                     >
                       {link.label}
                     </Link>

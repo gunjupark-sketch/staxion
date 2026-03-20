@@ -129,7 +129,7 @@ export default async function SeminarDetailPage({ params }: Props) {
           {/* 상단 정보 */}
           <div>
             <div className="flex flex-wrap gap-2">
-              <span className="inline-block rounded-full bg-brand-lime-safe/10 px-3 py-1 text-xs font-semibold text-brand-lime-text">
+              <span className="inline-block rounded-full bg-brand-neon-safe/10 px-3 py-1 text-xs font-semibold text-brand-neon-text">
                 {seminar.seminar_type || "오프라인"}
               </span>
               {isFree && (
@@ -177,7 +177,7 @@ export default async function SeminarDetailPage({ params }: Props) {
               <h3 className="text-sm font-semibold text-text-primary">참가 정보</h3>
               {!isFree ? (
                 <div>
-                  <p className="text-2xl font-bold text-brand-lime-text">
+                  <p className="text-2xl font-bold text-brand-neon-text">
                     {seminar.price.toLocaleString()}원
                   </p>
                   {seminar.early_bird_price != null && (
@@ -201,7 +201,7 @@ export default async function SeminarDetailPage({ params }: Props) {
             <div className="mt-8">
               <Link
                 href="/contact"
-                className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
+                className="inline-flex h-12 w-full items-center justify-center rounded-lg bg-brand-neon-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-neon-btn/90 sm:w-auto"
               >
                 세미나 신청하기
               </Link>
@@ -215,7 +215,7 @@ export default async function SeminarDetailPage({ params }: Props) {
               <div className="mt-6 divide-y divide-border/50">
                 {curriculum.map((item, idx) => (
                   <div key={idx} className="flex gap-4 py-3">
-                    <span className="w-28 shrink-0 text-sm font-medium text-brand-lime-text">
+                    <span className="w-28 shrink-0 text-sm font-medium text-brand-neon-text">
                       {item.time}
                     </span>
                     <span className="text-sm text-text-secondary">{item.content}</span>
@@ -262,7 +262,7 @@ export default async function SeminarDetailPage({ params }: Props) {
               <div className="mt-4">
                 <Link
                   href="/contact"
-                  className="inline-flex h-12 items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90"
+                  className="inline-flex h-12 items-center justify-center rounded-lg bg-brand-neon-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-neon-btn/90"
                 >
                   세미나 신청하기
                 </Link>

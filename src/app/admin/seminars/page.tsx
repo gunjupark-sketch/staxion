@@ -105,7 +105,7 @@ export default function SeminarsPage() {
         </div>
         <Button
           onClick={() => router.push("/admin/seminars/new")}
-          className="min-h-[44px] gap-2 bg-brand-lime-btn text-sm font-semibold text-white hover:bg-brand-lime-btn/90"
+          className="min-h-[44px] gap-2 bg-brand-neon-btn text-sm font-semibold text-white hover:bg-brand-neon-btn/90"
         >
           <PlusIcon className="size-4" />
           세미나 등록
@@ -139,14 +139,14 @@ export default function SeminarsPage() {
       <div className="mt-4 overflow-x-auto rounded-lg border">
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
           </div>
         ) : (
           <Table>
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[44px]">
-                  <input type="checkbox" checked={allChecked} onChange={toggleAll} className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe" />
+                  <input type="checkbox" checked={allChecked} onChange={toggleAll} className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe" />
                 </TableHead>
                 <TableHead className="w-[80px]">상태</TableHead>
                 <TableHead>제목</TableHead>
@@ -177,7 +177,7 @@ export default function SeminarsPage() {
                         type="checkbox"
                         checked={selectedIds.has(seminar.id)}
                         onChange={() => toggleOne(seminar.id)}
-                        className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe"
+                        className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe"
                       />
                     </TableCell>
                     <TableCell>

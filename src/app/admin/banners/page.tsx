@@ -264,7 +264,7 @@ export default function AdminBannersPage() {
       <div className="mt-6 space-y-3">
         {loading ? (
           <div className="flex justify-center py-12">
-            <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+            <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
           </div>
         ) : banners.length === 0 ? (
           <div className="rounded-lg border border-dashed py-16 text-center">
@@ -508,7 +508,7 @@ export default function AdminBannersPage() {
                   onChange={(e) =>
                     setForm({ ...form, is_active: e.target.checked })
                   }
-                  className="size-4 rounded border-gray-300 text-brand-lime-text accent-[#8EC31F]"
+                  className="size-4 rounded border-gray-300 text-brand-neon-text accent-[#8EC31F]"
                 />
                 <span className="text-sm font-medium">활성</span>
               </label>

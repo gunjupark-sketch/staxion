@@ -102,7 +102,7 @@ export default function MypageLayout({
   if (loading) {
     return (
       <div className="flex min-h-[60vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -135,7 +135,7 @@ export default function MypageLayout({
                 className={cn(
                   "flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors",
                   isActive(item.href)
-                    ? "bg-brand-lime-safe/10 text-brand-lime-text"
+                    ? "bg-brand-neon-safe/10 text-brand-neon-text"
                     : "text-text-secondary hover:bg-surface-secondary hover:text-text-primary"
                 )}
               >
@@ -155,7 +155,7 @@ export default function MypageLayout({
               className={cn(
                 "flex shrink-0 items-center gap-1.5 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors min-h-[44px]",
                 isActive(item.href)
-                  ? "bg-brand-lime-safe/10 text-brand-lime-text"
+                  ? "bg-brand-neon-safe/10 text-brand-neon-text"
                   : "text-text-secondary hover:bg-surface-secondary"
               )}
             >

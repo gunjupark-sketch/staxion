@@ -98,13 +98,13 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
       <Item icon={GraduationCap} label="교육 및 세미나" href="/education" />
       <Item icon={Crosshair} label="골든시그널" />
       <Sub label="권역분석" href="/area-analysis" />
-      <Sub label="캐치전략" href="/services/catch" />
-      <Sub label="핀셋마케팅" href="/services/pinset" />
+      <Sub label="캐치전략" href="/services/golden-signal-catch-strategy" />
+      <Sub label="핀셋마케팅" href="/services/pincet-marketing" />
       <Item icon={Palette} label="브랜딩 및 디자인" />
-      <Sub label="BI정립" href="/services/branding" />
-      <Sub label="브랜드정렬" href="/services/branding" />
+      <Sub label="BI정립" href="/services/bi-brand-identity" />
+      <Sub label="디자인정렬" href="/services/design-alignment" />
       <Item icon={Tv} label="대기실 영상구독" href="/mypage/waiting-room" />
-      <Item icon={BookOpen} label="미용치과 도입 가이드북" href="/guidebook" />
+      <Item icon={BookOpen} label="미용치과 가이드북" href="/guidebook" />
 
       <div className="my-3" />
       <GroupLabel>협업</GroupLabel>

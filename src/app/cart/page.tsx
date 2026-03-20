@@ -153,7 +153,7 @@ export default function CartPage() {
   if (loading) {
     return (
       <div className="flex min-h-[50vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -168,7 +168,7 @@ export default function CartPage() {
             <p className="text-lg text-text-muted">장바구니가 비어있습니다.</p>
             <Link
               href="/store"
-              className="mt-6 rounded-xl bg-brand-lime-btn px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
+              className="mt-6 rounded-xl bg-brand-neon-btn px-6 py-3 text-sm font-semibold text-white hover:brightness-110"
             >
               스토어 둘러보기
             </Link>
@@ -284,7 +284,7 @@ export default function CartPage() {
               </div>
               <Button
                 onClick={handleCheckout}
-                className="mt-4 w-full h-13 bg-brand-lime-btn text-base font-bold text-white hover:brightness-110"
+                className="mt-4 w-full h-13 bg-brand-neon-btn text-base font-bold text-white hover:brightness-110"
               >
                 {totalAmount.toLocaleString()}원 결제하기
               </Button>

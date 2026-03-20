@@ -265,7 +265,7 @@ export default function MembersPage() {
       <div className="mt-4 overflow-x-auto rounded-lg border">
         {loading ? (
           <div className="flex items-center justify-center py-12">
-            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+            <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
           </div>
         ) : (
           <Table>
@@ -276,7 +276,7 @@ export default function MembersPage() {
                     type="checkbox"
                     checked={allChecked}
                     onChange={toggleAll}
-                    className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe"
+                    className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe"
                   />
                 </TableHead>
                 <TableHead>이름</TableHead>
@@ -307,13 +307,13 @@ export default function MembersPage() {
                         type="checkbox"
                         checked={selectedIds.has(member.id)}
                         onChange={() => toggleOne(member.id)}
-                        className="h-4 w-4 rounded border-gray-300 accent-brand-lime-safe"
+                        className="h-4 w-4 rounded border-gray-300 accent-brand-neon-safe"
                       />
                     </TableCell>
                     <TableCell className="font-medium">
                       {member.name || "-"}
                       {member.role === "admin" && (
-                        <Badge variant="secondary" className="ml-2 bg-brand-lime-safe/10 text-brand-lime-text text-[10px]">
+                        <Badge variant="secondary" className="ml-2 bg-brand-neon-safe/10 text-brand-neon-text text-[10px]">
                           관리자
                         </Badge>
                       )}

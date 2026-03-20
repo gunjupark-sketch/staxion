@@ -123,7 +123,7 @@ export default function OrderDetailPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -150,7 +150,7 @@ export default function OrderDetailPage() {
               <Button size="sm" variant="outline" onClick={() => { setEditMode(false); setSelectedStatus(order.status); }} disabled={saving}>
                 취소
               </Button>
-              <Button size="sm" onClick={handleSave} disabled={saving} className="gap-1.5 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90">
+              <Button size="sm" onClick={handleSave} disabled={saving} className="gap-1.5 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90">
                 <SaveIcon className="size-3.5" />
                 {saving ? "저장 중..." : "저장"}
               </Button>

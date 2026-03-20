@@ -25,9 +25,9 @@ export default function PrivacyPage() {
               <table className="w-full border-collapse text-sm">
                 <thead>
                   <tr className="bg-surface-dark text-text-inverse">
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">수집 시점</th>
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">수집 항목</th>
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">수집 방법</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">수집 시점</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">수집 항목</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">수집 방법</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -75,9 +75,9 @@ export default function PrivacyPage() {
               <table className="w-full border-collapse text-sm">
                 <thead>
                   <tr className="bg-surface-dark text-text-inverse">
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">보존 근거</th>
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">보존 항목</th>
-                    <th className="border-b-2 border-brand-lime-safe px-4 py-3 text-left font-semibold">보존 기간</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">보존 근거</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">보존 항목</th>
+                    <th className="border-b-2 border-brand-neon-safe px-4 py-3 text-left font-semibold">보존 기간</th>
                   </tr>
                 </thead>
                 <tbody>

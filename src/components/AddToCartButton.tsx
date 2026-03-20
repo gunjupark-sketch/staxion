@@ -61,7 +61,7 @@ export default function AddToCartButton({
     <button
       onClick={handleAdd}
       disabled={loading || isOutOfStock}
-      className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-border px-8 text-base font-semibold text-text-primary transition-all hover:border-brand-lime-safe hover:bg-brand-lime-btn/5 disabled:cursor-not-allowed disabled:opacity-50"
+      className="inline-flex h-13 items-center justify-center rounded-xl border-2 border-border px-8 text-base font-semibold text-text-primary transition-all hover:border-brand-neon-safe hover:bg-brand-neon-btn/5 disabled:cursor-not-allowed disabled:opacity-50"
     >
       {loading ? "담는 중..." : added ? "담겼습니다!" : isOutOfStock ? "품절" : "장바구니 담기"}
     </button>

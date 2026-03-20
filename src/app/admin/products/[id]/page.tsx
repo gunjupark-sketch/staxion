@@ -260,7 +260,7 @@ export default function ProductDetailPage() {
   if (loading) {
     return (
       <div className="flex items-center justify-center py-20">
-        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-6 w-6 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -293,7 +293,7 @@ export default function ProductDetailPage() {
               {!isNew && (
                 <Button size="sm" variant="outline" onClick={() => { setEditMode(false); fetchProduct(); }} disabled={saving}>취소</Button>
               )}
-              <Button size="sm" onClick={handleSave} disabled={saving} className="gap-1.5 bg-brand-lime-btn text-white hover:bg-brand-lime-btn/90">
+              <Button size="sm" onClick={handleSave} disabled={saving} className="gap-1.5 bg-brand-neon-btn text-white hover:bg-brand-neon-btn/90">
                 <SaveIcon className="size-3.5" /> {saving ? "저장 중..." : "저장"}
               </Button>
             </>
@@ -324,7 +324,7 @@ export default function ProductDetailPage() {
             <div className="space-y-1.5">
               <Label>상품명 *</Label>
               {editMode ? (
-                <Input value={form.name} onChange={(e) => handleNameChange(e.target.value)} placeholder="예: 미용치과 도입 실무 가이드북" />
+                <Input value={form.name} onChange={(e) => handleNameChange(e.target.value)} placeholder="예: 미용치과 실무 가이드북" />
               ) : (
                 <p className="text-sm text-text-primary">{form.name}</p>
               )}
@@ -335,7 +335,7 @@ export default function ProductDetailPage() {
                 <>
                   <Input value={form.slug} onChange={(e) => { setSlugManual(true); f("slug", e.target.value); }} placeholder="auto-generated-slug" />
                   {slugManual && isNew && (
-                    <button type="button" onClick={() => { setSlugManual(false); f("slug", generateSlug(form.name)); }} className="text-xs text-brand-lime-text hover:underline">자동 생성으로 되돌리기</button>
+                    <button type="button" onClick={() => { setSlugManual(false); f("slug", generateSlug(form.name)); }} className="text-xs text-brand-neon-text hover:underline">자동 생성으로 되돌리기</button>
                   )}
                 </>
               ) : (
@@ -366,11 +366,11 @@ export default function ProductDetailPage() {
                 {editMode && (
                   <div className="flex items-center gap-6 pt-7">
                     <label className="flex cursor-pointer items-center gap-2">
-                      <input type="checkbox" checked={form.is_digital} onChange={(e) => f("is_digital", e.target.checked)} className="size-4 rounded border-gray-300 accent-brand-lime-safe" />
+                      <input type="checkbox" checked={form.is_digital} onChange={(e) => f("is_digital", e.target.checked)} className="size-4 rounded border-gray-300 accent-brand-neon-safe" />
                       <span className="text-sm font-medium">디지털 상품</span>
                     </label>
                     <label className="flex cursor-pointer items-center gap-2">
-                      <input type="checkbox" checked={form.is_published} onChange={(e) => f("is_published", e.target.checked)} className="size-4 rounded border-gray-300 accent-brand-lime-safe" />
+                      <input type="checkbox" checked={form.is_published} onChange={(e) => f("is_published", e.target.checked)} className="size-4 rounded border-gray-300 accent-brand-neon-safe" />
                       <span className="text-sm font-medium">공개 (판매중)</span>
                     </label>
                   </div>
@@ -478,7 +478,7 @@ export default function ProductDetailPage() {
                   </div>
                 ))}
                 {editMode && (
-                  <button type="button" onClick={() => addChoice(optIdx)} className="text-xs text-brand-lime-text hover:underline mt-1">+ 선택지 추가</button>
+                  <button type="button" onClick={() => addChoice(optIdx)} className="text-xs text-brand-neon-text hover:underline mt-1">+ 선택지 추가</button>
                 )}
               </div>
             </div>

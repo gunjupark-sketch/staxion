@@ -124,7 +124,7 @@ export default function EnrollmentsPage() {
   if (loading) {
     return (
       <div className="flex min-h-[40vh] items-center justify-center">
-        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-lime-safe border-t-transparent" />
+        <div className="h-8 w-8 animate-spin rounded-full border-2 border-brand-neon-safe border-t-transparent" />
       </div>
     );
   }
@@ -151,7 +151,7 @@ export default function EnrollmentsPage() {
             className={cn(
               "rounded-lg px-4 py-2 text-sm font-medium transition-colors min-h-[44px]",
               activeTab === tab.key
-                ? "bg-brand-lime-safe/10 text-brand-lime-text"
+                ? "bg-brand-neon-safe/10 text-brand-neon-text"
                 : "text-text-secondary hover:bg-surface-secondary"
             )}
           >
@@ -173,7 +173,7 @@ export default function EnrollmentsPage() {
           </p>
           <a
             href="/education"
-            className="mt-4 rounded-lg bg-brand-lime-btn px-6 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-90 min-h-[44px] flex items-center"
+            className="mt-4 rounded-lg bg-brand-neon-btn px-6 py-2.5 text-sm font-semibold text-black transition-opacity hover:opacity-90 min-h-[44px] flex items-center"
           >
             교육 프로그램 보기
           </a>
@@ -204,7 +204,7 @@ export default function EnrollmentsPage() {
                         {enrollment.type === "education" ? "교육" : "세미나"}
                       </span>
                       {!isPast && dday && (
-                        <span className="rounded-md bg-brand-lime-safe/10 px-2 py-0.5 text-xs font-bold text-brand-lime-text">
+                        <span className="rounded-md bg-brand-neon-safe/10 px-2 py-0.5 text-xs font-bold text-brand-neon-text">
                           {dday}
                         </span>
                       )}

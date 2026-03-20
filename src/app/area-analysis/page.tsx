@@ -33,7 +33,7 @@ export default function AreaAnalysisPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/area-analysis/map"
-              className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-neon px-8 text-base font-bold text-layout-dark transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
+              className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
             >
               <MapPin className="h-5 w-5" />
               무료 지도 체험
@@ -230,7 +230,7 @@ export default function AreaAnalysisPage() {
 
             <div className="rounded-xl border-2 border-brand-neon/50 bg-brand-neon/5 p-6 md:p-8">
               <div className="mb-6">
-                <span className="inline-block rounded-full bg-brand-neon px-3 py-1 text-xs font-bold text-layout-dark">골든시그널 권역분석</span>
+                <span className="inline-block rounded-full bg-brand-neon px-3 py-1 text-xs font-bold text-[#1a1a1a]">골든시그널 권역분석</span>
               </div>
               <ul className="space-y-4">
                 {["소비 흐름 및 결제 패턴 분석", "시간대별 유동 패턴 분석", "미래 개발 가치 및 성장성 예측", "고객 페르소나 기반 세분화", "3~5년 미래 가치 분석", "데이터 기반 맞춤 전략 수립"].map((item) => (

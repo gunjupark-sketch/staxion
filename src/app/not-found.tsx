@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <section className="flex min-h-[60vh] flex-col items-center justify-center gap-6 px-4 text-center">
       <div className="space-y-2">
-        <h1 className="text-6xl font-black text-brand-lime-safe">404</h1>
+        <h1 className="text-6xl font-black text-brand-neon-safe">404</h1>
         <p className="text-xl font-semibold text-text-primary">
           페이지를 찾을 수 없습니다
         </p>
@@ -14,7 +14,7 @@ export default function NotFound() {
       </div>
       <Link
         href="/"
-        className="inline-flex min-h-[44px] items-center rounded-lg bg-brand-lime-btn px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-lime-btn/90"
+        className="inline-flex min-h-[44px] items-center rounded-lg bg-brand-neon-btn px-6 text-sm font-semibold text-white transition-colors hover:bg-brand-neon-btn/90"
       >
         홈으로 돌아가기
       </Link>

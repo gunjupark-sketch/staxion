@@ -40,7 +40,7 @@ export default async function EducationPage() {
       <PageBanner pageSlug="education" />
 
       {/* 히어로 섹션 */}
-      <section className="relative overflow-hidden py-24 md:py-32">
+      <section className="relative overflow-hidden bg-layout-dark py-24 md:py-32">
         <Image
           src="/images/bg/education-banner.png"
           alt="미용치과 교육/세미나"
@@ -50,20 +50,76 @@ export default async function EducationPage() {
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <h1 className="text-3xl font-bold text-white md:text-5xl">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            Education & Seminar
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
             미용치과 교육 · 세미나
           </h1>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
+          <p className="mx-auto mt-4 max-w-2xl text-white/60">
             보톡스, 필러, 스킨부스터 등 핵심 시술 실습 중심 교육 프로그램
           </p>
         </div>
       </section>
 
-      {/* 세미나 프로그램 */}
-      <section className="bg-card py-20">
+      {/* 교육 카테고리 */}
+      <section className="bg-surface-secondary py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
+              Education Categories
+            </p>
+            <h2 className="mt-3 text-2xl font-bold text-text-primary md:text-3xl">
+              교육 프로그램 분류
+            </h2>
+            <p className="mx-auto mt-4 max-w-2xl text-text-muted">
+              의료인을 위한 의료 전문 &lsquo;교육 공유&rsquo; 플랫폼으로, 병원의 브랜드와 원장님의 커리어를 동시에 성장시킵니다.
+            </p>
+          </div>
+          <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                title: "미용시술 세미나",
+                desc: "실리프팅, 보톡스, 필러, 스킨부스터 — 기초부터 전문가 과정까지 이론·디자인·라이브시연·Q&A 4파트 구성",
+              },
+              {
+                title: "미용장비 세미나",
+                desc: "HIFU, LDM, RF, LASER, cooling — 임상 프로토콜과 환자 상담 스킬, T&D(Try & Decide) 프로그램",
+              },
+              {
+                title: "의료 세미나",
+                desc: "분과별 임상 노하우 및 실전 적용 가능한 실무 중심 교육",
+              },
+              {
+                title: "병원 운영 세미나",
+                desc: "브랜딩, 마케팅, 환자 유입 및 운영 노하우 — 병원에 꼭 필요한 경영 교육",
+              },
+              {
+                title: "스텝 세미나",
+                desc: "시술 어시스트, 장비관리, 감염·위생 실무, 환자 커뮤니케이션 — 서비스 품질을 한 단계 격상",
+              },
+              {
+                title: "맞춤 세미나 기획",
+                desc: "원장님이 나누고 싶은 주제가 있다면, 기획부터 운영까지 전 과정을 지원합니다",
+              },
+            ].map((cat) => (
+              <div
+                key={cat.title}
+                className="rounded-xl border border-border/50 bg-card p-6 transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
+              >
+                <h3 className="font-bold text-text-primary">{cat.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-text-muted">{cat.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 세미나 프로그램 */}
+      <section className="bg-card py-24 md:py-32">
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <div className="text-center">
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon-text uppercase">
               Programs
             </p>
             <h2 className="mt-2 text-2xl font-bold text-text-primary md:text-3xl">
@@ -103,7 +159,7 @@ export default async function EducationPage() {
                       )}
                       <CardContent className="p-6">
                         <div className="flex flex-wrap gap-1.5 mb-2">
-                          <span className="inline-block rounded-full bg-brand-lime-safe/10 px-2.5 py-0.5 text-xs font-semibold text-brand-lime-text">
+                          <span className="inline-block rounded-full bg-brand-neon-safe/10 px-2.5 py-0.5 text-xs font-semibold text-brand-neon-text">
                             {seminar.seminar_type || "오프라인"}
                           </span>
                           {isFree && (
@@ -122,7 +178,7 @@ export default async function EducationPage() {
                           </div>
                           <div>
                             {!isFree ? (
-                              <span className="text-base font-bold text-brand-lime-text">
+                              <span className="text-base font-bold text-brand-neon-text">
                                 {seminar.price.toLocaleString()}원
                               </span>
                             ) : (
@@ -145,29 +201,51 @@ export default async function EducationPage() {
         </div>
       </section>
 
-      {/* 연자 모집 */}
-      <section className="bg-surface-dark py-20">
+      {/* 연자 모집 (For Speaker) */}
+      <section className="bg-surface-dark py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 md:px-6">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-lime uppercase">
-              With MEDI STAXION
+            <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+              For Speaker
             </p>
             <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">
-              강연의 뜻을 펼칠 연자를 모집합니다
+              자신의 노하우를 &lsquo;브랜드 자산&rsquo;으로
             </h2>
             <p className="mx-auto mt-4 max-w-2xl text-text-muted">
-              전문지식과 철학을 공유하며 함께 성장하고, 성공을 만들어갈 분의 지원을 기다립니다.
-              <br />
               연자가 되는 일은 결코 어렵지 않습니다. 어려운 것은 세미나 전문 기획과 부가적인 준비과정입니다.
-              <br />
               어떤 내용을 어떤 구조로 할지 선정하는 것부터 홍보, 운영까지 MEDI STAXION이 해드립니다.
             </p>
+          </div>
+
+          <div className="mt-14 grid gap-6 md:grid-cols-3">
+            {[
+              {
+                title: "시그니처 시술 브랜드화",
+                desc: "원장님만의 독창적인 시술법을 '시그니처 브랜드'로 개발하고, 학회 발표 및 논문 등재까지 지원하여 업계 오피니언 리더로 만들어 드립니다.",
+              },
+              {
+                title: "고품질 콘텐츠 자동 생산",
+                desc: "강연 녹화 → 온라인 VOD 판매, 블로그, 카드뉴스, 데이터 리포트 등으로 2차 가공하여 콘텐츠 마케팅을 풍성하게 합니다.",
+              },
+              {
+                title: "세미나 기획·운영 전 과정",
+                desc: "교안/교재 제작, 홍보, 모집, 수강생 관리, 사후관리까지 — 연자님은 콘텐츠 방향에만 집중하세요.",
+              },
+            ].map((item) => (
+              <div
+                key={item.title}
+                className="rounded-xl border border-white/10 bg-white/5 p-6"
+              >
+                <h3 className="font-bold text-white">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-white/60">{item.desc}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* 연자 자격 체크리스트 */}
-      <section className="bg-card py-20">
+      <section className="bg-card py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-text-primary md:text-3xl">
@@ -205,10 +283,10 @@ export default async function EducationPage() {
             ].map((item, i) => (
               <div
                 key={i}
-                className="rounded-lg border-l-4 border-brand-lime-safe bg-surface-secondary p-5"
+                className="rounded-lg border-l-4 border-brand-neon-safe bg-surface-secondary p-5"
               >
                 <p className="text-sm font-semibold text-text-primary">
-                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-lime-btn text-xs font-bold text-white">
+                  <span className="mr-2 inline-flex h-6 w-6 items-center justify-center rounded-full bg-brand-neon-btn text-xs font-bold text-white">
                     {i + 1}
                   </span>
                   {item.check}
@@ -227,7 +305,7 @@ export default async function EducationPage() {
       </section>
 
       {/* 연자 기대효과 */}
-      <section className="bg-surface-secondary py-20">
+      <section className="bg-surface-secondary py-24 md:py-32">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <h2 className="text-center text-2xl font-bold text-text-primary md:text-3xl">
             연자 기대효과
@@ -259,7 +337,7 @@ export default async function EducationPage() {
       </section>
 
       {/* 대상 분야 */}
-      <section className="bg-card py-16">
+      <section className="bg-card py-24 md:py-32">
         <div className="mx-auto max-w-3xl px-4 text-center md:px-6">
           <h3 className="text-lg font-bold text-text-primary">
             치과와 연결된 전문 분야 환영합니다
@@ -281,7 +359,7 @@ export default async function EducationPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-surface-dark py-20">
+      <section className="bg-surface-dark py-24 md:py-32">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <h2 className="text-2xl font-bold text-white">
             새로운 출발, 연자.
@@ -296,13 +374,13 @@ export default async function EducationPage() {
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-lime-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-lime-btn/90 sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg bg-brand-neon-btn px-8 text-base font-semibold text-white transition-colors hover:bg-brand-neon-btn/90 sm:w-auto"
             >
               연자 신청하기
             </Link>
             <Link
               href="/contact"
-              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-border px-8 text-base text-text-muted transition-colors hover:border-brand-lime-safe hover:text-brand-lime-text sm:w-auto"
+              className="inline-flex h-12 w-full max-w-xs items-center justify-center rounded-lg border-2 border-border px-8 text-base text-text-muted transition-colors hover:border-brand-neon-safe hover:text-brand-neon-text sm:w-auto"
             >
               세미나 문의하기
             </Link>

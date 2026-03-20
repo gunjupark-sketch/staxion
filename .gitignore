@@ -32,6 +32,10 @@ yarn-error.log*
 .env
 .env*.local
 
+# scripts with credentials
+update-services.mjs
+seed-data.mjs
+
 # vercel
 .vercel
 

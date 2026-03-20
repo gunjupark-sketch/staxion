@@ -8,6 +8,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { createClient } from "@/lib/supabase/client";
+import PageBanner from "@/components/PageBanner";
 
 export default function ContactPage() {
   const [loading, setLoading] = useState(false);
@@ -42,7 +43,7 @@ export default function ContactPage() {
     return (
       <section className="flex min-h-[60vh] items-center justify-center px-4">
         <div className="text-center">
-          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-lime-safe/10">
+          <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-neon-safe/10">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8EC31F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <polyline points="20 6 9 17 4 12" />
             </svg>
@@ -55,70 +56,85 @@ export default function ContactPage() {
   }
 
   return (
-    <section className="py-20">
-      <div className="mx-auto max-w-2xl px-4 md:px-6">
-        <div className="text-center">
-          <p className="text-sm font-semibold tracking-widest text-brand-lime-text uppercase">Contact</p>
-          <h1 className="mt-2 text-3xl font-bold text-text-primary md:text-4xl">상담 신청</h1>
-          <p className="mt-3 text-text-muted">미용치과 도입에 관한 궁금한 점을 남겨주세요.</p>
+    <>
+      <PageBanner pageSlug="contact" />
+
+      {/* Hero */}
+      <section className="bg-layout-dark py-24 md:py-32">
+        <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            Contact
+          </p>
+          <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
+            상담 신청
+          </h1>
+          <p className="mx-auto mt-4 max-w-xl text-white/60">
+            미용 진료에 관한 궁금한 점을 남겨주세요.
+          </p>
         </div>
+      </section>
 
-        <Card className="mt-10 border-border/50">
-          <CardContent className="p-6 md:p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid gap-6 md:grid-cols-2">
-                <div className="space-y-2">
-                  <Label htmlFor="name">이름 *</Label>
-                  <Input id="name" name="name" required placeholder="홍길동" />
+      {/* Form */}
+      <section className="bg-card py-24 md:py-32">
+        <div className="mx-auto max-w-2xl px-4 md:px-6">
+          <Card className="border-border/50">
+            <CardContent className="p-6 md:p-8">
+              <form onSubmit={handleSubmit} className="space-y-6">
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="name">이름 *</Label>
+                    <Input id="name" name="name" required placeholder="홍길동" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">연락처 *</Label>
+                    <Input id="phone" name="phone" required placeholder="010-0000-0000" />
+                  </div>
                 </div>
-                <div className="space-y-2">
-                  <Label htmlFor="phone">연락처 *</Label>
-                  <Input id="phone" name="phone" required placeholder="010-0000-0000" />
+
+                <div className="grid gap-6 md:grid-cols-2">
+                  <div className="space-y-2">
+                    <Label htmlFor="email">이메일</Label>
+                    <Input id="email" name="email" type="email" placeholder="example@clinic.com" />
+                  </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="clinic_name">치과명</Label>
+                    <Input id="clinic_name" name="clinic_name" placeholder="OO치과" />
+                  </div>
                 </div>
-              </div>
 
-              <div className="grid gap-6 md:grid-cols-2">
                 <div className="space-y-2">
-                  <Label htmlFor="email">이메일</Label>
-                  <Input id="email" name="email" type="email" placeholder="example@clinic.com" />
+                  <Label htmlFor="type">문의 유형</Label>
+                  <Select name="type" defaultValue="general">
+                    <SelectTrigger>
+                      <SelectValue placeholder="문의 유형 선택" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="general">일반 문의</SelectItem>
+                      <SelectItem value="consulting">컨설팅</SelectItem>
+                      <SelectItem value="education">교육/세미나</SelectItem>
+                      <SelectItem value="guidebook">가이드북</SelectItem>
+                      <SelectItem value="global">해외환자유치</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
+
                 <div className="space-y-2">
-                  <Label htmlFor="clinic_name">치과명</Label>
-                  <Input id="clinic_name" name="clinic_name" placeholder="OO치과" />
+                  <Label htmlFor="message">문의 내용 *</Label>
+                  <Textarea id="message" name="message" required rows={5} placeholder="궁금하신 내용을 자유롭게 작성해주세요." />
                 </div>
-              </div>
 
-              <div className="space-y-2">
-                <Label htmlFor="type">문의 유형</Label>
-                <Select name="type" defaultValue="general">
-                  <SelectTrigger>
-                    <SelectValue placeholder="문의 유형 선택" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="general">일반 문의</SelectItem>
-                    <SelectItem value="consulting">컨설팅</SelectItem>
-                    <SelectItem value="education">교육/세미나</SelectItem>
-                    <SelectItem value="global">해외환자유치</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
-
-              <div className="space-y-2">
-                <Label htmlFor="message">문의 내용 *</Label>
-                <Textarea id="message" name="message" required rows={5} placeholder="궁금하신 내용을 자유롭게 작성해주세요." />
-              </div>
-
-              <Button
-                type="submit"
-                disabled={loading}
-                className="w-full min-h-[48px] bg-brand-lime-btn py-3 text-base font-semibold text-white hover:bg-brand-lime-btn/90"
-              >
-                {loading ? "전송 중..." : "상담 신청하기"}
-              </Button>
-            </form>
-          </CardContent>
-        </Card>
-      </div>
-    </section>
+                <Button
+                  type="submit"
+                  disabled={loading}
+                  className="w-full min-h-[48px] bg-brand-neon-btn py-3 text-base font-semibold text-white hover:bg-brand-neon-btn/90"
+                >
+                  {loading ? "전송 중..." : "상담 신청하기"}
+                </Button>
+              </form>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+    </>
   );
 }

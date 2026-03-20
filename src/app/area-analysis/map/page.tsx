@@ -248,7 +248,7 @@ export default function AreaAnalysisMapPage() {
             <ChevronLeft className="w-5 h-5 text-text-primary" />
           </Link>
           <h1 className="text-lg font-bold text-text-primary">권역분석</h1>
-          <span className="ml-auto text-xs text-brand-lime-btn font-medium px-2 py-0.5 rounded-full bg-brand-lime/10">
+          <span className="ml-auto text-xs text-brand-neon-btn font-medium px-2 py-0.5 rounded-full bg-brand-neon/10">
             Beta
           </span>
         </div>
@@ -265,7 +265,7 @@ export default function AreaAnalysisMapPage() {
               }}
               onKeyDown={(e) => e.key === "Enter" && searchAddress()}
               placeholder="주소 또는 장소 검색 (예: 강남역, 역삼동)"
-              className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-surface-secondary text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-lime/40 focus:border-brand-lime-btn"
+              className="w-full pl-10 pr-4 py-2.5 rounded-lg border border-border bg-surface-secondary text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-brand-neon/40 focus:border-brand-neon-btn"
             />
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-text-muted" />
           </div>
@@ -279,7 +279,7 @@ export default function AreaAnalysisMapPage() {
                     onClick={() => selectPlace(place)}
                     className="w-full px-4 py-2.5 text-left hover:bg-surface-secondary transition-colors flex items-start gap-2"
                   >
-                    <MapPin className="w-4 h-4 text-brand-lime-btn mt-0.5 flex-shrink-0" />
+                    <MapPin className="w-4 h-4 text-brand-neon-btn mt-0.5 flex-shrink-0" />
                     <div>
                       <p className="text-sm font-medium text-text-primary">
                         {place.place_name}
@@ -305,7 +305,7 @@ export default function AreaAnalysisMapPage() {
                 onClick={() => changeRadius(opt.value)}
                 className={`flex-1 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                   radius === opt.value
-                    ? "bg-brand-lime-btn text-white"
+                    ? "bg-brand-neon-btn text-white"
                     : "bg-surface-secondary text-text-muted hover:bg-gray-200"
                 }`}
               >
@@ -317,9 +317,9 @@ export default function AreaAnalysisMapPage() {
 
         {/* 선택된 위치 정보 */}
         {location && (
-          <div className="px-4 py-3 border-b border-border bg-brand-lime/5">
+          <div className="px-4 py-3 border-b border-border bg-brand-neon/5">
             <div className="flex items-center gap-2 mb-1">
-              <MapPin className="w-4 h-4 text-brand-lime-btn" />
+              <MapPin className="w-4 h-4 text-brand-neon-btn" />
               <span className="text-sm font-bold text-text-primary">
                 {location.sidoName} {location.guName} {location.dongName}
               </span>
@@ -339,7 +339,7 @@ export default function AreaAnalysisMapPage() {
                   onClick={() => setActiveTab(tab.id)}
                   className={`flex-1 flex items-center justify-center gap-1 py-2 rounded-lg text-xs font-medium transition-colors ${
                     activeTab === tab.id
-                      ? "bg-brand-lime-btn text-white"
+                      ? "bg-brand-neon-btn text-white"
                       : "text-text-muted hover:bg-surface-secondary"
                   }`}
                 >
@@ -872,7 +872,7 @@ function StatCard({ label, value, unit }: { label: string; value: string; unit: 
 function LoadingState() {
   return (
     <div className="flex flex-col items-center justify-center py-12">
-      <Loader2 className="w-8 h-8 text-brand-lime-btn animate-spin" />
+      <Loader2 className="w-8 h-8 text-brand-neon-btn animate-spin" />
       <p className="text-sm text-text-muted mt-3">데이터 조회 중...</p>
     </div>
   );
