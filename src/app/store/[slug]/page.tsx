@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { sanitizeHtml } from "@/lib/sanitize";
 import { Badge } from "@/components/ui/badge";
 import PaymentButton from "@/components/PaymentButton";
 import AddToCartButton from "@/components/AddToCartButton";
@@ -163,7 +164,7 @@ export default async function ProductDetailPage({ params }: Props) {
               <h2 className="text-xl font-bold text-text-primary">상세 정보</h2>
               <div
                 className="prose prose-sm mt-6 max-w-none [&_h2]:text-xl [&_h2]:font-bold [&_h2]:mt-8 [&_h2]:mb-3 [&_h3]:text-lg [&_h3]:font-semibold [&_h3]:mt-6 [&_h3]:mb-2 [&_img]:max-w-full [&_img]:rounded-lg [&_a]:text-brand-neon-text [&_a]:underline [&_blockquote]:border-l-4 [&_blockquote]:border-brand-neon-safe [&_blockquote]:pl-4 [&_blockquote]:italic"
-                dangerouslySetInnerHTML={{ __html: product.detail_content }}
+                dangerouslySetInnerHTML={{ __html: sanitizeHtml(product.detail_content) }}
               />
             </div>
           )}

@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { createClient } from "@/lib/supabase/server";
+import { sanitizeHtml } from "@/lib/sanitize";
 
 type PostCategory = "blog" | "column" | "news";
 
@@ -168,7 +169,7 @@ export default async function NewsDetailPage({
         <div className="mx-auto max-w-3xl px-4 md:px-6">
           <div
             className="prose prose-lg max-w-none prose-headings:text-text-primary prose-p:text-text-secondary prose-a:text-brand-neon-safe prose-a:no-underline hover:prose-a:underline prose-img:rounded-lg prose-strong:text-text-primary"
-            dangerouslySetInnerHTML={{ __html: post.content || "" }}
+            dangerouslySetInnerHTML={{ __html: sanitizeHtml(post.content || "") }}
           />
         </div>
       </article>

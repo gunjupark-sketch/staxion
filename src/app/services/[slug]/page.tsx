@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { sanitizeHtml } from "@/lib/sanitize";
 import {
   Clock,
   Users,
@@ -191,7 +192,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="mx-auto max-w-4xl px-5 md:px-8">
             <div
               className="service-content"
-              dangerouslySetInnerHTML={{ __html: richContent }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(richContent) }}
             />
           </div>
         </section>
