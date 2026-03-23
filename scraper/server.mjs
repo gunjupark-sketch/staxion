@@ -25,7 +25,8 @@ app.post("/analyze", async (req, res) => {
     return res.status(400).json({ error: "reportId, address, callbackUrl 필수" });
   }
 
-  const searchAddress = fullAddress || address;
+  // 도로명 주소가 가장 정확 — fullAddress(시도 시군구 동)는 세분화 행정동 누락 문제
+  const searchAddress = address;
 
   // 큐에 추가
   queue.push({ reportId, address: searchAddress, lat, lng, radius: radius || 1000, callbackUrl, _startTime: Date.now() });
@@ -165,37 +166,20 @@ async function scrape(address, lat, lng, radius = 1000) {
     const frame = iframeEl ? await iframeEl.contentFrame() : null;
     if (!frame) throw new Error("iframe contentFrame 접근 실패");
 
-    // 2. 위치 설정 — 좌표가 있으면 좌표로 직접 이동, 없으면 주소 검색
+    // 2. 위치 설정 — 주소 검색 (도로명 주소가 가장 정확)
+    console.log(`  2. 주소 검색: ${address}`);
+    await searchByAddress(frame, gis, address);
+
+    // 좌표가 있으면 지도 중심 이동 (보정)
     if (lat && lng) {
-      console.log(`  2. 좌표 기반 위치 설정: ${lat}, ${lng}`);
+      console.log(`  2.1. 좌표로 지도 중심 보정: ${lat}, ${lng}`);
       await gis.evaluate(({ lat, lng }) => {
-        const latLng = new kakao.maps.LatLng(lat, lng);
-        map.setCenter(latLng);
-        map.setLevel(4); // 동네 수준 줌
-        // 마커 클릭 이벤트 시뮬레이션 — 지도 중심에 클릭
-        kakao.maps.event.trigger(map, "click", {
-          latLng: latLng,
-          point: map.getProjection().pointFromCoords(latLng),
-        });
+        if (typeof kakao !== "undefined" && typeof map !== "undefined") {
+          map.setCenter(new kakao.maps.LatLng(lat, lng));
+          map.setLevel(4);
+        }
       }, { lat, lng });
-      await sleep(3000);
-
-      // 지도 클릭으로 위치가 안 잡히면 주소 검색 폴백
-      const hasLocation = await gis.evaluate(() => {
-        // 분석 위치가 설정되었는지 확인 (분석하기 버튼 상태 등)
-        const addr = document.querySelector("#addressTxt, .address-text, [class*='addr']");
-        return addr && addr.innerText?.length > 2;
-      }).catch(() => false);
-
-      if (!hasLocation) {
-        console.log("  좌표 클릭으로 위치 미설정, 주소 검색 폴백...");
-        await searchByAddress(frame, gis, address);
-      } else {
-        console.log("  좌표 기반 위치 설정 완료");
-      }
-    } else {
-      console.log(`  2. 주소 검색 (좌표 없음): ${address}`);
-      await searchByAddress(frame, gis, address);
+      await sleep(1000);
     }
 
     // 2.5. 반경 설정

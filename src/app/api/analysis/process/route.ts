@@ -177,11 +177,25 @@ async function callGemini(prompt: string, maxOutputTokens: number) {
   }
 
   try {
-    return JSON.parse(text);
+    const parsed = JSON.parse(text);
+    // Gemini가 이중 래핑하는 경우: { summary: "{ JSON 문자열 }" }
+    if (parsed && !parsed.insights && typeof parsed.summary === "string" && parsed.summary.startsWith("{")) {
+      try {
+        const inner = JSON.parse(parsed.summary);
+        if (inner.insights) return inner;
+      } catch { /* inner parse 실패 시 원본 유지 */ }
+    }
+    return parsed;
   } catch {
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
-      return JSON.parse(jsonMatch[0]);
+      try {
+        const parsed = JSON.parse(jsonMatch[0]);
+        if (parsed && !parsed.insights && typeof parsed.summary === "string" && parsed.summary.startsWith("{")) {
+          try { return JSON.parse(parsed.summary); } catch { /* */ }
+        }
+        return parsed;
+      } catch { /* */ }
     }
     return { summary: text };
   }
