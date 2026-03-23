@@ -157,6 +157,66 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">미주신경 반응</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">(약품 불필요)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5~10분 자연 회복</td></tr>
         </tbody>
       </table>
+      <!-- V-A03: 응급 대응 프로세스 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">응급 대응 프로세스</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+          <!-- 혈관폐색 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">혈관폐색</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg">
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">시술 중단</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">히알루로니다제 주입</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">관찰</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">응급이송</div>
+            </div>
+          </div>
+          <!-- 아나필락시스 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">아나필락시스</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg">
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">119 신고</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">에피네프린 주입</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">기도 확보 (필요시)</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">응급이송</div>
+            </div>
+          </div>
+          <!-- 미주신경반응 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">미주신경반응</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg">
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">눕히기</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">다리 올리기</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">5분 관찰</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">회복 확인</div>
+            </div>
+          </div>
+          <!-- 감염 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">감염</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg">
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">항생제 투여</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">48시간 관찰</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center">절개배농 (필요시)</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">전원</div>
+            </div>
+          </div>
+        </div>
+        <p class="text-[10px] text-[#999] text-center mt-4">모든 응급 상황에서는 즉시 119 신고 고려 / 응급약품(에피네프린, 히알루로니다제) 상비 필수</p>
+      </div>
+
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">핵심 원칙:</strong> 히알루로니다제가 없으면 HA 필러 시술을 시작하지 않는다. 에피네프린이 없으면 주사 시술 전반의 안전망이 없는 것이다.
       </div>
@@ -184,6 +244,82 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">원내 비치 브로셔</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">외부 배포 시 심의 대상</td></tr>
         </tbody>
       </table>
+
+      <!-- V-A04: 광고심의 매트릭스 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">광고심의 매트릭스</h4>
+        <div class="overflow-x-auto">
+          <table class="w-full text-[10px] md:text-xs border-collapse">
+            <thead>
+              <tr>
+                <th class="px-2 py-2 bg-[#f5f5f5] text-[#1a1a1a] text-left font-bold border border-[#eee]"></th>
+                <th class="px-2 py-2 bg-[#1a1a1a] text-white text-center font-bold border border-[#eee]">시술 소개</th>
+                <th class="px-2 py-2 bg-[#1a1a1a] text-white text-center font-bold border border-[#eee]">가격 표시</th>
+                <th class="px-2 py-2 bg-[#1a1a1a] text-white text-center font-bold border border-[#eee]">전후 사진</th>
+                <th class="px-2 py-2 bg-[#1a1a1a] text-white text-center font-bold border border-[#eee]">이벤트/할인</th>
+                <th class="px-2 py-2 bg-[#1a1a1a] text-white text-center font-bold border border-[#eee]">의사 프로필</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">네이버 플레이스</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">인스타그램</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">블로그</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">유튜브</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">카카오채널</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+              <tr>
+                <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">현수막/전단</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- 범례 -->
+        <div class="flex items-center justify-center gap-4 mt-4 text-[10px] text-[#999]">
+          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#D4567A]"></span> 심의 필수</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#D4567A] opacity-20 border border-[#D4567A]"></span> 자가점검</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block border border-[#eee]"></span> 자유</span>
+        </div>
+        <p class="text-[10px] text-[#999] text-center mt-2">의료법 시행규칙 제29조의2 광고심의기준 참고</p>
+      </div>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">절대 금지 표현 (의료법 제56조)</h3>
       <table class="w-full text-sm border-collapse mb-6">
@@ -340,6 +476,55 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저/장비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">색소침착, 화상 (드묾)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">체내 금속 삽입물 확인 (RF)</td></tr>
         </tbody>
       </table>
+
+      <!-- V-A05: 동의서 운영 프로세스 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">동의서 운영 프로세스</h4>
+        <!-- 3 Phase 가로 플로우 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <!-- Phase 1: 시술 전 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 전</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">동의서 양식 전달</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">환자 자필 서명</div>
+            </div>
+          </div>
+          <!-- Phase 2: 시술 중 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 중</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">차트 기록</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">사진 촬영 (전후)</div>
+            </div>
+          </div>
+          <!-- Phase 3: 시술 후 -->
+          <div>
+            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 후</div>
+            <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">동의서 보관 (5년)</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">사본 환자 제공</div>
+              <div class="text-center text-[#999] text-[10px]">&#8595;</div>
+              <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">전자 백업</div>
+            </div>
+          </div>
+        </div>
+        <!-- 하단 설명 -->
+        <div class="mt-4 text-[10px] text-[#999] space-y-1">
+          <p><span class="font-bold text-[#1a1a1a]">원장 구두 설명 동반</span></p>
+          <p>시술 전: 예상되는 결과, 부작용, 주의사항 설명</p>
+          <p>시술 중: 차트에 시술 내용, 시술자, 재료, 용량 기록</p>
+          <p>시술 후: 사진 촬영(동의 확인), 5년 보관(의료법), 전자백업</p>
+        </div>
+        <!-- 필수 안내 -->
+        <div class="bg-[#f5f5f5] border border-[#eee] rounded-lg p-3 mt-4 text-center">
+          <p class="text-xs font-bold text-[#1a1a1a]">필수: 동의서는 환자 자필 서명이어야 하며, 녹음/영상 촬영도 동의서 필요</p>
+          <p class="text-[10px] text-[#999] mt-1">위반 시 의료법 시행규칙 제18조 위반으로 행정처분 가능</p>
+        </div>
+      </div>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">동의서 운영 가이드</h3>
       <ul class="list-disc pl-6 mb-4 space-y-1 text-[#333]">

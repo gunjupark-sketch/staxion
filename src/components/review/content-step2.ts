@@ -260,7 +260,44 @@ export const step2Data: Section[] = [
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">실전 팁:</span> 이 표를 출력해서 스탭이 항상 볼 수 있는 곳에 붙여두는 것만으로도 법적 리스크의 절반을 줄일 수 있다.</p>
       </div>
       <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 치과 미용 시술 SOP 7단계 플로우차트 — 각 단계별 담당자(원장/스탭) 역할 분리 시각화]</div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 시술별 체크카드 — 보톡스·필러·스킨부스터·실리프팅 4장 세트]</div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+        <div class="border border-[#eee] rounded-lg overflow-hidden">
+          <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">보톡스 체크카드</span></div>
+          <div class="p-4 bg-white text-sm text-[#333]">
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 (20~30분 전) / 사전 사진 촬영</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위·용량 결정 + 주사</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>4시간 눕지 않기 / 당일 음주·사우나 금지 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>3~4개월 주기 / 2주 후 효과 확인 연락</span></div>
+          </div>
+        </div>
+        <div class="border border-[#eee] rounded-lg overflow-hidden">
+          <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">필러 체크카드</span></div>
+          <div class="p-4 bg-white text-sm text-[#333]">
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 / 알레르기 병력 확인 / 사전 사진</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위·제품·용량 결정 + 주입</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>압박 금지 / 48시간 격한 운동 자제 / 부종 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>12~18개월 주기 / 1~3일 후 상태 확인 연락</span></div>
+          </div>
+        </div>
+        <div class="border border-[#eee] rounded-lg overflow-hidden">
+          <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">스킨부스터 체크카드</span></div>
+          <div class="p-4 bg-white text-sm text-[#333]">
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 / 피부 상태 기록 / 사전 사진</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위 선정 + 주입 (전안면 다점 주입)</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>당일 세안 자제 / 자외선 차단 필수 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>2~4주 간격 6회 코스 / 매회 예약 세팅</span></div>
+          </div>
+        </div>
+        <div class="border border-[#eee] rounded-lg overflow-hidden">
+          <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">실리프팅 체크카드</span></div>
+          <div class="p-4 bg-white text-sm text-[#333]">
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 (30~40분) / 사전 사진 / 동의서</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 실 종류·방향·개수 결정 + 삽입</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>48시간 큰 입 벌리기 자제 / 감염 징후 안내 / 소염진통제</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>12~24개월 주기 / 48시간 후 경과 확인 연락</span></div>
+          </div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -726,7 +763,56 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">장비 구매 전 세무사 상담을 안 한다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">일반과세자 전환 전 구매한 장비는 매입세액 공제 불가할 수 있음</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 과세/면세 분리 수납 플로우차트 — 치과 치료만 / 미용 시술만 / 동시 수납 3가지 경로]</div>
+      <div class="mb-6">
+        <h4 class="text-base font-bold text-[#1a1a1a] mb-4 text-center">과세/면세 분리 수납 플로우차트</h4>
+        <div class="flex flex-col items-center mb-4">
+          <div class="bg-[#1a1a1a] text-white px-6 py-3 rounded-lg font-bold text-sm text-center">환자 수납 발생</div>
+          <div class="w-px h-6 bg-[#999]"></div>
+          <div class="bg-[#f5f5f5] border border-[#eee] px-6 py-3 rounded-lg font-semibold text-sm text-[#1a1a1a] text-center">시술 내용 확인: 치료? 미용? 동시?</div>
+          <div class="w-full max-w-xl flex justify-between items-start mt-2">
+            <div class="w-px h-6 bg-[#999] ml-[16%]"></div>
+            <div class="w-px h-6 bg-[#999]"></div>
+            <div class="w-px h-6 bg-[#999] mr-[16%]"></div>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <div class="border border-[#eee] rounded-lg overflow-hidden">
+            <div class="bg-[#f5f5f5] px-3 py-2 text-center"><span class="font-bold text-sm text-[#1a1a1a]">경로 A: 치과 치료만</span></div>
+            <div class="p-3 text-sm text-[#333] space-y-2">
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">1</span><span>건강보험 또는 비급여 치료</span></div>
+              <div class="w-px h-3 bg-[#999] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">2</span><span>면세 처리 (VAT 없음)</span></div>
+              <div class="w-px h-3 bg-[#999] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">3</span><span>기존 치과 수납 프로세스 그대로</span></div>
+            </div>
+          </div>
+          <div class="border-2 border-[#D4567A] rounded-lg overflow-hidden">
+            <div class="bg-[#D4567A] px-3 py-2 text-center"><span class="font-bold text-sm text-white">경로 B: 미용 시술만</span></div>
+            <div class="p-3 text-sm text-[#333] space-y-2">
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">1</span><span>미용 목적 확인 (보톡스·필러 등)</span></div>
+              <div class="w-px h-3 bg-[#D4567A] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">2</span><span>과세 처리 (VAT 10% 별도)</span></div>
+              <div class="w-px h-3 bg-[#D4567A] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">3</span><span>세금계산서 또는 현금영수증 발급 필수</span></div>
+            </div>
+          </div>
+          <div class="border border-[#eee] rounded-lg overflow-hidden">
+            <div class="bg-[#1a1a1a] px-3 py-2 text-center"><span class="font-bold text-sm text-white">경로 C: 동시 수납</span></div>
+            <div class="p-3 text-sm text-[#333] space-y-2">
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">1</span><span>치료 + 미용 동시 진행</span></div>
+              <div class="w-px h-3 bg-[#999] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">2</span><span class="font-bold text-[#D4567A]">반드시 분리 수납</span></div>
+              <div class="w-px h-3 bg-[#999] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">3</span><span>치료분: 면세 / 미용분: 과세 (VAT 10%)</span></div>
+              <div class="w-px h-3 bg-[#999] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">4</span><span>영수증 2건 발행 (면세 + 과세)</span></div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-3 mt-3 rounded-r">
+          <p class="text-[#333] text-xs"><span class="font-bold text-[#1a1a1a]">핵심:</span> 합산 수납 시 세무 신고에서 분리 안 되면 전체가 과세 처리될 수 있다. 처음부터 분리 수납이 원칙.</p>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },

@@ -65,7 +65,49 @@ export const step4Data: Section[] = [
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">주의:</strong> 순위가 낮은 환자에게 무리하게 접근하면 기존 치과 신뢰까지 손상된다. 6순위는 발견 시도만 하고 제안은 하지 않는다.
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 구환 유형별 전환 가능성 피라미드]</div>
+      <!-- V-401: 구환 전환 피라미드 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">구환 전환 피라미드</h4>
+        <div class="flex flex-col items-center gap-0">
+          <!-- Tier 1 (최상단) -->
+          <div class="w-[40%] min-w-[200px] bg-[#1a1a1a] text-white text-center py-3 rounded-t-lg">
+            <div class="text-xs font-bold">1순위</div>
+            <div class="text-[11px]">미용 문의 이력 있는 구환</div>
+            <div class="text-sm font-bold text-[#D4567A] mt-1">72%</div>
+          </div>
+          <!-- Tier 2 -->
+          <div class="w-[52%] min-w-[230px] bg-[#333] text-white text-center py-3">
+            <div class="text-xs font-bold">2순위</div>
+            <div class="text-[11px]">교근 발달·이갈이 환자</div>
+            <div class="text-sm font-bold text-[#D4567A] mt-1">58%</div>
+          </div>
+          <!-- Tier 3 -->
+          <div class="w-[64%] min-w-[260px] bg-[#D4567A] text-white text-center py-3">
+            <div class="text-xs font-bold">3순위</div>
+            <div class="text-[11px]">정기검진 성실 내원자</div>
+            <div class="text-sm font-bold mt-1">42%</div>
+          </div>
+          <!-- Tier 4 -->
+          <div class="w-[76%] min-w-[290px] bg-[#e8a0b5] text-[#1a1a1a] text-center py-3">
+            <div class="text-xs font-bold">4순위</div>
+            <div class="text-[11px]">보철·교정 완료 환자</div>
+            <div class="text-sm font-bold mt-1">28%</div>
+          </div>
+          <!-- Tier 5 -->
+          <div class="w-[88%] min-w-[310px] bg-[#eee] text-[#1a1a1a] text-center py-3">
+            <div class="text-xs font-bold">5순위</div>
+            <div class="text-[11px]">20~40대 여성 구환</div>
+            <div class="text-sm font-bold mt-1">18%</div>
+          </div>
+          <!-- Tier 6 (최하단) -->
+          <div class="w-full bg-[#f5f5f5] text-[#1a1a1a] text-center py-3 rounded-b-lg border border-[#eee]">
+            <div class="text-xs font-bold">6순위</div>
+            <div class="text-[11px]">기타 구환</div>
+            <div class="text-sm font-bold mt-1">8%</div>
+          </div>
+        </div>
+        <p class="text-xs text-[#999] mt-4 text-center">↑ 상위 계층: 전환 확률 높음 | 하위 계층: 접근 용이도 높음</p>
+      </div>
     `,
   },
   {
@@ -119,7 +161,57 @@ export const step4Data: Section[] = [
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">주의:</strong> 스탭은 안내만 한다. 시술 효과·부작용 설명, 시술 추천은 원장만 할 수 있다. 스탭이 시술 내용을 설명하면 의료법 위반 소지.
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 구환 전환 3가지 경로 플로우차트]</div>
+      <!-- V-402: 구환 전환 3가지 경로 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">구환 전환 3가지 경로</h4>
+        <!-- 시작점 -->
+        <div class="flex justify-center mb-4">
+          <div class="bg-[#D4567A] text-white text-sm font-bold rounded-full px-6 py-3">기존 구환</div>
+        </div>
+        <!-- 3경로 -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+          <!-- 경로 1 -->
+          <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
+            <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 1: 진료 중 자연 발견</div>
+            <div class="p-4">
+              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+                <p class="font-bold">원장이 치료 중 미용 니즈 발견</p>
+                <p class="mt-1">→ 브리지 멘트</p>
+              </div>
+              <div class="text-center text-[#999] text-lg">↓</div>
+            </div>
+          </div>
+          <!-- 경로 2 -->
+          <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
+            <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 2: 정기검진 활용</div>
+            <div class="p-4">
+              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+                <p class="font-bold">스케일링 내원 시</p>
+                <p class="mt-1">미용 적응증 탐색 &amp; 자연스러운 안내</p>
+              </div>
+              <div class="text-center text-[#999] text-lg">↓</div>
+            </div>
+          </div>
+          <!-- 경로 3 -->
+          <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
+            <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 3: 이벤트/안내</div>
+            <div class="p-4">
+              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+                <p class="font-bold">카카오톡 알림</p>
+                <p class="mt-1">미용시술 소개 &amp; 자연스러운 예약 유도</p>
+              </div>
+              <div class="text-center text-[#999] text-lg">↓</div>
+            </div>
+          </div>
+        </div>
+        <!-- 수렴점 -->
+        <div class="flex justify-center">
+          <div class="bg-[#1a1a1a] text-white text-sm font-bold rounded-lg px-8 py-4 text-center">
+            미용 시술<br/>첫 예약
+          </div>
+        </div>
+        <p class="text-xs text-[#999] mt-4 text-center">3가지 경로 모두 자연스러운 접근으로 저항감 최소화</p>
+      </div>
     `,
   },
   {

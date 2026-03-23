@@ -130,6 +130,83 @@ export const step5Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 시술 차트를 얼마나 보관해야 하나?</span></p>
       <p class="text-[#333] leading-relaxed mb-4">A. 의료법상 진료기록 보존 기간은 <span class="font-bold text-[#1a1a1a]">5년</span>. 시술 부위·용량·배치·환자 상태를 상세히 기록해야 한다.</p>
 
+      <!-- V-505: 리스크 매트릭스 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">리스크 매트릭스</h4>
+        <!-- 축 라벨 -->
+        <div class="flex mb-2">
+          <div class="w-8 flex items-center justify-center">
+            <span class="text-[10px] text-[#999] font-bold -rotate-90 whitespace-nowrap">영향도 (Impact)</span>
+          </div>
+          <div class="flex-1">
+            <!-- 높음 라벨 -->
+            <div class="flex justify-between text-[10px] text-[#999] mb-1">
+              <span>높음</span>
+              <span></span>
+            </div>
+            <!-- 매트릭스 그리드 -->
+            <div class="grid grid-cols-2 gap-0 border border-[#eee]">
+              <!-- 상단 좌 (Low Risk) -->
+              <div class="border-r border-b border-[#eee] p-4 min-h-[120px] relative">
+                <span class="text-[10px] text-[#999] absolute top-2 left-2">Low Risk</span>
+                <div class="flex items-center justify-center h-full">
+                  <div class="bg-[#D4567A] bg-opacity-20 border-2 border-[#D4567A] rounded-full w-20 h-20 flex flex-col items-center justify-center text-center">
+                    <span class="text-[11px] font-bold text-[#1a1a1a]">행정처분</span>
+                    <span class="text-[11px] font-bold text-[#1a1a1a]">/면허정지</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 상단 우 (High Risk) -->
+              <div class="border-b border-[#eee] p-4 min-h-[120px] relative bg-[#f5f5f5]">
+                <span class="text-[10px] text-[#999] absolute top-2 left-2">High Risk</span>
+                <div class="flex items-center justify-center h-full">
+                  <div class="bg-[#D4567A] rounded-full w-24 h-24 flex flex-col items-center justify-center text-center">
+                    <span class="text-[11px] font-bold text-white">의료사고</span>
+                    <span class="text-[11px] font-bold text-white">/부작용</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 하단 좌 (Low Risk) -->
+              <div class="border-r border-[#eee] p-4 min-h-[120px] relative">
+                <span class="text-[10px] text-[#999] absolute top-2 left-2">Low Risk</span>
+                <div class="flex items-center justify-center h-full">
+                  <div class="border-2 border-[#eee] rounded-full w-16 h-16 flex flex-col items-center justify-center text-center">
+                    <span class="text-[10px] font-bold text-[#1a1a1a]">온라인</span>
+                    <span class="text-[10px] font-bold text-[#1a1a1a]">악성 후기</span>
+                  </div>
+                </div>
+              </div>
+              <!-- 하단 우 (Medium Risk) -->
+              <div class="p-4 min-h-[120px] relative">
+                <span class="text-[10px] text-[#999] absolute top-2 left-2">Medium Risk</span>
+                <div class="flex items-center justify-center h-full gap-3">
+                  <div class="bg-[#D4567A] bg-opacity-40 border-2 border-[#D4567A] rounded-full w-[70px] h-[70px] flex flex-col items-center justify-center text-center">
+                    <span class="text-[10px] font-bold text-[#1a1a1a]">세무 조사</span>
+                  </div>
+                  <div class="bg-[#D4567A] bg-opacity-30 border-2 border-[#D4567A] rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center text-center">
+                    <span class="text-[10px] font-bold text-[#1a1a1a]">환자</span>
+                    <span class="text-[10px] font-bold text-[#1a1a1a]">컴플레인</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 낮음 라벨 -->
+            <div class="flex justify-between text-[10px] text-[#999] mt-1">
+              <span>낮음</span>
+              <span>높음</span>
+            </div>
+          </div>
+        </div>
+        <!-- X축 라벨 -->
+        <div class="text-center text-[10px] text-[#999] font-bold mt-1">발생 가능성 (Likelihood)</div>
+        <!-- 범례 -->
+        <div class="flex items-center justify-center gap-4 mt-4 text-[10px] text-[#999]">
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#D4567A] inline-block"></span> High</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#D4567A] bg-opacity-40 border border-[#D4567A] inline-block"></span> Medium</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full border-2 border-[#eee] inline-block"></span> Low</span>
+        </div>
+      </div>
+
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">법적 리스크 최소화 체크리스트</h3>
       <table class="w-full text-sm border-collapse mb-6">
         <thead class="bg-[#1a1a1a] text-white">
@@ -198,6 +275,60 @@ export const step5Data: Section[] = [
       </ul>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">절대 금지:</strong> 확인서(자인서) 즉석 서명 — 서명 = 자백. "변호사와 검토 후 서면으로 제출하겠습니다"로 일관.
+      </div>
+
+      <!-- V-506: 민원 대응 프로세스 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">민원 대응 프로세스</h4>
+        <!-- 프로세스 플로우 -->
+        <div class="flex flex-col items-center gap-0">
+          <!-- Step 1 -->
+          <div class="border-2 border-[#1a1a1a] rounded-lg px-6 py-3 text-center">
+            <span class="text-sm font-bold text-[#1a1a1a]">신고/민원 접수</span>
+          </div>
+          <div class="w-0.5 h-4 bg-[#1a1a1a]"></div>
+          <!-- Step 2 (강조) -->
+          <div class="bg-[#D4567A] rounded-lg px-6 py-3 text-center">
+            <span class="text-sm font-bold text-white">48시간 내 증거 확보</span>
+          </div>
+          <div class="text-[10px] text-[#999] mt-1 mb-1">차트 / 사진 / 동의서</div>
+          <div class="w-0.5 h-4 bg-[#1a1a1a]"></div>
+          <!-- Step 3 -->
+          <div class="bg-[#1a1a1a] rounded-lg px-6 py-3 text-center">
+            <span class="text-sm font-bold text-white">변호사 선임</span>
+          </div>
+          <div class="w-0.5 h-4 bg-[#1a1a1a]"></div>
+          <!-- 분기 -->
+          <div class="grid grid-cols-2 gap-4 w-full max-w-md">
+            <!-- 행정 경로 -->
+            <div class="flex flex-col items-center gap-0">
+              <span class="text-[10px] text-[#999] italic mb-2">행정 경로</span>
+              <div class="border-2 border-[#eee] rounded-lg px-4 py-2 text-center w-full">
+                <span class="text-xs font-bold text-[#1a1a1a]">보건소 심사</span>
+              </div>
+              <div class="w-0.5 h-3 bg-[#eee]"></div>
+              <div class="border-2 border-[#eee] rounded-lg px-4 py-2 text-center w-full">
+                <span class="text-xs font-bold text-[#1a1a1a]">복지부 최종 판단</span>
+              </div>
+            </div>
+            <!-- 형사 경로 -->
+            <div class="flex flex-col items-center gap-0">
+              <span class="text-[10px] text-[#999] italic mb-2">형사 경로</span>
+              <div class="border-2 border-[#eee] rounded-lg px-4 py-2 text-center w-full">
+                <span class="text-xs font-bold text-[#1a1a1a]">경찰 수사</span>
+              </div>
+              <div class="w-0.5 h-3 bg-[#eee]"></div>
+              <div class="border-2 border-[#eee] rounded-lg px-4 py-2 text-center w-full">
+                <span class="text-xs font-bold text-[#1a1a1a]">검찰 기소 판단</span>
+              </div>
+            </div>
+          </div>
+          <div class="w-0.5 h-4 bg-[#1a1a1a] mt-2"></div>
+          <!-- 최종 -->
+          <div class="bg-[#1a1a1a] rounded-lg px-6 py-3 text-center">
+            <span class="text-sm font-bold text-white">합의/재발방지 계획 수립</span>
+          </div>
+        </div>
       </div>
     `,
   },
@@ -331,6 +462,38 @@ export const step5Data: Section[] = [
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 기존 배상책임보험이 미용 시술까지 보장 범위에 포함되는지 반드시 서면 확인할 것.
       </div>
       <p class="text-[#333] leading-relaxed mb-4">한국의료분쟁조정중재원 2024년 통계연보 기준: 치과 조정신청 <span class="font-bold text-[#1a1a1a]">1,222건 (전체 3위)</span>, 전체 조정성공률 67.2%, 평균 성립금액 1,005만원.</p>
+
+      <!-- V-507: 배상책임보험 가입 체크리스트 -->
+      <div class="bg-white border-2 border-[#D4567A] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">배상책임보험 가입 체크리스트</h4>
+        <ul class="space-y-4">
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">배상책임보험 가입 (필수)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">미용시술 특약 추가 확인</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">보장 한도: 1건당 1억원 이상 권장</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">면책 조항 확인 (비허가 시술 제외 여부)</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">의료분쟁조정중재원 신청 절차 숙지</span>
+          </li>
+          <li class="flex items-start gap-3">
+            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-sm text-[#1a1a1a]">사고 발생 시 72시간 내 보험사 통보</span>
+          </li>
+        </ul>
+        <p class="text-[10px] text-[#999] text-center mt-6">치과의사의 미용시술은 법적으로 허가되며, 배상책임보험은 필수 요건입니다.</p>
+      </div>
       <hr class="border-t border-[#eee] my-8" />
     `,
   },

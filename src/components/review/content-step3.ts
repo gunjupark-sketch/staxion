@@ -160,7 +160,72 @@ export const step3Data: Section[] = [
       <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">원칙:</span> 원장이 먼저 30케이스. 그 다음에 스탭 교육. 그 다음에 마케팅. 이 순서를 지키지 않으면 어딘가에서 반드시 문제가 터진다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 시술별 숙련도 로드맵 — 교근 보톡스 &rarr; 이마·미간 &rarr; 필러 &rarr; 고위험 필러 &rarr; 실리프팅 단계별 진행 타임라인]</div>
+      <!-- V-303: 숙련도 로드맵 -->
+      <div class="bg-white border border-[#eee] rounded-lg p-6 mb-6">
+        <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">숙련도 로드맵</h4>
+        <!-- 타임라인 바 -->
+        <div class="w-full bg-[#eee] rounded-full h-2 mb-8">
+          <div class="bg-[#D4567A] h-2 rounded-full" style="width: 25%"></div>
+        </div>
+        <!-- 4단계 카드 -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <!-- Level 1 -->
+          <div class="border-2 border-[#eee] rounded-lg p-4 relative">
+            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 1</div>
+            <div class="text-sm font-bold text-[#1a1a1a] mb-1">입문</div>
+            <div class="text-xs text-[#999] mb-3">0~3개월</div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+              보톡스<br/><span class="font-normal text-[10px]">50건 완료</span>
+            </div>
+            <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
+              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 25%"></div>
+            </div>
+          </div>
+          <!-- 화살표 (모바일 숨김) -->
+          <!-- Level 2 -->
+          <div class="border-2 border-[#eee] rounded-lg p-4 relative">
+            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 2</div>
+            <div class="text-sm font-bold text-[#1a1a1a] mb-1">기본</div>
+            <div class="text-xs text-[#999] mb-3">3~6개월</div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+              필러<br/><span class="font-normal text-[10px]">입술·턱 30건</span>
+            </div>
+            <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
+              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 50%"></div>
+            </div>
+          </div>
+          <!-- Level 3 -->
+          <div class="border-2 border-[#eee] rounded-lg p-4 relative">
+            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 3</div>
+            <div class="text-sm font-bold text-[#1a1a1a] mb-1">중급</div>
+            <div class="text-xs text-[#999] mb-3">6~12개월</div>
+            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+              필러 확장<br/><span class="font-normal text-[10px]">+ 스킨부스터</span>
+            </div>
+            <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
+              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 75%"></div>
+            </div>
+          </div>
+          <!-- Level 4 -->
+          <div class="border-2 border-[#D4567A] rounded-lg p-4 relative bg-[#f5f5f5]">
+            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 4</div>
+            <div class="text-sm font-bold text-[#1a1a1a] mb-1">고급</div>
+            <div class="text-xs text-[#999] mb-3">12개월+</div>
+            <div class="bg-[#1a1a1a] text-white text-xs font-bold rounded px-2 py-2 text-center">
+              실리프팅<br/><span class="font-normal text-[10px]">+ HIFU 20건</span>
+            </div>
+            <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
+              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 100%"></div>
+            </div>
+          </div>
+        </div>
+        <!-- 범례 -->
+        <div class="flex items-center gap-4 mt-4 text-xs text-[#999]">
+          <span>진행 단계 →</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#eee] border border-[#ddd] rounded inline-block"></span> 입문</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#D4567A] rounded inline-block"></span> 숙련</span>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
