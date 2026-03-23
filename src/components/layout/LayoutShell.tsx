@@ -25,10 +25,9 @@ export function LayoutShell({ children }: { children: React.ReactNode }) {
     );
   }
 
-  // 나머지 전부 → 새 레이아웃
-  const isHomepage = pathname === "/";
+  // 나머지 전부 → 새 레이아웃 (라이트 모드, 2단)
   return (
-    <NewLayoutShell showRightSidebar={isHomepage}>
+    <NewLayoutShell>
       {children}
     </NewLayoutShell>
   );

@@ -6,6 +6,8 @@ export type OrderStatus = "pending" | "paid" | "failed" | "cancelled" | "refunde
 export type PostCategory = "blog" | "column" | "news";
 export type InquiryType = "general" | "consulting" | "education" | "global";
 export type RegistrationStatus = "registered" | "cancelled" | "attended";
+export type AnalysisStatus = "pending" | "processing" | "completed" | "failed";
+export type NotificationType = "analysis_complete" | "analysis_failed" | "order_shipped" | "system";
 
 export interface Profile {
   id: string;
@@ -18,6 +20,7 @@ export interface Profile {
   clinic_name: string | null;
   clinic_region: string | null;
   avatar_url: string | null;
+  analysis_credits: number;
   created_at: string;
   updated_at: string;
 }
@@ -172,4 +175,39 @@ export interface SiteSetting {
   key: string;
   value: Record<string, unknown>;
   updated_at: string;
+}
+
+export interface AnalysisReport {
+  id: string;
+  user_id: string;
+  address: string;
+  sido: string | null;
+  sgg: string | null;
+  dong: string | null;
+  lat: number | null;
+  lng: number | null;
+  admi_code: string | null;
+  upjong_code: string;
+  upjong_name: string;
+  status: AnalysisStatus;
+  error_message: string | null;
+  sbiz_analy_no: string | null;
+  sbiz_data: Record<string, unknown> | null;
+  sgis_data: Record<string, unknown> | null;
+  kosis_data: Record<string, unknown> | null;
+  competitors_data: Record<string, unknown> | null;
+  ai_analysis: Record<string, unknown> | null;
+  created_at: string;
+  completed_at: string | null;
+}
+
+export interface Notification {
+  id: string;
+  user_id: string;
+  type: string;
+  title: string;
+  message: string | null;
+  link: string | null;
+  is_read: boolean;
+  created_at: string;
 }

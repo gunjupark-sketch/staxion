@@ -31,14 +31,19 @@ html, body {
 @custom-variant dark (&:is(.dark *));
 
 @theme {
-  /* ── Brand: Neon Green ── */
-  --color-brand-neon: #BDFF06;
-  --color-brand-neon-hover: #a8e600;
+  /* ── Brand: Neon Green (시안 #C3F400 기준) ── */
+  --color-brand-neon: #C3F400;
+  --color-brand-neon-hover: #b0dc00;
   --color-brand-neon-safe: #8EC31F;
-  --color-brand-neon-sub: #bdff06;
+  --color-brand-neon-sub: #C3F400;
   --color-brand-neon-text: #4d7a0f;
   --color-brand-neon-text-hover: #3d6200;
   --color-brand-neon-btn: #5a8a14;
+
+  /* ── Coral / Salmon (시안 포인트 색상) ── */
+  --color-coral: #FF8383;
+  --color-coral-light: #FFF0F0;
+  --color-clinical-salmon: #FF8A7A;
 
   /* ── Semantic Colors (양쪽 테마 공통) ── */
   --color-info: #4A9FFF;
@@ -76,138 +81,83 @@ body {
 }
 
 /* ═══════════════════════════════════════
-   LIGHT MODE
+   LIGHT MODE (Stitch 시안 기준 — 라이트 통일)
    ═══════════════════════════════════════ */
 :root {
-  --background: #FFFFFF;
-  --foreground: #212121;
+  --background: #F8F9FA;
+  --foreground: #1A1F2B;
 
   --card: #FFFFFF;
-  --card-foreground: #212121;
+  --card-foreground: #1A1F2B;
   --popover: #FFFFFF;
-  --popover-foreground: #212121;
+  --popover-foreground: #1A1F2B;
 
   /* Primary = 접근성 확보된 진한 그린 (라이트 배경에서 4.5:1+) */
   --primary: #5a8a14;
   --primary-foreground: #FFFFFF;
 
   --secondary: #F5F5F5;
-  --secondary-foreground: #212121;
+  --secondary-foreground: #1A1F2B;
 
   --muted: #F5F5F5;
-  --muted-foreground: #666666;
+  --muted-foreground: #64748B;
 
   --accent: #f0ffc0;
-  --accent-foreground: #333333;
+  --accent-foreground: #1A1F2B;
 
   --destructive: #dc2626;
 
-  --border: #e8eaed;
-  --input: #e8eaed;
-  --ring: #BDFF06;
+  --border: #E2E8F0;
+  --input: #E2E8F0;
+  --ring: #C3F400;
 
-  /* Surface (design-tokens.ts 대체) */
-  --surface: #f8f9ff;
-  --surface-secondary: #F5F5F5;
+  /* Surface */
+  --surface: #F8F9FA;
+  --surface-secondary: #F1F5F9;
 
-  /* Text (design-tokens.ts 대체) */
-  --text-primary: #1a1a2e;
-  --text-body: #333340;
-  --text-secondary: #666673;
-  --text-muted: #8c8c99;
-  --text-placeholder: #9999a6;
+  /* Text */
+  --text-primary: #1A1F2B;
+  --text-body: #334155;
+  --text-secondary: #64748B;
+  --text-muted: #94A3B8;
+  --text-placeholder: #94A3B8;
   --text-inverse: #FFFFFF;
 
-  /* Layout (design-tokens.ts 대체) */
-  --layout-dark: #1a1a2e;
-  --layout-dark-mid: #2d2d44;
-  --layout-dark-light: #3a3a55;
+  /* Layout (히어로/프로모 다크 섹션용 — 유지) */
+  --layout-dark: #1A1F2B;
+  --layout-dark-mid: #2D3348;
+  --layout-dark-light: #3D4560;
 
-  --radius: 0.625rem;
+  --radius: 0.5rem;
 
   /* Sidebar */
-  --sidebar: #FAFAFA;
-  --sidebar-foreground: #212121;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #1A1F2B;
   --sidebar-primary: #5a8a14;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F5F5F5;
-  --sidebar-accent-foreground: #212121;
-  --sidebar-border: #e8eaed;
-  --sidebar-ring: #BDFF06;
+  --sidebar-accent: #F8F9FA;
+  --sidebar-accent-foreground: #1A1F2B;
+  --sidebar-border: #E2E8F0;
+  --sidebar-ring: #C3F400;
 
   /* Charts */
   --chart-1: #4A9FFF;
   --chart-2: #7ED957;
-  --chart-3: #BDFF06;
+  --chart-3: #C3F400;
   --chart-4: #A78BFA;
   --chart-5: #FB923C;
+
+  /* 시안 전용 토큰 */
+  --color-coral: #FF8383;
+  --color-coral-light: #FFF0F0;
+  --color-clinical-salmon: #FF8A7A;
 }
 
 /* ═══════════════════════════════════════
-   DARK MODE (소솜치과 대시보드 참고)
+   DARK MODE — 비활성 (라이트 모드 통일)
+   나중에 다크모드 구현 시 복원
    ═══════════════════════════════════════ */
-.dark {
-  --background: #0e0e0e;
-  --foreground: #eaeaea;
-
-  --card: #1a1a1a;
-  --card-foreground: #eaeaea;
-  --popover: #1a1a1a;
-  --popover-foreground: #eaeaea;
-
-  /* Primary = 네온그린 (다크 배경에서 그대로 빛남) */
-  --primary: #BDFF06;
-  --primary-foreground: #0e0e0e;
-
-  --secondary: #1f1f1f;
-  --secondary-foreground: #eaeaea;
-
-  --muted: #1f1f1f;
-  --muted-foreground: #aaaaaa;
-
-  --accent: #1a2600;
-  --accent-foreground: #BDFF06;
-
-  --destructive: #FF6565;
-
-  --border: #262626;
-  --input: #333333;
-  --ring: #BDFF06;
-
-  /* Surface */
-  --surface: #141414;
-  --surface-secondary: #1a1a1a;
-
-  /* Text */
-  --text-primary: #eaeaea;
-  --text-body: #eaeaea;
-  --text-secondary: #aaaaaa;
-  --text-muted: #666666;
-  --text-placeholder: #555555;
-  --text-inverse: #0e0e0e;
-
-  /* Layout */
-  --layout-dark: #eaeaea;
-  --layout-dark-mid: #1a1a1a;
-  --layout-dark-light: #2a2a2a;
-
-  /* Sidebar */
-  --sidebar: #141414;
-  --sidebar-foreground: #eaeaea;
-  --sidebar-primary: #BDFF06;
-  --sidebar-primary-foreground: #0e0e0e;
-  --sidebar-accent: #1f1f1f;
-  --sidebar-accent-foreground: #eaeaea;
-  --sidebar-border: #262626;
-  --sidebar-ring: #BDFF06;
-
-  /* Charts (다크에서도 동일 — 충분히 밝음) */
-  --chart-1: #4A9FFF;
-  --chart-2: #7ED957;
-  --chart-3: #BDFF06;
-  --chart-4: #A78BFA;
-  --chart-5: #FB923C;
-}
+/* .dark { ... } */
 
 /* ── Tailwind 토큰 연결 ── */
 @theme inline {
@@ -266,6 +216,11 @@ body {
   --color-chart-3: var(--chart-3);
   --color-chart-4: var(--chart-4);
   --color-chart-5: var(--chart-5);
+
+  /* 시안 토큰 (coral 계열 — bg-coral, text-clinical-salmon 등) */
+  --color-coral: var(--color-coral);
+  --color-coral-light: var(--color-coral-light);
+  --color-clinical-salmon: var(--color-clinical-salmon);
 
   /* Radius */
   --radius-sm: calc(var(--radius) * 0.6);

@@ -10,6 +10,7 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import RichTextEditor from "@/components/editor/RichTextEditor";
 import ImageUpload from "@/components/admin/ImageUpload";
+import { sanitizeHtml } from "@/lib/sanitize";
 import {
   ArrowLeftIcon,
   SaveIcon,
@@ -422,7 +423,7 @@ export default function PostDetailPage() {
           ) : form.content ? (
             <div
               className="prose prose-sm max-w-none rounded-lg border p-4"
-              dangerouslySetInnerHTML={{ __html: form.content }}
+              dangerouslySetInnerHTML={{ __html: sanitizeHtml(form.content || "") }}
             />
           ) : (
             <p className="text-sm text-text-muted">-</p>

@@ -11,7 +11,7 @@ const footerLinks = {
   ],
   정보: [
     { label: "미용치과 소개", href: "/about-beauty" },
-    { label: "소식", href: "/news" },
+    { label: "소식", href: "/medipost" },
     { label: "회사소개", href: "/about" },
   ],
   지원: [

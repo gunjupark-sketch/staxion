@@ -14,9 +14,9 @@ export default function AboutBeautyPage() {
       <PageBanner pageSlug="about-beauty" />
 
       {/* Hero */}
-      <section className="bg-surface-dark py-24 md:py-32">
+      <section className="bg-layout-dark py-24 md:py-32">
         <div className="mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-neon uppercase">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
             About Beauty Dental
           </p>
           <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl">
@@ -24,7 +24,7 @@ export default function AboutBeautyPage() {
             <br />
             왜 지금인가?
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-text-muted">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/60">
             치과의사의 미용시술 합법성, 비급여 수익 다각화, 그리고 선점의 기회
           </p>
         </div>
@@ -189,7 +189,7 @@ export default function AboutBeautyPage() {
       </section>
 
       {/* CTA */}
-      <section className="bg-surface-dark py-24 md:py-32">
+      <section className="bg-layout-dark py-24 md:py-32">
         <div className="mx-auto max-w-2xl px-4 text-center md:px-6">
           <h2 className="text-2xl font-bold text-white">
             미용 진료, 체계적으로 시작하세요

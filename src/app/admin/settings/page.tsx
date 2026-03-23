@@ -128,7 +128,7 @@ const PAGE_PRESETS = [
   { path: "/guidebook", label: "가이드북" },
   { path: "/education", label: "교육/세미나" },
   { path: "/community", label: "커뮤니티" },
-  { path: "/news", label: "뉴스/칼럼" },
+  { path: "/medipost", label: "뉴스/칼럼" },
   { path: "/contact", label: "상담신청" },
   { path: "/global", label: "해외환자유치" },
   { path: "/services", label: "서비스소개" },

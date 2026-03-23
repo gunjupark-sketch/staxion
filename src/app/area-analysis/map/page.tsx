@@ -2,7 +2,7 @@
 
 import { useState, useRef, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
-import { Search, MapPin, Users, Building2, TrendingUp, DollarSign, ChevronLeft, Loader2 } from "lucide-react";
+import { Search, MapPin, Users, Building2, TrendingUp, DollarSign, ChevronLeft, Loader2, BarChart3 } from "lucide-react";
 import Link from "next/link";
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
 
@@ -30,6 +30,7 @@ const DATA_TABS = [
   { id: "competitors", label: "경쟁", icon: Building2 },
   { id: "commercial", label: "상권", icon: TrendingUp },
   { id: "income", label: "소득", icon: DollarSign },
+  { id: "sbiz", label: "상세", icon: BarChart3 },
 ] as const;
 
 type DataTab = (typeof DATA_TABS)[number]["id"];
@@ -353,7 +354,9 @@ export default function AreaAnalysisMapPage() {
 
         {/* 데이터 패널 */}
         <div className="flex-1 overflow-y-auto px-4 py-4">
-          {!location ? (
+          {activeTab === "sbiz" ? (
+            <SbizPanel />
+          ) : !location ? (
             <div className="flex flex-col items-center justify-center h-full text-center">
               <div className="w-16 h-16 rounded-full bg-surface-secondary flex items-center justify-center mb-4">
                 <Search className="w-7 h-7 text-text-muted" />
@@ -408,6 +411,8 @@ function DataPanel({
       return <CommercialPanel location={location} radiusLabel={radiusLabel} radius={radius} />;
     case "income":
       return <IncomePanel location={location} radiusLabel={radiusLabel} />;
+    case "sbiz":
+      return <SbizPanel />;
   }
 }
 
@@ -891,6 +896,47 @@ function PlaceholderCard({ label }: { label: string }) {
   return (
     <div className="rounded-xl border border-dashed border-border bg-surface-secondary p-6 flex items-center justify-center min-h-[100px]">
       <p className="text-sm text-text-muted text-center">{label}<br /><span className="text-xs">API 연동 예정</span></p>
+    </div>
+  );
+}
+
+/* ── 소상공인365 상세분석 패널 (iframe) ── */
+function SbizPanel() {
+  const certKey = process.env.NEXT_PUBLIC_SBIZ_CERT_KEY;
+
+  if (!certKey) {
+    return (
+      <div className="flex flex-col items-center justify-center py-12">
+        <p className="text-sm text-red-500">API 키가 설정되지 않았습니다</p>
+        <p className="text-xs text-text-muted mt-1">NEXT_PUBLIC_SBIZ_CERT_KEY 환경변수를 확인하세요</p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      <div className="flex items-center justify-between">
+        <h3 className="text-sm font-bold text-text-primary">소상공인365 상세분석</h3>
+        <a
+          href={`https://bigdata.sbiz.or.kr/#/openApi/detail?certKey=${certKey}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs text-brand-neon-btn hover:underline"
+        >
+          새 창에서 열기 ↗
+        </a>
+      </div>
+      <p className="text-xs text-text-muted">
+        유동인구 · 매출분석 · 업종분포 · 인구특성 등 행정동 단위 상세 데이터
+      </p>
+      <div className="rounded-xl border border-border overflow-hidden bg-white" style={{ height: "calc(100vh - 280px)", minHeight: "500px" }}>
+        <iframe
+          src={`https://bigdata.sbiz.or.kr/gis/openApi/startupPublic?certKey=${certKey}`}
+          className="w-full h-full border-0"
+          title="소상공인365 상세분석"
+          allow="geolocation"
+        />
+      </div>
     </div>
   );
 }

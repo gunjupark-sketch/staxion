@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 
 const menuItems = [
   { label: "내 정보", href: "/mypage", icon: UserIcon },
+  { label: "상권분석 이력", href: "/mypage/analysis", icon: BarChartIcon },
   { label: "내가 쓴 글", href: "/mypage/posts", icon: PenIcon },
   { label: "구매 내역", href: "/mypage/orders", icon: ShoppingBagIcon },
   { label: "내 치과 대기실", href: "/mypage/waiting-room", icon: TvIcon },
@@ -57,6 +58,16 @@ function GraduationCapIcon({ className }: { className?: string }) {
       <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.962 5.267a2 2 0 0 0-1.924 0L2.6 9.084a1 1 0 0 0 0 1.832l8.438 3.817a2 2 0 0 0 1.924 0z" />
       <path d="M22 10v6" />
       <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+    </svg>
+  );
+}
+
+function BarChartIcon({ className }: { className?: string }) {
+  return (
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}>
+      <line x1="12" x2="12" y1="20" y2="10" />
+      <line x1="18" x2="18" y1="20" y2="4" />
+      <line x1="6" x2="6" y1="20" y2="16" />
     </svg>
   );
 }

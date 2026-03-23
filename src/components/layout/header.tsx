@@ -15,7 +15,7 @@ const navItems = [
   { label: "교육", href: "/education" },
   { label: "스토어", href: "/store" },
   { label: "커뮤니티", href: "/community" },
-  { label: "소식", href: "/news" },
+  { label: "소식", href: "/medipost" },
   { label: "회사소개", href: "/about" },
 ];
 

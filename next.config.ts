@@ -26,6 +26,18 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "placehold.co",
       },
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn-optimized.imweb.me",
+      },
+      {
+        protocol: "https",
+        hostname: "cdn.imweb.me",
+      },
     ],
   },
 };

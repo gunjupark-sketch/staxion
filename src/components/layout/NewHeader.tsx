@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { createClient } from "@/lib/supabase/client";
+import { usePushSubscription } from "@/lib/usePushSubscription";
 
 interface NewHeaderProps {
   onMenuToggle: () => void;
@@ -13,19 +14,33 @@ interface NewHeaderProps {
 export default function NewHeader({ onMenuToggle }: NewHeaderProps) {
   const [user, setUser] = useState<{ email?: string; id?: string; user_metadata?: Record<string, unknown> } | null>(null);
   const [cartCount, setCartCount] = useState(0);
+  const [notifCount, setNotifCount] = useState(0);
+  const [notifications, setNotifications] = useState<Array<{ id: string; title: string; message: string | null; link: string | null; is_read: boolean; created_at: string }>>([]);
+  const [showNotifDropdown, setShowNotifDropdown] = useState(false);
   const router = useRouter();
+
+  // 로그인 시 Web Push 구독
+  usePushSubscription(!!user);
 
   useEffect(() => {
     const supabase = createClient();
     supabase.auth.getUser().then(({ data }) => {
       setUser(data.user);
-      if (data.user) fetchCartCount(data.user.id);
+      if (data.user) {
+        fetchCartCount(data.user.id);
+        fetchNotifications();
+      }
     });
 
     const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
       setUser(session?.user ?? null);
-      if (session?.user) fetchCartCount(session.user.id);
-      else setCartCount(0);
+      if (session?.user) {
+        fetchCartCount(session.user.id);
+        fetchNotifications();
+      } else {
+        setCartCount(0);
+        setNotifCount(0);
+      }
     });
 
     // 장바구니 변경 이벤트 수신
@@ -40,6 +55,26 @@ export default function NewHeader({ onMenuToggle }: NewHeaderProps) {
     };
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  async function fetchNotifications() {
+    try {
+      const res = await fetch("/api/notifications");
+      if (res.ok) {
+        const data = await res.json();
+        setNotifications(data.notifications || []);
+        setNotifCount(data.unreadCount || 0);
+      }
+    } catch { /* ignore */ }
+  }
+
+  async function markNotifRead(id: string) {
+    await fetch("/api/notifications/read", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id }),
+    });
+    fetchNotifications();
+  }
 
   async function fetchCartCount(userId: string) {
     const supabase = createClient();
@@ -115,16 +150,72 @@ export default function NewHeader({ onMenuToggle }: NewHeaderProps) {
           </div>
 
           {/* 알림 */}
-          <button
-            className="relative flex h-12 w-12 items-center justify-center rounded-full border border-border"
-            aria-label="알림"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-text-secondary">
-              <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
-              <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
-            </svg>
-            <span className="absolute right-2 top-2 flex h-3 w-3 items-center justify-center rounded-full text-[6px] font-black text-white bg-destructive" />
-          </button>
+          <div className="relative">
+            <button
+              className="relative flex h-12 w-12 items-center justify-center rounded-full border border-border"
+              aria-label="알림"
+              onClick={() => setShowNotifDropdown(!showNotifDropdown)}
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-text-secondary">
+                <path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9" />
+                <path d="M10.3 21a1.94 1.94 0 0 0 3.4 0" />
+              </svg>
+              {notifCount > 0 && (
+                <span className="absolute right-1 top-1 flex h-5 min-w-5 items-center justify-center rounded-full px-1 text-[10px] font-bold text-white bg-destructive">
+                  {notifCount}
+                </span>
+              )}
+            </button>
+
+            {showNotifDropdown && (
+              <>
+                <div className="fixed inset-0 z-40" onClick={() => setShowNotifDropdown(false)} />
+                <div className="absolute right-0 top-14 z-50 w-80 rounded-xl border border-border bg-card shadow-2xl">
+                  <div className="flex items-center justify-between border-b border-border px-4 py-3">
+                    <span className="text-sm font-bold text-foreground">알림</span>
+                    {notifCount > 0 && (
+                      <button
+                        onClick={() => markNotifRead("all")}
+                        className="text-xs text-primary hover:underline"
+                      >
+                        모두 읽음
+                      </button>
+                    )}
+                  </div>
+                  <div className="max-h-80 overflow-y-auto">
+                    {notifications.length === 0 ? (
+                      <div className="px-4 py-8 text-center text-sm text-text-muted">
+                        알림이 없습니다
+                      </div>
+                    ) : (
+                      notifications.slice(0, 10).map((notif) => (
+                        <button
+                          key={notif.id}
+                          className={`w-full text-left px-4 py-3 border-b border-border/50 hover:bg-secondary/50 transition-colors ${!notif.is_read ? "bg-primary/5" : ""}`}
+                          onClick={() => {
+                            if (!notif.is_read) markNotifRead(notif.id);
+                            setShowNotifDropdown(false);
+                            if (notif.link) router.push(notif.link);
+                          }}
+                        >
+                          <div className="flex items-start gap-2">
+                            {!notif.is_read && <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" />}
+                            <div className={!notif.is_read ? "" : "ml-4"}>
+                              <p className="text-sm font-semibold text-foreground">{notif.title}</p>
+                              {notif.message && <p className="mt-0.5 text-xs text-text-muted">{notif.message}</p>}
+                              <p className="mt-1 text-[10px] text-text-muted">
+                                {new Date(notif.created_at).toLocaleDateString("ko-KR", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" })}
+                              </p>
+                            </div>
+                          </div>
+                        </button>
+                      ))
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
 
           {/* 장바구니 (로그인 시만) */}
           {user && (

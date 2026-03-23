@@ -87,7 +87,8 @@ export default async function ServiceDetailPage({ params }: Props) {
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-transparent" />
         </div>
         {/* 모바일 배경 */}
         <div className="relative block sm:hidden" style={{ paddingBottom: "56.25%" }}>
@@ -99,7 +100,8 @@ export default async function ServiceDetailPage({ params }: Props) {
             sizes="100vw"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-layout-dark/10" />
+          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-gradient-to-t from-layout-dark via-layout-dark/60 to-transparent" />
         </div>
 
         <div className="relative z-10 -mt-32 pb-16 md:-mt-40 md:pb-24">
@@ -126,11 +128,11 @@ export default async function ServiceDetailPage({ params }: Props) {
               )}
             </div>
 
-            <h1 className="text-3xl font-black text-white md:text-5xl lg:text-6xl leading-tight tracking-tight">
+            <h1 className="text-3xl font-black text-white md:text-5xl lg:text-6xl leading-tight tracking-tight [text-shadow:0_2px_12px_rgba(0,0,0,0.7)]">
               {service.name}
             </h1>
             {service.description && (
-              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/60 md:text-lg">
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/70 md:text-lg [text-shadow:0_1px_6px_rgba(0,0,0,0.5)]">
                 {service.description}
               </p>
             )}

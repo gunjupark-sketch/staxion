@@ -1,198 +1,209 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent } from "@/components/ui/card";
-import { MapPin, BarChart3, Users, TrendingUp, Globe, Target } from "lucide-react";
+import {
+  MapPin, BarChart3, Users, TrendingUp, DollarSign,
+  ShoppingBag, UserCheck, Search, Brain, Bell,
+} from "lucide-react";
+import { createClient } from "@/lib/supabase/client";
 
 export default function AreaAnalysisPage() {
+  const router = useRouter();
+  const supabase = createClient();
+
+  const [user, setUser] = useState<{ id: string } | null>(null);
+  const [credits, setCredits] = useState<number | null>(null);
+  const [address, setAddress] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfirm, setShowConfirm] = useState(false);
+  const [showLogin, setShowLogin] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+
+  useEffect(() => {
+    supabase.auth.getUser().then(({ data }) => {
+      if (data.user) {
+        setUser({ id: data.user.id });
+        supabase
+          .from("profiles")
+          .select("analysis_credits")
+          .eq("id", data.user.id)
+          .single()
+          .then(({ data: profile }) => {
+            setCredits(profile?.analysis_credits ?? 0);
+          });
+      }
+    });
+  }, []);
+
+  const handleAnalysis = () => {
+    if (!address.trim()) return;
+    if (!user) {
+      setShowLogin(true);
+      return;
+    }
+    if (credits !== null && credits <= 0) {
+      router.push("/store?category=analysis");
+      return;
+    }
+    setShowConfirm(true);
+  };
+
+  const confirmAnalysis = async () => {
+    setShowConfirm(false);
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch("/api/analysis/request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ address: address.trim() }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        alert(err.error || "분석 요청에 실패했습니다.");
+        return;
+      }
+
+      setSubmitted(true);
+      if (credits !== null) setCredits(credits - 1);
+    } catch {
+      alert("네트워크 오류가 발생했습니다.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   return (
     <>
-      {/* Hero + 배너 이미지 */}
+      {/* Section 1: Hero + 분석 실행 */}
       <section className="relative overflow-hidden bg-layout-dark py-20 md:py-28">
         <Image
           src="/images/bg/area-analysis-banner.png"
-          alt="골든시그널 권역분석"
+          alt="메디스테이션 상권분석"
           fill
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 mx-auto max-w-4xl px-4 text-center md:px-6">
-          <p className="text-sm font-semibold tracking-widest text-brand-neon uppercase">
-            GOLDEN SIGNAL
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="relative z-10 mx-auto max-w-3xl px-4 text-center md:px-6">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            MEDISTAXION AREA ANALYSIS
           </p>
           <h1 className="mt-4 text-3xl font-bold text-white md:text-5xl leading-tight">
-            우리 치과 주변,
+            주소 하나로,
             <br />
-            정말 알고 있습니까?
+            치과 상권의 모든 것
           </h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/70">
-            단순 상권분석이 아닌, 골든시그널 권역분석.
-            <br className="hidden sm:block" />
-            권역의 심장부를 꿰뚫어 치과의 성공 전략을 설계합니다.
+          <p className="mx-auto mt-4 max-w-xl text-base text-white/60">
+            인구 · 매출 · 경쟁 · 고객 — AI가 분석하는 치과 전용 상권 리포트
           </p>
-          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-            <Link
-              href="/area-analysis/map"
-              className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20"
-            >
-              <MapPin className="h-5 w-5" />
-              무료 지도 체험
-            </Link>
-            <Link
-              href="/contact?type=consulting"
-              className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-8 text-base font-semibold text-white transition-all hover:bg-white/5"
-            >
-              세부 보고서 상담
-            </Link>
+
+          {/* 주소 입력 */}
+          <div className="mx-auto mt-10 max-w-xl">
+            {!submitted ? (
+              <>
+                <div className="flex gap-2">
+                  <div className="relative flex-1">
+                    <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/30" />
+                    <input
+                      type="text"
+                      value={address}
+                      onChange={(e) => setAddress(e.target.value)}
+                      onKeyDown={(e) => e.key === "Enter" && handleAnalysis()}
+                      placeholder="분석할 주소를 입력하세요 (예: 서울시 강남구 역삼동)"
+                      className="h-14 w-full rounded-xl border border-white/20 bg-white/10 pl-12 pr-4 text-base text-white placeholder:text-white/30 backdrop-blur-sm focus:border-brand-neon focus:outline-none focus:ring-1 focus:ring-brand-neon/50"
+                    />
+                  </div>
+                </div>
+
+                <button
+                  onClick={handleAnalysis}
+                  disabled={!address.trim() || isSubmitting}
+                  className="mt-4 inline-flex h-13 w-full items-center justify-center gap-2 rounded-xl bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] transition-all hover:brightness-110 hover:shadow-lg hover:shadow-brand-neon/20 disabled:opacity-40 disabled:cursor-not-allowed"
+                >
+                  <BarChart3 className="h-5 w-5" />
+                  메디스테이션 상권분석하기
+                </button>
+
+                {/* 남은 횟수 */}
+                <div className="mt-3 text-sm text-white/40">
+                  {user ? (
+                    credits !== null && credits > 0 ? (
+                      <span>무료 분석 <span className="text-brand-neon font-semibold">{credits}회</span> 남음</span>
+                    ) : credits === 0 ? (
+                      <span className="text-warning">무료 횟수를 모두 사용했습니다 · <Link href="/store?category=analysis" className="text-brand-neon underline">횟수 구매</Link></span>
+                    ) : null
+                  ) : (
+                    <span>회원가입 시 <span className="text-brand-neon font-semibold">3회 무료</span> 제공</span>
+                  )}
+                </div>
+              </>
+            ) : (
+              /* 요청 완료 상태 */
+              <div className="rounded-xl border border-brand-neon/30 bg-brand-neon/5 p-8 backdrop-blur-sm">
+                <div className="flex items-center justify-center gap-2 text-brand-neon">
+                  <Bell className="h-6 w-6" />
+                  <span className="text-lg font-bold">분석을 요청했습니다</span>
+                </div>
+                <p className="mt-3 text-sm text-white/60">
+                  분석이 완료되면 알림으로 안내드립니다.
+                  <br />
+                  마이페이지에서 결과를 확인하세요.
+                </p>
+                <div className="mt-6 flex gap-3 justify-center">
+                  <Link
+                    href="/mypage?tab=analysis"
+                    className="inline-flex h-10 items-center gap-2 rounded-lg bg-brand-neon px-6 text-sm font-bold text-[#1a1a1a] hover:brightness-110"
+                  >
+                    마이페이지로 이동
+                  </Link>
+                  <button
+                    onClick={() => { setSubmitted(false); setAddress(""); }}
+                    className="inline-flex h-10 items-center gap-2 rounded-lg border border-white/20 px-6 text-sm font-semibold text-white hover:bg-white/5"
+                  >
+                    추가 분석하기
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
-          <p className="mt-3 text-xs text-white/40">무료 체험 2회 제공 · 세부 보고서는 유료 서비스입니다</p>
         </div>
       </section>
 
-      {/* 무료 체험 vs 세부 보고서 비교 */}
+      {/* Section 2: 분석 항목 소개 */}
       <section className="py-16 md:py-20">
         <div className="mx-auto max-w-5xl px-4 md:px-6">
           <div className="text-center mb-12">
-            <p className="text-sm font-semibold tracking-widest text-primary uppercase">TWO OPTIONS</p>
+            <p className="text-xs font-semibold tracking-[0.25em] text-primary uppercase">
+              ANALYSIS REPORT
+            </p>
             <h2 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">
-              무료 체험과 세부 보고서
+              이런 분석을 받아볼 수 있습니다
             </h2>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            {/* 무료 체험 */}
-            <div className="rounded-xl border border-border/50 bg-card p-6 md:p-8">
-              <div className="mb-4">
-                <span className="inline-block rounded-full bg-secondary px-3 py-1 text-xs font-semibold text-text-secondary">
-                  무료 체험
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">지도 권역분석</h3>
-              <p className="text-sm text-text-muted mb-6">주소 검색으로 즉시 확인하는 기본 데이터</p>
-              <ul className="space-y-3">
-                {["인구 구성 (성별/연령대)", "경쟁 의료기관 현황", "주변 상권 분포", "소득 수준 (시도 단위)"].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-text-secondary">
-                    <span className="mt-0.5 text-success">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/area-analysis/map"
-                className="mt-6 inline-flex h-10 w-full items-center justify-center rounded-lg border border-primary bg-primary/10 text-sm font-semibold text-primary hover:bg-primary/20 transition-colors"
-              >
-                무료로 체험하기 →
-              </Link>
-              <p className="mt-2 text-center text-xs text-text-muted">2회 무료 체험</p>
-            </div>
-
-            {/* 세부 보고서 */}
-            <div className="rounded-xl border-2 border-primary/50 bg-primary/5 p-6 md:p-8 relative">
-              <div className="absolute -top-3 right-4">
-                <span className="inline-block rounded-full bg-primary px-3 py-1 text-xs font-bold text-primary-foreground">추천</span>
-              </div>
-              <div className="mb-4">
-                <span className="inline-block rounded-full bg-primary/20 px-3 py-1 text-xs font-semibold text-primary">
-                  프리미엄
-                </span>
-              </div>
-              <h3 className="text-xl font-bold text-foreground mb-2">골든시그널 세부 보고서</h3>
-              <p className="text-sm text-text-muted mb-6">소솜치과 사례 수준의 심층 분석 리포트</p>
-              <ul className="space-y-3">
-                {[
-                  "6대 영역 심층 분석",
-                  "STP 전략 + SWOT 분석",
-                  "골든시그널 TOP 3 + 캐치전략",
-                  "인터랙티브 대시보드 (HTML)",
-                  "프리미엄 PDF 리포트",
-                  "매출/고객/경쟁 상세 데이터",
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-2 text-sm text-foreground">
-                    <span className="mt-0.5 text-primary">★</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-              <Link
-                href="/contact?type=consulting"
-                className="mt-6 inline-flex h-10 w-full items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
-              >
-                보고서 상담 신청 →
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 문제 제기 */}
-      <section className="bg-card py-20">
-        <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-danger uppercase">
-              PROBLEM
-            </p>
-            <h2 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">
-              많은 치과들이 폐원하는 이유
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-text-muted">
-              데이터 없는 의사결정이 치과 경영을 무너뜨립니다.
-            </p>
-          </div>
-
-          <div className="mt-12 grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { problem: "단순 좌표 상권분석에 의존", detail: "반경 1km 인구수, 유동인구 수치만으로는 치과의 성공 전략을 세울 수 없습니다." },
-              { problem: "데이터 없이 '감'으로 결정", detail: "개원 위치, 진료 과목, 마케팅 방향을 경험과 직감에만 의존합니다." },
-              { problem: "경쟁 치과보다 '예쁘게만' 하려는 브랜딩", detail: "인테리어와 로고에 투자하지만, 정작 환자가 왜 오는지는 모릅니다." },
-              { problem: "주변 환경 변화 반영 안 됨", detail: "재개발, 학군 변화, 인구 이동 등 권역의 미래 가치를 간과합니다." },
+              { icon: BarChart3, title: "요약", desc: "상권 기본 정보, 업소수, 매출 증감, 키워드 TOP5" },
+              { icon: ShoppingBag, title: "업종분석", desc: "13개월 업소수 추이, 지역/전국 비교" },
+              { icon: DollarSign, title: "매출분석", desc: "월평균 매출, 요일별/시간대별 매출 패턴" },
+              { icon: Users, title: "인구분석", desc: "유동인구, 성별/연령별, 거주인구 현황" },
+              { icon: MapPin, title: "지역현황", desc: "세대수, 공동주택, 아파트 현황" },
+              { icon: UserCheck, title: "고객특성", desc: "방문객 소득, 라이프스타일, 소비 패턴" },
+              { icon: Brain, title: "AI 전략제안", desc: "치과 특화 데이터 기반 맞춤 전략 분석" },
             ].map((item) => (
-              <div key={item.problem} className="rounded-lg border-l-4 border-danger/60 bg-surface-secondary p-5">
-                <p className="font-semibold text-foreground">{item.problem}</p>
-                <p className="mt-2 text-sm text-text-muted">{item.detail}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 분석 6대 영역 */}
-      <section className="bg-surface-secondary py-20 dark:bg-secondary">
-        <div className="mx-auto max-w-5xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-primary uppercase">6 ANALYSIS AREAS</p>
-            <h2 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">골든시그널 권역분석 6대 영역</h2>
-            <p className="mx-auto mt-4 max-w-2xl text-text-muted">
-              치과가 위치한 지역의 심장부를 꿰뚫는 프리미엄 분석.
-            </p>
-          </div>
-
-          <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              { num: "01", icon: MapPin, title: "권역 구조 분석", desc: "치과 주변의 기본 구조를 파악합니다", items: ["주거/학군/직장/상업 비중 분석", "소비 패턴 (요일/시간대/소비력)", "상권 안정성 및 경쟁도 평가"] },
-              { num: "02", icon: BarChart3, title: "업종 및 소비 흐름", desc: "권역 내 업종 생태계를 분석합니다", items: ["업종 트렌드 (성장/하락 업종)", "인접 업종이 끼치는 영향 분석", "동일과 현황 및 매출 흐름 파악"] },
-              { num: "03", icon: Users, title: "고객군 세분화", desc: "잠재 환자의 특성을 정밀 분석합니다", items: ["성별/연령대별 인구 구조", "방문 목적 및 결제 패턴 분석", "시간대별 유동 패턴 분석"] },
-              { num: "04", icon: TrendingUp, title: "지역 미래 가치", desc: "권역의 3~5년 후를 예측합니다", items: ["도시 개발 계획 및 재건축 현황", "인구 구조 변화 예측", "지역 성장 가능성 평가"] },
-              { num: "05", icon: Globe, title: "온라인 경쟁 분석", desc: "디지털 영역의 경쟁 지형을 파악합니다", items: ["네이버 플레이스/블로그/커뮤니티 분석", "SNS 운영 현황 및 영향력", "리뷰 구조 및 핵심 키워드 분석"] },
-              { num: "06", icon: Target, title: "치과 전략 분석", desc: "데이터 기반 맞춤 전략을 수립합니다", items: ["STP 설정 / SWOT 분석", "KPI 목표 설정 및 로드맵", "고객 페르소나 설정"] },
-            ].map((area) => (
-              <Card key={area.num} className="border-border/50 transition-all hover:border-primary/30 hover:shadow-md">
-                <CardContent className="p-6">
-                  <div className="flex items-center gap-3 mb-3">
-                    <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
-                      <area.icon className="h-5 w-5 text-primary" />
-                    </div>
-                    <span className="text-xs font-bold text-primary">{area.num}</span>
+              <Card key={item.title} className="border-border/50 hover:border-primary/30 transition-colors">
+                <CardContent className="p-5">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10 mb-3">
+                    <item.icon className="h-5 w-5 text-primary" />
                   </div>
-                  <h3 className="text-lg font-bold text-foreground">{area.title}</h3>
-                  <p className="mt-1 text-sm text-text-muted">{area.desc}</p>
-                  <ul className="mt-4 space-y-2">
-                    {area.items.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-text-secondary">
-                        <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
+                  <h3 className="text-sm font-bold text-foreground">{item.title}</h3>
+                  <p className="mt-1 text-xs text-text-muted leading-relaxed">{item.desc}</p>
                 </CardContent>
               </Card>
             ))}
@@ -200,78 +211,180 @@ export default function AreaAnalysisPage() {
         </div>
       </section>
 
-      {/* 차별화 비교표 */}
-      <section className="bg-layout-dark py-20">
-        <div className="mx-auto max-w-4xl px-4 md:px-6">
-          <div className="text-center">
-            <p className="text-sm font-semibold tracking-widest text-brand-neon uppercase">DIFFERENCE</p>
-            <h2 className="mt-2 text-2xl font-bold text-white md:text-3xl">
-              일반 상권분석 vs 골든시그널 권역분석
+      {/* Section 3: 샘플 미리보기 */}
+      <section className="bg-card py-16 md:py-20">
+        <div className="mx-auto max-w-5xl px-4 md:px-6">
+          <div className="text-center mb-12">
+            <p className="text-xs font-semibold tracking-[0.25em] text-primary uppercase">
+              SAMPLE REPORT
+            </p>
+            <h2 className="mt-2 text-2xl font-bold text-foreground md:text-3xl">
+              실제 분석 결과 예시
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-white/50">
-              같은 데이터를 봐도 해석이 다릅니다.
+            <p className="mt-3 text-sm text-text-muted">
+              서울 강남구 역삼1동 · 치과의원 기준
             </p>
           </div>
 
-          <div className="mt-14 grid gap-6 md:grid-cols-2">
-            <div className="rounded-xl border border-white/10 p-6 md:p-8">
-              <div className="mb-6">
-                <span className="inline-block rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-white/50">일반 상권분석</span>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {/* 샘플 카드들 — 실제 데이터 기반 */}
+            <div className="rounded-xl border border-border/50 bg-background p-6">
+              <p className="text-xs font-semibold text-primary mb-2">선택 영역 요약</p>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">업소수</span>
+                  <span className="text-lg font-bold text-foreground">32개</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">전월대비 증감률</span>
+                  <span className="text-lg font-bold text-danger">-3.0%</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">월평균 매출</span>
+                  <span className="text-lg font-bold text-foreground">34,773만원</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">매출 증감률</span>
+                  <span className="text-lg font-bold text-success">+5.8%</span>
+                </div>
               </div>
-              <ul className="space-y-4">
-                {["반경 1km 인구수", "유동인구 수치", "경쟁 치과 수", "단순 인구통계", "현재 상황만 분석", "데이터 나열 위주"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/40">
-                    <span className="mt-0.5 text-white/20">&#x2014;</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
             </div>
 
-            <div className="rounded-xl border-2 border-brand-neon/50 bg-brand-neon/5 p-6 md:p-8">
-              <div className="mb-6">
-                <span className="inline-block rounded-full bg-brand-neon px-3 py-1 text-xs font-bold text-[#1a1a1a]">골든시그널 권역분석</span>
+            <div className="rounded-xl border border-border/50 bg-background p-6">
+              <p className="text-xs font-semibold text-primary mb-2">고객 특성</p>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">남성 평균소득</span>
+                  <span className="text-lg font-bold text-foreground">2,985만원</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">여성 평균소득</span>
+                  <span className="text-lg font-bold text-foreground">2,026만원</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">주요 라이프스타일</span>
+                  <span className="text-sm font-semibold text-foreground">게임 · 식도락</span>
+                </div>
               </div>
-              <ul className="space-y-4">
-                {["소비 흐름 및 결제 패턴 분석", "시간대별 유동 패턴 분석", "미래 개발 가치 및 성장성 예측", "고객 페르소나 기반 세분화", "3~5년 미래 가치 분석", "데이터 기반 맞춤 전략 수립"].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-white/80">
-                    <span className="mt-0.5 text-brand-neon">✓</span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
+            </div>
+
+            <div className="rounded-xl border border-border/50 bg-background p-6">
+              <p className="text-xs font-semibold text-primary mb-2">배후지 현황</p>
+              <div className="space-y-3">
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">배후지 업소수</span>
+                  <span className="text-lg font-bold text-foreground">523개</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">배후지 월평균 매출</span>
+                  <span className="text-lg font-bold text-foreground">8,569만원</span>
+                </div>
+                <div className="flex justify-between items-baseline">
+                  <span className="text-sm text-text-muted">일평균 유동인구</span>
+                  <span className="text-lg font-bold text-foreground">136,010명</span>
+                </div>
+              </div>
             </div>
           </div>
+
+          <p className="mt-6 text-center text-xs text-text-muted">
+            * 2025년 12월 기준 · 소상공인시장진흥공단 데이터
+          </p>
         </div>
       </section>
 
-      {/* 지도 체험 CTA */}
-      <section className="py-20">
-        <div className="mx-auto max-w-4xl px-4 md:px-6 text-center">
-          <h2 className="text-2xl font-bold text-foreground md:text-3xl">
-            직접 확인해보세요
+      {/* Section 4: 추가 CTA — 골든시그널 컨설팅 */}
+      <section className="bg-layout-dark py-16 md:py-20">
+        <div className="mx-auto max-w-3xl px-4 md:px-6 text-center">
+          <p className="text-xs font-semibold tracking-[0.25em] text-brand-neon uppercase">
+            GOLDEN SIGNAL CONSULTING
+          </p>
+          <h2 className="mt-4 text-2xl font-bold text-white md:text-3xl">
+            더 깊은 분석이 필요하다면
           </h2>
-          <p className="mt-4 text-text-muted">
-            주소를 검색하면 인구, 경쟁, 상권, 소득 데이터를 지도 위에서 확인할 수 있습니다.
+          <p className="mt-4 text-sm text-white/50">
+            온라인 상권분석을 넘어, 골든시그널 전문가가 직접 권역을 해석하고
+            <br className="hidden sm:block" />
+            치과 맞춤 전략을 수립합니다.
           </p>
           <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
             <Link
-              href="/area-analysis/map"
-              className="inline-flex h-12 items-center gap-2 rounded-lg bg-primary px-8 text-base font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+              href="/contact?type=consulting"
+              className="inline-flex h-12 items-center gap-2 rounded-lg bg-brand-neon px-8 text-base font-bold text-[#1a1a1a] hover:brightness-110 transition-all"
             >
-              <MapPin className="h-5 w-5" />
-              무료 지도 체험 →
+              컨설팅 상담 신청
             </Link>
             <Link
-              href="/contact?type=consulting"
-              className="inline-flex h-12 items-center gap-2 rounded-lg border border-border px-8 text-base font-semibold text-foreground hover:bg-secondary transition-colors"
+              href="/services/golden-signal"
+              className="inline-flex h-12 items-center gap-2 rounded-lg border border-white/20 px-8 text-base font-semibold text-white hover:bg-white/5 transition-all"
             >
-              세부 보고서 상담
+              골든시그널 서비스 보기
             </Link>
           </div>
-          <p className="mt-3 text-xs text-text-muted">무료 상담 · 분석 범위와 일정을 함께 협의합니다</p>
         </div>
       </section>
+
+      {/* 확인 모달 */}
+      {showConfirm && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="mx-4 w-full max-w-sm rounded-2xl bg-card p-6 shadow-2xl">
+            <h3 className="text-lg font-bold text-foreground">상권분석 요청</h3>
+            <p className="mt-2 text-sm text-text-muted">
+              무료 횟수가 차감됩니다. 진행하시겠습니까?
+            </p>
+            <div className="mt-2 rounded-lg bg-surface-secondary p-3">
+              <p className="text-xs text-text-muted">분석 주소</p>
+              <p className="text-sm font-semibold text-foreground mt-1">{address}</p>
+            </div>
+            <p className="mt-2 text-xs text-text-muted">
+              남은 횟수: <span className="font-semibold text-primary">{credits}회</span> → {(credits ?? 1) - 1}회
+            </p>
+            <div className="mt-5 flex gap-3">
+              <button
+                onClick={() => setShowConfirm(false)}
+                className="flex-1 h-11 rounded-lg border border-border text-sm font-semibold text-foreground hover:bg-secondary transition-colors"
+              >
+                취소
+              </button>
+              <button
+                onClick={confirmAnalysis}
+                disabled={isSubmitting}
+                className="flex-1 h-11 rounded-lg bg-primary text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors disabled:opacity-50"
+              >
+                {isSubmitting ? "요청 중..." : "분석하기"}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* 로그인 유도 모달 */}
+      {showLogin && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm">
+          <div className="mx-4 w-full max-w-sm rounded-2xl bg-card p-6 shadow-2xl">
+            <h3 className="text-lg font-bold text-foreground">로그인이 필요합니다</h3>
+            <p className="mt-2 text-sm text-text-muted">
+              상권분석은 회원 전용 서비스입니다.
+              <br />
+              회원가입 시 <span className="text-primary font-semibold">3회 무료</span>로 이용하실 수 있습니다.
+            </p>
+            <div className="mt-5 flex gap-3">
+              <button
+                onClick={() => setShowLogin(false)}
+                className="flex-1 h-11 rounded-lg border border-border text-sm font-semibold text-foreground hover:bg-secondary transition-colors"
+              >
+                닫기
+              </button>
+              <Link
+                href="/auth/login?redirect=/area-analysis"
+                className="flex-1 h-11 flex items-center justify-center rounded-lg bg-primary text-sm font-bold text-primary-foreground hover:bg-primary/90 transition-colors"
+              >
+                로그인 / 회원가입
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
