@@ -2,11 +2,10 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Home, Play, ShoppingBag, User, Plus } from "lucide-react";
+import { Home, ShoppingBag, User, Plus } from "lucide-react";
 
 const TABS = [
   { icon: Home, label: "홈", href: "/" },
-  { icon: Play, label: "Shorts", href: "/shorts" },
   { icon: ShoppingBag, label: "스토어", href: "/store" },
   { icon: User, label: "MY", href: "/mypage" },
 ] as const;

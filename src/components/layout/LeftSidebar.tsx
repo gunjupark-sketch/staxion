@@ -16,7 +16,6 @@ import {
   Handshake,
   PenSquare,
   FileText,
-  Play,
   HelpCircle,
   Headphones,
   ChevronDown,
@@ -167,7 +166,6 @@ export default function LeftSidebar({ className }: LeftSidebarProps) {
       <GroupLabel label="Community" />
       <Item icon={PenSquare} label="메디포스트" href="/medipost" />
       <Item icon={FileText} label="자유게시판" href="/community" />
-      <Item icon={Play} label="숏츠" href="/shorts" />
       <Item icon={HelpCircle} label="메디지식인" href="/community?tab=qna" />
 
       {/* 서포트 */}

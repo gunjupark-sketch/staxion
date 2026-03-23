@@ -8,8 +8,8 @@ const supabaseAdmin = createClient(
   process.env.SUPABASE_SERVICE_ROLE_KEY!
 );
 
-// 내부 서버 간 인증 키
-const PROCESS_SECRET = process.env.SUPABASE_SERVICE_ROLE_KEY!;
+// 내부 서버 간 인증 키 (SUPABASE_SERVICE_ROLE_KEY와 분리)
+const PROCESS_SECRET = process.env.SCRAPER_CALLBACK_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY!;
 
 /**
  * 분석 처리 엔드포인트
@@ -138,9 +138,24 @@ export async function POST(req: NextRequest) {
 }
 
 /**
+ * JSON 필드 중 문자열로 된 JSON을 재귀적으로 파싱
+ */
+function unwrapStringFields(obj: Record<string, unknown>): Record<string, unknown> {
+  if (!obj || typeof obj !== "object") return obj;
+  const result = { ...obj };
+  for (const key of Object.keys(result)) {
+    const val = result[key];
+    if (typeof val === "string" && val.startsWith("{")) {
+      try { result[key] = JSON.parse(val); } catch { /* 문자열 유지 */ }
+    }
+  }
+  return result;
+}
+
+/**
  * Gemini API 공통 호출
  */
-async function callGemini(prompt: string, maxOutputTokens: number) {
+async function callGemini(prompt: string, maxOutputTokens: number): Promise<Record<string, unknown> | null> {
   const apiKey = process.env.GOOGLE_AI_API_KEY;
   if (!apiKey) {
     console.error("[Gemini] GOOGLE_AI_API_KEY 환경변수 없음");
@@ -177,24 +192,31 @@ async function callGemini(prompt: string, maxOutputTokens: number) {
   }
 
   try {
-    const parsed = JSON.parse(text);
-    // Gemini가 이중 래핑하는 경우: { summary: "{ JSON 문자열 }" }
+    let parsed = JSON.parse(text);
+    // 이중 래핑 해제: 전체가 문자열로 한번 더 감싸진 경우
+    if (typeof parsed === "string") {
+      try { parsed = JSON.parse(parsed); } catch { /* */ }
+    }
+    // 이중 래핑 해제: insights가 없고 summary에 JSON이 들어간 경우
     if (parsed && !parsed.insights && typeof parsed.summary === "string" && parsed.summary.startsWith("{")) {
       try {
         const inner = JSON.parse(parsed.summary);
-        if (inner.insights) return inner;
+        if (inner.insights) return unwrapStringFields(inner);
       } catch { /* inner parse 실패 시 원본 유지 */ }
     }
-    return parsed;
+    return unwrapStringFields(parsed);
   } catch {
     const jsonMatch = text.match(/\{[\s\S]*\}/);
     if (jsonMatch) {
       try {
-        const parsed = JSON.parse(jsonMatch[0]);
-        if (parsed && !parsed.insights && typeof parsed.summary === "string" && parsed.summary.startsWith("{")) {
-          try { return JSON.parse(parsed.summary); } catch { /* */ }
+        let parsed = JSON.parse(jsonMatch[0]);
+        if (typeof parsed === "string") {
+          try { parsed = JSON.parse(parsed); } catch { /* */ }
         }
-        return parsed;
+        if (parsed && !parsed.insights && typeof parsed.summary === "string" && parsed.summary.startsWith("{")) {
+          try { return unwrapStringFields(JSON.parse(parsed.summary)); } catch { /* */ }
+        }
+        return unwrapStringFields(parsed);
       } catch { /* */ }
     }
     return { summary: text };

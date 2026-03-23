@@ -76,7 +76,7 @@ async function sendCallback(callbackUrl, reportId, data) {
   try {
     await fetch(callbackUrl, {
       method: "POST",
-      headers: { "Content-Type": "application/json", "x-process-key": process.env.SUPABASE_SERVICE_ROLE_KEY || "" },
+      headers: { "Content-Type": "application/json", "x-process-key": process.env.SCRAPER_CALLBACK_SECRET || process.env.SUPABASE_SERVICE_ROLE_KEY || "" },
       body: JSON.stringify({ reportId, ...data }),
     });
   } catch (e) { console.error("  콜백 실패:", e.message); }

@@ -1,33 +1,38 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
-
 const apiKey = process.env.GOOGLE_AI_API_KEY;
 
 if (!apiKey) {
   console.warn("GOOGLE_AI_API_KEY not set — Gemini features disabled");
 }
 
-const genAI = apiKey ? new GoogleGenerativeAI(apiKey) : null;
-
 /**
- * Gemini 이미지 생성 (나노바나나 / Imagen)
- * 모델: gemini-2.0-flash-exp (이미지 생성 지원)
+ * Gemini 이미지 생성 (fetch 직접 호출)
+ * 모델: gemini-2.5-flash-image
  */
 export async function generateImage(prompt: string): Promise<Buffer | null> {
-  if (!genAI) return null;
+  if (!apiKey) return null;
 
-  const model = genAI.getGenerativeModel({
-    model: "gemini-2.5-flash-image",
-    generationConfig: {
-      // @ts-expect-error - responseModalities는 이미지 생성에 필요
-      responseModalities: ["TEXT", "IMAGE"],
-    },
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-image:generateContent?key=${apiKey}`;
+
+  const res = await fetch(url, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      contents: [{ parts: [{ text: prompt }] }],
+      generationConfig: {
+        responseModalities: ["TEXT", "IMAGE"],
+      },
+    }),
   });
 
-  const result = await model.generateContent(prompt);
-  const response = result.response;
+  if (!res.ok) {
+    console.error("Gemini API error:", res.status, await res.text());
+    return null;
+  }
+
+  const data = await res.json();
 
   // 이미지 파트 찾기
-  for (const candidate of response.candidates || []) {
+  for (const candidate of data.candidates || []) {
     for (const part of candidate.content?.parts || []) {
       if (part.inlineData?.mimeType?.startsWith("image/")) {
         return Buffer.from(part.inlineData.data!, "base64");
