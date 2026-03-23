@@ -206,99 +206,18 @@ async function scrape(address, lat, lng, radius = 1000) {
     console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
     await sleep(5000);
 
-    // 3. 업종 선택 — page와 gis(iframe) 모두에서 시도
-    console.log("  3. 업종 선택...");
-
-    // 디버깅: page와 gis 양쪽에서 업종 관련 요소 탐색
-    for (const [ctx, label] of [[page, "page"], [gis, "gis"]]) {
-      const debug = await ctx.evaluate(() => {
-        const result = [];
-        // 업종 관련 텍스트 + placeholder 가진 input
-        document.querySelectorAll("input").forEach((inp) => {
-          const ph = inp.placeholder || "";
-          if (ph.includes("업종") || ph.includes("검색") || inp.id?.includes("upjong") || inp.id?.includes("tpbiz")) {
-            result.push(`INPUT: id=${inp.id}, ph="${ph}", type=${inp.type}`);
-          }
-        });
-        // "보건의료" 텍스트 가진 요소
-        document.querySelectorAll("*").forEach((el) => {
-          const text = el.innerText?.trim();
-          if (text === "보건의료" && el.offsetParent && el.children.length <= 1) {
-            result.push(`보건의료: ${el.tagName}#${el.id}.${el.className?.substring(0, 30)}`);
-          }
-        });
-        return result;
-      }).catch(() => ["접근 실패"]);
-      console.log(`  [${label}] 업종 요소:`, debug);
-    }
-
-    // 업종 선택: selectedUpjong input에 직접 타이핑 + 키보드 선택
-    // (DOM .click()과 locator.click() 모두 소상공인365 핸들러 트리거 안 됨)
-    const upjongInput = await frame.$("#selectedUpjong") || await gis.$("#selectedUpjong");
-    if (upjongInput) {
-      console.log("  selectedUpjong input 발견 — 타이핑 방식");
-      await upjongInput.click();
-      await sleep(500);
-      await upjongInput.fill("");
-      await upjongInput.type("치과의원", { delay: 100 });
-      await sleep(2000);
-
-      // 검색 결과에서 치과의원 선택 — Tab/Enter 또는 키보드 화살표
-      // 아래쪽 결과 첫 번째 = 치과의원
-      await upjongInput.press("ArrowDown");
-      await sleep(500);
-      await upjongInput.press("Enter");
-      await sleep(2000);
-
-      // 안 됐으면 Tab + Enter 시도
-      let cd = await gis.evaluate(() => document.getElementById("upjong3Cd")?.value).catch(() => null);
-      if (!cd) {
-        console.log("  ArrowDown+Enter 실패, Tab+Enter 시도...");
-        await upjongInput.click();
-        await sleep(300);
-        await upjongInput.fill("치과의원");
-        await sleep(2000);
-        await page.keyboard.press("Tab");
-        await sleep(500);
-        await page.keyboard.press("Enter");
-        await sleep(2000);
-      }
-    } else {
-      console.log("  selectedUpjong input 없음 — 아이콘 클릭 방식 폴백");
-      // 보건의료 → 의원 → 치과의원 순차 클릭 (locator)
-      try {
-        await gis.locator("text=보건의료").first().click({ timeout: 5000 });
-        await sleep(3000);
-        await gis.locator("text=의원").first().click({ timeout: 5000 });
-        await sleep(3000);
-        await gis.locator("text=치과의원").last().click({ timeout: 5000 });
-        await sleep(3000);
-      } catch (e) {
-        console.log("  아이콘 클릭 실패:", e.message?.substring(0, 80));
-      }
-    }
-
-    // upjong3Cd 확인
-    let upjongOk = await gis.evaluate(() => {
+    // 3. 업종 선택 — UI 조작 안정적으로: 건드리지 않고 강제 설정
+    // (소상공인365 UI 이벤트 핸들러가 DOM .click(), locator.click(), 타이핑 모두 거부)
+    // 데이터 수집 후 네트워크 요청 구조를 분석해서 직접 API 호출로 전환 예정
+    console.log("  3. 업종 강제 설정: Q10901 (치과의원)");
+    await gis.evaluate(() => {
       const cd = document.getElementById("upjong3Cd");
-      return cd?.value || null;
-    }).catch(() => null);
-    console.log(`  upjong3Cd: ${upjongOk}`);
-
-    let tpbiz = upjongOk;
-
-    if (!tpbiz) {
-      console.log("  ⚠️ 업종코드 null — upjong3Cd + selectedUpjong 강제 설정 Q10901");
-      await gis.evaluate(() => {
-        const cd = document.getElementById("upjong3Cd");
-        if (cd) cd.value = "Q10901";
-        const sel = document.getElementById("selectedUpjong");
-        if (sel) { sel.value = "치과의원"; sel.dispatchEvent(new Event("input", { bubbles: true })); }
-        window.tpbizCode = "Q10901";
-      }).catch(() => {});
-      tpbiz = "Q10901 (강제)";
-    }
-    console.log(`  업종코드 (최종): ${tpbiz}`);
+      if (cd) cd.value = "Q10901";
+      const sel = document.getElementById("selectedUpjong");
+      if (sel) sel.value = "치과의원";
+      window.tpbizCode = "Q10901";
+    }).catch(() => {});
+    await sleep(1000);
 
     // 4. 네트워크 모니터링 설정 — URL+파라미터도 로그
     page.on("request", (req) => {
