@@ -19,7 +19,7 @@ let isProcessing = false;
 const queue = [];
 
 app.post("/analyze", async (req, res) => {
-  const { reportId, address, fullAddress, lat, lng, callbackUrl } = req.body;
+  const { reportId, address, fullAddress, lat, lng, radius, callbackUrl } = req.body;
 
   if (!reportId || !address || !callbackUrl) {
     return res.status(400).json({ error: "reportId, address, callbackUrl 필수" });
@@ -28,7 +28,7 @@ app.post("/analyze", async (req, res) => {
   const searchAddress = fullAddress || address;
 
   // 큐에 추가
-  queue.push({ reportId, address: searchAddress, lat, lng, callbackUrl, _startTime: Date.now() });
+  queue.push({ reportId, address: searchAddress, lat, lng, radius: radius || 1000, callbackUrl, _startTime: Date.now() });
   res.json({ queued: true, position: queue.length });
 
   // 처리 시작
@@ -49,13 +49,13 @@ async function processQueue() {
   while (queue.length > 0) {
     const job = queue.shift();
     console.log(`\n━━━ 분석 시작: ${job.address} (${job.reportId}) ━━━`);
-    console.log(`  좌표: lat=${job.lat}, lng=${job.lng}`);
+    console.log(`  좌표: lat=${job.lat}, lng=${job.lng}, 반경: ${job.radius}m`);
 
     try {
       // 상태 업데이트: processing
       await sendCallback(job.callbackUrl, job.reportId, { status: "processing" });
 
-      const htmlMap = await scrape(job.address, job.lat, job.lng);
+      const htmlMap = await scrape(job.address, job.lat, job.lng, job.radius);
 
       // 의도적 딜레이 (분석 느낌)
       const elapsed = Date.now() - job._startTime;
@@ -101,7 +101,7 @@ async function sendCallback(callbackUrl, reportId, data) {
  * 소상공인365 스크래핑 메인
  * 좌표 기반 위치 설정 → 업종 선택 → 분석 → sang_gwon HTML 수집
  */
-async function scrape(address, lat, lng) {
+async function scrape(address, lat, lng, radius = 1000) {
   const browser = await chromium.launch({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
@@ -197,6 +197,40 @@ async function scrape(address, lat, lng) {
       console.log(`  2. 주소 검색 (좌표 없음): ${address}`);
       await searchByAddress(frame, gis, address);
     }
+
+    // 2.5. 반경 설정
+    console.log(`  2.5. 반경 설정: ${radius}m`);
+    await gis.evaluate((r) => {
+      // 소상공인365 반경 관련 전역 변수 설정
+      if (typeof window.radius !== "undefined") window.radius = r;
+      if (typeof window.searchRadius !== "undefined") window.searchRadius = r;
+      // 반경 select/input 요소 찾아서 설정
+      document.querySelectorAll("select").forEach((sel) => {
+        for (const opt of sel.options) {
+          // 반경 값 매칭 (500, 1000, 1500, 2000)
+          if (opt.value === String(r) || opt.text?.includes(String(r / 1000))) {
+            sel.value = opt.value;
+            sel.dispatchEvent(new Event("change", { bubbles: true }));
+          }
+        }
+      });
+      // 반경 라디오/버튼 찾기
+      document.querySelectorAll("input[type='radio'], button, label").forEach((el) => {
+        const text = el.innerText?.trim() || el.value || "";
+        const radiusKm = r / 1000;
+        if (
+          text === `${r}m` || text === `${radiusKm}km` ||
+          text === `${r}` || text === `${radiusKm}` ||
+          (r === 500 && text === "500m") ||
+          (r === 1000 && (text === "1km" || text === "1,000m")) ||
+          (r === 1500 && (text === "1.5km" || text === "1,500m")) ||
+          (r === 2000 && (text === "2km" || text === "2,000m"))
+        ) {
+          el.click();
+        }
+      });
+    }, radius);
+    await sleep(1000);
 
     // 3. 업종 선택: 보건의료 → 의원 → 치과의원
     console.log("  3. 업종 선택...");

@@ -20,6 +20,7 @@ export default function AreaAnalysisPage() {
   const [credits, setCredits] = useState<number | null>(null);
   const [address, setAddress] = useState("");
   const [addressDetail, setAddressDetail] = useState<{sido: string; sgg: string; dong: string} | null>(null);
+  const [radius, setRadius] = useState(1000); // 기본 1km
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -81,6 +82,7 @@ export default function AreaAnalysisPage() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           address: address.trim(),
+          radius,
           ...(addressDetail && { sido: addressDetail.sido, sgg: addressDetail.sgg, dong: addressDetail.dong }),
         }),
       });
@@ -141,6 +143,34 @@ export default function AreaAnalysisPage() {
                     <span className="text-base text-white/30">클릭하여 주소를 검색하세요</span>
                   )}
                 </div>
+
+                {/* 반경 선택 */}
+                {address && (
+                  <div className="mt-4 flex items-center gap-2">
+                    <MapPin className="h-4 w-4 text-white/40 shrink-0" />
+                    <span className="text-sm text-white/40 shrink-0">분석 반경</span>
+                    <div className="flex gap-2 flex-1">
+                      {[
+                        { value: 500, label: "500m" },
+                        { value: 1000, label: "1km" },
+                        { value: 1500, label: "1.5km" },
+                        { value: 2000, label: "2km" },
+                      ].map((opt) => (
+                        <button
+                          key={opt.value}
+                          onClick={() => setRadius(opt.value)}
+                          className={`flex-1 h-9 rounded-lg text-sm font-semibold transition-all ${
+                            radius === opt.value
+                              ? "bg-brand-neon text-[#1a1a1a]"
+                              : "bg-white/10 text-white/60 hover:bg-white/20"
+                          }`}
+                        >
+                          {opt.label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+                )}
 
                 <button
                   onClick={handleAnalysis}

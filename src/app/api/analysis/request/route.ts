@@ -12,6 +12,7 @@ export async function POST(req: NextRequest) {
 
   const body = await req.json();
   const address = body.address;
+  const radius = body.radius || 1000; // 기본 1km
   const clientSido = body.sido || null;
   const clientSgg = body.sgg || null;
   const clientDong = body.dong || null;
@@ -96,6 +97,7 @@ export async function POST(req: NextRequest) {
       fullAddress: sido && sgg && dong ? `${sido} ${sgg} ${dong}` : address.trim(),
       lat,
       lng,
+      radius,
       callbackUrl: `${callbackBase}/api/analysis/process`,
     };
 
