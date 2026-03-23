@@ -2,14 +2,16 @@
 import webpush from "web-push";
 import { createClient } from "@supabase/supabase-js";
 
-const VAPID_PUBLIC = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY!;
-const VAPID_PRIVATE = process.env.VAPID_PRIVATE_KEY!;
+const VAPID_PUBLIC = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || "";
+const VAPID_PRIVATE = process.env.VAPID_PRIVATE_KEY || "";
 
-webpush.setVapidDetails(
-  "mailto:admin@medistaxion.com",
-  VAPID_PUBLIC,
-  VAPID_PRIVATE
-);
+if (VAPID_PUBLIC && VAPID_PRIVATE) {
+  webpush.setVapidDetails(
+    "mailto:admin@medistaxion.com",
+    VAPID_PUBLIC,
+    VAPID_PRIVATE
+  );
+}
 
 const supabaseAdmin = createClient(
   process.env.NEXT_PUBLIC_SUPABASE_URL!,
