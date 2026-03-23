@@ -232,40 +232,49 @@ async function scrape(address, lat, lng, radius = 1000) {
       console.log(`  [${label}] 업종 요소:`, debug);
     }
 
-    // Playwright 실제 마우스 클릭으로 업종 선택 (evaluate .click()은 핸들러 트리거 안 됨)
-    // frame 객체에서 locator 사용
-    async function clickTextInFrame(targetFrame, text, label) {
-      try {
-        // 정확히 텍스트가 일치하는 visible 요소 찾기
-        const locator = targetFrame.locator(`text="${text}"`).first();
-        const count = await targetFrame.locator(`text="${text}"`).count();
-        console.log(`  [${label}] "${text}" locator 매칭: ${count}개`);
-        if (count > 0) {
-          await locator.click({ timeout: 5000 });
-          return true;
-        }
-      } catch (e) {
-        console.log(`  [${label}] "${text}" locator 클릭 실패: ${e.message?.substring(0, 80)}`);
+    // 업종 선택: selectedUpjong input에 직접 타이핑 + 키보드 선택
+    // (DOM .click()과 locator.click() 모두 소상공인365 핸들러 트리거 안 됨)
+    const upjongInput = await frame.$("#selectedUpjong") || await gis.$("#selectedUpjong");
+    if (upjongInput) {
+      console.log("  selectedUpjong input 발견 — 타이핑 방식");
+      await upjongInput.click();
+      await sleep(500);
+      await upjongInput.fill("");
+      await upjongInput.type("치과의원", { delay: 100 });
+      await sleep(2000);
+
+      // 검색 결과에서 치과의원 선택 — Tab/Enter 또는 키보드 화살표
+      // 아래쪽 결과 첫 번째 = 치과의원
+      await upjongInput.press("ArrowDown");
+      await sleep(500);
+      await upjongInput.press("Enter");
+      await sleep(2000);
+
+      // 안 됐으면 Tab + Enter 시도
+      let cd = await gis.evaluate(() => document.getElementById("upjong3Cd")?.value).catch(() => null);
+      if (!cd) {
+        console.log("  ArrowDown+Enter 실패, Tab+Enter 시도...");
+        await upjongInput.click();
+        await sleep(300);
+        await upjongInput.fill("치과의원");
+        await sleep(2000);
+        await page.keyboard.press("Tab");
+        await sleep(500);
+        await page.keyboard.press("Enter");
+        await sleep(2000);
       }
-      return false;
-    }
-
-    // 1단계: 보건의료 클릭
-    let clicked1 = await clickTextInFrame(gis, "보건의료", "gis");
-    if (!clicked1) clicked1 = await clickTextInFrame(frame, "보건의료", "frame");
-    await sleep(3000);
-
-    // 2단계: 의원 클릭 (중분류 리스트)
-    if (clicked1) {
-      let clicked2 = await clickTextInFrame(gis, "의원", "gis");
-      if (!clicked2) clicked2 = await clickTextInFrame(frame, "의원", "frame");
-      await sleep(3000);
-
-      // 3단계: 치과의원 클릭 (소분류 리스트)
-      if (clicked2) {
-        let clicked3 = await clickTextInFrame(gis, "치과의원", "gis");
-        if (!clicked3) clicked3 = await clickTextInFrame(frame, "치과의원", "frame");
+    } else {
+      console.log("  selectedUpjong input 없음 — 아이콘 클릭 방식 폴백");
+      // 보건의료 → 의원 → 치과의원 순차 클릭 (locator)
+      try {
+        await gis.locator("text=보건의료").first().click({ timeout: 5000 });
         await sleep(3000);
+        await gis.locator("text=의원").first().click({ timeout: 5000 });
+        await sleep(3000);
+        await gis.locator("text=치과의원").last().click({ timeout: 5000 });
+        await sleep(3000);
+      } catch (e) {
+        console.log("  아이콘 클릭 실패:", e.message?.substring(0, 80));
       }
     }
 
@@ -274,7 +283,7 @@ async function scrape(address, lat, lng, radius = 1000) {
       const cd = document.getElementById("upjong3Cd");
       return cd?.value || null;
     }).catch(() => null);
-    console.log(`  클릭 후 upjong3Cd: ${upjongOk}`);
+    console.log(`  upjong3Cd: ${upjongOk}`);
 
     let tpbiz = upjongOk;
 
