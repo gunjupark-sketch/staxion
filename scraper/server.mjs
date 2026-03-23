@@ -293,22 +293,41 @@ async function scrape(address, lat, lng, radius = 1000) {
       }
     });
 
-    // 분석하기 버튼의 onclick 핸들러 직접 호출 시도
-    const clickResult = await gis.evaluate(() => {
+    // 분석하기 버튼 디버깅
+    const btnInfo = await gis.evaluate(() => {
       const btn = document.querySelector("#analysisBtn");
       if (!btn) return "버튼 없음";
-      // onclick 속성 확인
-      const onclick = btn.getAttribute("onclick");
-      if (onclick) return `onclick: ${onclick}`;
-      // 직접 클릭
-      btn.click();
-      return "click() 호출됨";
+      const info = {
+        tag: btn.tagName,
+        disabled: btn.disabled,
+        onclick: btn.getAttribute("onclick"),
+        class: btn.className,
+        text: btn.innerText?.trim(),
+        // 이벤트 리스너 확인 (getEventListeners는 devtools 전용이라 못 씀)
+        // 대신 jQuery 이벤트 확인
+        jqEvents: typeof jQuery !== "undefined" ? Object.keys(jQuery._data?.(btn, "events") || {}) : "no jQuery",
+        // 부모 form 확인
+        form: btn.closest("form")?.id || "no form",
+      };
+      return JSON.stringify(info);
     }).catch((e) => `에러: ${e.message}`);
-    console.log(`  분석하기: ${clickResult}`);
+    console.log(`  분석버튼 정보: ${btnInfo}`);
 
-    // Playwright 클릭도 시도
-    await analysisBtn.click().catch(() => {});
-    console.log("  분석하기 Playwright 클릭!");
+    // 소상공인365 분석 함수 직접 호출 시도
+    const fnResult = await gis.evaluate(() => {
+      // 가능한 전역 분석 함수들 탐색
+      const fns = ["fnAnalysis", "goAnalysis", "startAnalysis", "doAnalysis", "analysis", "fnSearch", "goSearch"];
+      for (const fn of fns) {
+        if (typeof window[fn] === "function") {
+          try { window[fn](); return `${fn}() 호출 성공`; } catch (e) { return `${fn}() 에러: ${e.message}`; }
+        }
+      }
+      // 버튼 클릭도 시도
+      const btn = document.querySelector("#analysisBtn");
+      if (btn) btn.click();
+      return "전역 함수 없음, btn.click() 호출";
+    }).catch((e) => `에러: ${e.message}`);
+    console.log(`  분석 함수 호출: ${fnResult}`);
 
     // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
     for (let i = 0; i < 30; i++) {
