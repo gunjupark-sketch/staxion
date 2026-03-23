@@ -206,92 +206,115 @@ async function scrape(address, lat, lng, radius = 1000) {
     console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
     await sleep(5000);
 
-    // 3. 업종 선택 — 검색 input에 "치과의원" 직접 입력
+    // 3. 업종 선택 — page와 gis(iframe) 모두에서 시도
     console.log("  3. 업종 선택...");
 
-    // 방법 1: 업종 검색 input 찾아서 "치과의원" 입력
-    const upjongSearched = await gis.evaluate(() => {
-      // "업종을 선택 또는 검색해주세요" placeholder를 가진 input
-      const inputs = document.querySelectorAll("input[type='text'], input[placeholder*='업종'], input[placeholder*='검색']");
-      for (const inp of inputs) {
-        const ph = inp.placeholder || "";
-        if (ph.includes("업종") || ph.includes("검색")) {
-          inp.value = "치과의원";
-          inp.dispatchEvent(new Event("input", { bubbles: true }));
-          inp.dispatchEvent(new Event("change", { bubbles: true }));
-          inp.dispatchEvent(new Event("keyup", { bubbles: true }));
-          return { found: true, placeholder: ph };
-        }
-      }
-      return { found: false };
-    });
-    console.log(`  업종 검색 input:`, JSON.stringify(upjongSearched));
-    await sleep(2000);
-
-    // 검색 결과에서 "치과의원" 클릭
-    if (upjongSearched.found) {
-      await gis.evaluate(() => {
-        // 검색 결과 리스트에서 치과의원 클릭
-        document.querySelectorAll("li, div, a, span, button").forEach((el) => {
-          const text = el.innerText?.trim();
-          if (text === "치과의원" && el.offsetParent) el.click();
+    // 디버깅: page와 gis 양쪽에서 업종 관련 요소 탐색
+    for (const [ctx, label] of [[page, "page"], [gis, "gis"]]) {
+      const debug = await ctx.evaluate(() => {
+        const result = [];
+        // 업종 관련 텍스트 + placeholder 가진 input
+        document.querySelectorAll("input").forEach((inp) => {
+          const ph = inp.placeholder || "";
+          if (ph.includes("업종") || ph.includes("검색") || inp.id?.includes("upjong") || inp.id?.includes("tpbiz")) {
+            result.push(`INPUT: id=${inp.id}, ph="${ph}", type=${inp.type}`);
+          }
         });
-      });
-      await sleep(2000);
+        // "보건의료" 텍스트 가진 요소
+        document.querySelectorAll("*").forEach((el) => {
+          const text = el.innerText?.trim();
+          if (text === "보건의료" && el.offsetParent && el.children.length <= 1) {
+            result.push(`보건의료: ${el.tagName}#${el.id}.${el.className?.substring(0, 30)}`);
+          }
+        });
+        return result;
+      }).catch(() => ["접근 실패"]);
+      console.log(`  [${label}] 업종 요소:`, debug);
     }
 
-    // 방법 2: 검색 input 없으면 아이콘 클릭 방식
-    let tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
-    if (!tpbiz) {
-      console.log("  검색 방식 실패, 아이콘 클릭 시도...");
-
-      // 보건의료 아이콘 클릭 (아이콘 그리드에서 "보건의료" 라벨)
-      await gis.evaluate(() => {
-        // 아이콘 라벨 텍스트로 찾기
-        document.querySelectorAll("span, p, div, label, button, a").forEach((el) => {
+    // gis(iframe)와 page 모두에서 업종 선택 시도하는 헬퍼
+    async function trySelectUpjong(ctx, label) {
+      // 1단계: 보건의료 아이콘 클릭
+      const clicked1 = await ctx.evaluate(() => {
+        let found = false;
+        document.querySelectorAll("span, p, div, label, button, a, dt, dd").forEach((el) => {
           const text = el.innerText?.trim();
           if (text === "보건의료" && el.offsetParent) {
-            // 부모 또는 자신 클릭
-            const clickTarget = el.closest("a, button, li, div[onclick]") || el;
-            clickTarget.click();
+            const target = el.closest("a, button, li, [onclick]") || el.parentElement || el;
+            target.click();
+            found = true;
           }
         });
-      });
+        return found;
+      }).catch(() => false);
+      console.log(`  [${label}] 보건의료 클릭: ${clicked1}`);
+      if (!clicked1) return false;
       await sleep(3000);
 
-      // 중분류: "의원" 클릭
-      await gis.evaluate(() => {
-        document.querySelectorAll("li, div, a, span, button, p").forEach((el) => {
+      // 2단계: 의원 클릭
+      const clicked2 = await ctx.evaluate(() => {
+        let found = false;
+        document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
           const text = el.innerText?.trim();
-          // 정확히 "의원"만 (다른 텍스트 포함 안 되도록)
           if (text === "의원" && el.offsetParent) {
             el.click();
+            found = true;
           }
         });
-      });
+        return found;
+      }).catch(() => false);
+      console.log(`  [${label}] 의원 클릭: ${clicked2}`);
+      if (!clicked2) return false;
       await sleep(3000);
 
-      // 소분류: "치과의원" 클릭
-      await gis.evaluate(() => {
-        document.querySelectorAll("li, div, a, span, button, p").forEach((el) => {
+      // 3단계: 치과의원 클릭
+      const clicked3 = await ctx.evaluate(() => {
+        let found = false;
+        document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
           const text = el.innerText?.trim();
           if (text === "치과의원" && el.offsetParent) {
             el.click();
+            found = true;
           }
         });
-      });
+        return found;
+      }).catch(() => false);
+      console.log(`  [${label}] 치과의원 클릭: ${clicked3}`);
       await sleep(2000);
+
+      return clicked3;
     }
 
-    // 업종코드 최종 확인
-    tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+    // gis(iframe) 먼저 시도
+    let upjongOk = await trySelectUpjong(gis, "gis");
+    let tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+
+    // 실패하면 page(메인)에서 시도
+    if (!tpbiz && !upjongOk) {
+      console.log("  gis 실패, page에서 재시도...");
+      upjongOk = await trySelectUpjong(page, "page");
+      // page에서 설정된 경우 gis에서 확인
+      tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+      if (!tpbiz) {
+        tpbiz = await page.evaluate(() => window.tpbizCode).catch(() => null);
+      }
+    }
+
+    // 마지막 시도: frame에서
+    if (!tpbiz && frame) {
+      console.log("  frame에서도 시도...");
+      await trySelectUpjong(frame, "frame");
+      tpbiz = await frame.evaluate(() => window.tpbizCode).catch(() => null);
+    }
+
     console.log(`  업종코드 (최종): ${tpbiz}`);
 
     if (!tpbiz) {
-      console.log("  ⚠️ 업종코드 여전히 undefined — 강제 설정 Q10901");
-      await gis.evaluate(() => {
-        window.tpbizCode = "Q10901";
-      });
+      console.log("  ⚠️ 업종코드 undefined — 강제 설정 Q10901");
+      // 모든 컨텍스트에 강제 설정
+      for (const ctx of [gis, page, frame].filter(Boolean)) {
+        await ctx.evaluate(() => { window.tpbizCode = "Q10901"; }).catch(() => {});
+      }
     }
 
     // 4. 네트워크 모니터링 설정
