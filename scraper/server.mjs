@@ -267,54 +267,90 @@ async function scrape(address, lat, lng, radius = 1000) {
       if (!clicked2) return false;
       await sleep(3000);
 
-      // 3단계: 치과의원 클릭
+      // 3단계: 치과의원 클릭 (소분류 리스트에서)
       const clicked3 = await ctx.evaluate(() => {
         let found = false;
+        // 소분류 리스트의 치과의원 — 가장 마지막으로 나타난 요소가 소분류
+        const matches = [];
         document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
           const text = el.innerText?.trim();
           if (text === "치과의원" && el.offsetParent) {
-            el.click();
-            found = true;
+            matches.push(el);
           }
         });
-        return found;
-      }).catch(() => false);
-      console.log(`  [${label}] 치과의원 클릭: ${clicked3}`);
-      await sleep(2000);
+        // 마지막 매칭 클릭 (소분류가 보통 나중에 렌더링)
+        if (matches.length > 0) {
+          matches[matches.length - 1].click();
+          found = true;
+        }
+        return { found, matchCount: matches.length };
+      }).catch(() => ({ found: false, matchCount: 0 }));
+      console.log(`  [${label}] 치과의원 클릭: ${clicked3.found} (매칭 ${clicked3.matchCount}개)`);
+      await sleep(3000);
 
-      return clicked3;
+      // upjong3Cd 확인
+      const cdValue = await ctx.evaluate(() => {
+        const cd = document.getElementById("upjong3Cd");
+        return cd?.value || null;
+      }).catch(() => null);
+      console.log(`  [${label}] upjong3Cd 값: ${cdValue}`);
+
+      // 값이 안 들어갔으면 한번 더 클릭 시도
+      if (!cdValue) {
+        console.log(`  [${label}] 재클릭 시도...`);
+        await ctx.evaluate(() => {
+          document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
+            const text = el.innerText?.trim();
+            if (text === "치과의원" && el.offsetParent) el.click();
+          });
+        }).catch(() => {});
+        await sleep(3000);
+      }
+
+      return clicked3.found;
     }
 
     // gis(iframe) 먼저 시도
     let upjongOk = await trySelectUpjong(gis, "gis");
-    let tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
 
-    // 실패하면 page(메인)에서 시도
+    // upjong3Cd hidden input 체크 (소상공인365 실제 업종코드 저장소)
+    let tpbiz = await gis.evaluate(() => {
+      const cd = document.getElementById("upjong3Cd");
+      return cd?.value || window.tpbizCode || null;
+    }).catch(() => null);
+    console.log(`  upjong3Cd 값: ${tpbiz}`);
+
+    // 실패하면 page에서 시도
     if (!tpbiz && !upjongOk) {
       console.log("  gis 실패, page에서 재시도...");
       upjongOk = await trySelectUpjong(page, "page");
-      // page에서 설정된 경우 gis에서 확인
-      tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
-      if (!tpbiz) {
-        tpbiz = await page.evaluate(() => window.tpbizCode).catch(() => null);
-      }
+      tpbiz = await gis.evaluate(() => {
+        const cd = document.getElementById("upjong3Cd");
+        return cd?.value || window.tpbizCode || null;
+      }).catch(() => null);
     }
 
-    // 마지막 시도: frame에서
+    // frame에서도 시도
     if (!tpbiz && frame) {
       console.log("  frame에서도 시도...");
       await trySelectUpjong(frame, "frame");
-      tpbiz = await frame.evaluate(() => window.tpbizCode).catch(() => null);
+      tpbiz = await gis.evaluate(() => {
+        const cd = document.getElementById("upjong3Cd");
+        return cd?.value || window.tpbizCode || null;
+      }).catch(() => null);
     }
 
     console.log(`  업종코드 (최종): ${tpbiz}`);
 
     if (!tpbiz) {
-      console.log("  ⚠️ 업종코드 undefined — 강제 설정 Q10901");
-      // 모든 컨텍스트에 강제 설정
-      for (const ctx of [gis, page, frame].filter(Boolean)) {
-        await ctx.evaluate(() => { window.tpbizCode = "Q10901"; }).catch(() => {});
-      }
+      console.log("  ⚠️ 업종코드 undefined — upjong3Cd 강제 설정 Q10901");
+      await gis.evaluate(() => {
+        const cd = document.getElementById("upjong3Cd");
+        if (cd) cd.value = "Q10901";
+        const sel = document.getElementById("selectedUpjong");
+        if (sel) { sel.value = "치과의원"; sel.dispatchEvent(new Event("change", { bubbles: true })); }
+        window.tpbizCode = "Q10901";
+      }).catch(() => {});
     }
 
     // 4. 네트워크 모니터링 설정
