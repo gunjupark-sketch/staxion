@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
   try {
     const kakaoRes = await fetch(
       `https://dapi.kakao.com/v2/local/search/address.json?query=${encodeURIComponent(address.trim())}`,
-      { headers: { Authorization: `KakaoAK ${process.env.NEXT_PUBLIC_KAKAO_JS_KEY}` } }
+      { headers: { Authorization: `KakaoAK ${process.env.KAKAO_REST_API_KEY || process.env.NEXT_PUBLIC_KAKAO_JS_KEY}` } }
     );
     const kakaoData = await kakaoRes.json();
     const doc = kakaoData.documents?.[0];

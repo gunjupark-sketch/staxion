@@ -1,7 +1,11 @@
 /**
- * 스크래핑 서버 — 36차 성공 코드 기반 복원 + 네트워크 로그
+ * 상권분석 서버 — HTTP 직접 호출 방식 (Playwright 제거)
+ * 소상공인365 API를 직접 호출하여 sang_gwon 데이터 수집
+ *
+ * 흐름:
+ * 1. POST /gis/com/report/capture.json → analyNo 획득
+ * 2. GET /sang_gwon{1-8}.sg?analyNo=... → 데이터 수집
  */
-import { chromium } from "playwright";
 import express from "express";
 
 const app = express();
@@ -10,17 +14,25 @@ app.use(express.json());
 const PORT = process.env.PORT || 3100;
 const INTENTIONAL_DELAY = 60_000;
 
+const SBIZ_BASE = "https://bigdata.sbiz.or.kr";
+const SBIZ_HEADERS = {
+  "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+  "X-Requested-With": "XMLHttpRequest",
+  "Referer": `${SBIZ_BASE}/gis/`,
+};
+
+// 치과의원 업종코드
+const DENTAL_UPJONG_CD = "Q10210";
+
 let isProcessing = false;
 const queue = [];
 
 app.post("/analyze", async (req, res) => {
-  const { reportId, address, fullAddress, lat, lng, radius, callbackUrl } = req.body;
+  const { reportId, address, lat, lng, radius, callbackUrl } = req.body;
   if (!reportId || !address || !callbackUrl) {
     return res.status(400).json({ error: "reportId, address, callbackUrl 필수" });
   }
-  // 도로명 주소 우선 (fullAddress는 "시도 시군구 동"이라 세분화 누락)
-  const searchAddress = address;
-  queue.push({ reportId, address: searchAddress, lat, lng, radius: radius || 1000, callbackUrl, _startTime: Date.now() });
+  queue.push({ reportId, address, lat, lng, radius: radius || 1000, callbackUrl, _startTime: Date.now() });
   res.json({ queued: true, position: queue.length });
   if (!isProcessing) processQueue();
 });
@@ -28,7 +40,7 @@ app.post("/analyze", async (req, res) => {
 app.get("/health", (_, res) => res.json({ status: "ok", queue: queue.length, processing: isProcessing }));
 
 app.listen(PORT, () => {
-  console.log(`🔧 스크래핑 서버 실행 중: http://localhost:${PORT}`);
+  console.log(`🔧 상권분석 서버 (HTTP 직접 호출) 실행 중: http://localhost:${PORT}`);
 });
 
 async function processQueue() {
@@ -39,15 +51,19 @@ async function processQueue() {
     console.log(`\n━━━ 분석 시작: ${job.address} (${job.reportId}) ━━━`);
     try {
       await sendCallback(job.callbackUrl, job.reportId, { status: "processing" });
-      const htmlMap = await scrape(job.address, job.lat, job.lng, job.radius);
+
+      const htmlMap = await fetchAnalysis(job.lat, job.lng, job.radius);
+
+      // 의도적 딜레이
       const elapsed = Date.now() - job._startTime;
       if (elapsed < INTENTIONAL_DELAY) {
-        const remaining = INTENTIONAL_DELAY - elapsed;
-        console.log(`  ⏳ ${Math.round(remaining / 1000)}초 추가 대기`);
-        await sleep(remaining);
+        const wait = INTENTIONAL_DELAY - elapsed;
+        console.log(`  ⏳ ${Math.round(wait / 1000)}초 대기`);
+        await sleep(wait);
       }
+
       await sendCallback(job.callbackUrl, job.reportId, { sang_gwon_html: htmlMap });
-      console.log(`  ✅ 완료: ${job.address}`);
+      console.log(`  ✅ 완료`);
     } catch (err) {
       console.error(`  ❌ 실패: ${err.message}`);
       await sendCallback(job.callbackUrl, job.reportId, { error: err.message });
@@ -66,171 +82,91 @@ async function sendCallback(callbackUrl, reportId, data) {
   } catch (e) { console.error("  콜백 실패:", e.message); }
 }
 
-async function scrape(address, lat, lng, radius = 1000) {
-  const browser = await chromium.launch({
-    headless: true,
-    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
+/**
+ * 소상공인365 API 직접 호출
+ * @param {number} lat 위도
+ * @param {number} lng 경도
+ * @param {number} radius 반경(m)
+ */
+async function fetchAnalysis(lat, lng, radius = 1000) {
+  if (!lat || !lng) throw new Error("좌표(lat/lng) 필수");
+
+  // 좌표 변환 (WGS84 → TM 근사 변환)
+  const { tx, ty } = wgs84ToTm(lat, lng);
+  console.log(`  좌표: ${lat}, ${lng} → TM: ${tx}, ${ty}, 반경: ${radius}m`);
+
+  // Step 1: capture.json → analyNo 획득
+  console.log("  1. analyNo 획득...");
+  const captureRes = await fetch(`${SBIZ_BASE}/gis/com/report/capture.json`, {
+    method: "POST",
+    headers: { ...SBIZ_HEADERS, "Content-Type": "application/json;charset=UTF-8" },
+    body: JSON.stringify({
+      type: "circleRadius",
+      analyType: "bizonAnls",
+      centerX: lat,
+      centerY: lng,
+      transformX: tx,
+      transformY: ty,
+      upjongCd: DENTAL_UPJONG_CD,
+      kakaoPathStr: "",
+      pathStr: "",
+      radius: radius,
+      mapLevelDecision: radius,
+      apiLogin: "N",
+      sprNo: 0,
+    }),
   });
-  const ctx = await browser.newContext({
-    viewport: { width: 1400, height: 900 },
-    geolocation: { latitude: lat || 37.4980863, longitude: lng || 127.0276012 },
-    permissions: ["geolocation"],
-  });
-  await ctx.addInitScript(() => {
-    Object.defineProperty(navigator, "webdriver", { get: () => false });
-  });
-  const page = await ctx.newPage();
-  page.on("dialog", async (d) => {
-    console.log(`  💬 dialog: ${d.message()?.substring(0, 100)}`);
-    await d.dismiss();
-  });
 
-  const sgData = {};
+  if (!captureRes.ok) throw new Error(`capture.json 실패: ${captureRes.status}`);
+  const captureData = await captureRes.json();
+  const { analyNo, analyDate } = captureData;
+  if (!analyNo) throw new Error("analyNo 획득 실패");
+  console.log(`  analyNo: ${analyNo}, analyDate: ${analyDate}`);
 
-  try {
-    // 1. 소상공인365 → 상세분석
-    console.log("  1. 상세분석 진입...");
-    await page.goto("https://bigdata.sbiz.or.kr/", { waitUntil: "networkidle", timeout: 30000 });
-    await sleep(2000);
-    await page.evaluate(() => {
-      document.querySelectorAll("a").forEach((a) => {
-        if (a.innerText?.includes("상세분석")) a.click();
-      });
-    });
-    await sleep(10000);
+  // Step 2: sg1에서 행정구역 정보 추출
+  console.log("  2. sg1~sg8 수집...");
+  const sg1Url = `${SBIZ_BASE}/gis/bizonAnls/report/sg/sang_gwon1.sg?analyNo=${analyNo}&upjongCd=${DENTAL_UPJONG_CD}&xcnts=${tx}&ydnts=${ty}&center_x=${tx}&center_y=${ty}&analyDate=${analyDate}&a=01&b=01&c=01`;
+  const sg1Html = await fetchSg(sg1Url);
 
-    const gis = page.frames().find((f) => f.url().includes("/gis/"));
-    if (!gis) throw new Error("GIS iframe 없음");
+  // sg1에서 admiCd, admiNm 추출
+  const admiCdMatch = sg1Html.match(/var\s+aACd\s*=\s*"(\d+)"/);
+  const admiNmMatch = sg1Html.match(/var\s+aANm\s*=\s*"([^"]+)"/);
+  const admiCd = admiCdMatch?.[1] || "";
+  const admiNm = admiNmMatch?.[1] || "";
+  console.log(`  행정구역: ${admiNm} (${admiCd})`);
 
-    for (let i = 0; i < 20; i++) {
-      const ready = await gis.evaluate(() => typeof map !== "undefined" && typeof kakao !== "undefined").catch(() => false);
-      if (ready) break;
-      await sleep(1000);
-    }
-    console.log("  map 준비됨");
-    await sleep(3000);
+  // Step 3: sg2~sg8 수집
+  const sgData = { sg1: sg1Html };
+  const admiParam = `admiCd=${admiCd}&admiNm=${encodeURIComponent(admiNm)}`;
 
-    // 팝업 닫기
-    await gis.evaluate(() => {
-      document.querySelectorAll("button").forEach((b) => {
-        if (b.innerText?.trim() === "확인" && b.offsetParent) b.click();
-      });
-    });
-    await sleep(1000);
-
-    const iframeEl = await page.$("iframe#iframe, iframe[src*='gis']");
-    const frame = iframeEl ? await iframeEl.contentFrame() : null;
-    if (!frame) throw new Error("iframe contentFrame 접근 실패");
-
-    // 2. 주소 검색
-    console.log(`  2. 주소 검색: ${address}`);
-    const searchInput =
-      (await frame.$("#searchAddress")) ||
-      (await frame.$("#searchAddr")) ||
-      (await frame.$("input[placeholder*='주소']")) ||
-      (await frame.$("input[placeholder*='검색']")) ||
-      (await frame.$("input[placeholder*='위치']")) ||
-      (await frame.$("input[type='text']"));
-    if (!searchInput) throw new Error("검색 input 못 찾음");
-
-    await searchInput.click({ clickCount: 3 });
-    await sleep(300);
-    await searchInput.fill("");
-    await searchInput.type(address, { delay: 80 });
-    await sleep(500);
-    await searchInput.press("Enter");
-    console.log("  검색 실행");
-    await sleep(5000);
-
-    // 검색 결과 첫 번째 클릭
-    const resultInfo = await gis.evaluate(() => {
-      const items = Array.from(document.querySelectorAll("li, [class*='result'] li, [class*='list'] li"));
-      const visible = items.filter((i) => i.offsetParent && i.innerText?.length > 5 && i.innerText?.length < 200);
-      if (visible.length === 0) return { count: 0, clicked: "" };
-      const first = visible[0];
-      const clickable = first.querySelector("a, button, span") || first;
-      clickable.click();
-      return { count: visible.length, clicked: first.innerText?.trim()?.substring(0, 60) };
-    });
-    console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
-    await sleep(5000);
-
-    // 3. 업종 선택: 보건의료 → 의원 → 치과의원 (evaluate .click())
-    console.log("  3. 업종 선택...");
-    await gis.evaluate(() => {
-      document.querySelectorAll("button, div, span").forEach((el) => {
-        if (el.innerText?.trim() === "보건의료" && el.offsetParent) el.click();
-      });
-    });
-    await sleep(2000);
-    await gis.evaluate(() => {
-      document.querySelectorAll("div, li, a, button, span, p").forEach((el) => {
-        if (el.innerText?.trim() === "의원" && el.offsetParent) el.click();
-      });
-    });
-    await sleep(2000);
-    await gis.evaluate(() => {
-      document.querySelectorAll("div, li, a, button, span, p, label").forEach((el) => {
-        const text = el.innerText?.trim();
-        if ((text === "치과의원" || text === "치과 의원") && el.offsetParent) el.click();
-      });
-    });
-    await sleep(2000);
-
-    const tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
-    console.log(`  업종코드: ${tpbiz}`);
-
-    // 4. 네트워크 모니터링
-    page.on("request", (req) => {
-      const url = req.url();
-      const type = req.resourceType();
-      if (type === "xhr" || type === "fetch" || url.includes("sang_gwon") || url.includes(".sg")) {
-        console.log(`  📤 ${req.method()} ${url.substring(0, 200)}`);
-        if (req.method() === "POST") console.log(`     body: ${req.postData()?.substring(0, 300)}`);
-      }
-    });
-    page.on("response", async (resp) => {
-      const url = resp.url();
-      const sgMatch = url.match(/sang_gwon(\d+)\.sg/);
-      if (sgMatch && resp.status() === 200) {
-        try {
-          const text = await resp.text();
-          sgData[`sg${sgMatch[1]}`] = text;
-          console.log(`  📥 sg${sgMatch[1]} 수집 (${text.length}B)`);
-        } catch {}
-      }
-    });
-
-    // 5. 분석하기 클릭
-    console.log("  4. 분석하기...");
-    const analysisBtn = await frame.$("#analysisBtn");
-    if (!analysisBtn) throw new Error("분석하기 버튼 못 찾음");
-
-    const disabled = await gis.evaluate(() => document.querySelector("#analysisBtn")?.disabled).catch(() => true);
-    if (disabled) {
-      await gis.evaluate(() => { const btn = document.querySelector("#analysisBtn"); if (btn) btn.disabled = false; });
-      console.log("  버튼 강제 활성화");
-    }
-
-    await analysisBtn.click();
-    console.log("  분석하기 클릭!");
-
-    // 리포트 로드 대기 (15초 고정 — 36차 성공 방식)
-    await sleep(15000);
-
-    // 추가 대기 (sg7 등)
-    await sleep(5000);
-
-    const collected = Object.keys(sgData);
-    console.log(`  수집된 sang_gwon: ${collected.join(", ")} (${collected.length}개)`);
-
-    if (collected.length === 0) {
-      throw new Error("sang_gwon 데이터 수집 실패 — 0개");
-    }
-  } finally {
-    await browser.close();
+  for (const n of [2, 3, 4, 6, 7, 8]) {
+    const url = `${SBIZ_BASE}/gis/bizonAnls/report/sg/sang_gwon${n}.sg?analyNo=${analyNo}&analyDate=${analyDate}&upjongCd=${DENTAL_UPJONG_CD}&${admiParam}&xtLoginId=`;
+    sgData[`sg${n}`] = await fetchSg(url);
+    console.log(`  📥 sg${n}: ${sgData[`sg${n}`].length}B`);
   }
+
+  const total = Object.keys(sgData).length;
+  console.log(`  수집 완료: ${total}개`);
+  if (total === 0) throw new Error("데이터 수집 실패 — 0개");
+
   return sgData;
+}
+
+async function fetchSg(url) {
+  const res = await fetch(url, { headers: SBIZ_HEADERS });
+  if (!res.ok) throw new Error(`sang_gwon 요청 실패: ${res.status} ${url.substring(0, 100)}`);
+  return await res.text();
+}
+
+/**
+ * WGS84 (위경도) → TM 좌표 근사 변환
+ * 소상공인365가 사용하는 좌표계에 맞춤
+ */
+function wgs84ToTm(lat, lng) {
+  // 중부원점 TM 근사 변환 (정밀도 ±50m 수준, 상권분석에 충분)
+  const tx = Math.round((lng - 127.0) * 88360 + 200000);
+  const ty = Math.round((lat - 38.0) * 111320 + 500000);
+  return { tx, ty };
 }
 
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
