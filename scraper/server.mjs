@@ -219,31 +219,76 @@ async function scrape(address, lat, lng, radius = 1000) {
     // 3. 업종 선택: 보건의료 → 의원 → 치과의원
     console.log("  3. 업종 선택...");
 
-    // 대분류: 보건의료 (select나 탭이면 값 설정 시도)
-    await gis.evaluate(() => {
-      // select 방식
+    // 디버깅: 업종 관련 DOM 구조 파악
+    const domInfo = await gis.evaluate(() => {
+      const info = { selects: [], buttons: [], inputs: [], globals: [] };
+
+      // 모든 select 요소와 옵션
+      document.querySelectorAll("select").forEach((sel, i) => {
+        const opts = Array.from(sel.options).map(o => `${o.value}|${o.text?.trim()}`);
+        info.selects.push({ id: sel.id, name: sel.name, class: sel.className?.substring(0, 50), optCount: opts.length, opts: opts.slice(0, 10) });
+      });
+
+      // 업종 관련 텍스트 가진 클릭 가능 요소
+      const keywords = ["보건", "의원", "치과", "업종"];
+      document.querySelectorAll("button, a, li, div, span, label, input").forEach((el) => {
+        const text = (el.innerText || el.textContent || "").trim().substring(0, 30);
+        if (text && keywords.some(k => text.includes(k)) && el.offsetParent) {
+          info.buttons.push({ tag: el.tagName, text, id: el.id, class: el.className?.substring(0, 40) });
+        }
+      });
+
+      // hidden inputs
+      document.querySelectorAll("input[type='hidden'], input[name*='tpbiz'], input[name*='upjong'], input[name*='code']").forEach((inp) => {
+        info.inputs.push({ name: inp.name, id: inp.id, value: inp.value });
+      });
+
+      // 전역 변수
+      for (const k of ["tpbizCode", "tpbizNm", "upjongCd", "upjongNm", "indCd", "selTpbizCd"]) {
+        if (window[k] !== undefined) info.globals.push({ key: k, value: String(window[k]) });
+      }
+
+      return info;
+    }).catch(() => ({ error: "DOM 조회 실패" }));
+    console.log("  📋 업종 DOM 구조:", JSON.stringify(domInfo, null, 2));
+
+    // select 기반 업종 선택 시도
+    const selectResult = await gis.evaluate(() => {
+      const results = [];
       const selects = document.querySelectorAll("select");
+
+      // 대분류에서 "보건의료" 또는 "Q"로 시작하는 값 찾기
       for (const sel of selects) {
         for (const opt of sel.options) {
-          if (opt.text?.includes("보건의료") || opt.value?.includes("Q")) {
+          if (opt.text?.includes("보건") || opt.value?.startsWith("Q")) {
             sel.value = opt.value;
             sel.dispatchEvent(new Event("change", { bubbles: true }));
-            return;
+            results.push(`대분류 select: ${sel.id||sel.name} → ${opt.value}|${opt.text}`);
+            break;
           }
         }
       }
-      // 버튼/탭 방식
-      document.querySelectorAll("button, div, span, a, li").forEach((el) => {
+      return results;
+    }).catch(() => []);
+    console.log("  select 대분류:", selectResult);
+    await sleep(2000);
+
+    // 텍스트 매칭으로 보건의료 클릭
+    await gis.evaluate(() => {
+      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
         const text = el.innerText?.trim();
-        if (text === "보건의료" && el.offsetParent) el.click();
+        if (text === "보건의료" && el.offsetParent) {
+          el.click();
+          console.log("clicked 보건의료:", el.tagName);
+        }
       });
     });
     await sleep(2000);
 
-    // 중분류: 의원
+    // 의원
     await gis.evaluate(() => {
-      const selects = document.querySelectorAll("select");
-      for (const sel of selects) {
+      // select 방식
+      document.querySelectorAll("select").forEach((sel) => {
         for (const opt of sel.options) {
           if (opt.text?.trim() === "의원") {
             sel.value = opt.value;
@@ -251,17 +296,18 @@ async function scrape(address, lat, lng, radius = 1000) {
             return;
           }
         }
-      }
-      document.querySelectorAll("div, li, a, button, span, p").forEach((el) => {
-        if (el.innerText?.trim() === "의원" && el.offsetParent) el.click();
+      });
+      // 텍스트 매칭
+      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
+        const text = el.innerText?.trim();
+        if (text === "의원" && el.offsetParent && el.children.length === 0) el.click();
       });
     });
     await sleep(2000);
 
-    // 소분류: 치과의원
+    // 치과의원
     await gis.evaluate(() => {
-      const selects = document.querySelectorAll("select");
-      for (const sel of selects) {
+      document.querySelectorAll("select").forEach((sel) => {
         for (const opt of sel.options) {
           if (opt.text?.includes("치과의원") || opt.text?.includes("치과 의원")) {
             sel.value = opt.value;
@@ -269,31 +315,45 @@ async function scrape(address, lat, lng, radius = 1000) {
             return;
           }
         }
-      }
-      document.querySelectorAll("div, li, a, button, span, p, label").forEach((el) => {
+      });
+      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
         const text = el.innerText?.trim();
-        if ((text === "치과의원" || text === "치과 의원") && el.offsetParent) el.click();
+        if ((text === "치과의원" || text === "치과 의원") && el.offsetParent && el.children.length === 0) el.click();
       });
     });
     await sleep(2000);
 
-    // 업종코드 확인 — undefined면 강제 설정
-    let tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+    // 업종코드 확인
+    let tpbiz = await gis.evaluate(() => {
+      const candidates = [
+        window.tpbizCode, window.tpbizCd, window.selTpbizCd, window.upjongCd,
+      ];
+      // hidden input 값도 확인
+      document.querySelectorAll("input[type='hidden']").forEach((inp) => {
+        if (inp.name?.includes("tpbiz") || inp.name?.includes("upjong") || inp.id?.includes("tpbiz")) {
+          candidates.push(inp.value);
+        }
+      });
+      return candidates.find(v => v && v !== "undefined" && v !== "") || null;
+    }).catch(() => null);
     console.log(`  업종코드 (선택 후): ${tpbiz}`);
 
     if (!tpbiz) {
       console.log("  ⚠️ 업종코드 undefined → 강제 설정: Q10901 (치과의원)");
       await gis.evaluate(() => {
+        // 가능한 모든 전역 변수에 설정
         window.tpbizCode = "Q10901";
-        // 숨겨진 input에도 설정
-        const hiddenInputs = document.querySelectorAll("input[type='hidden']");
-        hiddenInputs.forEach((inp) => {
-          if (inp.name?.toLowerCase().includes("tpbiz") || inp.id?.toLowerCase().includes("tpbiz")) {
+        window.tpbizCd = "Q10901";
+        window.selTpbizCd = "Q10901";
+        window.upjongCd = "Q10901";
+        // hidden inputs
+        document.querySelectorAll("input[type='hidden']").forEach((inp) => {
+          if (inp.name?.includes("tpbiz") || inp.name?.includes("upjong") || inp.id?.includes("tpbiz")) {
             inp.value = "Q10901";
           }
         });
       });
-      tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+      tpbiz = "Q10901 (강제)";
       console.log(`  업종코드 (강제 설정 후): ${tpbiz}`);
     }
 
