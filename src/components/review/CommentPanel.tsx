@@ -25,15 +25,11 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
   useEffect(() => {
-    if (isOpen && sectionId) {
-      fetchComments();
-    }
+    if (isOpen && sectionId) fetchComments();
   }, [isOpen, sectionId]);
 
   useEffect(() => {
-    if (isOpen && textareaRef.current) {
-      textareaRef.current.focus();
-    }
+    if (isOpen && textareaRef.current) textareaRef.current.focus();
   }, [isOpen]);
 
   const fetchComments = async () => {
@@ -74,13 +70,13 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
   const resolvedComments = comments.filter((c) => c.resolved);
 
   return (
-    <div className="w-[320px] shrink-0 bg-[#111] border-l border-[#222] flex flex-col max-h-[calc(100vh-100px)] sticky top-[100px]">
+    <div className="w-[320px] shrink-0 bg-[#fafafa] border-l border-[#eee] flex flex-col max-h-[calc(100vh-100px)] sticky top-[100px]">
       {/* 헤더 */}
-      <div className="flex items-center justify-between px-4 py-3 border-b border-[#222]">
-        <span className="text-sm font-medium text-white">
+      <div className="flex items-center justify-between px-4 py-3 border-b border-[#eee]">
+        <span className="text-sm font-medium text-[#1a1a1a]">
           코멘트 {activeComments.length > 0 && `(${activeComments.length})`}
         </span>
-        <button onClick={onClose} className="text-[#666] hover:text-white text-lg leading-none">&times;</button>
+        <button onClick={onClose} className="text-[#bbb] hover:text-[#1a1a1a] text-lg leading-none">&times;</button>
       </div>
 
       {/* 코멘트 목록 */}
@@ -90,7 +86,7 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
         ))}
         {resolvedComments.length > 0 && (
           <details className="mt-4">
-            <summary className="text-xs text-[#555] cursor-pointer hover:text-[#888]">
+            <summary className="text-xs text-[#bbb] cursor-pointer hover:text-[#888]">
               해결됨 ({resolvedComments.length})
             </summary>
             <div className="mt-2 space-y-2 opacity-50">
@@ -101,12 +97,12 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
           </details>
         )}
         {comments.length === 0 && (
-          <p className="text-[#555] text-sm text-center py-4">아직 코멘트가 없습니다</p>
+          <p className="text-[#bbb] text-sm text-center py-4">아직 코멘트가 없습니다</p>
         )}
       </div>
 
       {/* 입력 */}
-      <div className="p-3 border-t border-[#222]">
+      <div className="p-3 border-t border-[#eee]">
         <textarea
           ref={textareaRef}
           value={newComment}
@@ -116,12 +112,12 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
           }}
           placeholder="코멘트 작성... (Ctrl+Enter로 전송)"
           rows={3}
-          className="w-full bg-[#0a0a0a] border border-[#333] rounded px-3 py-2 text-sm text-white placeholder:text-[#555] focus:outline-none focus:border-[#D4567A] resize-none"
+          className="w-full bg-white border border-[#ddd] rounded-lg px-3 py-2 text-sm text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#D4567A] resize-none"
         />
         <button
           onClick={handleSubmit}
           disabled={!newComment.trim() || loading}
-          className="mt-2 w-full py-2 rounded text-sm font-medium bg-[#D4567A] text-white hover:bg-[#c04a6c] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="mt-2 w-full py-2 rounded-lg text-sm font-medium bg-[#1a1a1a] text-white hover:bg-[#333] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           {loading ? "저장 중..." : "코멘트 추가"}
         </button>
@@ -145,20 +141,20 @@ function CommentItem({
   });
 
   return (
-    <div className="bg-[#1a1a1a] rounded p-3 group">
+    <div className="bg-white rounded-lg p-3 group border border-[#eee]">
       <div className="flex items-center justify-between mb-1.5">
         <div className="flex items-center gap-2">
           <span className="w-5 h-5 rounded-full bg-[#D4567A] flex items-center justify-center text-white text-[10px] font-bold">
             {comment.author_name.charAt(0)}
           </span>
-          <span className="text-xs font-medium text-[#ccc]">{comment.author_name}</span>
+          <span className="text-xs font-medium text-[#555]">{comment.author_name}</span>
         </div>
-        <span className="text-[10px] text-[#555]">{time}</span>
+        <span className="text-[10px] text-[#bbb]">{time}</span>
       </div>
-      <p className="text-sm text-[#bbb] whitespace-pre-wrap leading-relaxed">{comment.content}</p>
+      <p className="text-sm text-[#333] whitespace-pre-wrap leading-relaxed">{comment.content}</p>
       <button
         onClick={() => onResolve(comment.id, !comment.resolved)}
-        className="mt-2 text-[10px] text-[#555] hover:text-[#D4567A] opacity-0 group-hover:opacity-100 transition-opacity"
+        className="mt-2 text-[10px] text-[#bbb] hover:text-[#D4567A] opacity-0 group-hover:opacity-100 transition-opacity"
       >
         {comment.resolved ? "다시 열기" : "해결됨으로 표시"}
       </button>

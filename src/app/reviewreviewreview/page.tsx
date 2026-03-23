@@ -15,17 +15,27 @@ const TABS = [
   { id: "appendix", label: "부록" },
 ];
 
+const PASSCODE = "0523";
+
 export default function ReviewPage() {
   const [activeTab, setActiveTab] = useState("prologue");
   const [authorName, setAuthorName] = useState("");
-  const [showNameModal, setShowNameModal] = useState(true);
+  const [showNameModal, setShowNameModal] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [checkingAuth, setCheckingAuth] = useState(true);
 
   useEffect(() => {
-    const saved = localStorage.getItem("review_author");
-    if (saved) {
-      setAuthorName(saved);
-      setShowNameModal(false);
+    const auth = localStorage.getItem("review_auth");
+    if (auth === "true") {
+      setIsAuthenticated(true);
+      const saved = localStorage.getItem("review_author");
+      if (saved) {
+        setAuthorName(saved);
+      } else {
+        setShowNameModal(true);
+      }
     }
+    setCheckingAuth(false);
   }, []);
 
   const handleSetName = (name: string) => {
@@ -34,13 +44,24 @@ export default function ReviewPage() {
     setShowNameModal(false);
   };
 
+  if (checkingAuth) return null;
+
+  if (!isAuthenticated) {
+    return <PasscodeScreen onSuccess={() => {
+      setIsAuthenticated(true);
+      localStorage.setItem("review_auth", "true");
+      const saved = localStorage.getItem("review_author");
+      if (saved) {
+        setAuthorName(saved);
+      } else {
+        setShowNameModal(true);
+      }
+    }} />;
+  }
+
   return (
     <>
-      {/* 닉네임 입력 모달 */}
-      {showNameModal && (
-        <NameModal onSubmit={handleSetName} />
-      )}
-
+      {showNameModal && <NameModal onSubmit={handleSetName} />}
       <div className="flex flex-col h-screen">
         <ReviewHeader
           tabs={TABS}
@@ -49,12 +70,56 @@ export default function ReviewPage() {
           authorName={authorName}
           onChangeName={() => setShowNameModal(true)}
         />
-        <ReviewContent
-          activeTab={activeTab}
-          authorName={authorName}
-        />
+        <ReviewContent activeTab={activeTab} authorName={authorName} />
       </div>
     </>
+  );
+}
+
+function PasscodeScreen({ onSuccess }: { onSuccess: () => void }) {
+  const [code, setCode] = useState("");
+  const [error, setError] = useState(false);
+
+  const handleSubmit = () => {
+    if (code === PASSCODE) {
+      onSuccess();
+    } else {
+      setError(true);
+      setCode("");
+    }
+  };
+
+  return (
+    <div className="min-h-screen flex items-center justify-center bg-white">
+      <div className="w-[360px] text-center">
+        <p className="text-[#D4567A] text-xs font-medium tracking-[0.2em] mb-3">
+          AESTHETIC DENTISTRY PRACTICE GUIDE
+        </p>
+        <h1 className="text-2xl font-bold text-[#1a1a1a] mb-1">초고 리뷰</h1>
+        <p className="text-sm text-[#999] mb-8">접근 코드를 입력해주세요</p>
+        <input
+          type="password"
+          value={code}
+          onChange={(e) => { setCode(e.target.value); setError(false); }}
+          onKeyDown={(e) => e.key === "Enter" && code && handleSubmit()}
+          placeholder="접근 코드"
+          className={`w-full border rounded-lg px-4 py-3 text-center text-lg tracking-[0.3em] focus:outline-none transition-colors ${
+            error
+              ? "border-red-400 bg-red-50"
+              : "border-[#ddd] bg-[#fafafa] focus:border-[#D4567A]"
+          }`}
+          autoFocus
+        />
+        {error && <p className="text-red-500 text-xs mt-2">코드가 일치하지 않습니다</p>}
+        <button
+          onClick={handleSubmit}
+          disabled={!code}
+          className="mt-4 w-full py-3 rounded-lg font-medium bg-[#1a1a1a] text-white hover:bg-[#333] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+        >
+          확인
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -62,10 +127,10 @@ function NameModal({ onSubmit }: { onSubmit: (name: string) => void }) {
   const [name, setName] = useState("");
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
-      <div className="bg-[#1a1a1a] border border-[#333] rounded-lg p-8 w-[380px]">
-        <h2 className="text-xl font-bold text-white mb-2">초고 리뷰</h2>
-        <p className="text-[#888] text-sm mb-6">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white border border-[#eee] rounded-xl p-8 w-[380px] shadow-xl">
+        <h2 className="text-xl font-bold text-[#1a1a1a] mb-2">리뷰어 이름</h2>
+        <p className="text-[#999] text-sm mb-6">
           코멘트에 표시될 이름을 입력해주세요.
         </p>
         <input
@@ -74,13 +139,13 @@ function NameModal({ onSubmit }: { onSubmit: (name: string) => void }) {
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && name.trim() && onSubmit(name.trim())}
           placeholder="이름 또는 닉네임"
-          className="w-full bg-[#0a0a0a] border border-[#444] rounded px-4 py-3 text-white placeholder:text-[#666] focus:outline-none focus:border-[#D4567A] mb-4"
+          className="w-full bg-[#fafafa] border border-[#ddd] rounded-lg px-4 py-3 text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#D4567A] mb-4"
           autoFocus
         />
         <button
           onClick={() => name.trim() && onSubmit(name.trim())}
           disabled={!name.trim()}
-          className="w-full py-3 rounded font-medium bg-[#D4567A] text-white hover:bg-[#c04a6c] disabled:opacity-40 disabled:cursor-not-allowed transition-colors"
+          className="w-full py-3 rounded-lg font-medium bg-[#1a1a1a] text-white hover:bg-[#333] disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
         >
           시작하기
         </button>

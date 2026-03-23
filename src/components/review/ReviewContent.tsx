@@ -18,10 +18,14 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
   const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
   const [commentCounts, setCommentCounts] = useState<Record<string, number>>({});
 
-  // 전체 코멘트 수 로드
   useEffect(() => {
     fetchAllCounts();
   }, []);
+
+  // 탭 전환 시 패널 닫기
+  useEffect(() => {
+    setActiveSectionId(null);
+  }, [activeTab]);
 
   const fetchAllCounts = async () => {
     try {
@@ -48,16 +52,13 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
       {/* 본문 영역 */}
       <div className="flex-1 overflow-y-auto px-8 py-10 max-w-4xl mx-auto">
         {sections.length === 0 ? (
-          <div className="text-center py-20 text-[#555]">
+          <div className="text-center py-20 text-[#bbb]">
             <p className="text-lg">콘텐츠 준비 중</p>
             <p className="text-sm mt-2">이 섹션은 곧 업로드됩니다.</p>
           </div>
         ) : (
           sections.map((section) => (
-            <div
-              key={section.id}
-              className="group relative mb-8"
-            >
+            <div key={section.id} className="group relative mb-8">
               {/* 코멘트 트리거 버튼 */}
               <button
                 onClick={() =>
@@ -69,8 +70,8 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
                   activeSectionId === section.id
                     ? "bg-[#D4567A] text-white"
                     : commentCounts[section.id]
-                    ? "bg-[#D4567A]/20 text-[#D4567A]"
-                    : "bg-transparent text-[#333] group-hover:text-[#666] group-hover:bg-[#1a1a1a]"
+                    ? "bg-[#D4567A]/15 text-[#D4567A]"
+                    : "bg-transparent text-[#ccc] group-hover:text-[#999] group-hover:bg-[#f5f5f5]"
                 }`}
                 title="코멘트"
               >

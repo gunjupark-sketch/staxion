@@ -11,7 +11,7 @@ export default function ReviewLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="min-h-screen bg-[#0a0a0a] text-[#e0e0e0]">
+    <div className="min-h-screen bg-white text-[#1a1a1a]">
       {children}
     </div>
   );
