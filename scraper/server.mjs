@@ -166,195 +166,132 @@ async function scrape(address, lat, lng, radius = 1000) {
     const frame = iframeEl ? await iframeEl.contentFrame() : null;
     if (!frame) throw new Error("iframe contentFrame 접근 실패");
 
-    // 2. 위치 설정 — 주소 검색 (도로명 주소가 가장 정확)
+    // 2. 주소 검색 + 결과 첫 번째 항목 클릭
     console.log(`  2. 주소 검색: ${address}`);
-    await searchByAddress(frame, gis, address);
+    const searchInput =
+      (await frame.$("input#searchAddr")) ||
+      (await frame.$("input[placeholder*='주소']")) ||
+      (await frame.$("input[placeholder*='검색']")) ||
+      (await frame.$("input[placeholder*='위치']")) ||
+      (await frame.$(".searchArea input")) ||
+      (await frame.$("input[type='text']"));
 
-    // 좌표가 있으면 지도 중심 이동 (보정)
-    if (lat && lng) {
-      console.log(`  2.1. 좌표로 지도 중심 보정: ${lat}, ${lng}`);
-      await gis.evaluate(({ lat, lng }) => {
-        if (typeof kakao !== "undefined" && typeof map !== "undefined") {
-          map.setCenter(new kakao.maps.LatLng(lat, lng));
-          map.setLevel(4);
-        }
-      }, { lat, lng });
-      await sleep(1000);
-    }
+    if (!searchInput) throw new Error("검색 input 못 찾음");
 
-    // 2.5. 반경 설정
-    console.log(`  2.5. 반경 설정: ${radius}m`);
-    await gis.evaluate((r) => {
-      // 소상공인365 반경 관련 전역 변수 설정
-      if (typeof window.radius !== "undefined") window.radius = r;
-      if (typeof window.searchRadius !== "undefined") window.searchRadius = r;
-      // 반경 select/input 요소 찾아서 설정
-      document.querySelectorAll("select").forEach((sel) => {
-        for (const opt of sel.options) {
-          // 반경 값 매칭 (500, 1000, 1500, 2000)
-          if (opt.value === String(r) || opt.text?.includes(String(r / 1000))) {
-            sel.value = opt.value;
-            sel.dispatchEvent(new Event("change", { bubbles: true }));
-          }
-        }
-      });
-      // 반경 라디오/버튼 찾기
-      document.querySelectorAll("input[type='radio'], button, label").forEach((el) => {
-        const text = el.innerText?.trim() || el.value || "";
-        const radiusKm = r / 1000;
-        if (
-          text === `${r}m` || text === `${radiusKm}km` ||
-          text === `${r}` || text === `${radiusKm}` ||
-          (r === 500 && text === "500m") ||
-          (r === 1000 && (text === "1km" || text === "1,000m")) ||
-          (r === 1500 && (text === "1.5km" || text === "1,500m")) ||
-          (r === 2000 && (text === "2km" || text === "2,000m"))
-        ) {
-          el.click();
-        }
-      });
-    }, radius);
-    await sleep(1000);
+    await searchInput.click({ clickCount: 3 });
+    await sleep(300);
+    await searchInput.fill("");
+    await searchInput.type(address, { delay: 80 });
+    await sleep(500);
+    await searchInput.press("Enter");
+    console.log("  검색 실행");
+    await sleep(5000);
 
-    // 3. 업종 선택: 보건의료 → 의원 → 치과의원
+    // 검색 결과 첫 번째 항목 클릭 (가장 정확한 매칭)
+    const resultInfo = await gis.evaluate(() => {
+      const items = Array.from(
+        document.querySelectorAll("li, .search-result-item, [class*='result'] li, [class*='list'] li")
+      );
+      const visible = items.filter(
+        (i) => i.offsetParent && i.innerText?.length > 5 && i.innerText?.length < 200
+      );
+      if (visible.length === 0) return { count: 0, clicked: "" };
+
+      // 첫 번째 결과 클릭 (가장 정확한 주소)
+      const first = visible[0];
+      const clickable = first.querySelector("a, button, span") || first;
+      clickable.click();
+      return { count: visible.length, clicked: first.innerText?.trim()?.substring(0, 50) };
+    });
+    console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
+    await sleep(5000);
+
+    // 3. 업종 선택 — 검색 input에 "치과의원" 직접 입력
     console.log("  3. 업종 선택...");
 
-    // 디버깅: 업종 관련 DOM 구조 파악
-    const domInfo = await gis.evaluate(() => {
-      const info = { selects: [], buttons: [], inputs: [], globals: [] };
-
-      // 모든 select 요소와 옵션
-      document.querySelectorAll("select").forEach((sel, i) => {
-        const opts = Array.from(sel.options).map(o => `${o.value}|${o.text?.trim()}`);
-        info.selects.push({ id: sel.id, name: sel.name, class: sel.className?.substring(0, 50), optCount: opts.length, opts: opts.slice(0, 10) });
-      });
-
-      // 업종 관련 텍스트 가진 클릭 가능 요소
-      const keywords = ["보건", "의원", "치과", "업종"];
-      document.querySelectorAll("button, a, li, div, span, label, input").forEach((el) => {
-        const text = (el.innerText || el.textContent || "").trim().substring(0, 30);
-        if (text && keywords.some(k => text.includes(k)) && el.offsetParent) {
-          info.buttons.push({ tag: el.tagName, text, id: el.id, class: el.className?.substring(0, 40) });
-        }
-      });
-
-      // hidden inputs
-      document.querySelectorAll("input[type='hidden'], input[name*='tpbiz'], input[name*='upjong'], input[name*='code']").forEach((inp) => {
-        info.inputs.push({ name: inp.name, id: inp.id, value: inp.value });
-      });
-
-      // 전역 변수
-      for (const k of ["tpbizCode", "tpbizNm", "upjongCd", "upjongNm", "indCd", "selTpbizCd"]) {
-        if (window[k] !== undefined) info.globals.push({ key: k, value: String(window[k]) });
-      }
-
-      return info;
-    }).catch(() => ({ error: "DOM 조회 실패" }));
-    console.log("  📋 업종 DOM 구조:", JSON.stringify(domInfo, null, 2));
-
-    // select 기반 업종 선택 시도
-    const selectResult = await gis.evaluate(() => {
-      const results = [];
-      const selects = document.querySelectorAll("select");
-
-      // 대분류에서 "보건의료" 또는 "Q"로 시작하는 값 찾기
-      for (const sel of selects) {
-        for (const opt of sel.options) {
-          if (opt.text?.includes("보건") || opt.value?.startsWith("Q")) {
-            sel.value = opt.value;
-            sel.dispatchEvent(new Event("change", { bubbles: true }));
-            results.push(`대분류 select: ${sel.id||sel.name} → ${opt.value}|${opt.text}`);
-            break;
-          }
+    // 방법 1: 업종 검색 input 찾아서 "치과의원" 입력
+    const upjongSearched = await gis.evaluate(() => {
+      // "업종을 선택 또는 검색해주세요" placeholder를 가진 input
+      const inputs = document.querySelectorAll("input[type='text'], input[placeholder*='업종'], input[placeholder*='검색']");
+      for (const inp of inputs) {
+        const ph = inp.placeholder || "";
+        if (ph.includes("업종") || ph.includes("검색")) {
+          inp.value = "치과의원";
+          inp.dispatchEvent(new Event("input", { bubbles: true }));
+          inp.dispatchEvent(new Event("change", { bubbles: true }));
+          inp.dispatchEvent(new Event("keyup", { bubbles: true }));
+          return { found: true, placeholder: ph };
         }
       }
-      return results;
-    }).catch(() => []);
-    console.log("  select 대분류:", selectResult);
-    await sleep(2000);
-
-    // 텍스트 매칭으로 보건의료 클릭
-    await gis.evaluate(() => {
-      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
-        const text = el.innerText?.trim();
-        if (text === "보건의료" && el.offsetParent) {
-          el.click();
-          console.log("clicked 보건의료:", el.tagName);
-        }
-      });
+      return { found: false };
     });
+    console.log(`  업종 검색 input:`, JSON.stringify(upjongSearched));
     await sleep(2000);
 
-    // 의원
-    await gis.evaluate(() => {
-      // select 방식
-      document.querySelectorAll("select").forEach((sel) => {
-        for (const opt of sel.options) {
-          if (opt.text?.trim() === "의원") {
-            sel.value = opt.value;
-            sel.dispatchEvent(new Event("change", { bubbles: true }));
-            return;
-          }
-        }
-      });
-      // 텍스트 매칭
-      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
-        const text = el.innerText?.trim();
-        if (text === "의원" && el.offsetParent && el.children.length === 0) el.click();
-      });
-    });
-    await sleep(2000);
-
-    // 치과의원
-    await gis.evaluate(() => {
-      document.querySelectorAll("select").forEach((sel) => {
-        for (const opt of sel.options) {
-          if (opt.text?.includes("치과의원") || opt.text?.includes("치과 의원")) {
-            sel.value = opt.value;
-            sel.dispatchEvent(new Event("change", { bubbles: true }));
-            return;
-          }
-        }
-      });
-      document.querySelectorAll("button, div, span, a, li, label, dt, dd").forEach((el) => {
-        const text = el.innerText?.trim();
-        if ((text === "치과의원" || text === "치과 의원") && el.offsetParent && el.children.length === 0) el.click();
-      });
-    });
-    await sleep(2000);
-
-    // 업종코드 확인
-    let tpbiz = await gis.evaluate(() => {
-      const candidates = [
-        window.tpbizCode, window.tpbizCd, window.selTpbizCd, window.upjongCd,
-      ];
-      // hidden input 값도 확인
-      document.querySelectorAll("input[type='hidden']").forEach((inp) => {
-        if (inp.name?.includes("tpbiz") || inp.name?.includes("upjong") || inp.id?.includes("tpbiz")) {
-          candidates.push(inp.value);
-        }
-      });
-      return candidates.find(v => v && v !== "undefined" && v !== "") || null;
-    }).catch(() => null);
-    console.log(`  업종코드 (선택 후): ${tpbiz}`);
-
-    if (!tpbiz) {
-      console.log("  ⚠️ 업종코드 undefined → 강제 설정: Q10901 (치과의원)");
+    // 검색 결과에서 "치과의원" 클릭
+    if (upjongSearched.found) {
       await gis.evaluate(() => {
-        // 가능한 모든 전역 변수에 설정
-        window.tpbizCode = "Q10901";
-        window.tpbizCd = "Q10901";
-        window.selTpbizCd = "Q10901";
-        window.upjongCd = "Q10901";
-        // hidden inputs
-        document.querySelectorAll("input[type='hidden']").forEach((inp) => {
-          if (inp.name?.includes("tpbiz") || inp.name?.includes("upjong") || inp.id?.includes("tpbiz")) {
-            inp.value = "Q10901";
+        // 검색 결과 리스트에서 치과의원 클릭
+        document.querySelectorAll("li, div, a, span, button").forEach((el) => {
+          const text = el.innerText?.trim();
+          if (text === "치과의원" && el.offsetParent) el.click();
+        });
+      });
+      await sleep(2000);
+    }
+
+    // 방법 2: 검색 input 없으면 아이콘 클릭 방식
+    let tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+    if (!tpbiz) {
+      console.log("  검색 방식 실패, 아이콘 클릭 시도...");
+
+      // 보건의료 아이콘 클릭 (아이콘 그리드에서 "보건의료" 라벨)
+      await gis.evaluate(() => {
+        // 아이콘 라벨 텍스트로 찾기
+        document.querySelectorAll("span, p, div, label, button, a").forEach((el) => {
+          const text = el.innerText?.trim();
+          if (text === "보건의료" && el.offsetParent) {
+            // 부모 또는 자신 클릭
+            const clickTarget = el.closest("a, button, li, div[onclick]") || el;
+            clickTarget.click();
           }
         });
       });
-      tpbiz = "Q10901 (강제)";
-      console.log(`  업종코드 (강제 설정 후): ${tpbiz}`);
+      await sleep(3000);
+
+      // 중분류: "의원" 클릭
+      await gis.evaluate(() => {
+        document.querySelectorAll("li, div, a, span, button, p").forEach((el) => {
+          const text = el.innerText?.trim();
+          // 정확히 "의원"만 (다른 텍스트 포함 안 되도록)
+          if (text === "의원" && el.offsetParent) {
+            el.click();
+          }
+        });
+      });
+      await sleep(3000);
+
+      // 소분류: "치과의원" 클릭
+      await gis.evaluate(() => {
+        document.querySelectorAll("li, div, a, span, button, p").forEach((el) => {
+          const text = el.innerText?.trim();
+          if (text === "치과의원" && el.offsetParent) {
+            el.click();
+          }
+        });
+      });
+      await sleep(2000);
+    }
+
+    // 업종코드 최종 확인
+    tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
+    console.log(`  업종코드 (최종): ${tpbiz}`);
+
+    if (!tpbiz) {
+      console.log("  ⚠️ 업종코드 여전히 undefined — 강제 설정 Q10901");
+      await gis.evaluate(() => {
+        window.tpbizCode = "Q10901";
+      });
     }
 
     // 4. 네트워크 모니터링 설정
@@ -416,62 +353,6 @@ async function scrape(address, lat, lng, radius = 1000) {
   return sgData;
 }
 
-/**
- * 주소 검색 방식 (좌표 없을 때 폴백)
- */
-async function searchByAddress(frame, gis, address) {
-  const searchInput =
-    (await frame.$("input#searchAddr")) ||
-    (await frame.$("input[placeholder*='주소']")) ||
-    (await frame.$("input[placeholder*='검색']")) ||
-    (await frame.$("input[placeholder*='위치']")) ||
-    (await frame.$(".searchArea input")) ||
-    (await frame.$("input[type='text']"));
-
-  if (!searchInput) throw new Error("검색 input 못 찾음");
-
-  await searchInput.click({ clickCount: 3 });
-  await sleep(300);
-  await searchInput.fill("");
-  await searchInput.type(address, { delay: 80 });
-  await sleep(500);
-  await searchInput.press("Enter");
-  console.log("  검색 실행");
-  await sleep(5000);
-
-  // 검색 결과에서 가장 일치하는 항목 클릭
-  const resultCount = await gis.evaluate((searchAddr) => {
-    const items = Array.from(
-      document.querySelectorAll("li, .search-result-item, [class*='result'] li")
-    );
-    const visible = items.filter(
-      (i) => i.offsetParent && i.innerText?.length > 0 && i.innerText?.length < 200
-    );
-    if (visible.length === 0) return 0;
-
-    const keywords = searchAddr.split(/\s+/).filter(k => k.length > 1);
-    let bestMatch = visible[0];
-    let bestScore = 0;
-
-    for (const item of visible) {
-      const text = item.innerText || "";
-      let score = 0;
-      for (const kw of keywords) {
-        if (text.includes(kw)) score++;
-      }
-      if (score > bestScore) {
-        bestScore = score;
-        bestMatch = item;
-      }
-    }
-
-    const clickable = bestMatch.querySelector("a, button, span") || bestMatch;
-    clickable.click();
-    return visible.length;
-  }, address);
-  console.log(`  검색결과 ${resultCount}개, 최적 매칭 클릭`);
-  await sleep(5000);
-}
 
 function sleep(ms) {
   return new Promise((r) => setTimeout(r, ms));
