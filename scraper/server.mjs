@@ -11,7 +11,7 @@ import express from "express";
 const app = express();
 app.use(express.json());
 
-const PORT = 3100;
+const PORT = process.env.PORT || 3100;
 const INTENTIONAL_DELAY = 60_000; // 60초 의도적 딜레이
 
 // 분석 큐 (동시 실행 방지)
@@ -100,8 +100,8 @@ async function sendCallback(callbackUrl, reportId, data) {
  */
 async function scrape(address) {
   const browser = await chromium.launch({
-    headless: false,
-    channel: "chrome",
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
   });
 
   const ctx = await browser.newContext({

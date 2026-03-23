@@ -1,0 +1,13 @@
+{
+  "name": "staxion-scraper",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "playwright": "^1.52.0",
+    "cheerio": "^1.2.0"
+  }
+}
