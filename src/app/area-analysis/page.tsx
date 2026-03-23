@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
+import Script from "next/script";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,6 +19,7 @@ export default function AreaAnalysisPage() {
   const [user, setUser] = useState<{ id: string } | null>(null);
   const [credits, setCredits] = useState<number | null>(null);
   const [address, setAddress] = useState("");
+  const [addressDetail, setAddressDetail] = useState<{sido: string; sgg: string; dong: string} | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
@@ -37,6 +39,23 @@ export default function AreaAnalysisPage() {
           });
       }
     });
+  }, []);
+
+  const openPostcode = useCallback(() => {
+    // @ts-expect-error daum postcode
+    if (!window.daum?.Postcode) return;
+    // @ts-expect-error daum postcode
+    new window.daum.Postcode({
+      oncomplete: (data: { roadAddress: string; jibunAddress: string; sido: string; sigungu: string; bname: string }) => {
+        const fullAddr = data.roadAddress || data.jibunAddress;
+        setAddress(fullAddr);
+        setAddressDetail({
+          sido: data.sido,
+          sgg: data.sigungu,
+          dong: data.bname,
+        });
+      },
+    }).open();
   }, []);
 
   const handleAnalysis = () => {
@@ -60,7 +79,10 @@ export default function AreaAnalysisPage() {
       const res = await fetch("/api/analysis/request", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ address: address.trim() }),
+        body: JSON.stringify({
+          address: address.trim(),
+          ...(addressDetail && { sido: addressDetail.sido, sgg: addressDetail.sgg, dong: addressDetail.dong }),
+        }),
       });
 
       if (!res.ok) {
@@ -80,6 +102,7 @@ export default function AreaAnalysisPage() {
 
   return (
     <>
+    <Script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js" strategy="lazyOnload" />
       {/* Section 1: Hero + 분석 실행 */}
       <section className="relative overflow-hidden bg-layout-dark py-20 md:py-28">
         <Image
@@ -107,18 +130,16 @@ export default function AreaAnalysisPage() {
           <div className="mx-auto mt-10 max-w-xl">
             {!submitted ? (
               <>
-                <div className="flex gap-2">
-                  <div className="relative flex-1">
-                    <Search className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-white/30" />
-                    <input
-                      type="text"
-                      value={address}
-                      onChange={(e) => setAddress(e.target.value)}
-                      onKeyDown={(e) => e.key === "Enter" && handleAnalysis()}
-                      placeholder="분석할 주소를 입력하세요 (예: 서울시 강남구 역삼동)"
-                      className="h-14 w-full rounded-xl border border-white/20 bg-white/10 pl-12 pr-4 text-base text-white placeholder:text-white/30 backdrop-blur-sm focus:border-brand-neon focus:outline-none focus:ring-1 focus:ring-brand-neon/50"
-                    />
-                  </div>
+                <div
+                  onClick={openPostcode}
+                  className="flex items-center gap-3 h-14 w-full rounded-xl border border-white/20 bg-white/10 px-4 cursor-pointer backdrop-blur-sm hover:border-brand-neon/50 transition-colors"
+                >
+                  <Search className="h-5 w-5 text-white/30 shrink-0" />
+                  {address ? (
+                    <span className="text-base text-white">{address}</span>
+                  ) : (
+                    <span className="text-base text-white/30">클릭하여 주소를 검색하세요</span>
+                  )}
                 </div>
 
                 <button

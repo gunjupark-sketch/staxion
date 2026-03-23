@@ -10,7 +10,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "로그인이 필요합니다." }, { status: 401 });
   }
 
-  const { address } = await req.json();
+  const body = await req.json();
+  const address = body.address;
+  const clientSido = body.sido || null;
+  const clientSgg = body.sgg || null;
+  const clientDong = body.dong || null;
+
   if (!address || typeof address !== "string" || address.trim().length < 2) {
     return NextResponse.json({ error: "유효한 주소를 입력해주세요." }, { status: 400 });
   }
@@ -51,6 +56,11 @@ export async function POST(req: NextRequest) {
   } catch {
     // geocoding 실패해도 분석 요청은 진행
   }
+
+  // 클라이언트에서 보낸 주소 정보가 있으면 우선 사용 (카카오 주소검색 결과)
+  if (clientSido) sido = clientSido;
+  if (clientSgg) sgg = clientSgg;
+  if (clientDong) dong = clientDong;
 
   // 분석 레코드 생성
   const { data: report, error: insertError } = await supabase
