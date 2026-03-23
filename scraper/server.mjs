@@ -246,13 +246,15 @@ async function scrape(address, lat, lng, radius = 1000) {
     }).catch(() => "확인실패");
     console.log(`  업종코드: ${tpbiz}`);
 
-    // 4. 네트워크 모니터링 설정 — URL+파라미터도 로그
+    // 4. 네트워크 모니터링 설정 — 모든 XHR/fetch 로그
     page.on("request", (req) => {
       const url = req.url();
-      if (url.includes("sang_gwon") || url.includes("sgAnalysis") || url.includes("analysis")) {
-        console.log(`  📤 REQUEST: ${req.method()} ${url}`);
+      const type = req.resourceType();
+      // XHR/fetch 요청만 (이미지, 스크립트 등 제외)
+      if (type === "xhr" || type === "fetch" || url.includes("sang_gwon") || url.includes(".sg")) {
+        console.log(`  📤 ${req.method()} ${url.substring(0, 150)}`);
         if (req.method() === "POST") {
-          console.log(`     POST body: ${req.postData()?.substring(0, 500)}`);
+          console.log(`     body: ${req.postData()?.substring(0, 300)}`);
         }
       }
     });
@@ -284,8 +286,29 @@ async function scrape(address, lat, lng, radius = 1000) {
       console.log("  버튼 강제 활성화");
     }
 
-    await analysisBtn.click();
-    console.log("  분석하기 클릭!");
+    // 콘솔 에러 감시
+    page.on("console", (msg) => {
+      if (msg.type() === "error" || msg.type() === "warning") {
+        console.log(`  🖥️ [${msg.type()}] ${msg.text()?.substring(0, 200)}`);
+      }
+    });
+
+    // 분석하기 버튼의 onclick 핸들러 직접 호출 시도
+    const clickResult = await gis.evaluate(() => {
+      const btn = document.querySelector("#analysisBtn");
+      if (!btn) return "버튼 없음";
+      // onclick 속성 확인
+      const onclick = btn.getAttribute("onclick");
+      if (onclick) return `onclick: ${onclick}`;
+      // 직접 클릭
+      btn.click();
+      return "click() 호출됨";
+    }).catch((e) => `에러: ${e.message}`);
+    console.log(`  분석하기: ${clickResult}`);
+
+    // Playwright 클릭도 시도
+    await analysisBtn.click().catch(() => {});
+    console.log("  분석하기 Playwright 클릭!");
 
     // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
     for (let i = 0; i < 30; i++) {
