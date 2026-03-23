@@ -313,25 +313,54 @@ async function scrape(address, lat, lng, radius = 1000) {
     }).catch((e) => `에러: ${e.message}`);
     console.log(`  분석버튼 정보: ${btnInfo}`);
 
-    // goSearch 함수 소스 확인 + 호출
-    const fnSource = await gis.evaluate(() => {
-      if (typeof goSearch === "function") {
-        return goSearch.toString().substring(0, 1000);
+    // 분석 관련 전역 함수 전체 스캔 + btnAnalysis jQuery 이벤트
+    const fnScan = await gis.evaluate(() => {
+      const results = [];
+      // "anl", "analysis", "sang", "report" 포함 전역 함수
+      for (const key of Object.keys(window)) {
+        if (typeof window[key] === "function" &&
+            (key.toLowerCase().includes("anl") || key.toLowerCase().includes("analysis") ||
+             key.toLowerCase().includes("sang") || key.toLowerCase().includes("report") ||
+             key.toLowerCase().includes("detail") || key.toLowerCase().includes("submit"))) {
+          results.push(`${key}: ${window[key].toString().substring(0, 200)}`);
+        }
       }
-      // 다른 분석 함수 탐색
-      const fns = ["fnAnalysis", "goAnalysis", "startAnalysis", "doAnalysis", "fnSearch"];
-      for (const fn of fns) {
-        if (typeof window[fn] === "function") return `${fn}: ${window[fn].toString().substring(0, 500)}`;
+      // jQuery 이벤트 (btnAnalysis)
+      if (typeof jQuery !== "undefined") {
+        const btn = document.querySelector(".btnAnalysis");
+        if (btn) {
+          const events = jQuery._data?.(btn, "events");
+          if (events) {
+            for (const [type, handlers] of Object.entries(events)) {
+              for (const h of handlers) {
+                results.push(`jQuery .btnAnalysis ${type}: ${h.handler?.toString()?.substring(0, 300)}`);
+              }
+            }
+          }
+        }
       }
-      return "분석 함수 없음";
-    }).catch((e) => `에러: ${e.message}`);
-    console.log(`  goSearch 소스: ${fnSource}`);
+      return results;
+    }).catch((e) => [`에러: ${e.message}`]);
+    console.log(`  📋 분석 함수 스캔 (${fnScan.length}개):`);
+    fnScan.forEach((fn, i) => console.log(`    [${i}] ${fn.substring(0, 250)}`));
 
-    // goSearch 호출
-    const fnResult = await gis.evaluate(() => {
-      try { goSearch(); return "goSearch() 호출"; } catch (e) { return `goSearch 에러: ${e.message}`; }
+    // 가장 유력한 함수 호출 시도
+    const callResult = await gis.evaluate(() => {
+      // sang_gwon 관련 함수가 있으면 호출
+      for (const key of Object.keys(window)) {
+        if (typeof window[key] === "function" && key.toLowerCase().includes("sang")) {
+          return `${key}: ${window[key].toString().substring(0, 300)}`;
+        }
+      }
+      // detailAnalysis, submitAnalysis 등
+      for (const key of ["detailAnalysis", "submitAnalysis", "fnDetailAnls", "fnAnls", "goDetailAnls"]) {
+        if (typeof window[key] === "function") {
+          try { window[key](); return `${key}() 호출 성공`; } catch (e) { return `${key}() 에러: ${e.message}`; }
+        }
+      }
+      return "유력 함수 없음";
     }).catch((e) => `에러: ${e.message}`);
-    console.log(`  분석 함수: ${fnResult}`);
+    console.log(`  호출 시도: ${callResult}`);
 
     // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
     for (let i = 0; i < 30; i++) {
