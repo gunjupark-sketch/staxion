@@ -10,9 +10,7 @@ import {
   TrendingUp,
   TrendingDown,
   Minus,
-  BarChart3,
   Users,
-  ShoppingCart,
   Store,
   Target,
   Shield,
@@ -22,10 +20,8 @@ import {
   Clock,
   Loader2,
   AlertTriangle,
-  Calendar,
   DollarSign,
   UserCheck,
-  Home,
 } from "lucide-react";
 import {
   BarChart,
@@ -40,7 +36,6 @@ import {
   PieChart,
   Pie,
   Cell,
-  Legend,
 } from "recharts";
 
 /* ──────────────────────────────────────────────
@@ -96,6 +91,17 @@ interface AiAnalysis {
   recommendations?: string[];
 }
 
+// sg7 타입
+interface Sg7Data {
+  gender_ratio?: Array<{ name: string; rate: number; count: number }>;
+  customer_type?: Array<{ name: string; rate: number; count: number }>;
+  male_lifestyle?: Array<{ rate: number; hobby: string }>;
+  female_lifestyle?: Array<{ rate: number; hobby: string }>;
+  male_avg_income?: string;
+  female_avg_income?: string;
+  analysis_text?: string;
+}
+
 /* ──────────────────────────────────────────────
    Tab definitions
    ────────────────────────────────────────────── */
@@ -115,7 +121,93 @@ const tabs = [
 
 type TabKey = (typeof tabs)[number]["key"];
 
-const CHART_COLORS = ["#8EC31F", "#4A9FFF", "#FF6565", "#A78BFA", "#F59E0B", "#EC4899"];
+const CHART_COLORS = ["#8EC31F", "#4A9FFF", "#FF6565", "#A78BFA", "#FB923C", "#22D3EE"];
+
+/* ──────────────────────────────────────────────
+   Utility Functions
+   ────────────────────────────────────────────── */
+
+/** 문자열에서 숫자 추출 */
+function parseNum(val: unknown): number {
+  if (typeof val === "number") return val;
+  if (typeof val === "string") {
+    const cleaned = val.replace(/[^0-9.\-]/g, "");
+    const n = parseFloat(cleaned);
+    return isNaN(n) ? 0 : n;
+  }
+  return 0;
+}
+
+function safeStr(val: unknown, fallback = "-"): string {
+  if (val == null) return fallback;
+  return String(val);
+}
+
+/** 월별 데이터 행(Record)에서 차트용 배열 추출. "구분"/"지역" 키 제외. */
+function extractMonthly(row: TableRow | undefined): { name: string; value: number }[] {
+  if (!row) return [];
+  const exclude = ["구분", "지역"];
+  return Object.entries(row)
+    .filter(([k]) => !exclude.includes(k))
+    .map(([k, v]) => ({ name: k, value: parseNum(v) }));
+}
+
+/** 요일 데이터에서 차트용 배열 추출. "주중"/"주말" 키 제외. */
+function extractDayOfWeek(row: TableRow | undefined): { name: string; value: number }[] {
+  if (!row) return [];
+  const exclude = ["주중", "주말"];
+  return Object.entries(row)
+    .filter(([k]) => !exclude.includes(k))
+    .map(([k, v]) => ({ name: k, value: parseNum(v) }));
+}
+
+/** 시간대 데이터에서 차트용 배열 추출. "구분"/"지역" 키 제외. */
+function extractTimeOfDay(row: TableRow | undefined): { name: string; value: number }[] {
+  if (!row) return [];
+  const exclude = ["구분", "지역"];
+  return Object.entries(row)
+    .filter(([k]) => !exclude.includes(k))
+    .map(([k, v]) => ({ name: k, value: parseNum(v) }));
+}
+
+/** 연령대 키만 추출 (성별 키 제외) */
+function extractAgeOnly(row: TableRow | undefined): { name: string; value: number }[] {
+  if (!row) return [];
+  const ageKeys = ["10대", "20대", "30대", "40대", "50대", "60대이상"];
+  return ageKeys
+    .filter((k) => k in row)
+    .map((k) => ({ name: k, value: parseNum(row[k]) }));
+}
+
+/** gender_age_sales에서 최대 비율 연령대 찾기 */
+function findTopAgeGroup(genderAgeSales: TableRow[] | undefined): string {
+  if (!genderAgeSales || !genderAgeSales[1]) return "-";
+  const row = genderAgeSales[1]; // 매출비율 행
+  const ageKeys = ["10대", "20대", "30대", "40대", "50대", "60대이상"];
+  let maxKey = "-";
+  let maxVal = -1;
+  for (const k of ageKeys) {
+    if (k in row) {
+      const v = parseNum(row[k]);
+      if (v > maxVal) {
+        maxVal = v;
+        maxKey = k;
+      }
+    }
+  }
+  return maxVal > 0 ? `${maxKey} (${maxVal}%)` : "-";
+}
+
+/* ──────────────────────────────────────────────
+   Shared Tooltip Style
+   ────────────────────────────────────────────── */
+
+const tooltipStyle = {
+  backgroundColor: "#fff",
+  border: "1px solid #e5e7eb",
+  borderRadius: "12px",
+  fontSize: "12px",
+};
 
 /* ──────────────────────────────────────────────
    Main Component
@@ -164,7 +256,7 @@ export function AnalysisDashboard({ report }: { report: ReportData }) {
     );
   }
 
-  const ai = (report.ai_analysis ?? {}) as AiAnalysis;
+  const ai = (report.ai_analysis ?? null) as AiAnalysis | null;
   const sbiz = report.sbiz_data ?? {};
   const isPremium = !!report.is_premium;
 
@@ -174,7 +266,7 @@ export function AnalysisDashboard({ report }: { report: ReportData }) {
       <TopBar report={report} ai={ai} />
 
       {/* Alert Bar */}
-      {ai.alert_items && ai.alert_items.length > 0 && <AlertBar items={ai.alert_items} />}
+      {ai?.alert_items && ai.alert_items.length > 0 && <AlertBar items={ai.alert_items} />}
 
       {/* Tab Navigation */}
       <div className="flex gap-1 overflow-x-auto border-b border-gray-100 pb-px mb-6 scrollbar-hide">
@@ -206,7 +298,7 @@ export function AnalysisDashboard({ report }: { report: ReportData }) {
         {activeTab === "sales" && <SalesTab sbiz={sbiz} ai={ai} />}
         {activeTab === "customer" && <CustomerTab sbiz={sbiz} ai={ai} />}
         {activeTab === "competitor" && <PlaceholderTab title="경쟁 분석" message="네이버플레이스 데이터 연동 준비 중입니다." locked />}
-        {activeTab === "issue" && <PlaceholderTab title="권역 이슈" message="추후 업데이트 예정입니다." />}
+        {activeTab === "issue" && <IssueTab sbiz={sbiz} ai={ai} />}
         {activeTab === "online" && (isPremium ? <PlaceholderTab title="온라인 마케팅" message="추후 업데이트 예정입니다." /> : <PremiumLock />)}
         {activeTab === "stp" && (isPremium ? <StpTab ai={ai} /> : <PremiumLock />)}
         {activeTab === "swot" && (isPremium ? <SwotTab ai={ai} /> : <PremiumLock />)}
@@ -220,7 +312,7 @@ export function AnalysisDashboard({ report }: { report: ReportData }) {
    Top Bar
    ────────────────────────────────────────────── */
 
-function TopBar({ report, ai }: { report: ReportData; ai: AiAnalysis }) {
+function TopBar({ report, ai }: { report: ReportData; ai: AiAnalysis | null }) {
   return (
     <div className="mb-6">
       <Link
@@ -256,7 +348,7 @@ function TopBar({ report, ai }: { report: ReportData; ai: AiAnalysis }) {
           )}
         </div>
 
-        {ai.grade && (
+        {ai?.grade && (
           <div className="shrink-0 rounded-2xl border border-gray-100 bg-white px-5 py-3 text-center shadow-sm">
             <p className="text-xs text-gray-400 font-medium">종합등급</p>
             <p className="mt-0.5 text-3xl font-black text-brand-neon-text">{ai.grade}</p>
@@ -346,18 +438,21 @@ function KpiCard({
   change?: string;
   sub?: string;
 }) {
+  const changeStr = change ?? "";
+  const isNegative = changeStr.includes("-") || changeStr.includes("감소");
+  const isPositive = !isNegative && (parseNum(changeStr) > 0 || changeStr.includes("+") || changeStr.includes("증가"));
   const changeColor = change
-    ? change.includes("-") || change.includes("감소")
+    ? isNegative
       ? "text-red-500"
-      : change.includes("+") || change.includes("증가")
+      : isPositive
         ? "text-green-600"
         : "text-amber-600"
     : undefined;
 
   const ChangeIcon = change
-    ? change.includes("-") || change.includes("감소")
+    ? isNegative
       ? TrendingDown
-      : change.includes("+") || change.includes("증가")
+      : isPositive
         ? TrendingUp
         : Minus
     : null;
@@ -386,7 +481,18 @@ function SectionCard({ title, children }: { title: string; children: React.React
   );
 }
 
-function InsightBox({ text }: { text: string | undefined }) {
+function InsightBox({ text, pending }: { text?: string | null; pending?: boolean }) {
+  if (pending) {
+    return (
+      <div className="bg-gray-50 border border-gray-200 rounded-xl p-4 mt-4">
+        <h4 className="text-sm font-bold text-gray-400 flex items-center gap-1.5">
+          <Lightbulb className="h-4 w-4" />
+          AI 분석 준비 중
+        </h4>
+        <p className="mt-2 text-sm text-gray-400">분석이 완료되면 AI 인사이트가 제공됩니다.</p>
+      </div>
+    );
+  }
   if (!text) return null;
   return (
     <div className="bg-gradient-to-r from-brand-neon/5 to-brand-neon/0 border border-brand-neon-safe/20 rounded-xl p-4 mt-4">
@@ -399,10 +505,14 @@ function InsightBox({ text }: { text: string | undefined }) {
   );
 }
 
-function DataTable({ data }: { data: TableRow[] }) {
-  if (!data || data.length === 0) return <EmptyState message="데이터가 없습니다." />;
-
-  const headers = Object.keys(data[0]);
+function SimpleTable({
+  headers,
+  rows,
+}: {
+  headers: string[];
+  rows: (string | number)[][];
+}) {
+  if (rows.length === 0) return <EmptyState message="데이터가 없습니다." />;
   return (
     <div className="overflow-x-auto">
       <table className="w-full text-sm">
@@ -411,7 +521,7 @@ function DataTable({ data }: { data: TableRow[] }) {
             {headers.map((h) => (
               <th
                 key={h}
-                className="text-left px-4 py-3 text-xs text-gray-400 font-semibold border-b bg-gray-50 uppercase tracking-wider whitespace-nowrap"
+                className="text-left px-4 py-3 text-xs text-gray-400 font-semibold border-b bg-gray-50 whitespace-nowrap"
               >
                 {h}
               </th>
@@ -419,11 +529,11 @@ function DataTable({ data }: { data: TableRow[] }) {
           </tr>
         </thead>
         <tbody>
-          {data.map((row, i) => (
+          {rows.map((row, i) => (
             <tr key={i} className="hover:bg-gray-50/50">
-              {headers.map((h) => (
-                <td key={h} className="px-4 py-3 border-b border-gray-50 text-gray-600 whitespace-nowrap">
-                  {row[h] ?? "-"}
+              {row.map((cell, j) => (
+                <td key={j} className="px-4 py-3 border-b border-gray-50 text-gray-600 whitespace-nowrap">
+                  {cell ?? "-"}
                 </td>
               ))}
             </tr>
@@ -443,132 +553,107 @@ function EmptyState({ message }: { message: string }) {
 }
 
 /* ──────────────────────────────────────────────
-   Utility: parse numeric from string
-   ────────────────────────────────────────────── */
-
-function parseNum(val: unknown): number {
-  if (typeof val === "number") return val;
-  if (typeof val === "string") {
-    const cleaned = val.replace(/[^0-9.\-]/g, "");
-    const n = parseFloat(cleaned);
-    return isNaN(n) ? 0 : n;
-  }
-  return 0;
-}
-
-function safeStr(val: unknown, fallback = "-"): string {
-  if (val == null) return fallback;
-  return String(val);
-}
-
-/* ──────────────────────────────────────────────
    Tab 1: Overview (권역 요약)
    ────────────────────────────────────────────── */
 
-function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis }) {
-  const sg1 = (sbiz.sg1 ?? {}) as Record<string, unknown>;
-  const sg4 = (sbiz.sg4 ?? {}) as Record<string, unknown>;
-  const sg6 = (sbiz.sg6 ?? {}) as Record<string, unknown>;
-  const sg7 = (sbiz.sg7 ?? {}) as Record<string, unknown>;
+function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
+  const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
+  const sg6 = (sbiz?.sg6 ?? {}) as Record<string, unknown>;
+  const sg7 = (sbiz?.sg7 ?? {}) as Sg7Data;
 
-  // Resident gender/age for chart
-  const residentGenderAge = (sg4.resident_gender_age ?? []) as TableRow[];
+  // gender_age_sales[1] = 매출비율(동네, %)
+  const genderAgeSales = (sg3?.gender_age_sales ?? []) as TableRow[];
+  const salesRatioRow = genderAgeSales?.[1];
+  const ageChartData = extractAgeOnly(salesRatioRow);
 
-  // Build age chart data from resident_gender_age
-  const ageChartData = residentGenderAge.length > 0
-    ? residentGenderAge.map((row) => {
-        const keys = Object.keys(row);
-        const label = row[keys[0]] || "";
-        const values: Record<string, unknown> = { name: label };
-        keys.slice(1).forEach((k) => {
-          values[k] = parseNum(row[k]);
-        });
-        return values;
-      })
+  // sg6.household_trend = 세대수 추이 배열
+  const householdTrend = (sg6?.household_trend ?? []) as TableRow[];
+  // 동네[0], 읍면동[1], 시군구[2]
+  const householdHeaders = householdTrend?.[0]
+    ? ["구분", ...Object.keys(householdTrend[0]).filter((k) => k !== "지역" && k !== "구분")]
     : [];
+  const householdRows: (string | number)[][] = [];
+  const levelLabels = ["동네", "읍면동", "시군구"];
+  householdTrend.forEach((row, idx) => {
+    if (idx > 2) return;
+    const label = row["지역"] || levelLabels[idx] || `레벨${idx}`;
+    const cells: (string | number)[] = [label];
+    Object.keys(row)
+      .filter((k) => k !== "지역" && k !== "구분")
+      .forEach((k) => cells.push(row[k] ?? "-"));
+    householdRows.push(cells);
+  });
 
-  // Household data
-  const householdTrend = (sg6.household_trend ?? []) as TableRow[];
+  const isAiNull = ai === null;
 
   return (
     <>
       {/* KPI Row */}
       <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
         <KpiCard
-          label="총 인구"
-          value={safeStr(sg4.total_population ?? sg4.resident_total)}
-          sub="거주인구 기준"
+          label="지역"
+          value={sg1.region || "-"}
         />
         <KpiCard
-          label="세대수"
-          value={safeStr(sg6.total_households ?? sg6.household_count)}
-          sub="행정동 기준"
+          label="총 점포수"
+          value={sg1.store_count || "-"}
+          change={sg1.store_change_rate}
+          sub="동네 기준"
         />
         <KpiCard
-          label="핵심 고객층"
-          value={safeStr(sg7.core_customer ?? sg7.customer_type)}
+          label="평균 매출"
+          value={sg1.avg_monthly_sales || "-"}
+          change={sg1.sales_change_rate}
+          sub="동네 기준 월평균"
         />
         <KpiCard
-          label="주거 비율"
-          value={safeStr(sg6.residential_ratio)}
-          sub="아파트+주택"
+          label="매출 증감"
+          value={sg1.sales_change_rate || "-"}
         />
         <KpiCard
-          label="평균 연령"
-          value={safeStr(sg4.avg_age)}
+          label="점포 증감"
+          value={sg1.store_change_rate || "-"}
         />
       </div>
 
-      {/* Age Distribution Chart */}
+      {/* 연령별 매출비율 차트 */}
       {ageChartData.length > 0 && (
-        <SectionCard title="연령대 분포">
+        <SectionCard title="연령별 매출 비율 (동네)">
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={ageChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
-              {Object.keys(ageChartData[0])
-                .filter((k) => k !== "name")
-                .map((key, idx) => (
-                  <Bar
-                    key={key}
-                    dataKey={key}
-                    fill={CHART_COLORS[idx % CHART_COLORS.length]}
-                    radius={[4, 4, 0, 0]}
-                  />
-                ))}
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "매출비율"]} />
+              <Bar dataKey="value" fill="#8EC31F" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Household Trend Table */}
-      {householdTrend.length > 0 && (
-        <SectionCard title="행정단위별 비교">
-          <DataTable data={householdTrend} />
+      {/* 행정단위별 세대수 비교 */}
+      {householdRows.length > 0 && (
+        <SectionCard title="행정단위별 세대수 비교">
+          <SimpleTable headers={householdHeaders} rows={householdRows} />
         </SectionCard>
       )}
 
-      {/* Key summary stats */}
+      {/* 핵심 지표 요약 */}
       <SectionCard title="핵심 지표 요약">
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <KpiCard label="업소 수" value={safeStr(sg1.store_count)} change={safeStr(sg1.store_change_rate, undefined)} />
-          <KpiCard label="월 평균 매출" value={safeStr(sg1.avg_monthly_sales)} change={safeStr(sg1.sales_change_rate, undefined)} />
-          <KpiCard label="남성 평균소득" value={safeStr(sg7.male_avg_income)} />
-          <KpiCard label="여성 평균소득" value={safeStr(sg7.female_avg_income)} />
+          <KpiCard label="업종" value={sg1.industry || "-"} />
+          <KpiCard label="시군구 점포수" value={sg1.area_store_count || "-"} change={sg1.area_store_change_rate} sub="시군구 기준" />
+          <KpiCard label="시군구 평균매출" value={sg1.area_avg_monthly_sales || "-"} change={sg1.area_sales_change_rate} sub="시군구 기준" />
+          <KpiCard label="분석번호" value={sg1.analy_no || "-"} />
         </div>
       </SectionCard>
 
       {/* AI Insight */}
-      <InsightBox text={ai.insights?.overview ?? ai.summary} />
+      <InsightBox
+        text={ai?.insights?.overview ?? ai?.summary}
+        pending={isAiNull}
+      />
     </>
   );
 }
@@ -577,76 +662,68 @@ function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
    Tab 2: Industry (업종 현황)
    ────────────────────────────────────────────── */
 
-function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis }) {
-  const sg1 = (sbiz.sg1 ?? {}) as Record<string, unknown>;
-  const sg2 = (sbiz.sg2 ?? {}) as Record<string, unknown>;
-  const monthlyStores = (sg2.monthly_stores ?? []) as TableRow[];
+function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
+  const sg2 = (sbiz?.sg2 ?? {}) as Record<string, unknown>;
 
-  // Chart data from monthly stores
-  const storeChartData = monthlyStores.map((row) => {
-    const keys = Object.keys(row);
-    return {
-      name: row[keys[0]] || "",
-      value: parseNum(row[keys[1]]),
-    };
-  });
+  // monthly_stores[0] = 동네 점포수 (월별)
+  const monthlyStores = (sg2?.monthly_stores ?? []) as TableRow[];
+  const storeRow = monthlyStores?.[0];
+  const storeChartData = extractMonthly(storeRow);
 
-  // Find top 5 by sales growth if available
-  const salesRanking = (sg2.sales_ranking ?? sg2.top_sales ?? []) as TableRow[];
+  const isAiNull = ai === null;
 
   return (
     <>
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <KpiCard label="점포수" value={safeStr(sg1.store_count)} change={safeStr(sg1.store_change_rate, undefined)} />
-        <KpiCard label="치과 수" value={safeStr(sg1.dental_count ?? sg1.area_store_count)} />
-        <KpiCard label="업종 비율" value={safeStr(sg1.industry_ratio ?? sg1.store_ratio)} />
-        <KpiCard label="트렌드" value={safeStr(sg1.trend ?? sg1.store_trend)} />
+        <KpiCard label="동네 점포수" value={sg1.store_count || "-"} change={sg1.store_change_rate} sub="동네 기준" />
+        <KpiCard label="점포 증감률" value={sg1.store_change_rate || "-"} />
+        <KpiCard label="시군구 점포수" value={sg1.area_store_count || "-"} sub="시군구 기준" />
+        <KpiCard label="시군구 점포 증감" value={sg1.area_store_change_rate || "-"} />
       </div>
 
-      {/* Top 5 Sales Ranking */}
-      {salesRanking.length > 0 && (
-        <SectionCard title="매출증가 TOP5 랭킹">
-          <DataTable data={salesRanking.slice(0, 5)} />
-        </SectionCard>
-      )}
-
-      {/* Store Trend Chart */}
+      {/* 점포수 추이 차트 */}
       {storeChartData.length > 0 && (
-        <SectionCard title="점포수 추이">
+        <SectionCard title="점포수 추이 (동네)">
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={storeChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
               <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
+              <Tooltip contentStyle={tooltipStyle} />
               <Line
                 type="monotone"
                 dataKey="value"
                 stroke="#8EC31F"
                 strokeWidth={2}
                 dot={{ r: 4, fill: "#8EC31F" }}
+                name="점포수"
               />
             </LineChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Monthly stores table */}
-      {monthlyStores.length > 0 && (
-        <SectionCard title="월별 업소 수 상세">
-          <DataTable data={monthlyStores} />
+      {/* 월별 상세 테이블: 동네 vs 시군구 */}
+      {monthlyStores.length >= 4 && (
+        <SectionCard title="행정단위별 점포수 비교">
+          {(() => {
+            const monthKeys = Object.keys(monthlyStores[0] || {}).filter(
+              (k) => k !== "구분" && k !== "지역"
+            );
+            const headers = ["구분", ...monthKeys];
+            const labels = ["동네", "동네 증감률", "읍면동", "시군구", "시도", "전국"];
+            const rows = monthlyStores.slice(0, 6).map((row, idx) => {
+              const label = row["지역"] || labels[idx] || `레벨${idx}`;
+              return [label, ...monthKeys.map((k) => row[k] ?? "-")];
+            });
+            return <SimpleTable headers={headers} rows={rows} />;
+          })()}
         </SectionCard>
       )}
 
-      <InsightBox text={ai.insights?.industry} />
+      <InsightBox text={ai?.insights?.industry} pending={isAiNull} />
     </>
   );
 }
@@ -655,31 +732,23 @@ function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
    Tab 3: Sales (매출 현황)
    ────────────────────────────────────────────── */
 
-function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis }) {
-  const sg1 = (sbiz.sg1 ?? {}) as Record<string, unknown>;
-  const sg3 = (sbiz.sg3 ?? {}) as Record<string, unknown>;
+function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
+  const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
 
-  const monthlySales = (sg3.monthly_sales ?? []) as TableRow[];
-  const monthlyCount = (sg3.monthly_count ?? []) as TableRow[];
+  // monthly_sales[0] = 동네 매출 (월별, 만원)
+  const monthlySales = (sg3?.monthly_sales ?? []) as TableRow[];
+  const salesRow = monthlySales?.[0];
+  const salesChartData = extractMonthly(salesRow);
 
-  // Chart: market size trend
-  const salesChartData = monthlySales.map((row) => {
-    const keys = Object.keys(row);
-    return {
-      name: row[keys[0]] || "",
-      value: parseNum(row[keys[1]]),
-    };
-  });
+  // day_of_week[1] = 매출비율 (동네, %)
+  const dayOfWeek = (sg3?.day_of_week ?? []) as TableRow[];
+  const dayRatioRow = dayOfWeek?.[1];
+  const dayChartData = extractDayOfWeek(dayRatioRow);
 
-  const countChartData = monthlyCount.map((row) => {
-    const keys = Object.keys(row);
-    return {
-      name: row[keys[0]] || "",
-      value: parseNum(row[keys[1]]),
-    };
-  });
+  const isAiNull = ai === null;
 
-  if (Object.keys(sg3).length === 0) {
+  if (!sg3 || Object.keys(sg3).length === 0) {
     return <EmptyState message="매출 데이터가 없습니다." />;
   }
 
@@ -687,64 +756,50 @@ function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis 
     <>
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <KpiCard label="시장규모" value={safeStr(sg1.market_size ?? sg1.avg_monthly_sales)} change={safeStr(sg1.sales_change_rate, undefined)} />
-        <KpiCard label="평균매출" value={safeStr(sg1.avg_monthly_sales)} change={safeStr(sg1.area_avg_monthly_sales, undefined)} sub="상권 평균" />
-        <KpiCard label="결제단가" value={safeStr(sg1.avg_payment ?? sg3.avg_payment)} />
-        <KpiCard label="이용건수" value={safeStr(sg1.usage_count ?? sg3.total_count)} />
+        <KpiCard label="평균 매출" value={sg1.avg_monthly_sales || "-"} change={sg1.sales_change_rate} sub="동네 월평균" />
+        <KpiCard label="매출 증감률" value={sg1.sales_change_rate || "-"} />
+        <KpiCard label="시군구 매출" value={sg1.area_avg_monthly_sales || "-"} change={sg1.area_sales_change_rate} sub="시군구 월평균" />
+        <KpiCard label="시군구 매출 증감" value={sg1.area_sales_change_rate || "-"} />
       </div>
 
-      {/* Sales Trend Chart */}
+      {/* 매출 추이 차트 */}
       {salesChartData.length > 0 && (
-        <SectionCard title="시장규모 추이">
+        <SectionCard title="매출 추이 (동네, 만원)">
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={salesChartData}>
+            <LineChart data={salesChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
               <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${Number(v).toLocaleString()}만원`, "매출"]} />
+              <Line
+                type="monotone"
+                dataKey="value"
+                stroke="#8EC31F"
+                strokeWidth={2}
+                dot={{ r: 4, fill: "#8EC31F" }}
+                name="매출"
               />
-              <Bar dataKey="value" fill="#8EC31F" radius={[4, 4, 0, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        </SectionCard>
-      )}
-
-      {/* Monthly Count Chart */}
-      {countChartData.length > 0 && (
-        <SectionCard title="매출 추이">
-          <ResponsiveContainer width="100%" height={220}>
-            <LineChart data={countChartData}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
-              <Line type="monotone" dataKey="value" stroke="#4A9FFF" strokeWidth={2} dot={{ r: 4, fill: "#4A9FFF" }} />
             </LineChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Tables */}
-      {monthlySales.length > 0 && (
-        <SectionCard title="월별 매출 상세">
-          <DataTable data={monthlySales} />
+      {/* 요일별 매출비율 차트 */}
+      {dayChartData.length > 0 && (
+        <SectionCard title="요일별 매출 비율 (동네)">
+          <ResponsiveContainer width="100%" height={220}>
+            <BarChart data={dayChartData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "매출비율"]} />
+              <Bar dataKey="value" fill="#4A9FFF" radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
         </SectionCard>
       )}
 
-      <InsightBox text={ai.insights?.sales} />
+      <InsightBox text={ai?.insights?.sales} pending={isAiNull} />
     </>
   );
 }
@@ -753,142 +808,366 @@ function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis 
    Tab 4: Customer (고객 분석)
    ────────────────────────────────────────────── */
 
-function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis }) {
-  const sg3 = (sbiz.sg3 ?? {}) as Record<string, unknown>;
-  const sg7 = (sbiz.sg7 ?? {}) as Record<string, unknown>;
+function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
+  const sg7 = (sbiz?.sg7 ?? {}) as Sg7Data;
 
-  const genderAgeSales = (sg3.gender_age_sales ?? []) as TableRow[];
-  const dayOfWeek = (sg3.day_of_week ?? []) as TableRow[];
-  const timeOfDay = (sg3.time_of_day ?? []) as TableRow[];
+  // gender_age_sales
+  const genderAgeSales = (sg3?.gender_age_sales ?? []) as TableRow[];
+  const salesRatioRow = genderAgeSales?.[1]; // 매출비율 (동네, %)
+  const ageChartData = extractAgeOnly(salesRatioRow);
 
-  // Determine top customer info from sg7
-  const coreCustomer1 = safeStr(sg7.core_customer_1 ?? sg7.core_customer);
-  const coreCustomer2 = safeStr(sg7.core_customer_2);
-  const peakDay = safeStr(sg7.peak_day ?? sg3.peak_day);
-  const peakTime = safeStr(sg7.peak_time ?? sg3.peak_time);
+  // 요일별 매출비율
+  const dayOfWeek = (sg3?.day_of_week ?? []) as TableRow[];
+  const dayRatioRow = dayOfWeek?.[1];
+  const dayChartData = extractDayOfWeek(dayRatioRow);
 
-  // Gender/Age chart
-  const genderAgeChartData = genderAgeSales.map((row) => {
-    const keys = Object.keys(row);
-    const result: Record<string, unknown> = { name: row[keys[0]] || "" };
-    keys.slice(1).forEach((k) => {
-      result[k] = parseNum(row[k]);
-    });
-    return result;
-  });
+  // 시간대별 매출비율
+  const timeOfDay = (sg3?.time_of_day ?? []) as TableRow[];
+  const timeRatioRow = timeOfDay?.[1];
+  const timeChartData = extractTimeOfDay(timeRatioRow);
 
-  // Day of week chart
-  const dayChartData = dayOfWeek.map((row) => {
-    const keys = Object.keys(row);
-    return {
-      name: row[keys[0]] || "",
-      value: parseNum(row[keys[1]]),
-    };
-  });
+  // sg7 데이터
+  const genderRatio = sg7?.gender_ratio ?? [];
+  const customerType = sg7?.customer_type ?? [];
+  const maleLifestyle = sg7?.male_lifestyle ?? [];
+  const femaleLifestyle = sg7?.female_lifestyle ?? [];
 
-  // Time of day chart
-  const timeChartData = timeOfDay.map((row) => {
-    const keys = Object.keys(row);
-    return {
-      name: row[keys[0]] || "",
-      value: parseNum(row[keys[1]]),
-    };
-  });
+  // 핵심 고객 찾기
+  const topAge = findTopAgeGroup(genderAgeSales);
+
+  // 성별 비율 텍스트
+  const genderText = genderRatio.length >= 2
+    ? `${genderRatio[0]?.name} ${genderRatio[0]?.rate}% / ${genderRatio[1]?.name} ${genderRatio[1]?.rate}%`
+    : "-";
+
+  // 신규/단골 텍스트
+  const customerTypeText = customerType.length >= 2
+    ? `${customerType[0]?.name} ${customerType[0]?.rate}% / ${customerType[1]?.name} ${customerType[1]?.rate}%`
+    : "-";
+
+  // 성별 PieChart 데이터
+  const genderPieData = genderRatio.map((g) => ({
+    name: g.name,
+    value: g.rate,
+  }));
+
+  const isAiNull = ai === null;
 
   return (
     <>
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <KpiCard label="1순위 고객" value={coreCustomer1} />
-        <KpiCard label="2순위 고객" value={coreCustomer2} />
-        <KpiCard label="집중 요일" value={peakDay} />
-        <KpiCard label="집중 시간" value={peakTime} />
+        <KpiCard label="핵심 고객" value={topAge} />
+        <KpiCard label="남녀 비율" value={genderText} />
+        <KpiCard label="신규/단골" value={customerTypeText} />
+        <KpiCard
+          label="평균 소득"
+          value={sg7?.male_avg_income ? `남 ${sg7.male_avg_income}` : "-"}
+          sub={sg7?.female_avg_income ? `여 ${sg7.female_avg_income}` : undefined}
+        />
       </div>
 
-      {/* Gender/Age Chart */}
-      {genderAgeChartData.length > 0 && (
-        <SectionCard title="성별/연령별 매출">
+      {/* 성별 비율 PieChart + 고객유형 */}
+      {genderPieData.length > 0 && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <SectionCard title="성별 비율">
+            <ResponsiveContainer width="100%" height={200}>
+              <PieChart>
+                <Pie
+                  data={genderPieData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={50}
+                  outerRadius={80}
+                  dataKey="value"
+                  label={({ name, value }) => `${name} ${value}%`}
+                >
+                  {genderPieData.map((_, idx) => (
+                    <Cell key={idx} fill={CHART_COLORS[idx % CHART_COLORS.length]} />
+                  ))}
+                </Pie>
+                <Tooltip contentStyle={tooltipStyle} />
+              </PieChart>
+            </ResponsiveContainer>
+          </SectionCard>
+
+          {customerType.length > 0 && (
+            <SectionCard title="고객 유형">
+              <div className="space-y-3">
+                {customerType.map((ct, idx) => (
+                  <div key={idx}>
+                    <div className="flex justify-between text-sm mb-1">
+                      <span className="text-gray-700 font-medium">{ct.name}</span>
+                      <span className="text-gray-500">{ct.rate}%</span>
+                    </div>
+                    <div className="w-full bg-gray-100 rounded-full h-2.5">
+                      <div
+                        className="h-2.5 rounded-full"
+                        style={{
+                          width: `${Math.min(ct.rate, 100)}%`,
+                          backgroundColor: CHART_COLORS[idx % CHART_COLORS.length],
+                        }}
+                      />
+                    </div>
+                    <p className="text-xs text-gray-400 mt-0.5">{ct.count?.toLocaleString()}건</p>
+                  </div>
+                ))}
+              </div>
+            </SectionCard>
+          )}
+        </div>
+      )}
+
+      {/* 성별/연령별 매출비율 차트 */}
+      {ageChartData.length > 0 && (
+        <SectionCard title="연령별 매출 비율 (동네)">
           <ResponsiveContainer width="100%" height={220}>
-            <BarChart data={genderAgeChartData}>
+            <BarChart data={ageChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
-              <Legend />
-              {Object.keys(genderAgeChartData[0])
-                .filter((k) => k !== "name")
-                .map((key, idx) => (
-                  <Bar
-                    key={key}
-                    dataKey={key}
-                    fill={CHART_COLORS[idx % CHART_COLORS.length]}
-                    radius={[4, 4, 0, 0]}
-                  />
-                ))}
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "매출비율"]} />
+              <Bar dataKey="value" fill="#8EC31F" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Day of Week Chart */}
+      {/* 요일별 차트 */}
       {dayChartData.length > 0 && (
-        <SectionCard title="요일별 매출">
+        <SectionCard title="요일별 매출 비율">
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={dayChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
               <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "매출비율"]} />
               <Bar dataKey="value" fill="#4A9FFF" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Time of Day Chart */}
+      {/* 시간대별 차트 */}
       {timeChartData.length > 0 && (
-        <SectionCard title="시간대별 매출">
+        <SectionCard title="시간대별 매출 비율">
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={timeChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
-              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
-              <Tooltip
-                contentStyle={{
-                  backgroundColor: "#fff",
-                  border: "1px solid #e5e7eb",
-                  borderRadius: "12px",
-                  fontSize: "12px",
-                }}
-              />
+              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} angle={-20} textAnchor="end" height={50} />
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "매출비율"]} />
               <Bar dataKey="value" fill="#A78BFA" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </SectionCard>
       )}
 
-      {/* Gender Age Table */}
-      {genderAgeSales.length > 0 && (
-        <SectionCard title="성별/연령별 상세">
-          <DataTable data={genderAgeSales} />
+      {/* 라이프스타일 */}
+      {(maleLifestyle.length > 0 || femaleLifestyle.length > 0) && (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {maleLifestyle.length > 0 && (
+            <SectionCard title="남성 라이프스타일">
+              <div className="space-y-2">
+                {maleLifestyle.slice(0, 5).map((item, idx) => (
+                  <div key={idx} className="flex justify-between items-center">
+                    <span className="text-sm text-gray-700">{item.hobby}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 bg-gray-100 rounded-full h-2">
+                        <div
+                          className="h-2 rounded-full bg-blue-400"
+                          style={{ width: `${Math.min(item.rate * 5, 100)}%` }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-500 w-12 text-right">{item.rate}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </SectionCard>
+          )}
+          {femaleLifestyle.length > 0 && (
+            <SectionCard title="여성 라이프스타일">
+              <div className="space-y-2">
+                {femaleLifestyle.slice(0, 5).map((item, idx) => (
+                  <div key={idx} className="flex justify-between items-center">
+                    <span className="text-sm text-gray-700">{item.hobby}</span>
+                    <div className="flex items-center gap-2">
+                      <div className="w-24 bg-gray-100 rounded-full h-2">
+                        <div
+                          className="h-2 rounded-full bg-pink-400"
+                          style={{ width: `${Math.min(item.rate * 5, 100)}%` }}
+                        />
+                      </div>
+                      <span className="text-xs text-gray-500 w-12 text-right">{item.rate}%</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </SectionCard>
+          )}
+        </div>
+      )}
+
+      {/* sg7 분석 텍스트 */}
+      {sg7?.analysis_text && (
+        <div className="bg-gradient-to-r from-brand-neon/5 to-brand-neon/0 border border-brand-neon-safe/20 rounded-xl p-4">
+          <h4 className="text-sm font-bold text-brand-neon-text flex items-center gap-1.5">
+            <Users className="h-4 w-4" />
+            고객 분석 요약
+          </h4>
+          <p className="mt-2 text-sm text-gray-600 leading-relaxed whitespace-pre-line">{sg7.analysis_text}</p>
+        </div>
+      )}
+
+      <InsightBox text={ai?.insights?.customer} pending={isAiNull} />
+    </>
+  );
+}
+
+/* ──────────────────────────────────────────────
+   Tab 6: Issue (권역 이슈) — sg4 + sg6 데이터 활용
+   ────────────────────────────────────────────── */
+
+function IssueTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg4 = (sbiz?.sg4 ?? {}) as Record<string, unknown>;
+  const sg6 = (sbiz?.sg6 ?? {}) as Record<string, unknown>;
+
+  // 유동인구 월별추이: floating_trend[0] = 동네
+  const floatingTrend = (sg4?.floating_trend ?? []) as TableRow[];
+  const floatingRow = floatingTrend?.[0];
+  const floatingChartData = extractMonthly(floatingRow);
+
+  // 유동인구 성별/연령: floating_gender_age[1] = 비율(%)
+  const floatingGenderAge = (sg4?.floating_gender_age ?? []) as TableRow[];
+  const floatingRatioRow = floatingGenderAge?.[1];
+  const floatingAgeData = extractAgeOnly(floatingRatioRow);
+
+  // 거주인구 트렌드
+  const residentTrend = (sg4?.resident_trend ?? []) as TableRow[];
+
+  // 소득
+  const residentIncome = (sg4?.resident_income ?? []) as TableRow[];
+  const workerIncome = (sg4?.worker_income ?? []) as TableRow[];
+
+  // sg6: 아파트, 집객시설
+  const apartmentStatus = (sg6?.apartment_status ?? []) as TableRow[];
+  const facilities = (sg6?.facilities ?? []) as TableRow[];
+
+  const isAiNull = ai === null;
+
+  // 거주인구 테이블
+  const residentHeaders = residentTrend?.[0]
+    ? ["구분", ...Object.keys(residentTrend[0]).filter((k) => k !== "지역" && k !== "구분")]
+    : [];
+  const residentRows: (string | number)[][] = [];
+  const levelLabels = ["동네", "읍면동", "시군구"];
+  residentTrend.forEach((row, idx) => {
+    if (idx > 2) return;
+    const label = row["지역"] || levelLabels[idx] || `레벨${idx}`;
+    const cells: (string | number)[] = [label];
+    Object.keys(row)
+      .filter((k) => k !== "지역" && k !== "구분")
+      .forEach((k) => cells.push(row[k] ?? "-"));
+    residentRows.push(cells);
+  });
+
+  // 집객시설 테이블
+  const facilityKeys = facilities?.[0]
+    ? Object.keys(facilities[0]).filter((k) => k !== "지역" && k !== "구분")
+    : [];
+  const facilityHeaders = ["구분", ...facilityKeys];
+  const facilityRows: (string | number)[][] = [];
+  facilities.forEach((row, idx) => {
+    if (idx > 2) return;
+    const label = row["지역"] || levelLabels[idx] || `레벨${idx}`;
+    facilityRows.push([label, ...facilityKeys.map((k) => row[k] ?? "-")]);
+  });
+
+  return (
+    <>
+      {/* 유동인구 추이 */}
+      {floatingChartData.length > 0 && (
+        <SectionCard title="유동인구 추이 (동네)">
+          <ResponsiveContainer width="100%" height={220}>
+            <LineChart data={floatingChartData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} />
+              <Tooltip contentStyle={tooltipStyle} />
+              <Line type="monotone" dataKey="value" stroke="#8EC31F" strokeWidth={2} dot={{ r: 4, fill: "#8EC31F" }} name="유동인구" />
+            </LineChart>
+          </ResponsiveContainer>
         </SectionCard>
       )}
 
-      <InsightBox text={ai.insights?.customer} />
+      {/* 유동인구 연령대 분포 */}
+      {floatingAgeData.length > 0 && (
+        <SectionCard title="유동인구 연령대 비율 (동네)">
+          <ResponsiveContainer width="100%" height={220}>
+            <BarChart data={floatingAgeData}>
+              <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
+              <XAxis dataKey="name" tick={{ fontSize: 11, fill: "#9CA3AF" }} />
+              <YAxis tick={{ fontSize: 11, fill: "#9CA3AF" }} unit="%" />
+              <Tooltip contentStyle={tooltipStyle} formatter={(v) => [`${v}%`, "비율"]} />
+              <Bar dataKey="value" fill="#4A9FFF" radius={[4, 4, 0, 0]} />
+            </BarChart>
+          </ResponsiveContainer>
+        </SectionCard>
+      )}
+
+      {/* 거주인구 */}
+      {residentRows.length > 0 && (
+        <SectionCard title="거주인구 추이">
+          <SimpleTable headers={residentHeaders} rows={residentRows} />
+        </SectionCard>
+      )}
+
+      {/* 소득 정보 */}
+      {(residentIncome.length > 0 || workerIncome.length > 0) && (
+        <SectionCard title="소득 정보">
+          <div className="space-y-4">
+            {residentIncome.length > 0 && (
+              <div>
+                <h4 className="text-sm font-semibold text-gray-700 mb-2">거주인구 소득</h4>
+                {(() => {
+                  const keys = Object.keys(residentIncome[0] || {}).filter((k) => k !== "지역" && k !== "구분");
+                  const headers = ["구분", ...keys];
+                  const rows = residentIncome.slice(0, 3).map((row, idx) => {
+                    const label = row["지역"] || levelLabels[idx] || `레벨${idx}`;
+                    return [label, ...keys.map((k) => row[k] ?? "-")];
+                  });
+                  return <SimpleTable headers={headers} rows={rows} />;
+                })()}
+              </div>
+            )}
+            {workerIncome.length > 0 && (
+              <div>
+                <h4 className="text-sm font-semibold text-gray-700 mb-2">직장인구 소득</h4>
+                {(() => {
+                  const keys = Object.keys(workerIncome[0] || {}).filter((k) => k !== "지역" && k !== "구분");
+                  const headers = ["구분", ...keys];
+                  const rows = workerIncome.slice(0, 3).map((row, idx) => {
+                    const label = row["지역"] || levelLabels[idx] || `레벨${idx}`;
+                    return [label, ...keys.map((k) => row[k] ?? "-")];
+                  });
+                  return <SimpleTable headers={headers} rows={rows} />;
+                })()}
+              </div>
+            )}
+          </div>
+        </SectionCard>
+      )}
+
+      {/* 집객시설 */}
+      {facilityRows.length > 0 && (
+        <SectionCard title="집객시설 현황">
+          <SimpleTable headers={facilityHeaders} rows={facilityRows} />
+        </SectionCard>
+      )}
+
+      <InsightBox text={ai?.insights?.issue} pending={isAiNull} />
     </>
   );
 }
@@ -897,8 +1176,8 @@ function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
    Tab 8: STP Strategy (유료)
    ────────────────────────────────────────────── */
 
-function StpTab({ ai }: { ai: AiAnalysis }) {
-  const stp = ai.stp;
+function StpTab({ ai }: { ai: AiAnalysis | null }) {
+  const stp = ai?.stp;
   if (!stp) return <EmptyState message="STP 전략 데이터가 없습니다." />;
 
   const cards = [
@@ -982,8 +1261,8 @@ function StpTab({ ai }: { ai: AiAnalysis }) {
    Tab 9: SWOT Analysis (유료)
    ────────────────────────────────────────────── */
 
-function SwotTab({ ai }: { ai: AiAnalysis }) {
-  const swot = ai.swot;
+function SwotTab({ ai }: { ai: AiAnalysis | null }) {
+  const swot = ai?.swot;
   if (!swot) return <EmptyState message="SWOT 분석 데이터가 없습니다." />;
 
   const quadrants = [
@@ -1055,8 +1334,8 @@ function SwotTab({ ai }: { ai: AiAnalysis }) {
    Tab 10: Golden Signal (유료)
    ────────────────────────────────────────────── */
 
-function GoldenSignalTab({ ai }: { ai: AiAnalysis }) {
-  const signals = ai.golden_signals;
+function GoldenSignalTab({ ai }: { ai: AiAnalysis | null }) {
+  const signals = ai?.golden_signals;
   if (!signals || signals.length === 0) {
     return <EmptyState message="골든시그널 데이터가 없습니다." />;
   }

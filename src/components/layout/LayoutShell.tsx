@@ -5,7 +5,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import NewLayoutShell from "@/components/layout/NewLayoutShell";
 
-const BARE_PREFIXES = ["/wr/", "/area-analysis/map"];
+const BARE_PREFIXES = ["/wr/", "/area-analysis/map", "/reviewreviewreview"];
 
 export function LayoutShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
