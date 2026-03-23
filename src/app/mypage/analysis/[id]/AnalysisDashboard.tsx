@@ -127,6 +127,20 @@ const CHART_COLORS = ["#8EC31F", "#4A9FFF", "#FF6565", "#A78BFA", "#FB923C", "#2
    Utility Functions
    ────────────────────────────────────────────── */
 
+/** 동네(선택영역) 데이터가 전부 0인지 확인 */
+function isLocalDataEmpty(sg1: Record<string, string>): boolean {
+  const count = parseNum(sg1?.store_count);
+  const sales = parseNum(sg1?.avg_monthly_sales);
+  return count === 0 && sales === 0;
+}
+
+/** 월별 행 데이터가 전부 0인지 확인 */
+function isRowAllZero(row: TableRow | undefined): boolean {
+  if (!row) return true;
+  const values = Object.values(row);
+  return values.every((v) => parseNum(v) === 0);
+}
+
 /** 문자열에서 숫자 추출 */
 function parseNum(val: unknown): number {
   if (typeof val === "number") return val;
@@ -259,11 +273,26 @@ export function AnalysisDashboard({ report }: { report: ReportData }) {
   const ai = (report.ai_analysis ?? null) as AiAnalysis | null;
   const sbiz = report.sbiz_data ?? {};
   const isPremium = !!report.is_premium;
+  const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
+  const localEmpty = isLocalDataEmpty(sg1);
 
   return (
     <div>
       {/* Top Bar */}
       <TopBar report={report} ai={ai} />
+
+      {/* 동네 데이터 부족 안내 */}
+      {localEmpty && (
+        <div className="mb-6 rounded-xl bg-blue-50 border border-blue-200 px-4 py-3">
+          <div className="flex items-start gap-2">
+            <AlertCircle className="h-4 w-4 text-blue-600 mt-0.5 shrink-0" />
+            <div>
+              <p className="text-sm font-medium text-blue-800">선택 영역(동네)에 해당 업종 점포가 없습니다</p>
+              <p className="text-xs text-blue-600 mt-1">시군구 기준 데이터로 표시합니다. 정확한 분석을 위해 다른 주소로 재분석을 권장합니다.</p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Alert Bar */}
       {ai?.alert_items && ai.alert_items.length > 0 && <AlertBar items={ai.alert_items} />}
@@ -561,10 +590,12 @@ function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
   const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
   const sg6 = (sbiz?.sg6 ?? {}) as Record<string, unknown>;
   const sg7 = (sbiz?.sg7 ?? {}) as Sg7Data;
+  const localEmpty = isLocalDataEmpty(sg1);
 
-  // gender_age_sales[1] = 매출비율(동네, %)
+  // gender_age_sales: [0]=동네매출, [1]=동네비율, [3]=시군구건수, [4]=시군구건수비율
   const genderAgeSales = (sg3?.gender_age_sales ?? []) as TableRow[];
-  const salesRatioRow = genderAgeSales?.[1];
+  // 동네 데이터 0이면 시군구(건수비율) 사용
+  const salesRatioRow = localEmpty ? genderAgeSales?.[4] : genderAgeSales?.[1];
   const ageChartData = extractAgeOnly(salesRatioRow);
 
   // sg6.household_trend = 세대수 추이 배열
@@ -596,30 +627,30 @@ function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
           value={sg1.region || "-"}
         />
         <KpiCard
-          label="총 점포수"
-          value={sg1.store_count || "-"}
-          change={sg1.store_change_rate}
-          sub="동네 기준"
+          label={localEmpty ? "시군구 점포수" : "총 점포수"}
+          value={localEmpty ? (sg1.area_store_count || "-") : (sg1.store_count || "-")}
+          change={localEmpty ? sg1.area_store_change_rate : sg1.store_change_rate}
+          sub={localEmpty ? "시군구 기준" : "동네 기준"}
         />
         <KpiCard
-          label="평균 매출"
-          value={sg1.avg_monthly_sales || "-"}
-          change={sg1.sales_change_rate}
-          sub="동네 기준 월평균"
+          label={localEmpty ? "시군구 매출" : "평균 매출"}
+          value={localEmpty ? (sg1.area_avg_monthly_sales || "-") : (sg1.avg_monthly_sales || "-")}
+          change={localEmpty ? sg1.area_sales_change_rate : sg1.sales_change_rate}
+          sub={localEmpty ? "시군구 월평균" : "동네 기준 월평균"}
         />
         <KpiCard
           label="매출 증감"
-          value={sg1.sales_change_rate || "-"}
+          value={(localEmpty ? sg1.area_sales_change_rate : sg1.sales_change_rate) || "-"}
         />
         <KpiCard
           label="점포 증감"
-          value={sg1.store_change_rate || "-"}
+          value={(localEmpty ? sg1.area_store_change_rate : sg1.store_change_rate) || "-"}
         />
       </div>
 
       {/* 연령별 매출비율 차트 */}
       {ageChartData.length > 0 && (
-        <SectionCard title="연령별 매출 비율 (동네)">
+        <SectionCard title={localEmpty ? "연령별 매출 비율 (시군구)" : "연령별 매출 비율 (동네)"}>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={ageChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -665,11 +696,15 @@ function OverviewTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
 function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
   const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
   const sg2 = (sbiz?.sg2 ?? {}) as Record<string, unknown>;
+  const localEmpty = isLocalDataEmpty(sg1);
 
-  // monthly_stores[0] = 동네 점포수 (월별)
+  // monthly_stores: [0]=동네, [1]=증감률, [2]=읍면동, [3]=시군구
   const monthlyStores = (sg2?.monthly_stores ?? []) as TableRow[];
-  const storeRow = monthlyStores?.[0];
+  const localRow = monthlyStores?.[0];
+  // 동네 0이면 시군구[3] 사용
+  const storeRow = (localEmpty || isRowAllZero(localRow)) ? monthlyStores?.[3] : localRow;
   const storeChartData = extractMonthly(storeRow);
+  const chartLevel = (localEmpty || isRowAllZero(localRow)) ? "시군구" : "동네";
 
   const isAiNull = ai === null;
 
@@ -677,15 +712,20 @@ function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
     <>
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <KpiCard label="동네 점포수" value={sg1.store_count || "-"} change={sg1.store_change_rate} sub="동네 기준" />
-        <KpiCard label="점포 증감률" value={sg1.store_change_rate || "-"} />
+        <KpiCard
+          label={localEmpty ? "시군구 점포수" : "동네 점포수"}
+          value={localEmpty ? (sg1.area_store_count || "-") : (sg1.store_count || "-")}
+          change={localEmpty ? sg1.area_store_change_rate : sg1.store_change_rate}
+          sub={localEmpty ? "시군구 기준" : "동네 기준"}
+        />
+        <KpiCard label="점포 증감률" value={(localEmpty ? sg1.area_store_change_rate : sg1.store_change_rate) || "-"} />
         <KpiCard label="시군구 점포수" value={sg1.area_store_count || "-"} sub="시군구 기준" />
         <KpiCard label="시군구 점포 증감" value={sg1.area_store_change_rate || "-"} />
       </div>
 
       {/* 점포수 추이 차트 */}
       {storeChartData.length > 0 && (
-        <SectionCard title="점포수 추이 (동네)">
+        <SectionCard title={`점포수 추이 (${chartLevel})`}>
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={storeChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -735,15 +775,19 @@ function IndustryTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
 function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
   const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
   const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
+  const localEmpty = isLocalDataEmpty(sg1);
 
-  // monthly_sales[0] = 동네 매출 (월별, 만원)
+  // monthly_sales: [0]=동네매출, [1]=증감률, [2]=읍면동, [3]=시군구
   const monthlySales = (sg3?.monthly_sales ?? []) as TableRow[];
-  const salesRow = monthlySales?.[0];
+  const localSalesRow = monthlySales?.[0];
+  const salesRow = (localEmpty || isRowAllZero(localSalesRow)) ? monthlySales?.[3] : localSalesRow;
   const salesChartData = extractMonthly(salesRow);
+  const chartLevel = (localEmpty || isRowAllZero(localSalesRow)) ? "시군구" : "동네";
 
-  // day_of_week[1] = 매출비율 (동네, %)
+  // day_of_week: [0]=동네매출, [1]=동네비율, [3]=시군구건수, [4]=시군구비율
   const dayOfWeek = (sg3?.day_of_week ?? []) as TableRow[];
-  const dayRatioRow = dayOfWeek?.[1];
+  const localDayRow = dayOfWeek?.[1];
+  const dayRatioRow = (localEmpty || isRowAllZero(localDayRow)) ? dayOfWeek?.[4] : localDayRow;
   const dayChartData = extractDayOfWeek(dayRatioRow);
 
   const isAiNull = ai === null;
@@ -756,15 +800,20 @@ function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis 
     <>
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <KpiCard label="평균 매출" value={sg1.avg_monthly_sales || "-"} change={sg1.sales_change_rate} sub="동네 월평균" />
-        <KpiCard label="매출 증감률" value={sg1.sales_change_rate || "-"} />
+        <KpiCard
+          label={localEmpty ? "시군구 매출" : "평균 매출"}
+          value={localEmpty ? (sg1.area_avg_monthly_sales || "-") : (sg1.avg_monthly_sales || "-")}
+          change={localEmpty ? sg1.area_sales_change_rate : sg1.sales_change_rate}
+          sub={localEmpty ? "시군구 월평균" : "동네 월평균"}
+        />
+        <KpiCard label="매출 증감률" value={(localEmpty ? sg1.area_sales_change_rate : sg1.sales_change_rate) || "-"} />
         <KpiCard label="시군구 매출" value={sg1.area_avg_monthly_sales || "-"} change={sg1.area_sales_change_rate} sub="시군구 월평균" />
         <KpiCard label="시군구 매출 증감" value={sg1.area_sales_change_rate || "-"} />
       </div>
 
       {/* 매출 추이 차트 */}
       {salesChartData.length > 0 && (
-        <SectionCard title="매출 추이 (동네, 만원)">
+        <SectionCard title={`매출 추이 (${chartLevel}, 만원)`}>
           <ResponsiveContainer width="100%" height={220}>
             <LineChart data={salesChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -786,7 +835,7 @@ function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis 
 
       {/* 요일별 매출비율 차트 */}
       {dayChartData.length > 0 && (
-        <SectionCard title="요일별 매출 비율 (동네)">
+        <SectionCard title={`요일별 매출 비율 (${chartLevel})`}>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={dayChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />
@@ -809,22 +858,28 @@ function SalesTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis 
    ────────────────────────────────────────────── */
 
 function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalysis | null }) {
+  const sg1 = (sbiz?.sg1 ?? {}) as Record<string, string>;
   const sg3 = (sbiz?.sg3 ?? {}) as Record<string, unknown>;
   const sg7 = (sbiz?.sg7 ?? {}) as Sg7Data;
+  const localEmpty = isLocalDataEmpty(sg1);
+  const sg7NoData = !sg7?.gender_ratio?.length && !sg7?.customer_type?.length;
 
-  // gender_age_sales
+  // gender_age_sales: [1]=동네비율, [4]=시군구비율
   const genderAgeSales = (sg3?.gender_age_sales ?? []) as TableRow[];
-  const salesRatioRow = genderAgeSales?.[1]; // 매출비율 (동네, %)
+  const localSalesRatio = genderAgeSales?.[1];
+  const salesRatioRow = (localEmpty || isRowAllZero(localSalesRatio)) ? genderAgeSales?.[4] : localSalesRatio;
   const ageChartData = extractAgeOnly(salesRatioRow);
 
-  // 요일별 매출비율
+  // 요일별 매출비율: [1]=동네비율, [4]=시군구비율
   const dayOfWeek = (sg3?.day_of_week ?? []) as TableRow[];
-  const dayRatioRow = dayOfWeek?.[1];
+  const localDayRatio = dayOfWeek?.[1];
+  const dayRatioRow = (localEmpty || isRowAllZero(localDayRatio)) ? dayOfWeek?.[4] : localDayRatio;
   const dayChartData = extractDayOfWeek(dayRatioRow);
 
   // 시간대별 매출비율
   const timeOfDay = (sg3?.time_of_day ?? []) as TableRow[];
-  const timeRatioRow = timeOfDay?.[1];
+  const localTimeRatio = timeOfDay?.[1];
+  const timeRatioRow = (localEmpty || isRowAllZero(localTimeRatio)) ? timeOfDay?.[4] : localTimeRatio;
   const timeChartData = extractTimeOfDay(timeRatioRow);
 
   // sg7 데이터
@@ -854,8 +909,20 @@ function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
 
   const isAiNull = ai === null;
 
+  const chartLevel = localEmpty ? "시군구" : "동네";
+
   return (
     <>
+      {/* sg7 데이터 없음 안내 */}
+      {sg7NoData && sg7?.analysis_text && (
+        <div className="rounded-xl bg-amber-50 border border-amber-200 px-4 py-3 mb-4">
+          <div className="flex items-start gap-2">
+            <AlertCircle className="h-4 w-4 text-amber-600 mt-0.5 shrink-0" />
+            <p className="text-sm text-amber-800">{sg7.analysis_text}</p>
+          </div>
+        </div>
+      )}
+
       {/* KPI */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
         <KpiCard label="핵심 고객" value={topAge} />
@@ -921,7 +988,7 @@ function CustomerTab({ sbiz, ai }: { sbiz: Record<string, unknown>; ai: AiAnalys
 
       {/* 성별/연령별 매출비율 차트 */}
       {ageChartData.length > 0 && (
-        <SectionCard title="연령별 매출 비율 (동네)">
+        <SectionCard title={`연령별 매출 비율 (${chartLevel})`}>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={ageChartData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#f0f0f0" />

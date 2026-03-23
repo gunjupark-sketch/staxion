@@ -94,6 +94,8 @@ export async function POST(req: NextRequest) {
       reportId: report.id,
       address: address.trim(),
       fullAddress: sido && sgg && dong ? `${sido} ${sgg} ${dong}` : address.trim(),
+      lat,
+      lng,
       callbackUrl: `${callbackBase}/api/analysis/process`,
     };
 
