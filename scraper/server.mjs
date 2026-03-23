@@ -300,7 +300,16 @@ async function scrape(address, lat, lng, radius = 1000) {
     }
     console.log(`  업종코드 (최종): ${tpbiz}`);
 
-    // 4. 네트워크 모니터링 설정
+    // 4. 네트워크 모니터링 설정 — URL+파라미터도 로그
+    page.on("request", (req) => {
+      const url = req.url();
+      if (url.includes("sang_gwon") || url.includes("sgAnalysis") || url.includes("analysis")) {
+        console.log(`  📤 REQUEST: ${req.method()} ${url}`);
+        if (req.method() === "POST") {
+          console.log(`     POST body: ${req.postData()?.substring(0, 500)}`);
+        }
+      }
+    });
     page.on("response", async (resp) => {
       const url = resp.url();
       const sgMatch = url.match(/sang_gwon(\d+)\.sg/);
