@@ -206,18 +206,45 @@ async function scrape(address, lat, lng, radius = 1000) {
     console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
     await sleep(5000);
 
-    // 3. 업종 선택 — UI 조작 안정적으로: 건드리지 않고 강제 설정
-    // (소상공인365 UI 이벤트 핸들러가 DOM .click(), locator.click(), 타이핑 모두 거부)
-    // 데이터 수집 후 네트워크 요청 구조를 분석해서 직접 API 호출로 전환 예정
-    console.log("  3. 업종 강제 설정: Q10901 (치과의원)");
+    // 3. 업종 선택 — evaluate .click() (upjong3Cd에 반영 안 되지만 내부 상태는 바뀜)
+    console.log("  3. 업종 선택...");
+
+    // 보건의료 아이콘 클릭
     await gis.evaluate(() => {
-      const cd = document.getElementById("upjong3Cd");
-      if (cd) cd.value = "Q10901";
-      const sel = document.getElementById("selectedUpjong");
-      if (sel) sel.value = "치과의원";
-      window.tpbizCode = "Q10901";
+      document.querySelectorAll("span, p, div, label, button, a, li").forEach((el) => {
+        const text = el.innerText?.trim();
+        if (text === "보건의료" && el.offsetParent) {
+          const target = el.closest("a, button, li, [onclick]") || el.parentElement || el;
+          target.click();
+        }
+      });
     }).catch(() => {});
-    await sleep(1000);
+    await sleep(3000);
+
+    // 의원 클릭
+    await gis.evaluate(() => {
+      document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
+        if (el.innerText?.trim() === "의원" && el.offsetParent) el.click();
+      });
+    }).catch(() => {});
+    await sleep(3000);
+
+    // 치과의원 클릭
+    await gis.evaluate(() => {
+      document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
+        if (el.innerText?.trim() === "치과의원" && el.offsetParent) el.click();
+      });
+    }).catch(() => {});
+    await sleep(3000);
+
+    // upjong3Cd 확인 + 강제 보완
+    const tpbiz = await gis.evaluate(() => {
+      const cd = document.getElementById("upjong3Cd");
+      if (cd && !cd.value) cd.value = "Q10901";
+      if (!window.tpbizCode) window.tpbizCode = "Q10901";
+      return cd?.value || window.tpbizCode || "Q10901(강제)";
+    }).catch(() => "확인실패");
+    console.log(`  업종코드: ${tpbiz}`);
 
     // 4. 네트워크 모니터링 설정 — URL+파라미터도 로그
     page.on("request", (req) => {
