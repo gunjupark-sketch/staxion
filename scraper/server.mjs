@@ -313,54 +313,36 @@ async function scrape(address, lat, lng, radius = 1000) {
     }).catch((e) => `에러: ${e.message}`);
     console.log(`  분석버튼 정보: ${btnInfo}`);
 
-    // 분석 관련 전역 함수 전체 스캔 + btnAnalysis jQuery 이벤트
-    const fnScan = await gis.evaluate(() => {
-      const results = [];
-      // "anl", "analysis", "sang", "report" 포함 전역 함수
-      for (const key of Object.keys(window)) {
-        if (typeof window[key] === "function" &&
-            (key.toLowerCase().includes("anl") || key.toLowerCase().includes("analysis") ||
-             key.toLowerCase().includes("sang") || key.toLowerCase().includes("report") ||
-             key.toLowerCase().includes("detail") || key.toLowerCase().includes("submit"))) {
-          results.push(`${key}: ${window[key].toString().substring(0, 200)}`);
-        }
+    // ltlg(좌표) 설정 — checkDetailAnlys()가 이걸 체크함
+    // 주소 검색 결과 클릭으로 ltlg가 안 잡혔을 수 있으므로 강제 설정
+    const ltlgSet = await gis.evaluate(() => {
+      // 현재 지도 중심 좌표 가져오기
+      if (typeof map !== "undefined" && typeof kakao !== "undefined") {
+        const center = map.getCenter();
+        window.ltlg = center;
+        window.lat = center.getLat();
+        window.lng = center.getLng();
+        // admiCode도 확인
+        const admiCode = document.getElementById("admiCode")?.value;
+        return { lat: center.getLat(), lng: center.getLng(), admiCode, ltlg: "설정됨" };
       }
-      // jQuery 이벤트 (btnAnalysis)
-      if (typeof jQuery !== "undefined") {
-        const btn = document.querySelector(".btnAnalysis");
-        if (btn) {
-          const events = jQuery._data?.(btn, "events");
-          if (events) {
-            for (const [type, handlers] of Object.entries(events)) {
-              for (const h of handlers) {
-                results.push(`jQuery .btnAnalysis ${type}: ${h.handler?.toString()?.substring(0, 300)}`);
-              }
-            }
-          }
-        }
-      }
-      return results;
-    }).catch((e) => [`에러: ${e.message}`]);
-    console.log(`  📋 분석 함수 스캔 (${fnScan.length}개):`);
-    fnScan.forEach((fn, i) => console.log(`    [${i}] ${fn.substring(0, 250)}`));
+      return { ltlg: "map 없음" };
+    }).catch((e) => ({ error: e.message }));
+    console.log(`  ltlg 설정:`, JSON.stringify(ltlgSet));
 
-    // 가장 유력한 함수 호출 시도
-    const callResult = await gis.evaluate(() => {
-      // sang_gwon 관련 함수가 있으면 호출
-      for (const key of Object.keys(window)) {
-        if (typeof window[key] === "function" && key.toLowerCase().includes("sang")) {
-          return `${key}: ${window[key].toString().substring(0, 300)}`;
+    // checkDetailAnlys() 호출 — 이게 실제 분석 실행 함수
+    const analysisResult = await gis.evaluate(() => {
+      try {
+        if (typeof checkDetailAnlys === "function") {
+          checkDetailAnlys();
+          return "checkDetailAnlys() 호출 성공";
         }
+        return "checkDetailAnlys 함수 없음";
+      } catch (e) {
+        return `checkDetailAnlys 에러: ${e.message}`;
       }
-      // detailAnalysis, submitAnalysis 등
-      for (const key of ["detailAnalysis", "submitAnalysis", "fnDetailAnls", "fnAnls", "goDetailAnls"]) {
-        if (typeof window[key] === "function") {
-          try { window[key](); return `${key}() 호출 성공`; } catch (e) { return `${key}() 에러: ${e.message}`; }
-        }
-      }
-      return "유력 함수 없음";
     }).catch((e) => `에러: ${e.message}`);
-    console.log(`  호출 시도: ${callResult}`);
+    console.log(`  분석 실행: ${analysisResult}`);
 
     // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
     for (let i = 0; i < 30; i++) {
