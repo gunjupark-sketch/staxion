@@ -76,23 +76,35 @@ export async function POST(req: NextRequest) {
   // 스크래핑 서버 URL이 설정된 경우 외부 서버로, 아니면 자체 처리
   const scrapeUrl = process.env.SCRAPE_SERVER_URL;
   if (scrapeUrl) {
-    // 로컬 개발: localhost 콜백, 프로덕션: SITE_URL 콜백
     const callbackBase = process.env.NODE_ENV === "development"
       ? "http://localhost:3000"
       : process.env.NEXT_PUBLIC_SITE_URL;
 
-    fetch(`${scrapeUrl}/analyze`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-process-key": process.env.SUPABASE_SERVICE_ROLE_KEY!,
-      },
-      body: JSON.stringify({
-        reportId: report.id,
-        address: address.trim(),
-        callbackUrl: `${callbackBase}/api/analysis/process`,
-      }),
-    }).catch((e) => { console.error("스크래핑 서버 호출 실패:", e.message); });
+    const scrapeBody = {
+      reportId: report.id,
+      address: address.trim(),
+      callbackUrl: `${callbackBase}/api/analysis/process`,
+    };
+
+    console.log("[analysis/request] 스크래핑 서버 호출:", scrapeUrl, JSON.stringify(scrapeBody));
+
+    try {
+      const scrapeRes = await fetch(`${scrapeUrl}/analyze`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-process-key": process.env.SUPABASE_SERVICE_ROLE_KEY!,
+        },
+        body: JSON.stringify(scrapeBody),
+      });
+      const scrapeData = await scrapeRes.text();
+      console.log("[analysis/request] 스크래핑 서버 응답:", scrapeRes.status, scrapeData);
+    } catch (e: unknown) {
+      const msg = e instanceof Error ? e.message : String(e);
+      console.error("[analysis/request] 스크래핑 서버 호출 실패:", msg);
+    }
+  } else {
+    console.warn("[analysis/request] SCRAPE_SERVER_URL 미설정");
   }
 
   return NextResponse.json({
