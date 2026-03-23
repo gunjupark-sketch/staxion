@@ -313,21 +313,25 @@ async function scrape(address, lat, lng, radius = 1000) {
     }).catch((e) => `에러: ${e.message}`);
     console.log(`  분석버튼 정보: ${btnInfo}`);
 
-    // 소상공인365 분석 함수 직접 호출 시도
-    const fnResult = await gis.evaluate(() => {
-      // 가능한 전역 분석 함수들 탐색
-      const fns = ["fnAnalysis", "goAnalysis", "startAnalysis", "doAnalysis", "analysis", "fnSearch", "goSearch"];
-      for (const fn of fns) {
-        if (typeof window[fn] === "function") {
-          try { window[fn](); return `${fn}() 호출 성공`; } catch (e) { return `${fn}() 에러: ${e.message}`; }
-        }
+    // goSearch 함수 소스 확인 + 호출
+    const fnSource = await gis.evaluate(() => {
+      if (typeof goSearch === "function") {
+        return goSearch.toString().substring(0, 1000);
       }
-      // 버튼 클릭도 시도
-      const btn = document.querySelector("#analysisBtn");
-      if (btn) btn.click();
-      return "전역 함수 없음, btn.click() 호출";
+      // 다른 분석 함수 탐색
+      const fns = ["fnAnalysis", "goAnalysis", "startAnalysis", "doAnalysis", "fnSearch"];
+      for (const fn of fns) {
+        if (typeof window[fn] === "function") return `${fn}: ${window[fn].toString().substring(0, 500)}`;
+      }
+      return "분석 함수 없음";
     }).catch((e) => `에러: ${e.message}`);
-    console.log(`  분석 함수 호출: ${fnResult}`);
+    console.log(`  goSearch 소스: ${fnSource}`);
+
+    // goSearch 호출
+    const fnResult = await gis.evaluate(() => {
+      try { goSearch(); return "goSearch() 호출"; } catch (e) { return `goSearch 에러: ${e.message}`; }
+    }).catch((e) => `에러: ${e.message}`);
+    console.log(`  분석 함수: ${fnResult}`);
 
     // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
     for (let i = 0; i < 30; i++) {
