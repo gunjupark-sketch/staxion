@@ -1,9 +1,5 @@
 /**
- * 스크래핑 서버
- * 소상공인365 상세분석 자동화 → sang_gwon HTML 수집 → 콜백
- *
- * 실행: node scraper/server.mjs
- * 포트: 3100
+ * 스크래핑 서버 — 36차 성공 코드 기반 복원 + 네트워크 로그
  */
 import { chromium } from "playwright";
 import express from "express";
@@ -12,27 +8,20 @@ const app = express();
 app.use(express.json());
 
 const PORT = process.env.PORT || 3100;
-const INTENTIONAL_DELAY = 60_000; // 60초 의도적 딜레이
+const INTENTIONAL_DELAY = 60_000;
 
-// 분석 큐 (동시 실행 방지)
 let isProcessing = false;
 const queue = [];
 
 app.post("/analyze", async (req, res) => {
   const { reportId, address, fullAddress, lat, lng, radius, callbackUrl } = req.body;
-
   if (!reportId || !address || !callbackUrl) {
     return res.status(400).json({ error: "reportId, address, callbackUrl 필수" });
   }
-
-  // 도로명 주소가 가장 정확 — fullAddress(시도 시군구 동)는 세분화 행정동 누락 문제
+  // 도로명 주소 우선 (fullAddress는 "시도 시군구 동"이라 세분화 누락)
   const searchAddress = address;
-
-  // 큐에 추가
   queue.push({ reportId, address: searchAddress, lat, lng, radius: radius || 1000, callbackUrl, _startTime: Date.now() });
   res.json({ queued: true, position: queue.length });
-
-  // 처리 시작
   if (!isProcessing) processQueue();
 });
 
@@ -40,98 +29,69 @@ app.get("/health", (_, res) => res.json({ status: "ok", queue: queue.length, pro
 
 app.listen(PORT, () => {
   console.log(`🔧 스크래핑 서버 실행 중: http://localhost:${PORT}`);
-  console.log(`   POST /analyze { reportId, address, lat, lng, callbackUrl }`);
 });
 
 async function processQueue() {
   if (isProcessing || queue.length === 0) return;
   isProcessing = true;
-
   while (queue.length > 0) {
     const job = queue.shift();
     console.log(`\n━━━ 분석 시작: ${job.address} (${job.reportId}) ━━━`);
-    console.log(`  좌표: lat=${job.lat}, lng=${job.lng}, 반경: ${job.radius}m`);
-
     try {
-      // 상태 업데이트: processing
       await sendCallback(job.callbackUrl, job.reportId, { status: "processing" });
-
       const htmlMap = await scrape(job.address, job.lat, job.lng, job.radius);
-
-      // 의도적 딜레이 (분석 느낌)
       const elapsed = Date.now() - job._startTime;
       if (elapsed < INTENTIONAL_DELAY) {
         const remaining = INTENTIONAL_DELAY - elapsed;
-        console.log(`  ⏳ ${Math.round(remaining / 1000)}초 추가 대기 (총 60초 맞추기)`);
+        console.log(`  ⏳ ${Math.round(remaining / 1000)}초 추가 대기`);
         await sleep(remaining);
       }
-
-      // 콜백
-      await sendCallback(job.callbackUrl, job.reportId, {
-        sang_gwon_html: htmlMap,
-      });
+      await sendCallback(job.callbackUrl, job.reportId, { sang_gwon_html: htmlMap });
       console.log(`  ✅ 완료: ${job.address}`);
     } catch (err) {
       console.error(`  ❌ 실패: ${err.message}`);
-      await sendCallback(job.callbackUrl, job.reportId, {
-        error: err.message,
-      });
+      await sendCallback(job.callbackUrl, job.reportId, { error: err.message });
     }
   }
-
   isProcessing = false;
 }
 
 async function sendCallback(callbackUrl, reportId, data) {
   try {
-    const processKey = process.env.SUPABASE_SERVICE_ROLE_KEY || "";
     await fetch(callbackUrl, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-process-key": processKey,
-      },
+      headers: { "Content-Type": "application/json", "x-process-key": process.env.SUPABASE_SERVICE_ROLE_KEY || "" },
       body: JSON.stringify({ reportId, ...data }),
     });
-  } catch (e) {
-    console.error("  콜백 실패:", e.message);
-  }
+  } catch (e) { console.error("  콜백 실패:", e.message); }
 }
 
-/**
- * 소상공인365 스크래핑 메인
- * 좌표 기반 위치 설정 → 업종 선택 → 분석 → sang_gwon HTML 수집
- */
 async function scrape(address, lat, lng, radius = 1000) {
   const browser = await chromium.launch({
     headless: true,
     args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-dev-shm-usage"],
   });
-
   const ctx = await browser.newContext({
     viewport: { width: 1400, height: 900 },
     geolocation: { latitude: lat || 37.4980863, longitude: lng || 127.0276012 },
     permissions: ["geolocation"],
   });
-
   await ctx.addInitScript(() => {
     Object.defineProperty(navigator, "webdriver", { get: () => false });
   });
-
   const page = await ctx.newPage();
-  page.on("dialog", async (d) => await d.dismiss());
+  page.on("dialog", async (d) => {
+    console.log(`  💬 dialog: ${d.message()?.substring(0, 100)}`);
+    await d.dismiss();
+  });
 
   const sgData = {};
 
   try {
     // 1. 소상공인365 → 상세분석
     console.log("  1. 상세분석 진입...");
-    await page.goto("https://bigdata.sbiz.or.kr/", {
-      waitUntil: "networkidle",
-      timeout: 30000,
-    });
+    await page.goto("https://bigdata.sbiz.or.kr/", { waitUntil: "networkidle", timeout: 30000 });
     await sleep(2000);
-
     await page.evaluate(() => {
       document.querySelectorAll("a").forEach((a) => {
         if (a.innerText?.includes("상세분석")) a.click();
@@ -139,22 +99,18 @@ async function scrape(address, lat, lng, radius = 1000) {
     });
     await sleep(10000);
 
-    // iframe 찾기
     const gis = page.frames().find((f) => f.url().includes("/gis/"));
     if (!gis) throw new Error("GIS iframe 없음");
 
-    // map 대기
     for (let i = 0; i < 20; i++) {
-      const ready = await gis
-        .evaluate(() => typeof map !== "undefined" && typeof kakao !== "undefined")
-        .catch(() => false);
+      const ready = await gis.evaluate(() => typeof map !== "undefined" && typeof kakao !== "undefined").catch(() => false);
       if (ready) break;
       await sleep(1000);
     }
     console.log("  map 준비됨");
     await sleep(3000);
 
-    // 위치 허용 팝업 닫기
+    // 팝업 닫기
     await gis.evaluate(() => {
       document.querySelectorAll("button").forEach((b) => {
         if (b.innerText?.trim() === "확인" && b.offsetParent) b.click();
@@ -166,16 +122,15 @@ async function scrape(address, lat, lng, radius = 1000) {
     const frame = iframeEl ? await iframeEl.contentFrame() : null;
     if (!frame) throw new Error("iframe contentFrame 접근 실패");
 
-    // 2. 주소 검색 + 결과 첫 번째 항목 클릭
+    // 2. 주소 검색
     console.log(`  2. 주소 검색: ${address}`);
     const searchInput =
-      (await frame.$("input#searchAddr")) ||
+      (await frame.$("#searchAddress")) ||
+      (await frame.$("#searchAddr")) ||
       (await frame.$("input[placeholder*='주소']")) ||
       (await frame.$("input[placeholder*='검색']")) ||
       (await frame.$("input[placeholder*='위치']")) ||
-      (await frame.$(".searchArea input")) ||
       (await frame.$("input[type='text']"));
-
     if (!searchInput) throw new Error("검색 input 못 찾음");
 
     await searchInput.click({ clickCount: 3 });
@@ -187,75 +142,51 @@ async function scrape(address, lat, lng, radius = 1000) {
     console.log("  검색 실행");
     await sleep(5000);
 
-    // 검색 결과 첫 번째 항목 클릭 (가장 정확한 매칭)
+    // 검색 결과 첫 번째 클릭
     const resultInfo = await gis.evaluate(() => {
-      const items = Array.from(
-        document.querySelectorAll("li, .search-result-item, [class*='result'] li, [class*='list'] li")
-      );
-      const visible = items.filter(
-        (i) => i.offsetParent && i.innerText?.length > 5 && i.innerText?.length < 200
-      );
+      const items = Array.from(document.querySelectorAll("li, [class*='result'] li, [class*='list'] li"));
+      const visible = items.filter((i) => i.offsetParent && i.innerText?.length > 5 && i.innerText?.length < 200);
       if (visible.length === 0) return { count: 0, clicked: "" };
-
-      // 첫 번째 결과 클릭 (가장 정확한 주소)
       const first = visible[0];
       const clickable = first.querySelector("a, button, span") || first;
       clickable.click();
-      return { count: visible.length, clicked: first.innerText?.trim()?.substring(0, 50) };
+      return { count: visible.length, clicked: first.innerText?.trim()?.substring(0, 60) };
     });
     console.log(`  검색결과 ${resultInfo.count}개, 클릭: "${resultInfo.clicked}"`);
     await sleep(5000);
 
-    // 3. 업종 선택 — evaluate .click() (upjong3Cd에 반영 안 되지만 내부 상태는 바뀜)
+    // 3. 업종 선택: 보건의료 → 의원 → 치과의원 (evaluate .click())
     console.log("  3. 업종 선택...");
-
-    // 보건의료 아이콘 클릭
     await gis.evaluate(() => {
-      document.querySelectorAll("span, p, div, label, button, a, li").forEach((el) => {
-        const text = el.innerText?.trim();
-        if (text === "보건의료" && el.offsetParent) {
-          const target = el.closest("a, button, li, [onclick]") || el.parentElement || el;
-          target.click();
-        }
+      document.querySelectorAll("button, div, span").forEach((el) => {
+        if (el.innerText?.trim() === "보건의료" && el.offsetParent) el.click();
       });
-    }).catch(() => {});
-    await sleep(3000);
-
-    // 의원 클릭
+    });
+    await sleep(2000);
     await gis.evaluate(() => {
-      document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
+      document.querySelectorAll("div, li, a, button, span, p").forEach((el) => {
         if (el.innerText?.trim() === "의원" && el.offsetParent) el.click();
       });
-    }).catch(() => {});
-    await sleep(3000);
-
-    // 치과의원 클릭
+    });
+    await sleep(2000);
     await gis.evaluate(() => {
-      document.querySelectorAll("li, div, a, span, button, p, dd").forEach((el) => {
-        if (el.innerText?.trim() === "치과의원" && el.offsetParent) el.click();
+      document.querySelectorAll("div, li, a, button, span, p, label").forEach((el) => {
+        const text = el.innerText?.trim();
+        if ((text === "치과의원" || text === "치과 의원") && el.offsetParent) el.click();
       });
-    }).catch(() => {});
-    await sleep(3000);
+    });
+    await sleep(2000);
 
-    // upjong3Cd 확인 + 강제 보완
-    const tpbiz = await gis.evaluate(() => {
-      const cd = document.getElementById("upjong3Cd");
-      if (cd && !cd.value) cd.value = "Q10901";
-      if (!window.tpbizCode) window.tpbizCode = "Q10901";
-      return cd?.value || window.tpbizCode || "Q10901(강제)";
-    }).catch(() => "확인실패");
+    const tpbiz = await gis.evaluate(() => window.tpbizCode).catch(() => null);
     console.log(`  업종코드: ${tpbiz}`);
 
-    // 4. 네트워크 모니터링 설정 — 모든 XHR/fetch 로그
+    // 4. 네트워크 모니터링
     page.on("request", (req) => {
       const url = req.url();
       const type = req.resourceType();
-      // XHR/fetch 요청만 (이미지, 스크립트 등 제외)
       if (type === "xhr" || type === "fetch" || url.includes("sang_gwon") || url.includes(".sg")) {
-        console.log(`  📤 ${req.method()} ${url.substring(0, 150)}`);
-        if (req.method() === "POST") {
-          console.log(`     body: ${req.postData()?.substring(0, 300)}`);
-        }
+        console.log(`  📤 ${req.method()} ${url.substring(0, 200)}`);
+        if (req.method() === "POST") console.log(`     body: ${req.postData()?.substring(0, 300)}`);
       }
     });
     page.on("response", async (resp) => {
@@ -275,89 +206,21 @@ async function scrape(address, lat, lng, radius = 1000) {
     const analysisBtn = await frame.$("#analysisBtn");
     if (!analysisBtn) throw new Error("분석하기 버튼 못 찾음");
 
-    const disabled = await gis
-      .evaluate(() => document.querySelector("#analysisBtn")?.disabled)
-      .catch(() => true);
+    const disabled = await gis.evaluate(() => document.querySelector("#analysisBtn")?.disabled).catch(() => true);
     if (disabled) {
-      await gis.evaluate(() => {
-        const btn = document.querySelector("#analysisBtn");
-        if (btn) btn.disabled = false;
-      });
+      await gis.evaluate(() => { const btn = document.querySelector("#analysisBtn"); if (btn) btn.disabled = false; });
       console.log("  버튼 강제 활성화");
     }
 
-    // 콘솔 에러 감시
-    page.on("console", (msg) => {
-      if (msg.type() === "error" || msg.type() === "warning") {
-        console.log(`  🖥️ [${msg.type()}] ${msg.text()?.substring(0, 200)}`);
-      }
-    });
+    await analysisBtn.click();
+    console.log("  분석하기 클릭!");
 
-    // 분석하기 버튼 디버깅
-    const btnInfo = await gis.evaluate(() => {
-      const btn = document.querySelector("#analysisBtn");
-      if (!btn) return "버튼 없음";
-      const info = {
-        tag: btn.tagName,
-        disabled: btn.disabled,
-        onclick: btn.getAttribute("onclick"),
-        class: btn.className,
-        text: btn.innerText?.trim(),
-        // 이벤트 리스너 확인 (getEventListeners는 devtools 전용이라 못 씀)
-        // 대신 jQuery 이벤트 확인
-        jqEvents: typeof jQuery !== "undefined" ? Object.keys(jQuery._data?.(btn, "events") || {}) : "no jQuery",
-        // 부모 form 확인
-        form: btn.closest("form")?.id || "no form",
-      };
-      return JSON.stringify(info);
-    }).catch((e) => `에러: ${e.message}`);
-    console.log(`  분석버튼 정보: ${btnInfo}`);
+    // 리포트 로드 대기 (15초 고정 — 36차 성공 방식)
+    await sleep(15000);
 
-    // ltlg(좌표) 설정 — checkDetailAnlys()가 이걸 체크함
-    // 주소 검색 결과 클릭으로 ltlg가 안 잡혔을 수 있으므로 강제 설정
-    const ltlgSet = await gis.evaluate(() => {
-      // 현재 지도 중심 좌표 가져오기
-      if (typeof map !== "undefined" && typeof kakao !== "undefined") {
-        const center = map.getCenter();
-        window.ltlg = center;
-        window.lat = center.getLat();
-        window.lng = center.getLng();
-        // admiCode도 확인
-        const admiCode = document.getElementById("admiCode")?.value;
-        return { lat: center.getLat(), lng: center.getLng(), admiCode, ltlg: "설정됨" };
-      }
-      return { ltlg: "map 없음" };
-    }).catch((e) => ({ error: e.message }));
-    console.log(`  ltlg 설정:`, JSON.stringify(ltlgSet));
-
-    // checkDetailAnlys() 호출 — 이게 실제 분석 실행 함수
-    const analysisResult = await gis.evaluate(() => {
-      try {
-        if (typeof checkDetailAnlys === "function") {
-          checkDetailAnlys();
-          return "checkDetailAnlys() 호출 성공";
-        }
-        return "checkDetailAnlys 함수 없음";
-      } catch (e) {
-        return `checkDetailAnlys 에러: ${e.message}`;
-      }
-    }).catch((e) => `에러: ${e.message}`);
-    console.log(`  분석 실행: ${analysisResult}`);
-
-    // 리포트 로드 대기 (최대 30초, 데이터 수집 감지)
-    for (let i = 0; i < 30; i++) {
-      await sleep(1000);
-      const count = Object.keys(sgData).length;
-      if (count >= 6) {
-        console.log(`  ${i + 1}초 만에 6개 수집 완료`);
-        break;
-      }
-    }
-
-    // 추가 대기 (sg7 등 늦게 오는 데이터)
+    // 추가 대기 (sg7 등)
     await sleep(5000);
 
-    // 수집 확인
     const collected = Object.keys(sgData);
     console.log(`  수집된 sang_gwon: ${collected.join(", ")} (${collected.length}개)`);
 
@@ -367,11 +230,7 @@ async function scrape(address, lat, lng, radius = 1000) {
   } finally {
     await browser.close();
   }
-
   return sgData;
 }
 
-
-function sleep(ms) {
-  return new Promise((r) => setTimeout(r, ms));
-}
+function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
