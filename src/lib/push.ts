@@ -5,12 +5,16 @@ import { createClient } from "@supabase/supabase-js";
 const VAPID_PUBLIC = process.env.NEXT_PUBLIC_VAPID_PUBLIC_KEY || "";
 const VAPID_PRIVATE = process.env.VAPID_PRIVATE_KEY || "";
 
-if (VAPID_PUBLIC && VAPID_PRIVATE) {
-  webpush.setVapidDetails(
-    "mailto:admin@medistaxion.com",
-    VAPID_PUBLIC,
-    VAPID_PRIVATE
-  );
+if (VAPID_PUBLIC.length > 20 && VAPID_PRIVATE.length > 20) {
+  try {
+    webpush.setVapidDetails(
+      "mailto:admin@medistaxion.com",
+      VAPID_PUBLIC,
+      VAPID_PRIVATE
+    );
+  } catch {
+    console.warn("VAPID key setup failed — push notifications disabled");
+  }
 }
 
 const supabaseAdmin = createClient(
