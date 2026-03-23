@@ -19,14 +19,17 @@ let isProcessing = false;
 const queue = [];
 
 app.post("/analyze", async (req, res) => {
-  const { reportId, address, callbackUrl } = req.body;
+  const { reportId, address, fullAddress, callbackUrl } = req.body;
 
   if (!reportId || !address || !callbackUrl) {
     return res.status(400).json({ error: "reportId, address, callbackUrl 필수" });
   }
 
+  // fullAddress(시도 시군구 동)가 있으면 우선 사용, 없으면 원본 address
+  const searchAddress = fullAddress || address;
+
   // 큐에 추가
-  queue.push({ reportId, address, callbackUrl });
+  queue.push({ reportId, address: searchAddress, callbackUrl });
   res.json({ queued: true, position: queue.length });
 
   // 처리 시작
@@ -183,22 +186,38 @@ async function scrape(address) {
     console.log("  검색 실행");
     await sleep(5000);
 
-    // 검색 결과 첫 번째 클릭
-    const resultCount = await gis.evaluate(() => {
+    // 검색 결과에서 주소와 가장 일치하는 항목 클릭
+    const resultCount = await gis.evaluate((searchAddr) => {
       const items = Array.from(
         document.querySelectorAll("li, .search-result-item, [class*='result'] li")
       );
       const visible = items.filter(
         (i) => i.offsetParent && i.innerText?.length > 0 && i.innerText?.length < 200
       );
-      if (visible.length > 0) {
-        const target = visible[0];
-        const clickable = target.querySelector("a, button, span") || target;
-        clickable.click();
+      if (visible.length === 0) return 0;
+
+      // 주소 키워드로 가장 일치하는 결과 찾기
+      const keywords = searchAddr.split(/\s+/).filter(k => k.length > 1);
+      let bestMatch = visible[0];
+      let bestScore = 0;
+
+      for (const item of visible) {
+        const text = item.innerText || "";
+        let score = 0;
+        for (const kw of keywords) {
+          if (text.includes(kw)) score++;
+        }
+        if (score > bestScore) {
+          bestScore = score;
+          bestMatch = item;
+        }
       }
+
+      const clickable = bestMatch.querySelector("a, button, span") || bestMatch;
+      clickable.click();
       return visible.length;
-    });
-    console.log(`  검색결과 ${resultCount}개, 첫 결과 클릭`);
+    }, address);
+    console.log(`  검색결과 ${resultCount}개, 최적 매칭 클릭`);
     await sleep(5000);
 
     // 3. 업종 선택: 보건의료 → 의원 → 치과의원

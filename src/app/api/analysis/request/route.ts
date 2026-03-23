@@ -83,6 +83,7 @@ export async function POST(req: NextRequest) {
     const scrapeBody = {
       reportId: report.id,
       address: address.trim(),
+      fullAddress: sido && sgg && dong ? `${sido} ${sgg} ${dong}` : address.trim(),
       callbackUrl: `${callbackBase}/api/analysis/process`,
     };
 
