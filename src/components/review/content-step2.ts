@@ -5,7 +5,7 @@ export const step2Data: Section[] = [
     id: "s2-intro",
     html: `
       <div class="text-center py-10 border-b border-[#eee] mb-10">
-        <p class="text-[#D4567A] text-sm font-medium tracking-[0.3em] mb-4">S T E P &nbsp; 2</p>
+        <p class="text-[#C4929B] text-sm font-medium tracking-[0.3em] mb-4">S T E P &nbsp; 2</p>
         <h1 class="text-3xl font-bold text-[#1a1a1a] mb-3">운영 시스템</h1>
       </div>
       <p class="text-[#333] leading-relaxed mb-4">이 STEP에서는 치과 미용 시술이 일상 진료의 일부로 작동하기 위한 운영 시스템 전체를 다룬다. 시술 기술은 교육으로 해결되지만, 운영 구조가 안 잡히면 원장이 모든 걸 혼자 떠안는 구조가 되고, 3개월 안에 지쳐서 포기한다.</p>
@@ -120,7 +120,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">원장</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이 단계에서 원장 개입 없음</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">TIP:</span> 치과 기존 초진 문진표에 "미용 시술 관련 금기" 항목을 추가하면 별도 문서 없이 한 번에 처리 가능. 임신 여부, 면역억제제 복용, 헤르페스 병력, 혈액희석제 복용이 핵심 항목.</p>
       </div>
 
@@ -144,7 +144,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스탭</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">동의서 보관, 차트 기록 준비</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">치과 특이점:</span> 피부과에서는 코디가 수가·시술 내용까지 결정하는 구조가 많지만, 치과에서는 원장이 처음부터 상담에 들어가야 한다. 시술 결정권은 반드시 원장에게 있어야 하며, 이 단계를 스탭에게 위임하면 법적 리스크가 생긴다.</p>
       </div>
 
@@ -245,56 +245,109 @@ export const step2Data: Section[] = [
       <table class="w-full text-sm border-collapse mb-6">
         <thead class="bg-[#1a1a1a] text-white"><tr><th class="px-4 py-2 text-left font-medium">구분</th><th class="px-4 py-2 text-left font-medium">행위</th><th class="px-4 py-2 text-left font-medium">이유</th></tr></thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU·RF·레이저 장비 직접 조작 및 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">에너지 기반 의료기기 — 의료법상 의료행위에 해당. 위반 시 5년 이하 징역 또는 5천만원 이하 벌금</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스·필러·스킨부스터·실리프팅 주사 행위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료 행위 — 면허 없는 자의 시술은 의료법 위반</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 부위·용량·제품 결정 (상담 주도)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료 판단 영역 — 스탭이 결정 주도하면 법적 분쟁 원인</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">국소마취 주사 시행</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주사 행위 자체가 의료 행위</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부작용·이상 반응 발생 시 독단 대응</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 원장에게 보고 후 원장 지시에 따라서만 행동</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU·RF·레이저 장비 직접 조작 및 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">에너지 기반 의료기기 — 의료법상 의료행위에 해당. 위반 시 5년 이하 징역 또는 5천만원 이하 벌금</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스·필러·스킨부스터·실리프팅 주사 행위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료 행위 — 면허 없는 자의 시술은 의료법 위반</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 부위·용량·제품 결정 (상담 주도)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료 판단 영역 — 스탭이 결정 주도하면 법적 분쟁 원인</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">국소마취 주사 시행</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주사 행위 자체가 의료 행위</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부작용·이상 반응 발생 시 독단 대응</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 원장에게 보고 후 원장 지시에 따라서만 행동</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-green-600 font-bold">O</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">마취 크림 도포 (원장 지시 하에)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">비의료적 준비 행위</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-green-600 font-bold">O</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">표준 사전 사진 촬영</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기록 보조 행위</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-green-600 font-bold">O</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">귀가 주의사항 인쇄물 전달 및 설명</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">원장이 이미 설명한 내용 전달</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-green-600 font-bold">O</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사후 관리 문자·카카오톡 발송</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">행정 연락 (이상 반응 보고는 즉시 원장 에스컬레이션)</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">실전 팁:</span> 이 표를 출력해서 스탭이 항상 볼 수 있는 곳에 붙여두는 것만으로도 법적 리스크의 절반을 줄일 수 있다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 치과 미용 시술 SOP 7단계 플로우차트 — 각 단계별 담당자(원장/스탭) 역할 분리 시각화]</div>
+      <div style="background: linear-gradient(135deg, #fdf6f7 0%, #f5e6e8 100%); border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; border: 1px solid #e8d0d4;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <span style="display: inline-block; background: #C4929B; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px;">WORKFLOW</span>
+          <div style="font-size: 20px; font-weight: 800; color: #2C2C2C; margin-top: 8px;">치과 미용 시술 SOP 7단계</div>
+          <div style="font-size: 13px; color: #888; margin-top: 4px;">각 단계별 담당자 역할이 명확히 분리되어야 안전하고 효율적인 시술이 가능합니다</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 0; align-items: center;">
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">상담 접수 및 니즈 파악</div><div style="font-size: 12px; color: #777; margin-top: 2px;">환자 요구사항 청취, 기본 정보 수집, 기대치 확인</div></div>
+            <span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">진단 및 시술 계획 수립</div><div style="font-size: 12px; color: #777; margin-top: 2px;">구강 내외 검진, 사진 촬영, 시술 범위 결정</div></div>
+            <span style="background: #C4929B; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">원장</span>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">동의서 작성 및 설명</div><div style="font-size: 12px; color: #777; margin-top: 2px;">시술 내용, 위험, 대안 설명 후 서면 동의 확보</div></div>
+            <div style="display: flex; gap: 4px;"><span style="background: #C4929B; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">원장</span><span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span></div>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">시술 전 준비</div><div style="font-size: 12px; color: #777; margin-top: 2px;">마취 크림 도포, 장비 및 재료 세팅, 사전 사진 기록</div></div>
+            <span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">시술 수행</div><div style="font-size: 12px; color: #777; margin-top: 2px;">보톡스, 필러, 스케일링 등 계획된 시술 진행</div></div>
+            <div style="display: flex; gap: 4px;"><span style="background: #C4929B; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">원장</span><span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span></div>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">6</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">시술 후 안내</div><div style="font-size: 12px; color: #777; margin-top: 2px;">주의사항 전달, 사후 사진 촬영, 다음 방문 예약</div></div>
+            <div style="display: flex; gap: 4px;"><span style="background: #C4929B; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">원장</span><span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span></div>
+          </div>
+          <div style="width: 2px; height: 14px; background: #d4a8b0;"></div>
+          <div style="display: flex; align-items: center; gap: 16px; background: #fff; border-radius: 12px; padding: 16px 20px; width: 100%; max-width: 520px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border-left: 4px solid #C4929B;">
+            <div style="background: #C4929B; color: #fff; font-size: 14px; font-weight: 800; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">7</div>
+            <div style="flex: 1;"><div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">경과 관찰 및 팔로업</div><div style="font-size: 12px; color: #777; margin-top: 2px;">48시간 내 컨디션 확인 연락, 경과 기록, 재시술 일정 조율</div></div>
+            <span style="background: #2C2C2C; color: #fff; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 6px;">스탭</span>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 20px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e8d0d4;">
+          <div style="display: flex; align-items: center; gap: 6px;"><span style="background: #C4929B; width: 12px; height: 12px; border-radius: 4px; display: inline-block;"></span><span style="font-size: 12px; color: #666;">원장 담당</span></div>
+          <div style="display: flex; align-items: center; gap: 6px;"><span style="background: #2C2C2C; width: 12px; height: 12px; border-radius: 4px; display: inline-block;"></span><span style="font-size: 12px; color: #666;">스탭 담당</span></div>
+        </div>
+      </div>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
         <div class="border border-[#eee] rounded-lg overflow-hidden">
           <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">보톡스 체크카드</span></div>
           <div class="p-4 bg-white text-sm text-[#333]">
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 (20~30분 전) / 사전 사진 촬영</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위·용량 결정 + 주사</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>4시간 눕지 않기 / 당일 음주·사우나 금지 안내</span></div>
-            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>3~4개월 주기 / 2주 후 효과 확인 연락</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">준비</span><span>마취 크림 도포 (20~30분 전) / 사전 사진 촬영</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">시술</span><span>원장 전담 — 부위·용량 결정 + 주사</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">후처치</span><span>4시간 눕지 않기 / 당일 음주·사우나 금지 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#C4929B] font-bold shrink-0">재방문</span><span>3~4개월 주기 / 2주 후 효과 확인 연락</span></div>
           </div>
         </div>
         <div class="border border-[#eee] rounded-lg overflow-hidden">
           <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">필러 체크카드</span></div>
           <div class="p-4 bg-white text-sm text-[#333]">
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 / 알레르기 병력 확인 / 사전 사진</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위·제품·용량 결정 + 주입</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>압박 금지 / 48시간 격한 운동 자제 / 부종 안내</span></div>
-            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>12~18개월 주기 / 1~3일 후 상태 확인 연락</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">준비</span><span>마취 크림 도포 / 알레르기 병력 확인 / 사전 사진</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">시술</span><span>원장 전담 — 부위·제품·용량 결정 + 주입</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">후처치</span><span>압박 금지 / 48시간 격한 운동 자제 / 부종 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#C4929B] font-bold shrink-0">재방문</span><span>12~18개월 주기 / 1~3일 후 상태 확인 연락</span></div>
           </div>
         </div>
         <div class="border border-[#eee] rounded-lg overflow-hidden">
           <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">스킨부스터 체크카드</span></div>
           <div class="p-4 bg-white text-sm text-[#333]">
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 / 피부 상태 기록 / 사전 사진</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 부위 선정 + 주입 (전안면 다점 주입)</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>당일 세안 자제 / 자외선 차단 필수 안내</span></div>
-            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>2~4주 간격 6회 코스 / 매회 예약 세팅</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">준비</span><span>마취 크림 도포 / 피부 상태 기록 / 사전 사진</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">시술</span><span>원장 전담 — 부위 선정 + 주입 (전안면 다점 주입)</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">후처치</span><span>당일 세안 자제 / 자외선 차단 필수 안내</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#C4929B] font-bold shrink-0">재방문</span><span>2~4주 간격 6회 코스 / 매회 예약 세팅</span></div>
           </div>
         </div>
         <div class="border border-[#eee] rounded-lg overflow-hidden">
           <div class="bg-[#1a1a1a] px-4 py-3"><span class="text-white font-bold text-sm">실리프팅 체크카드</span></div>
           <div class="p-4 bg-white text-sm text-[#333]">
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">준비</span><span>마취 크림 도포 (30~40분) / 사전 사진 / 동의서</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">시술</span><span>원장 전담 — 실 종류·방향·개수 결정 + 삽입</span></div>
-            <div class="flex items-start gap-2 mb-2"><span class="text-[#D4567A] font-bold shrink-0">후처치</span><span>48시간 큰 입 벌리기 자제 / 감염 징후 안내 / 소염진통제</span></div>
-            <div class="flex items-start gap-2"><span class="text-[#D4567A] font-bold shrink-0">재방문</span><span>12~24개월 주기 / 48시간 후 경과 확인 연락</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">준비</span><span>마취 크림 도포 (30~40분) / 사전 사진 / 동의서</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">시술</span><span>원장 전담 — 실 종류·방향·개수 결정 + 삽입</span></div>
+            <div class="flex items-start gap-2 mb-2"><span class="text-[#C4929B] font-bold shrink-0">후처치</span><span>48시간 큰 입 벌리기 자제 / 감염 징후 안내 / 소염진통제</span></div>
+            <div class="flex items-start gap-2"><span class="text-[#C4929B] font-bold shrink-0">재방문</span><span>12~24개월 주기 / 48시간 후 경과 확인 연락</span></div>
           </div>
         </div>
       </div>
@@ -336,7 +389,7 @@ export const step2Data: Section[] = [
         <li>앞으로 고개를 숙이거나 위를 올려다볼 때 이마 주름이 확연히 드러남</li>
         <li>사진 촬영 시 이마 주름이 두드러지게 포착됨</li>
       </ul>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">멘트 예시: "이마 쪽에 주름이 꽤 자리를 잡으셨네요. 표정 습관 때문인 경우가 대부분이에요. 보톡스로 간단히 정리되거든요, 관심 있으세요?"</p>
       </div>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
@@ -347,7 +400,7 @@ export const step2Data: Section[] = [
         <li>미간에 세로 주름('11자 주름')이 안정 시에도 또렷하게 남아 있음</li>
         <li>찡그리는 표정이 습관적 — 항상 화난 인상이나 피곤해 보이는 인상</li>
       </ul>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">멘트 예시: "미간 주름이 좀 깊으시네요. 이게 표정이랑 상관없이 항상 화나 보이거나 피곤해 보이는 인상을 줄 수 있거든요. 보톡스로 잡으면 인상 자체가 많이 부드러워져요."</p>
       </div>
 
@@ -358,7 +411,7 @@ export const step2Data: Section[] = [
         <li>눈 바깥쪽 부채꼴 주름이 선명 — 특히 웃을 때 확연</li>
         <li>안정 시에도 남아 있어 피곤해 보이는 인상</li>
       </ul>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">멘트 예시: "웃으실 때 눈가 주름이 꽤 생기시네요. 보톡스로 많이들 잡으세요. 웃는 표정은 그대로 살리면서 주름만 부드럽게 할 수 있어요."</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">눈물고랑 필러 적응증:</span></p>
@@ -383,7 +436,7 @@ export const step2Data: Section[] = [
         <li>임플란트·보철 후 하안부는 올라왔는데 중안부·볼이 상대적으로 꺼져 불균형</li>
         <li>광대 아래가 꺼져 피부가 처진 것처럼 보이는 상태</li>
       </ul>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">멘트 예시: "임플란트 하고 나서 치아 쪽은 올라왔는데 여기 볼 부분이 상대적으로 꺼져 보이는 경우가 있어요. 필러로 볼륨 넣어드리면 균형이 잡혀요."</p>
       </div>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
@@ -483,17 +536,115 @@ export const step2Data: Section[] = [
         <tbody>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">초진 구강검사 중</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">얼굴 전체를 볼 수 있는 자연스러운 타이밍</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료 계획 상담 중</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료 전반 이야기하는 맥락이라 미용 연결이 자연스러움</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">정기 스케일링·예방 내원</td><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">최적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료 부담 없이 대화 가능. 기존 관계 있어 거부감 낮음</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">정기 스케일링·예방 내원</td><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">최적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료 부담 없이 대화 가능. 기존 관계 있어 거부감 낮음</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">장기 치료 마무리 시점</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료 완료라는 긍정적 감정 상태</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">급성 통증·불편 치료 중</td><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">부적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 통증 해결에만 집중</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">발치·외과 처치 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#D4567A] font-bold">부적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복 중인 환자</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">급성 통증·불편 치료 중</td><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">부적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 통증 해결에만 집중</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">발치·외과 처치 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#C4929B] font-bold">부적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복 중인 환자</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치료비 청구·수납 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주의</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">추가 지출 부담. 스탭이 브로셔로 안내하는 방식이 나음</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">마지막 원칙:</span> 환자는 원장이 '팔려고 하는지' '진심으로 봐주는지'를 직감적으로 안다. 이 매뉴얼의 모든 멘트는 발견과 정보 제공이지 권유가 아니다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 얼굴 부위별 미용 적응증 맵 — 8개 부위 + 연결 시술 시각화 일러스트]</div>
+      <div style="background: linear-gradient(135deg, #fdf6f7 0%, #f5e6e8 100%); border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; border: 1px solid #e8d0d4;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <span style="display: inline-block; background: #C4929B; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px;">FACIAL MAP</span>
+          <div style="font-size: 20px; font-weight: 800; color: #2C2C2C; margin-top: 8px;">얼굴 부위별 미용 적응증 맵</div>
+          <div style="font-size: 13px; color: #888; margin-top: 4px;">8개 핵심 부위와 연결 가능한 시술을 한눈에 파악합니다</div>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">01</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">이마</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">보톡스 (주름)</span>
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (볼륨)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">스킨부스터</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">02</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">눈가</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">보톡스 (까마귀발)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">리쥬란</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">스킨부스터</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">03</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">코</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (코끝/콧대)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">실리프팅</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">04</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">팔자주름</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (볼륨)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">실리프팅</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">스킨부스터</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">05</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">입술</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (볼륨/윤곽)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">입꼬리 보톡스</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">06</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">턱선 / 이중턱</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">보톡스 (사각턱)</span>
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (턱끝)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">지방분해주사</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">07</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">볼 / 광대</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">필러 (볼륨)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">실리프팅</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">스킨부스터</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 18px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border: 1px solid #f0e0e3;">
+            <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+              <div style="background: #C4929B; color: #fff; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 16px; flex-shrink: 0;">08</div>
+              <div style="font-size: 15px; font-weight: 700; color: #2C2C2C;">목 / 넥라인</div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 4px;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">보톡스 (목주름)</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">스킨부스터</span>
+              <span style="background: #f0f0f0; color: #666; font-size: 11px; font-weight: 600; padding: 3px 8px; border-radius: 4px;">리쥬란</span>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #e8d0d4; display: flex; justify-content: center; gap: 20px;">
+          <div style="display: flex; align-items: center; gap: 6px;"><span style="background: #F5E6E8; width: 12px; height: 12px; border-radius: 3px; display: inline-block;"></span><span style="font-size: 12px; color: #666;">핵심 시술</span></div>
+          <div style="display: flex; align-items: center; gap: 6px;"><span style="background: #f0f0f0; width: 12px; height: 12px; border-radius: 3px; display: inline-block;"></span><span style="font-size: 12px; color: #666;">연계 시술</span></div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -532,18 +683,18 @@ export const step2Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">브리지 문장 — 치과 언어로 시작해야 자연스럽다</h3>
       <p class="text-[#333] leading-relaxed mb-4">"보톡스 어떠세요?"가 아니라, 진료 흐름에서 자연스럽게 연결되는 문장이 브리지 문장이다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">교근 보톡스로 연결:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">진료 중 교근 촉진하면서 — "교근이 꽤 발달해 있으시네요. 이갈이나 이 악무는 습관이 있으세요?" &rarr; (환자 반응 후) "이 근육이 크면 턱선이 각져 보이거든요. 혹시 그 부분 신경 쓰인 적 있으세요?"</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">필러·스킨부스터로 연결:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">임플란트 완료 후 경과 확인 — "보통 이쪽 치료 끝나고 나서 얼굴 느낌이 달라졌다고 하시는 분들이 계세요." &rarr; (환자 반응 보며) "혹시 볼 쪽이 좀 꺼진 느낌 있으시진 않으세요?"</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">HIFU·리프팅으로 연결:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">정기 검진 내원 환자 (40대 이상) — "혹시 최근에 얼굴 처지는 느낌 받으신 적 있으세요?" &rarr; (환자 공감하면) "저희 쪽에서 비수술 리프팅 시술을 하는데, 초음파 장비로 피부 안쪽에서 올려주는 방식이에요."</p>
       </div>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 브리지 문장은 질문으로 끝내는 게 원칙이다. "~어떠세요?", "~있으세요?" — 환자가 답하는 순간 대화가 시작된다.</p>
       </div>
     `,
@@ -554,23 +705,23 @@ export const step2Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">시술별 1분 설명 스크립트</h3>
       <p class="text-[#333] leading-relaxed mb-4">환자가 관심을 보인 후 원장이 하는 설명이다. <span class="font-bold text-[#1a1a1a]">1분 안에 끝내야 한다.</span> 길면 환자는 부담을 느낀다.</p>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">보톡스 1분 설명</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"보톡스는 근육에 작용하는 주사예요. 치과에서는 주로 교근, 씹는 근육에 맞는 경우가 많아요. 이 근육이 발달하면 턱선이 각져 보이고, 이갈이도 심해지거든요. 보톡스를 맞으면 근육이 줄어들면서 턱선이 자연스럽게 갸름해지고, 이갈이도 완화돼요. 효과는 3~4개월 정도. 시술 자체는 15분이면 끝나고, 일상생활 바로 되시고요. 치과의사가 이 부위를 가장 잘 아는 사람이에요."</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">필러 1분 설명</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"필러는 꺼진 부위를 채워주는 주사예요. 성분은 히알루론산인데, 원래 우리 몸에 있는 성분이라 알레르기 반응이 거의 없어요. 6개월~1년 정도 지속되고, 자연스럽게 흡수돼요. 제가 얼굴 구조를 보면서 어느 부위에 얼마나 넣을지 설계하는 거예요. 치과의사는 얼굴 해부학을 제일 많이 공부한 사람이에요."</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">스킨부스터 1분 설명</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"스킨부스터는 피부 속에 직접 수분과 영양을 넣어주는 시술이에요. 피부 자체가 촉촉해지고 탄력이 살아나는 느낌이에요. 보통 4~6회 코스로 받고, 한 달에 한 번 유지 관리하면 효과가 오래 가요. 치과 정기 내원하실 때 같이 받으시면 시간 효율적이에요."</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">HIFU (슈링크) 1분 설명</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"HIFU는 초음파 에너지를 이용한 리프팅 장비예요. 수술 없이 피부 안쪽 근막층에 열을 만들어서 조여주는 방식이에요. 1~3개월에 걸쳐 콜라겐이 재생되면서 서서히 올라와요. 효과는 6개월~1년. 치과의사는 얼굴 뼈대와 근막 구조를 제일 잘 알고 있어요."</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">실리프팅 1분 설명</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"실리프팅은 녹는 실을 피부 안에 삽입해서 처진 부위를 끌어올리는 시술이에요. HIFU가 조여주는 느낌이라면, 실리프팅은 직접 올려주는 느낌이에요. 피부 속에서 실이 콜라겐 재생도 자극하기 때문에 효과가 1~2년 가는 경우도 많아요. 국소마취하고 진행해서 통증은 거의 없어요. 국소마취 시술은 치과에서 매일 하는 거잖아요."</p>
       </div>
     `,
@@ -581,28 +732,28 @@ export const step2Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">환자 유형별 대응 전략</h3>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">유형 A — 관심은 있는데 먼저 말 못 하는 환자</h4>
       <p class="text-[#333] leading-relaxed mb-2">특징: 시술 전후 사진을 유심히 보거나, 슬쩍 "이런 거 여기서 해요?" 하고 묻는다.</p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">원장이 자연스럽게 받아주면 된다. "한번 같이 보면서 얘기해드릴게요." 과도한 설명이 오히려 부담.</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">유형 B — 효과를 의심하는 환자</h4>
       <p class="text-[#333] leading-relaxed mb-2">특징: "그게 효과 있어요?", "TV에서 부작용 얘기 봤는데" 같은 반응.</p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">솔직하게 한계를 인정하고 거기서 장점을 설명. "맞아요, 영구적이진 않아요. 보톡스는 3~4개월 지속되고 반복하면 누적 효과가 있어요."</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">유형 C — 가격에 민감한 환자</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">가치 설명이 먼저, 가격은 나중. "부위랑 용량에 따라 달라서, 먼저 어떤 부위가 신경 쓰이신지 봐도 될까요?"</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">유형 D — 치과에서 받는 걸 낯설어하는 환자</h4>
       <p class="text-[#333] leading-relaxed mb-2">특징: "치과에서요?", "피부과 가야 하는 거 아닌가요?" — 가장 많이 나오는 유형.</p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"법적으로 치과의사가 두경부 시술을 할 수 있어요. 대법원 판례로도 확인된 내용이에요. 그리고 오래 다니신 저한테 받으시는 거라 더 믿을 수 있잖아요."</p>
       </div>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심 문장:</span> "오래 다니신 저한테 받으시는 거라 더 믿을 수 있잖아요" — 이 한 문장이 치과 미용 시술의 가장 강력한 포지셔닝이다.</p>
       </div>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">유형 E — 배우자·가족 눈치를 보는 환자</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"보톡스는 자연스럽게 되는 거라 티가 안 나는 경우가 많아요. 원래 나 같아 보이는데 좀 더 좋아 보이는 정도거든요."</p>
       </div>
     `,
@@ -621,7 +772,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"나이 들어서 이런 거 해도 될까요?"</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"나이 제한 없어요. 오히려 40대 이상이 효과가 더 드라마틱하게 느껴지는 경우가 많아요."</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">"나중에"는 거절이 아니다.</span> 억지로 오늘 결정하게 하려 하지 마라. 씨앗을 심고 끝내면 된다. 다음 내원 때 이어진다.</p>
       </div>
 
@@ -645,7 +796,7 @@ export const step2Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">스탭 1차 응대 스크립트</h3>
       <p class="text-[#333] leading-relaxed mb-4">스탭의 역할은 원장과의 상담으로 연결하는 것이다. <span class="font-bold text-[#1a1a1a]">시술 결정·추천은 스탭이 하면 안 된다.</span></p>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">전화 문의 — "보톡스 하세요?"</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm mb-2">스탭: "네, 저희 두경부 미용 시술 하고 있어요."</p>
         <p class="text-sm mb-2">환자: "얼마예요?"</p>
         <p class="text-sm">스탭: "부위랑 용량에 따라 다르게 책정되어서, 원장님이 직접 상담해드려야 정확하게 말씀드릴 수 있어요. 상담은 무료예요. 예약 잡아드릴까요?"</p>
@@ -668,10 +819,60 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">다음 내원 때 연결고리를 남겼는가</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">현실적인 조언:</span> 처음 10번의 상담은 어색하다. 그게 정상이다. 스크립트를 최소 5번 소리 내어 읽고, 스탭을 환자 역할로 세워 연습해야 실제 상담에서 자연스럽게 나온다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 상담 3단계 플로우 — 발견 &rarr; 연결 &rarr; 제안 시각화 다이어그램]</div>
+      <div style="background: linear-gradient(135deg, #fdf6f7 0%, #f5e6e8 100%); border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; border: 1px solid #e8d0d4;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <span style="display: inline-block; background: #C4929B; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px;">CONSULTATION FLOW</span>
+          <div style="font-size: 20px; font-weight: 800; color: #2C2C2C; margin-top: 8px;">상담 3단계 플로우</div>
+          <div style="font-size: 13px; color: #888; margin-top: 4px;">자연스러운 발견에서 시작해 환자 스스로 선택하게 만드는 구조</div>
+        </div>
+        <div style="display: flex; align-items: stretch; gap: 0; justify-content: center; flex-wrap: wrap;">
+          <div style="background: #fff; border-radius: 12px; padding: 24px 20px; flex: 1; min-width: 180px; max-width: 240px; box-shadow: 0 2px 12px rgba(196,146,155,0.12); border-top: 4px solid #C4929B; text-align: center;">
+            <div style="background: #C4929B; color: #fff; font-size: 24px; font-weight: 800; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">1</div>
+            <div style="font-size: 18px; font-weight: 800; color: #C4929B; margin-bottom: 6px;">발견</div>
+            <div style="font-size: 13px; color: #2C2C2C; font-weight: 600; margin-bottom: 8px;">치료 중 자연스러운 관찰</div>
+            <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+              <div style="margin-bottom: 4px;">- 스케일링 중 잇몸라인 체크</div>
+              <div style="margin-bottom: 4px;">- 교정 상담 시 안면 비대칭 확인</div>
+              <div>- 보철 상담 시 입술 볼륨 관찰</div>
+            </div>
+            <div style="margin-top: 12px; background: #F5E6E8; border-radius: 8px; padding: 8px; font-size: 11px; color: #C4929B; font-weight: 600;">"치료하면서 보니까..."</div>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 8px; flex-shrink: 0;">
+            <div style="font-size: 28px; color: #C4929B; font-weight: 300;">&#8594;</div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 24px 20px; flex: 1; min-width: 180px; max-width: 240px; box-shadow: 0 2px 12px rgba(196,146,155,0.12); border-top: 4px solid #2C2C2C; text-align: center;">
+            <div style="background: #2C2C2C; color: #fff; font-size: 24px; font-weight: 800; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">2</div>
+            <div style="font-size: 18px; font-weight: 800; color: #2C2C2C; margin-bottom: 6px;">연결</div>
+            <div style="font-size: 13px; color: #2C2C2C; font-weight: 600; margin-bottom: 8px;">기존 고민과 시술 연결</div>
+            <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+              <div style="margin-bottom: 4px;">- 환자의 기존 불편을 시술과 연결</div>
+              <div style="margin-bottom: 4px;">- 치과 치료의 연장선으로 설명</div>
+              <div>- 비포/애프터 사례 공유</div>
+            </div>
+            <div style="margin-top: 12px; background: #f0f0f0; border-radius: 8px; padding: 8px; font-size: 11px; color: #555; font-weight: 600;">"혹시 이 부분 신경 쓰셨어요?"</div>
+          </div>
+          <div style="display: flex; align-items: center; padding: 0 8px; flex-shrink: 0;">
+            <div style="font-size: 28px; color: #C4929B; font-weight: 300;">&#8594;</div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 24px 20px; flex: 1; min-width: 180px; max-width: 240px; box-shadow: 0 2px 12px rgba(196,146,155,0.12); border-top: 4px solid #C4929B; text-align: center;">
+            <div style="background: #C4929B; color: #fff; font-size: 24px; font-weight: 800; width: 48px; height: 48px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px;">3</div>
+            <div style="font-size: 18px; font-weight: 800; color: #C4929B; margin-bottom: 6px;">제안</div>
+            <div style="font-size: 13px; color: #2C2C2C; font-weight: 600; margin-bottom: 8px;">정보 제공 후 선택권 부여</div>
+            <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+              <div style="margin-bottom: 4px;">- 시술 방법과 예상 결과 설명</div>
+              <div style="margin-bottom: 4px;">- 비용/기간/주의사항 안내</div>
+              <div>- 결정은 환자에게 위임</div>
+            </div>
+            <div style="margin-top: 12px; background: #F5E6E8; border-radius: 8px; padding: 8px; font-size: 11px; color: #C4929B; font-weight: 600;">"관심 있으시면 말씀해주세요"</div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px; padding-top: 16px; border-top: 1px solid #e8d0d4;">
+          <span style="font-size: 12px; color: #999;">핵심: 권유가 아닌 정보 제공 &#8212; 환자가 스스로 결정하는 구조</span>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -680,7 +881,7 @@ export const step2Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2-4. 세무·수납 시스템</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용 시술을 시작하는 순간 치과의 세무 구조가 바뀐다. 이걸 모르고 시작하면 나중에 세무서에서 추징당한다. 운영 첫날부터 구조를 맞춰놔야 한다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심 전제:</span> 일반 치과 진료는 부가세 면세다. 미용 시술은 부가세 10% 과세다. 두 가지가 한 치과에 섞이는 순간 겸업 사업자가 된다.</p>
       </div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">과세 vs 면세 — 어떤 시술이 어디에 해당하나</h3>
@@ -730,7 +931,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">VAT 별도 수가 (예: 보톡스 10만원 + VAT 1만원)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">수익 계산 명확</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자에게 부가세 별도 설명 필요</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 두 방식 중 어느 것이든 상관없다. 중요한 것은 정책을 정하고, 환자에게 사전 고지하고, 일관되게 유지하는 것.</p>
       </div>
 
@@ -786,14 +987,14 @@ export const step2Data: Section[] = [
               <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">3</span><span>기존 치과 수납 프로세스 그대로</span></div>
             </div>
           </div>
-          <div class="border-2 border-[#D4567A] rounded-lg overflow-hidden">
-            <div class="bg-[#D4567A] px-3 py-2 text-center"><span class="font-bold text-sm text-white">경로 B: 미용 시술만</span></div>
+          <div class="border-2 border-[#C4929B] rounded-lg overflow-hidden">
+            <div class="bg-[#C4929B] px-3 py-2 text-center"><span class="font-bold text-sm text-white">경로 B: 미용 시술만</span></div>
             <div class="p-3 text-sm text-[#333] space-y-2">
-              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">1</span><span>미용 목적 확인 (보톡스·필러 등)</span></div>
-              <div class="w-px h-3 bg-[#D4567A] ml-2.5"></div>
-              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">2</span><span>과세 처리 (VAT 10% 별도)</span></div>
-              <div class="w-px h-3 bg-[#D4567A] ml-2.5"></div>
-              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">3</span><span>세금계산서 또는 현금영수증 발급 필수</span></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#C4929B] shrink-0">1</span><span>미용 목적 확인 (보톡스·필러 등)</span></div>
+              <div class="w-px h-3 bg-[#C4929B] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#C4929B] shrink-0">2</span><span>과세 처리 (VAT 10% 별도)</span></div>
+              <div class="w-px h-3 bg-[#C4929B] ml-2.5"></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#fdf2f5] rounded-full flex items-center justify-center text-xs font-bold text-[#C4929B] shrink-0">3</span><span>세금계산서 또는 현금영수증 발급 필수</span></div>
             </div>
           </div>
           <div class="border border-[#eee] rounded-lg overflow-hidden">
@@ -801,7 +1002,7 @@ export const step2Data: Section[] = [
             <div class="p-3 text-sm text-[#333] space-y-2">
               <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">1</span><span>치료 + 미용 동시 진행</span></div>
               <div class="w-px h-3 bg-[#999] ml-2.5"></div>
-              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#D4567A] shrink-0">2</span><span class="font-bold text-[#D4567A]">반드시 분리 수납</span></div>
+              <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#C4929B] shrink-0">2</span><span class="font-bold text-[#C4929B]">반드시 분리 수납</span></div>
               <div class="w-px h-3 bg-[#999] ml-2.5"></div>
               <div class="flex items-center gap-2"><span class="w-5 h-5 bg-[#f5f5f5] rounded-full flex items-center justify-center text-xs font-bold text-[#1a1a1a] shrink-0">3</span><span>치료분: 면세 / 미용분: 과세 (VAT 10%)</span></div>
               <div class="w-px h-3 bg-[#999] ml-2.5"></div>
@@ -809,7 +1010,7 @@ export const step2Data: Section[] = [
             </div>
           </div>
         </div>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-3 mt-3 rounded-r">
+        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-3 mt-3 rounded-r">
           <p class="text-[#333] text-xs"><span class="font-bold text-[#1a1a1a]">핵심:</span> 합산 수납 시 세무 신고에서 분리 안 되면 전체가 과세 처리될 수 있다. 처음부터 분리 수납이 원칙.</p>
         </div>
       </div>
@@ -821,7 +1022,7 @@ export const step2Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2-5. 응급 대응 프로토콜</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용 시술에서 응급 상황은 드물다. 그러나 한 번 생겼을 때 대응이 늦으면 환자 안전과 법적 리스크가 동시에 발생한다. 대응 속도는 사전에 프로토콜이 있느냐 없느냐로 갈린다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">원칙:</span> 모든 응급 대응의 판단과 실행은 원장이 주도한다. 스탭은 재료 전달·119 신고·기록 보조만 한다.</p>
       </div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">응급 재료 상비 목록</h3>
@@ -915,7 +1116,7 @@ export const step2Data: Section[] = [
     id: "s2-05-chart",
     html: `
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">응급 발생 시 차트 기록 원칙</h3>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">법적 보호의 핵심:</span> 응급 상황에서 차트 기록이 원장을 보호한다. 스탭이 시간대별로 기록해야 한다.</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-2">차트에 반드시 기록해야 할 항목:</p>
@@ -951,10 +1152,96 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">차트 기록 연습</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"몇 시 몇 분에 무슨 조치" 형식으로 시뮬레이션</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">마지막 점검:</span> "히알루로니다제가 지금 우리 치과 어디 있지?"라는 질문에 스탭이 바로 대답 못 하면 오늘 당장 세팅부터 해야 한다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 응급 대응 플로우차트 — 5가지 상황별 즉각 행동 순서 시각화]</div>
+      <div style="background: linear-gradient(135deg, #fdf6f7 0%, #f5e6e8 100%); border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; border: 1px solid #e8d0d4;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <span style="display: inline-block; background: #d94f5c; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px;">EMERGENCY PROTOCOL</span>
+          <div style="font-size: 20px; font-weight: 800; color: #2C2C2C; margin-top: 8px;">응급 대응 플로우차트</div>
+          <div style="font-size: 13px; color: #888; margin-top: 4px;">5가지 상황별 즉각 행동 순서 -- 모든 스탭이 숙지해야 합니다</div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 12px;">
+          <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border-left: 4px solid #d94f5c;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="background: #d94f5c; color: #fff; font-size: 12px; font-weight: 800; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">1</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C;">혈관 내 필러 주입 (혈관 폐색 의심)</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">1. 즉시 시술 중단</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">2. 히알루로니다제 투여</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">3. 온찜질 + 마사지</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">4. 경과 관찰 / 전원</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border-left: 4px solid #e67e22;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="background: #e67e22; color: #fff; font-size: 12px; font-weight: 800; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">2</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C;">알레르기 반응 (두드러기/부종)</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">1. 시술 중단</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">2. 항히스타민제 투여</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">3. 활력징후 모니터링</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">4. 119 또는 전원</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border-left: 4px solid #d94f5c;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="background: #d94f5c; color: #fff; font-size: 12px; font-weight: 800; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">3</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C;">아나필락시스 (호흡곤란/의식저하)</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">1. 119 즉시 호출</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">2. 에피네프린 근주</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">3. 기도 확보 + 산소</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fef2f2; color: #d94f5c; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fecaca;">4. 구급대 인계</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border-left: 4px solid #e67e22;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="background: #e67e22; color: #fff; font-size: 12px; font-weight: 800; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">4</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C;">과다 출혈 (지혈 불량)</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">1. 직접 압박 지혈</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">2. 냉찜질 적용</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">3. 지혈제 도포</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #fff7ed; color: #e67e22; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #fed7aa;">4. 미지혈 시 봉합/전원</span>
+            </div>
+          </div>
+          <div style="background: #fff; border-radius: 12px; padding: 20px; box-shadow: 0 2px 8px rgba(196,146,155,0.08); border-left: 4px solid #C4929B;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+              <div style="background: #C4929B; color: #fff; font-size: 12px; font-weight: 800; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0;">5</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C;">미주신경성 실신 (마취/공포 반응)</div>
+            </div>
+            <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #e8d0d4;">1. 체어 눕히기 (하지 거상)</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #e8d0d4;">2. 의복 이완 + 환기</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #e8d0d4;">3. 활력징후 체크</span>
+              <span style="font-size: 16px; color: #d4a8b0;">&#8594;</span>
+              <span style="background: #F5E6E8; color: #C4929B; font-size: 12px; font-weight: 600; padding: 6px 12px; border-radius: 8px; border: 1px solid #e8d0d4;">4. 회복 후 안정 관찰</span>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: 20px; padding: 12px; background: #fef2f2; border-radius: 8px; border: 1px solid #fecaca;">
+          <span style="font-size: 12px; color: #d94f5c; font-weight: 600;">히알루로니다제, 에피네프린, 항히스타민제 위치를 전 스탭이 알고 있어야 합니다</span>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -963,7 +1250,7 @@ export const step2Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2-6. 재방문 관리 시스템</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용 시술의 수익 구조는 신환 유입보다 구환 재방문에서 안정된다. 신환 한 명 유치하는 비용으로 기존 환자 다섯 명을 재방문시킬 수 있다. 재방문이 없으면 매달 신환을 새로 채워야 하는 구조가 되고, 광고비는 계속 늘어난다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심 전제:</span> 치과는 이미 재방문 구조를 갖고 있다. 정기 검진·스케일링으로 1년에 1~2번 오는 환자가 있다. 이 구조에 미용 시술 재방문 루틴을 얹는 것이 출발점이다.</p>
       </div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">재방문 구조 이해 — 시술별 자연 주기</h3>
@@ -979,7 +1266,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1~2년</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1~2년</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1회</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주기 가장 김. 사후 관리 메뉴로 보완</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">설계 원칙:</span> 단건 고단가 시술만 있으면 방문 사이 공백이 생긴다. 스킨부스터·LDM·레이저처럼 주기 짧은 시술을 반드시 함께 운영해야 재방문이 끊기지 않는다.</p>
       </div>
     `,
@@ -1005,16 +1292,16 @@ export const step2Data: Section[] = [
 
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">2단계 — 시술 후 1~3일 사후 연락</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">보톡스 시술 후 2일차:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-4 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-4 text-[#555] italic">
         <p class="text-sm">"[치과명] 원장 OOO입니다. 엊그제 교근 보톡스 시술 후 어떠세요? 효과는 3~7일 후부터 느껴지기 시작해요. 궁금한 점 있으시면 편하게 연락 주세요."</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">필러 시술 후 3일차:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"[치과명] 원장 OOO입니다. 필러 시술 후 경과 어떠세요? 붓기는 1주일 내로 빠져요. 시술 부위 마사지·압박 피해 주세요."</p>
       </div>
 
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">3단계 — 재방문 주기 알림 연락</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">"[치과명]입니다. 보톡스 맞으신 지 3개월이 지났어요. 슬슬 효과가 줄어드는 타이밍이에요. 편한 날 예약 잡아드릴까요?"</p>
       </div>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
@@ -1042,7 +1329,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보철 완료</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러, HIFU</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"치료 다 마무리되셨으니, 얼굴 전체 관리도 한번 생각해보실 때예요"</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 치과 내원 예약에 미용 시술을 함께 붙이는 것이 가장 효율적인 재방문 구조다. 별도 미용 예약을 따로 잡을 필요가 없어 환자 부담도 줄어든다.</p>
       </div>
 
@@ -1056,7 +1343,7 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">D</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치과 진료만. 미용 무관심</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">진료 중 자연스러운 발견 시도만</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">진료 내원 시</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">실무 팁:</span> A등급 환자 20명이 월 매출의 50~60%를 만든다. 이 20명을 명단으로 관리하고, 원장이 직접 챙기는 것만으로도 재방문율이 크게 달라진다.</p>
       </div>
     `,
@@ -1084,10 +1371,83 @@ export const step2Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">패키지 평균 소진율</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">80% 이상</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">재방문율 50%가 기준선.</span> 50% 이하면 신환 유입으로 빈자리를 채우는 구조다. 50% 이상이면 기존 환자 기반으로 운영이 돌아간다. 70% 넘으면 마케팅 없이도 안정 운영이 가능한 구조다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 재방문 설계 4단계 타임라인 — 시술 당일 &rarr; 사후 연락 &rarr; 주기 알림 &rarr; 재활성화 시각화]</div>
+      <div style="background: linear-gradient(135deg, #fdf6f7 0%, #f5e6e8 100%); border-radius: 12px; padding: 32px 24px; margin-bottom: 24px; border: 1px solid #e8d0d4;">
+        <div style="text-align: center; margin-bottom: 28px;">
+          <span style="display: inline-block; background: #C4929B; color: #fff; font-size: 11px; font-weight: 700; padding: 4px 14px; border-radius: 20px; letter-spacing: 1px;">RETENTION TIMELINE</span>
+          <div style="font-size: 20px; font-weight: 800; color: #2C2C2C; margin-top: 8px;">재방문 설계 4단계 타임라인</div>
+          <div style="font-size: 13px; color: #888; margin-top: 4px;">시술 당일부터 재활성화까지 체계적인 환자 관리 흐름</div>
+        </div>
+        <div style="display: flex; align-items: flex-start; gap: 0; justify-content: center; flex-wrap: wrap; position: relative;">
+          <div style="flex: 1; min-width: 160px; max-width: 220px; text-align: center; position: relative;">
+            <div style="background: #C4929B; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 22px; font-weight: 800; box-shadow: 0 4px 12px rgba(196,146,155,0.3);">1</div>
+            <div style="background: #fff; border-radius: 12px; padding: 20px 16px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border: 1px solid #f0e0e3;">
+              <div style="font-size: 11px; color: #C4929B; font-weight: 700; margin-bottom: 4px;">D-Day</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C; margin-bottom: 8px;">시술 당일</div>
+              <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+                <div style="margin-bottom: 3px;">- 사후 주의사항 서면 전달</div>
+                <div style="margin-bottom: 3px;">- 다음 방문 예약 확정</div>
+                <div>- 비포/애프터 사진 촬영</div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; padding: 28px 4px 0; flex-shrink: 0;">
+            <div style="width: 32px; height: 2px; background: linear-gradient(to right, #C4929B, #d4a8b0);"></div>
+            <div style="font-size: 20px; color: #C4929B;">&#8594;</div>
+          </div>
+          <div style="flex: 1; min-width: 160px; max-width: 220px; text-align: center; position: relative;">
+            <div style="background: #2C2C2C; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 22px; font-weight: 800; box-shadow: 0 4px 12px rgba(44,44,44,0.2);">2</div>
+            <div style="background: #fff; border-radius: 12px; padding: 20px 16px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border: 1px solid #f0e0e3;">
+              <div style="font-size: 11px; color: #2C2C2C; font-weight: 700; margin-bottom: 4px;">D+2~3일</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C; margin-bottom: 8px;">사후 연락</div>
+              <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+                <div style="margin-bottom: 3px;">- 컨디션 확인 문자/전화</div>
+                <div style="margin-bottom: 3px;">- 불편사항 체크</div>
+                <div>- 추가 주의사항 안내</div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; padding: 28px 4px 0; flex-shrink: 0;">
+            <div style="width: 32px; height: 2px; background: linear-gradient(to right, #d4a8b0, #C4929B);"></div>
+            <div style="font-size: 20px; color: #C4929B;">&#8594;</div>
+          </div>
+          <div style="flex: 1; min-width: 160px; max-width: 220px; text-align: center; position: relative;">
+            <div style="background: #C4929B; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 22px; font-weight: 800; box-shadow: 0 4px 12px rgba(196,146,155,0.3);">3</div>
+            <div style="background: #fff; border-radius: 12px; padding: 20px 16px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border: 1px solid #f0e0e3;">
+              <div style="font-size: 11px; color: #C4929B; font-weight: 700; margin-bottom: 4px;">D+30~90일</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C; margin-bottom: 8px;">주기 알림</div>
+              <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+                <div style="margin-bottom: 3px;">- 재시술 적기 사전 알림</div>
+                <div style="margin-bottom: 3px;">- 시즌별 추천 시술 안내</div>
+                <div>- 유지 관리 정보 제공</div>
+              </div>
+            </div>
+          </div>
+          <div style="display: flex; align-items: center; padding: 28px 4px 0; flex-shrink: 0;">
+            <div style="width: 32px; height: 2px; background: linear-gradient(to right, #C4929B, #d4a8b0);"></div>
+            <div style="font-size: 20px; color: #C4929B;">&#8594;</div>
+          </div>
+          <div style="flex: 1; min-width: 160px; max-width: 220px; text-align: center; position: relative;">
+            <div style="background: #2C2C2C; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; font-size: 22px; font-weight: 800; box-shadow: 0 4px 12px rgba(44,44,44,0.2);">4</div>
+            <div style="background: #fff; border-radius: 12px; padding: 20px 16px; box-shadow: 0 2px 8px rgba(196,146,155,0.10); border: 1px solid #f0e0e3;">
+              <div style="font-size: 11px; color: #2C2C2C; font-weight: 700; margin-bottom: 4px;">D+180일~</div>
+              <div style="font-size: 16px; font-weight: 700; color: #2C2C2C; margin-bottom: 8px;">재활성화</div>
+              <div style="font-size: 12px; color: #777; line-height: 1.6; text-align: left;">
+                <div style="margin-bottom: 3px;">- 장기 미방문 환자 리콜</div>
+                <div style="margin-bottom: 3px;">- 특별 프로모션 안내</div>
+                <div>- 새로운 시술 소개</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="display: flex; justify-content: center; gap: 24px; margin-top: 24px; padding-top: 16px; border-top: 1px solid #e8d0d4;">
+          <div style="text-align: center;"><span style="font-size: 24px; font-weight: 800; color: #C4929B;">50%</span><div style="font-size: 11px; color: #888; margin-top: 2px;">최소 기준선</div></div>
+          <div style="text-align: center;"><span style="font-size: 24px; font-weight: 800; color: #2C2C2C;">70%</span><div style="font-size: 11px; color: #888; margin-top: 2px;">안정 운영 구간</div></div>
+          <div style="text-align: center;"><span style="font-size: 24px; font-weight: 800; color: #C4929B;">90%</span><div style="font-size: 11px; color: #888; margin-top: 2px;">마케팅 불필요</div></div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },

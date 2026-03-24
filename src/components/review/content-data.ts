@@ -19,7 +19,7 @@ export const contentData: Record<string, Section[]> = {
       id: "pro-title",
       html: `
         <div class="text-center py-12 border-b border-[#eee] mb-10">
-          <p class="text-[#D4567A] text-sm font-medium tracking-[0.2em] mb-4">A E S T H E T I C &nbsp; D E N T I S T R Y &nbsp; P R A C T I C E &nbsp; G U I D E</p>
+          <p class="text-[#C4929B] text-sm font-medium tracking-[0.2em] mb-4">A E S T H E T I C &nbsp; D E N T I S T R Y &nbsp; P R A C T I C E &nbsp; G U I D E</p>
           <h1 class="text-4xl font-bold text-[#1a1a1a] mb-3">미용치과 도입 실무 마스터</h1>
           <p class="text-[#999] text-sm">(주)더스테이션 | 의료성장연구소</p>
         </div>
@@ -34,7 +34,76 @@ export const contentData: Record<string, Section[]> = {
         <p class="text-[#1a1a1a] font-bold text-lg mb-4">미용치과는 그 해답 중 하나다.</p>
         <p class="text-[#333] leading-relaxed mb-4">보톡스·필러·레이저·실리프팅으로 대표되는 안면미용시술 시장은 대법원 판결로 치과의사에게 법적으로 열려 있다. 법적 근거가 궁금하다면 STEP 0에서 판결의 전모와 허용 범위를 확인할 수 있다. 이 시장은 지금도 성장 중이다. 이미 이 길을 먼저 간 치과들은 기존 수익의 20~40%를 미용시술에서 만들어내고 있다.</p>
         <p class="text-[#333] leading-relaxed mb-6">이 책은 그 길을 처음 걷는 원장님을 위한 실전 로드맵이다.</p>
-        <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-8">[이미지: 치과 수익구조 변화 — 기존(임플란트·교정 중심) vs 미용시술 도입 후 수익 다변화 비교 인포그래픽]</div>
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">REVENUE STRUCTURE</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">치과 수익구조 변화</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">미용시술 도입 전 vs 후 매출 비중 비교</div>
+          </div>
+          <div style="display:flex;gap:20px;align-items:stretch;">
+            <!-- BEFORE -->
+            <div style="flex:1;background:#F9F5F6;border-radius:12px;padding:20px;position:relative;">
+              <div style="text-align:center;margin-bottom:16px;">
+                <div style="font-size:13px;font-weight:700;color:#C4929B;letter-spacing:1px;">BEFORE</div>
+                <div style="font-size:15px;font-weight:600;color:#2C2C2C;">기존 수익구조</div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>임플란트</span><span style="font-weight:700;">45%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:45%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>교정</span><span style="font-weight:700;">25%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:25%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>보존/보철</span><span style="font-weight:700;">20%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:20%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:4px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>기타</span><span style="font-weight:700;">10%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:10%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="text-align:center;margin-top:16px;padding-top:12px;border-top:1px solid #e0d0d3;">
+                <div style="font-size:11px;color:#999;">미용시술 매출</div>
+                <div style="font-size:22px;font-weight:800;color:#ccc;">0%</div>
+              </div>
+            </div>
+            <!-- ARROW -->
+            <div style="display:flex;align-items:center;font-size:28px;color:#C4929B;font-weight:700;">→</div>
+            <!-- AFTER -->
+            <div style="flex:1;background:#F5E6E8;border-radius:12px;padding:20px;border:2px solid #C4929B;position:relative;">
+              <div style="text-align:center;margin-bottom:16px;">
+                <div style="font-size:13px;font-weight:700;color:#C4929B;letter-spacing:1px;">AFTER</div>
+                <div style="font-size:15px;font-weight:600;color:#2C2C2C;">미용시술 도입 후</div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>임플란트</span><span style="font-weight:700;">30%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:30%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>교정</span><span style="font-weight:700;">18%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:18%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>보존/보철</span><span style="font-weight:700;">15%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:15%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
+              </div>
+              <div style="margin-bottom:10px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span style="color:#C4929B;font-weight:600;">보톡스·필러</span><span style="font-weight:700;color:#C4929B;">20%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:20%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a5ad);border-radius:6px;box-shadow:0 0 8px rgba(196,146,155,0.4);"></div></div>
+              </div>
+              <div style="margin-bottom:4px;">
+                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span style="color:#C4929B;font-weight:600;">리프팅·레이저</span><span style="font-weight:700;color:#C4929B;">17%</span></div>
+                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:17%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a5ad);border-radius:6px;box-shadow:0 0 8px rgba(196,146,155,0.4);"></div></div>
+              </div>
+              <div style="text-align:center;margin-top:16px;padding-top:12px;border-top:2px solid #C4929B;">
+                <div style="font-size:11px;color:#C4929B;font-weight:600;">미용시술 매출 비중</div>
+                <div style="font-size:26px;font-weight:800;color:#C4929B;">20~40%</div>
+              </div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:16px;font-size:12px;color:#999;">* 미용시술 도입 치과 실데이터 기반 평균 비중 (출처: KADA 컨설팅 사례)</div>
+        </div>
       `,
     },
     {
@@ -48,7 +117,42 @@ export const contentData: Record<string, Section[]> = {
         <p class="text-[#333] leading-relaxed mb-4">여기서 주목할 것은 치과만의 결정적 자산이다. <span class="text-[#1a1a1a] font-bold">기존 구환.</span></p>
         <p class="text-[#333] leading-relaxed mb-4">신뢰 관계가 이미 형성된 수백 명의 구환은 미용 신환 유치 비용이 제로인 잠재 고객이다. 치과 진료를 마친 환자가 자연스럽게 미용 상담으로 이어지는 경험은 피부과나 에스테틱 샵이 따라올 수 없는 구조다.</p>
         <p class="text-[#333] leading-relaxed mb-6">치과 안면미용시술은 남의 시장에 끼어드는 것이 아니다. <span class="text-[#1a1a1a] font-bold">치과만이 가진 자산 위에서 포지션을 확장하는 것</span>이다.</p>
-        <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-8">[도표: 치과 미용시술 도입의 3가지 자산 — (1) 안면부 해부학 교육 기반 (2) 기존 구환 자산 (3) 법적 근거 확보(STEP 0)]</div>
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">CORE ASSETS</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">치과 미용시술 도입의 3가지 자산</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">다른 진료과가 따라올 수 없는 구조적 강점</div>
+          </div>
+          <div style="display:flex;gap:16px;">
+            <!-- Asset 1 -->
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2-1 3-2 4l-1 1v2h-4v-2l-1-1c-1-1-2-2-2-4a5 5 0 0 1 5-5z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+              </div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 01</div>
+              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">안면부 해부학<br/>교육 기반</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">치과대학 6년 + 수련 과정에서 안면부 신경·혈관·근육 해부학을 체계적으로 학습. 보톡스·필러 시술의 핵심인 <span style="color:#C4929B;font-weight:600;">안면 해부학적 이해도</span>에서 가장 깊은 기반을 보유.</div>
+            </div>
+            <!-- Asset 2 -->
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 02</div>
+              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">기존 구환<br/>자산</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">수백~수천 명의 기존 환자와 <span style="color:#C4929B;font-weight:600;">이미 형성된 신뢰 관계</span>. 미용 신환 유치 비용 제로인 잠재 고객 풀. 치과 진료 후 자연스러운 미용 상담 전환은 타 의원이 복제 불가.</div>
+            </div>
+            <!-- Asset 3 -->
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+              </div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 03</div>
+              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">법적 근거<br/>확보</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">2016년 대법원 전원합의체 판결로 <span style="color:#C4929B;font-weight:600;">안면부 미용시술의 합법성</span>을 최종 확인. 의료법 제27조 면허 범위 내 행위로 인정. STEP 0에서 판결 전문과 실무 적용 범위를 확인.</div>
+            </div>
+          </div>
+        </div>
       `,
     },
     {
@@ -61,7 +165,7 @@ export const contentData: Record<string, Section[]> = {
         <p class="text-[#333] leading-relaxed mb-4">이 책은 그 여정의 전체 지도다.</p>
         <p class="text-[#333] leading-relaxed mb-4">어디서 시작해야 하는지, 무엇을 준비해야 하는지, 어떤 순서로 움직여야 하는지 — Step 0부터 Step 5까지 순서대로 따라가면 된다. 처음부터 끝까지 읽는 교과서가 아니어도 된다. 지금 원장님이 서 있는 단계에 해당하는 챕터를 먼저 펼쳐도 된다.</p>
         <p class="text-[#1a1a1a] font-bold text-lg mb-6">준비된 원장님께 이 시장은 충분히 열려 있다.</p>
-        <div class="border-l-4 border-[#D4567A] pl-4 py-2 mb-8">
+        <div class="border-l-4 border-[#C4929B] pl-4 py-2 mb-8">
           <p class="text-[#333] italic leading-relaxed">One core vision, many ways, one meaning.</p>
           <p class="text-[#999] text-sm mt-1">— 의료성장연구소 메디스테이션</p>
         </div>
@@ -91,7 +195,83 @@ export const contentData: Record<string, Section[]> = {
             </tbody>
           </table>
         </div>
-        <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-8">[도표: STEP 0~5 로드맵 플로우차트 — 각 단계의 핵심 산출물과 연결 흐름]</div>
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">ROADMAP</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">STEP 0 → 5 실전 로드맵</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">각 단계의 핵심 산출물과 연결 흐름</div>
+          </div>
+          <!-- Progress bar -->
+          <div style="position:relative;height:4px;background:#F5E6E8;border-radius:2px;margin:0 40px 28px;">
+            <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,#e8d5d8,#C4929B);border-radius:2px;"></div>
+          </div>
+          <!-- Steps -->
+          <div style="display:flex;gap:8px;">
+            <!-- STEP 0 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">0</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">법적 기반</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Legal Foundation</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">대법원 판결 분석<br/>허용 범위 정리<br/>법적 리스크 매핑</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+            </div>
+            <!-- STEP 1 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">1</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">시장 분석</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Market Analysis</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">시장 규모 산정<br/>경쟁 환경 분석<br/>수익성 시뮬레이션</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+            </div>
+            <!-- STEP 2 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">2</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">시술 설계</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Treatment Design</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">시술 메뉴 구성<br/>가격 체계 설계<br/>프로토콜 표준화</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+            </div>
+            <!-- STEP 3 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">3</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">운영 체계</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Operations</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">인력 구성 설계<br/>공간·장비 세팅<br/>동선·예약 시스템</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+            </div>
+            <!-- STEP 4 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">4</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">마케팅</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Marketing</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">구환 전환 캠페인<br/>신환 유입 채널<br/>브랜딩 전략</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+            </div>
+            <!-- STEP 5 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#2C2C2C;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;box-shadow:0 0 0 3px #C4929B;">5</div>
+              <div style="font-size:12px;font-weight:700;color:#2C2C2C;margin-bottom:2px;">성장 관리</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Growth</div>
+              <div style="background:#2C2C2C;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#F5E6E8;line-height:1.5;">KPI 대시보드<br/>재방문율 관리<br/>매출 스케일업</div>
+              </div>
+              <div style="color:#2C2C2C;font-size:12px;margin-top:8px;font-weight:700;">GOAL</div>
+            </div>
+          </div>
+          <div style="text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid #F5E6E8;">
+            <div style="font-size:12px;color:#999;">각 STEP은 이전 단계의 산출물 위에 구축됩니다. 순서를 건너뛰지 마세요.</div>
+          </div>
+        </div>
       `,
     },
   ],
@@ -101,7 +281,7 @@ export const contentData: Record<string, Section[]> = {
       id: "step0-title",
       html: `
         <div class="text-center py-12 border-b border-[#eee] mb-10">
-          <p class="text-[#D4567A] text-sm font-medium tracking-[0.2em] mb-4">S T E P &nbsp; 0</p>
+          <p class="text-[#C4929B] text-sm font-medium tracking-[0.2em] mb-4">S T E P &nbsp; 0</p>
           <h1 class="text-4xl font-bold text-[#1a1a1a] mb-3">법적 근거 — 치과의사 미용시술은 합법이다</h1>
           <p class="text-[#999] text-sm">대법원 전원합의체 판결이 선언한 치과의사의 안면부 시술 권한</p>
         </div>
@@ -161,7 +341,45 @@ export const contentData: Record<string, Section[]> = {
         <p class="text-[#333] leading-relaxed mb-4">2016년 7월 21일, 대법원 전원합의체(전원합의체란 대법관 13명 전원이 참여하는 대법원 최고 의사결정 구조로, 종전 판례를 변경하거나 사회적 파급력이 극히 큰 사안에서만 소집된다)가 판결을 선고했다. 치과의사가 환자의 안면부에 보톡스를 시술한 행위는 면허 범위 내 의료행위이며, 미용 목적이라 해서 달리 볼 것은 아니라는 것이다.</p>
         <p class="text-[#333] leading-relaxed mb-4">이 판결의 무게를 가볍게 봐서는 안 된다. 전원합의체 판결은 하급심을 구속하며, 또 다른 전원합의체 판결로만 뒤집을 수 있다. 2016년 이후 9년이 지난 지금까지 이 판결을 번복하는 판례도, 이를 차단하는 입법도 존재하지 않는다. 의협이 시도한 의료법 개정은 국회를 통과하지 못했고, 피부과학회가 제기한 헌법소원도 인용되지 않았다.</p>
         <p class="text-[#1a1a1a] font-bold text-lg mb-6">대한민국 사법체계에서 이보다 더 강한 형태의 합법 확인은 사실상 존재하지 않는다.</p>
-        <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-8">[이미지: 2016년 대법원 전원합의체 판결 핵심 — "안면부 보톡스는 면허 범위 내, 미용 목적이라 해서 달리 볼 것은 아니다" 인용문 강조 카드]</div>
+        <div style="background:linear-gradient(135deg,#2C2C2C 0%,#3a3a3a 100%);border-radius:12px;padding:32px 28px;margin-bottom:32px;font-family:'Pretendard',sans-serif;position:relative;overflow:hidden;">
+          <!-- Decorative element -->
+          <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(196,146,155,0.1);border-radius:50%;"></div>
+          <div style="position:absolute;bottom:-30px;left:-30px;width:80px;height:80px;background:rgba(196,146,155,0.08);border-radius:50%;"></div>
+          <!-- Header -->
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+            <div style="width:44px;height:44px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+            </div>
+            <div>
+              <div style="font-size:11px;color:#C4929B;font-weight:700;letter-spacing:1px;">SUPREME COURT OF KOREA</div>
+              <div style="font-size:16px;font-weight:700;color:#fff;">2016년 대법원 전원합의체 판결</div>
+            </div>
+          </div>
+          <!-- Case info -->
+          <div style="background:rgba(196,146,155,0.15);border-radius:8px;padding:12px 16px;margin-bottom:20px;display:flex;gap:24px;flex-wrap:wrap;">
+            <div><span style="font-size:11px;color:#999;">사건번호</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">2013도850</span></div>
+            <div><span style="font-size:11px;color:#999;">선고일</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">2016. 7. 21.</span></div>
+            <div><span style="font-size:11px;color:#999;">판결 형태</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">전원합의체 (대법관 13인)</span></div>
+            <div><span style="font-size:11px;color:#999;">구속력</span><br/><span style="font-size:13px;color:#C4929B;font-weight:700;">최종심 — 사법부 최고 판단</span></div>
+          </div>
+          <!-- Quote -->
+          <div style="border-left:4px solid #C4929B;padding:20px 24px;margin-bottom:20px;background:rgba(245,230,232,0.07);border-radius:0 8px 8px 0;">
+            <div style="font-size:28px;color:#C4929B;line-height:1;margin-bottom:8px;font-family:Georgia,serif;">"</div>
+            <div style="font-size:16px;color:#fff;font-weight:600;line-height:1.8;letter-spacing:-0.2px;">
+              치과의사가 안면부에 보톡스를 시술하는 행위는<br/>
+              <span style="color:#C4929B;font-size:18px;font-weight:800;">면허된 것 이외의 의료행위에 해당하지 않는다.</span><br/>
+              <span style="color:#e0d0d3;">미용 목적이라 하여 달리 볼 것은 아니다.</span>
+            </div>
+            <div style="font-size:28px;color:#C4929B;line-height:1;text-align:right;margin-top:8px;font-family:Georgia,serif;">"</div>
+          </div>
+          <!-- Bottom note -->
+          <div style="display:flex;align-items:center;gap:10px;padding-top:16px;border-top:1px solid rgba(196,146,155,0.3);">
+            <div style="width:8px;height:8px;background:#C4929B;border-radius:50%;flex-shrink:0;"></div>
+            <div style="font-size:12px;color:#999;line-height:1.5;">
+              전원합의체 판결은 대법관 13인 전원이 참여하는 대한민국 사법체계 최고 수준의 판단입니다. 이보다 강한 형태의 합법 확인은 사실상 존재하지 않습니다.
+            </div>
+          </div>
+        </div>
       `,
     },
     {
@@ -238,21 +456,21 @@ export const contentData: Record<string, Section[]> = {
               </div>
             </div>
             <!-- 전원합의체 -->
-            <div class="border-2 border-[#D4567A] rounded-lg overflow-hidden">
-              <div class="bg-[#D4567A] px-4 py-3 text-center">
+            <div class="border-2 border-[#C4929B] rounded-lg overflow-hidden">
+              <div class="bg-[#C4929B] px-4 py-3 text-center">
                 <p class="text-white font-bold">전원합의체 판결</p>
               </div>
               <div class="p-4 space-y-3 text-sm">
-                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#D4567A] font-bold">13인 전원</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#C4929B] font-bold">13인 전원</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
-                <div class="flex justify-between"><span class="text-[#999]">사건 유형</span><span class="text-[#D4567A]">판례 변경 필요 사건</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">사건 유형</span><span class="text-[#C4929B]">판례 변경 필요 사건</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
-                <div class="flex justify-between"><span class="text-[#999]">선례 효력</span><span class="text-[#D4567A] font-bold">판례 법리 확정</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">선례 효력</span><span class="text-[#C4929B] font-bold">판례 법리 확정</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
-                <div class="flex justify-between"><span class="text-[#999]">법적 효과</span><span class="text-[#D4567A] font-bold">사실상 법률 효과</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">법적 효과</span><span class="text-[#C4929B] font-bold">사실상 법률 효과</span></div>
               </div>
-              <div class="bg-[#D4567A]/10 px-4 py-2 text-center">
-                <p class="text-[#D4567A] text-xs font-bold">최고 수준의 법적 구속력</p>
+              <div class="bg-[#C4929B]/10 px-4 py-2 text-center">
+                <p class="text-[#C4929B] text-xs font-bold">최고 수준의 법적 구속력</p>
               </div>
             </div>
           </div>
@@ -323,28 +541,28 @@ export const contentData: Record<string, Section[]> = {
               </div>
               <!-- 2016.7 전원합의체 (핵심) -->
               <div class="flex flex-col items-center text-center w-1/6">
-                <div class="w-5 h-5 rounded-full bg-[#D4567A] border-2 border-[#D4567A] z-10 ring-2 ring-[#D4567A]/20"></div>
-                <p class="text-[#D4567A] text-xs font-bold mt-2">2016.7</p>
-                <p class="text-[#D4567A] text-[10px] font-semibold">대법원 전원합의체</p>
-                <p class="text-[#D4567A] text-[10px] font-semibold">보톡스 무죄</p>
+                <div class="w-5 h-5 rounded-full bg-[#C4929B] border-2 border-[#C4929B] z-10 ring-2 ring-[#C4929B]/20"></div>
+                <p class="text-[#C4929B] text-xs font-bold mt-2">2016.7</p>
+                <p class="text-[#C4929B] text-[10px] font-semibold">대법원 전원합의체</p>
+                <p class="text-[#C4929B] text-[10px] font-semibold">보톡스 무죄</p>
               </div>
               <!-- 2016.8 레이저 -->
               <div class="flex flex-col items-center text-center w-1/6">
-                <div class="w-3.5 h-3.5 rounded-full bg-[#D4567A]/30 border border-[#D4567A] z-10"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2016.8</p>
                 <p class="text-[#999] text-[10px]">레이저 무죄</p>
                 <p class="text-[#999] text-[10px]">(소부)</p>
               </div>
               <!-- 2022 한의사 -->
               <div class="flex flex-col items-center text-center w-1/6">
-                <div class="w-3.5 h-3.5 rounded-full bg-[#D4567A]/30 border border-[#D4567A] z-10"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2022.12</p>
                 <p class="text-[#999] text-[10px]">한의사 판결서</p>
                 <p class="text-[#999] text-[10px]">논리 인용</p>
               </div>
               <!-- 2024 복지부 -->
               <div class="flex flex-col items-center text-center w-1/6">
-                <div class="w-3.5 h-3.5 rounded-full bg-[#D4567A]/30 border border-[#D4567A] z-10"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2024.2</p>
                 <p class="text-[#999] text-[10px]">복지부 재확인</p>
               </div>
@@ -394,13 +612,13 @@ export const contentData: Record<string, Section[]> = {
               <p class="text-[10px] opacity-70 mt-0.5">침습적 수술</p>
             </div>
             <!-- Middle: 조건부 -->
-            <div class="w-[65%] bg-[#D4567A]/20 border-x border-[#D4567A]/30 text-center py-3">
-              <p class="text-[#D4567A] text-xs font-bold">조건부 가능</p>
-              <p class="text-[#D4567A] text-[10px] mt-0.5">실리프팅, 레이저</p>
+            <div class="w-[65%] bg-[#C4929B]/20 border-x border-[#C4929B]/30 text-center py-3">
+              <p class="text-[#C4929B] text-xs font-bold">조건부 가능</p>
+              <p class="text-[#C4929B] text-[10px] mt-0.5">실리프팅, 레이저</p>
               <p class="text-[#999] text-[10px]">판례 근거 필수</p>
             </div>
             <!-- Bottom: 적극 가능 -->
-            <div class="w-[90%] bg-[#D4567A] text-white text-center py-3 rounded-b-lg">
+            <div class="w-[90%] bg-[#C4929B] text-white text-center py-3 rounded-b-lg">
               <p class="text-xs font-bold">적극 가능</p>
               <p class="text-[10px] mt-0.5">보톡스 · 필러 · 스킨부스터</p>
               <p class="text-[10px] opacity-70">안전성·시장 검증 완료</p>
@@ -451,50 +669,50 @@ export const contentData: Record<string, Section[]> = {
               <tbody>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">보톡스</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">권고</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">필러</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">권고</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">스킨부스터</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">권고</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">실리프팅</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">중간</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">중간</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">HIFU</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">레이저</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#D4567A] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#D4567A]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="flex gap-4 justify-center mt-3 text-[10px]">
-            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#D4567A] rounded-sm inline-block"></span><span class="text-[#999]">강함 = 법적 근거 명확</span></span>
-            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#D4567A]/40 rounded-sm inline-block"></span><span class="text-[#999]">중간 = 신중한 운영 필요</span></span>
+            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#C4929B] rounded-sm inline-block"></span><span class="text-[#999]">강함 = 법적 근거 명확</span></span>
+            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#C4929B]/40 rounded-sm inline-block"></span><span class="text-[#999]">중간 = 신중한 운영 필요</span></span>
           </div>
         </div>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-8">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#D4567A] font-bold">TIP:</span> 판결은 보톡스에 대해 직접 판시했지만, 필러·실리프팅·스킨부스터 등도 같은 논리 구조(안면부 + 구강악안면외과 교육 + 보건위생 위해 낮음)로 방어할 수 있다. 다만 직접 판례가 없으므로, <span class="text-[#1a1a1a] font-bold">기록(동의서·차트·사진)을 더욱 철저히</span> 해야 한다.</p>
+        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
+          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">TIP:</span> 판결은 보톡스에 대해 직접 판시했지만, 필러·실리프팅·스킨부스터 등도 같은 논리 구조(안면부 + 구강악안면외과 교육 + 보건위생 위해 낮음)로 방어할 수 있다. 다만 직접 판례가 없으므로, <span class="text-[#1a1a1a] font-bold">기록(동의서·차트·사진)을 더욱 철저히</span> 해야 한다.</p>
         </div>
       `,
     },
@@ -507,8 +725,8 @@ export const contentData: Record<string, Section[]> = {
           <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">기록을 남겨라.</span> 동의서·차트·시술 전후 사진은 분쟁 시 유일한 방어 수단이다.</li>
           <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">교육 근거를 갖춰라.</span> 시술 관련 교육 이수 이력은 '면허 범위 내'를 입증하는 보조 근거가 된다.</li>
         </ol>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-8">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#D4567A] font-bold">실전 예시:</span> 사각턱 보톡스(녹색)를 시작으로, 입술 필러(황색)로 확장하고, 승모근(적색)은 메뉴에 넣지 않는다 — 이것이 허용 범위 지도를 실무에 적용하는 가장 안전한 순서다.</p>
+        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
+          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> 사각턱 보톡스(녹색)를 시작으로, 입술 필러(황색)로 확장하고, 승모근(적색)은 메뉴에 넣지 않는다 — 이것이 허용 범위 지도를 실무에 적용하는 가장 안전한 순서다.</p>
         </div>
       `,
     },
@@ -556,8 +774,8 @@ export const contentData: Record<string, Section[]> = {
                 <p class="text-white text-sm font-semibold">면허 범위 초과</p>
               </div>
               <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#D4567A]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#D4567A] font-semibold">대응 논리</p>
+              <div class="bg-[#C4929B]/10 px-4 py-2.5">
+                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
                 <p class="text-[#1a1a1a] text-sm">대법원 전원합의체 판결로 합법 확정</p>
               </div>
             </div>
@@ -568,8 +786,8 @@ export const contentData: Record<string, Section[]> = {
                 <p class="text-white text-sm font-semibold">안전성 문제</p>
               </div>
               <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#D4567A]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#D4567A] font-semibold">대응 논리</p>
+              <div class="bg-[#C4929B]/10 px-4 py-2.5">
+                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
                 <p class="text-[#1a1a1a] text-sm">치과의사 해부학 교육 5,000시간+ 확보</p>
               </div>
             </div>
@@ -580,8 +798,8 @@ export const contentData: Record<string, Section[]> = {
                 <p class="text-white text-sm font-semibold">의협 반대</p>
               </div>
               <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#D4567A]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#D4567A] font-semibold">대응 논리</p>
+              <div class="bg-[#C4929B]/10 px-4 py-2.5">
+                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
                 <p class="text-[#1a1a1a] text-sm">법적 구속력 없는 단체 의견</p>
               </div>
             </div>
@@ -592,8 +810,8 @@ export const contentData: Record<string, Section[]> = {
                 <p class="text-white text-sm font-semibold">환자 인식 부족</p>
               </div>
               <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#D4567A]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#D4567A] font-semibold">대응 논리</p>
+              <div class="bg-[#C4929B]/10 px-4 py-2.5">
+                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
                 <p class="text-[#1a1a1a] text-sm">미용치과 시장 연평균 15%+ 성장</p>
               </div>
             </div>
@@ -615,8 +833,8 @@ export const contentData: Record<string, Section[]> = {
           <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">경찰 고발까지 갈 수 있다.</span> 보건소에서 복지부로, 복지부에서 검찰로 넘어가는 경로가 있다.</li>
         </ul>
         <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">하지만 이것이 '하지 말아야 할 이유'는 아니다. 최종 판단 기준은 대법원 전원합의체 판결이며, 9년간 이 판결을 뒤집은 사례는 없다. 필요한 것은 불안에 멈추는 것이 아니라, 기록과 프로토콜로 무장하는 것이다.</p>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-4">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#D4567A] font-bold">실전 예시:</span> A 치과는 보톡스 도입 3개월 차에 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 시술 동의서·차트·시술 전후 사진을 모두 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과: 행정 조치 없이 종결. 기록이 없었다면 결과가 달랐을 수 있다.</p>
+        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-4">
+          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> A 치과는 보톡스 도입 3개월 차에 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 시술 동의서·차트·시술 전후 사진을 모두 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과: 행정 조치 없이 종결. 기록이 없었다면 결과가 달랐을 수 있다.</p>
         </div>
         <p class="text-[#999] text-sm mb-8">민원·신고 발생 시 구체적 대응 방법은 <span class="text-[#1a1a1a] font-bold">STEP 5-3. 민원·신고 대응 매뉴얼</span>에서 상세히 다룬다.</p>
       `,
@@ -685,7 +903,7 @@ export const contentData: Record<string, Section[]> = {
           <p class="text-[#999] text-xs text-center mb-4">미용시술 관점에서 본 전문성 및 법적 기반</p>
           <div class="grid grid-cols-2 gap-0 border border-[#eee] rounded-lg overflow-hidden text-sm">
             <!-- 헤더 -->
-            <div class="bg-[#D4567A] text-white text-center py-2.5 font-bold">치과의사</div>
+            <div class="bg-[#C4929B] text-white text-center py-2.5 font-bold">치과의사</div>
             <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2.5 font-bold border-l border-[#eee]">한의사</div>
             <!-- 대법원 판결 -->
             <div class="px-3 py-2.5 border-t border-[#eee]">
@@ -724,8 +942,8 @@ export const contentData: Record<string, Section[]> = {
               <p class="text-[#999] text-xs">현대 의료기기 사용 제한</p>
             </div>
             <!-- 결론 -->
-            <div class="bg-[#D4567A]/10 px-3 py-2 text-center border-t border-[#eee]">
-              <p class="text-[#D4567A] text-xs font-bold">더 강한 법적 기반</p>
+            <div class="bg-[#C4929B]/10 px-3 py-2 text-center border-t border-[#eee]">
+              <p class="text-[#C4929B] text-xs font-bold">더 강한 법적 기반</p>
             </div>
             <div class="bg-[#f5f5f5] px-3 py-2 text-center border-t border-l border-[#eee]">
               <p class="text-[#999] text-xs font-semibold">제한적 인정</p>
@@ -796,8 +1014,8 @@ export const contentData: Record<string, Section[]> = {
             </tbody>
           </table>
         </div>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-4">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#D4567A] font-bold">실전 예시:</span> 동의서에는 최소한 다음 항목이 포함되어야 한다 — 시술명, 시술 부위, 사용 제품명·용량, 예상 효과 및 지속 기간, 가능한 부작용, 환자 서명·날짜. 이 한 장이 민원 발생 시 원장을 보호하는 핵심 증거가 된다.</p>
+        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-4">
+          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> 동의서에는 최소한 다음 항목이 포함되어야 한다 — 시술명, 시술 부위, 사용 제품명·용량, 예상 효과 및 지속 기간, 가능한 부작용, 환자 서명·날짜. 이 한 장이 민원 발생 시 원장을 보호하는 핵심 증거가 된다.</p>
         </div>
         <p class="text-[#999] text-sm mb-8">동의서 양식, 차트 기록 가이드, SOP 표준은 <span class="text-[#1a1a1a] font-bold">STEP 2</span>에서 상세히 다룬다. 민원·신고 발생 시 대응 프로토콜은 <span class="text-[#1a1a1a] font-bold">STEP 5-3</span>에서 다룬다.</p>
       `,

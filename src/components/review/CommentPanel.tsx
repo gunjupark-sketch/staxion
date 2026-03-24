@@ -112,7 +112,7 @@ export function CommentPanel({ sectionId, authorName, isOpen, onClose }: Comment
           }}
           placeholder="코멘트 작성... (Ctrl+Enter로 전송)"
           rows={3}
-          className="w-full bg-white border border-[#ddd] rounded-lg px-3 py-2 text-sm text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#D4567A] resize-none"
+          className="w-full bg-white border border-[#ddd] rounded-lg px-3 py-2 text-sm text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#C4929B] resize-none"
         />
         <button
           onClick={handleSubmit}
@@ -144,7 +144,7 @@ function CommentItem({
     <div className="bg-white rounded-lg p-3 group border border-[#eee]">
       <div className="flex items-center justify-between mb-1.5">
         <div className="flex items-center gap-2">
-          <span className="w-5 h-5 rounded-full bg-[#D4567A] flex items-center justify-center text-white text-[10px] font-bold">
+          <span className="w-5 h-5 rounded-full bg-[#C4929B] flex items-center justify-center text-white text-[10px] font-bold">
             {comment.author_name.charAt(0)}
           </span>
           <span className="text-xs font-medium text-[#555]">{comment.author_name}</span>
@@ -154,7 +154,7 @@ function CommentItem({
       <p className="text-sm text-[#333] whitespace-pre-wrap leading-relaxed">{comment.content}</p>
       <button
         onClick={() => onResolve(comment.id, !comment.resolved)}
-        className="mt-2 text-[10px] text-[#bbb] hover:text-[#D4567A] opacity-0 group-hover:opacity-100 transition-opacity"
+        className="mt-2 text-[10px] text-[#bbb] hover:text-[#C4929B] opacity-0 group-hover:opacity-100 transition-opacity"
       >
         {comment.resolved ? "다시 열기" : "해결됨으로 표시"}
       </button>

@@ -92,7 +92,7 @@ function PasscodeScreen({ onSuccess }: { onSuccess: () => void }) {
   return (
     <div className="min-h-screen flex items-center justify-center bg-white">
       <div className="w-[360px] text-center">
-        <p className="text-[#D4567A] text-xs font-medium tracking-[0.2em] mb-3">
+        <p className="text-[#C4929B] text-xs font-medium tracking-[0.2em] mb-3">
           AESTHETIC DENTISTRY PRACTICE GUIDE
         </p>
         <h1 className="text-2xl font-bold text-[#1a1a1a] mb-1">초고 리뷰</h1>
@@ -106,7 +106,7 @@ function PasscodeScreen({ onSuccess }: { onSuccess: () => void }) {
           className={`w-full border rounded-lg px-4 py-3 text-center text-lg tracking-[0.3em] focus:outline-none transition-colors ${
             error
               ? "border-red-400 bg-red-50"
-              : "border-[#ddd] bg-[#fafafa] focus:border-[#D4567A]"
+              : "border-[#ddd] bg-[#fafafa] focus:border-[#C4929B]"
           }`}
           autoFocus
         />
@@ -139,7 +139,7 @@ function NameModal({ onSubmit }: { onSubmit: (name: string) => void }) {
           onChange={(e) => setName(e.target.value)}
           onKeyDown={(e) => e.key === "Enter" && name.trim() && onSubmit(name.trim())}
           placeholder="이름 또는 닉네임"
-          className="w-full bg-[#fafafa] border border-[#ddd] rounded-lg px-4 py-3 text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#D4567A] mb-4"
+          className="w-full bg-[#fafafa] border border-[#ddd] rounded-lg px-4 py-3 text-[#1a1a1a] placeholder:text-[#bbb] focus:outline-none focus:border-[#C4929B] mb-4"
           autoFocus
         />
         <button

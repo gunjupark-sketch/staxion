@@ -46,7 +46,7 @@ export const step1Data: Section[] = [
     id: "s1-intro-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="font-bold text-[#1a1a1a] mb-2 not-italic">이 STEP의 구성</p>
         <ul class="list-disc pl-6 space-y-1">
           <li><span class="font-bold text-[#1a1a1a]">1-1. 보톡스</span> — 미용치과의 출발점이자 가장 강력한 입구</li>
@@ -127,7 +127,7 @@ export const step1Data: Section[] = [
         </tbody>
       </table>
       <p class="text-[#333] leading-relaxed mb-4">피부과 의사에게 교근은 해부학 교과서 속 그림이다. 치과의사에게 교근은 매일 손으로 만지는 근육이다. 같은 지도를 갖고 있어도, 직접 걸어본 사람과 위성사진만 본 사람은 다르다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 교정 완료 환자에게 "교정으로 치아는 정리됐는데, 교근이 발달해서 턱라인이 아직 각져 보이네요. 사각턱 보톡스로 턱라인을 다듬으면 교정 효과가 훨씬 살아납니다." 이런 제안은 피부과에서는 구조적으로 불가능하다. 치과의 치료 맥락 위에서만 성립하는 이야기다.</p>
       </div>
     `,
@@ -303,7 +303,7 @@ export const step1Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">2. 치과와의 연결점</h3>
       <p class="text-[#333] leading-relaxed mb-4">필러 시술 부위 중 <span class="font-bold text-[#1a1a1a]">입술, 턱끝, 팔자주름, 입꼬리</span>는 모두 구강 주변에 위치한다. 하악 신경, 이신경, 안면동맥 등의 주행 경로에 대한 임상적 친숙도가 높다. 이것이 치과의 두 번째 핵심 역량이다.</p>
       <p class="text-[#333] leading-relaxed mb-4">하치조신경차단(IANB) 마취를 매일 시행하면서 축적된 해부학적 감각은 필러 시술의 안전성과 직결된다. 피부과 의사가 교과서로 배운 신경 경로를, 치과의사는 매일 바늘로 확인한다. 이 경험의 차이가 안전성의 기초가 된다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 임플란트 보철 완료 환자. "치아는 완성됐는데, 입술 볼륨이 줄어서 전체 비율이 아쉽네요. 입술 필러 1cc면 치아와 입술 비율이 훨씬 자연스러워집니다." 이 제안은 치과의 치료 연장선 위에서만 가능하다. 피부과에서 "치아와 입술 비율"을 언급할 수 있는가. 없다. 이것이 치과만의 관점이다.</p>
       </div>
     `,
@@ -884,7 +884,7 @@ export const step1Data: Section[] = [
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">시술 간 가격 위계</h3>
       <p class="text-[#333] leading-relaxed mb-4">미용치과에서 제공하는 시술들에는 환자 인식 상의 가격 위계가 존재한다. 이 위계를 무시하면 환자의 혼란이 발생한다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">낮음 → 높음:</span><br/>LDM/LED &lt; 보톡스 = IPL/토닝 &lt; 스킨부스터 &lt; 필러 &lt; 슈링크/인모드 &lt; 실리프팅 &lt; 울쎄라</p>
       </div>
       <p class="text-[#333] leading-relaxed mb-4">보톡스가 필러보다 비싸면 환자가 의아해한다. 스킨부스터가 실리프팅보다 비싸면 체계가 무너진다. 이 위계는 환자의 상식에 기반한 것이므로, 역전시키지 마라.</p>
@@ -898,7 +898,7 @@ export const step1Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">할인율은 10~20% 범위를 유지한다.</span> 30% 이상이면 개별 시술의 가치가 훼손된다.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">업셀 동선을 설계한다.</span> 엔트리(보톡스+LDM) → 코어(보톡스+필러+스킨부스터) → 프리미엄(리프팅+실+스킨부스터). 환자가 자연스럽게 단계를 밟도록 경로를 만든다.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">선불 패키지의 환불 원칙을 명확히 한다.</span> 소비자분쟁해결기준에 따라 미사용분 환불이 원칙이다. '환불 불가'는 불공정 약관이다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 보톡스 5만원 + LDM 3만원 = 개별 합산 8만원인 세트를 패키지 7만원(12% 할인)으로 설정한다. 엔트리 패키지로 미용 첫 경험 환자를 유입한 뒤, 3회차 방문 시 필러·스킨부스터로 코어 패키지 전환을 제안한다.</p>
       </div>
     `,

@@ -31,7 +31,7 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리즈톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사각턱</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">26</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">7,026</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">12,800</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">29,675</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 제오민(고가) 사각턱 중간값 71,500원 vs 리즈톡스(저가) 12,800원 = 약 5.6배 차이. 제품 등급이 수가를 결정한다.
       </div>
 
@@ -47,7 +47,7 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">쥬비덤</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">입술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">56</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">330,000</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">376,500</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">427,350</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 고가 3사(레스틸렌·벨로테로·쥬비덤) 중간값 319,000~376,500원 vs 중가(아띠에르) 99,500원 = 약 3~4배 격차.
       </div>
 
@@ -77,7 +77,7 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">소프웨이브</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">89</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100샷당</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">1,071,500</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 단가 기준이 장비마다 다르므로(100샷당, 1회당, 10kJ당) 직접 비교 시 주의. 슈링크(46,000원) vs 울쎄라(362,550원) = 같은 100샷 기준 약 8배 차이.
       </div>
 
@@ -115,9 +115,9 @@ export const appendixData: Section[] = [
           <tr><th class="px-4 py-2 text-left font-medium">항목</th><th class="px-4 py-2 text-left font-medium">치과의사</th><th class="px-4 py-2 text-left font-medium">한의사</th></tr>
         </thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">대법원 무죄 확정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">처방권 없음</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">대법원 무죄 확정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">처방권 없음</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판결 논리 확장 가능</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법원 유죄 확정</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">대법원 무죄 확정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법원 유죄 확정</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">대법원 무죄 확정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법원 유죄 확정</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">전문의약품 처방</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">가능</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불가</td></tr>
         </tbody>
       </table>
@@ -151,8 +151,8 @@ export const appendixData: Section[] = [
           <tr><th class="px-4 py-2 text-left font-medium">응급 상황</th><th class="px-4 py-2 text-left font-medium">1순위 약품</th><th class="px-4 py-2 text-left font-medium">골든타임</th></tr>
         </thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러 후 혈관 폐색</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">히알루로니다제</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">4시간 이내 (즉각 투여 원칙)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">아나필락시스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">에피네프린</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">즉시</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러 후 혈관 폐색</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">히알루로니다제</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">4시간 이내 (즉각 투여 원칙)</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">아나필락시스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">에피네프린</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">즉시</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">경증 알레르기</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">항히스타민제</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">증상 발현 즉시</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">미주신경 반응</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">(약품 불필요)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5~10분 자연 회복</td></tr>
         </tbody>
@@ -163,7 +163,7 @@ export const appendixData: Section[] = [
         <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
           <!-- 혈관폐색 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">혈관폐색</div>
+            <div class="bg-[#C4929B] text-white text-xs font-bold text-center py-2 rounded-t-lg">혈관폐색</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg">
               <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">시술 중단</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -176,7 +176,7 @@ export const appendixData: Section[] = [
           </div>
           <!-- 아나필락시스 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">아나필락시스</div>
+            <div class="bg-[#C4929B] text-white text-xs font-bold text-center py-2 rounded-t-lg">아나필락시스</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg">
               <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">119 신고</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -189,7 +189,7 @@ export const appendixData: Section[] = [
           </div>
           <!-- 미주신경반응 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">미주신경반응</div>
+            <div class="bg-[#C4929B] text-white text-xs font-bold text-center py-2 rounded-t-lg">미주신경반응</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg">
               <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">눕히기</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -202,7 +202,7 @@ export const appendixData: Section[] = [
           </div>
           <!-- 감염 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold text-center py-2 rounded-t-lg">감염</div>
+            <div class="bg-[#C4929B] text-white text-xs font-bold text-center py-2 rounded-t-lg">감염</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg">
               <div class="border-b border-[#eee] px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">항생제 투여</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -235,8 +235,8 @@ export const appendixData: Section[] = [
           <tr><th class="px-4 py-2 text-left font-medium">채널</th><th class="px-4 py-2 text-left font-medium">심의 필요</th><th class="px-4 py-2 text-left font-medium">주의사항</th></tr>
         </thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">네이버 키워드 광고</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">광고 소재 + 랜딩 페이지 모두</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인스타 유료 광고</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">B/A 사진 사용 시 특히 주의</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">네이버 키워드 광고</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">광고 소재 + 랜딩 페이지 모두</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인스타 유료 광고</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">B/A 사진 사용 시 특히 주의</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인스타 자체 콘텐츠</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">광고성 → 필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">순수 정보 제공·근황만 예외</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">네이버 블로그</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">광고성 → 필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">정보성과 광고 구분이 핵심</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">카카오 채널 (기존 환자)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불특정 다수 발송 시에는 심의 대상</td></tr>
@@ -263,50 +263,50 @@ export const appendixData: Section[] = [
             <tbody>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">네이버 플레이스</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">인스타그램</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">블로그</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">유튜브</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">카카오채널</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
               <tr>
                 <td class="px-2 py-2 bg-[#f5f5f5] font-bold text-[#1a1a1a] border border-[#eee]">현수막/전단</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
-                <td class="px-2 py-2 text-center border border-[#eee] bg-[#D4567A] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] bg-opacity-20 text-[#1a1a1a]">자가점검</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
+                <td class="px-2 py-2 text-center border border-[#eee] bg-[#C4929B] text-white font-bold">심의 필수</td>
                 <td class="px-2 py-2 text-center border border-[#eee] text-[#1a1a1a]">자유</td>
               </tr>
             </tbody>
@@ -314,8 +314,8 @@ export const appendixData: Section[] = [
         </div>
         <!-- 범례 -->
         <div class="flex items-center justify-center gap-4 mt-4 text-[10px] text-[#999]">
-          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#D4567A]"></span> 심의 필수</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#D4567A] opacity-20 border border-[#D4567A]"></span> 자가점검</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#C4929B]"></span> 심의 필수</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block bg-[#C4929B] opacity-20 border border-[#C4929B]"></span> 자가점검</span>
           <span class="flex items-center gap-1"><span class="w-3 h-3 inline-block border border-[#eee]"></span> 자유</span>
         </div>
         <p class="text-[10px] text-[#999] text-center mt-2">의료법 시행규칙 제29조의2 광고심의기준 참고</p>
@@ -358,19 +358,19 @@ export const appendixData: Section[] = [
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">과세/면세 구분</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q1. 치과에서 미용 보톡스를 시술하면 부가세를 내야 하나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">그렇다.</span> 미용 목적 보톡스는 VAT 10% 과세 대상. (부가가치세법 제26조)</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">그렇다.</span> 미용 목적 보톡스는 VAT 10% 과세 대상. (부가가치세법 제26조)</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q2. 같은 교근 보톡스인데 목적에 따라 과세/면세가 다른가?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">맞다.</span> 이갈이 치료 목적 = 면세, 사각턱 미용 목적 = 과세. 차트에 시술 목적 반드시 명시.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">맞다.</span> 이갈이 치료 목적 = 면세, 사각턱 미용 목적 = 과세. 차트에 시술 목적 반드시 명시.</p>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">사업자 전환 및 부가세 신고</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q6. 미용시술을 시작하면 사업자등록을 바꿔야 하나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">그렇다.</span> 과·면세 겸업사업자로 전환. 개시일로부터 20일 이내 정정 신고.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">그렇다.</span> 과·면세 겸업사업자로 전환. 개시일로부터 20일 이내 정정 신고.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q7. 부가세 신고는 언제?</span></p>
       <p class="text-[#333] leading-relaxed mb-4">A. 1년에 2회. 1기(1~6월분): 7월 25일까지 / 2기(7~12월분): 다음 해 1월 25일까지.</p>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">현금영수증 & 매입세액공제</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q9. 미용시술 현금 결제 시 현금영수증 필수?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">반드시 발행.</span> 치과는 의무발행 업종. 미발급 시 미발급 금액의 20% 가산세.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">반드시 발행.</span> 치과는 의무발행 업종. 미발급 시 미발급 금액의 20% 가산세.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q13. HIFU, 레이저 장비 구매 시 매입세액공제 되나?</span></p>
       <p class="text-[#333] leading-relaxed mb-4">A. 과세 사업(미용시술) 전용 장비는 전액 공제. 공통 사용 장비는 안분 계산. <span class="font-bold text-[#1a1a1a]">세금계산서 필수.</span></p>
 
@@ -403,7 +403,7 @@ export const appendixData: Section[] = [
         </thead>
         <tbody>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불필요 (기존 치과 인프라)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인슐린 시린지, 보톡스 바이알, 생리식염수</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HA 필러 시린지, 캐뉼라, <span class="font-bold text-[#D4567A]">히알루로니다제 (필수)</span></td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HA 필러 시린지, 캐뉼라, <span class="font-bold text-[#C4929B]">히알루로니다제 (필수)</span></td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불필요 (물광주사기 선택)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터 제품, 주사기+바늘</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">불필요</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PDO/PLLA/PCL 실, 삽입 가이드 캐뉼라</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">필요 (고가)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">카트리지 (샷 수 제한), 겔</td></tr>
@@ -456,7 +456,7 @@ export const appendixData: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2~3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술명 / 시술 부위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">정확한 명칭 + 구체적 부위</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 목적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#1a1a1a]">미용/치료 명기 (과세/면세 판단 근거)</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5~7</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사용 제품 / 예상 효과 / 시술 과정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제품명, 제조사, 용량 등</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">부작용·합병증</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술별 상이. 반드시 명시</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">부작용·합병증</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술별 상이. 반드시 명시</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">9~11</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대안 시술 / 비용 / 주의사항</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">VAT 포함 여부, 금기사항</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">12~13</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사진 촬영 동의 / 마케팅 활용 동의</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">별도 항목. 마케팅은 선택사항</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">14~15</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자 서명 / 시술자 서명</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"본인이 직접 상기 내용을 설명하였음" 문구</td></tr>
@@ -470,7 +470,7 @@ export const appendixData: Section[] = [
         </thead>
         <tbody>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안검하수(눈꺼풀 처짐), 좌우 비대칭</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 3~6개월 지속. 재시술 필요</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">혈관폐색·실명 위험 (극히 드묾이나 중대)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">응급 시 히알루로니다제 투여 동의 포함</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">혈관폐색·실명 위험 (극히 드묾이나 중대)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">응급 시 히알루로니다제 투여 동의 포함</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주사 자국, 일시적 울퉁불퉁</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">프로그램 환불 기준 명시</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">딤플(피부 함몰), 실 돌출, 감염</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면거상술 수준 변화 아님 명시</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저/장비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">색소침착, 화상 (드묾)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">체내 금속 삽입물 확인 (RF)</td></tr>
@@ -484,7 +484,7 @@ export const appendixData: Section[] = [
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
           <!-- Phase 1: 시술 전 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 전</div>
+            <div class="bg-[#C4929B] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 전</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
               <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">동의서 양식 전달</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -493,7 +493,7 @@ export const appendixData: Section[] = [
           </div>
           <!-- Phase 2: 시술 중 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 중</div>
+            <div class="bg-[#C4929B] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 중</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
               <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center">차트 기록</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>
@@ -502,7 +502,7 @@ export const appendixData: Section[] = [
           </div>
           <!-- Phase 3: 시술 후 -->
           <div>
-            <div class="bg-[#D4567A] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 후</div>
+            <div class="bg-[#C4929B] text-white text-sm font-bold text-center py-2 rounded-t-lg">시술 후</div>
             <div class="border border-[#eee] border-t-0 rounded-b-lg p-3 space-y-2">
               <div class="border border-[#eee] rounded px-3 py-2 text-xs text-[#1a1a1a] text-center font-bold">동의서 보관 (5년)</div>
               <div class="text-center text-[#999] text-[10px]">&#8595;</div>

@@ -16,7 +16,7 @@ export const step5Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">5-1. 재무·수익 관리</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">미용 파트 수익 구조 이해</h3>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">핵심 전제: 미용 파트 수익은 치과 수익과 반드시 분리해서 관리해야 한다. 합산해서 보면 미용이 되는지 안 되는지 알 수 없다.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">핵심 전제: 미용 파트 수익은 치과 수익과 반드시 분리해서 관리해야 한다. 합산해서 보면 미용이 되는지 안 되는지 알 수 없다.</blockquote>
 
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">시술별 원가 구조 — 초기 도입 기준 참고치</h4>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
@@ -35,7 +35,7 @@ export const step5Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">80~200만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실 재료비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">브랜드별 차이 큼</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 마진율은 (판매가 - 재료비) / 판매가로 계산. 실제 순수익을 알려면 감가상각비·인건비·마케팅비까지 빼야 한다.
       </div>
     `,
@@ -55,7 +55,7 @@ export const step5Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">LDM</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1,500~3,000만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5년</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">25~50만원/월</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">절세 팁:</strong> 세법상 보건업 의료기기 기준 내용연수는 5년(4~6년 선택). 개원 초기에는 내용연수 4년 + 정률법을 선택하면 초기 감가상각비가 커져 절세 효과 극대화. 세무사와 상의할 것.
       </div>
 
@@ -71,7 +71,7 @@ export const step5Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">D. 소모품·위생용품</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">___</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">—</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">E. 마케팅비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">___</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매출의 10~15%</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">F. 인건비 배분</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">___</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">—</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#1a1a1a]">G. 미용 파트 순수익 (A-B-C-D-E-F)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">___</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">매출의 40~55%</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#1a1a1a]">G. 미용 파트 순수익 (A-B-C-D-E-F)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">___</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">매출의 40~55%</td></tr>
         </tbody>
       </table>
 
@@ -114,19 +114,19 @@ export const step5Data: Section[] = [
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">파트 1. 권한 범위 Q&amp;A</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 치과의사가 안면 보톡스·필러를 시술하는 것이 합법인가?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">합법이다.</span> 대법원 2016년 판결에서 확정. 안면 영역의 해부학적 전문성을 갖춘 의료인으로 인정.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">합법이다.</span> 대법원 2016년 판결에서 확정. 안면 영역의 해부학적 전문성을 갖춘 의료인으로 인정.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. HIFU·레이저·LDM 등 장비 시술도 치과의사가 직접 해야 하나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">그렇다.</span> 3등급 의료기기는 의사 직접 시술 원칙. 스탭이 독립적으로 장비를 다루는 것은 불법.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">그렇다.</span> 3등급 의료기기는 의사 직접 시술 원칙. 스탭이 독립적으로 장비를 다루는 것은 불법.</p>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">파트 2. 스탭 위임 Q&amp;A</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 치과위생사가 보톡스 주사를 주입하면 안 되나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">안 된다.</span> 면허대여 및 무면허 의료행위 조력으로 치과의사와 치과위생사 모두 처벌 대상.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">안 된다.</span> 면허대여 및 무면허 의료행위 조력으로 치과의사와 치과위생사 모두 처벌 대상.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 의사가 옆에 있으면 스탭이 시술해도 되나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">안 된다.</span> 의사의 감독 존재 여부와 무관하게, 침습적 의료 행위는 의사가 직접 해야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">안 된다.</span> 의사의 감독 존재 여부와 무관하게, 침습적 의료 행위는 의사가 직접 해야 한다.</p>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">파트 3. 동의서·사진·기록</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 미용 시술 동의서는 반드시 받아야 하나?</span></p>
-      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#D4567A]">그렇다.</span> 의료법 제24조의2에 따라 침습적 시술 전 서면 동의 필수. 동의서 없이 부작용 발생 시 과실 입증에서 불리.</p>
+      <p class="text-[#333] leading-relaxed mb-4">A. <span class="font-bold text-[#C4929B]">그렇다.</span> 의료법 제24조의2에 따라 침습적 시술 전 서면 동의 필수. 동의서 없이 부작용 발생 시 과실 입증에서 불리.</p>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">Q. 시술 차트를 얼마나 보관해야 하나?</span></p>
       <p class="text-[#333] leading-relaxed mb-4">A. 의료법상 진료기록 보존 기간은 <span class="font-bold text-[#1a1a1a]">5년</span>. 시술 부위·용량·배치·환자 상태를 상세히 기록해야 한다.</p>
 
@@ -150,7 +150,7 @@ export const step5Data: Section[] = [
               <div class="border-r border-b border-[#eee] p-4 min-h-[120px] relative">
                 <span class="text-[10px] text-[#999] absolute top-2 left-2">Low Risk</span>
                 <div class="flex items-center justify-center h-full">
-                  <div class="bg-[#D4567A] bg-opacity-20 border-2 border-[#D4567A] rounded-full w-20 h-20 flex flex-col items-center justify-center text-center">
+                  <div class="bg-[#C4929B] bg-opacity-20 border-2 border-[#C4929B] rounded-full w-20 h-20 flex flex-col items-center justify-center text-center">
                     <span class="text-[11px] font-bold text-[#1a1a1a]">행정처분</span>
                     <span class="text-[11px] font-bold text-[#1a1a1a]">/면허정지</span>
                   </div>
@@ -160,7 +160,7 @@ export const step5Data: Section[] = [
               <div class="border-b border-[#eee] p-4 min-h-[120px] relative bg-[#f5f5f5]">
                 <span class="text-[10px] text-[#999] absolute top-2 left-2">High Risk</span>
                 <div class="flex items-center justify-center h-full">
-                  <div class="bg-[#D4567A] rounded-full w-24 h-24 flex flex-col items-center justify-center text-center">
+                  <div class="bg-[#C4929B] rounded-full w-24 h-24 flex flex-col items-center justify-center text-center">
                     <span class="text-[11px] font-bold text-white">의료사고</span>
                     <span class="text-[11px] font-bold text-white">/부작용</span>
                   </div>
@@ -180,10 +180,10 @@ export const step5Data: Section[] = [
               <div class="p-4 min-h-[120px] relative">
                 <span class="text-[10px] text-[#999] absolute top-2 left-2">Medium Risk</span>
                 <div class="flex items-center justify-center h-full gap-3">
-                  <div class="bg-[#D4567A] bg-opacity-40 border-2 border-[#D4567A] rounded-full w-[70px] h-[70px] flex flex-col items-center justify-center text-center">
+                  <div class="bg-[#C4929B] bg-opacity-40 border-2 border-[#C4929B] rounded-full w-[70px] h-[70px] flex flex-col items-center justify-center text-center">
                     <span class="text-[10px] font-bold text-[#1a1a1a]">세무 조사</span>
                   </div>
-                  <div class="bg-[#D4567A] bg-opacity-30 border-2 border-[#D4567A] rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center text-center">
+                  <div class="bg-[#C4929B] bg-opacity-30 border-2 border-[#C4929B] rounded-full w-[72px] h-[72px] flex flex-col items-center justify-center text-center">
                     <span class="text-[10px] font-bold text-[#1a1a1a]">환자</span>
                     <span class="text-[10px] font-bold text-[#1a1a1a]">컴플레인</span>
                   </div>
@@ -201,8 +201,8 @@ export const step5Data: Section[] = [
         <div class="text-center text-[10px] text-[#999] font-bold mt-1">발생 가능성 (Likelihood)</div>
         <!-- 범례 -->
         <div class="flex items-center justify-center gap-4 mt-4 text-[10px] text-[#999]">
-          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#D4567A] inline-block"></span> High</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#D4567A] bg-opacity-40 border border-[#D4567A] inline-block"></span> Medium</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#C4929B] inline-block"></span> High</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-[#C4929B] bg-opacity-40 border border-[#C4929B] inline-block"></span> Medium</span>
           <span class="flex items-center gap-1"><span class="w-3 h-3 rounded-full border-2 border-[#eee] inline-block"></span> Low</span>
         </div>
       </div>
@@ -236,7 +236,7 @@ export const step5Data: Section[] = [
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">면책:</strong> 이 매뉴얼은 참고용 실무 가이드다. 실제 신고·민원 발생 시에는 반드시 의료 전문 변호사와 먼저 상담한 후 행동해야 한다.
       </div>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">핵심 원칙 3가지: (1) 침착하게 기록 먼저 (2) 즉흥 대응 금지 (3) 전문가 상담 전에 합의 금지</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">핵심 원칙 3가지: (1) 침착하게 기록 먼저 (2) 즉흥 대응 금지 (3) 전문가 상담 전에 합의 금지</blockquote>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">신고가 들어오는 3가지 경로</h3>
       <table class="w-full text-sm border-collapse mb-6">
@@ -288,7 +288,7 @@ export const step5Data: Section[] = [
           </div>
           <div class="w-0.5 h-4 bg-[#1a1a1a]"></div>
           <!-- Step 2 (강조) -->
-          <div class="bg-[#D4567A] rounded-lg px-6 py-3 text-center">
+          <div class="bg-[#C4929B] rounded-lg px-6 py-3 text-center">
             <span class="text-sm font-bold text-white">48시간 내 증거 확보</span>
           </div>
           <div class="text-[10px] text-[#999] mt-1 mb-1">차트 / 사진 / 동의서</div>
@@ -337,7 +337,7 @@ export const step5Data: Section[] = [
     html: `
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">핵심 판례 — 대법원 2013도850 전원합의체</h3>
       <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">사건:</span> 치과의사가 환자의 눈가·미간에 보톡스 시술 → 검찰 기소 → 1심·2심 유죄 → 대법원 파기환송(무죄 취지)</p>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         "치아와 구강 조직과 직접적으로 관련되지 않은 안면부에 대한 의료행위라 하여 모두 치과 의료행위의 대상에서 배제된다고 보기 어렵다."<br/><br/>
         "환자의 안면부인 눈가와 미간에 보톡스를 시술한 행위는 치과의사에게 면허된 것 이외의 의료행위라고 볼 수 없으며, 그 시술이 미용 목적이라 하여 달리 볼 것은 아니다."
       </blockquote>
@@ -357,7 +357,7 @@ export const step5Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면 외 시술</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">승모근·종아리 등 안면 외 시술은 판례 적용 범위 밖. 고위험 영역</td></tr>
         </tbody>
       </table>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">실무 결론: 대법원 판결은 최강의 방어 수단이지만, 수사기관이 일단 고발하는 구조는 변하지 않는다. 사전 예방이 최선이다.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">실무 결론: 대법원 판결은 최강의 방어 수단이지만, 수사기관이 일단 고발하는 구조는 변하지 않는다. 사전 예방이 최선이다.</blockquote>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">보건소·경찰 조사 시 대응 스크립트</h3>
       <table class="w-full text-sm border-collapse mb-6">
@@ -404,7 +404,86 @@ export const step5Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#1a1a1a]">건당 순수익</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">23만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">48만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">70.5만원</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[도표: 시술별 건당 순수익 비교 차트]</div>
+      <!-- 시술별 건당 순수익 비교 차트 인포그래픽 -->
+      <div style="background:#fff;border:1px solid #e8d5d9;border-radius:12px;padding:24px;margin-bottom:24px;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <span style="display:inline-block;background:#C4929B;color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;">PROFIT ANALYSIS</span>
+          <h4 style="font-size:18px;font-weight:700;color:#1a1a1a;margin:10px 0 4px;">시술별 건당 순수익 비교</h4>
+          <p style="font-size:12px;color:#888;margin:0;">월 20건 기준 시나리오 — 재료비, 인건비, 감가상각 제외 후 순수익</p>
+        </div>
+        <!-- 바 차트 -->
+        <div style="display:flex;flex-direction:column;gap:14px;max-width:560px;margin:0 auto;">
+          <!-- 실리프팅 -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">실리프팅</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:94%;height:100%;background:linear-gradient(90deg,#C4929B,#a8737e);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">70.5만원</span>
+              </div>
+            </div>
+          </div>
+          <!-- 필러 -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">필러</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:68%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a9b1);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">48만원</span>
+              </div>
+            </div>
+          </div>
+          <!-- 스킨부스터 -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">스킨부스터</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:55%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a9b1);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">38만원</span>
+              </div>
+            </div>
+          </div>
+          <!-- 보톡스 -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">보톡스</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:33%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a9b1);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">23만원</span>
+              </div>
+            </div>
+          </div>
+          <!-- 피코 레이저 -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">피코 레이저</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:28%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a9b1);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">19만원</span>
+              </div>
+            </div>
+          </div>
+          <!-- LDM -->
+          <div style="display:flex;align-items:center;gap:12px;">
+            <div style="width:90px;text-align:right;font-size:13px;font-weight:600;color:#2C2C2C;flex-shrink:0;">LDM</div>
+            <div style="flex:1;background:#f5f5f5;border-radius:6px;height:36px;position:relative;overflow:hidden;">
+              <div style="width:21%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a9b1);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding-right:10px;">
+                <span style="font-size:13px;font-weight:700;color:#fff;">14만원</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 하단 인사이트 -->
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">수익성 1위</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">실리프팅은 건당 순수익 최고이나 시술 난이도와 장비 투자비가 높아 월 볼륨 확보가 관건</p>
+          </div>
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">효율성 1위</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">보톡스는 건당 수익은 낮지만 시술 시간 10분, 볼륨 스케일링에 가장 유리</p>
+          </div>
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">포트폴리오 전략</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">보톡스/필러로 유입 → 스킨부스터로 정기방문 → 실리프팅으로 객단가 극대화</p>
+          </div>
+        </div>
+      </div>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">월별 매출 시나리오 (중립)</h3>
       <table class="w-full text-sm border-collapse mb-6">
@@ -435,7 +514,7 @@ export const step5Data: Section[] = [
         <tbody>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보험급여 수입</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">면세</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스케일링, 충치치료</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">비급여 — 치료 목적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">면세</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">교정, 임플란트(비급여)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">비급여 — 미용 목적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">과세 (VAT 10%)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스, 필러, HIFU, 스킨부스터</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">비급여 — 미용 목적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">과세 (VAT 10%)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스, 필러, HIFU, 스킨부스터</td></tr>
         </tbody>
       </table>
       <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
@@ -458,37 +537,37 @@ export const step5Data: Section[] = [
 
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6 mt-8">5-6. 배상책임보험 &amp; 의료분쟁 현황</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용 시술은 기존 치과 진료보다 부작용 민원 발생 확률이 높다. 배상책임보험은 최소한의 안전장치다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 기존 배상책임보험이 미용 시술까지 보장 범위에 포함되는지 반드시 서면 확인할 것.
       </div>
       <p class="text-[#333] leading-relaxed mb-4">한국의료분쟁조정중재원 2024년 통계연보 기준: 치과 조정신청 <span class="font-bold text-[#1a1a1a]">1,222건 (전체 3위)</span>, 전체 조정성공률 67.2%, 평균 성립금액 1,005만원.</p>
 
       <!-- V-507: 배상책임보험 가입 체크리스트 -->
-      <div class="bg-white border-2 border-[#D4567A] rounded-lg p-6 mb-6">
+      <div class="bg-white border-2 border-[#C4929B] rounded-lg p-6 mb-6">
         <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">배상책임보험 가입 체크리스트</h4>
         <ul class="space-y-4">
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">배상책임보험 가입 (필수)</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">미용시술 특약 추가 확인</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">보장 한도: 1건당 1억원 이상 권장</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">면책 조항 확인 (비허가 시술 제외 여부)</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">의료분쟁조정중재원 신청 절차 숙지</span>
           </li>
           <li class="flex items-start gap-3">
-            <span class="text-[#D4567A] font-bold text-lg mt-0.5">&#10003;</span>
+            <span class="text-[#C4929B] font-bold text-lg mt-0.5">&#10003;</span>
             <span class="text-sm text-[#1a1a1a]">사고 발생 시 72시간 내 보험사 통보</span>
           </li>
         </ul>

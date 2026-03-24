@@ -48,52 +48,45 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
   const sections = contentData[activeTab] || [];
 
   return (
-    <div className="flex flex-1 overflow-hidden">
-      {/* 본문 영역 */}
-      <div className="flex-1 overflow-y-auto px-8 py-10 max-w-4xl mx-auto">
-        {sections.length === 0 ? (
-          <div className="text-center py-20 text-[#bbb]">
-            <p className="text-lg">콘텐츠 준비 중</p>
-            <p className="text-sm mt-2">이 섹션은 곧 업로드됩니다.</p>
-          </div>
-        ) : (
-          sections.map((section) => (
-            <div key={section.id} className="group relative mb-8">
-              {/* 코멘트 트리거 버튼 */}
-              <button
-                onClick={() =>
-                  setActiveSectionId(
-                    activeSectionId === section.id ? null : section.id
-                  )
-                }
-                className={`absolute -right-12 top-1 w-8 h-8 rounded-full flex items-center justify-center text-xs transition-all ${
-                  activeSectionId === section.id
-                    ? "bg-[#D4567A] text-white"
-                    : commentCounts[section.id]
-                    ? "bg-[#D4567A]/15 text-[#D4567A]"
-                    : "bg-transparent text-[#ccc] group-hover:text-[#999] group-hover:bg-[#f5f5f5]"
-                }`}
-                title="코멘트"
-              >
-                {commentCounts[section.id] ? (
-                  commentCounts[section.id]
-                ) : (
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                )}
-              </button>
-
-              {/* 콘텐츠 렌더링 */}
-              <div
-                className={`transition-colors rounded-lg px-4 py-2 -mx-4 ${
-                  activeSectionId === section.id ? "bg-[#D4567A]/5" : ""
-                }`}
-                dangerouslySetInnerHTML={{ __html: section.html }}
-              />
+    <div className="flex flex-1 overflow-hidden relative">
+      {/* 본문 영역 — A4 문서 스타일 */}
+      <div className="flex-1 overflow-y-auto bg-[#eee] py-8">
+        <div className="max-w-[210mm] mx-auto">
+          {sections.length === 0 ? (
+            <div className="bg-white shadow-md rounded px-16 py-20 text-center text-[#bbb]">
+              <p className="text-lg">콘텐츠 준비 중</p>
+              <p className="text-sm mt-2">이 섹션은 곧 업로드됩니다.</p>
             </div>
-          ))
-        )}
+          ) : (
+            <div className="bg-white shadow-md rounded px-16 py-14 min-h-[297mm]">
+              {sections.map((section) => (
+                <div
+                  key={section.id}
+                  className={`relative mb-8 cursor-pointer rounded-lg px-4 py-2 -mx-4 transition-colors ${
+                    activeSectionId === section.id
+                      ? "bg-[#C4929B]/5 ring-1 ring-[#C4929B]/20"
+                      : "hover:bg-[#f9f5f6]"
+                  }`}
+                  onClick={() =>
+                    setActiveSectionId(
+                      activeSectionId === section.id ? null : section.id
+                    )
+                  }
+                >
+                  {/* 코멘트 카운트 뱃지 */}
+                  {commentCounts[section.id] && (
+                    <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
+                      {commentCounts[section.id]}
+                    </span>
+                  )}
+
+                  {/* 콘텐츠 렌더링 */}
+                  <div dangerouslySetInnerHTML={{ __html: section.html }} />
+                </div>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
       {/* 코멘트 패널 */}

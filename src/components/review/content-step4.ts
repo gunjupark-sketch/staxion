@@ -7,7 +7,7 @@ export const step4Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">STEP 4. 환자 유입 — 구환 전환부터 외부 마케팅까지</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용치과의 첫 환자는 밖에서 오지 않는다. 이미 치과에 앉아 있는 구환이 가장 빠르고 확실한 출발점이다. 이 STEP에서는 구환 전환 → 후기 수집 → 내부 마케팅 → 외부 마케팅의 순서로, 광고비 0원에서 시작해 유료 채널까지 확장하는 환자 유입 전략을 다룬다.</p>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <strong class="font-bold text-[#1a1a1a]">이전 STEP과의 관계:</strong> STEP 1~2에서 시술과 운영을 갖추고, STEP 3에서 팀과 공간을 세팅했다. 이제 <strong class="font-bold text-[#1a1a1a]">환자를 데려오는</strong> 단계다. STEP 3의 MOT 설계가 잘 되어 있어야 이 STEP의 구환 전환과 후기 수집이 자연스럽게 작동한다. 마케팅 예산과 ROI 분석은 STEP 5에서 재무적으로 다시 점검한다.
       </blockquote>
     `,
@@ -36,7 +36,7 @@ export const step4Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재방문 구조</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">없음 — 새로 만들어야</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이미 있음 — 정기 검진·치료</td></tr>
         </tbody>
       </table>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">핵심 전제: 구환 전환은 영업이 아니다. 이미 신뢰 관계가 있는 환자에게 더 나은 선택지를 보여주는 것이다.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">핵심 전제: 구환 전환은 영업이 아니다. 이미 신뢰 관계가 있는 환자에게 더 나은 선택지를 보여주는 것이다.</blockquote>
     `,
   },
   {
@@ -73,16 +73,16 @@ export const step4Data: Section[] = [
           <div class="w-[40%] min-w-[200px] bg-[#1a1a1a] text-white text-center py-3 rounded-t-lg">
             <div class="text-xs font-bold">1순위</div>
             <div class="text-[11px]">미용 문의 이력 있는 구환</div>
-            <div class="text-sm font-bold text-[#D4567A] mt-1">72%</div>
+            <div class="text-sm font-bold text-[#C4929B] mt-1">72%</div>
           </div>
           <!-- Tier 2 -->
           <div class="w-[52%] min-w-[230px] bg-[#333] text-white text-center py-3">
             <div class="text-xs font-bold">2순위</div>
             <div class="text-[11px]">교근 발달·이갈이 환자</div>
-            <div class="text-sm font-bold text-[#D4567A] mt-1">58%</div>
+            <div class="text-sm font-bold text-[#C4929B] mt-1">58%</div>
           </div>
           <!-- Tier 3 -->
-          <div class="w-[64%] min-w-[260px] bg-[#D4567A] text-white text-center py-3">
+          <div class="w-[64%] min-w-[260px] bg-[#C4929B] text-white text-center py-3">
             <div class="text-xs font-bold">3순위</div>
             <div class="text-[11px]">정기검진 성실 내원자</div>
             <div class="text-sm font-bold mt-1">42%</div>
@@ -128,7 +128,7 @@ export const step4Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">라미네이트 완료 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"치아 라인이 정말 예쁘게 잡혔네요. 잇몸 쪽도 같이 정리하면 스마일 라인 완성도가 훨씬 올라가요"</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 경로 A의 핵심은 "발견의 톤"이다. "추천합니다"가 아니라 "눈에 보여서 말씀드리는 건데"가 자연스럽다.
       </div>
 
@@ -166,7 +166,7 @@ export const step4Data: Section[] = [
         <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">구환 전환 3가지 경로</h4>
         <!-- 시작점 -->
         <div class="flex justify-center mb-4">
-          <div class="bg-[#D4567A] text-white text-sm font-bold rounded-full px-6 py-3">기존 구환</div>
+          <div class="bg-[#C4929B] text-white text-sm font-bold rounded-full px-6 py-3">기존 구환</div>
         </div>
         <!-- 3경로 -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
@@ -174,7 +174,7 @@ export const step4Data: Section[] = [
           <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
             <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 1: 진료 중 자연 발견</div>
             <div class="p-4">
-              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+              <div class="bg-[#C4929B] text-white text-xs rounded p-3 mb-2">
                 <p class="font-bold">원장이 치료 중 미용 니즈 발견</p>
                 <p class="mt-1">→ 브리지 멘트</p>
               </div>
@@ -185,7 +185,7 @@ export const step4Data: Section[] = [
           <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
             <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 2: 정기검진 활용</div>
             <div class="p-4">
-              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+              <div class="bg-[#C4929B] text-white text-xs rounded p-3 mb-2">
                 <p class="font-bold">스케일링 내원 시</p>
                 <p class="mt-1">미용 적응증 탐색 &amp; 자연스러운 안내</p>
               </div>
@@ -196,7 +196,7 @@ export const step4Data: Section[] = [
           <div class="border-2 border-[#eee] rounded-lg overflow-hidden">
             <div class="bg-[#f5f5f5] text-[#1a1a1a] text-center py-2 text-sm font-bold">경로 3: 이벤트/안내</div>
             <div class="p-4">
-              <div class="bg-[#D4567A] text-white text-xs rounded p-3 mb-2">
+              <div class="bg-[#C4929B] text-white text-xs rounded p-3 mb-2">
                 <p class="font-bold">카카오톡 알림</p>
                 <p class="mt-1">미용시술 소개 &amp; 자연스러운 예약 유도</p>
               </div>
@@ -246,11 +246,11 @@ export const step4Data: Section[] = [
           <tr><th class="px-4 py-2 text-left font-medium">타이밍</th><th class="px-4 py-2 text-left font-medium">적합</th><th class="px-4 py-2 text-left font-medium">이유</th></tr>
         </thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">첫 시술 결과 확인 방문</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">최적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 효과에 만족한 상태. 신뢰 최고점</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">첫 시술 결과 확인 방문</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">최적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 효과에 만족한 상태. 신뢰 최고점</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 중 (분위기 좋을 때)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">적합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">자연스럽게 대화 중 한 마디</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">첫 시술 당일</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주의</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 확인도 못 한 상태에서 다음 시술 얘기는 영업처럼 보임</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">결과가 기대 이하</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">금지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 실망한 상태에서 업셀 시도 → 신뢰 붕괴</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">수납 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#D4567A]">금지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">방금 돈 냈는데 또 사라는 느낌</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">결과가 기대 이하</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">금지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자가 실망한 상태에서 업셀 시도 → 신뢰 붕괴</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">수납 직후</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold text-[#C4929B]">금지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">방금 돈 냈는데 또 사라는 느낌</td></tr>
         </tbody>
       </table>
     `,
@@ -284,7 +284,104 @@ export const step4Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">피부 리셋 코스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">피코 레이저 5회 + LDM 5회</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">색소·피부결 고민</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">10회 고정 방문. 소진 후 재구매 연결</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 구환 전환 패키지 → 업셀 패키지 연결 흐름도]</div>
+      <!-- 구환 전환 → 업셀 패키지 연결 흐름도 인포그래픽 -->
+      <div style="background:#fff;border:1px solid #e8d5d9;border-radius:12px;padding:24px;margin-bottom:24px;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <span style="display:inline-block;background:#C4929B;color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;">CONVERSION FUNNEL</span>
+          <h4 style="font-size:18px;font-weight:700;color:#1a1a1a;margin:10px 0 4px;">구환 전환 패키지 → 업셀 패키지 연결 흐름도</h4>
+          <p style="font-size:12px;color:#888;margin:0;">기존 환자 기반 → 미용 시술 전환 → 고단가 업셀까지의 단계별 설계</p>
+        </div>
+        <!-- 흐름도 메인 -->
+        <div style="display:flex;flex-direction:column;gap:0;align-items:center;">
+          <!-- Layer 1: 구환 풀 -->
+          <div style="width:100%;max-width:600px;background:#2C2C2C;border-radius:10px;padding:16px 20px;text-align:center;">
+            <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 4px;">기존 환자 풀 (구환)</p>
+            <p style="font-size:12px;color:#aaa;margin:0;">정기 검진, 스케일링, 보철, 교정 등 기존 내원 환자</p>
+          </div>
+          <!-- 화살표 -->
+          <div style="width:2px;height:24px;background:#C4929B;position:relative;">
+            <div style="position:absolute;bottom:-6px;left:-5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #C4929B;"></div>
+          </div>
+          <!-- Layer 2: 전환 트리거 -->
+          <div style="width:100%;max-width:600px;background:#F5E6E8;border:2px solid #C4929B;border-radius:10px;padding:16px 20px;">
+            <p style="font-size:13px;font-weight:700;color:#C4929B;margin:0 0 8px;text-align:center;">전환 트리거 (스탭 제안 / 자동 알림)</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+              <span style="background:#fff;border:1px solid #e8d5d9;border-radius:6px;padding:6px 12px;font-size:12px;color:#2C2C2C;">스케일링 후 미백 제안</span>
+              <span style="background:#fff;border:1px solid #e8d5d9;border-radius:6px;padding:6px 12px;font-size:12px;color:#2C2C2C;">보철 완료 후 미백 연계</span>
+              <span style="background:#fff;border:1px solid #e8d5d9;border-radius:6px;padding:6px 12px;font-size:12px;color:#2C2C2C;">검진 시 피부 상담 병행</span>
+            </div>
+          </div>
+          <!-- 화살표 -->
+          <div style="width:2px;height:24px;background:#C4929B;position:relative;">
+            <div style="position:absolute;bottom:-6px;left:-5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #C4929B;"></div>
+          </div>
+          <!-- Layer 3: 전환 패키지 -->
+          <div style="width:100%;max-width:600px;background:#fff;border:1px solid #e8d5d9;border-radius:10px;padding:16px 20px;">
+            <p style="font-size:13px;font-weight:700;color:#2C2C2C;margin:0 0 10px;text-align:center;">전환 패키지 (Entry-Level)</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+              <div style="background:#FDF8F9;border-radius:8px;padding:10px 16px;text-align:center;border:1px solid #f0e0e3;min-width:120px;">
+                <p style="font-size:13px;font-weight:700;color:#2C2C2C;margin:0;">첫미용 체험</p>
+                <p style="font-size:11px;color:#888;margin:4px 0 0;">보톡스 or 필러 단품</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">15~25만원대</p>
+              </div>
+              <div style="background:#FDF8F9;border-radius:8px;padding:10px 16px;text-align:center;border:1px solid #f0e0e3;min-width:120px;">
+                <p style="font-size:13px;font-weight:700;color:#2C2C2C;margin:0;">피부 기초 케어</p>
+                <p style="font-size:11px;color:#888;margin:4px 0 0;">스킨부스터 3회</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">30~45만원대</p>
+              </div>
+              <div style="background:#FDF8F9;border-radius:8px;padding:10px 16px;text-align:center;border:1px solid #f0e0e3;min-width:120px;">
+                <p style="font-size:13px;font-weight:700;color:#2C2C2C;margin:0;">미백 + 잇몸</p>
+                <p style="font-size:11px;color:#888;margin:4px 0 0;">치아 미백 + 잇몸 미백</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">40~60만원대</p>
+              </div>
+            </div>
+          </div>
+          <!-- 화살표 -->
+          <div style="width:2px;height:24px;background:#C4929B;position:relative;">
+            <div style="position:absolute;bottom:-6px;left:-5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #C4929B;"></div>
+          </div>
+          <!-- Layer 4: 만족도 체크 -->
+          <div style="width:100%;max-width:600px;background:#F5E6E8;border-radius:10px;padding:12px 20px;text-align:center;">
+            <p style="font-size:12px;font-weight:600;color:#C4929B;margin:0;">만족도 확인 + D+7 경과 전화 + 재방문 유도</p>
+          </div>
+          <!-- 화살표 -->
+          <div style="width:2px;height:24px;background:#C4929B;position:relative;">
+            <div style="position:absolute;bottom:-6px;left:-5px;width:0;height:0;border-left:6px solid transparent;border-right:6px solid transparent;border-top:8px solid #C4929B;"></div>
+          </div>
+          <!-- Layer 5: 업셀 패키지 -->
+          <div style="width:100%;max-width:600px;background:linear-gradient(135deg,#2C2C2C 0%,#3d3d3d 100%);border-radius:10px;padding:16px 20px;">
+            <p style="font-size:13px;font-weight:700;color:#C4929B;margin:0 0 10px;text-align:center;">업셀 패키지 (Premium)</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;">
+              <div style="background:rgba(196,146,155,0.15);border-radius:8px;padding:10px 16px;text-align:center;border:1px solid rgba(196,146,155,0.3);min-width:130px;">
+                <p style="font-size:13px;font-weight:700;color:#fff;margin:0;">안면 풀케어</p>
+                <p style="font-size:11px;color:#aaa;margin:4px 0 0;">보톡스+필러+부스터</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">80~120만원</p>
+              </div>
+              <div style="background:rgba(196,146,155,0.15);border-radius:8px;padding:10px 16px;text-align:center;border:1px solid rgba(196,146,155,0.3);min-width:130px;">
+                <p style="font-size:13px;font-weight:700;color:#fff;margin:0;">피부 리셋 코스</p>
+                <p style="font-size:11px;color:#aaa;margin:4px 0 0;">피코5회+LDM5회</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">150~200만원</p>
+              </div>
+              <div style="background:rgba(196,146,155,0.15);border-radius:8px;padding:10px 16px;text-align:center;border:1px solid rgba(196,146,155,0.3);min-width:130px;">
+                <p style="font-size:13px;font-weight:700;color:#fff;margin:0;">실리프팅 패키지</p>
+                <p style="font-size:11px;color:#aaa;margin:4px 0 0;">실리프팅+부스터+관리</p>
+                <p style="font-size:12px;color:#C4929B;font-weight:600;margin:4px 0 0;">200~350만원</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 하단 인사이트 -->
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:200px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">전환율 벤치마크</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">구환 중 미용 시술 전환율 목표: <strong>8~15%</strong> (업계 평균 5% 미만)</p>
+          </div>
+          <div style="flex:1;min-width:200px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">업셀 핵심</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">첫 시술 만족 → 2회차 방문 시 패키지 제안이 자연스러운 타이밍</p>
+          </div>
+        </div>
+      </div>
     `,
   },
   {
@@ -328,7 +425,7 @@ export const step4Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4-2. 후기 수집 전략</h2>
       <p class="text-[#333] leading-relaxed mb-4">미용 시술에서 후기는 구매 전 신뢰의 핵심 증거다. 치과가 미용 시술을 한다고 알리는 것보다, 실제 환자가 "치과에서 했는데 너무 좋았어요"라고 말하는 게 100배 효과적이다.</p>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">핵심 전제: 후기는 요청해야 나온다. 만족한 환자도 바빠서 안 쓴다. 시스템으로 요청 동선을 만들지 않으면 후기는 쌓이지 않는다.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">핵심 전제: 후기는 요청해야 나온다. 만족한 환자도 바빠서 안 쓴다. 시스템으로 요청 동선을 만들지 않으면 후기는 쌓이지 않는다.</blockquote>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">후기 요청 3접점 동선</h3>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">접점 1 — 시술 직후 (진료실 안)</h4>
@@ -360,9 +457,9 @@ export const step4Data: Section[] = [
           <tr><th class="px-4 py-2 text-left font-medium">#</th><th class="px-4 py-2 text-left font-medium">금지 항목</th></tr>
         </thead>
         <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">허위 후기 또는 지인·직원이 작성한 후기 — 의료광고법 위반</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"후기 남기시면 할인해 드려요" — 경제적 이익 제공 조건 후기는 법 위반</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#D4567A] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부정적 후기 삭제 요청 — 성의 있는 답글로 대응하는 게 맞음</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">허위 후기 또는 지인·직원이 작성한 후기 — 의료광고법 위반</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"후기 남기시면 할인해 드려요" — 경제적 이익 제공 조건 후기는 법 위반</td></tr>
+          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] text-[#C4929B] font-bold">X</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부정적 후기 삭제 요청 — 성의 있는 답글로 대응하는 게 맞음</td></tr>
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">!</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">before/after 사진 동의 없이 게시 — 초상권·개인정보 침해</td></tr>
         </tbody>
       </table>
@@ -376,7 +473,7 @@ export const step4Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4-3. 내부 마케팅</h2>
       <p class="text-[#333] leading-relaxed mb-4">내부 마케팅은 이미 치과에 와 있는 환자에게 미용 시술을 자연스럽게 알리는 것이다. 광고비 제로, 이미 신뢰가 있는 대상이라 ROI가 가장 높다.</p>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">핵심 전제: 내부 마케팅의 목적은 "알리기"다. 환자가 "치과에서 미용 시술도 하는구나"를 자연스럽게 인지하게 하는 것.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">핵심 전제: 내부 마케팅의 목적은 "알리기"다. 환자가 "치과에서 미용 시술도 하는구나"를 자연스럽게 인지하게 하는 것.</blockquote>
 
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">공간 마케팅 — 대기실</h3>
       <table class="w-full text-sm border-collapse mb-6">
@@ -391,7 +488,7 @@ export const step4Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">후기 보드</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실제 환자 후기 프린트 또는 디지털 프레임</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">동의 받은 후기만</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <strong class="font-bold text-[#1a1a1a]">TIP:</strong> 너무 많이 붙이면 미용숍처럼 보인다. 대기실 2~3개, 진료실 1~2개가 적정선.
       </div>
 
@@ -470,7 +567,7 @@ export const step4Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인스타 유료 광고</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기반 갖춘 후 진행. 먼저 하면 비용 낭비</td></tr>
         </tbody>
       </table>
-      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">외부 마케팅 원칙: 초기 6개월은 광고비보다 플레이스·블로그·인스타 기반 쌓기에 집중. 기반 없는 광고비는 비용만 나간다.</blockquote>
+      <blockquote class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">외부 마케팅 원칙: 초기 6개월은 광고비보다 플레이스·블로그·인스타 기반 쌓기에 집중. 기반 없는 광고비는 비용만 나간다.</blockquote>
       <hr class="border-t border-[#eee] my-8" />
     `,
   },

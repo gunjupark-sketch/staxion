@@ -5,11 +5,11 @@ export const step3Data: Section[] = [
     id: "s3-intro",
     html: `
       <div class="text-center py-10 border-b border-[#eee] mb-10">
-        <p class="text-[#D4567A] text-sm font-medium tracking-[0.3em] mb-4">S T E P &nbsp; 3</p>
+        <p class="text-[#C4929B] text-sm font-medium tracking-[0.3em] mb-4">S T E P &nbsp; 3</p>
         <h1 class="text-3xl font-bold text-[#1a1a1a] mb-3">팀 운영 & 공간</h1>
       </div>
       <p class="text-[#333] leading-relaxed mb-4">환자가 미용 시술을 위해 치과를 선택할 때, 기술은 기본값이다. 차이를 만드는 건 경험이다. 이 STEP은 원장 혼자 잘 해서는 만들어지지 않는 것들 — 팀의 태도, 공간의 분위기, 환자가 느끼는 전체 흐름을 설계하는 방법을 다룬다.</p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm"><span class="font-bold text-[#1a1a1a] not-italic">이전 STEP과의 관계:</span> STEP 1에서 어떤 시술을 도입할지 정했고, STEP 2에서 시술이 돌아가는 SOP를 만들었다. 이 STEP에서는 그 SOP를 <span class="font-bold not-italic">누가, 어떤 공간에서, 어떤 태도로</span> 수행할 것인지를 설계한다.</p>
       </div>
     `,
@@ -30,7 +30,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">입소문 동기</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"잘 고쳐줬어"</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"거기 분위기 좋고 친절해" + "효과 있어"</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 미용 환자는 결과가 나쁘지 않아도 과정이 불편하면 돌아오지 않는다. 반대로 결과가 평범해도 경험이 좋으면 재방문하고 추천한다.</p>
       </div>
     `,
@@ -40,7 +40,7 @@ export const step3Data: Section[] = [
     html: `
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">미용치과는 새로운 카테고리다</h3>
       <p class="text-[#333] leading-relaxed mb-4">피부과에서 보톡스 맞는 경험과 치과에서 보톡스 맞는 경험 — 환자 입장에서는 처음이다. 비교 대상도, 고정된 기대값도 없다. 이게 불리해 보이지만 사실은 유리하다. 설계한 대로 경험이 만들어진다. <span class="font-bold text-[#1a1a1a]">미용치과는 지금 그 틀을 직접 만들 수 있는 시점이다.</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm">피부과를 따라하면 안 된다. 치과 신뢰 기반 위에 미용 경험을 얹는 새로운 형태를 설계하는 것이 MOT의 출발점이다.</p>
       </div>
 
@@ -55,7 +55,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료기관 청결·위생 이미지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스탭 응대 — 치료 중심 언어·태도</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">설계 원칙:</span> 유리한 접점은 최대한 활용하고, 취약한 접점만 선택적으로 보완한다. 치과 전체를 피부과처럼 바꾸려 하면 돈도 많이 들고 정체성도 흐려진다.</p>
       </div>
     `,
@@ -88,10 +88,89 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">청결·위생</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의료기관 수준 위생이 당연히 유지돼야 함</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm">MOT 설계는 거창한 인테리어 공사가 아니다. 스탭이 어떤 말을 하느냐, 귀가할 때 뭘 챙겨주느냐, 다음 날 문자가 오느냐 — 이런 작은 접점들의 집합이 환자가 기억하는 치과의 경험이다.</p>
       </div>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 미용치과 MOT 7단계 여정 맵 — 접점별 환자 기대/취약점/보완 방향 시각화]</div>
+      <!-- MOT 7단계 여정 맵 인포그래픽 -->
+      <div style="background:#fff;border:1px solid #e8d5d9;border-radius:12px;padding:24px;margin-bottom:24px;overflow-x:auto;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <span style="display:inline-block;background:#C4929B;color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;">PATIENT JOURNEY MAP</span>
+          <h4 style="font-size:18px;font-weight:700;color:#1a1a1a;margin:10px 0 4px;">미용치과 MOT 7단계 여정 맵</h4>
+          <p style="font-size:12px;color:#888;margin:0;">Moment of Truth — 환자가 경험을 판단하는 결정적 접점</p>
+        </div>
+        <table style="width:100%;border-collapse:collapse;font-size:13px;">
+          <thead>
+            <tr style="background:#2C2C2C;color:#fff;">
+              <th style="padding:10px 12px;text-align:center;font-weight:600;width:60px;border-radius:8px 0 0 0;">단계</th>
+              <th style="padding:10px 12px;text-align:left;font-weight:600;width:110px;">접점</th>
+              <th style="padding:10px 12px;text-align:left;font-weight:600;">환자 기대</th>
+              <th style="padding:10px 12px;text-align:left;font-weight:600;">취약점</th>
+              <th style="padding:10px 12px;text-align:left;font-weight:600;border-radius:0 8px 0 0;">보완 방향</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="background:#FDF8F9;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">1</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">온라인 탐색</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">신뢰할 수 있는 정보, 실제 후기</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">블로그 후기 부족, 가격 불투명</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">시술 전후 사진 + 가격 가이드 공개</td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">2</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">전화 예약</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">빠른 연결, 친절한 안내</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">통화 대기, 기계적 응대</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">3콜 내 응답 + 예약 확인 문자 자동발송</td>
+            </tr>
+            <tr style="background:#FDF8F9;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">3</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">내원 첫인상</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">청결한 공간, 환영받는 느낌</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">좁은 대기실, 무관심한 접수</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">이름 호명 + 음료 제공 + 향기 관리</td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">4</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">상담</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">충분한 설명, 경청, 맞춤 제안</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">일방적 설명, 과잉 권유</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">시각자료 활용 + 2가지 옵션 제시</td>
+            </tr>
+            <tr style="background:#FDF8F9;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">5</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">시술</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">통증 최소화, 안전한 느낌</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">설명 없는 진행, 불안감</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">단계별 사전고지 + 중간 컨디션 확인</td>
+            </tr>
+            <tr style="background:#fff;">
+              <td style="padding:10px 12px;text-align:center;border-bottom:1px solid #f0e0e3;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">6</span></td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;font-weight:600;color:#2C2C2C;">수납 / 귀가</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#444;">명확한 비용, 사후관리 안내</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#c0392b;">추가 비용 느닷없이, 안내 누락</td>
+              <td style="padding:10px 12px;border-bottom:1px solid #f0e0e3;color:#2C2C2C;">귀가 키트(냉팩, 주의사항 카드) 제공</td>
+            </tr>
+            <tr style="background:#FDF8F9;">
+              <td style="padding:10px 12px;text-align:center;"><span style="display:inline-block;background:#C4929B;color:#fff;width:26px;height:26px;line-height:26px;border-radius:50%;font-size:12px;font-weight:700;">7</span></td>
+              <td style="padding:10px 12px;font-weight:600;color:#2C2C2C;">사후 관리</td>
+              <td style="padding:10px 12px;color:#444;">경과 확인, 재방문 동기</td>
+              <td style="padding:10px 12px;color:#c0392b;">시술 후 연락 없음</td>
+              <td style="padding:10px 12px;color:#2C2C2C;">D+1 문자, D+7 경과 전화, 리뷰 요청</td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="display:flex;gap:16px;margin-top:16px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:200px;background:#F5E6E8;border-radius:8px;padding:12px 16px;">
+            <p style="font-size:11px;color:#C4929B;font-weight:700;margin:0 0 4px;text-transform:uppercase;">Core Insight</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.5;">7개 접점 중 <strong>3, 4, 7단계</strong>가 재방문율에 가장 큰 영향. 이 세 곳에 집중 투자하라.</p>
+          </div>
+          <div style="flex:1;min-width:200px;background:#F5E6E8;border-radius:8px;padding:12px 16px;">
+            <p style="font-size:11px;color:#C4929B;font-weight:700;margin:0 0 4px;text-transform:uppercase;">Action Priority</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.5;">비용 없이 즉시 가능한 것부터: 이름 호명, 귀가 인사, D+1 문자.</p>
+          </div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -125,7 +204,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">동료 원장 멘토링</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">현장 맥락. 실제 케이스 공유</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">체계성 부족</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기초 교육 이후 보완 수단</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">선택 기준 요약:</span> (1) 실습 비율이 이론보다 높은가 (2) 응급 대응을 직접 다루는가 (3) 교육 후 사후 질문이 가능한가 — 이 세 가지 기준으로 판단.</p>
       </div>
     `,
@@ -157,7 +236,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU·RF·LDM</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제조사 교육 이수. 5케이스 이상</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">에너지 설정·핸드피스 속도·파라미터 조절</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">원칙:</span> 원장이 먼저 30케이스. 그 다음에 스탭 교육. 그 다음에 마케팅. 이 순서를 지키지 않으면 어딘가에서 반드시 문제가 터진다.</p>
       </div>
       <!-- V-303: 숙련도 로드맵 -->
@@ -165,57 +244,57 @@ export const step3Data: Section[] = [
         <h4 class="text-lg font-bold text-[#1a1a1a] text-center mb-6">숙련도 로드맵</h4>
         <!-- 타임라인 바 -->
         <div class="w-full bg-[#eee] rounded-full h-2 mb-8">
-          <div class="bg-[#D4567A] h-2 rounded-full" style="width: 25%"></div>
+          <div class="bg-[#C4929B] h-2 rounded-full" style="width: 25%"></div>
         </div>
         <!-- 4단계 카드 -->
         <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
           <!-- Level 1 -->
           <div class="border-2 border-[#eee] rounded-lg p-4 relative">
-            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 1</div>
+            <div class="text-xs font-bold text-[#C4929B] mb-1">Level 1</div>
             <div class="text-sm font-bold text-[#1a1a1a] mb-1">입문</div>
             <div class="text-xs text-[#999] mb-3">0~3개월</div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+            <div class="bg-[#C4929B] text-white text-xs font-bold rounded px-2 py-2 text-center">
               보톡스<br/><span class="font-normal text-[10px]">50건 완료</span>
             </div>
             <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
-              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 25%"></div>
+              <div class="bg-[#C4929B] h-1.5 rounded-full" style="width: 25%"></div>
             </div>
           </div>
           <!-- 화살표 (모바일 숨김) -->
           <!-- Level 2 -->
           <div class="border-2 border-[#eee] rounded-lg p-4 relative">
-            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 2</div>
+            <div class="text-xs font-bold text-[#C4929B] mb-1">Level 2</div>
             <div class="text-sm font-bold text-[#1a1a1a] mb-1">기본</div>
             <div class="text-xs text-[#999] mb-3">3~6개월</div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+            <div class="bg-[#C4929B] text-white text-xs font-bold rounded px-2 py-2 text-center">
               필러<br/><span class="font-normal text-[10px]">입술·턱 30건</span>
             </div>
             <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
-              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 50%"></div>
+              <div class="bg-[#C4929B] h-1.5 rounded-full" style="width: 50%"></div>
             </div>
           </div>
           <!-- Level 3 -->
           <div class="border-2 border-[#eee] rounded-lg p-4 relative">
-            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 3</div>
+            <div class="text-xs font-bold text-[#C4929B] mb-1">Level 3</div>
             <div class="text-sm font-bold text-[#1a1a1a] mb-1">중급</div>
             <div class="text-xs text-[#999] mb-3">6~12개월</div>
-            <div class="bg-[#D4567A] text-white text-xs font-bold rounded px-2 py-2 text-center">
+            <div class="bg-[#C4929B] text-white text-xs font-bold rounded px-2 py-2 text-center">
               필러 확장<br/><span class="font-normal text-[10px]">+ 스킨부스터</span>
             </div>
             <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
-              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 75%"></div>
+              <div class="bg-[#C4929B] h-1.5 rounded-full" style="width: 75%"></div>
             </div>
           </div>
           <!-- Level 4 -->
-          <div class="border-2 border-[#D4567A] rounded-lg p-4 relative bg-[#f5f5f5]">
-            <div class="text-xs font-bold text-[#D4567A] mb-1">Level 4</div>
+          <div class="border-2 border-[#C4929B] rounded-lg p-4 relative bg-[#f5f5f5]">
+            <div class="text-xs font-bold text-[#C4929B] mb-1">Level 4</div>
             <div class="text-sm font-bold text-[#1a1a1a] mb-1">고급</div>
             <div class="text-xs text-[#999] mb-3">12개월+</div>
             <div class="bg-[#1a1a1a] text-white text-xs font-bold rounded px-2 py-2 text-center">
               실리프팅<br/><span class="font-normal text-[10px]">+ HIFU 20건</span>
             </div>
             <div class="w-full bg-[#eee] rounded-full h-1.5 mt-3">
-              <div class="bg-[#D4567A] h-1.5 rounded-full" style="width: 100%"></div>
+              <div class="bg-[#C4929B] h-1.5 rounded-full" style="width: 100%"></div>
             </div>
           </div>
         </div>
@@ -223,7 +302,7 @@ export const step3Data: Section[] = [
         <div class="flex items-center gap-4 mt-4 text-xs text-[#999]">
           <span>진행 단계 →</span>
           <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#eee] border border-[#ddd] rounded inline-block"></span> 입문</span>
-          <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#D4567A] rounded inline-block"></span> 숙련</span>
+          <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#C4929B] rounded inline-block"></span> 숙련</span>
         </div>
       </div>
       <div class="border-t border-[#eee] my-8"></div>
@@ -245,7 +324,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">귀가 시</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">영수증·약 설명 후 보내기</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"오늘 잘 받으셨어요?" 확인 후 다음 예약까지 챙기기</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 미용 환자는 '대접받는 느낌'을 원한다. 치료받으러 온 게 아니라 관리받으러 온 거다.</p>
       </div>
     `,
@@ -255,7 +334,7 @@ export const step3Data: Section[] = [
     html: `
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">접점별 표준 응대 스크립트</h3>
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">1. 전화 예약</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-4 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-4 text-[#555] italic">
         <p class="text-sm mb-1">"[치과명]입니다. 어떻게 도와드릴까요?"</p>
         <p class="text-sm mb-1">(미용 시술 문의 시) "네, 저희 미용 시술 담당하고 있어요. 어떤 부분 고민이세요?"</p>
         <p class="text-sm">(예약) "O월 O일 O시에 원장님이 직접 상담부터 해드려요. 처음 오시는 거면 상담 먼저 하시고 시술 결정하셔도 돼요."</p>
@@ -269,13 +348,13 @@ export const step3Data: Section[] = [
       </table>
 
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">2. 내원·접수</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-4 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-4 text-[#555] italic">
         <p class="text-sm mb-1">"안녕하세요, 오늘 OOO 시술로 오셨죠? 기다리시는 동안 편하게 앉아 계세요."</p>
         <p class="text-sm">(대기 중 자연스럽게) "혹시 오늘 처음 오신 거예요?" — 가볍게 공감대 형성</p>
       </div>
 
       <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">3. 시술 후 귀가 안내</h4>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-4 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-4 text-[#555] italic">
         <p class="text-sm mb-1">"오늘 잘 받으셨어요? 주의사항 몇 가지만 말씀드릴게요."</p>
         <p class="text-sm mb-1">(보톡스) "48시간 동안은 시술 부위 누르거나 마사지하지 마세요. 효과는 3~7일 후부터 느껴져요."</p>
         <p class="text-sm">"다음 예약은 3~4개월 후예요. 지금 바로 잡아드릴까요?"</p>
@@ -316,7 +395,7 @@ export const step3Data: Section[] = [
         </tbody>
       </table>
       <p class="text-[#333] leading-relaxed mb-2"><span class="font-bold text-[#1a1a1a]">컴플레인 초기 응대 표준 문장:</span></p>
-      <div class="bg-[#f9f9f9] border-l-4 border-[#D4567A] p-4 mb-6 text-[#555] italic">
+      <div class="bg-[#f9f9f9] border-l-4 border-[#C4929B] p-4 mb-6 text-[#555] italic">
         <p class="text-sm mb-1">"불편하셨겠어요. 말씀해주셔서 감사해요."</p>
         <p class="text-sm">"원장님께 바로 말씀드릴게요. 잠깐만 기다려 주세요."</p>
       </div>
@@ -341,7 +420,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">금지 행위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주사 행위, 의료기기 직접 조작, 시술 결정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">동일</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">실무 판단:</span> 미용 시술 보조만 놓고 보면 치위생사와 간호조무사의 법적 업무 범위 차이가 크지 않다. 그러나 치과 고유 업무(스케일링 등)를 겸하려면 치위생사가 필수다.</p>
       </div>
     `,
@@ -360,7 +439,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">소외감·통보</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"갑자기 이런 게 생겼어요?"</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">도입 전 스탭 공유 미팅을 반드시 먼저</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">가장 중요한 것:</span> 도입 전 스탭 공유 미팅을 반드시 해야 한다. 원장이 혼자 결정하고 통보하는 구조가 저항의 뿌리다.</p>
       </div>
 
@@ -386,7 +465,71 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">교육 지원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">외부 세미나·교육 비용 지원</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: 스탭 교육 4단계 타임라인 — 이론(1주) &rarr; 관찰(2~3주) &rarr; 보조(4~8주) &rarr; 숙달(3개월+) 시각화]</div>
+      <!-- 스탭 교육 4단계 타임라인 인포그래픽 -->
+      <div style="background:#fff;border:1px solid #e8d5d9;border-radius:12px;padding:24px;margin-bottom:24px;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <span style="display:inline-block;background:#C4929B;color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;">TRAINING ROADMAP</span>
+          <h4 style="font-size:18px;font-weight:700;color:#1a1a1a;margin:10px 0 4px;">스탭 교육 4단계 타임라인</h4>
+          <p style="font-size:12px;color:#888;margin:0;">단계별 역량 확보 → 독립 시술 보조까지의 성장 경로</p>
+        </div>
+        <!-- 타임라인 -->
+        <div style="display:flex;align-items:flex-start;gap:0;position:relative;padding:0 8px;">
+          <!-- Step 1 -->
+          <div style="flex:1;text-align:center;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#C4929B;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(196,146,155,0.3);">1</div>
+            <div style="position:absolute;top:28px;left:calc(50% + 28px);right:-50%;height:3px;background:linear-gradient(90deg,#C4929B,#d4a9b1);z-index:0;"></div>
+            <div style="background:#FDF8F9;border-radius:10px;padding:14px 10px;border:1px solid #f0e0e3;">
+              <p style="font-size:14px;font-weight:700;color:#2C2C2C;margin:0 0 2px;">이론</p>
+              <p style="font-size:11px;color:#C4929B;font-weight:600;margin:0 0 8px;">1주차</p>
+              <p style="font-size:12px;color:#555;margin:0;line-height:1.5;">시술 원리, 약제 지식, 안전 프로토콜 학습</p>
+            </div>
+          </div>
+          <!-- Step 2 -->
+          <div style="flex:1;text-align:center;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#C4929B;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(196,146,155,0.3);">2</div>
+            <div style="position:absolute;top:28px;left:calc(50% + 28px);right:-50%;height:3px;background:linear-gradient(90deg,#C4929B,#d4a9b1);z-index:0;"></div>
+            <div style="background:#FDF8F9;border-radius:10px;padding:14px 10px;border:1px solid #f0e0e3;">
+              <p style="font-size:14px;font-weight:700;color:#2C2C2C;margin:0 0 2px;">관찰</p>
+              <p style="font-size:11px;color:#C4929B;font-weight:600;margin:0 0 8px;">2~3주차</p>
+              <p style="font-size:12px;color:#555;margin:0;line-height:1.5;">선배 스탭 시술 보조 참관, 동선 파악</p>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div style="flex:1;text-align:center;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#C4929B;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(196,146,155,0.3);">3</div>
+            <div style="position:absolute;top:28px;left:calc(50% + 28px);right:-50%;height:3px;background:linear-gradient(90deg,#C4929B,#d4a9b1);z-index:0;"></div>
+            <div style="background:#FDF8F9;border-radius:10px;padding:14px 10px;border:1px solid #f0e0e3;">
+              <p style="font-size:14px;font-weight:700;color:#2C2C2C;margin:0 0 2px;">보조</p>
+              <p style="font-size:11px;color:#C4929B;font-weight:600;margin:0 0 8px;">4~8주차</p>
+              <p style="font-size:12px;color:#555;margin:0;line-height:1.5;">감독 하 직접 보조 수행, 체크리스트 평가</p>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div style="flex:1;text-align:center;position:relative;">
+            <div style="width:56px;height:56px;border-radius:50%;background:#2C2C2C;color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 12px;font-size:20px;font-weight:700;box-shadow:0 2px 8px rgba(44,44,44,0.25);">4</div>
+            <div style="background:#2C2C2C;border-radius:10px;padding:14px 10px;border:1px solid #2C2C2C;">
+              <p style="font-size:14px;font-weight:700;color:#fff;margin:0 0 2px;">숙달</p>
+              <p style="font-size:11px;color:#C4929B;font-weight:600;margin:0 0 8px;">3개월+</p>
+              <p style="font-size:12px;color:#ccc;margin:0;line-height:1.5;">독립 업무 수행, 신규 스탭 교육 참여</p>
+            </div>
+          </div>
+        </div>
+        <!-- 하단 보충 -->
+        <div style="display:flex;gap:12px;margin-top:20px;flex-wrap:wrap;">
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">평가 기준</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">각 단계 종료 시 실기 테스트 + 원장 면담으로 다음 단계 승급</p>
+          </div>
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">핵심 포인트</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">보조 단계에서 실수 빈도가 급감해야 숙달 진입. 평균 6주 소요.</p>
+          </div>
+          <div style="flex:1;min-width:180px;background:#F5E6E8;border-radius:8px;padding:10px 14px;">
+            <p style="font-size:11px;font-weight:700;color:#C4929B;margin:0 0 4px;">리텐션 효과</p>
+            <p style="font-size:12px;color:#2C2C2C;margin:0;line-height:1.4;">체계적 교육 경로가 있는 치과의 스탭 이직률이 30% 이상 낮음</p>
+          </div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },
@@ -395,7 +538,7 @@ export const step3Data: Section[] = [
     html: `
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3-5. 공간·동선 세팅</h2>
       <p class="text-[#333] leading-relaxed mb-4">공간이 환자 경험을 만든다. 인테리어 예산이 없어도 된다. 동선이 정리되고, 취약한 감각 접점이 보완되면 환자가 느끼는 분위기가 달라진다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">현실 전제:</span> 별도 미용 전용실을 갖춘 치과는 소수다. 대부분은 기존 진료실 체어 하나에서 시작한다. 이 가이드는 그 현실에서 출발한다.</p>
       </div>
 
@@ -411,7 +554,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">거울</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">상담·귀가 시 결과 확인용. 스탠드 거울 1개 (1~5만원)</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">핵심:</span> 전환 동선의 목적은 "같은 공간인데 다른 경험"을 만드는 것. 조명·향기·스탭 톤 세 가지만 바뀌어도 환자는 다르게 느낀다.</p>
       </div>
     `,
@@ -451,7 +594,7 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">프리미엄 세팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">385만원~</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">표준 세팅 + 미용 베드, 인테리어(도배·바닥), 간접 조명 시공</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#D4567A] p-4 mb-6 rounded-r">
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
         <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">현실적 조언:</span> 첫 3개월은 최소 세팅으로 시작해라. 시술이 실제로 돌아가고 수익이 나오는 걸 확인한 다음에 단계적으로 올려라. 공간에 먼저 투자하고 시술이 안 되면 돈만 날린다.</p>
       </div>
     `,
@@ -473,7 +616,69 @@ export const step3Data: Section[] = [
           <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 공간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 전후 표면 소독. 환자 간 정리 후 다음 환자</td></tr>
         </tbody>
       </table>
-      <div class="bg-[#f5f5f5] border border-dashed border-[#ddd] p-6 text-center text-[#999] text-sm rounded-lg mb-6">[이미지: CASE A vs CASE B 공간 레이아웃 비교 — 평면도 형태]</div>
+      <!-- CASE A vs CASE B 공간 레이아웃 비교 인포그래픽 -->
+      <div style="background:#fff;border:1px solid #e8d5d9;border-radius:12px;padding:24px;margin-bottom:24px;">
+        <div style="text-align:center;margin-bottom:20px;">
+          <span style="display:inline-block;background:#C4929B;color:#fff;font-size:12px;font-weight:600;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;">SPACE LAYOUT</span>
+          <h4 style="font-size:18px;font-weight:700;color:#1a1a1a;margin:10px 0 4px;">CASE A vs CASE B 공간 레이아웃 비교</h4>
+          <p style="font-size:12px;color:#888;margin:0;">동일 면적(30평) 기준 — 미용 시술 동선 최적화 전후</p>
+        </div>
+        <div style="display:flex;gap:20px;flex-wrap:wrap;">
+          <!-- CASE A -->
+          <div style="flex:1;min-width:280px;">
+            <div style="text-align:center;margin-bottom:10px;">
+              <span style="display:inline-block;background:#e74c3c;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;">CASE A : 기존 배치</span>
+            </div>
+            <div style="border:2px solid #ddd;border-radius:10px;padding:16px;position:relative;background:#fafafa;min-height:260px;">
+              <!-- 접수 -->
+              <div style="position:absolute;top:12px;left:12px;width:calc(100% - 24px);height:44px;background:#e8d5d9;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#2C2C2C;border:1px solid #d4a9b1;">접수 / 대기실</div>
+              <!-- 진료실 1,2 -->
+              <div style="position:absolute;top:68px;left:12px;width:calc(50% - 18px);height:60px;background:#C4929B;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;">진료실 1 (일반)</div>
+              <div style="position:absolute;top:68px;right:12px;width:calc(50% - 18px);height:60px;background:#C4929B;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;">진료실 2 (일반)</div>
+              <!-- 미용 시술 -->
+              <div style="position:absolute;top:140px;left:12px;width:calc(40% - 16px);height:50px;background:#f0e0e3;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2C2C2C;border:1px dashed #C4929B;">미용 시술실</div>
+              <!-- 상담 -->
+              <div style="position:absolute;top:140px;right:12px;width:calc(30% - 14px);height:50px;background:#eee;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#666;">상담실</div>
+              <!-- 창고/스탭 -->
+              <div style="position:absolute;bottom:12px;left:12px;width:calc(100% - 24px);height:36px;background:#f5f5f5;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#999;border:1px solid #eee;">스탭룸 / 창고 (혼재)</div>
+            </div>
+            <div style="margin-top:8px;background:#fff3f3;border-radius:6px;padding:8px 12px;">
+              <p style="font-size:11px;color:#c0392b;margin:0;line-height:1.5;">문제: 미용 시술실이 일반 진료 동선에 끼어있어 환자 프라이버시 부족. 상담실과 시술실 거리가 멀어 이동 비효율.</p>
+            </div>
+          </div>
+          <!-- CASE B -->
+          <div style="flex:1;min-width:280px;">
+            <div style="text-align:center;margin-bottom:10px;">
+              <span style="display:inline-block;background:#27ae60;color:#fff;font-size:11px;font-weight:600;padding:3px 10px;border-radius:4px;">CASE B : 최적화 배치</span>
+            </div>
+            <div style="border:2px solid #C4929B;border-radius:10px;padding:16px;position:relative;background:#FFFBFC;min-height:260px;">
+              <!-- 접수 -->
+              <div style="position:absolute;top:12px;left:12px;width:calc(55% - 16px);height:44px;background:#e8d5d9;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;color:#2C2C2C;border:1px solid #d4a9b1;">접수 / 대기</div>
+              <!-- VIP 대기 -->
+              <div style="position:absolute;top:12px;right:12px;width:calc(40% - 16px);height:44px;background:#2C2C2C;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;">미용 전용 대기</div>
+              <!-- 일반 진료 -->
+              <div style="position:absolute;top:68px;left:12px;width:calc(55% - 16px);height:60px;background:#C4929B;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#fff;">일반 진료 구역 (체어 2대)</div>
+              <!-- 상담 + 시술 연결 -->
+              <div style="position:absolute;top:68px;right:12px;width:calc(40% - 16px);height:126px;background:linear-gradient(180deg,#f0e0e3 0%,#F5E6E8 100%);border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:#2C2C2C;border:2px solid #C4929B;gap:4px;">
+                <span>상담실</span>
+                <span style="color:#C4929B;">|</span>
+                <span>미용 시술실</span>
+                <span style="font-size:10px;color:#888;font-weight:400;">(분리문 연결)</span>
+              </div>
+              <!-- 스탭/소독 -->
+              <div style="position:absolute;top:140px;left:12px;width:calc(55% - 16px);height:54px;display:flex;gap:8px;">
+                <div style="flex:1;background:#f5f5f5;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#666;border:1px solid #eee;">스탭룸</div>
+                <div style="flex:1;background:#f5f5f5;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#666;border:1px solid #eee;">소독실</div>
+              </div>
+              <!-- 동선 화살표 표시 -->
+              <div style="position:absolute;bottom:12px;left:12px;width:calc(100% - 24px);height:28px;background:#2C2C2C;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:10px;color:#C4929B;font-weight:600;letter-spacing:1px;">미용 환자 동선: 전용 대기 → 상담 → 시술 (일반 동선과 분리)</div>
+            </div>
+            <div style="margin-top:8px;background:#f0faf4;border-radius:6px;padding:8px 12px;">
+              <p style="font-size:11px;color:#27ae60;margin:0;line-height:1.5;">개선: 미용 전용 존을 우측에 집약. 상담→시술 이동 3초. 일반 환자와 동선 완전 분리로 프라이버시 확보.</p>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="border-t border-[#eee] my-8"></div>
     `,
   },

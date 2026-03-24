@@ -1,0 +1,1737 @@
+[
+  {
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-MN3GC6VQDZ&gtm=45je63i0v9189080084za200zb9189052102zd9189052102&_p=1774271222019&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=551753775.1774271223&ul=ko-kr&sr=1400x900&uaa=x86&uab=64&uafvl=Chromium%3B146.0.7680.154%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.154&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_s=1&tag_exp=103116026~103200004~115938465~115938468~116024733~117484252&sid=1774271222&sct=1&seg=0&dl=https%3A%2F%2Fbigdata.sbiz.or.kr%2F&dt=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8365&en=page_view&_fv=1&_nsi=1&_ss=1&_ee=1&tfd=581",
+    "type": "fetch",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.556Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/ce/sso/status.jsp",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.696Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/auth/menu",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.705Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pageDummy?page=/",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.919Z"
+  },
+  {
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-MN3GC6VQDZ&gtm=45je63i0v9189080084za200zb9189052102zd9189052102&_p=1774271222019&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=551753775.1774271223&ul=ko-kr&sr=1400x900&uaa=x86&uab=64&uafvl=Chromium%3B146.0.7680.154%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.154&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AEAAAAQ&_s=2&tag_exp=103116026~103200004~115938465~115938468~116024733~117484252&sid=1774271222&sct=1&seg=0&dl=https%3A%2F%2Fbigdata.sbiz.or.kr%2F&dt=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8365&en=scroll&epn.percent_scrolled=90&_et=7&tfd=935",
+    "type": "fetch",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.925Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/popupMng/findPopupMngFile?indctDvicNm=PC",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.925Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/allCrtrYm/search.json",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.925Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/banner/findFile",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.925Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/pst/getPstList/paging?bbsIdno=130958755106078720&ntcYn=Y&mainNtcPopupYn=Y&delYn=N&bbsTpcd.value=GNR",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.926Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/geo/coord2regioncode?x=126.975486&y=37.564596",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK bc1ea16933f37741c0757988f3ce3855",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.963Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/252832839577600000",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.987Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/252832875914375168",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.987Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/396327434630901760",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.987Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/252832995777675264",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.987Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/396327491992203264",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:02.988Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173007244473577472",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.007Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173007482072510464",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.007Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173007562324803584",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.007Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173007696531468288",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.007Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173008083015610368",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173008185050443776",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173008297164189696",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173008638767759360",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173008827928195072",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173009125164417024",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173009551477669888",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173009647510454272",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173009744335962112",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.008Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173009910276730880",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173010016042975232",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173014459162996736",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173014720424673280",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173015013338087424",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173015075325706240",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173015172324700160",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/module/file/173015260178591744",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.009Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/snsAnls/getSnsAnlsDetail?keyword=%EC%86%8C%EA%B3%B5%EB%8F%99&startDate=20260223&endDate=20260323&topN=5&patternExcList=%23%2A%2A",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/DongMTpctdCmpr/search.json?dongCd=11140520&tpbizClscd=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/getMmavgList/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/cfrStcnt/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/cfrStcnt2/search.json?dongCd=11140520&tpbizLmsclsfCd=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/cfrStcntList/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/DynPplCmpr/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/VstAgeRnk/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.035Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/DongSmkndTpbizStorUnitSlsAvg/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.036Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/sbiz/api/bizonSttus/BaeminTpbiz/search.json?dongCd=11140520",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:03.036Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/ce/sso/status.jsp",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:04.954Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pageDummy?page=/hotplace/gisDetail",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:04.978Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/snsAnls.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.066Z",
+    "responseStatus": 200,
+    "responseSize": 2269,
+    "responsePreview": "function getKeyword(keyword, megaName, ctyName){\n\n    const date = new Date();\n    const startDate = (date.getFullYear() - 1) + leftPad(date.getMonth()+1) + leftPad(date.getDate());\n    const endDate = toStringByFormatting(date, '');\n    // console.log('===================='+startDate);\n    // console.log(endDate);\n\n    // 2024 02 22\n    // 받은 행정동 코드 외 정상적인 sns 키워드 검색을 위해서 나머지 키워드를 추가한다.\n    // 아직 테이블이 생성되지 않았기 때문에 남겨둠\n    // 추후 키워드에 추가해서 getToken 으로 전달해야함\n    // $.ajax({\n    //     url: '',\n   "
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/anlsHstry.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.066Z",
+    "responseStatus": 200,
+    "responseSize": 20638,
+    "responsePreview": "\nconst rptpAnlsTpCd = {\n    \"BA\" : \"상세분석\",\n    \"CA\" : \"경쟁분석\",\n    \"HA\" : \"핫플레이스분석\",\n    \"BE\" : \"상권등급\",\n    \"EA\" : \"수익분석\",\n    \"LA\" : \"업종분석\",\n    \"SA\" : \"간단분석\",\n    \"DA\" : \"배달분석\"\n\n\n}\nlet selectedAnlsTpcd = \"all\";\nlet rtpt = \"\";\nlet inputParam = \"\";\n\nfunction srchAnlsCd_back() {\n    var str = \"\";\n    var optionStr = \"\";\n    //var paging = \"\";\n    let url = 'api/hstry/cdList';\n\n    str += \"<select name='' id='anlsTpcd'>\"\n        + \"<option value='all'>전체</option>\";\n\n    $.ajax({\n        url: url,\n "
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/cmpetAnlsMap.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.066Z",
+    "responseStatus": 200,
+    "responseSize": 10662,
+    "responsePreview": "let cmpPath = [];\nlet denseGroup = [];\nlet cmpetMouseEvent = null;\nlet densePoly = null;\nlet cmpetPolygon = null;\nlet cmpetTooltip = null;\nlet currentBlockCd = null;\nlet currentTpbizCd = null;\n\n// 호버 상태 관리 변수\nlet isMouseOverPolygon = false;\nlet isMouseOverTooltip = false;\nlet hideTooltipTimer = null;\nlet currentHoverPolygon = null;\n\n// 기초단위구별 경쟁등급 조회\nasync function getDenseMapShapes() {\n\tcmpetMouseEvent = ltlg;\n\n\tconst transform = transformGEOtoTM(cmpetMouseEvent.latLng.La,cmpetMouseEvent.latLng"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/cmpetAnls.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.066Z",
+    "responseStatus": 200,
+    "responseSize": 12458,
+    "responsePreview": "//(2025.04.04 추가)\nlet isUserScrolling = false;\nlet isManualScroll = false; //자동\nlet scrollTimeout;\n/* **************************** 스크롤 내릴때 위에 탭 색 active 처리 추가(2025.04.03)*********** */\nfunction cmpetReportMenu(num, obj) {\n\tconst thisBtn = obj;\n\tconst report = thisBtn.closest('.layerReport.active');\n\tconst titleArea = report.querySelector('.titleArea');\n\tconst cont = report.querySelector('.inner .cont');\n\tconst topArea = cont.querySelector('.topArea');\n\tconst items = Array.from(cont.children).fil"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/fakereport.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.071Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=126.975486&y=37.564596",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "ka": "sdk/4.4.21 os/javascript lang/ko-KR device/Win32 origin/https%3A%2F%2Fbigdata.sbiz.or.kr",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK fffdcb84168adcf25bea4f7d635b6bed",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.529Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getTpbizLcd",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.530Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getHierarchyTpbizCode",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.548Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/com/dupUserDto",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:05.549Z"
+  },
+  {
+    "method": "POST",
+    "url": "https://www.google-analytics.com/g/collect?v=2&tid=G-MN3GC6VQDZ&gtm=45je63i0v9189080084za200zb9189052102zd9189052102&_p=1774271222019&gcd=13l3l3l3l1l1&npa=0&dma=0&cid=551753775.1774271223&ul=ko-kr&sr=1400x900&uaa=x86&uab=64&uafvl=Chromium%3B146.0.7680.154%7CNot-A.Brand%3B24.0.0.0%7CGoogle%2520Chrome%3B146.0.7680.154&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAAQ&tag_exp=103116026~103200004~115938465~115938468~116024733~117484252&dt=main&dp=%2F&dl=https%3A%2F%2Fbigdata.sbiz.or.kr%2F%23%2F&sid=1774271222&sct=1&seg=1&_s=3&tfd=5937",
+    "type": "fetch",
+    "postData": "en=page_view&_ee=1&_et=339\r\nen=page_view&_ee=1&_et=2108&dp=%2Fhotplace%2FgisDetail&dl=https%3A%2F%2Fbigdata.sbiz.or.kr%2F%23%2Fhotplace%2FgisDetail&dt=%EC%86%8C%EC%83%81%EA%B3%B5%EC%9D%B8365%20%3E%20%EC%83%81%EC%84%B8%EB%B6%84%EC%84%9D",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "content-type": "text/plain;charset=UTF-8",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:07.910Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/geo/coord2address?x=127.01283719957081&y=37.48619618669528",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK bc1ea16933f37741c0757988f3ce3855",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.012Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/pub/api/sprtBiz/getBizList/internal?offset=1&limit=8",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "application/json, text/plain, */*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.050Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/snsAnls.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.080Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/anlsHstry.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.081Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/cmpetAnlsMap.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.081Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/anls/cmpetAnls.js",
+    "type": "script",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.081Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/fakereport.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.085Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=127.01283719957081&y=37.48619618669528",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "ka": "sdk/4.4.21 os/javascript lang/ko-KR device/Win32 origin/https%3A%2F%2Fbigdata.sbiz.or.kr",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK fffdcb84168adcf25bea4f7d635b6bed",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.312Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getTpbizLcd",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.312Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getHierarchyTpbizCode",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.329Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/com/dupUserDto",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:09.329Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/search/address.json?query=%EB%A7%B7%EB%8F%8C%EB%A1%9C110-9&page=1&size=30",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "ka": "sdk/4.4.21 os/javascript lang/ko-KR device/Win32 origin/https%3A%2F%2Fbigdata.sbiz.or.kr",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK fffdcb84168adcf25bea4f7d635b6bed",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:17.495Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/search/keyword.json?query=%EB%A7%B7%EB%8F%8C%EB%A1%9C110-9&page=1&size=15",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "ka": "sdk/4.4.21 os/javascript lang/ko-KR device/Win32 origin/https%3A%2F%2Fbigdata.sbiz.or.kr",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK fffdcb84168adcf25bea4f7d635b6bed",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:17.539Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://dapi.kakao.com/v2/local/geo/coord2regioncode.json?x=127.302521221783&y=37.6571849237748",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "ka": "sdk/4.4.21 os/javascript lang/ko-KR device/Win32 origin/https%3A%2F%2Fbigdata.sbiz.or.kr",
+      "sec-ch-ua-platform": "\"Windows\"",
+      "authorization": "KakaoAK fffdcb84168adcf25bea4f7d635b6bed",
+      "referer": "https://bigdata.sbiz.or.kr/",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:18.700Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getTpbizMclCodeWithBest.json?tpbizLclcd=Q1",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:19.785Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/getTpbizClsCode.json?tpbizMclcd=Q102",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:20.914Z"
+  },
+  {
+    "method": "POST",
+    "url": "https://bigdata.sbiz.or.kr/gis/com/report/capture.json",
+    "type": "xhr",
+    "postData": "{\"type\":\"circleRadius\",\"analyType\":\"bizonAnls\",\"centerX\":37.6571849237748,\"centerY\":127.302521221783,\"transformX\":226694,\"transformY\":461992,\"upjongCd\":\"Q10210\",\"kakaoPathStr\":\"\",\"pathStr\":\"\",\"radius\":1500,\"mapLevelDecision\":1500,\"apiLogin\":\"N\",\"sprNo\":0}",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "content-type": "application/json;charset=UTF-8"
+    },
+    "timestamp": "2026-03-23T13:07:31.798Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon1.sg?analyNo=106558043&upjongCd=Q10210&xcnts=226694&ydnts=461992&center_x=226694&center_y=461992&analyDate=20260323&a=01&b=01&c=01&apiLogin=&lKey=&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.731Z",
+    "responseStatus": 200,
+    "responseSize": 63642,
+    "responsePreview": "\n\n\n\n\n<script src=\"/gis/js/bizonAnaly.js\"></script>\n\n<script>\n\tvar aACd = \"41360256\";\n\tvar aANm = \"경기도 남양주시 화도읍\";\n\tvar analyNo = \"106558043\";\n\tvar sgAnalyDate = \"20260323\";\n\tvar path = \"\";\n\t$(\"#showAnalyNo\").html(analyNo);\n\n\t// 행정동 키워드 TOP 5\n\tsnsKeyword(aACd);\n    const conts = document.querySelectorAll(\".reportInner .cont\");\n\n    conts.forEach((cont) => {\n        cont.addEventListener(\"scroll\", updateActiveNav);\n    });\n\n</script>\n\n\n<div class=\"reportInner\">\n\t<div class=\"titleArea\">\n\t\t<h3>상권분석 리"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/bizonAnaly.js?_=1774271253917",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.917Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/snsAnls/getRelatedWord?DONG_CD=41360256",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.935Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon2.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 9688,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar monthMap = [\n\t\t\t\"24.12\", \"25.01\", \"25.02\", \n\t\t\t\"25.03\", \"25.04\", \"25.05\", \n\t\t\t\"25.06\", \"25.07\", \"25.08\", \n\t\t\t\"25.09\", \"25.10\", \"25.11\", \"25.12\"\n\t\t];\n\n\t// 업소수추이\n\tvar bsnsCntData = [];\n\n\t\n\t\tif (\"0\" <= 2 && \"0\" == 0) {\n\t\t\tbsnsCntData.push({\n\t\t\t\tname : \"선택 영역\",\n\t\t\t\tdata : [\n\t\t\t\t\t\tNumber(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon3.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 39403,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar monthMap = [\n\t\t\t\"24.12\", \"25.01\", \"25.02\", \"25.03\"\n\t\t\t, \"25.04\", \"25.05\", \"25.06\", \"25.07\"\n\t\t\t, \"25.08\", \"25.09\", \"25.10\", \"25.11\", \"25.12\"\n\t\t];\n\n\t// 매출액 추이\n\tvar salesAmt = [];\n\n\t\n\t\tif (\"0\" <= 2 && \"0\" == 0) {\n\t\t\tsalesAmt.push({\n\t\t\t\tname : \"선택영역\",\n\t\t\t\tdata : [\n\t\t\t\t\t\tMath.round(\"5783\"), Math.round(\"5434\"), Math.round(\"6417\")\n\t\t\t\t\t\t, Math.round(\"6781\"), Math.round(\"6810\"), Math.round(\"6121\")\n\t\t\t\t\t\t, Math.round(\"5838\"), Math.round(\"6964\"), Math.round(\"6224\")\n\t\t\t\t\t\t, Math.round(\"6"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon4.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 61680,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar flowByMnth = [];\n\n\t\n\t\tflowByMnth.push(\"24.12\");\n\t\n\t\tflowByMnth.push(\"25.01\");\n\t\n\t\tflowByMnth.push(\"25.02\");\n\t\n\t\tflowByMnth.push(\"25.03\");\n\t\n\t\tflowByMnth.push(\"25.04\");\n\t\n\t\tflowByMnth.push(\"25.05\");\n\t\n\t\tflowByMnth.push(\"25.06\");\n\t\n\t\tflowByMnth.push(\"25.07\");\n\t\n\t\tflowByMnth.push(\"25.08\");\n\t\n\t\tflowByMnth.push(\"25.09\");\n\t\n\t\tflowByMnth.push(\"25.10\");\n\t\n\t\tflowByMnth.push(\"25.11\");\n\t\n\t\tflowByMnth.push(\"25.12\");\n\t\n\t\n\t// 월별 일평균 유동인구\n\tvar flowPopCnt = [];\n\t\n\tflowPopCnt.push({\n\t\tname : \""
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon6.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 20873,
+    "responsePreview": "\n\n\n\n\n<script>\n\t//주요시설\n\tvar importantFacs = [];\n\tvar facsMonth = [];\n\n\t// 세대 수 추이\n\tvar categorie = [];\n\tvar dataArr = [];\n\n\t\n\t\tcategorie.push(\"2024년 상반기\");\n\t\n\t\tcategorie.push(\"2024년 하반기\");\n\t\n\t\tcategorie.push(\"2025년 상반기\");\n\t\n\t\tcategorie.push(\"2025년 하반기\");\n\t\n\n\t\n\t\tif (!(\"41\" == '36' && \"0\" == '2')) {\n\t\t\tdataArr.push({\n\t\t\t\tname : \"선택 영역\",\n\t\t\t\tdata : [\n\t\t\t\t\tNumber(\"26215\"),\n\t\t\t\t\tNumber(\"26266\"),\n\t\t\t\t\tNumber(\"26355\"),\n\t\t\t\t\tNumber(\"26399\")\n\t\t\t\t],\n\t\t\t\tcolor : setChartColor(\"0\")\n\t\t\t});\n\t\t}\n\t\n\t\tif (!(\"41\" "
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon7.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 8207,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar vstCustSexRt = \"[{genNm=남성, popnumRate=51.2, popnum=10304}, {genNm=여성, popnumRate=48.8, popnum=9830}]\";\n\tvar vstCustNewCstmRt = \"[{newCstmCustCnt=115724, newCstmCustNm=신규, newCstmCntRate=76.9}, {newCstmCustCnt=34780, newCstmCustNm=단골, newCstmCntRate=23.1}]\";\n\tvar maleVstCustMjrLife = \"[{maleCustHbbNm=게임, maleCustCnt=843, maleCustRate=16.1}, {maleCustHbbNm=힐링, maleCustCnt=708, maleCustRate=13.5}, {maleCustHbbNm=골프, maleCustCnt=545, maleCustRate=10.4}, {maleCustHbbNm=육아, maleCus"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon8.sg?analyNo=106558043&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.936Z",
+    "responseStatus": 200,
+    "responseSize": 848,
+    "responsePreview": "\n\n\n\n\n<script src=\"/gis/js/bizonAnaly.js\"></script>\n<script>\n\tvar mAmt = [];\n\tvar fAmt = [];\n\tvar genderCrtrYm = [];\n\n\t// 성별 배달 매출 현황 차트\n\tif(\"[]\" != '[]'){\n\t\t\n\n\t\t\n\t\t// 성별 차트\n\t\tdlvyGenderSlsChart(mAmt, fAmt, genderCrtrYm);\n\t}\n</script>\n\n<!---------------------------------------- 배달매출 탭 start ---------------------------------------->\n<dl class=\"scrollTop7\">\n\t<dt class=\"i_delivery\">배달 매출 분석</dt>\n\n\t<dd>\n\t\t<dl>\n\t\t\t<dt>배달 매출 현황</dt>\n\t\t\t<dd>\n\t\t\t\t<div class=\"boxArea type4 space\">\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_info.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.942Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/img_report_same.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.942Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/img_report_up.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.942Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/img_report_down.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.942Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/snsAnls/getToken?keyword=%ED%99%94%EB%8F%84%EC%9D%8D%7C%7C%EC%B2%9C%EB%A7%88%EC%82%B0%EC%97%AD%7C%7C%EB%A7%88%EC%84%9D%EC%97%AD%7C%7C%EC%88%98%EB%8F%99%EB%A9%B4%7C%7C%ED%99%94%EB%8F%84%EC%9D%8D%7C%7C%ED%99%94%EB%8F%84%7C%7C%ED%99%94%EB%8F%84%EC%9D%8D&patternExcList=!%7C%7C%23%7C%7C%40&type=category",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:33.952Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/bizonAnaly.js?_=1774271256323",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.324Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_population.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.433Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_delivery.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.434Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_shop.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.507Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_price.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.603Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_sales.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.603Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_home.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.861Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_work.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:36.861Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_family.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:38.321Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/img/ico_report_multihome.svg",
+    "type": "image",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/css/mapStyle.css",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:07:38.321Z"
+  },
+  {
+    "method": "POST",
+    "url": "https://bigdata.sbiz.or.kr/gis/com/report/capture.json",
+    "type": "xhr",
+    "postData": "{\"type\":\"circleRadius\",\"analyType\":\"bizonAnls\",\"centerX\":37.6571849237748,\"centerY\":127.302521221783,\"transformX\":226694,\"transformY\":461992,\"upjongCd\":\"Q10210\",\"kakaoPathStr\":\"\",\"pathStr\":\"\",\"radius\":1500,\"mapLevelDecision\":1500,\"apiLogin\":\"N\",\"sprNo\":0}",
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "content-type": "application/json;charset=UTF-8"
+    },
+    "timestamp": "2026-03-23T13:11:13.195Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon1.sg?analyNo=106558061&upjongCd=Q10210&xcnts=226694&ydnts=461992&center_x=226694&center_y=461992&analyDate=20260323&a=01&b=01&c=01&apiLogin=&lKey=&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:14.936Z",
+    "responseStatus": 200,
+    "responseSize": 63994,
+    "responsePreview": "\n\n\n\n\n<script src=\"/gis/js/bizonAnaly.js\"></script>\n\n<script>\n\tvar aACd = \"41360256\";\n\tvar aANm = \"경기도 남양주시 화도읍\";\n\tvar analyNo = \"106558061\";\n\tvar sgAnalyDate = \"20260323\";\n\tvar path = \"\";\n\t$(\"#showAnalyNo\").html(analyNo);\n\n\t// 행정동 키워드 TOP 5\n\tsnsKeyword(aACd);\n    const conts = document.querySelectorAll(\".reportInner .cont\");\n\n    conts.forEach((cont) => {\n        cont.addEventListener(\"scroll\", updateActiveNav);\n    });\n\n</script>\n\n\n<div class=\"reportInner\">\n\t<div class=\"titleArea\">\n\t\t<h3>상권분석 리"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/bizonAnaly.js?_=1774271475112",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.113Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/snsAnls/getRelatedWord?DONG_CD=41360256",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon2.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 9688,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar monthMap = [\n\t\t\t\"24.12\", \"25.01\", \"25.02\", \n\t\t\t\"25.03\", \"25.04\", \"25.05\", \n\t\t\t\"25.06\", \"25.07\", \"25.08\", \n\t\t\t\"25.09\", \"25.10\", \"25.11\", \"25.12\"\n\t\t];\n\n\t// 업소수추이\n\tvar bsnsCntData = [];\n\n\t\n\t\tif (\"0\" <= 2 && \"0\" == 0) {\n\t\t\tbsnsCntData.push({\n\t\t\t\tname : \"선택 영역\",\n\t\t\t\tdata : [\n\t\t\t\t\t\tNumber(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t\t\t\t\t, Number(\"23\"), Number(\"23\"), Number(\"23\"), Number(\"23\")\n\t\t"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon3.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 39403,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar monthMap = [\n\t\t\t\"24.12\", \"25.01\", \"25.02\", \"25.03\"\n\t\t\t, \"25.04\", \"25.05\", \"25.06\", \"25.07\"\n\t\t\t, \"25.08\", \"25.09\", \"25.10\", \"25.11\", \"25.12\"\n\t\t];\n\n\t// 매출액 추이\n\tvar salesAmt = [];\n\n\t\n\t\tif (\"0\" <= 2 && \"0\" == 0) {\n\t\t\tsalesAmt.push({\n\t\t\t\tname : \"선택영역\",\n\t\t\t\tdata : [\n\t\t\t\t\t\tMath.round(\"5783\"), Math.round(\"5434\"), Math.round(\"6417\")\n\t\t\t\t\t\t, Math.round(\"6781\"), Math.round(\"6810\"), Math.round(\"6121\")\n\t\t\t\t\t\t, Math.round(\"5838\"), Math.round(\"6964\"), Math.round(\"6224\")\n\t\t\t\t\t\t, Math.round(\"6"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon4.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 61680,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar flowByMnth = [];\n\n\t\n\t\tflowByMnth.push(\"24.12\");\n\t\n\t\tflowByMnth.push(\"25.01\");\n\t\n\t\tflowByMnth.push(\"25.02\");\n\t\n\t\tflowByMnth.push(\"25.03\");\n\t\n\t\tflowByMnth.push(\"25.04\");\n\t\n\t\tflowByMnth.push(\"25.05\");\n\t\n\t\tflowByMnth.push(\"25.06\");\n\t\n\t\tflowByMnth.push(\"25.07\");\n\t\n\t\tflowByMnth.push(\"25.08\");\n\t\n\t\tflowByMnth.push(\"25.09\");\n\t\n\t\tflowByMnth.push(\"25.10\");\n\t\n\t\tflowByMnth.push(\"25.11\");\n\t\n\t\tflowByMnth.push(\"25.12\");\n\t\n\t\n\t// 월별 일평균 유동인구\n\tvar flowPopCnt = [];\n\t\n\tflowPopCnt.push({\n\t\tname : \""
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon6.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 20873,
+    "responsePreview": "\n\n\n\n\n<script>\n\t//주요시설\n\tvar importantFacs = [];\n\tvar facsMonth = [];\n\n\t// 세대 수 추이\n\tvar categorie = [];\n\tvar dataArr = [];\n\n\t\n\t\tcategorie.push(\"2024년 상반기\");\n\t\n\t\tcategorie.push(\"2024년 하반기\");\n\t\n\t\tcategorie.push(\"2025년 상반기\");\n\t\n\t\tcategorie.push(\"2025년 하반기\");\n\t\n\n\t\n\t\tif (!(\"41\" == '36' && \"0\" == '2')) {\n\t\t\tdataArr.push({\n\t\t\t\tname : \"선택 영역\",\n\t\t\t\tdata : [\n\t\t\t\t\tNumber(\"26215\"),\n\t\t\t\t\tNumber(\"26266\"),\n\t\t\t\t\tNumber(\"26355\"),\n\t\t\t\t\tNumber(\"26399\")\n\t\t\t\t],\n\t\t\t\tcolor : setChartColor(\"0\")\n\t\t\t});\n\t\t}\n\t\n\t\tif (!(\"41\" "
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon7.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 8207,
+    "responsePreview": "\n\n\n\n\n<script>\n\tvar vstCustSexRt = \"[{genNm=남성, popnumRate=51.2, popnum=10304}, {genNm=여성, popnumRate=48.8, popnum=9830}]\";\n\tvar vstCustNewCstmRt = \"[{newCstmCustCnt=115724, newCstmCustNm=신규, newCstmCntRate=76.9}, {newCstmCustCnt=34780, newCstmCustNm=단골, newCstmCntRate=23.1}]\";\n\tvar maleVstCustMjrLife = \"[{maleCustHbbNm=게임, maleCustCnt=843, maleCustRate=16.1}, {maleCustHbbNm=힐링, maleCustCnt=708, maleCustRate=13.5}, {maleCustHbbNm=골프, maleCustCnt=545, maleCustRate=10.4}, {maleCustHbbNm=육아, maleCus"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/bizonAnls/report/sg/sang_gwon8.sg?analyNo=106558061&analyDate=20260323&upjongCd=Q10210&admiCd=41360256&admiNm=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EB%82%A8%EC%96%91%EC%A3%BC%EC%8B%9C+%ED%99%94%EB%8F%84%EC%9D%8D&xtLoginId=",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.134Z",
+    "responseStatus": 200,
+    "responseSize": 848,
+    "responsePreview": "\n\n\n\n\n<script src=\"/gis/js/bizonAnaly.js\"></script>\n<script>\n\tvar mAmt = [];\n\tvar fAmt = [];\n\tvar genderCrtrYm = [];\n\n\t// 성별 배달 매출 현황 차트\n\tif(\"[]\" != '[]'){\n\t\t\n\n\t\t\n\t\t// 성별 차트\n\t\tdlvyGenderSlsChart(mAmt, fAmt, genderCrtrYm);\n\t}\n</script>\n\n<!---------------------------------------- 배달매출 탭 start ---------------------------------------->\n<dl class=\"scrollTop7\">\n\t<dt class=\"i_delivery\">배달 매출 분석</dt>\n\n\t<dd>\n\t\t<dl>\n\t\t\t<dt>배달 매출 현황</dt>\n\t\t\t<dd>\n\t\t\t\t<div class=\"boxArea type4 space\">\n\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/api/snsAnls/getToken?keyword=%ED%99%94%EB%8F%84%EC%9D%8D%7C%7C%EC%B2%9C%EB%A7%88%EC%82%B0%EC%97%AD%7C%7C%EB%A7%88%EC%84%9D%EC%97%AD%7C%7C%EC%88%98%EB%8F%99%EB%A9%B4%7C%7C%ED%99%94%EB%8F%84%EC%9D%8D%7C%7C%ED%99%94%EB%8F%84%7C%7C%ED%99%94%EB%8F%84%EC%9D%8D&patternExcList=!%7C%7C%23%7C%7C%40&type=category",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "*/*",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:15.149Z"
+  },
+  {
+    "method": "GET",
+    "url": "https://bigdata.sbiz.or.kr/gis/js/bizonAnaly.js?_=1774271478835",
+    "type": "xhr",
+    "postData": null,
+    "headers": {
+      "sec-ch-ua-platform": "\"Windows\"",
+      "referer": "https://bigdata.sbiz.or.kr/gis/?type=detail&rptpType=gisDetail&lat=37.48619618669528&lng=127.01283719957081",
+      "x-requested-with": "XMLHttpRequest",
+      "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36",
+      "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "sec-ch-ua": "\"Chromium\";v=\"146\", \"Not-A.Brand\";v=\"24\", \"Google Chrome\";v=\"146\"",
+      "sec-ch-ua-mobile": "?0"
+    },
+    "timestamp": "2026-03-23T13:11:18.837Z"
+  }
+]
