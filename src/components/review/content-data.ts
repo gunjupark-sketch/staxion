@@ -674,88 +674,26 @@ export const contentData: Record<string, Section[]> = {
       html: `
         <div class="border-t border-[#eee] my-8"></div>
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-3. 반론과 현실 — 합법인데 왜 아직 불안한가</h2>
-        <p class="text-[#333] leading-relaxed mb-6">대법원 전원합의체 판결이 있음에도 현장에서 불안감은 남아 있다. 그 이유를 직시하고, 대응 방법을 다룬다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">대법원 전원합의체가 '합법'이라는 거대한 방패를 쥐여주었다. 그런데도 진료실로 돌아오면 원장들의 손끝에는 여전히 미세한 떨림이 남아 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-6">왜 그런가. 합법을 선언한 것은 대법원이지만, 그 판결을 불쾌하게 여기는 세력이 아직도 조직적으로 움직이고 있기 때문이다. 이 챕터에서는 그 불안의 정체를 낱낱이 해부하고, 현장에서 마주칠 수 있는 반론과 공격에 대한 철벽 대응 논리를 완전무장시킨다.</p>
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">의협의 입장과 실제 행동</h3>
-        <p class="text-[#333] leading-relaxed mb-4">의협은 판결 이후에도 치과의사 미용시술에 대한 반대 입장을 유지하고 있다. 별도 신고센터를 운영하며, 개별 민원을 경찰 고발 또는 보건소 제보로 연결하는 사례가 지속되고 있다.</p>
-        <p class="text-[#333] leading-relaxed mb-8">다만, 의협이 입법을 통해 이를 금지시키려는 시도는 성공하지 못했다. 2016년 판결 이후 의료법 개정 움직임이 있었으나 국회를 통과하지 못했다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">대한의사협회는 2016년 판결 이후에도 치과의사의 안면미용시술에 대한 반대 입장을 한 치도 굽히지 않고 있다. 별도의 신고센터를 운영하며, 개별 민원을 경찰 고발 또는 보건소 제보로 연결하는 사례가 지금 이 순간에도 지속되고 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">하지만 명심해야 한다. 의협이 아무리 맹렬하게 반대해도, 그 반대가 법적 구속력을 가진 적은 단 한 번도 없다. 2016년 판결 이후 의료법 개정을 통해 치과의사의 미용시술을 원천 차단하려는 시도가 있었으나, 국회의 문턱을 끝내 넘지 못했다. 피부과학회가 사활을 걸고 제기한 헌법소원 역시 각하되었다. 9년간 이어진 모든 역공이 전부 무위로 돌아갔다는 사실 자체가, 2016년 판결의 철옹성이 얼마나 견고한지를 역설적으로 증명한다.</p>
       `,
     },
     {
       id: "step0-03-01",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">상대방이 사용하는 4가지 반론 — 미리 알고 무장하라</h3>
-        <div class="overflow-x-auto mb-8">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">반론</th>
-                <th class="px-4 py-2 text-left font-medium">주장</th>
-                <th class="px-4 py-2 text-left font-medium">대응 논리</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">반론 1</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"교육과정 포함 = 면허 범위 확대" — 간호대에서 내과를 배웠다고 간호사가 진료할 수 없듯, 교육과정 포함이 면허 범위 자동 확대가 아니다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법원은 교육과정만으로 판단하지 않았다. 교육+수련+학문적 원리+보건위생 위해 등 종합 판단. 단일 근거가 아닌 복합 근거</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">반론 2</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"보건복지부 과거 유권해석" — 복지부가 '미용 보톡스는 무면허 의료행위'라고 유권해석한 바 있다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법원 전원합의체 판결은 행정부 유권해석보다 상위 규범. 판결 이후 복지부도 집행하지 않음</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">반론 3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"판결 범위가 눈가·미간에 한정" — 이마·볼·사각턱 등 다른 부위에는 적용 안 된다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판결은 '안면부'를 영역으로 인정한 것이지 '눈가·미간'만 인정한 것이 아니다. 판시 사항과 판결 이유를 구분해야 한다</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">반론 4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"승모근·종아리 등 안면 외 시술" — 안면 외 부위는 판결 적용 밖이며 고발 대상</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">이 반론은 일부 타당하다. 안면 외 부위는 판결 논리의 적용이 어려우므로, 시술 범위를 안면부로 한정하는 것이 실무적으로 안전하다</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- 도표: V-005 반론 대응 카드 -->
-        <div class="mb-6">
-          <p class="text-[#1a1a1a] font-bold text-sm text-center mb-1">주요 반론과 대응 논리</p>
-          <p class="text-[#999] text-xs text-center mb-4">법적 근거 기반 대응</p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- 카드 1 -->
-            <div class="rounded-lg overflow-hidden border border-[#eee]">
-              <div class="bg-[#1a1a1a] px-4 py-2.5">
-                <p class="text-[10px] text-[#999]">반론</p>
-                <p class="text-white text-sm font-semibold">면허 범위 초과</p>
-              </div>
-              <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#C4929B]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
-                <p class="text-[#1a1a1a] text-sm">대법원 전원합의체 판결로 합법 확정</p>
-              </div>
-            </div>
-            <!-- 카드 2 -->
-            <div class="rounded-lg overflow-hidden border border-[#eee]">
-              <div class="bg-[#1a1a1a] px-4 py-2.5">
-                <p class="text-[10px] text-[#999]">반론</p>
-                <p class="text-white text-sm font-semibold">안전성 문제</p>
-              </div>
-              <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#C4929B]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
-                <p class="text-[#1a1a1a] text-sm">치과의사 해부학 교육 5,000시간+ 확보</p>
-              </div>
-            </div>
-            <!-- 카드 3 -->
-            <div class="rounded-lg overflow-hidden border border-[#eee]">
-              <div class="bg-[#1a1a1a] px-4 py-2.5">
-                <p class="text-[10px] text-[#999]">반론</p>
-                <p class="text-white text-sm font-semibold">의협 반대</p>
-              </div>
-              <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#C4929B]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
-                <p class="text-[#1a1a1a] text-sm">법적 구속력 없는 단체 의견</p>
-              </div>
-            </div>
-            <!-- 카드 4 -->
-            <div class="rounded-lg overflow-hidden border border-[#eee]">
-              <div class="bg-[#1a1a1a] px-4 py-2.5">
-                <p class="text-[10px] text-[#999]">반론</p>
-                <p class="text-white text-sm font-semibold">환자 인식 부족</p>
-              </div>
-              <div class="text-center text-[#999] text-xs py-1">&#8595;</div>
-              <div class="bg-[#C4929B]/10 px-4 py-2.5">
-                <p class="text-[10px] text-[#C4929B] font-semibold">대응 논리</p>
-                <p class="text-[#1a1a1a] text-sm">미용치과 시장 연평균 15%+ 성장</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">상대방이 사용하는 4가지 반론 — 미리 알고 완전무장하라</h3>
+        <p class="text-[#333] leading-relaxed mb-6">전장에 나서기 전에 적이 어떤 총을 들고 있는지 파악하는 것은 기본 중의 기본이다. 의협과 피부과학회가 집요하게 반복하는 반론은 정확히 네 가지로 수렴된다. 하나하나 해부한다.</p>
+        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 반론 1 : "교육과정에 포함됐다고 면허 범위가 자동으로 확대되는 것은 아니다"</h4>
+        <p class="text-[#333] leading-relaxed mb-6">이들이 즐겨 쓰는 비유가 있다. "간호대에서 내과를 배웠다고 간호사가 진료할 수 있는가?" 언뜻 그럴듯하게 들리지만, 대법원의 판단 구조를 의도적으로 왜곡한 궤변이다. 대법원은 '교육과정 포함' 하나만으로 합법을 선언한 적이 없다. 교육과정, 수련 체계, 의학과 치의학의 학문적 동질성, 보건위생상 위해 가능성까지 네 가지 근거를 종합적으로 직조한 복합 판단이었다. 실 한 가닥만 뽑아들고 "이건 약하다"고 흔드는 것은, 쇠사슬의 고리 하나만 보고 전체 사슬이 끊어졌다고 우기는 것과 다르지 않다.</p>
+        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 반론 2 : "보건복지부가 '미용 보톡스는 무면허 의료행위'라고 유권해석한 바 있다"</h4>
+        <p class="text-[#333] leading-relaxed mb-6">과거 복지부의 유권해석은 사실이다. 하지만 법의 위계를 모르는 사람이나 이 카드를 꺼내든다. 대법원 전원합의체 판결은 행정부의 유권해석보다 절대적으로 상위에 존재하는 최종 규범이다. 판결 이후 복지부 스스로도 해당 유권해석을 근거로 한 어떠한 행정 집행도 하지 않았다. 무기로서의 유효기간이 만료된 탄환이다.</p>
+        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 반론 3 : "판결은 눈가와 미간에 한정된다. 이마, 사각턱, 볼 등 다른 부위에는 적용되지 않는다"</h4>
+        <p class="text-[#333] leading-relaxed mb-6">판결문을 제대로 읽지 않은 사람이 범하는 전형적인 오독이다. 대법원이 인정한 것은 '눈가와 미간'이라는 특정 포인트가 아니라, '안면부'라는 영역 전체다. 판시 사항과 판결 이유의 구분은 법학의 기초 중 기초인데, 이 둘을 의도적으로 혼동시키는 것이 이 반론의 수법이다. 판결 이유에서 대법원은 구강악안면외과의 진료 범위가 안면부 전체를 아우른다는 점을 명확히 설시했다.</p>
+        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 반론 4 : "승모근, 종아리 등 안면부 밖의 시술은 판결 적용 밖이며 고발 대상이다"</h4>
+        <p class="text-[#333] leading-relaxed mb-4">이 반론은 다른 셋과 결이 다르다. 일부 타당하기 때문이다. 2016년 판결의 논리적 보호막은 '안면부'라는 대전제 위에 서 있고, 승모근이나 종아리 같은 바디 영역은 그 보호막의 바깥이다. 이것은 상대방의 공격이 아니라, 우리 스스로 직시해야 할 현실적 경계선이다. 앞서 0-2에서 적색 구역으로 분류한 이유가 정확히 여기에 있다. 바디 시술은 현재의 판결 논리로 방어하기 어렵다. 메뉴판에서 지워라.</p>
         <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-8">
           <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#f59e0b] font-bold">주의:</span> 반론 4는 상대방 논리가 아니라 실제 리스크다. 승모근·바디 시술은 현재 판결 논리로 방어하기 어렵다.</p>
         </div>
@@ -765,49 +703,40 @@ export const contentData: Record<string, Section[]> = {
       id: "step0-03-02",
       html: `
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">현실적 리스크를 직시하라</h3>
-        <p class="text-[#333] leading-relaxed mb-4">합법이다. 대법원이 그렇게 판결했다. 하지만 현실에서 리스크가 완전히 사라진 것은 아니다.</p>
-        <ul class="space-y-2 mb-4">
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">민원 가능성은 존재한다.</span> 의협 신고센터, 환자 불만, 경쟁 치과의 제보 등 경로는 열려 있다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">보건소 조사가 올 수 있다.</span> 민원이 접수되면 보건소는 조사를 진행한다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">경찰 고발까지 갈 수 있다.</span> 보건소에서 복지부로, 복지부에서 검찰로 넘어가는 경로가 있다.</li>
-        </ul>
-        <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">하지만 이것이 '하지 말아야 할 이유'는 아니다. 최종 판단 기준은 대법원 전원합의체 판결이며, 9년간 이 판결을 뒤집은 사례는 없다. 필요한 것은 불안에 멈추는 것이 아니라, 기록과 프로토콜로 무장하는 것이다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">합법이다. 대법원이 그렇게 판결했다. 9년간 단 한 번도 뒤집히지 않았다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">하지만 합법이라는 사실이 현장의 모든 마찰을 자동으로 소멸시켜주지는 않는다. 원장들이 알아야 할 현실은 이것이다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">민원의 경로는 열려 있다. 의협 신고센터, 불만을 품은 환자, 경쟁 의원의 제보 — 누구든 민원을 넣을 수 있다. 민원이 접수되면 보건소는 조사를 진행하고, 보건소에서 복지부로, 복지부에서 검찰로 넘어가는 경로가 존재한다.</p>
+        <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">그러나 이것이 '하지 말아야 할 이유'가 되는가. 절대 아니다. 최종 판단의 기준은 대법원 전원합의체 판결이고, 이 철옹성을 무너뜨린 사례는 지난 9년간 단 하나도 없다. 필요한 것은 불안 앞에 멈추는 것이 아니라, 기록과 프로토콜로 완전무장하는 것이다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">현장 사례 : 기록이 원장을 지킨 순간</h3>
         <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-4">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> A 치과는 보톡스 도입 3개월 차에 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 시술 동의서·차트·시술 전후 사진을 모두 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과: 행정 조치 없이 종결. 기록이 없었다면 결과가 달랐을 수 있다.</p>
+          <p class="text-[#333] text-sm leading-relaxed">A 치과는 보톡스 도입 3개월 차에 인근 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 원장은 시술 동의서, 차트, 시술 전후 사진을 한 치의 빈틈 없이 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과는 명확했다. 어떠한 행정 조치 없이 종결. 기록이 없었다면, 결과가 달랐을 수 있다.</p>
         </div>
-        <p class="text-[#999] text-sm mb-8">민원·신고 발생 시 구체적 대응 방법은 <span class="text-[#1a1a1a] font-bold">STEP 5-3. 민원·신고 대응 매뉴얼</span>에서 상세히 다룬다.</p>
+        <p class="text-[#999] text-sm mb-8">민원과 신고가 실제로 발생했을 때의 구체적인 48시간 골든타임 대응 매뉴얼은 <span class="text-[#1a1a1a] font-bold">STEP 5-3. 민원·신고 대응 매뉴얼</span>에서 실전 시나리오별로 상세히 다룬다.</p>
       `,
     },
     {
       id: "step0-04",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-4. 글로벌 스탠다드 — 한국만의 현상이 아니다</h2>
-        <p class="text-[#333] leading-relaxed mb-6">치과의사의 안면부 미용시술은 한국만의 현상이 아니다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">국제적 흐름</h3>
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">국가</th>
-                <th class="px-4 py-2 text-left font-medium">현황</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top">미국</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">ADA CERP(미국치과의사협회 평생교육인증프로그램)가 보톡스·필러 교육 프로그램을 인증. 약 절반의 주에서 치과의사의 구강·악안면 영역 보톡스·필러 시술 허용 (주별로 상이)</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top">영국</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">GDC(일반치과위원회)가 치과의사를 보톡스 처방 가능 유일 치과 등록자로 인정. 보톡스는 처방전 의약품(POM)으로 분류되며, 치과의사가 처방·시술 가능. 2021년 18세 미만 보톡스·필러 시술 전면 금지 법률 시행</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top">호주</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2009년 AADFA 설립 이후 치과의사 안면미용시술 교육·시행 체계 정착</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-4. 글로벌 스탠다드 — 세계는 이미 움직이고 있다</h2>
+        <p class="text-[#333] leading-relaxed mb-4">혹시 이런 생각을 한 적이 있는가. "치과의사가 보톡스를 놓는다니, 이건 한국에서만 벌어지는 기현상 아닌가?"</p>
+        <p class="text-[#333] leading-relaxed mb-6">결론부터 말한다. 천만의 말씀이다. 치과의사의 안면부 미용시술은 대한민국만의 특이한 현상이 아니라, 의료 선진국에서 이미 수십 년 전부터 확립된 글로벌 스탠다드다. 한국이 오히려 뒤늦게 합류한 셈이다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">미국 — 치과의사 미용시술 교육의 본산</h3>
+        <p class="text-[#333] leading-relaxed mb-6">미국치과의사협회(ADA)는 산하의 평생교육인증프로그램(CERP)을 통해 보톡스와 필러 교육 프로그램을 공식 인증하고 있다. 약 절반에 달하는 주에서 치과의사의 구강·악안면 영역 보톡스·필러 시술을 명시적으로 허용하며, 치과의사가 안면미용시술을 수행하는 것은 논란의 대상이 아니라 제도권 안의 일상이다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">영국 — 보톡스 처방 권한을 가진 유일한 치과 등록자</h3>
+        <p class="text-[#333] leading-relaxed mb-6">영국 일반치과위원회(GDC)는 치과의사를 보톡스 처방이 가능한 유일한 치과 등록 전문직으로 인정하고 있다. 보톡스는 영국에서 처방전 의약품(POM)으로 분류되며, 치과의사가 직접 처방하고 시술할 수 있는 법적 권한을 갖는다. 2021년에는 「Botulinum Toxin and Cosmetic Fillers (Children) Act 2021」이 시행되어 18세 미만에 대한 보톡스·필러 시술이 전면 금지되었는데, 이는 역으로 성인 대상 치과의사의 미용시술이 확고히 제도화되어 있음을 방증한다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">호주 — 2009년부터 교육 체계 정착</h3>
+        <p class="text-[#333] leading-relaxed mb-6">호주는 2009년 AADFA(호주미용치과의사협회)가 설립된 이후, 치과의사의 안면미용시술 교육과 시행 체계가 일찌감치 자리를 잡았다. 한국보다 7년이나 앞선 셈이다.</p>
       `,
     },
     {
       id: "step0-04-01",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">글로벌 시장 성장</h3>
-        <p class="text-[#333] leading-relaxed mb-4">글로벌 미용시술 시장은 지속적으로 성장 중이다. ASPS(미국성형외과학회) 통계에 따르면 2000~2018년 18년간 보툴리눔 톡신 시술 건수는 845% 증가했다. PubMed에 등재된 복수의 국제 논문도 치과의사의 안면미용 역할 확장을 '성장하는 분야'로 명시하고 있으며, 해부학 교육 기반이 있는 치과의사야말로 적합한 시술자라는 논거가 국제 학술계에서 반복적으로 제기되고 있다.</p>
-        <p class="text-[#333] leading-relaxed mb-8">치과의사의 안면미용시술은 이미 2016년에 사법적으로 확정된 영역이다. 의료행위의 경계는 지금 이 순간에도 각 직역의 전문성에 맞춰 재편되고 있다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">글로벌 시장이 보내는 신호 — 845%라는 숫자</h3>
+        <p class="text-[#333] leading-relaxed mb-6">이것은 단순히 각국의 법제도가 허용한다는 차원의 이야기가 아니다. 시장 자체가 폭발적으로 팽창하고 있다는 사실에 주목해야 한다. 미국성형외과학회(ASPS) 통계에 따르면, 2000년부터 2018년까지 18년간 보툴리눔 톡신 시술 건수는 무려 845% 증가했다. 국제 학술계에서도 치과의사의 안면미용 역할 확장을 '성장하는 분야'로 명시한 논문이 PubMed에 다수 등재되어 있으며, 해부학 교육 기반을 갖춘 치과의사야말로 가장 적합한 시술자라는 논거가 반복적으로 제기되고 있다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">한국의 좌표 — 뒤처진 것이 아니라, 따라잡은 것이다</h3>
+        <p class="text-[#333] leading-relaxed mb-4">정리하면 이렇다. 미국, 영국, 호주 등 의료 선진국에서는 치과의사의 안면미용시술이 이미 제도의 한복판에 자리 잡고 있다. 한국은 2016년 대법원 전원합의체 판결을 통해 이 글로벌 흐름에 사법적으로 합류했다. 뒤처진 것이 아니라, 드디어 따라잡은 것이다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">그럼에도 아직 주저하고 있는 원장이 있다면, 이 한 가지만 기억하라. 당신이 안면미용시술을 망설이는 동안, 지구 반대편의 치과의사들은 이미 수십 년째 같은 시술로 환자의 만족과 치과의 성장이라는 두 마리 토끼를 거머쥐고 있다. 세계는 이미 움직이고 있다. 질문은 "할 것인가, 말 것인가"가 아니라, "언제 시작할 것인가"다.</p>
       `,
     },
     {
