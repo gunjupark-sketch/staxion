@@ -16,6 +16,65 @@ export interface Section {
 export const contentData: Record<string, Section[]> = {
   prologue: [
     {
+      id: "pro-cover",
+      html: `
+        <div class="text-center py-16 border-b border-[#eee] mb-10">
+          <div style="display:inline-block;border:2px solid #C4929B;border-radius:16px;padding:40px 48px;margin-bottom:20px;">
+            <p class="text-[#C4929B] text-xs font-semibold tracking-[0.3em] mb-3">美 談</p>
+            <h1 class="text-5xl font-bold text-[#1a1a1a] mb-2" style="font-family:Georgia,'Noto Serif KR',serif;">미 담</h1>
+            <div class="w-12 h-0.5 bg-[#C4929B] mx-auto my-4"></div>
+            <p class="text-[#666] text-sm leading-relaxed">미용치과의 아름다운 도입 이야기</p>
+          </div>
+          <p class="text-[#1a1a1a] text-lg font-bold mt-6 mb-2">치과의사를 위한 미용시술 도입 완전 가이드</p>
+          <p class="text-[#999] text-sm">(주)더스테이션 | 의료성장연구소</p>
+        </div>
+      `,
+    },
+    {
+      id: "pro-toc",
+      html: `
+        <div class="mb-10">
+          <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6 text-center">CONTENTS</h2>
+          <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;font-family:'Pretendard',sans-serif;">
+            <div style="display:flex;flex-direction:column;gap:12px;">
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;background:#F9F5F6;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">프롤로그</span>
+                <span style="font-size:14px;color:#1a1a1a;">당신의 치과, 지금 변화가 필요한가</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 0</span>
+                <span style="font-size:14px;color:#1a1a1a;">법적 근거 : 흔들리지 않는 단단한 토대</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;background:#F9F5F6;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 1</span>
+                <span style="font-size:14px;color:#1a1a1a;">도입 방향 설정 : 어떤 시술을, 어떻게 시작할 것인가</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 2</span>
+                <span style="font-size:14px;color:#1a1a1a;">운영 시스템 구축 : 일상 진료에 미용을 완벽하게 녹여내는 법</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;background:#F9F5F6;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 3</span>
+                <span style="font-size:14px;color:#1a1a1a;">팀 운영과 공간 세팅 : 차이를 만드는 환자 경험(MOT) 설계</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 4</span>
+                <span style="font-size:14px;color:#1a1a1a;">환자 유입 : 구환 전환부터 외부 마케팅까지</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;background:#F9F5F6;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">STEP 5</span>
+                <span style="font-size:14px;color:#1a1a1a;">재무 및 리스크 관리 : 확실한 수익 창출과 완벽한 법적 방어</span>
+              </div>
+              <div style="display:flex;align-items:baseline;gap:12px;padding:10px 16px;border-radius:8px;">
+                <span style="font-size:12px;font-weight:700;color:#C4929B;min-width:72px;">부록</span>
+                <span style="font-size:14px;color:#1a1a1a;">실전 자료 및 템플릿</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+    },
+    {
       id: "pro-title",
       html: `
         <div class="text-center py-12 border-b border-[#eee] mb-10">
@@ -28,81 +87,33 @@ export const contentData: Record<string, Section[]> = {
     {
       id: "pro-01",
       html: `
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1. 당신의 치과, 지금 변화가 필요한가</h2>
-        <p class="text-[#333] leading-relaxed mb-4">치과 개원 시장이 바뀌고 있다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">보험 수가는 제자리이고, 경쟁은 심해졌다. 신환은 줄고, 임플란트·교정 중심의 수익 구조만으로는 성장이 멈추는 시점이 온다. 원장님들은 이미 체감하고 있다. 문제는 '어디서부터 시작하느냐'다.</p>
-        <p class="text-[#1a1a1a] font-bold text-lg mb-4">미용치과는 그 해답 중 하나다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">보톡스·필러·레이저·실리프팅으로 대표되는 안면미용시술 시장은 대법원 판결로 치과의사에게 법적으로 열려 있다. 법적 근거가 궁금하다면 STEP 0에서 판결의 전모와 허용 범위를 확인할 수 있다. 이 시장은 지금도 성장 중이다. 이미 이 길을 먼저 간 치과들은 기존 수익의 20~40%를 미용시술에서 만들어내고 있다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">이 책은 그 길을 처음 걷는 원장님을 위한 실전 로드맵이다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">01. 당신의 치과는 지금, 진화하고 있는가</h2>
+        <p class="text-[#333] leading-relaxed mb-4">치과 개원 시장의 판이 근본적으로 흔들리고 있다. 건강보험 수가는 수 년째 제자리걸음이고, 경쟁은 나날이 심화된다. 신환은 줄고, 임플란트와 교정 중심의 수익 구조만으로는 성장이 멈추는 시점이 온다. 원장님들은 이미 체감하고 있다. "다음 10년을 어떻게 설계할 것인가?"</p>
+        <p class="text-[#1a1a1a] font-bold text-lg mb-4">미용치과는 그 막막한 질문에 대한 가장 현실적이고 강력한 해답이다.</p>
+        <p class="text-[#333] leading-relaxed mb-6">보톡스, 필러, 레이저, 실리프팅으로 대표되는 안면미용시술 시장은 대한민국 대법원 판결을 통해 치과의사에게 법적으로 완벽하게 열려 있다.</p>
+        <!-- 미용치과 시장 지표 인포그래픽 -->
         <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
           <div style="text-align:center;margin-bottom:24px;">
-            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">REVENUE STRUCTURE</span>
-            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">치과 수익구조 변화</div>
-            <div style="font-size:13px;color:#888;margin-top:4px;">미용시술 도입 전 vs 후 매출 비중 비교</div>
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">MARKET EVIDENCE</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">미용치과 시장을 증명하는 압도적 지표</div>
           </div>
-          <div style="display:flex;gap:20px;align-items:stretch;">
-            <!-- BEFORE -->
-            <div style="flex:1;background:#F9F5F6;border-radius:12px;padding:20px;position:relative;">
-              <div style="text-align:center;margin-bottom:16px;">
-                <div style="font-size:13px;font-weight:700;color:#C4929B;letter-spacing:1px;">BEFORE</div>
-                <div style="font-size:15px;font-weight:600;color:#2C2C2C;">기존 수익구조</div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>임플란트</span><span style="font-weight:700;">45%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:45%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>교정</span><span style="font-weight:700;">25%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:25%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>보존/보철</span><span style="font-weight:700;">20%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:20%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:4px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>기타</span><span style="font-weight:700;">10%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:10%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="text-align:center;margin-top:16px;padding-top:12px;border-top:1px solid #e0d0d3;">
-                <div style="font-size:11px;color:#999;">미용시술 매출</div>
-                <div style="font-size:22px;font-weight:800;color:#ccc;">0%</div>
-              </div>
+          <div style="display:flex;gap:16px;">
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="font-size:36px;font-weight:800;color:#C4929B;margin-bottom:8px;">20~40%</div>
+              <div style="font-size:13px;font-weight:700;color:#2C2C2C;margin-bottom:4px;">미용시술 매출 비중</div>
+              <div style="font-size:12px;color:#666;line-height:1.5;">미용시술을 도입한 치과들의<br/>평균 매출 비중</div>
             </div>
-            <!-- ARROW -->
-            <div style="display:flex;align-items:center;font-size:28px;color:#C4929B;font-weight:700;">→</div>
-            <!-- AFTER -->
-            <div style="flex:1;background:#F5E6E8;border-radius:12px;padding:20px;border:2px solid #C4929B;position:relative;">
-              <div style="text-align:center;margin-bottom:16px;">
-                <div style="font-size:13px;font-weight:700;color:#C4929B;letter-spacing:1px;">AFTER</div>
-                <div style="font-size:15px;font-weight:600;color:#2C2C2C;">미용시술 도입 후</div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>임플란트</span><span style="font-weight:700;">30%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:30%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>교정</span><span style="font-weight:700;">18%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:18%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span>보존/보철</span><span style="font-weight:700;">15%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:15%;height:100%;background:#C4929B;border-radius:6px;"></div></div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span style="color:#C4929B;font-weight:600;">보톡스·필러</span><span style="font-weight:700;color:#C4929B;">20%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:20%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a5ad);border-radius:6px;box-shadow:0 0 8px rgba(196,146,155,0.4);"></div></div>
-              </div>
-              <div style="margin-bottom:4px;">
-                <div style="display:flex;justify-content:space-between;font-size:12px;color:#555;margin-bottom:4px;"><span style="color:#C4929B;font-weight:600;">리프팅·레이저</span><span style="font-weight:700;color:#C4929B;">17%</span></div>
-                <div style="background:#e8d5d8;border-radius:6px;height:22px;overflow:hidden;"><div style="width:17%;height:100%;background:linear-gradient(90deg,#C4929B,#d4a5ad);border-radius:6px;box-shadow:0 0 8px rgba(196,146,155,0.4);"></div></div>
-              </div>
-              <div style="text-align:center;margin-top:16px;padding-top:12px;border-top:2px solid #C4929B;">
-                <div style="font-size:11px;color:#C4929B;font-weight:600;">미용시술 매출 비중</div>
-                <div style="font-size:26px;font-weight:800;color:#C4929B;">20~40%</div>
-              </div>
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="font-size:36px;font-weight:800;color:#C4929B;margin-bottom:8px;">845%</div>
+              <div style="font-size:13px;font-weight:700;color:#2C2C2C;margin-bottom:4px;">보톡스 시술 증가율</div>
+              <div style="font-size:12px;color:#666;line-height:1.5;">ASPS 통계 기준<br/>2000~2018년 18년간</div>
+            </div>
+            <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
+              <div style="font-size:36px;font-weight:800;color:#C4929B;margin-bottom:8px;">2016</div>
+              <div style="font-size:13px;font-weight:700;color:#2C2C2C;margin-bottom:4px;">대법원 판결</div>
+              <div style="font-size:12px;color:#666;line-height:1.5;">전원합의체 판결로<br/>합법성 최종 확정</div>
             </div>
           </div>
-          <div style="text-align:center;margin-top:16px;font-size:12px;color:#999;">* 미용시술 도입 치과 실데이터 기반 평균 비중 (출처: KADA 컨설팅 사례)</div>
         </div>
       `,
     },
@@ -110,46 +121,42 @@ export const contentData: Record<string, Section[]> = {
       id: "pro-02",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2. 치과가 이 시장에 들어가야 하는 이유</h2>
-        <p class="text-[#333] leading-relaxed mb-4">피부과나 성형외과가 이미 하고 있는 시장에, 치과가 굳이 들어가야 할 이유가 있을까?</p>
-        <p class="text-[#1a1a1a] font-bold text-lg mb-4">있다. 그것도 분명하게.</p>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사는 안면부 해부학 훈련을 받은 직역이고, 매일 주사를 놓는 시술자다. 이 역량이 보톡스·필러·레이저 시술에서 어떤 강점이 되는지는 STEP 0에서 법적 근거와 함께 상세히 다룬다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">여기서 주목할 것은 치과만의 결정적 자산이다. <span class="text-[#1a1a1a] font-bold">기존 구환.</span></p>
-        <p class="text-[#333] leading-relaxed mb-4">신뢰 관계가 이미 형성된 수백 명의 구환은 미용 신환 유치 비용이 제로인 잠재 고객이다. 치과 진료를 마친 환자가 자연스럽게 미용 상담으로 이어지는 경험은 피부과나 에스테틱 샵이 따라올 수 없는 구조다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">치과 안면미용시술은 남의 시장에 끼어드는 것이 아니다. <span class="text-[#1a1a1a] font-bold">치과만이 가진 자산 위에서 포지션을 확장하는 것</span>이다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">02. 치과가 이 시장의 주도권을 쥐어야 하는 압도적 이유</h2>
+        <p class="text-[#333] leading-relaxed mb-4">피부과나 성형외과가 이미 하고 있는 시장에, 치과가 굳이 들어가야 할 이유가 있을까? 있다. 그것도 압도적으로.</p>
+        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">첫째, 타의 추종을 불허하는 해부학적 전문성.</span> 치과의사는 안면부의 근육, 신경, 혈관 구조를 정규 교육과정에서 체계적으로 학습한다. 특히 삼차신경의 분포와 안면 근육의 기시 및 정지에 대한 이해는 보톡스와 필러 시술의 핵심 기초지식이다. 매일 마취 주사를 놓으며 쌓은 주사 숙련도 역시 무시할 수 없다.</p>
+        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">둘째, 유치 비용 '제로(0)'의 거대한 기존 구환 자산.</span> 신뢰 관계가 이미 형성된 수백에서 수천 명의 구환은 미용 신환 유치 비용이 제로인 잠재 고객이다. 치과 진료를 마친 환자가 자연스럽게 미용 상담으로 이어지는 경험은 피부과나 에스테틱 샵이 따라올 수 없는 구조다.</p>
+        <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">셋째, 흔들림 없는 완벽한 법적 근거.</span> 2016년 대법원 전원합의체 판결로 안면부 미용시술의 합법성이 최종 확인되었다. 의료법 제27조 면허 범위 내 행위로 인정받은, 대한민국 사법체계에서 가장 강한 형태의 합법 확인이다.</p>
+        <!-- 3가지 자산 인포그래픽 -->
         <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
           <div style="text-align:center;margin-bottom:24px;">
-            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">CORE ASSETS</span>
-            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">치과 미용시술 도입의 3가지 자산</div>
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">CORE ADVANTAGES</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">치과가 이 시장을 주도해야 하는 3가지 이유</div>
             <div style="font-size:13px;color:#888;margin-top:4px;">다른 진료과가 따라올 수 없는 구조적 강점</div>
           </div>
           <div style="display:flex;gap:16px;">
-            <!-- Asset 1 -->
             <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
               <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2-1 3-2 4l-1 1v2h-4v-2l-1-1c-1-1-2-2-2-4a5 5 0 0 1 5-5z"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
               </div>
-              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 01</div>
-              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">안면부 해부학<br/>교육 기반</div>
-              <div style="font-size:13px;color:#666;line-height:1.6;">치과대학 6년 + 수련 과정에서 안면부 신경·혈관·근육 해부학을 체계적으로 학습. 보톡스·필러 시술의 핵심인 <span style="color:#C4929B;font-weight:600;">안면 해부학적 이해도</span>에서 가장 깊은 기반을 보유.</div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">01</div>
+              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">해부학적<br/>전문성</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">안면부 신경, 혈관, 근육 해부학을 체계적으로 학습. <span style="color:#C4929B;font-weight:600;">타의 추종을 불허하는</span> 안면 해부학적 이해도.</div>
             </div>
-            <!-- Asset 2 -->
             <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
               <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
               </div>
-              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 02</div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">02</div>
               <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">기존 구환<br/>자산</div>
-              <div style="font-size:13px;color:#666;line-height:1.6;">수백~수천 명의 기존 환자와 <span style="color:#C4929B;font-weight:600;">이미 형성된 신뢰 관계</span>. 미용 신환 유치 비용 제로인 잠재 고객 풀. 치과 진료 후 자연스러운 미용 상담 전환은 타 의원이 복제 불가.</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">수백에서 수천 명의 기존 환자와 <span style="color:#C4929B;font-weight:600;">유치 비용 제로(0)</span>의 잠재 고객 풀. 치과 진료 후 자연스러운 미용 상담 전환.</div>
             </div>
-            <!-- Asset 3 -->
             <div style="flex:1;background:linear-gradient(180deg,#F5E6E8 0%,#fff 100%);border-radius:12px;padding:24px 18px;text-align:center;border:1px solid #e8d5d8;">
               <div style="width:56px;height:56px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 14px;font-size:24px;color:#fff;">
                 <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
               </div>
-              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">ASSET 03</div>
-              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">법적 근거<br/>확보</div>
-              <div style="font-size:13px;color:#666;line-height:1.6;">2016년 대법원 전원합의체 판결로 <span style="color:#C4929B;font-weight:600;">안면부 미용시술의 합법성</span>을 최종 확인. 의료법 제27조 면허 범위 내 행위로 인정. STEP 0에서 판결 전문과 실무 적용 범위를 확인.</div>
+              <div style="font-size:13px;font-weight:700;color:#C4929B;margin-bottom:4px;">03</div>
+              <div style="font-size:15px;font-weight:700;color:#2C2C2C;margin-bottom:8px;">완벽한<br/>법적 근거</div>
+              <div style="font-size:13px;color:#666;line-height:1.6;">2016년 대법원 전원합의체 판결로 <span style="color:#C4929B;font-weight:600;">안면부 미용시술 합법성</span> 최종 확인. 흔들림 없는 토대.</div>
             </div>
           </div>
         </div>
@@ -159,15 +166,13 @@ export const contentData: Record<string, Section[]> = {
       id: "pro-03",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3. 메디스테이션의 약속</h2>
-        <p class="text-[#333] leading-relaxed mb-4">메디스테이션은 치과 미용시술 도입을 전문으로 하는 컨설팅·교육 연구소다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">03. 메디스테이션의 약속</h2>
+        <p class="text-[#333] leading-relaxed mb-4">의료성장연구소 메디스테이션은 치과 미용시술 도입을 전문으로 연구하고 설계하는 컨설팅 및 교육 연구소다.</p>
         <p class="text-[#333] leading-relaxed mb-4">단순한 시술 교육 과정이 아니다. 원장님의 치과가 미용치과로 안정적으로 전환될 수 있도록, 도입 설계부터 운영 안정화까지 전 과정을 함께한다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">이 책은 그 여정의 전체 지도다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">어디서 시작해야 하는지, 무엇을 준비해야 하는지, 어떤 순서로 움직여야 하는지 — Step 0부터 Step 5까지 순서대로 따라가면 된다. 처음부터 끝까지 읽는 교과서가 아니어도 된다. 지금 원장님이 서 있는 단계에 해당하는 챕터를 먼저 펼쳐도 된다.</p>
-        <p class="text-[#1a1a1a] font-bold text-lg mb-6">준비된 원장님께 이 시장은 충분히 열려 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">이 책은 그 여정의 전체 지도다. 어디서 시작해야 하는지, 무엇을 준비해야 하는지, 어떤 순서로 움직여야 하는지 -- STEP 0부터 STEP 5까지 순서대로 따라가면 된다.</p>
         <div class="border-l-4 border-[#C4929B] pl-4 py-2 mb-8">
-          <p class="text-[#333] italic leading-relaxed">One core vision, many ways, one meaning.</p>
-          <p class="text-[#999] text-sm mt-1">— 의료성장연구소 메디스테이션</p>
+          <p class="text-[#333] italic leading-relaxed">"One core vision, many ways, one meaning."</p>
+          <p class="text-[#999] text-sm mt-1">-- 의료성장연구소 메디스테이션</p>
         </div>
       `,
     },
@@ -176,100 +181,75 @@ export const contentData: Record<string, Section[]> = {
       html: `
         <div class="border-t border-[#eee] my-8"></div>
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">이 책의 구성</h2>
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">STEP</th>
-                <th class="px-4 py-2 text-left font-medium">내용</th>
-                <th class="px-4 py-2 text-left font-medium">핵심 질문</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 0</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">법적 근거</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"치과의사가 해도 되는 건가?"</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 1</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">도입 방향 설정</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"어떤 시술을, 어떻게 시작할 것인가?"</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 2</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">운영 시스템</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"일상 진료에 어떻게 녹일 것인가?"</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">팀 운영 & 공간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"스탭과 공간을 어떻게 세팅할 것인가?"</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자 유입</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"환자를 어떻게 모을 것인가?"</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">STEP 5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재무·리스크</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">"수익은 얼마나, 리스크는 어떻게?"</td></tr>
-            </tbody>
-          </table>
-        </div>
+        <p class="text-[#333] leading-relaxed mb-6">미용 치과의학 입문 전체 로드맵 -- 6단계 (STEP 0~5)</p>
+        <!-- 6단계 로드맵 도표 -->
         <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
           <div style="text-align:center;margin-bottom:24px;">
             <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">ROADMAP</span>
-            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">STEP 0 → 5 실전 로드맵</div>
-            <div style="font-size:13px;color:#888;margin-top:4px;">각 단계의 핵심 산출물과 연결 흐름</div>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">STEP 0 &rarr; 5 실전 로드맵</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">각 단계의 핵심 주제와 연결 흐름</div>
           </div>
-          <!-- Progress bar -->
           <div style="position:relative;height:4px;background:#F5E6E8;border-radius:2px;margin:0 40px 28px;">
             <div style="position:absolute;top:0;left:0;width:100%;height:100%;background:linear-gradient(90deg,#e8d5d8,#C4929B);border-radius:2px;"></div>
           </div>
-          <!-- Steps -->
           <div style="display:flex;gap:8px;">
-            <!-- STEP 0 -->
             <div style="flex:1;text-align:center;">
               <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">0</div>
-              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">법적 기반</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">법적 근거</div>
               <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Legal Foundation</div>
               <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#555;line-height:1.5;">대법원 판결 분석<br/>허용 범위 정리<br/>법적 리스크 매핑</div>
+                <div style="font-size:11px;color:#555;line-height:1.5;">흔들리지 않는<br/>단단한 토대</div>
               </div>
-              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">&rarr;</div>
             </div>
-            <!-- STEP 1 -->
             <div style="flex:1;text-align:center;">
               <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">1</div>
-              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">시장 분석</div>
-              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Market Analysis</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">도입 방향</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Direction</div>
               <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#555;line-height:1.5;">시장 규모 산정<br/>경쟁 환경 분석<br/>수익성 시뮬레이션</div>
+                <div style="font-size:11px;color:#555;line-height:1.5;">어떤 시술을<br/>어떻게 시작할 것인가</div>
               </div>
-              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">&rarr;</div>
             </div>
-            <!-- STEP 2 -->
             <div style="flex:1;text-align:center;">
               <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">2</div>
-              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">시술 설계</div>
-              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Treatment Design</div>
-              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#555;line-height:1.5;">시술 메뉴 구성<br/>가격 체계 설계<br/>프로토콜 표준화</div>
-              </div>
-              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
-            </div>
-            <!-- STEP 3 -->
-            <div style="flex:1;text-align:center;">
-              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">3</div>
-              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">운영 체계</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">운영 시스템</div>
               <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Operations</div>
               <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#555;line-height:1.5;">인력 구성 설계<br/>공간·장비 세팅<br/>동선·예약 시스템</div>
+                <div style="font-size:11px;color:#555;line-height:1.5;">일상 진료에 미용을<br/>완벽하게 녹여내는 법</div>
               </div>
-              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">&rarr;</div>
             </div>
-            <!-- STEP 4 -->
+            <div style="flex:1;text-align:center;">
+              <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">3</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">팀 &amp; 공간</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">MOT Design</div>
+              <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
+                <div style="font-size:11px;color:#555;line-height:1.5;">차이를 만드는<br/>환자 경험 설계</div>
+              </div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">&rarr;</div>
+            </div>
             <div style="flex:1;text-align:center;">
               <div style="width:40px;height:40px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;">4</div>
-              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">마케팅</div>
+              <div style="font-size:12px;font-weight:700;color:#C4929B;margin-bottom:2px;">환자 유입</div>
               <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Marketing</div>
               <div style="background:#F5E6E8;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#555;line-height:1.5;">구환 전환 캠페인<br/>신환 유입 채널<br/>브랜딩 전략</div>
+                <div style="font-size:11px;color:#555;line-height:1.5;">구환 전환부터<br/>외부 마케팅까지</div>
               </div>
-              <div style="color:#C4929B;font-size:18px;margin-top:8px;">→</div>
+              <div style="color:#C4929B;font-size:18px;margin-top:8px;">&rarr;</div>
             </div>
-            <!-- STEP 5 -->
             <div style="flex:1;text-align:center;">
               <div style="width:40px;height:40px;background:#2C2C2C;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 10px;color:#fff;font-size:14px;font-weight:800;box-shadow:0 0 0 3px #C4929B;">5</div>
-              <div style="font-size:12px;font-weight:700;color:#2C2C2C;margin-bottom:2px;">성장 관리</div>
-              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Growth</div>
+              <div style="font-size:12px;font-weight:700;color:#2C2C2C;margin-bottom:2px;">재무 &amp; 리스크</div>
+              <div style="font-size:11px;color:#2C2C2C;font-weight:600;margin-bottom:4px;">Finance</div>
               <div style="background:#2C2C2C;border-radius:8px;padding:10px 6px;min-height:72px;">
-                <div style="font-size:11px;color:#F5E6E8;line-height:1.5;">KPI 대시보드<br/>재방문율 관리<br/>매출 스케일업</div>
+                <div style="font-size:11px;color:#F5E6E8;line-height:1.5;">확실한 수익 창출<br/>완벽한 법적 방어</div>
               </div>
               <div style="color:#2C2C2C;font-size:12px;margin-top:8px;font-weight:700;">GOAL</div>
             </div>
           </div>
           <div style="text-align:center;margin-top:20px;padding-top:16px;border-top:1px solid #F5E6E8;">
-            <div style="font-size:12px;color:#999;">각 STEP은 이전 단계의 산출물 위에 구축됩니다. 순서를 건너뛰지 마세요.</div>
+            <div style="font-size:12px;color:#999;">각 STEP은 이전 단계의 산출물 위에 구축됩니다.</div>
           </div>
         </div>
       `,
@@ -282,54 +262,42 @@ export const contentData: Record<string, Section[]> = {
       html: `
         <div class="text-center py-12 border-b border-[#eee] mb-10">
           <p class="text-[#C4929B] text-sm font-medium tracking-[0.2em] mb-4">S T E P &nbsp; 0</p>
-          <h1 class="text-4xl font-bold text-[#1a1a1a] mb-3">법적 근거 — 치과의사 미용시술은 합법이다</h1>
-          <p class="text-[#999] text-sm">대법원 전원합의체 판결이 선언한 치과의사의 안면부 시술 권한</p>
+          <h1 class="text-4xl font-bold text-[#1a1a1a] mb-3">법적 근거 -- 치과의사 미용시술은 완벽한 '합법'이다</h1>
+          <p class="text-[#999] text-sm">흔들리지 않는 단단한 토대</p>
         </div>
       `,
     },
     {
       id: "step0-intro",
       html: `
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">도입</h2>
-        <p class="text-[#333] leading-relaxed mb-4">이 STEP에서는 치과의사가 미용시술을 할 수 있는 법적 근거를 다룬다. 시술 장비를 고르기 전에, 메뉴판을 짜기 전에, 직원을 교육하기 전에 — 가장 먼저 확인해야 할 것이 이것이다. 법적으로 서 있는 땅이 단단한지 아닌지.</p>
-      `,
-    },
-    {
-      id: "step0-intro-why",
-      html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">왜 법적 근거부터 봐야 하는가</h3>
-        <p class="text-[#333] leading-relaxed mb-4">미용시술을 도입하려는 치과 원장 대부분이 처음 만나는 감정은 기대가 아니라 불안이다. "치과의사가 보톡스를 놓아도 되는 건가?" "피부과에서 고발하면 어떡하지?" "환자한테 문제 생기면 면허가 날아가는 건 아닌가?"</p>
-        <p class="text-[#333] leading-relaxed mb-4">이 불안은 자연스러운 것이다. 치과의사가 6년간 받은 교육과 수련은 치아와 구강에 집중되어 있었고, 안면부 미용시술이라는 영역은 낯설다. 게다가 피부과·성형외과 쪽에서 들려오는 반발의 목소리가 크다 보니, 합법이라는 말을 들어도 확신이 서지 않는다. 의협이 신고센터를 운영하고, 현장에서 경찰 고발 사례가 계속 보도되기도 한다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">그래서 이 책은 시술법이나 경영 전략이 아니라 법적 근거부터 시작한다. 이유는 단순하다. <span class="text-[#1a1a1a] font-bold">법적 토대가 흔들리면 그 위에 쌓는 모든 것이 무너진다.</span> 수천만 원짜리 장비를 들이고, 직원을 교육시키고, 환자를 유치한 다음에 "사실 불법이었습니다"라는 결론이 나오면 되돌릴 수 없다. 반대로, 법적 근거가 확실하다면 이후의 모든 의사결정이 다른 기반 위에서 이루어진다.</p>
-        <p class="text-[#333] leading-relaxed mb-8">ROI(투자수익률, 투입 비용 대비 회수 금액의 비율)를 계산하든, 시술 메뉴를 구성하든, 마케팅 채널을 선택하든 — "이건 합법이다"라는 확신이 있는 상태와 없는 상태는 실행 속도부터 다르다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">왜 기술이나 마케팅이 아닌 '법'부터 알아야 하는가</h2>
+        <p class="text-[#333] leading-relaxed mb-4">이 STEP에서는 치과의사가 미용시술을 할 수 있는 법적 근거를 다룬다. 시술 장비를 고르기 전에, 메뉴판을 짜기 전에, 직원을 교육하기 전에 -- 가장 먼저 확인해야 할 것이 이것이다. 법적으로 서 있는 땅이 단단한지 아닌지.</p>
+        <p class="text-[#333] leading-relaxed mb-6">법적 토대가 흔들리면 그 위에 쌓는 모든 것이 무너진다. 수천만 원짜리 장비를 들이고, 직원을 교육시키고, 환자를 유치한 다음에 "사실 불법이었습니다"라는 결론이 나오면 되돌릴 수 없다. 반대로, 법적 근거가 확실하다면 이후의 모든 의사결정이 다른 기반 위에서 이루어진다.</p>
       `,
     },
     {
       id: "step0-intro-background",
       html: `
-        <div class="border-t border-[#eee] my-8"></div>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">치과의사가 미용시술을 할 수 있는 배경</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">치과의사가 미용시술을 주도할 수 있는 3가지 강력한 배경</h3>
         <p class="text-[#333] leading-relaxed mb-4">치과의사의 미용시술 합법성은 갑자기 하늘에서 떨어진 것이 아니다. 세 가지 기반이 오래전부터 존재했다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">첫째, <span class="text-[#1a1a1a] font-bold">구강악안면외과라는 전문 영역이 이미 치과 안에 있다.</span> 구강악안면외과는 치아와 구강뿐 아니라 턱뼈와 그 주변 안면부를 진료 범위로 포함한다. 안면 골절 수술, 악교정 수술, 턱관절 수술 등을 치과의사가 수행해 온 역사가 수십 년이다. 안면부는 치과의 낯선 영토가 아니라 이미 발을 딛고 있던 영역이다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">둘째, <span class="text-[#1a1a1a] font-bold">해부학적 전문성이 있다.</span> 치과의사는 안면부의 근육, 신경, 혈관 구조를 정규 교육과정에서 학습한다. 특히 삼차신경(trigeminal nerve)의 분포와 안면 근육의 기시·정지에 대한 이해는 보톡스·필러 시술의 핵심 기초지식이다. 매일 마취 주사를 놓으며 쌓은 주사 숙련도 역시 무시할 수 없다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">셋째, <span class="text-[#1a1a1a] font-bold">글로벌 추세와 일치한다.</span> 미국, 영국, 호주 등에서 치과의사의 안면부 미용시술은 이미 합법적으로 정착되어 있다. 한국만의 예외적 현상이 아니라 국제적 흐름 위에 서 있는 것이다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">이 세 가지 기반 위에서 2016년, 대한민국 대법원이 최종적인 법적 확인을 내렸다.</p>
-        <!-- 도표: 치과의사 미용시술 합법성의 3가지 기반 -->
+        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">1. 구강악안면외과</span> -- 치아와 구강뿐 아니라 턱뼈와 그 주변 안면부를 진료 범위로 포함하는 전문 영역이 이미 치과 안에 있다. 안면 골절 수술, 악교정 수술, 턱관절 수술 등을 치과의사가 수행해 온 역사가 수십 년이다.</p>
+        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">2. 해부학적 전문성</span> -- 치과의사는 안면부의 근육, 신경, 혈관 구조를 정규 교육과정에서 학습한다. 특히 삼차신경(trigeminal nerve)의 분포와 안면 근육의 기시 및 정지에 대한 이해는 보톡스와 필러 시술의 핵심 기초지식이다.</p>
+        <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">3. 글로벌 스탠다드</span> -- 미국, 영국, 호주 등에서 치과의사의 안면부 미용시술은 이미 합법적으로 정착되어 있다. 한국만의 예외적 현상이 아니라 국제적 흐름 위에 서 있는 것이다.</p>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
           <div class="border border-[#eee] rounded-lg p-5 text-center">
             <div class="w-10 h-10 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">1</div>
-            <p class="text-[#1a1a1a] font-bold text-sm mb-2">구강악안면외과 전문 영역</p>
-            <p class="text-[#999] text-xs leading-relaxed">턱뼈·안면부를 포함하는 치과 전문 영역이 이미 존재</p>
+            <p class="text-[#1a1a1a] font-bold text-sm mb-2">구강악안면외과</p>
+            <p class="text-[#999] text-xs leading-relaxed">턱뼈와 안면부를 포함하는 치과 전문 영역이 이미 수십 년간 존재</p>
           </div>
           <div class="border border-[#eee] rounded-lg p-5 text-center">
             <div class="w-10 h-10 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">2</div>
-            <p class="text-[#1a1a1a] font-bold text-sm mb-2">안면 해부학 교육 + 주사 숙련도</p>
-            <p class="text-[#999] text-xs leading-relaxed">안면 근육·신경·혈관 정규 교육 + 매일 마취 주사 시행</p>
+            <p class="text-[#1a1a1a] font-bold text-sm mb-2">해부학적 전문성</p>
+            <p class="text-[#999] text-xs leading-relaxed">안면 근육, 신경, 혈관 정규 교육 + 매일 마취 주사 시행</p>
           </div>
           <div class="border border-[#eee] rounded-lg p-5 text-center">
             <div class="w-10 h-10 rounded-full bg-[#1a1a1a] text-white flex items-center justify-center mx-auto mb-3 text-sm font-bold">3</div>
             <p class="text-[#1a1a1a] font-bold text-sm mb-2">글로벌 스탠다드</p>
-            <p class="text-[#999] text-xs leading-relaxed">미국·영국·호주 등에서 이미 합법적으로 정착</p>
+            <p class="text-[#999] text-xs leading-relaxed">미국, 영국, 호주 등에서 이미 합법적으로 정착</p>
           </div>
         </div>
       `,
@@ -337,15 +305,53 @@ export const contentData: Record<string, Section[]> = {
     {
       id: "step0-intro-verdict",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2016년 대법원 판결의 의미</h3>
-        <p class="text-[#333] leading-relaxed mb-4">2016년 7월 21일, 대법원 전원합의체(전원합의체란 대법관 13명 전원이 참여하는 대법원 최고 의사결정 구조로, 종전 판례를 변경하거나 사회적 파급력이 극히 큰 사안에서만 소집된다)가 판결을 선고했다. 치과의사가 환자의 안면부에 보톡스를 시술한 행위는 면허 범위 내 의료행위이며, 미용 목적이라 해서 달리 볼 것은 아니라는 것이다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">이 판결의 무게를 가볍게 봐서는 안 된다. 전원합의체 판결은 하급심을 구속하며, 또 다른 전원합의체 판결로만 뒤집을 수 있다. 2016년 이후 9년이 지난 지금까지 이 판결을 번복하는 판례도, 이를 차단하는 입법도 존재하지 않는다. 의협이 시도한 의료법 개정은 국회를 통과하지 못했고, 피부과학회가 제기한 헌법소원도 인용되지 않았다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2016년 대법원 판결의 압도적 의미</h3>
+        <p class="text-[#333] leading-relaxed mb-4">2016년 7월 21일, 대법원 전원합의체(대법관 13명 전원 참여)가 판결을 선고했다. 치과의사가 환자의 안면부에 보톡스를 시술한 행위는 면허 범위 내 의료행위이며, 미용 목적이라 해서 달리 볼 것은 아니라는 것이다.</p>
         <p class="text-[#1a1a1a] font-bold text-lg mb-6">대한민국 사법체계에서 이보다 더 강한 형태의 합법 확인은 사실상 존재하지 않는다.</p>
+        <!-- 전원합의체 vs 소부 비교 도표 -->
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">COMPARISON</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">전원합의체 vs 소부</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">대법원 판결의 법적 효력 비교</div>
+          </div>
+          <div style="display:flex;gap:16px;">
+            <div style="flex:1;background:#f5f5f5;border-radius:12px;padding:20px;text-align:center;">
+              <div style="font-size:14px;font-weight:700;color:#666;margin-bottom:12px;">소부</div>
+              <div style="font-size:12px;color:#555;line-height:2;">
+                <div>대법관 <span style="font-weight:700;">4명</span></div>
+                <div>일반 사건 처리</div>
+                <div>해당 사건에 한정</div>
+                <div style="color:#999;">다른 소부 판결로 변경 가능</div>
+              </div>
+              <div style="margin-top:12px;padding-top:12px;border-top:1px solid #ddd;">
+                <span style="font-size:11px;color:#999;font-weight:600;">상대적으로 약한 구속력</span>
+              </div>
+            </div>
+            <div style="display:flex;align-items:center;font-size:20px;color:#C4929B;font-weight:700;">vs</div>
+            <div style="flex:1;background:#F5E6E8;border-radius:12px;padding:20px;text-align:center;border:2px solid #C4929B;">
+              <div style="font-size:14px;font-weight:700;color:#C4929B;margin-bottom:12px;">전원합의체</div>
+              <div style="font-size:12px;color:#555;line-height:2;">
+                <div>대법관 <span style="font-weight:700;color:#C4929B;">13명 전원</span></div>
+                <div>판례 변경 필요 사건</div>
+                <div style="font-weight:700;">이후 하급심 구속</div>
+                <div style="color:#C4929B;font-weight:700;">다른 전원합의체 판결로만 변경</div>
+              </div>
+              <div style="margin-top:12px;padding-top:12px;border-top:2px solid #C4929B;">
+                <span style="font-size:11px;color:#C4929B;font-weight:700;">최고 수준의 법적 구속력</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      `,
+    },
+    {
+      id: "step0-intro-logic",
+      html: `
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">대법원의 5가지 철벽 논리</h3>
+        <p class="text-[#333] leading-relaxed mb-4">대법원은 종합적 판단 기준을 제시하고, 이를 적용하여 무죄 취지의 판결을 내렸다.</p>
         <div style="background:linear-gradient(135deg,#2C2C2C 0%,#3a3a3a 100%);border-radius:12px;padding:32px 28px;margin-bottom:32px;font-family:'Pretendard',sans-serif;position:relative;overflow:hidden;">
-          <!-- Decorative element -->
           <div style="position:absolute;top:-20px;right:-20px;width:120px;height:120px;background:rgba(196,146,155,0.1);border-radius:50%;"></div>
-          <div style="position:absolute;bottom:-30px;left:-30px;width:80px;height:80px;background:rgba(196,146,155,0.08);border-radius:50%;"></div>
-          <!-- Header -->
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
             <div style="width:44px;height:44px;background:#C4929B;border-radius:50%;display:flex;align-items:center;justify-content:center;">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
@@ -355,28 +361,39 @@ export const contentData: Record<string, Section[]> = {
               <div style="font-size:16px;font-weight:700;color:#fff;">2016년 대법원 전원합의체 판결</div>
             </div>
           </div>
-          <!-- Case info -->
           <div style="background:rgba(196,146,155,0.15);border-radius:8px;padding:12px 16px;margin-bottom:20px;display:flex;gap:24px;flex-wrap:wrap;">
             <div><span style="font-size:11px;color:#999;">사건번호</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">2013도850</span></div>
             <div><span style="font-size:11px;color:#999;">선고일</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">2016. 7. 21.</span></div>
             <div><span style="font-size:11px;color:#999;">판결 형태</span><br/><span style="font-size:13px;color:#F5E6E8;font-weight:600;">전원합의체 (대법관 13인)</span></div>
-            <div><span style="font-size:11px;color:#999;">구속력</span><br/><span style="font-size:13px;color:#C4929B;font-weight:700;">최종심 — 사법부 최고 판단</span></div>
+            <div><span style="font-size:11px;color:#999;">구속력</span><br/><span style="font-size:13px;color:#C4929B;font-weight:700;">최종심 -- 사법부 최고 판단</span></div>
           </div>
-          <!-- Quote -->
-          <div style="border-left:4px solid #C4929B;padding:20px 24px;margin-bottom:20px;background:rgba(245,230,232,0.07);border-radius:0 8px 8px 0;">
-            <div style="font-size:28px;color:#C4929B;line-height:1;margin-bottom:8px;font-family:Georgia,serif;">"</div>
-            <div style="font-size:16px;color:#fff;font-weight:600;line-height:1.8;letter-spacing:-0.2px;">
-              치과의사가 안면부에 보톡스를 시술하는 행위는<br/>
-              <span style="color:#C4929B;font-size:18px;font-weight:800;">면허된 것 이외의 의료행위에 해당하지 않는다.</span><br/>
-              <span style="color:#e0d0d3;">미용 목적이라 하여 달리 볼 것은 아니다.</span>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+            <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(196,146,155,0.1);border-radius:8px;padding:12px;">
+              <span style="background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;flex-shrink:0;">1</span>
+              <span style="font-size:13px;color:#F5E6E8;line-height:1.5;">구강악안면외과는 치과 영역 -- 의료법이 구강악안면외과를 치과 영역으로 인정. 진료 영역에 '턱뼈를 둘러싼 안면부' 포함</span>
             </div>
-            <div style="font-size:28px;color:#C4929B;line-height:1;text-align:right;margin-top:8px;font-family:Georgia,serif;">"</div>
+            <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(196,146,155,0.1);border-radius:8px;padding:12px;">
+              <span style="background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;flex-shrink:0;">2</span>
+              <span style="font-size:13px;color:#F5E6E8;line-height:1.5;">안면부 행위를 치과에서 배제 불가 -- 관련 규정 개정 연혁, 학회 설립 경위, 요양급여 지급 결과 등을 종합</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(196,146,155,0.1);border-radius:8px;padding:12px;">
+              <span style="background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;flex-shrink:0;">3</span>
+              <span style="font-size:13px;color:#F5E6E8;line-height:1.5;">의학과 치의학의 학문적 원리는 동일 -- 기초 학문 원리가 다르지 않으며, 교육과정과 수련과정에 공통부분이 상당</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(196,146,155,0.1);border-radius:8px;padding:12px;">
+              <span style="background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;flex-shrink:0;">4</span>
+              <span style="font-size:13px;color:#F5E6E8;line-height:1.5;">치과대학에서 보톡스를 교육 -- 대부분 치과대학/치의학전문대학원에서 보톡스 시술을 교육하고 있으며, 치과 현장에서 활용 중</span>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:10px;background:rgba(196,146,155,0.1);border-radius:8px;padding:12px;">
+              <span style="background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:2px 8px;border-radius:4px;flex-shrink:0;">5</span>
+              <span style="font-size:13px;color:#F5E6E8;line-height:1.5;">보건위생상 위해가 높지 않음 -- 이미 치과에서 다양한 용도로 활용 중이며, 의료소비자 선택 가능성을 열어두는 것이 바람직</span>
+            </div>
           </div>
-          <!-- Bottom note -->
-          <div style="display:flex;align-items:center;gap:10px;padding-top:16px;border-top:1px solid rgba(196,146,155,0.3);">
-            <div style="width:8px;height:8px;background:#C4929B;border-radius:50%;flex-shrink:0;"></div>
-            <div style="font-size:12px;color:#999;line-height:1.5;">
-              전원합의체 판결은 대법관 13인 전원이 참여하는 대한민국 사법체계 최고 수준의 판단입니다. 이보다 강한 형태의 합법 확인은 사실상 존재하지 않습니다.
+          <div style="border-left:4px solid #C4929B;padding:16px 20px;background:rgba(245,230,232,0.07);border-radius:0 8px 8px 0;">
+            <div style="font-size:15px;color:#fff;font-weight:600;line-height:1.8;">
+              치과의사가 안면부에 보톡스를 시술하는 행위는
+              <span style="color:#C4929B;font-size:17px;font-weight:800;">면허된 것 이외의 의료행위에 해당하지 않는다.</span>
+              <span style="color:#e0d0d3;">미용 목적이라 하여 달리 볼 것은 아니다.</span>
             </div>
           </div>
         </div>
@@ -385,103 +402,80 @@ export const contentData: Record<string, Section[]> = {
     {
       id: "step0-intro-preview",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 STEP을 읽고 나면 알게 될 것들</h3>
-        <p class="text-[#333] leading-relaxed mb-4">이 STEP은 단순히 "합법이다"라는 결론만 전달하지 않는다. 다음 내용을 구체적으로 다룬다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 STEP을 완독하면 갖게 될 7가지 무기</h3>
         <ul class="space-y-2 mb-6">
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">판결의 전모:</span> 1심 유죄에서 대법원 무죄까지, 어떤 논리로 뒤집혔는가 (0-1)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">허용 범위 지도:</span> 안면부 어디까지가 안전하고, 어디부터가 위험한가. 시술 유형별로는 어떤가 (0-2)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">반론과 대응:</span> 의협·피부과가 제기하는 4가지 반론과 각각의 대응 논리 (0-3)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">글로벌 스탠다드:</span> 미국·영국·호주에서 치과의사 미용시술은 어떤 위치인가 (0-4)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">한의사와의 비교:</span> 같은 시장을 노리는 한의사와 법적 조건이 어떻게 다른가 (0-5)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">법적 안정성:</span> 9년간 번복 사례가 있는가, 앞으로 뒤집힐 가능성은 있는가 (0-6)</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">실무 리스크 최소화:</span> 합법이라도 갖춰야 할 기록과 프로토콜은 무엇인가 (0-7)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">1. 판결의 전모:</span> 1심 유죄에서 대법원 무죄까지, 어떤 논리로 뒤집혔는가 (0-1)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">2. 허용 범위 지도:</span> 녹색/황색/적색 구역 구분과 시술 유형별 법적 방어력 (0-2)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">3. 반론과 대응:</span> 의협과 피부과가 제기하는 반론과 각각의 대응 논리 (0-3)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">4. 글로벌 스탠다드:</span> 미국, 영국, 호주에서 치과의사 미용시술의 위치 (0-4)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">5. 한의사와의 비교:</span> 같은 시장을 노리는 한의사와 법적 조건의 결정적 차이 (0-5)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">6. 법적 안정성:</span> 9년간 번복 사례가 있는가, 앞으로 뒤집힐 가능성은 있는가 (0-6)</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">7. 실무 리스크 최소화:</span> 합법이라도 갖춰야 할 기록과 프로토콜 (0-7)</li>
         </ul>
-        <p class="text-[#333] leading-relaxed mb-8">이 STEP을 마치면, "해도 되는 건가?"라는 질문이 "어떻게 해야 잘 하는가?"로 바뀌어 있을 것이다. 그리고 STEP 1부터는 그 질문에 답한다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">이 STEP을 마치면, "해도 되는 건가?"라는 질문이 "어떻게 해야 잘 하는가?"로 바뀌어 있을 것이다.</p>
       `,
     },
     {
       id: "step0-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-1. 판결의 전모 — 대법원은 왜 무죄라 했는가</h2>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">사건의 경위</h3>
-        <p class="text-[#333] leading-relaxed mb-4">2011년 10월, 치과의사 A는 자신이 운영하는 치과에서 보톡스를 이용하여 환자의 눈가와 미간 주름을 치료했다. 검찰은 이를 의료법 제27조 제1항("의료인도 면허된 것 이외의 의료행위를 할 수 없다") 위반으로 기소했다. 의료법 제2조 제2항 제2호는 치과의사의 임무를 "치과 의료와 구강 보건지도"로 규정하고 있는데, 안면부 보톡스가 이 범위에 포함되는지가 핵심 쟁점이었다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-1. 판결의 전모</h2>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">사건 발단</h3>
+        <p class="text-[#333] leading-relaxed mb-4">2011년 10월, 치과의사 A 원장은 자신이 운영하는 치과에서 보톡스를 이용하여 환자의 눈가와 미간 주름을 시술했다. 검찰은 이를 의료법 제27조 제1항 위반으로 기소했다. 의료법 제2조 제2항 제2호는 치과의사의 임무를 "치과 의료와 구강 보건지도"로 규정하고 있는데, 안면부 보톡스가 이 범위에 포함되는지가 핵심 쟁점이었다.</p>
         <p class="text-[#333] leading-relaxed mb-6">2016년 7월 21일, 대법원은 13명 대법관 전원이 참여하는 전원합의체에서 판결을 선고했다. <span class="text-[#1a1a1a] font-bold">치과의사가 환자의 안면부에 보톡스를 시술한 행위는 면허 범위 내 의료행위이며, 그 시술이 미용 목적이라 하여 달리 볼 것은 아니다.</span></p>
       `,
     },
     {
       id: "step0-01-01",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">전원합의체의 의미</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">대법원 전원합의체 판결의 무게감</h3>
         <p class="text-[#333] leading-relaxed mb-4">대법원 전원합의체는 대법관 13명 전원이 참여하는 최고 심급의 의사결정 구조다. 일반 사건은 대법관 4명으로 구성된 소부에서 처리되지만, 전원합의체가 소집되는 경우는 극히 제한적이다.</p>
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">구분</th>
-                <th class="px-4 py-2 text-left font-medium">소부</th>
-                <th class="px-4 py-2 text-left font-medium">전원합의체</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">참여 인원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법관 4명</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">대법관 13명 전원</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">소집 빈도</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">일반 사건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">극히 예외적</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">구속력</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">해당 사건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이후 하급심 구속</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">변경 방법</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">다른 소부 판결로 변경 가능</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">다른 전원합의체 판결로만 변경</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="text-[#333] leading-relaxed mb-6">대법원이 이 사건에 전원합의체를 소집한 것 자체가, 이 판결의 영향력이 치과계를 넘어 전체 의료체계에 미친다는 것을 인정한 것이다.</p>
-        <!-- 도표: V-002 전원합의체 vs 소부 비교 -->
+        <!-- 소부 vs 전원합의체 비교 도표 -->
         <div class="mb-8">
-          <p class="text-[#1a1a1a] font-bold text-sm text-center mb-1">소부 판결 vs 전원합의체 판결</p>
-          <p class="text-[#999] text-xs text-center mb-4">대법원 판결의 법적 효력 비교</p>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <!-- 소부 -->
             <div class="border border-[#eee] rounded-lg overflow-hidden">
               <div class="bg-[#f5f5f5] px-4 py-3 text-center">
                 <p class="text-[#1a1a1a] font-bold">소부 판결</p>
               </div>
               <div class="p-4 space-y-3 text-sm">
-                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#1a1a1a] font-bold">3인 판사</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#1a1a1a] font-bold">대법관 4명</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
                 <div class="flex justify-between"><span class="text-[#999]">사건 유형</span><span class="text-[#1a1a1a]">일반 상소 사건</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
                 <div class="flex justify-between"><span class="text-[#999]">선례 효력</span><span class="text-[#1a1a1a]">번복 가능</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
-                <div class="flex justify-between"><span class="text-[#999]">법적 효과</span><span class="text-[#1a1a1a]">일반적 판결</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">변경 방법</span><span class="text-[#1a1a1a]">다른 소부 판결로 가능</span></div>
               </div>
               <div class="bg-[#f5f5f5] px-4 py-2 text-center">
                 <p class="text-[#999] text-xs font-semibold">상대적으로 약한 법적 구속력</p>
               </div>
             </div>
-            <!-- 전원합의체 -->
             <div class="border-2 border-[#C4929B] rounded-lg overflow-hidden">
               <div class="bg-[#C4929B] px-4 py-3 text-center">
                 <p class="text-white font-bold">전원합의체 판결</p>
               </div>
               <div class="p-4 space-y-3 text-sm">
-                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#C4929B] font-bold">13인 전원</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">구성 규모</span><span class="text-[#C4929B] font-bold">대법관 13명 전원</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
                 <div class="flex justify-between"><span class="text-[#999]">사건 유형</span><span class="text-[#C4929B]">판례 변경 필요 사건</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
                 <div class="flex justify-between"><span class="text-[#999]">선례 효력</span><span class="text-[#C4929B] font-bold">판례 법리 확정</span></div>
                 <div class="border-t border-[#f5f5f5]"></div>
-                <div class="flex justify-between"><span class="text-[#999]">법적 효과</span><span class="text-[#C4929B] font-bold">사실상 법률 효과</span></div>
+                <div class="flex justify-between"><span class="text-[#999]">변경 방법</span><span class="text-[#C4929B] font-bold">다른 전원합의체로만 가능</span></div>
               </div>
               <div class="bg-[#C4929B]/10 px-4 py-2 text-center">
                 <p class="text-[#C4929B] text-xs font-bold">최고 수준의 법적 구속력</p>
               </div>
             </div>
           </div>
-          <p class="text-[#999] text-[10px] mt-3 text-center">2016년 대법원 전원합의체 판결은 이전 판례를 변경하며 치과의사의 보톡스, 필러 시술의 합법성을 확정</p>
         </div>
+        <p class="text-[#333] leading-relaxed mb-6">대법원이 이 사건에 전원합의체를 소집한 것 자체가, 이 판결의 영향력이 치과계를 넘어 전체 의료체계에 미친다는 것을 인정한 것이다.</p>
       `,
     },
     {
       id: "step0-01-02",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">대법원의 판단 논리 — 5가지 핵심 근거</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5가지 철벽 논리</h3>
         <p class="text-[#333] leading-relaxed mb-4">대법원은 종합적 판단 기준을 제시하고, 이를 적용하여 무죄 취지의 판결을 내렸다.</p>
         <div class="overflow-x-auto mb-8">
           <table class="w-full text-sm border-collapse mb-6">
@@ -492,11 +486,11 @@ export const contentData: Record<string, Section[]> = {
               </tr>
             </thead>
             <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 1</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">구강악안면외과는 치과 영역 — 의료법이 구강악안면외과를 치과 영역으로 인정. 진료 영역에 '턱뼈를 둘러싼 안면부' 포함</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 2</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면부 행위를 치과에서 배제 불가 — 관련 규정 개정 연혁, 학회 설립 경위, 요양급여 지급 결과 등을 종합하면, 안면부 의료행위를 모두 치과에서 배제할 수 없음</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의학과 치의학의 학문적 원리는 동일 — 의학과 치의학은 기초 학문 원리가 다르지 않으며, 교육과정·수련과정에 공통부분이 상당</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치과대학에서 보톡스를 교육 — 대부분 치과대학/치의학전문대학원에서 보톡스 시술을 교육하고 있으며, 치과 현장에서 활용 중</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보건위생상 위해가 높지 않음 — 이미 치과에서 다양한 용도로 활용 중이며, 의료소비자 선택 가능성을 열어두는 것이 바람직</td></tr>
+              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 1</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">구강악안면외과는 치과 영역 -- 의료법이 구강악안면외과를 치과 영역으로 인정. 진료 영역에 '턱뼈를 둘러싼 안면부' 포함</td></tr>
+              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 2</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면부 행위를 치과에서 배제 불가 -- 관련 규정 개정 연혁, 학회 설립 경위, 요양급여 지급 결과 등을 종합하면, 안면부 의료행위를 모두 치과에서 배제할 수 없음</td></tr>
+              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">의학과 치의학의 학문적 원리는 동일 -- 기초 학문 원리가 다르지 않으며, 교육과정과 수련과정에 공통부분이 상당</td></tr>
+              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치과대학에서 보톡스를 교육 -- 대부분 치과대학/치의학전문대학원에서 보톡스 시술을 교육하고 있으며, 치과 현장에서 활용 중</td></tr>
+              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold align-top whitespace-nowrap">근거 5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보건위생상 위해가 높지 않음 -- 이미 치과에서 다양한 용도로 활용 중이며, 의료소비자 선택 가능성을 열어두는 것이 바람직</td></tr>
             </tbody>
           </table>
         </div>
@@ -505,63 +499,39 @@ export const contentData: Record<string, Section[]> = {
     {
       id: "step0-01-03",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">판결의 결론 — 두 가지 핵심</h3>
-        <p class="text-[#333] leading-relaxed mb-4">놓치면 안 되는 두 가지:</p>
-        <ol class="list-decimal list-inside space-y-2 mb-6">
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">'안면부'를 치과의사의 시술 영역으로 인정했다.</span> 치아·구강에 한정되지 않는다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">'미용 목적'이라 해서 달리 보지 않는다고 명시했다.</span> 치료 목적이든 미용 목적이든 같다.</li>
-        </ol>
-      `,
-    },
-    {
-      id: "step0-01-04",
-      html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">후속 판례 — 레이저 시술도 확정</h3>
-        <p class="text-[#333] leading-relaxed mb-4">불과 한 달 뒤인 2016년 8월 29일, 안면 프락셀 레이저 시술에 대해서도 동일 법리가 적용되어 검사의 상고가 기각됨으로써 무죄가 확정됐다(대법원 2013도7796). 이 판결은 전원합의체가 아닌 소부 판결이지만, 2013도850 전원합의체 판결의 법리를 그대로 적용했다는 점에서 의미가 크다. 전원합의체 판결 1건과 같은 법리를 적용한 확정 판결 1건이 같은 방향으로 나옴으로써, 치과의사의 안면미용시술 합법성은 단발성 판례가 아닌 <span class="text-[#1a1a1a] font-bold">일관된 사법 해석</span>으로 자리잡았다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">2022년에는 한의사 초음파 판결이 2013도850 판결의 논리를 직접 인용하면서, 면허 범위 해석에서 '보건위생상 위해 가능성'과 '금지 규정의 존부'를 핵심 기준으로 강화했다. 치과의사 미용시술의 합법성을 더욱 공고히 하는 방향이다.</p>
-        <!-- 도표: V-001 판결 타임라인 -->
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">후속 판례</h3>
+        <p class="text-[#333] leading-relaxed mb-4">2016년 8월 29일, 안면 프락셀 레이저 시술에 대해서도 동일 법리가 적용되어 무죄가 확정됐다(대법원 2013도7796). 전원합의체 판결 1건과 같은 법리를 적용한 확정 판결 1건이 같은 방향으로 나옴으로써, 치과의사의 안면미용시술 합법성은 단발성 판례가 아닌 <span class="text-[#1a1a1a] font-bold">일관된 사법 해석</span>으로 자리잡았다.</p>
+        <p class="text-[#333] leading-relaxed mb-6">2022년에는 한의사 초음파 판결이 2013도850 판결의 논리를 직접 인용하면서, 면허 범위 해석에서 '보건위생상 위해 가능성'과 '금지 규정의 존부'를 핵심 기준으로 강화했다.</p>
+        <!-- 판결 타임라인 -->
         <div class="mb-8">
           <p class="text-[#1a1a1a] font-bold text-sm text-center mb-4">판결 타임라인: 법적 안정성의 흐름</p>
           <div class="relative">
-            <!-- 타임라인 라인 -->
             <div class="absolute top-4 left-0 right-0 h-0.5 bg-[#eee]"></div>
-            <!-- 노드들 -->
             <div class="flex justify-between items-start relative">
-              <!-- 2011 기소 -->
-              <div class="flex flex-col items-center text-center w-1/6">
+              <div class="flex flex-col items-center text-center w-1/5">
                 <div class="w-3.5 h-3.5 rounded-full bg-[#eee] border border-[#999] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2011</p>
                 <p class="text-[#999] text-[10px]">기소</p>
               </div>
-              <!-- 2012 1심 -->
-              <div class="flex flex-col items-center text-center w-1/6">
-                <div class="w-3.5 h-3.5 rounded-full bg-[#f5f5f5] border border-[#999] z-10"></div>
-                <p class="text-[#1a1a1a] text-xs font-bold mt-2">2012</p>
-                <p class="text-[#999] text-[10px]">1심·2심 유죄</p>
-              </div>
-              <!-- 2016.7 전원합의체 (핵심) -->
-              <div class="flex flex-col items-center text-center w-1/6">
+              <div class="flex flex-col items-center text-center w-1/5">
                 <div class="w-5 h-5 rounded-full bg-[#C4929B] border-2 border-[#C4929B] z-10 ring-2 ring-[#C4929B]/20"></div>
                 <p class="text-[#C4929B] text-xs font-bold mt-2">2016.7</p>
-                <p class="text-[#C4929B] text-[10px] font-semibold">대법원 전원합의체</p>
+                <p class="text-[#C4929B] text-[10px] font-semibold">전원합의체</p>
                 <p class="text-[#C4929B] text-[10px] font-semibold">보톡스 무죄</p>
               </div>
-              <!-- 2016.8 레이저 -->
-              <div class="flex flex-col items-center text-center w-1/6">
+              <div class="flex flex-col items-center text-center w-1/5">
                 <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2016.8</p>
-                <p class="text-[#999] text-[10px]">레이저 무죄</p>
-                <p class="text-[#999] text-[10px]">(소부)</p>
+                <p class="text-[#999] text-[10px]">안면 레이저</p>
+                <p class="text-[#999] text-[10px]">무죄 확정</p>
               </div>
-              <!-- 2022 한의사 -->
-              <div class="flex flex-col items-center text-center w-1/6">
+              <div class="flex flex-col items-center text-center w-1/5">
                 <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2022.12</p>
                 <p class="text-[#999] text-[10px]">한의사 판결서</p>
                 <p class="text-[#999] text-[10px]">논리 인용</p>
               </div>
-              <!-- 2024 복지부 -->
-              <div class="flex flex-col items-center text-center w-1/6">
+              <div class="flex flex-col items-center text-center w-1/5">
                 <div class="w-3.5 h-3.5 rounded-full bg-[#C4929B]/30 border border-[#C4929B] z-10"></div>
                 <p class="text-[#1a1a1a] text-xs font-bold mt-2">2024.2</p>
                 <p class="text-[#999] text-[10px]">복지부 재확인</p>
@@ -576,91 +546,75 @@ export const contentData: Record<string, Section[]> = {
       id: "step0-02",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-2. 허용 범위 지도 — 어디까지 되고 어디부터 안 되는가</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-2. 허용 범위 지도</h2>
         <p class="text-[#333] leading-relaxed mb-6">판결은 '합법'이라고 선언했다. 하지만 '모든 시술이 모든 부위에서 합법'이라고 한 적은 없다. 원장이 반드시 알아야 할 것은 안전한 영역과 위험한 영역의 경계다.</p>
       `,
     },
     {
       id: "step0-02-01",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">부위별 허용 범위 3단계</h3>
-        <div class="overflow-x-auto mb-8">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">단계</th>
-                <th class="px-4 py-2 text-left font-medium">부위</th>
-                <th class="px-4 py-2 text-left font-medium">법적 근거 강도</th>
-                <th class="px-4 py-2 text-left font-medium">비고</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">녹색 (안전)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">눈가·미간·교근(사각턱)·이갈이</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판결에서 직접 판시</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실무에서 문제될 가능성 극히 낮음</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">황색 (주의)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이마·팔자·입술·턱끝·입꼬리</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판결 논리 확장 가능, 직접 판례 없음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기록(동의서·차트·사진) 철저히</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">적색 (위험)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">승모근·바디 부위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면부 벗어남, 판결 논리 적용 어려움</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">고발 시 방어 근거 약함</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- 도표: V-003 허용 범위 피라미드 -->
-        <div class="mb-8">
-          <p class="text-[#1a1a1a] font-bold text-sm text-center mb-1">미용 치과 시술 허용 범위</p>
-          <p class="text-[#999] text-xs text-center mb-5">법적 근거에 따른 3단계 범위 분류</p>
-          <div class="flex flex-col items-center gap-0">
-            <!-- Top: 신중 영역 -->
-            <div class="w-[40%] bg-[#1a1a1a] text-white text-center py-3 rounded-t-lg">
-              <p class="text-xs font-bold">신중 영역</p>
-              <p class="text-[10px] opacity-70 mt-0.5">침습적 수술</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">녹색/황색/적색 구역 구분</h3>
+        <!-- 허용 범위 지도 (신호등 인포그래픽) -->
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:24px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">SCOPE MAP</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">미용 치과 시술 허용 범위 지도</div>
+            <div style="font-size:13px;color:#888;margin-top:4px;">법적 근거 강도에 따른 3단계 분류</div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <!-- 녹색 -->
+            <div style="display:flex;align-items:stretch;gap:12px;background:#f0f7f2;border:2px solid #4A7C59;border-radius:12px;padding:16px;">
+              <div style="width:48px;min-width:48px;background:#4A7C59;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#4A7C59;margin-bottom:4px;">녹색 (안전)</div>
+                <div style="font-size:13px;color:#333;line-height:1.6;"><span style="font-weight:600;">부위:</span> 눈가, 미간, 교근(사각턱), 이갈이</div>
+                <div style="font-size:12px;color:#666;margin-top:4px;">판결에서 직접 판시. 실무에서 문제될 가능성 극히 낮음.</div>
+              </div>
             </div>
-            <!-- Middle: 조건부 -->
-            <div class="w-[65%] bg-[#C4929B]/20 border-x border-[#C4929B]/30 text-center py-3">
-              <p class="text-[#C4929B] text-xs font-bold">조건부 가능</p>
-              <p class="text-[#C4929B] text-[10px] mt-0.5">실리프팅, 레이저</p>
-              <p class="text-[#999] text-[10px]">판례 근거 필수</p>
+            <!-- 황색 -->
+            <div style="display:flex;align-items:stretch;gap:12px;background:#fdf8ef;border:2px solid #B8860B;border-radius:12px;padding:16px;">
+              <div style="width:48px;min-width:48px;background:#B8860B;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z"/></svg>
+              </div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#B8860B;margin-bottom:4px;">황색 (주의)</div>
+                <div style="font-size:13px;color:#333;line-height:1.6;"><span style="font-weight:600;">부위:</span> 이마, 팔자, 입술, 턱끝, 입꼬리</div>
+                <div style="font-size:12px;color:#666;margin-top:4px;">판결 논리 확장 가능하나 직접 판례 없음. 기록(동의서, 차트, 사진) 철저히.</div>
+              </div>
             </div>
-            <!-- Bottom: 적극 가능 -->
-            <div class="w-[90%] bg-[#C4929B] text-white text-center py-3 rounded-b-lg">
-              <p class="text-xs font-bold">적극 가능</p>
-              <p class="text-[10px] mt-0.5">보톡스 · 필러 · 스킨부스터</p>
-              <p class="text-[10px] opacity-70">안전성·시장 검증 완료</p>
+            <!-- 적색 -->
+            <div style="display:flex;align-items:stretch;gap:12px;background:#fdf0f0;border:2px solid #A63D40;border-radius:12px;padding:16px;">
+              <div style="width:48px;min-width:48px;background:#A63D40;border-radius:8px;display:flex;align-items:center;justify-content:center;">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5"><path d="M18 6L6 18"/><path d="M6 6l12 12"/></svg>
+              </div>
+              <div>
+                <div style="font-size:14px;font-weight:700;color:#A63D40;margin-bottom:4px;">적색 (위험)</div>
+                <div style="font-size:13px;color:#333;line-height:1.6;"><span style="font-weight:600;">부위:</span> 승모근, 바디 부위</div>
+                <div style="font-size:12px;color:#666;margin-top:4px;">안면부 벗어남. 판결 논리 적용 어려움. 고발 시 방어 근거 약함.</div>
+              </div>
             </div>
           </div>
-          <p class="text-[#999] text-[10px] mt-3 text-center">범위는 대법원 판례 및 의료법 해석 기준</p>
         </div>
       `,
     },
     {
       id: "step0-02-02",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술 유형별 허용 매트릭스</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술 유형별 법적 방어력 매트릭스</h3>
         <p class="text-[#333] leading-relaxed mb-4">부위만이 아니라 시술 유형에 따라서도 법적 근거의 강도가 다르다.</p>
-        <div class="overflow-x-auto mb-6">
-          <table class="w-full text-sm border-collapse mb-6">
-            <thead class="bg-[#1a1a1a] text-white">
-              <tr>
-                <th class="px-4 py-2 text-left font-medium">시술 유형</th>
-                <th class="px-4 py-2 text-left font-medium">법적 근거</th>
-                <th class="px-4 py-2 text-left font-medium">직접 판례</th>
-                <th class="px-4 py-2 text-left font-medium">실무 권고</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">가장 강함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2013도850 직접 판시</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 시작 가능</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">강함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2013도7796 직접 판시</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 시작 가능</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보통</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">직접 판례 없음, 같은 논리 구조로 방어 가능</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기록 철저</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보통</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">직접 판례 없음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">기록 철저</td></tr>
-              <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보통~약함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">직접 판례 없음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">안면부 한정, 기록 철저</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <!-- 도표: V-004 시술별 법적 근거 매트릭스 (시각화) -->
-        <div class="mb-6">
-          <p class="text-[#1a1a1a] font-bold text-sm text-center mb-1">시술별 법적 근거 매트릭스</p>
-          <p class="text-[#999] text-xs text-center mb-4">법적 근거 강도에 따른 평가</p>
+        <!-- 시술 유형별 법적 방어력 매트릭스 -->
+        <div style="background:#fff;border:1px solid #e8d5d8;border-radius:12px;padding:28px 24px;margin-bottom:32px;font-family:'Pretendard',sans-serif;">
+          <div style="text-align:center;margin-bottom:20px;">
+            <span style="display:inline-block;background:#C4929B;color:#fff;font-size:11px;font-weight:700;padding:4px 14px;border-radius:20px;letter-spacing:0.5px;margin-bottom:8px;">DEFENSE MATRIX</span>
+            <div style="font-size:18px;font-weight:700;color:#2C2C2C;">시술 유형별 법적 방어력</div>
+          </div>
           <div class="overflow-x-auto">
             <table class="w-full text-xs border-collapse">
               <thead>
                 <tr>
-                  <th class="bg-[#1a1a1a] text-white px-3 py-2 text-left font-medium"></th>
+                  <th class="bg-[#1a1a1a] text-white px-3 py-2 text-left font-medium">시술 유형</th>
                   <th class="bg-[#1a1a1a] text-white px-3 py-2 text-center font-medium">법적 근거</th>
                   <th class="bg-[#1a1a1a] text-white px-3 py-2 text-center font-medium">직접 판례</th>
                   <th class="bg-[#1a1a1a] text-white px-3 py-2 text-center font-medium">실무 권고</th>
@@ -669,64 +623,49 @@ export const contentData: Record<string, Section[]> = {
               <tbody>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">보톡스</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
-                </tr>
-                <tr>
-                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">필러</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
-                </tr>
-                <tr>
-                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">스킨부스터</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">권고</td>
-                </tr>
-                <tr>
-                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">실리프팅</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">중간</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
-                </tr>
-                <tr>
-                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">HIFU</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">가장 강함</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">즉시 시작</td>
                 </tr>
                 <tr>
                   <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">레이저</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">강함</td>
-                  <td class="bg-[#C4929B] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
-                  <td class="bg-[#C4929B]/40 text-[#1a1a1a] text-center px-3 py-2 font-semibold">조건부</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">강함</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">직접 판결</td>
+                  <td class="bg-[#4A7C59] text-white text-center px-3 py-2 font-semibold">즉시 시작</td>
+                </tr>
+                <tr>
+                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">필러 / 스킨부스터</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">보통</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접 적용</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">기록 철저</td>
+                </tr>
+                <tr>
+                  <td class="bg-[#f5f5f5] px-3 py-2 font-semibold text-[#1a1a1a]">실리프팅</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">보통~약함</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">간접 적용</td>
+                  <td class="bg-[#B8860B]/30 text-[#1a1a1a] text-center px-3 py-2 font-semibold">안면부 한정</td>
                 </tr>
               </tbody>
             </table>
           </div>
           <div class="flex gap-4 justify-center mt-3 text-[10px]">
-            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#C4929B] rounded-sm inline-block"></span><span class="text-[#999]">강함 = 법적 근거 명확</span></span>
-            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#C4929B]/40 rounded-sm inline-block"></span><span class="text-[#999]">중간 = 신중한 운영 필요</span></span>
+            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#4A7C59] rounded-sm inline-block"></span><span class="text-[#999]">강함 = 직접 판례 있음</span></span>
+            <span class="flex items-center gap-1"><span class="w-3 h-3 bg-[#B8860B]/30 rounded-sm inline-block"></span><span class="text-[#999]">보통 = 간접 적용, 기록 필수</span></span>
           </div>
-        </div>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">TIP:</span> 판결은 보톡스에 대해 직접 판시했지만, 필러·실리프팅·스킨부스터 등도 같은 논리 구조(안면부 + 구강악안면외과 교육 + 보건위생 위해 낮음)로 방어할 수 있다. 다만 직접 판례가 없으므로, <span class="text-[#1a1a1a] font-bold">기록(동의서·차트·사진)을 더욱 철저히</span> 해야 한다.</p>
         </div>
       `,
     },
     {
       id: "step0-02-03",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 원칙 3가지</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">실전 방어 3원칙</h3>
         <ol class="list-decimal list-inside space-y-3 mb-6">
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">안면부에 머물러라.</span> 판결의 논리가 미치는 범위는 안면부다. 승모근·바디는 영역 밖이다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">기록을 남겨라.</span> 동의서·차트·시술 전후 사진은 분쟁 시 유일한 방어 수단이다.</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">안면부에 머물러라.</span> 판결의 논리가 미치는 범위는 안면부다. 승모근과 바디는 영역 밖이다.</li>
+          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">기록을 남겨라.</span> 동의서, 차트, 시술 전후 사진은 분쟁 시 유일한 방어 수단이다.</li>
           <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">교육 근거를 갖춰라.</span> 시술 관련 교육 이수 이력은 '면허 범위 내'를 입증하는 보조 근거가 된다.</li>
         </ol>
         <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> 사각턱 보톡스(녹색)를 시작으로, 입술 필러(황색)로 확장하고, 승모근(적색)은 메뉴에 넣지 않는다 — 이것이 허용 범위 지도를 실무에 적용하는 가장 안전한 순서다.</p>
+          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시:</span> 사각턱 보톡스(녹색)를 시작으로, 입술 필러(황색)로 확장하고, 승모근(적색)은 메뉴에 넣지 않는다 -- 이것이 허용 범위 지도를 실무에 적용하는 가장 안전한 순서다.</p>
         </div>
       `,
     },
