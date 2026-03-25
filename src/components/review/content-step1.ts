@@ -228,64 +228,53 @@ export const step1Data: Section[] = [
     `,
   },
 
+
   // ─── 1-2. 필러 ───
   {
     id: "s1-1-2-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-2. 필러 (Dermal Filler)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">두 번째 도구는 무게가 다르다</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스로 문을 열었다. 환자가 들어왔다. 이제 그 환자에게 두 번째 도구를 꺼낼 차례다. 필러다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스 다음으로 도입 빈도가 높지만, 보톡스와는 근본적으로 다른 차원의 시술이다. 보톡스가 근육을 이완시킨다면, 필러는 조직에 물질을 직접 주입하여 볼륨을 만든다. 리스크의 성격과 크기가 다르다. 보톡스가 미세한 도구라면 필러는 보다 정밀한 기술을 요구한다. 효과는 크지만, 다루는 데 더 많은 훈련이 필요하다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2장. 필러 (Dermal Filler) — 보톡스 다음의 진짜 수익 엔진</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
+      <p class="text-[#333] leading-relaxed mb-8">필러는 보톡스 다음으로 도입 빈도가 높지만, 보톡스와는 근본적으로 다른 차원의 시술이다. 보톡스가 근육을 이완시키는 시술이라면, 필러는 조직에 물질을 직접 주입하여 볼륨을 만드는 시술이다. 리스크의 성격과 크기가 다르고, 그만큼 요구되는 역량의 깊이도 다르다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러(Dermal Filler)는 피부 아래 조직에 충전물질을 주입하여 볼륨 회복, 주름 충전, 얼굴 윤곽 개선을 수행하는 시술이다. 대부분 히알루론산(HA) 기반이며, 문제 발생 시 히알루로니다제로 용해가 가능하다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">HA 필러의 핵심 특성</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 교차결합 (Cross-linking) :</span> BDDE 등으로 HA 분자를 결합시킨 것이다. 교차결합도가 높을수록 단단하고 오래 유지된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 점탄성 (Viscoelasticity) :</span> 형태를 유지하는 탄성과, 자연스럽게 퍼지는 점성의 균형이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 단상 vs 이상 :</span> 단상(균일 겔, 벨로테로 등)과 이상(입자+겔, 레스틸렌 등)으로 나뉜다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위당 15~30분. 마취 포함 30~45분.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 27~30G 바늘 또는 캐뉼라 사용. 대부분 제품에 리도카인 포함.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 2~5일. 최종 결과는 2주 후.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시. 단, 부종이 빠지면서 약간 줄어든다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 영구필러 시술 이력.</p>
     `,
   },
   {
     id: "s1-1-2-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">환자가 "입술이 좀 얇아서요"라고 말할 때, 필러 시술의 문이 열린다. 필러(Dermal Filler)는 피부 아래 조직에 충전물질을 주입하여 볼륨을 회복하고, 주름을 충전하고, 얼굴 윤곽을 개선하는 시술이다. 대부분 히알루론산(HA) 기반이며, 필요 시 히알루로니다제로 용해가 가능하다. 이 용해 가능성이 초보 시술자에게 가장 중요한 안전장치가 된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">특성</th>
-            <th class="px-4 py-2 text-left font-medium">설명</th>
-            <th class="px-4 py-2 text-left font-medium">임상 의미</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">교차결합 (Cross-linking)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">BDDE 등으로 HA 분자를 결합한다. 높을수록 단단하고 오래 유지된다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부위별 적합 제품이 다르다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">점탄성 (Viscoelasticity)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">형태 유지(탄성)와 자연스러운 퍼짐(점성)의 균형이다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제품 선택의 핵심 기준이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">단상 vs 이상</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">단상(균일 겔, 벨로테로 등)과 이상(입자+겔, 레스틸렌 등)으로 나뉜다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부위별 적합성이 달라진다</td></tr>
-        </tbody>
-      </table>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">내용</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 시간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부위당 15~30분이다. 마취 포함 30~45분이 소요된다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">통증</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">27~30G 바늘/캐뉼라를 사용한다. 대부분 제품에 리도카인이 포함되어 있다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부종 2~5일, 멍이 가능하다. 최종 결과는 2주 후에 판단한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 발현</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 보인다. 단, 부종이 빠지면서 약간 줄어든다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">금기사항</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드, 영구필러 이력</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스와 비교하면 시술 시간이 2~3배 길다. 유닛 회전율이 떨어진다. 하지만 건당 마진이 보톡스의 2~3배다. 시간과 마진의 교환이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러의 주요 시술 부위 — 입술, 턱끝, 팔자주름, 입꼬리 — 는 모두 구강 주변에 위치한다. 하악 신경, 이신경, 안면동맥 등의 주행 경로에 대한 임상적 친숙도는 치과의사가 타 진료과 대비 압도적으로 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">특히 하치조신경차단(IANB) 마취를 일상적으로 시행하면서 축적된 해부학적 감각은 필러 시술의 안전성과 직결된다.</p>
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
+        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시 :</span> 임플란트 보철 완료 후 환자에게 이렇게 제안한다. "치아는 완성됐는데, 입술 볼륨이 줄어서 전체 비율이 아쉽습니다. 입술 필러 1cc면 치아와 입술 비율이 훨씬 자연스러워집니다."</p>
+      </div>
     `,
   },
   {
     id: "s1-1-2-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">2. 치과와의 연결점</h3>
-      <p class="text-[#333] leading-relaxed mb-4">필러 시술 부위 중 <span class="font-bold text-[#1a1a1a]">입술, 턱끝, 팔자주름, 입꼬리</span>는 모두 구강 주변에 위치한다. 하악 신경, 이신경, 안면동맥 등의 주행 경로에 대한 임상적 친숙도가 높다. 이것이 치과의 두 번째 핵심 역량이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">하치조신경차단(IANB) 마취를 매일 시행하면서 축적된 해부학적 감각은 필러 시술의 안전성과 직결된다. 피부과 의사가 교과서로 배운 신경 경로를, 치과의사는 매일 바늘로 확인한다. 이 경험의 차이가 안전성의 기초가 된다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 임플란트 보철 완료 환자. "치아는 완성됐는데, 입술 볼륨이 줄어서 전체 비율이 아쉽네요. 입술 필러 1cc면 치아와 입술 비율이 훨씬 자연스러워집니다." 이 제안은 치과의 치료 연장선 위에서만 가능하다. 피부과에서 "치아와 입술 비율"을 언급할 수 있는가. 없다. 이것이 치과만의 관점이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-6">필러에서 치과의 포지션은 보톡스와 근본적으로 다르다. 보톡스는 가격 경쟁이 핵심이었지만, 필러는 안전성이 핵심이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">치과 필러 도입 3단계 로드맵</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 입술, 턱끝 (리스크 낮음) :</span> 즉시 시작하라. 치과의 해부학적 강점이 가장 직접적으로 발휘되는 하안면부다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 팔자주름, 입꼬리 (리스크 중간) :</span> 1단계에서 최소 30케이스 이상의 경험을 축적한 후 진입하라.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 볼, 관자놀이 (리스크 중~높음) :</span> 2단계가 안정적으로 안착한 후, 별도의 전문 교육을 이수하고 진입하라.</p>
+      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-8">
+        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#f59e0b] font-bold">주의:</span> 코 필러와 이마 필러는 실명 위험이 있는 고위험 시술이다. 충분한 교육과 경험 없이 시도해서는 안 된다.</p>
       </div>
     `,
   },
@@ -293,126 +282,91 @@ export const step1Data: Section[] = [
     id: "s1-1-2-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">3. 도입 전략 / 포지션</h3>
-      <p class="text-[#333] leading-relaxed mb-4">필러에서 치과의 포지션은 보톡스와 근본적으로 다르다. 보톡스는 가격 경쟁이 핵심이었지만, <span class="font-bold text-[#1a1a1a]">필러는 안전성이 핵심이다.</span> 경쟁의 무대가 바뀐다.</p>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">치과 필러 도입 3단계 로드맵</h4>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">단계</th>
-            <th class="px-4 py-2 text-left font-medium">부위</th>
-            <th class="px-4 py-2 text-left font-medium">리스크</th>
-            <th class="px-4 py-2 text-left font-medium">시기</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">1단계</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">입술, 턱끝</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 시작한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">2단계</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">팔자주름, 입꼬리</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간이다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1단계 30케이스 이상 축적 후 진입한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">3단계</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">볼, 관자놀이</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중~높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2단계 안정 후 별도 교육을 이수한다</td></tr>
-        </tbody>
-      </table>
-      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm">코 필러와 이마 필러는 <span class="font-bold text-[#1a1a1a]">실명 위험</span>이 있는 고위험 시술이다. 충분한 교육과 경험 없이 시도하지 않는다. 이 영역은 철옹성 같은 준비 없이 진입하면 안 된다.</p>
-      </div>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스를 통해 미용 시술의 입구를 연 후, <span class="font-bold text-[#1a1a1a]">필러에서 실질적인 수익</span>을 가져가는 것이 치과 미용시술의 기본 수익 구조다. 필러의 도입 전략은 '저가 vs 프리미엄'이 아니라, <span class="font-bold text-[#1a1a1a]">'안전한 부위에서 시작하여 점진적으로 확장한다'</span>는 단계적 접근이 핵심이다. 조급함은 사고로 돌아온다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">권장 운영 가격대</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 입술 1cc :</span> 시장 중간값 130,000원. 치과 권장가 130,000~180,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 턱끝 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 팔자주름 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원. 2단계 이후 도입.</p>
     `,
   },
   {
     id: "s1-1-2-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">4. 시장 현황 / 가격대</h3>
-      <p class="text-[#333] leading-relaxed mb-4">필러 시장은 보톡스처럼 극단적 저가 경쟁이 덜하다. 하지만 시장 가격대를 모르면 포지셔닝이 불가능하다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">부위</th>
-            <th class="px-4 py-2 text-left font-medium">시장 중간값</th>
-            <th class="px-4 py-2 text-left font-medium">치과 권장가</th>
-            <th class="px-4 py-2 text-left font-medium">비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">입술 1cc</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">130,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">130,000~180,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">가장 빈번한 첫 필러 시술이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">턱끝 1cc</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000~200,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술이 단순하고 생산성이 높다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">팔자주름 1cc</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000~200,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2단계 이후에 진입한다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">입술 필러가 첫 번째 기회다. 130,000~180,000원 가격대에서 시작하면, 보톡스 환자의 업셀 전환이 자연스럽다. "보톡스 맞으셨으니 입술도 같이 하시면 전체 비율이 훨씬 좋아집니다." 이 한 마디가 13만원의 추가 매출을 만든다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <p class="text-[#333] leading-relaxed mb-6">초기 도입 치과에는 국산 일반 등급 HA 필러(뉴라미스, 채움, 벨라스트 등)를 추천한다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필수 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 27G/30G 바늘 :</span> 정밀 주입용.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 캐뉼라 22~25G :</span> 혈관 천공 위험을 낮춘다. 팔자주름·턱끝 시술 시 권장.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 히알루로니다제 :</span> 필수 구비. 혈관폐색 발생 시 즉시 투여. 시술실에 항시 비치하라. 이것은 선택이 아니라 생존 장비다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 신경차단 마취 :</span> 인프라오비탈/멘탈 신경차단. 치과의사의 일상 술기 그대로다.</p>
     `,
   },
   {
     id: "s1-1-2-06",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">5. 제품 / 장비 가이드</h3>
-      <p class="text-[#333] leading-relaxed mb-4">초기 도입 치과에는 <span class="font-bold text-[#1a1a1a]">국산 일반 등급 HA 필러</span>(뉴라미스, 채움, 벨라스트 등)를 추천한다. 이유는 세 가지다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">첫째, 히알루로니다제로 용해가 가능하다.</span> 초보 시술자에게 가장 중요한 안전장치다. 실수가 발생하면 녹일 수 있다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">둘째, 점도별 라인업을 보유하고 있다.</span> 부위별 적합 제품을 선택할 수 있다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">셋째, 가격 대비 충분한 품질이다.</span> 시장 판매가 13만원 기준 충분한 마진이 확보된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">용도</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">27G/30G 바늘</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">정밀 주입에 사용한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">캐뉼라 22~25G</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">혈관 천공 위험을 줄인다. 팔자·턱끝에 권장한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">히알루로니다제</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">필수 구비. 혈관폐색 시 즉시 투여한다. 시술실에 항시 비치한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">신경차단 마취</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인프라오비탈/멘탈 차단이다. 치과의사의 일상 술기다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">히알루로니다제를 '혹시 몰라서 구비하는 것'으로 생각하지 마라. <span class="font-bold text-[#1a1a1a]">'반드시 쓸 일이 있을 것'을 전제로 구비하는 것</span>이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-6">필러는 보톡스보다 확실히 난이도가 높다. 보톡스가 "어디에 얼마나"의 2차원 판단이라면, 필러는 "어디에, 얼마나, 어떤 깊이로, 어떤 속도로, 어떤 방향으로, 혈관은 어디에 있는지"까지 고려해야 하는 다차원 판단이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 핵심 주의사항</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 속도 :</span> 천천히. 급하게 밀어 넣으면 혈관 내 주입 위험이 높아진다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 깊이 :</span> 부위마다 적정 레이어가 다르다. 입술은 점막 하, 턱끝은 골막 상.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 아스피레이션 :</span> 주입 전 피스톤을 살짝 당겨 혈액 역류를 확인하는 습관을 반드시 들여라.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 시술 전 사진을 반드시 촬영하고, 양측을 번갈아 가며 소량씩 주입하는 것이 원칙이다.</p>
     `,
   },
   {
     id: "s1-1-2-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">6~8. 도입 난이도·수익성·준비사항</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">난이도는 보톡스보다 확실히 높다.</span> 주입 깊이, 속도, 방향, 혈관 회피를 동시에 고려해야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">수익성은 보톡스의 2~3배다.</span> 평균 판매가 150,000원, 재료비 50,000원 기준 건당 마진 10만원. 보톡스 프리미엄형(건당 4~8만원)과 비교하면 수익 규모가 월등하다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">초기 투자는 ~50만원이면 충분하다.</span> 필러 1~2시린지, 히알루로니다제, 캐뉼라. 보톡스와 금액 차이는 크지 않지만, 그 사이에 놓인 책임의 무게는 분명히 다르다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">수익 시뮬레이션 (입술/턱끝 1cc 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 평균 판매가 : 150,000원. 재료비 : 약 50,000원. 건당 마진 : 약 100,000원. 마진율 : 약 67%.</p>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스 프리미엄형의 건당 마진이 58,000원이었다. 필러는 건당 100,000원. 약 1.7배다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">월 수익 시뮬레이션</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 주 5건 시술 시 : 월 200만 원 마진.</p>
+      <p class="text-[#333] leading-relaxed mb-8">▶ 주 10건 시술 시 : 월 400만 원 마진. 보톡스(월 150~300만 원) + 필러(월 200~400만 원) = 월 350~700만 원의 미용시술 추가 매출 구조.</p>
     `,
   },
   {
     id: "s1-1-2-08",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">9. 유의사항 / 사고대응</h3>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">혈관폐색 응급 프로토콜 — 반드시 숙지하라</h4>
-      <p class="text-[#333] leading-relaxed mb-4">필러의 가장 심각한 합병증은 <span class="font-bold text-[#1a1a1a]">혈관폐색으로 인한 피부괴사 또는 실명</span>이다. 이것은 가능성의 문제가 아니라 시간의 문제다. 골든타임은 피부 괴사 4시간, 실명 방지 90분이다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">단계</th>
-            <th class="px-4 py-2 text-left font-medium">조치</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인지</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">피부색 변화(blanching/보라색), 극심한 통증, 망상형 색 변화가 나타난다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 1</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주입을 즉시 중단한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 2</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">히알루로니다제 450~1500IU를 주사한다 — HDPH(고용량 펄스) 프로토콜이다. <span class="font-bold text-[#1a1a1a]">고용량을 주저하지 마라</span></td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 3</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">온찜질로 혈관을 확장한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 4</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">니트로글리세린 패치 2%를 도포한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 5</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">아스피린을 투여한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">추적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1시간 후 재평가한다. 개선이 없으면 히알루로니다제를 추가한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">눈 증상 시</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">즉시 안과 응급 전원한다. 망막동맥폐색의 골든타임은 90분이다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">이 프로토콜은 시술실 벽에 붙여두어라. 스탭 전원이 숙지해야 한다. 상세 응급 프로토콜(HDPH 용량 계산, 스탭 훈련, 차트 기록 원칙)은 <span class="font-bold text-[#1a1a1a]">STEP 2-5 응급 대응 프로토콜</span>에서 다룬다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ HA 필러 1~2시린지 (필수) : 시린지당 25,000~50,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 히알루로니다제 (필수) : 1바이알. 혈관폐색 응급 대응용. 반드시 시술실에 비치.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 캐뉼라 22~25G (권장) : 혈관 천공 위험 감소.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 27G/30G 바늘 (필수) : 정밀 주입용.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 동의서 양식 (필수) : 0원 (메디스테이션 제공).</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 약 50만 원. 보톡스(25만 원)에서 추가 25만 원으로 두 번째 수익 엔진을 장착하는 셈이다.</p>
     `,
   },
   {
     id: "s1-1-2-09",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">10. 종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스가 문을 여는 열쇠였다면, 필러는 그 문 너머의 첫 번째 도전이다. 수익성은 보톡스를 상회하고, 공장형 저가 경쟁에 휘말릴 가능성이 적다. 건당 마진 10만원은 보톡스의 2~3배다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">다만, 필러를 도입하는 순간 치과는 '주사를 놓는 곳'에서 '얼굴에 물질을 넣는 곳'으로 한 단계 이동한다. <span class="font-bold text-[#1a1a1a]">히알루로니다제 상시 구비, 혈관폐색 응급 프로토콜 숙지, 시술 전후 사진 촬영</span> — 이 세 가지 기초를 갖추지 않은 채 필러를 시작하지 마라.</p>
-      <p class="text-[#333] leading-relaxed mb-4">초기 투자 ~50만원. 보톡스와 금액 차이는 크지 않다. 하지만 그 사이에 놓인 책임의 무게는 다르다. 두 번째 도구는 첫 번째 도구보다 무겁다. 그 무게를 감당할 준비가 되었을 때 시작하라.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-6">필러는 보톡스와 리스크의 차원이 다르다. 최대 부작용은 혈관폐색으로 인한 피부괴사와 실명이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">혈관폐색 응급 프로토콜</h4>
+      <p class="text-[#333] leading-relaxed mb-4">골든타임은 극도로 짧다. 피부괴사 방지는 4시간, 실명 방지는 90분이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 1 —</span> 주입 즉시 중단.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 2 —</span> 히알루로니다제 450~1500IU를 폐색 의심 부위에 즉시 주사 (HDPH 프로토콜).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 3 —</span> 온찜질로 혈관 확장 유도. 냉찜질은 금지.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 4 —</span> 니트로글리세린 패치 2% 도포.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 5 —</span> 아스피린 투여.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 눈 증상 발생 시 —</span> 즉시 안과 응급 전원. 망막동맥폐색은 90분 이내가 골든타임이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">히알루로니다제는 선택 장비가 아니라 생존 장비다. 반드시 비치하라.</p>
+    `,
+  },
+  {
+    id: "s1-1-2-10",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스가 문을 여는 열쇠였다면, 필러는 그 문 너머의 첫 번째 방이다. 건당 마진 10만 원, 마진율 67%. 보톡스의 약 1.7배.</p>
+      <p class="text-[#333] leading-relaxed mb-4">도입 전략의 핵심은 단순하다. 안전한 부위(입술, 턱끝)에서 교두보를 확보하고, 경험과 숙련도를 쌓은 뒤 팔자주름, 볼, 관자놀이로 영토를 확장하라. 순서를 건너뛰지 마라.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">초기 투자 약 50만 원. 보톡스와 금액 차이는 크지 않지만, 그 사이에 놓인 책임의 무게는 분명히 다르다. 그리고 그 책임의 무게를 감당할 수 있는 해부학적 역량을 가장 확실하게 갖추고 있는 직역이 바로 치과의사라는 사실 — 이것이 필러를 치과에서 도입해야 하는 가장 근본적인 이유다.</p>
     `,
   },
 
@@ -421,136 +375,57 @@ export const step1Data: Section[] = [
     id: "s1-1-3-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-3. 스킨부스터 (Skin Booster)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">세 번째 기둥이 세워진다</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스로 주름을 매듭지었고, 필러가 매출의 버팀목이 되었다. 스킨부스터는 피부 자체의 질을 되살리는 시술이다. 핵심은 반복 방문의 구조다. 3~4주 간격으로 3회 1코스. 5명의 프로그램 참여자를 확보하면 월 400만원 이상의 추정 매출이 발생한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">현재 조건은 명확하다. <span class="font-bold text-[#1a1a1a]">보톡스와 필러가 안정 궤도에 올라야 한다.</span> 기초가 불충분하면 환자가 모이지 않는다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 스킨부스터 (Skin Booster) — 세 번째 수익의 축</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 고유 영역이 아니다. 이 점을 처음부터 명확히 해둔다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">치과가 스킨부스터를 도입하는 이유는 해부학적 강점이 아니라, 보톡스와 필러로 확보한 미용 시술 역량과 환자 신뢰를 기반으로 수익 영역을 확장하기 위함이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다.</p>
     `,
   },
   {
     id: "s1-1-3-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">1. 술식 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등을 진피층에 미세주입하여 보습, 탄력, 윤기를 개선한다. 보톡스·필러와 결정적으로 다른 점은 효과 발현 시간이다. 콜라겐 생성 제품의 경우 4~6주에 걸쳐 천천히 변화한다. 이를 환자에게 미리 전달하지 않으면 불만족으로 이어진다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">내용</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">술식 시간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">20~40분(마취 포함)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">주사침</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">30~32G 극세 멀티니들. 표면마취(EMLA) 필수</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">발적 1~3일, 미세 구진 3일~1주, 일상활동 지장 없음</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 발현</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HA 즉시(보습감) vs 콜라겐형 4~6주 서서히 개선</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">지속기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1~3개월 (코스 완료 후 6개월 이상 유지 가능)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">술식 간격</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3~4주 간격 3회 1코스가 기본 프로토콜이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">금기사항</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">임산부·수유부, 술식 부위 감염·염증, 켈로이드 체질, 면역질환</td></tr>
-        </tbody>
-      </table>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 쥬베룩 1회 약 264,000원, 리쥬란 1회 약 300,000원. 보톡스의 4~5배에 달하는 건당 매출이다.</p>
     `,
   },
   {
     id: "s1-1-3-03",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">성분별 분류</h4>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">분류</th>
-            <th class="px-4 py-2 text-left font-medium">주요 성분</th>
-            <th class="px-4 py-2 text-left font-medium">작용 기전</th>
-            <th class="px-4 py-2 text-left font-medium">대표 제품</th>
-            <th class="px-4 py-2 text-left font-medium">효과 특성</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HA 즉시형</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">비교차결합 HA</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">진피 수분 공급·충전</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨바이탈 릴리즈M</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">즉시 보습감. 지속은 짧다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PN 생성형</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">폴리뉴클레오타이드</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">세포 재생·콜라겐 촉진</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리주란HB, 리주란아이</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재생 강도가 높다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PDLLA 생성형</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PDLLA + HA</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">콜라겐 생성 유도</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">쥬베덤스킨, 쥬베덤볼륨</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 발현이 느리지만 오래 간다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">복합형</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HA+PN 등</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">복합 재생</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리쥬비엘, 프로쓰일로</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제품별로 프로파일이 다르다</td></tr>
-        </tbody>
-      </table>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 물광주사 (스킨바이브/릴리이드M) :</span> 가격이 낮고 시술이 단순하며, 진입 장벽이 가장 낮다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN 기반. 환자 인지도가 가장 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임) :</span> PDLLA+HA 기반. 효과 발현이 4~6주로 느려 기대치 관리가 필수적이다.</p>
     `,
   },
   {
     id: "s1-1-3-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">3. 진입 전략 / 시장 선택</h3>
-      <p class="text-[#333] leading-relaxed mb-4">아래 조건이 충족되면 높은 성공률로 진입할 수 있다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">조건</th>
-            <th class="px-4 py-2 text-left font-medium">기준</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스 영위 정착</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">월 20회 이상 꾸준하게 운영하고 있다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러 진입 완료</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">최소 1년 4계절을 거쳤고 30케이스 이상 축적되어 있다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">미용 환자 재방문</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스와 필러 재방문이 자체적으로 존재해야 한다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">프로그램 중심으로 구성하라.</span> 1회 구매보다 3회 코스 패키지를 꾸려 놓으면 진입이 용이하다. 환자에게는 일시 비용이 가려지고 치과는 3회 방문이 확정된다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">제품을 2가지로 시작하라.</span> 쥬베덤(콜라겐 생성형)과 리주란(PN 생성형), 혹은 물광(HA 즉시형)과 쥬베덤의 조합이면 충분하다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사 1회 :</span> 판매가 약 100,000~150,000원. 건당 마진 약 70,000~100,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란 1회(2cc) :</span> 판매가 약 300,000원. 건당 마진 약 150,000~200,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 1회(2cc) :</span> 판매가 약 264,000원. 건당 마진 약 130,000~170,000원.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명의 프로그램 환자만 확보해도 400만 원 이상 매출이 발생한다. 소수 환자로도 의미 있는 매출 구조.</p>
     `,
   },
   {
     id: "s1-1-3-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">4. 시장 현황 / 가격대</h3>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">제품</th>
-            <th class="px-4 py-2 text-left font-medium">1cc당 중간값</th>
-            <th class="px-4 py-2 text-left font-medium">1회(2cc) 추산</th>
-            <th class="px-4 py-2 text-left font-medium">등급</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">쥬베덤</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">132,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 264,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중상</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리주란</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 300,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">고가</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리주비엘</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">143,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 286,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중상</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">시장 중간값은 <span class="font-bold text-[#1a1a1a]">1회(2cc) 기준 25~30만원대</span>이다. 치과 권장 가격은 25~35만원, 3회 코스로 계획한다.</p>
-    `,
-  },
-  {
-    id: "s1-1-3-06",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">7. 수익성 분석</h3>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">쥬베덤</th>
-            <th class="px-4 py-2 text-left font-medium">리주란HB</th>
-            <th class="px-4 py-2 text-left font-medium">물광(스킨바이탈)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">원가(1회 2cc)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 80,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 100,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 60,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판매가</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">270,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">300,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">200,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">건당 마진</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 190,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 200,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 140,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">마진율</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 70%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 67%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약 70%</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 진짜 힘은 1회 마진이 아니라 <span class="font-bold text-[#1a1a1a]">반복 방문</span>에서 온다. 연간 LTV 기본 코스(3회) 72~90만원, 심화(6회) 144~180만원. 보톡스 연간 LTV(24~36만원)의 4~5배다.</p>
-    `,
-  },
-  {
-    id: "s1-1-3-07",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">10. 종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 본질은 <span class="font-bold text-[#1a1a1a]">반복 방문의 구조</span>다. 3~4주 간격의 프로그램 구조, 연간 LTV 60~180만원. 보톡스·필러로 축적된 환자 신뢰와 술식 프레임이 있다면 별도의 마케팅 비용 없이 자연스럽게 붙는다. 추가 비용도 12만원 수준으로 극히 낮다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스 없이 필러를 도입하지 않듯, 보톡스와 필러 없이 스킨부스터를 도입하지 않는다. 이 순서는 원칙이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명. 그것이면 충분하다. 그 5명을 만드는 것은 외부 마케팅이 아니라, 이미 보톡스와 필러로 신뢰를 쌓은 기존 환자에게 "피부도 함께 관리해 보시겠어요?"라는 한마디다.</p>
     `,
   },
 
@@ -559,128 +434,40 @@ export const step1Data: Section[] = [
     id: "s1-1-4-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-4. 실리프팅 (Thread Lifting)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">준비된 자만의 영역</h3>
-      <p class="text-[#333] leading-relaxed mb-4">7개 분야 중 <span class="font-bold text-[#1a1a1a]">술기 난이도가 가장 높다.</span> 그럼에도 수익성이 모든 미용 시술을 압도한다. 코그 10개 1건에 건당 마진 72만원. 월 4건이면 마진 290만원 이상이다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4장. 실리프팅 (Thread Lifting) — 지붕은 기둥을 세운 뒤에 올린다</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 시술 난이도가 가장 높다. 치과의 고유 영역이 아니며, 결과 편차가 크고, 환자 기대치 관리가 어렵다. 1차 런칭 메인 시술로 절대 적합하지 않다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">그럼에도 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다.</p>
     `,
   },
   {
     id: "s1-1-4-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">1. 술기 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅(Thread Lifting)은 생분해성 봉합사를 진피 하층조직에 삽입하여 처진 조직을 물리적으로 끌어올리는 시술이다. 두 가지 메커니즘이 작동한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">물리적 리프팅:</span> 코그(cog)가 조직을 잡아 끌어올린다. 시술 직후 즉시 효과가 보인다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">콜라겐 재생:</span> 이물질 자극으로 콜라겐이 신생된다. 1~3개월에 걸쳐 피부 탄력이 점진적으로 개선된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">내용</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 시간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">30분~1시간 (부위·실 개수에 따라 달라진다)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">마취</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">국소마취 수준. 치과의 마취 기술을 직접 활용한다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부종·멍 1~2주, 일상복귀 2~4주, 최종 결과는 1~3개월 이후</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 지속</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PDO 6~9개월, PLLA 1~2년, PCL 2~3년</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">금기사항</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">임산부/수유부, 시술 부위 감염, 활동성 면역질환, 혈액응고장애, 켈로이드</td></tr>
-        </tbody>
-      </table>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">도입 전제 조건</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 + 스킨부스터 안정</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 별도 고급 교육 이수</span> : 카데바(해부 실습체) 실습 포함 전문 교육 반드시 이수.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 경험 축적</span> : 모노실부터 시작하여 최소 50케이스 이상 쌓은 후 코그실로.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 시술 주체</span> : 대표원장 직접 시술만 가능.</p>
     `,
   },
   {
     id: "s1-1-4-03",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">실의 종류 분류</h4>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">실질</th>
-            <th class="px-4 py-2 text-left font-medium">대표 제품</th>
-            <th class="px-4 py-2 text-left font-medium">효과 지속</th>
-            <th class="px-4 py-2 text-left font-medium">특징</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PDO</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">민트스, Ultra V</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">6~9개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">가장 보편적. 초기 진입에 적합하다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PLLA</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">플루이드솔리드</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1~2년</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">콜라겐 자극이 우수하다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">PCL</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">미스틱</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2~3년</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">가장 오래 지속. 경험이 필요하다</td></tr>
-        </tbody>
-      </table>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 1회 :</span> 판매가 약 1,000,000~1,500,000원. 건당 마진 약 800,000~1,300,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스(건당 마진 2~6만 원)의 20배, 필러(건당 마진 10만 원)의 10배에 달하는 건당 마진이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">다만, 이 수익은 "잘 했을 때"의 수치다. 결과 편차가 크고 기대치 관리가 어려운 시술이기 때문에, 수익성만 보고 덤비면 안 된다.</p>
     `,
   },
   {
     id: "s1-1-4-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">3. 진입 조건</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 다른 시술보다 <span class="font-bold text-[#1a1a1a]">진입 조건이 훨씬 엄격하다.</span></p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">조건</th>
-            <th class="px-4 py-2 text-left font-medium">기준</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스·필러+스킨부스터 정착</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">세 분야 모두 정상 운영 중</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">별도 고급 교육 수강</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">카데바 포함 전문 교육 필수</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 경험 축적</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">모노형부터 시작, 50케이스 이상</td></tr>
-        </tbody>
-      </table>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">진입 3단계 로드맵</h4>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">단계</th>
-            <th class="px-4 py-2 text-left font-medium">시술 범위</th>
-            <th class="px-4 py-2 text-left font-medium">기간</th>
-            <th class="px-4 py-2 text-left font-medium">핵심 목표</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1단계: 정찰 (모노형)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이마·볼·턱선 모노형 20~40개</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3~6개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">진입 감각 확보, 환자 반응 파악</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2단계: 확충 (코그형)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">코그형 리프팅 볼·턱선 4~8개</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">6~12개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리프팅 효과 검증, 결과 신뢰도 제고</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3단계: 완성 (콤비네이션)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">코그+모노+필러+보톡스 복합</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">12개월 이상</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">고객 만족도 극대화, 프리미엄 가치 입증</td></tr>
-        </tbody>
-      </table>
-    `,
-  },
-  {
-    id: "s1-1-4-05",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">7. 수익성 분석</h3>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">모노형 20개</th>
-            <th class="px-4 py-2 text-left font-medium">코그형 10개</th>
-            <th class="px-4 py-2 text-left font-medium">코그8+모노20 콤비</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재료비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~11,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~75,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~71,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">판매가</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">250,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">800,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1,000,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">건당 마진</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">239,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">725,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">929,000원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">마진율</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">96%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">91%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">93%</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시간당 매출</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~500,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~1,067,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~1,000,000원</td></tr>
-        </tbody>
-      </table>
-      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm">재료비 마진율이 90%라고 해서 "쉬운 돈"이라 착각하지 마라. 실리프팅의 진짜 비용은 재료비가 아니라 <span class="font-bold text-[#1a1a1a]">시술 시간, 교육 투자, 그리고 부작용 발생 시의 비용</span>이다.</p>
-      </div>
-    `,
-  },
-  {
-    id: "s1-1-4-06",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">10. 종합 평가</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 미용치과의 성장 무기다. 건당 마진 72만원, 시간당 매출 100만원, 재료비 마진율 91%. 수익성으로 보면 가장 강력하다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">진입을 결심했다면 순서를 지켜라. <span class="font-bold text-[#1a1a1a]">모노형 50케이스를 거쳐 코그형 진입하고, 30케이스 이후 콤비네이션 시술로 확장한다.</span> 그 과정은 최소 6개월~1년이 걸린다. 조급함은 비대칭과 합병증으로 돌아온다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 미용치과의 지붕이다. 건당 마진이 보톡스의 20배, 필러의 10배에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">충분한 교육(카데바 실습 포함), 단계적 경험 축적(모노실 50케이스+), 철저한 기대치 관리, 빈틈없는 기록. 이 네 가지를 갖추지 않은 상태에서 건당 마진에 눈이 멀어 뛰어드는 것은 권하지 않는다.</p>
     `,
   },
 
@@ -689,299 +476,147 @@ export const step1Data: Section[] = [
     id: "s1-1-5-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-5. 리프팅 장비 — HIFU·RF (Lifting Devices)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">여기서부터 투자 규모가 바뀐다</h3>
-      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비는 <span class="font-bold text-[#1a1a1a]">수천만원 단위의 선행 투자가 필요하다.</span> 의사결정의 성격이 근본적으로 바뀐다. '시술 역량'이 아니라 <span class="font-bold text-[#1a1a1a]">'투자 회수'</span>가 핵심이다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">5장. 리프팅 장비 (Lifting Devices) — 감이 아니라 숫자로 판단하라</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스는 25만 원, 필러는 50만 원이면 시작할 수 있었다. 리프팅 장비는 다르다. 수천만 원 단위의 선행 투자가 필요하다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">'있으면 좋겠다'는 감으로 도입하지 않는다. 숫자를 먼저 확인하라.</p>
     `,
   },
   {
     id: "s1-1-5-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">1. 장비 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">HIFU (고강도 집속 초음파)</span> — 초음파를 한 점에 집중시켜 SMAS층에 65~70도C의 열 응고점을 형성한다. 슈링크와 울쎄라가 대표 선수다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">RF (고주파)</span> — 고주파 전류가 조직 저항에 의해 열을 발생시켜 진피~피하지방층의 콜라겐을 수축·재생한다. 인모드가 주요 제품이다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">장비</th>
-            <th class="px-4 py-2 text-left font-medium">에너지</th>
-            <th class="px-4 py-2 text-left font-medium">장비가</th>
-            <th class="px-4 py-2 text-left font-medium">시술 단가</th>
-            <th class="px-4 py-2 text-left font-medium">리피트 주기</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">슈링크 유니버스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1,500~2,500만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">15~30만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3~6개월</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리프테라V</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">800~1,500만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8~15만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3~6개월</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">인모드 (Forma/FX)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">RF</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3,000~4,500만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">15~25만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">4~8주 (시리즈)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">울쎄라 프라임</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">HIFU</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5,000만~1억원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100~170만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">6~12개월</td></tr>
-        </tbody>
-      </table>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">장비별 투자·수익 구조</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 슈링크 유니버스 (HIFU) :</span> 장비가 1,000~2,000만 원. 시술 단가 10~15만 원. 건당 마진 약 7~12만 원. 투자 회수(월 10건) 약 12개월.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리프테라V (HIFU) :</span> 장비가 800~1,500만 원. 투자 회수(월 10건) 약 12개월.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 인모드 (RF) :</span> 장비가 3,000~4,500만 원. 투자 회수(월 10건) 약 18개월.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 울쎄라 프라임 (HIFU) :</span> 장비가 5,000만~1억 원. 초기 치과 대상이 아니다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">치과 초기 도입 권장 — 슈링크 유니버스. 투자 대비 회수 기간이 가장 짧고, 보톡스 재방문 환자에게 크로스셀이 가장 용이하다.</p>
     `,
   },
   {
     id: "s1-1-5-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">2. 도입 적합성</h3>
-      <p class="text-[#333] leading-relaxed mb-4">핵심 질문은 "어떤 장비가 좋은가"가 아니다. <span class="font-bold text-[#1a1a1a]">"치과의 상황에 어떤 장비가 맞는가"</span>다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">기준</th>
-            <th class="px-4 py-2 text-left font-medium">슈링크</th>
-            <th class="px-4 py-2 text-left font-medium">리프테라V</th>
-            <th class="px-4 py-2 text-left font-medium">인모드</th>
-            <th class="px-4 py-2 text-left font-medium">울쎄라</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">초기 투자 부담</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 높음</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">환자 인지도</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 높다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">투자 회수 기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8~16개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">6~12개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">16~30개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">12~24개월</td></tr>
-          <tr class="bg-[#fdf2f5]"><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">치과 초기 도입 적합도</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★★★★</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★★★☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★★☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★☆☆☆</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">슈링크 유니버스가 치과 초기 도입에 가장 적합한 선택지다.</span> 환자 인지도가 가장 높고, 크로스셀 용이성이 높으며, 시술 난이도가 낮다.</p>
-    `,
-  },
-  {
-    id: "s1-1-5-04",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">5. 투자 분석 / BEP</h3>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">슈링크 유니버스 BEP 시뮬레이션</h4>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">보수적</th>
-            <th class="px-4 py-2 text-left font-medium">표준</th>
-            <th class="px-4 py-2 text-left font-medium">적극적</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">장비 도입가</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2,000만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2,000만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2,000만원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">월 시술 건수</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">12건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">20건</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">월 순마진</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">112만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">192만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">320만원</td></tr>
-          <tr class="bg-[#fdf2f5]"><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">BEP (투자 회수)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">~18개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">~10개월</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">~6개월</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">핵심 변수는 <span class="font-bold text-[#1a1a1a]">"월 시술 건수"</span>다. 도입 전 반드시 기존 보톡스·필러 환자 수에서 크로스셀 전환율 10~15%를 적용하여 예상 월 슈링크 건수를 산출하라.</p>
-    `,
-  },
-  {
-    id: "s1-1-5-05",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">9. 종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비 도입은 <span class="font-bold text-[#1a1a1a]">"투자 판단"의 문제</span>다. 도입 전 반드시 다섯 가지 숫자를 확인하라. 장비가, 카트리지 단가, 기존 미용 환자 수, 예상 크로스셀 전환율, BEP.</p>
-      <p class="text-[#333] leading-relaxed mb-4">치과에 가장 현실적인 선택은 슈링크 유니버스다. 울쎄라·인모드는 미용치과가 성숙 궤도에 올라 월 미용 시술 50건 이상을 달성한 이후의 선택지다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">'있으면 좋겠다'는 기대가 아니라, '이 숫자면 된다'는 확신이 있을 때만 장비를 도입한다.</span> 계산이 답이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">이 챕터의 핵심 메시지는 처음부터 끝까지 하나다. 감이 아니라 숫자로 판단하라.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">장비가 얼마인가. 카트리지 단가가 얼마인가. 내 치과에서 월 몇 건 시술이 현실적인가. 투자 회수까지 몇 개월이 걸리는가. 이 네 가지 숫자가 도입 전에 서 있지 않으면, 수천만 원짜리 장비가 진료실 한켠에서 먼지만 쌓이는 장식품이 될 수 있다.</p>
     `,
   },
 
-  // ─── 1-6. 레이저/피부 장비 ───
+  // ─── 1-6. 레이저/피부장비 ───
   {
     id: "s1-1-6-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-6. 레이저 / 피부 장비 (Laser & Skin Devices)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 층까지 올라가지 않아도 된다</h3>
-      <p class="text-[#333] leading-relaxed mb-4">치과의 고유 영역에서 <span class="font-bold text-[#1a1a1a]">가장 먼 분야</span>다. 레이저/피부 장비는 <span class="font-bold text-[#1a1a1a]">'있으면 좋지만 없어도 되는'</span> 분야다. 보톡스·필러·스킨부스터·리프팅 장비까지 모두 안정 궤도에 올린 뒤 검토하는 마지막 카드다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">6장. 레이저 / 피부 장비 — 있으면 좋지만, 없어도 된다</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
+      <p class="text-[#333] leading-relaxed mb-8">치과의 고유 영역에서 가장 먼 분야다. 피부과의 핵심 사업 영역과 정면으로 겹치며, 치과의 메인 시술로 운영하는 것은 비현실적이다. 보조 관리 포지션으로만 접근해야 한다.</p>
     `,
   },
   {
     id: "s1-1-6-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">도입 적합성</h3>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">기준</th>
-            <th class="px-4 py-2 text-left font-medium">아쿠아필링</th>
-            <th class="px-4 py-2 text-left font-medium">LDM</th>
-            <th class="px-4 py-2 text-left font-medium">IPL</th>
-            <th class="px-4 py-2 text-left font-medium">레이저/포텐자</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">투자 부담</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 낮다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 높다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">피부과 경쟁</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮다 (보조)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮다 (보조)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매우 높다</td></tr>
-          <tr class="bg-[#fdf2f5]"><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">치과 도입 적합도</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★★★★</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★★☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★★☆☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">★☆☆☆☆</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">아쿠아필링이 치과 첫 번째 피부 장비로 가장 현실적이다.</span> 200~500만원 투자, 3~6개월 BEP. 보톡스·필러 시술 환자에게 "+3만원 관리" 제안만으로 매출이 발생한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">IPL·레이저 토닝을 메인 시술로 내세우지 않는다. 이 영역은 피부과의 본업이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">검토 순위</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 아쿠아필링기 :</span> 장비가 200~500만 원. 보톡스·필러 환자에게 +3~5만 원 관리 메뉴로 추가.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — LDM :</span> 장비가 2,000~4,000만 원. 스킨부스터와 병행.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — IPL :</span> 장비가 1,500~3,000만 원. 피부과와의 직접 경쟁이 불가피.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 4순위 — 포텐자 :</span> 장비가 3,000~5,000만 원. 치과에서 최우선으로 검토할 장비는 아니다.</p>
     `,
   },
   {
     id: "s1-1-6-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">레이저/피부 장비는 미용치과의 <span class="font-bold text-[#1a1a1a]">마지막 확장 카드</span>다. 없어도 미용치과는 충분히 운영된다. 도입한다면 아쿠아필링이 유일한 현실적 시작점이다. 300만원 투자, 월 20건 추가 시술, 6개월 BEP.</p>
-      <p class="text-[#333] leading-relaxed mb-4">"있으면 좋지만 없어도 된다." 이 판단이 곧 전략이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">'있으면 좋지만 없어도 되는' 분야다. 치과의 미용시술 라인업에서 마지막에 올라가는 선반이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">이것을 넘어서는 기대를 갖고 수천만 원짜리 IPL이나 포텐자를 도입한다면, 그것은 치과의 미용시술 확장이 아니라 피부과와의 정면 경쟁이 된다. 그리고 그 경쟁에서 치과가 우위를 점하기는 어렵다.</p>
     `,
   },
 
-  // ─── 1-7. 수가 체계 설계 ───
+  // ─── 2장. 수가 체계 설계 ───
   {
     id: "s1-1-7-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-7. 미용치과 수가 체계 설계</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">흩어진 메뉴를 하나의 체계로 엮어라</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">6개 시술을 관통하는 하나의 가격 체계</span>가 없으면, 환자는 혼란스러워하고 원장은 수가를 그때그때 감으로 정하게 된다. 감으로 정한 가격은 무너지기 쉽다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2장. 미용치과 수가 체계 설계 — 재료비만 보면 마진을 착각한다</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">수가 설정의 3단계</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ A단계. 원가 파악 :</span> 재료비 + 소모품. 보톡스 사각턱 50U 기준 재료비 약 2.5만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ B단계. 시간 원가 반영 :</span> 시간당 보험 진료 매출이 30만 원인 원장이 15분을 보톡스에 투입하면, 시간 원가는 7.5만 원이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ C단계. 마진 설계 :</span> A(재료비) + B(시간 원가) = 실질 원가. 여기에 목표 마진율을 곱해 수가를 도출한다.</p>
     `,
   },
   {
     id: "s1-1-7-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">수가 설정의 3단계</h3>
-      <p class="text-[#333] leading-relaxed mb-4">수가를 정할 때 가장 흔한 실수는 재료비만 보고 마진을 계산하는 것이다. 원장의 시간 원가를 빼면 실질 마진은 예상보다 20~30% 낮아진다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">단계</th>
-            <th class="px-4 py-2 text-left font-medium">내용</th>
-            <th class="px-4 py-2 text-left font-medium">예시 (보톡스 사각턱 50U)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">A. 원가 파악</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재료비 + 소모품을 합산한다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">재료비 2.5만원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">B. 시간 원가 반영</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">원장의 기회비용(시간당 보험 진료 매출)을 계산한다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">15분 x 시간당 30만원 = 7.5만원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">C. 마진 설계</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실질 원가에 목표 마진율을 적용한다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실질 원가 10만원 → 목표 마진 50% → 수가 20만원</td></tr>
-        </tbody>
-      </table>
-    `,
-  },
-  {
-    id: "s1-1-7-03",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">시술 간 가격 위계</h3>
-      <p class="text-[#333] leading-relaxed mb-4">미용치과에서 제공하는 시술들에는 환자 인식 상의 가격 위계가 존재한다. 이 위계를 무시하면 환자의 혼란이 발생한다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm"><span class="font-bold text-[#1a1a1a]">낮음 → 높음:</span><br/>LDM/LED &lt; 보톡스 = IPL/토닝 &lt; 스킨부스터 &lt; 필러 &lt; 슈링크/인모드 &lt; 실리프팅 &lt; 울쎄라</p>
-      </div>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스가 필러보다 비싸면 환자가 의아해한다. 스킨부스터가 실리프팅보다 비싸면 체계가 무너진다. 이 위계는 환자의 상식에 기반한 것이므로, 역전시키지 마라.</p>
-    `,
-  },
-  {
-    id: "s1-1-7-04",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">패키지 설계 원칙</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">할인율은 10~20% 범위를 유지한다.</span> 30% 이상이면 개별 시술의 가치가 훼손된다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">업셀 동선을 설계한다.</span> 엔트리(보톡스+LDM) → 코어(보톡스+필러+스킨부스터) → 프리미엄(리프팅+실+스킨부스터). 환자가 자연스럽게 단계를 밟도록 경로를 만든다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">선불 패키지의 환불 원칙을 명확히 한다.</span> 소비자분쟁해결기준에 따라 미사용분 환불이 원칙이다. '환불 불가'는 불공정 약관이다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 보톡스 5만원 + LDM 3만원 = 개별 합산 8만원인 세트를 패키지 7만원(12% 할인)으로 설정한다. 엔트리 패키지로 미용 첫 경험 환자를 유입한 뒤, 3회차 방문 시 필러·스킨부스터로 코어 패키지 전환을 제안한다.</p>
-      </div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술 간 가격 위계</h3>
+      <p class="text-[#333] leading-relaxed mb-6">낮음에서 높음 순서로: LDM/LED → 보톡스 = IPL/토닝 → 스킨부스터 → 필러 → 슈링크/인모드 → 실리프팅 → 울쎄라.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">패키지 설계 원칙</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 할인율 10~20% 범위 :</span> 30% 이상의 할인은 개별 시술의 가치를 훼손한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 업셀 동선 설계 :</span> 엔트리(보톡스 + LDM) → 코어(보톡스 + 필러 + 스킨부스터) → 프리미엄(리프팅 + 실 + 스킨부스터).</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 선불 패키지 환불 :</span> 소비자분쟁해결기준에 따라 미사용분 환불이 원칙이다. '환불 불가'는 불공정 약관에 해당한다.</p>
     `,
   },
 
-  // ─── 1-8. 수익 구조 분석 ───
+  // ─── 3장. 수익 구조 분석 + 서머리 + 체크리스트 ───
   {
     id: "s1-1-8-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-8. 미용치과 수익 구조 분석</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">숫자가 전략을 증명한다</h3>
-      <p class="text-[#333] leading-relaxed mb-4">"보톡스 마진율이 73%라는데, 그래서 월에 얼마를 벌 수 있는가?" 이 질문에 답하지 못하면 도입 결정을 내릴 수 없다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 미용치과 수익 구조 분석 — 숫자로 보는 전체 그림</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술별 수익 구조 매트릭스</h3>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스 (사각턱 50U) : 시술 단가 80,000원, 재료비 22,000원, 마진율 73%.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 필러 (입술 1cc) : 시술 단가 150,000원, 재료비 50,000원, 마진율 67%.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터 (리쥬란 2cc) : 시술 단가 290,000원, 재료비 100,000원, 마진율 66%.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 슈링크 (전안면) : 시술 단가 130,000원, 재료비 30,000원, 마진율 77%.</p>
+      <p class="text-[#333] leading-relaxed mb-8">▶ 실리프팅 (PLLA 10줄) : 시술 단가 690,000원, 재료비 100,000원, 마진율 86%.</p>
     `,
   },
   {
     id: "s1-1-8-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">시술별 수익 구조 매트릭스</h3>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">시술</th>
-            <th class="px-4 py-2 text-left font-medium">시술 단가</th>
-            <th class="px-4 py-2 text-left font-medium">재료비</th>
-            <th class="px-4 py-2 text-left font-medium">마진율</th>
-            <th class="px-4 py-2 text-left font-medium">시간당 생산성</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스 (사각턱)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">80,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">22,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">73%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다 (10분)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러 (입술 1cc)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">50,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">67%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간 (30분)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터 (리쥬란)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">290,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">66%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간 (40분)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">슈링크 (전안면)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">130,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">30,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">77%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간 (30분)</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅 (PLLA 10줄)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">690,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">86%</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮다 (60분)</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4 text-sm">※ 마진율은 재료비만 차감한 수치다. 인건비·임대료·장비 감가상각은 미포함이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">월 매출 시뮬레이션 (월 60건 가정)</h3>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스 25건 : 매출 200만 원, 순이익 145만 원 (비중 28%).</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 필러 15건 : 매출 225만 원, 순이익 150만 원 (비중 29%).</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터 10건 : 매출 290만 원, 순이익 190만 원 (비중 24%).</p>
+      <p class="text-[#333] leading-relaxed mb-4">▶ 슈링크 10건 : 매출 130만 원, 순이익 100만 원 (비중 19%).</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 월 60건, 매출 845만 원, 순이익 585만 원.</p>
     `,
   },
   {
     id: "s1-1-8-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">숨은 비용 — 놓치기 쉬운 네 가지</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">장비 감가상각이다.</span> HIFU·레이저·RF 등 고가 장비의 구매 비용을 사용 기간에 걸쳐 나누어 비용으로 반영해야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">원장 시간 원가다.</span> 미용 시술 시간은 보험 진료를 못 하는 시간이다. 이 기회비용을 계산에 넣지 않으면 마진이 부풀려 보인다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">마케팅비다.</span> 신환 유입 비용(CPA)을 고려해야 한다. 기존 환자 크로스셀은 CPA가 제로지만, 외부 신환 유치는 건당 수만원이 든다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">재고 폐기 비용이다.</span> 보톡스는 개봉 후 4시간이 한도다. 필러 미사용분도 폐기 대상이다. 이 손실을 줄이는 것이 실질 마진을 지키는 핵심이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6">STEP 1 서머리</h3>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 치과 미용시술은 보톡스 → 필러 → 스킨부스터 → (실리프팅) → (장비 시술) 순서로 도입한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스와 필러는 치과의 해부학적 강점이 직접 발휘되는 고유·인접 영역이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스는 미끼이자 입구다. 단독 매출에 기대하지 않는다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 필러는 안전 부위(입술·턱끝)부터 단계적으로 확장한다. 히알루로니다제 필수 구비.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터·실리프팅의 도입 전제 조건을 이해했다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 실리프팅은 카데바 실습 포함 전문 교육, 모노실 50케이스 이상 축적이 전제 조건이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 장비 시술은 투자 회수 계산 후 도입한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 수가 설계 시 재료비뿐 아니라 시간 원가를 반영해야 실질 마진이 보인다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">▶ 시술 간 가격 위계를 유지하고, 패키지로 업셀 동선을 설계한다.</p>
     `,
   },
   {
     id: "s1-1-8-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">월 매출 시뮬레이션</h3>
-      <p class="text-[#333] leading-relaxed mb-4">월 60건을 가정한 시뮬레이션이다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">시술</th>
-            <th class="px-4 py-2 text-left font-medium">건수</th>
-            <th class="px-4 py-2 text-left font-medium">매출</th>
-            <th class="px-4 py-2 text-left font-medium">순이익</th>
-            <th class="px-4 py-2 text-left font-medium">비중</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">25건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">200만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">145만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">28%</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">15건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">225만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">150만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">29%</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">10건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">290만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">190만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">24%</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">슈링크</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">10건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">130만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">19%</td></tr>
-          <tr class="bg-[#fdf2f5]"><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">합계</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">60건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">845만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">585만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]"></td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">월 60건으로 순이익 585만원이다. 보톡스와 필러가 전체 순이익의 약 57%를 차지한다. 이 두 시술이 미용치과 수익의 핵심 기둥이다.</p>
-    `,
-  },
-  {
-    id: "s1-1-8-05",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">치과 미용시술은 보톡스 → 필러 → 스킨부스터 → (실리프팅) → (장비 시술) 순서로 도입한다. 이 순서를 건너뛰지 마라.</p>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스와 필러는 치과의 해부학적 강점이 직접 발휘되는 영역이다. 보톡스는 입구이자 미끼다. 단독 매출에 기대하지 않는다. 뒤에 무엇을 연결할 것인가를 먼저 설계한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">장비 시술은 투자 회수 계산 후 도입한다. 수가 설계 시 재료비뿐 아니라 시간 원가를 반영해야 실질 마진이 보인다.</p>
-    `,
-  },
-  {
-    id: "s1-1-8-06",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">체크리스트 — 이 STEP을 완료했다면 아래를 확인하라</h3>
-      <ul class="list-disc pl-6 mb-4 space-y-1 text-[#333]">
-        <li>6개 분야의 도입 순서와 치과 영역 구분을 이해했다</li>
-        <li>보톡스 루트 A/B 중 자기 치과에 적합한 방향을 판단했다</li>
-        <li>필러 도입 시 1단계(입술/턱끝)부터 시작하는 것이 왜 중요한지 안다</li>
-        <li>히알루로니다제의 필수 구비 이유와 응급 프로토콜을 숙지했다</li>
-        <li>스킨부스터·실리프팅의 도입 전제 조건을 이해했다</li>
-        <li>장비 도입 시 BEP 시뮬레이션의 필요성을 인지했다</li>
-        <li>수가 설계 3단계(원가 파악→시간 원가→마진 설계)를 적용할 수 있다</li>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">체크리스트 — 이 STEP을 완료했다면 아래를 확인하라</h3>
+      <ul class="space-y-3 mb-8">
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">6개 분야의 도입 순서와 치과 영역 구분을 이해했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">보톡스 루트 A/B 중 자기 치과에 적합한 방향을 판단했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">필러 도입 시 1단계(입술/턱끝)부터 시작하는 것이 왜 중요한지 알고 있다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">히알루로니다제의 필수 구비 이유와 혈관폐색 응급 프로토콜(HDPH)을 숙지했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">스킨부스터·실리프팅의 도입 전제 조건을 이해했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">장비 도입 시 손익분기점 시뮬레이션의 필요성을 인지했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">수가 설계 3단계(원가 파악 → 시간 원가 → 마진 설계)를 적용할 수 있다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">시술 간 가격 위계와 패키지 설계 원칙을 파악했다</span></li>
+        <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">월 60건 가정 시 매출 845만 원, 순이익 585만 원 구조를 이해했다</span></li>
       </ul>
     `,
   },
