@@ -5,41 +5,35 @@ export const step1Data: Section[] = [
   {
     id: "s1-intro-01",
     html: `
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">STEP 1. 도입 방향 설정</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">어떤 시술을, 어떤 순서로 시작할 것인가</h3>
-      <p class="text-[#333] leading-relaxed mb-4">STEP 0이 법적 근거를 확인하는 단계였다면, STEP 1부터는 실행이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">미용치과 도입을 결심한 원장 앞에 놓인 가장 현실적인 질문은 단 하나다. <span class="font-bold text-[#1a1a1a]">"무엇부터 시작할 것인가."</span> 대답부터 하겠다. 보톡스다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">이유는 간단하다. 도입 난이도가 가장 낮고, 치과와의 해부학적 연결점이 가장 강하며, 기존 환자에게 가장 자연스럽게 제안할 수 있는 시술이기 때문이다. 보톡스 하나를 완벽하게 안착시킨 뒤 필러로 확장하고, 스킨부스터로 재방문을 구조화하며, 리프팅과 장비 시술로 포트폴리오를 완성해 나간다. 건물을 올리는 순서와 같다. 기초 없이 2층을 올릴 수는 없다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">각 챕터는 동일한 구조(시술 개요 → 치과 연결점 → 도입 전략 → 시장 가격 → 제품·장비 → 난이도·교육 → 수익성 → 준비사항 → 유의사항 → 종합 정리)로 구성했다. 관심 있는 시술부터 펼쳐 봐도 무방하다. 장비 시술(1-5, 1-6)은 투자 판단이 핵심이므로 장비 도입 프레임으로 별도 구성했다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">시술별 분석을 마친 뒤, 1-7에서 전체 수가 체계를 설계하고 1-8에서 수익 구조를 종합한다. 나무 한 그루씩 살피고, 마지막에 숲 전체를 조망하는 것이 STEP 1의 목표다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">STEP 1. 도입 방향 설정 — 어떤 시술을, 어떻게 시작할 것인가</h2>
+      <p class="text-[#C4929B] text-sm font-medium tracking-wide mb-6">보톡스 · 필러 · 스킨부스터 · 실리프팅 · 리프팅장비 · 레이저/피부장비</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">도입</h3>
+      <p class="text-[#333] leading-relaxed mb-4">STEP 0에서 법적 토대를 완벽하게 다졌다. 이제부터는 실행이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">이 챕터는 치과에서 도입할 수 있는 6개 미용시술 분야를 하나하나 해부한다. 보톡스, 필러, 스킨부스터, 실리프팅, 리프팅장비, 레이저/피부장비 — 이 여섯 가지 분야는 치과와의 영역적 거리, 시술 난이도, 투자 규모, 수익 구조가 전부 다르다. 도입 순서와 우선순위 역시 하나하나 다르다. 같은 '미용시술'이라는 이름 아래 묶여 있지만, 각각의 성격은 완전히 다른 사업이라고 봐야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">구성 원칙은 명확하다. "왜 이 시술인가"를 먼저, "어떻게 시작하는가"를 그 다음에 배치했다. 이유 없는 실행은 오래가지 못하기 때문이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">6개 분야는 모두 동일한 10개 섹션 구조로 구성되어 있어, 분야 간 비교가 즉시 가능하다.</p>
+      <p class="text-[#333] leading-relaxed mb-4 italic text-sm">1. 시술 개요 / 2. 치과와의 연결점 / 3. 도입 전략 포지션 / 4. 시장 현황·가격대 / 5. 제품·장비 가이드 / 6. 도입 난이도·교육 / 7. 수익성 분석 / 8. 도입 시 준비사항 / 9. 유의사항·사고대응 / 10. 종합 정리</p>
     `,
   },
   {
     id: "s1-intro-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">도입 순서와 치과 영역 구분</h3>
-      <p class="text-[#333] leading-relaxed mb-4">치과 미용시술은 치과 고유 영역과의 거리에 따라 도입 순서가 달라진다. 아래 표가 로드맵의 전체 그림이다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">순서</th>
-            <th class="px-4 py-2 text-left font-medium">시술</th>
-            <th class="px-4 py-2 text-left font-medium">치과 연결성</th>
-            <th class="px-4 py-2 text-left font-medium">도입 난이도</th>
-            <th class="px-4 py-2 text-left font-medium">포지션</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★★★★★</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">핵심 시술</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">필러</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★★★★☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">핵심 시술</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">3순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">스킨부스터</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★★☆☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">영역 확장</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">4순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">실리프팅</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★★☆☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높음</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">고수익 확장</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">5순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">리프팅 장비 (HIFU·RF)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★★☆☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮음 (장비 의존)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">투자형 확장</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">6순위</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">레이저/피부 장비</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">★☆☆☆☆</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">보조 관리</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스와 필러는 치과의 해부학적 전문성이 직접 경쟁력이 되는 영역이다. 이 두 시술이 안정 궤도에 오른 뒤에야 나머지 확장이 의미를 가진다. 순서를 건너뛰면 기초 없이 건물을 올리는 꼴이다. 반드시 밟아야 할 계단이 있다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">도입 순서와 치과 영역 구분</h3>
+      <p class="text-[#333] leading-relaxed mb-6">6개 분야를 어떤 순서로 도입할 것인가. 원칙은 단순하다. 치과의 해부학적 강점이 가장 직접적으로 발휘되는 분야부터 교두보를 확보하고, 그 위에서 확장해 나가는 것이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 1순위. 보톡스 — 치과의 고유 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">교근과 저작근은 치과의사가 매일 다루는 해부학적 영토 한복판이다. 초기 투자는 약 25만 원 수준. 도입 난이도가 가장 낮다. 망설일 이유가 없는 0순위 출발점이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 2순위. 필러 — 치과의 인접 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">입술과 턱끝은 치과 치료의 결과물과 직접 맞닿는 하안면부다. 초기 투자는 약 50만 원 수준. 도입 난이도는 중간. 보톡스로 쌓은 신뢰 위에 자연스럽게 올릴 수 있는 2단계 확장이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 3순위. 스킨부스터 — 확장 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">초기 투자 55~110만 원. 도입 난이도 낮음에서 중간. 피부 개선이라는 새로운 가치를 환자에게 제안하는 분기점이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 4순위. 실리프팅 — 확장 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">초기 투자 35~90만 원. 도입 난이도는 높음. 침습성이 깊어 원장의 숙련도가 반드시 뒷받침되어야 한다. 해부학적 이해 없이 뛰어들어서는 안 되는 분야다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 5순위. 리프팅 장비 — 확장 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">초기 투자는 1,000만 원에서 최대 1억 원까지. 장비 투자 규모가 크기 때문에 ROI 계산이 선행되어야 한다. 도입 난이도 중간.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">▶ 6순위. 레이저/피부장비 — 확장 영역이다.</h4>
+      <p class="text-[#333] leading-relaxed mb-4">초기 투자 200만 원에서 5,000만 원. 도입 난이도 낮음에서 중간. 스펙트럼이 넓어 치과의 규모와 전략에 따라 선택의 폭이 가장 다양한 분야다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">명심해야 한다. 보톡스와 필러는 치과의 해부학적 강점이 직접 발휘되는 고유·인접 영역이다. 3순위 이하는 사업적 확장이다. 보톡스와 필러가 안정적으로 안착한 뒤에 확장하는 것이 원칙이다. 순서를 건너뛰는 것은 기초 공사 없이 2층을 올리는 것과 다르지 않다.</p>
     `,
   },
   {
