@@ -61,183 +61,170 @@ export const step1Data: Section[] = [
     id: "s1-1-1-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1-1. 보톡스 (Botulinum Toxin)</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">미용치과의 첫 번째 문을 열어라</h3>
-      <p class="text-[#333] leading-relaxed mb-4">미용치과의 시작은 보톡스다. 7개 분야 중 도입 난이도가 가장 낮고, 치과와의 해부학적 연결점이 가장 강하다. 환자가 치과에서 미용을 경험하는 첫 접점이자, 이후 모든 확장의 토대가 되는 시술이다. 이 토대 없이는 위에 아무것도 쌓을 수 없다.</p>
+      <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">1장. 보톡스 (Botulinum Toxin) — 미용치과의 가장 확실한 첫 발</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
+      <p class="text-[#333] leading-relaxed mb-8">보톡스는 6개 분야 중 도입 난이도가 가장 낮고, 치과와의 해부학적 연결점이 가장 강하다. 미용시술의 입구이자, 환자가 치과에서 미용을 경험하는 첫 접점이다. 여기서 쌓은 신뢰가 필러, 스킨부스터, 리프팅으로 이어지는 모든 확장의 토양이 된다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스(보툴리눔 톡신)는 클로스트리디움 보툴리눔균에서 추출한 A형 신경독소를 정제하여 근육에 미량 주입하는 시술이다. 신경 말단에서 아세틸콜린 분비를 차단하여 근육 활동을 일시적으로 억제한다. 주름 개선, 근육 축소, 다한증 치료 등에 활용되며, 전 세계적으로 가장 많이 시행되는 비수술 미용 시술이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위당 5~15분. 다부위 동시 시술 시 30분 이내.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 31G(0.26mm) 바늘 사용. 대부분 마취 불필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 일상 복귀. 미세 멍은 1~3일 내 소실.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 2~3일부터 서서히 나타나며, 최대 효과는 1~2주 후.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 신경근 질환, 아미노글리코사이드 항생제 복용 중.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">희석 방법</h4>
+      <p class="text-[#333] leading-relaxed mb-8">동결건조(분말형) 보톡스는 시술 전 생리식염수(0.9% NaCl)로 희석해야 한다. 희석 비율에 따라 1회 주사량이 달라지므로 정확한 희석이 핵심이다. 이노톡스(액상형)는 별도 희석이 불필요하다. 개봉 즉시 주사 가능하여 초기 도입 시 희석 오류를 원천 차단할 수 있다.</p>
     `,
   },
   {
     id: "s1-1-1-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">"사각턱 보톡스 맞을 수 있나요?" 환자의 이 한마디가 미용치과의 문을 여는 신호다. 보톡스(보툴리눔 톡신)는 클로스트리디움 보툴리눔균에서 추출한 A형 신경독소를 정제하여 근육에 미량 주입하는 시술이다. 신경 말단에서 아세틸콜린 분비를 차단하여 근육 활동을 일시적으로 억제한다. 전 세계적으로 가장 많이 시행되는 비수술 미용 시술이며, 치과의 첫 번째 시술로 가장 적합하다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">상담의 기본이 되는 정보를 정확히 숙지해야 한다. 환자가 묻기 전에 설명할 수 있어야 신뢰가 형성된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">항목</th>
-            <th class="px-4 py-2 text-left font-medium">내용</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 시간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">부위당 5~15분이다. 다부위 동시 시술 시 30분 이내에 끝난다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">통증</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">31G(0.26mm) 바늘을 사용한다. 대부분 마취가 필요 없다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">회복기간</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">시술 직후 일상 복귀가 가능하다. 미세 멍은 1~3일 내 소실된다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">효과 발현</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2~3일부터 서서히 나타난다. 최대 효과는 1~2주 후에 완성된다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">금기사항</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">임산부/수유부, 신경근 질환, 아미노글리코사이드 항생제 복용 중</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">부위당 5~15분이라는 시술 시간에 주목하라. 이 짧은 시간이 치과의 유닛 회전율과 맞물려 생산성의 핵심 엔진이 된다. 점심시간 전 10분, 치료 대기 15분 — 그 틈새에 보톡스 한 건이 들어간다. 빠르고, 안전하고, 환자 만족도가 높다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스는 6개 분야 중 치과와의 연결점이 가장 강하다. 이것은 마케팅적 수사가 아니라 해부학적 사실이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">주요 시술 대상인 교근, 측두근, 구강 주변 근육군은 치과의사가 학부 교육과 임상을 통해 가장 깊이 이해하는 영역이다. 피부과나 성형외과가 교과서에서 배운 것을, 치과의사는 매일 손끝으로 만지며 살아온 근육들이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">치과의사의 해부학적 우위</h4>
+      <p class="text-[#333] leading-relaxed mb-4">치과의사는 삼차신경(V)과 안면신경(VII)의 분포를 가장 정밀하게 학습한 의료인이다. 보톡스 시술에서 이 전문성이 직접적인 무기가 되는 근육들을 짚어본다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 교근(Masseter)</span> — 사각턱 보톡스의 핵심 타깃이다. 치과의사가 매일 촉진하는 바로 그 근육이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 측두근(Temporalis)</span> — 이갈이·이악물기 치료의 핵심. 교합 진단 시 반드시 평가하는 근육이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 구각하제근(DAO)</span> — 입꼬리 보톡스의 타깃. 잇몸 성형과 연계되는 영역이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 이근(Mentalis)</span> — 턱끝 보톡스의 타깃. 하악 전치부 시술과 바로 인접해 있다.</p>
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
+        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시 :</span> 교정 완료 환자에게 이렇게 제안한다. "교정으로 치아는 정리됐는데, 교근이 발달해서 턱라인이 아직 각져 보입니다. 사각턱 보톡스로 턱라인을 다듬으면 교정 효과가 훨씬 살아납니다." 이런 제안은 피부과에서는 구조적으로 불가능하다.</p>
+      </div>
     `,
   },
   {
     id: "s1-1-1-03",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">희석 방법</h4>
-      <p class="text-[#333] leading-relaxed mb-4">동결건조(분말형) 보톡스는 시술 전 생리식염수(0.9% NaCl)로 희석해야 한다. 희석 비율에 따라 1회 주사량이 달라지므로 정확한 희석이 필수다. 이노톡스(액상형)는 별도 희석이 필요 없다. 개봉 즉시 주사 가능하여 초기 도입 시 희석 오류를 방지할 수 있다. 레시피를 아직 외우지 못한 요리사에게는, 이미 계량된 재료가 안전한 출발점이 된다.</p>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-6">보톡스 도입에는 크게 두 가지 루트가 있다. 치과가 위치한 지역, 기존 환자 특성, 원장의 경영 철학에 따라 적합한 방향이 달라진다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">루트 A : 저가형 (볼륨 전략)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 가격대 :</span> 사각턱 50U 기준 2~5만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장점 :</span> 초기 환자 모집이 빠르다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 리스크 :</span> 피부과 공장형과 가격 경쟁에 말려들 수 있다. 치과 브랜드가 '저가 미용'으로 각인되면 복원이 어렵다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">루트 B : 프리미엄형 (가치 전략)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 가격대 :</span> 사각턱 50U 기준 7~12만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장점 :</span> 치과 브랜드가 유지된다. 건당 마진이 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 리스크 :</span> 초기 환자 모집이 느리다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">두 루트의 구조적 차이를 숫자로 보면 명확하다. 월 300만 원 마진을 달성하려면, 저가형은 약 162건(하루 7건 이상)이 필요하고, 프리미엄형은 약 52건(하루 2~3건)이면 충분하다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">보톡스가 치과에서 수행하는 역할 — 공통 전략</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">첫째, 미용 시술의 입구다.</span> 환자가 가장 부담 없이 시작하는 시술이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">둘째, 기존 환자 전환이다.</span> 교정, 보철, 턱관절 치료 중인 기존 환자에게 자연스럽게 연결하는 크로스셀이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">셋째, 재방문 주기 단축이다.</span> 효과 지속 기간이 3~6개월이므로, 재시술 내원이 치과 정기 검진 주기와 자연스럽게 겹친다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">명심해야 한다. 저가형이든 프리미엄형이든, 보톡스 단독 매출에 기대를 걸어서는 안 된다. 보톡스 뒤에 무엇을 연결할 것인가를 먼저 설계한 후 보톡스 가격을 정하는 것이 순서다.</p>
     `,
   },
   {
     id: "s1-1-1-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">2. 치과와의 연결점</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스는 7개 분야 중 치과와의 연결점이 <span class="font-bold text-[#1a1a1a]">가장 강하다.</span> 이것은 단순한 장점이 아니라, 치과가 이 시장에서 당당히 서 있을 수 있는 근본적인 이유다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">치과의사는 삼차신경(V)과 안면신경(VII)의 분포를 가장 정밀하게 학습한 의료인이다. 주요 시술 대상인 교근, 측두근, 구강 주변 근육군은 치과의사가 학부 교육과 임상을 통해 매일 다루는 영역이다. 이 해부학적 지식이 보톡스에서 그대로 경쟁력이 된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">근육/구조물</th>
-            <th class="px-4 py-2 text-left font-medium">보톡스 적용</th>
-            <th class="px-4 py-2 text-left font-medium">치과의사의 강점</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">교근(Masseter)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사각턱 보톡스 타깃</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">매일 촉진하는 근육이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">측두근(Temporalis)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이갈이/이악물기 치료</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">교합 진단 시 반드시 평가하는 근육이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">구각하제근(DAO)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">입꼬리 보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">잇몸 성형 연계 영역이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">이근(Mentalis)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">턱끝 보톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">하악 전치부 시술 인접 영역이다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">피부과 의사에게 교근은 해부학 교과서 속 그림이다. 치과의사에게 교근은 매일 손으로 만지는 근육이다. 같은 지도를 갖고 있어도, 직접 걸어본 사람과 위성사진만 본 사람은 다르다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm italic"><span class="font-bold text-[#1a1a1a]">실전 시나리오:</span> 교정 완료 환자에게 "교정으로 치아는 정리됐는데, 교근이 발달해서 턱라인이 아직 각져 보이네요. 사각턱 보톡스로 턱라인을 다듬으면 교정 효과가 훨씬 살아납니다." 이런 제안은 피부과에서는 구조적으로 불가능하다. 치과의 치료 맥락 위에서만 성립하는 이야기다.</p>
-      </div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-6">아래 데이터는 2026년 상반기 시장 현황을 바탕으로, 국내 주요 미용시술 비교 플랫폼 약 12,000건의 가격 데이터에서 보톡스 카테고리를 정제한 결과다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 포지션맵 (사각턱 50U 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 공장형 :</span> 8,900~25,000원. 미끼 가격이다. 원가 이하. 절대 따라가지 않는다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 일반 피부과 :</span> 40,000~75,000원. 중소 피부과의 정상가 구간이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프리미엄 :</span> 100,000~150,000원. 수입 제품, 프리미엄 클리닉의 가격대다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 치과 권장 :</span> 50,000~100,000원. 일반 피부과 상단에서 프리미엄 하단 사이.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 원칙</h4>
+      <p class="text-[#333] leading-relaxed mb-4">최소 2단 가격제를 운영하라. 국내형과 프리미엄형으로 2단계를 설정하면, 환자의 반응이 '가격 불만'에서 '비교 판단'으로 전환된다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">공개가와 정상가를 분리하라. 런칭 할인은 정상가 대비 8~12% 수준만 권장한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">할인보다 포함 가치를 설계하라. 촬영, 체크, 리터치 정책을 가격에 포함시켜 가격의 이유를 만든다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">리터치 정책을 명시하라. 리터치 포함 여부를 가격표에 명확히 구분해 두어야 환자와의 불필요한 마찰을 원천 차단할 수 있다.</p>
     `,
   },
   {
     id: "s1-1-1-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">3. 도입 전략 / 포지션</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스 도입에는 두 가지 루트가 있다. 치과가 위치한 지역, 기존 환자 특성, 원장의 경영 철학에 따라 적합한 방향이 달라진다. 어떤 전략을 택하든, 핵심은 보톡스 뒤에 무엇을 연결할 것인가를 먼저 설계하는 것이다.</p>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">루트 A: 저가형 (볼륨 전략)</h4>
-      <p class="text-[#333] leading-relaxed mb-4">저가 국산 제품(뉴럭스, 리즈톡스 등)으로 낮은 가격대를 설정하고, 환자 수를 빠르게 확보하는 전략이다. 사각턱 50U 기준 2~5만원. 문을 넓게 열어 사람을 많이 들이는 방식이지만, 피부과 공장형과 가격 경쟁에 휘말릴 위험이 있다.</p>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">루트 B: 프리미엄형 (가치 전략)</h4>
-      <p class="text-[#333] leading-relaxed mb-4">150kDa 정제형 제품(코어톡스, 제오민)을 사용하고, "치과니까 더 정밀하다"는 가치를 판매하는 전략이다. 사각턱 50U 기준 7~12만원. 문은 좁지만 들어온 사람이 오래 머문다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">비교 항목</th>
-            <th class="px-4 py-2 text-left font-medium">루트 A (저가형)</th>
-            <th class="px-4 py-2 text-left font-medium">루트 B (프리미엄형)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">사각턱 50U 가격</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">2~5만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">7~12만원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제품</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">뉴럭스, 리즈톡스 등</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">코어톡스, 제오민 등</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">건당 마진</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">1.5~2.5만원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">4~8만원</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">월 300만원 마진 필요 건수</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~150건</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~50건</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">치과 정체성</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">약화 위험이 있다</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">유지된다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">루트 B로 월 300만원 마진을 내려면 50건이면 된다. 루트 A는 150건이 필요하다. 같은 목적지에 도달하는 경로가 다르다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품 비교의 핵심 — 내성(면역원성)</h4>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스는 반복 시술이 전제되는 시술이다. 따라서 제품 선택에서 가장 먼저 따져야 할 기준은 가격이 아니라 내성(면역원성)이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 일반형 (뉴럭스, 리즈톡스 등) :</span> 순수 독소 + 복합단백질 + 비활성 독소 모두 포함. 내성 위험 높음.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코어톡스 :</span> 복합단백질 제거. 비활성 독소 잔류. 내성 위험 중간.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 제오민 :</span> 복합단백질 제거 + 비활성 독소 제거. 내성 위험 가장 낮음.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">루트별 추천 제품</h4>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">루트 A (저가형)</span></p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 1순위 — 뉴럭스 100U (23,000원) : 100U로 사각턱 2명 시술 가능. 1인당 재료비 11,500원.</p>
+      <p class="text-[#333] leading-relaxed mb-4">▶ 2순위 — 리즈톡스 50U (24,000원) : 소용량으로 재고 부담이 적다.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">루트 B (프리미엄형)</span></p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 1순위 — 코어톡스 100U (44,000원) : 내성 위험 낮음. 1인당 재료비 22,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 2순위 — 이노톡스 50U/100U (29,900원/43,900원) : 국내 유일 액상형. 희석 오류 없음.</p>
+      <p class="text-[#333] leading-relaxed mb-6">▶ 프리미엄 강화 — 제오민 50U : 완전정제형. 내성이 가장 낮다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 주사기 : 1cc 인슐린 시린지 (31G, 8mm). ~8,900원/100개.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 냉장보관 : 2~8°C. 기존 치과 약품 냉장고 활용. 추가 비용 없음.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 희석용 식염수 : 0.9% 생리식염수. 액상형 사용 시 불필요.</p>
+      <p class="text-[#333] leading-relaxed mb-8">▶ 표면마취 : EMLA 크림. 선택사항. 비용 미미.</p>
     `,
   },
   {
     id: "s1-1-1-06",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">공통 전략: 보톡스의 역할</h4>
-      <p class="text-[#333] leading-relaxed mb-4">어느 루트를 선택하든, 보톡스가 치과에서 수행하는 역할은 동일하다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">미용 시술의 입구다.</span> 환자가 가장 부담 없이 시작하는 시술이다. 보톡스 경험 후 필러→스킨부스터로 확장하는 퍼널(funnel)의 첫 단계다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">기존 환자 전환의 통로다.</span> 교정·보철·턱관절 치료 중인 기존 환자에게 크로스셀(cross-sell)한다. 신규 환자 모집보다 전환이 10배 효율적이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">재방문 주기를 단축한다.</span> 효과 지속 3~6개월. 재시술 내원이 치과 정기 검진 주기와 자연스럽게 겹친다. 한 번 열린 문은 3개월마다 다시 열린다.</p>
-      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-6 rounded-r">
-        <p class="text-[#333] text-sm">저가형이든 프리미엄형이든, 보톡스 단독 매출에 기대를 걸지 마라. <span class="font-bold text-[#1a1a1a]">보톡스 뒤에 무엇을 연결할 것인가</span>를 먼저 설계한 후 가격을 정한다. 입구가 목적이 아니다. 입구 너머의 동선이 목적이다.</p>
-      </div>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-6">보톡스는 6개 분야 중 학습 곡선이 가장 낮다. 치과의사는 이미 주사 시술에 숙련되어 있으므로, 해부학적 포인트와 용량만 익히면 된다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 흔한 실수</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 이마 보톡스 과량 :</span> 눈꺼풀이 무거워지는 안검하수가 발생할 수 있다. 미간과 이마를 분리 주입하고, 보수적 용량으로 시작하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 교근 주입 위치 오류 :</span> 교근 외 인접 근육이 이완될 수 있다. 반드시 교근을 촉진한 후 근육 중심부에 정확히 주입하라.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 좌우 비대칭 :</span> 환자 불만족의 가장 흔한 원인이다. 시술 전 좌우 교근 크기를 반드시 비교하고, 양측 동일 용량을 원칙으로 하라.</p>
     `,
   },
   {
     id: "s1-1-1-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">4. 시장 현황 / 가격대</h3>
-      <p class="text-[#333] leading-relaxed mb-4">시장의 지형을 모르면 가격을 설계할 수 없다. 아래 데이터는 2026년 상반기 시장 현황을 바탕으로, 국내 주요 미용시술 비교 플랫폼 약 12,000건의 가격 데이터에서 보톡스 카테고리를 정제한 결과다.</p>
-      <p class="text-[#333] leading-relaxed mb-4 text-sm">※ 시장 가격은 지역·시기·경쟁에 따라 변동된다. 수가 설정 시 반드시 해당 지역의 최신 시장 상황을 직접 확인해야 한다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">구간</th>
-            <th class="px-4 py-2 text-left font-medium">10유닛당 가격</th>
-            <th class="px-4 py-2 text-left font-medium">사각턱 50U 가격</th>
-            <th class="px-4 py-2 text-left font-medium">특징</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">공장형</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">~5,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8,900~25,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">미끼 가격이다. 원가 이하다. <span class="font-bold text-[#1a1a1a]">따라가지 않는다</span></td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">일반 피부과</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">8,000~15,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">40,000~75,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중소 피부과 정상가다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">프리미엄</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">20,000원~</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">100,000~150,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">수입 제품·프리미엄 클리닉 수준이다</td></tr>
-          <tr class="bg-[#fdf2f5]"><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">치과 권장</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">10,000~20,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">50,000~100,000원</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">일반 피부과 상단~프리미엄 하단이다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">공장형의 8,900원과 같은 가격으로 내려가면 치과의 브랜드 가치가 깎인다. 치과는 일반 피부과 상단에서 프리미엄 하단 사이에 서야 한다. "비싼 게 아니라 정밀한 것"이라는 가치가 이 가격대를 지탱한다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-6">아래는 2026년 상반기 시장 현황과 확인된 공급 참고가에 근거한 시뮬레이션이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">루트별 수익성 비교 (사각턱 50U 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 루트 A (저가형 — 뉴럭스) :</span> 재료비 11,500원, 판매가 30,000원, 건당 마진 18,500원. 월 300만 원 마진 달성에 약 162건 필요(하루 7건 이상).</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 루트 B (프리미엄형 — 코어톡스) :</span> 재료비 22,000원, 판매가 80,000원, 건당 마진 58,000원. 월 300만 원 마진 달성에 약 52건 필요(하루 2~3건).</p>
+      <p class="text-[#333] leading-relaxed mb-4">프리미엄형은 저가형 대비 약 3분의 1 건수로 동일한 마진을 달성할 수 있다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">가장 중요한 현실 인식 하나. 보톡스 단독으로 월 1,000만 원 이상 매출은 비현실적이다. 보톡스는 미끼이자 입구다. 필러와 스킨부스터로의 업셀 매출이 더해져야 비로소 의미 있는 수익 구조가 완성된다.</p>
     `,
   },
   {
     id: "s1-1-1-08",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">가격 설계 원칙</h4>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">최소 2단 가격제를 운영한다.</span> 국내형/프리미엄형으로 2단계 설정하면, 환자는 가격 불만 대신 비교 판단으로 넘어간다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">공개가와 정상가를 분리한다.</span> 런칭 할인은 정상가 대비 8~12% 수준만 권장한다. 과도한 할인은 정상가 복원을 불가능하게 만든다. 한 번 내린 가격은 다시 올리기 어렵다.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="font-bold text-[#1a1a1a]">할인보다 포함 가치를 내세운다.</span> 촬영, 체크, 리터치 정책 포함으로 가격의 이유를 만든다. 리터치 정책 포함 여부를 가격표에 명확히 구분하라.</p>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <p class="text-[#333] leading-relaxed mb-6">보톡스는 미용시술 중 초기 투자가 가장 낮다. 별도 장비 없이 기존 치과 인프라를 그대로 활용할 수 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스 제품 1바이알 (필수) : 23,000~44,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 인슐린 시린지 100개 (필수) : ~8,900원.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 냉장고 (기존 활용) : 0원.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 동의서 양식 (필수) : 0원 (메디스테이션 제공).</p>
+      <p class="text-[#333] leading-relaxed mb-4">▶ 거울 — 반신/전신 (권장) : 3~10만 원.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-6">합계 : 약 25만 원. 이것이 미용치과의 첫 발을 내딛는 데 필요한 전부다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">재고 관리</h4>
+      <p class="text-[#333] leading-relaxed mb-8">보관은 냉장(2~8°C)이 원칙이며, 냉동은 불가다. 분말형은 희석 후 4시간 이내에 사용해야 하고, 액상형(이노톡스)은 개봉 후 24시간이 한계다. 100U 1바이알로 사각턱 2명을 시술할 수 있다. 같은 날 보톡스 환자를 몰아서 예약하면 바이알 낭비를 줄일 수 있다.</p>
     `,
   },
   {
     id: "s1-1-1-09",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4 mt-8">5. 제품 / 장비 가이드</h3>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">제품 비교의 핵심: 내성(면역원성)</h4>
-      <p class="text-[#333] leading-relaxed mb-4">반복 시술이 전제되는 보톡스에서, 제품 선택의 핵심 기준은 내성 위험이다. 복합단백질이 체내에서 항원으로 인식되면 항체가 형성되어 효과가 점차 떨어진다. 같은 시술을 반복할수록 이 차이가 누적된다.</p>
-      <table class="w-full text-sm border-collapse mb-6">
-        <thead class="bg-[#1a1a1a] text-white">
-          <tr>
-            <th class="px-4 py-2 text-left font-medium">구분</th>
-            <th class="px-4 py-2 text-left font-medium">순수 독소(150kDa)</th>
-            <th class="px-4 py-2 text-left font-medium">복합단백질</th>
-            <th class="px-4 py-2 text-left font-medium">비활성 독소</th>
-            <th class="px-4 py-2 text-left font-medium">내성 위험</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">일반형 (뉴럭스, 리즈톡스 등)</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">포함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">포함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">포함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">높다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">코어톡스</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">포함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">제거</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">잔류</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">중간이다</td></tr>
-          <tr><td class="px-4 py-3 border-b border-[#eee] text-[#333]">제오민</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">포함</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">제거</td><td class="px-4 py-3 border-b border-[#eee] text-[#333] font-bold">제거</td><td class="px-4 py-3 border-b border-[#eee] text-[#333]">낮다</td></tr>
-        </tbody>
-      </table>
-      <p class="text-[#333] leading-relaxed mb-4">프리미엄 전략을 택한다면 코어톡스나 제오민이 "내성 적은 보톡스"라는 차별화 포인트가 된다. 저가 전략이라면 일반형으로 가격 경쟁력을 확보한다. 재료의 선택이 곧 가게의 성격을 결정한다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-6">보톡스는 6개 분야 중 사고 리스크가 가장 낮다. 필러(혈관폐색으로 인한 실명·피부괴사)나 실리프팅(감염·비대칭) 대비 안전성이 월등히 높아 '첫 도입 시술'로 가장 적합하다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">주요 부작용</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 멍·부종 (흔함) :</span> 자연 소실(1~3일). 냉찜질로 대응.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 비대칭 (가끔) :</span> 2주 후 확인, 보정 주입 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 안검하수 (1% 미만) :</span> 아프라클로니딘 0.5% 점안. 2~4주 자연 회복.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 아나필락시스 (극히 드묾) :</span> 에피네프린 투여, 119 신고.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 전 필수 고지 사항</h4>
+      <p class="text-[#333] leading-relaxed mb-8">효과 발현은 2~3일부터 서서히 나타나며, 최대 효과는 1~2주 후다. 지속기간은 3~6개월이며 반영구적이지 않다. 유지를 위해서는 재시술이 필요하다는 점을 반드시 고지해야 한다. 시술 후 4시간 동안 시술 부위를 만지지 않도록 안내하고, 당일 음주, 사우나, 격렬한 운동은 금지다.</p>
     `,
   },
   {
     id: "s1-1-1-10",
     html: `
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">루트 A (저가형) 추천 제품</h4>
-      <p class="text-[#333] leading-relaxed mb-4">1순위 — 뉴럭스 100U (23,000원). 100U로 사각턱 2명 시술이 가능하다. 1인당 재료비 11,500원이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">2순위 — 리즈톡스 50U (24,000원). 소용량으로 재고 부담이 적다.</p>
-      <h4 class="text-lg font-semibold text-[#1a1a1a] mb-3 mt-6">루트 B (프리미엄형) 추천 제품</h4>
-      <p class="text-[#333] leading-relaxed mb-4">1순위 — 코어톡스 100U (44,000원). 내성 위험이 낮다. "내성 적은 보톡스"라는 차별화 포인트가 된다. 1인당 22,000원이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">2순위 — 이노톡스 50U/100U (29,900원/43,900원). 국내 유일 액상형이다. 희석 오류가 없어 초기 도입 원장에게 안전한 출발점이 된다.</p>
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스는 쉽다. 주사 한 번이면 끝나고, 별도 장비 투자도 필요 없으며, 초기 투자 25만 원이면 시작할 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">하지만 시장은 이미 포화 상태다. 대형 피부과 프랜차이즈가 1만 원 미만으로 보톡스를 뿌리는 현실에서, 치과가 동일한 방식으로 뛰어드는 것은 실패가 예정된 싸움이다. 치과의 진입은 근본적으로 다른 진입이어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">치과는 보톡스를 독립적인 상품으로 '파는' 것이 아니라, 기존 치과 진료의 연장선 위에 자연스럽게 '얹는' 것이다. 교정 완료 환자에게 턱라인 정리를 제안하는 것, 턱관절 통증 환자에게 교근 이완을 권하는 것 — 이것이 치과에서 보톡스를 도입하는 진짜 이유이자, 피부과가 절대 흉내 낼 수 없는 치과만의 동선이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">보톡스 한 건의 마진이 2만 원이든 6만 원이든, 그 환자가 3개월 뒤 재방문하고, 6개월 뒤 필러를 시술받고, 1년 뒤 리프팅까지 확장된다면 — 그것이 보톡스 도입이 만들어내는 진짜 수익 구조다. 한 건의 매출이 아니라, 한 명의 환자가 걸어갈 여정 전체를 설계하는 것. 그것이 이 챕터의 결론이다.</p>
     `,
   },
 
