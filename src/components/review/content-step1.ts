@@ -376,13 +376,8 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 스킨부스터 (Skin Booster) — 세 번째 수익의 축</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 고유 영역이 아니다. 이 점을 처음부터 명확히 해둔다.</p>
-      <p class="text-[#333] leading-relaxed mb-6">치과가 스킨부스터를 도입하는 이유는 해부학적 강점이 아니라, 보톡스와 필러로 확보한 미용 시술 역량과 환자 신뢰를 기반으로 수익 영역을 확장하기 위함이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 고유 영역이 아니다. 구강이나 안면 근육과 직접적인 관련이 없는, 피부 진피층을 대상으로 하는 시술이다. 그렇다면 왜 이 책에서 다루는가. 치과가 스킨부스터를 도입하는 이유는 해부학적 강점이 아니라, 보톡스와 필러로 확보한 미용 시술 역량과 환자 신뢰를 기반으로 수익 영역을 확장하기 위함이다. 1순위 보톡스, 2순위 필러가 안정적으로 안착한 뒤, 그 위에 올리는 세 번째 층이다.</p>
     `,
   },
   {
@@ -435,9 +430,10 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4장. 실리프팅 (Thread Lifting) — 지붕은 기둥을 세운 뒤에 올린다</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
       <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 시술 난이도가 가장 높다. 치과의 고유 영역이 아니며, 결과 편차가 크고, 환자 기대치 관리가 어렵다. 1차 런칭 메인 시술로 절대 적합하지 않다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">그럼에도 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">이 점을 처음부터 명확히 해둔다. 보톡스가 문을 열고, 필러가 기둥을 세우고, 스킨부스터로 층을 쌓은 후에야 실리프팅이라는 지붕을 올릴 수 있다. 이 순서를 건너뛰면 구조가 무너진다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">그럼에도 이 챕터에서 실리프팅을 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다. 리스크가 높은 만큼 리턴도 크다. 관건은 "할 것인가 말 것인가"가 아니라, "언제, 어떤 조건에서 시작할 것인가"다.</p>
     `,
   },
   {
@@ -477,9 +473,9 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">5장. 리프팅 장비 (Lifting Devices) — 감이 아니라 숫자로 판단하라</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스는 25만 원, 필러는 50만 원이면 시작할 수 있었다. 리프팅 장비는 다르다. 수천만 원 단위의 선행 투자가 필요하다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">'있으면 좋겠다'는 감으로 도입하지 않는다. 숫자를 먼저 확인하라.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
+      <p class="text-[#333] leading-relaxed mb-4">이 챕터는 이전 챕터들과 근본적으로 성격이 다르다. 보톡스는 25만 원, 필러는 50만 원, 스킨부스터는 11만 원이면 시작할 수 있었다. 리프팅 장비는 다르다. 수천만 원 단위의 선행 투자가 필요하다. 의사결정의 성격이 '시술 역량 확보'에서 '투자 회수 계산'으로 완전히 바뀌는 지점이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">장비는 한 번 사면 되돌리기 어렵다. 보톡스 1바이알은 사용하지 않으면 냉장고에 두면 그만이지만, 3,000만 원짜리 장비는 사용하지 않아도 감가상각이 진행된다. 그래서 이 챕터의 핵심 메시지는 단순하다. '있으면 좋겠다'는 감으로 도입하지 않는다. 숫자를 먼저 확인하라.</p>
     `,
   },
   {
@@ -510,8 +506,9 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">6장. 레이저 / 피부 장비 — 있으면 좋지만, 없어도 된다</h2>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">핵심 전제</h3>
-      <p class="text-[#333] leading-relaxed mb-8">치과의 고유 영역에서 가장 먼 분야다. 피부과의 핵심 사업 영역과 정면으로 겹치며, 치과의 메인 시술로 운영하는 것은 비현실적이다. 보조 관리 포지션으로만 접근해야 한다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
+      <p class="text-[#333] leading-relaxed mb-4">치과의 고유 영역에서 가장 먼 분야다. 피부과의 핵심 사업 영역과 정면으로 겹치며, 치과의 메인 시술로 운영하는 것은 비현실적이다. 보조 관리 포지션으로만 접근해야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">도입 여부의 판단 기준은 "해야 하는가"가 아니라 "할 여력이 되는가"다. 보톡스, 필러, 스킨부스터가 안정적으로 돌아가고, 리프팅 장비까지 검토한 뒤에도 여유가 있다면 그때 비로소 올려놓을 수 있는 마지막 선반이다.</p>
     `,
   },
   {
