@@ -1401,75 +1401,107 @@ export const step1Data: Section[] = [
     `,
   },
 
-  // ─── 2장. 수가 체계 설계 ───
+
+  // ─── 2장. 수가 체계 설계 (원문 100%) ───
   {
-    id: "s1-1-7-01",
+    id: "s1-ch2-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2장. 미용치과 수가 체계 설계 — 재료비만 보면 마진을 착각한다</h2>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">도입</h3>
+      <p class="text-[#333] leading-relaxed mb-4">1장에서 6개 시술의 특성, 시장 가격, 재료비 구조를 하나하나 해부했다. 이 챕터에서는 한 발 물러서 6개 시술을 횡단적으로 조망하며, 치과 전체의 수가를 하나의 체계로 설계하는 프레임워크를 제공한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">개별 시술의 가격을 각각 정하는 것은 어렵지 않다. 어려운 것은 시술 간의 가격 관계, 패키지 구조, 업셀 동선까지를 하나의 체계로 엮는 것이다. 이 챕터가 바로 그 설계도다.</p>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">수가 설정의 3단계</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ A단계. 원가 파악 :</span> 재료비 + 소모품. 보톡스 사각턱 50U 기준 재료비 약 2.5만 원.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ B단계. 시간 원가 반영 :</span> 시간당 보험 진료 매출이 30만 원인 원장이 15분을 보톡스에 투입하면, 시간 원가는 7.5만 원이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ C단계. 마진 설계 :</span> A(재료비) + B(시간 원가) = 실질 원가. 여기에 목표 마진율을 곱해 수가를 도출한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">대부분의 원장이 수가를 정할 때 범하는 가장 흔한 실수가 있다. 재료비만 보고 "마진 80%"라고 계산하는 것이다. 하지만 시간 원가를 포함하면, 실질 마진은 예상보다 20~30% 낮아진다. 수가 설정은 반드시 다음 3단계를 거쳐야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ A단계. 원가 파악  :</span> 재료비 + 소모품. 가장 직접적인 변동비다. 보톡스 사각턱 50U 기준 재료비 약 2.5만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ B단계. 시간 원가 반영  :</span> 원장이 미용시술에 투입하는 시간은, 보험 진료를 하지 못하는 시간이다. 이것이 기회비용이다. 시간당 보험 진료 매출이 30만 원인 원장이 15분을 보톡스에 투입하면, 시간 원가는 7.5만 원이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ C단계. 마진 설계  :</span> A(재료비) + B(시간 원가) = 실질 원가. 여기에 목표 마진율을 곱해 수가를 도출한다. 실질 원가 10만 원, 목표 마진 50%라면 수가는 20만 원이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">수가 설계의 실무 4단계(원가 파악 → 경쟁 조사 → 포지셔닝 → 초기 조정)와 세부 체크리스트는 'STEP 5-1. 수가 설계 원칙'에서 상세히 다룬다.</p>
     `,
   },
   {
-    id: "s1-1-7-02",
+    id: "s1-ch2-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술 간 가격 위계</h3>
-      <p class="text-[#333] leading-relaxed mb-6">낮음에서 높음 순서로: LDM/LED → 보톡스 = IPL/토닝 → 스킨부스터 → 필러 → 슈링크/인모드 → 실리프팅 → 울쎄라.</p>
+      <p class="text-[#333] leading-relaxed mb-4">미용치과에서 제공하는 시술들은 환자 인식상의 가격 위계가 존재한다. 이 위계를 무시하고 가격을 설정하면, 환자에게 혼란을 주거나 특정 시술로의 쏠림이 발생한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">낮음에서 높음 순서로: LDM/LED → 보톡스 = IPL/토닝 → 스킨부스터 → 필러 → 슈링크/인모드 → 실리프팅 → 울쎄라.</p>
+      <p class="text-[#333] leading-relaxed mb-4">이 위계는 시술의 침습도, 효과 지속기간, 시장의 일반적 가격대에 기반한다. 치과의 수가 체계도 이 위계를 존중해야 환자의 직관과 충돌하지 않는다. 예를 들어, 보톡스가 스킨부스터보다 비싸거나, 필러가 실리프팅보다 비싸면 환자에게 "이 치과 가격 체계가 이상하다"는 인식을 심어준다.</p>
+    `,
+  },
+  {
+    id: "s1-ch2-03",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">패키지 설계 원칙</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 할인율 10~20% 범위 :</span> 30% 이상의 할인은 개별 시술의 가치를 훼손한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 업셀 동선 설계 :</span> 엔트리(보톡스 + LDM) → 코어(보톡스 + 필러 + 스킨부스터) → 프리미엄(리프팅 + 실 + 스킨부스터).</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 선불 패키지 환불 :</span> 소비자분쟁해결기준에 따라 미사용분 환불이 원칙이다. '환불 불가'는 불공정 약관에 해당한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 할인율 10~20% 범위  :</span> 30% 이상의 할인은 개별 시술의 가치를 훼손한다. 패키지 할인은 "묶어서 사면 약간 이득"이지, "묶어서 사면 반값"이 아니다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 업셀 동선 설계  :</span> 엔트리(보톡스 + LDM) → 코어(보톡스 + 필러 + 스킨부스터) → 프리미엄(리프팅 + 실 + 스킨부스터). 환자의 경험 단계에 맞춰 자연스럽게 상위 패키지로 전환되는 동선을 설계하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 선불 패키지 환불  :</span> 소비자분쟁해결기준에 따라 미사용분 환불이 원칙이다. '환불 불가'는 불공정 약관에 해당한다. 이 점을 반드시 숙지하고, 패키지 계약서에 환불 조건을 명시하라.</p>
+      <p class="text-[#333] leading-relaxed mb-4">실전 예시를 보자. 보톡스 5만 원 + LDM 3만 원 = 개별 8만 원인 세트를 패키지 7만 원(12% 할인)으로 설정한다. 이 엔트리 패키지로 미용 첫 경험 환자를 유입한 뒤, 3회차 방문 시 필러·스킨부스터로 코어 패키지 전환을 제안하는 구조다. 할인은 12%에 불과하지만, 환자의 재방문과 업셀을 유도하는 전략적 장치로 작동한다.</p>
     `,
   },
 
-  // ─── 3장. 수익 구조 분석 + 서머리 + 체크리스트 ───
+  // ─── 3장. 수익 구조 분석 + 서머리 + 체크리스트 (원문 100%) ───
   {
-    id: "s1-1-8-01",
+    id: "s1-ch3-01",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 미용치과 수익 구조 분석 — 숫자로 보는 전체 그림</h2>
+      <p class="text-[#333] leading-relaxed mb-4">개별 시술의 수익성은 1장에서 이미 다뤘다. 이 챕터에서는 6개 시술을 한 장의 매트릭스 위에 올려놓고, 치과 전체의 미용시술 수익 구조를 조감한다.</p>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">시술별 수익 구조 매트릭스</h3>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스 (사각턱 50U) : 시술 단가 80,000원, 재료비 22,000원, 마진율 73%.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 필러 (입술 1cc) : 시술 단가 150,000원, 재료비 50,000원, 마진율 67%.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터 (리쥬란 2cc) : 시술 단가 290,000원, 재료비 100,000원, 마진율 66%.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 슈링크 (전안면) : 시술 단가 130,000원, 재료비 30,000원, 마진율 77%.</p>
-      <p class="text-[#333] leading-relaxed mb-8">▶ 실리프팅 (PLLA 10줄) : 시술 단가 690,000원, 재료비 100,000원, 마진율 86%.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 (사각턱 50U)  :</span> 시술 단가 80,000원, 재료비 22,000원, 마진율 73%, 시간당 생산성 높음 (10분).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 (입술 1cc)  :</span> 시술 단가 150,000원, 재료비 50,000원, 마진율 67%, 시간당 생산성 중간 (30분).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 스킨부스터 (리쥬란 2cc)  :</span> 시술 단가 290,000원, 재료비 100,000원, 마진율 66%, 시간당 생산성 중간 (40분).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 슈링크 (전안면)  :</span> 시술 단가 130,000원, 재료비 30,000원, 마진율 77%, 시간당 생산성 중간 (30분).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실리프팅 (PLLA 10줄)  :</span> 시술 단가 690,000원, 재료비 100,000원, 마진율 86%, 시간당 생산성 낮음 (60분).</p>
+      <p class="text-[#333] leading-relaxed mb-4">마진율은 재료비만 차감한 수치다. 인건비, 임대료, 장비 감가상각은 포함되어 있지 않다. 2장에서 다룬 시간 원가를 반영하면 실질 마진은 이보다 낮아진다는 점을 반드시 염두에 두어야 한다.</p>
     `,
   },
   {
-    id: "s1-1-8-02",
+    id: "s1-ch3-02",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">숨은 비용 — 놓치기 쉬운 항목</h3>
+      <p class="text-[#333] leading-relaxed mb-4">마진율 표만 보면 "수익이 엄청나다"는 착각에 빠질 수 있다. 현실에서 마진을 깎아먹는 숨은 비용들이 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장비 감가상각  :</span> HIFU, 레이저, RF 등 고가 장비의 구매 비용을 사용 기간에 걸쳐 나누어 비용으로 반영해야 한다. 장비가 1,500만 원, 사용 기간 5년이면 월 25만 원의 감가상각비가 발생한다. 이것을 빼지 않으면 실제 수익이 보이지 않는다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 원장 시간 원가  :</span> 미용 시술에 투입하는 시간은 보험 진료를 하지 못하는 시간이다. 이 기회비용을 무시하면 안 된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 마케팅비  :</span> 미용시술 신환 유입에 드는 비용이다. CPA(Cost Per Acquisition, 환자 1명 유치에 드는 비용)를 추적해야 한다. 기존 구환 전환은 CPA가 0에 가깝지만, 외부 신환은 수만~수십만 원이 들 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 재고 폐기  :</span> 보톡스는 개봉 후 4시간(분말형), 필러는 개봉 후 미사용분 폐기. 재고 관리가 허술하면 재료비가 눈에 보이지 않게 새어나간다.</p>
+    `,
+  },
+  {
+    id: "s1-ch3-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">월 매출 시뮬레이션 (월 60건 가정)</h3>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스 25건 : 매출 200만 원, 순이익 145만 원 (비중 28%).</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 필러 15건 : 매출 225만 원, 순이익 150만 원 (비중 29%).</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터 10건 : 매출 290만 원, 순이익 190만 원 (비중 24%).</p>
-      <p class="text-[#333] leading-relaxed mb-4">▶ 슈링크 10건 : 매출 130만 원, 순이익 100만 원 (비중 19%).</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 월 60건, 매출 845만 원, 순이익 585만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-4">6개 시술이 안정적으로 운영되고 있는 치과의 현실적 월 매출 구조를 시뮬레이션한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 25건  :</span> 매출 200만 원, 순이익 145만 원 (비중 28%).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 15건  :</span> 매출 225만 원, 순이익 150만 원 (비중 29%).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 스킨부스터 10건  :</span> 매출 290만 원, 순이익 190만 원 (비중 24%).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 슈링크 10건  :</span> 매출 130만 원, 순이익 100만 원 (비중 19%).</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">합계 : 월 60건, 매출 845만 원, 순이익 585만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스와 필러가 전체 순이익의 약 57%를 차지한다. 1장에서 반복적으로 강조한 "보톡스가 데려오고, 필러가 수익을 만든다"는 공식이 숫자로 확인된다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">장비 시술(슈링크)은 직접 수익도 중요하지만, 그보다 환자 리텐션(retention, 기존 환자가 이탈하지 않고 계속 내원하는 비율)과 패키지 업셀(up-sell, 기존 고객에게 더 높은 단가의 상품을 추가 판매)의 허브 역할에 주목해야 한다. "보톡스 맞으러 왔는데 슈링크도 한번 해볼까" — 이 한마디가 월 130만 원의 추가 매출을 만든다.</p>
     `,
   },
   {
-    id: "s1-1-8-03",
+    id: "s1-ch3-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-6">STEP 1 서머리</h3>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 치과 미용시술은 보톡스 → 필러 → 스킨부스터 → (실리프팅) → (장비 시술) 순서로 도입한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스와 필러는 치과의 해부학적 강점이 직접 발휘되는 고유·인접 영역이다.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스는 미끼이자 입구다. 단독 매출에 기대하지 않는다.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 필러는 안전 부위(입술·턱끝)부터 단계적으로 확장한다. 히알루로니다제 필수 구비.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터·실리프팅의 도입 전제 조건을 이해했다.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 실리프팅은 카데바 실습 포함 전문 교육, 모노실 50케이스 이상 축적이 전제 조건이다.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 장비 시술은 투자 회수 계산 후 도입한다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">STEP 1 서머리</h3>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 치과 미용시술은 보톡스 → 필러 → 스킨부스터 → (실리프팅) → (장비 시술) 순서로 도입한다. 이 순서는 원칙이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스와 필러는 치과의 해부학적 강점이 직접 발휘되는 고유·인접 영역이다. 3순위 이하는 사업적 확장이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 보톡스는 미끼이자 입구다. 단독 매출에 기대하지 않는다. 보톡스 뒤에 무엇을 연결할 것인가를 먼저 설계한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 필러는 안전 부위(입술·턱끝)부터 단계적으로 확장한다. 히알루로니다제 필수 구비. 혈관폐색 응급 프로토콜 숙지.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 스킨부스터는 보톡스·필러가 안정된 후 도입한다. 프로그램 기반(3회 1코스) 구조가 예측 가능한 매출을 만든다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 실리프팅은 가장 높은 난이도와 가장 높은 객단가를 동시에 가진다. 카데바 실습 포함 전문 교육, 모노실 50케이스 이상 축적이 전제 조건이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 장비 시술은 투자 회수 계산 후 도입한다. 감으로 사지 않는다.</p>
       <p class="text-[#333] leading-relaxed mb-2">▶ 수가 설계 시 재료비뿐 아니라 시간 원가를 반영해야 실질 마진이 보인다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">▶ 시술 간 가격 위계를 유지하고, 패키지로 업셀 동선을 설계한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 시술 간 가격 위계를 유지하고, 패키지로 업셀 동선을 설계한다.</p>
     `,
   },
   {
-    id: "s1-1-8-04",
+    id: "s1-ch3-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">체크리스트 — 이 STEP을 완료했다면 아래를 확인하라</h3>
