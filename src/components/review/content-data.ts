@@ -706,191 +706,185 @@ export const contentData: Record<string, Section[]> = {
         </div>
       `,
     },
-    // ─── 0-3 이후: 기존 콘텐츠 유지 ───
+    // ─── 0-3. 반론과 현실 ───
     {
-      id: "s0-03",
+      id: "s0-03-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-3. 반론과 현실 -- 합법인데 왜 아직 불안한가</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-3. 반론과 현실 — 합법인데 왜 아직 불안한가</h2>
         <p class="text-[#333] leading-relaxed mb-4">대법원 전원합의체가 '합법'이라는 거대한 방패를 쥐여주었다. 그런데도 진료실로 돌아오면 원장들의 손끝에는 여전히 미세한 떨림이 남아 있다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">왜 그런가. 합법을 선언한 것은 대법원이지만, 그 판결을 불쾌하게 여기는 세력이 아직도 조직적으로 움직이고 있기 때문이다. 이 챕터에서는 그 불안의 정체를 낱낱이 해부하고, 현장에서 마주칠 수 있는 반론과 공격에 대한 철벽 대응 논리를 완전무장시킨다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">왜 그런가. 합법을 선언한 것은 대법원이지만, 그 판결을 불쾌하게 여기는 세력이 아직도 조직적으로 움직이고 있기 때문이다. 이 챕터에서는 그 불안의 정체를 낱낱이 해부하고, 현장에서 마주칠 수 있는 반론과 공격에 대한 철벽 대응 논리를 완전무장시킨다.</p>
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">의협의 입장과 실제 행동</h3>
         <p class="text-[#333] leading-relaxed mb-4">대한의사협회는 2016년 판결 이후에도 치과의사의 안면미용시술에 대한 반대 입장을 한 치도 굽히지 않고 있다. 별도의 신고센터를 운영하며, 개별 민원을 경찰 고발 또는 보건소 제보로 연결하는 사례가 지금 이 순간에도 지속되고 있다.</p>
         <p class="text-[#333] leading-relaxed mb-8">하지만 명심해야 한다. 의협이 아무리 맹렬하게 반대해도, 그 반대가 법적 구속력을 가진 적은 단 한 번도 없다. 2016년 판결 이후 의료법 개정을 통해 치과의사의 미용시술을 원천 차단하려는 시도가 있었으나, 국회의 문턱을 끝내 넘지 못했다. 피부과학회가 사활을 걸고 제기한 헌법소원 역시 각하되었다. 9년간 이어진 모든 역공이 전부 무위로 돌아갔다는 사실 자체가, 2016년 판결의 철옹성이 얼마나 견고한지를 역설적으로 증명한다.</p>
       `,
     },
     {
-      id: "s0-03-01",
+      id: "s0-03-02",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">상대방이 사용하는 4가지 반론 -- 미리 알고 완전무장하라</h3>
-        <p class="text-[#333] leading-relaxed mb-6">전장에 나서기 전에 적이 어떤 총을 들고 있는지 파악하는 것은 기본 중의 기본이다. 의협과 피부과학회가 집요하게 반복하는 반론은 정확히 네 가지로 수렴된다. 하나하나 해부한다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">반론 1 : "교육과정에 포함됐다고 면허 범위가 자동으로 확대되는 것은 아니다"</h4>
-        <p class="text-[#333] leading-relaxed mb-6">이들이 즐겨 쓰는 비유가 있다. "간호대에서 내과를 배웠다고 간호사가 진료할 수 있는가?" 언뜻 그럴듯하게 들리지만, 대법원의 판단 구조를 의도적으로 왜곡한 궤변이다. 대법원은 '교육과정 포함' 하나만으로 합법을 선언한 적이 없다. 교육과정, 수련 체계, 의학과 치의학의 학문적 동질성, 보건위생상 위해 가능성까지 네 가지 근거를 종합적으로 직조한 복합 판단이었다. 실 한 가닥만 뽑아들고 "이건 약하다"고 흔드는 것은, 쇠사슬의 고리 하나만 보고 전체 사슬이 끊어졌다고 우기는 것과 다르지 않다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">반론 2 : "보건복지부가 '미용 보톡스는 무면허 의료행위'라고 유권해석한 바 있다"</h4>
-        <p class="text-[#333] leading-relaxed mb-6">과거 복지부의 유권해석은 사실이다. 하지만 법의 위계를 모르는 사람이나 이 카드를 꺼내든다. 대법원 전원합의체 판결은 행정부의 유권해석보다 절대적으로 상위에 존재하는 최종 규범이다. 판결 이후 복지부 스스로도 해당 유권해석을 근거로 한 어떠한 행정 집행도 하지 않았다. 무기로서의 유효기간이 만료된 탄환이다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">반론 3 : "판결은 눈가와 미간에 한정된다. 이마, 사각턱, 볼 등 다른 부위에는 적용되지 않는다"</h4>
-        <p class="text-[#333] leading-relaxed mb-6">판결문을 제대로 읽지 않은 사람이 범하는 전형적인 오독이다. 대법원이 인정한 것은 '눈가와 미간'이라는 특정 포인트가 아니라, '안면부'라는 영역 전체다. 판시 사항과 판결 이유의 구분은 법학의 기초 중 기초인데, 이 둘을 의도적으로 혼동시키는 것이 이 반론의 수법이다. 판결 이유에서 대법원은 구강악안면외과의 진료 범위가 안면부 전체를 아우른다는 점을 명확히 설시했다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">반론 4 : "승모근, 종아리 등 안면부 밖의 시술은 판결 적용 밖이며 고발 대상이다"</h4>
-        <p class="text-[#333] leading-relaxed mb-4">이 반론은 다른 셋과 결이 다르다. 일부 타당하기 때문이다. 2016년 판결의 논리적 보호막은 '안면부'라는 대전제 위에 서 있고, 승모근이나 종아리 같은 바디 영역은 그 보호막의 바깥이다. 이것은 상대방의 공격이 아니라, 우리 스스로 직시해야 할 현실적 경계선이다. 앞서 0-2에서 적색 구역으로 분류한 이유가 정확히 여기에 있다. 바디 시술은 현재의 판결 논리로 방어하기 어렵다. 메뉴판에서 지워라.</p>
-        <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-8">
-          <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#f59e0b] font-bold">주의:</span> 반론 4는 상대방 논리가 아니라 실제 리스크다. 승모근/바디 시술은 현재 판결 논리로 방어하기 어렵다.</p>
-        </div>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">상대방이 사용하는 4가지 반론 — 미리 알고 완전무장하라</h3>
+        <p class="text-[#333] leading-relaxed mb-8">전장에 나서기 전에 적이 어떤 총을 들고 있는지 파악하는 것은 기본 중의 기본이다. 의협과 피부과학회가 집요하게 반복하는 반론은 정확히 네 가지로 수렴된다. 하나하나 해부한다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 반론 1 : "교육과정에 포함됐다고 면허 범위가 자동으로 확대되는 것은 아니다"</span></p>
+        <p class="text-[#333] leading-relaxed mb-8">이들이 즐겨 쓰는 비유가 있다. "간호대에서 내과를 배웠다고 간호사가 진료할 수 있는가?" 언뜻 그럴듯하게 들리지만, 대법원의 판단 구조를 의도적으로 왜곡한 궤변이다. 대법원은 '교육과정 포함' 하나만으로 합법을 선언한 적이 없다. 교육과정, 수련 체계, 의학과 치의학의 학문적 동질성, 보건위생상 위해 가능성까지 네 가지 근거를 종합적으로 직조한 복합 판단이었다. 실 한 가닥만 뽑아들고 "이건 약하다"고 흔드는 것은, 쇠사슬의 고리 하나만 보고 전체 사슬이 끊어졌다고 우기는 것과 다르지 않다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 반론 2 : "보건복지부가 '미용 보톡스는 무면허 의료행위'라고 유권해석한 바 있다"</span></p>
+        <p class="text-[#333] leading-relaxed mb-8">과거 복지부의 유권해석은 사실이다. 하지만 법의 위계를 모르는 사람이나 이 카드를 꺼내든다. 대법원 전원합의체 판결은 행정부의 유권해석보다 절대적으로 상위에 존재하는 최종 규범이다. 판결 이후 복지부 스스로도 해당 유권해석을 근거로 한 어떠한 행정 집행도 하지 않았다. 무기로서의 유효기간이 만료된 탄환이다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 반론 3 : "판결은 눈가와 미간에 한정된다. 이마, 사각턱, 볼 등 다른 부위에는 적용되지 않는다"</span></p>
+        <p class="text-[#333] leading-relaxed mb-8">판결문을 제대로 읽지 않은 사람이 범하는 전형적인 오독이다. 대법원이 인정한 것은 '눈가와 미간'이라는 특정 포인트가 아니라, '안면부'라는 영역 전체다. 판시 사항과 판결 이유의 구분은 법학의 기초 중 기초인데, 이 둘을 의도적으로 혼동시키는 것이 이 반론의 수법이다. 판결 이유에서 대법원은 구강악안면외과의 진료 범위가 안면부 전체를 아우른다는 점을 명확히 설시했다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 반론 4 : "승모근, 종아리 등 안면부 밖의 시술은 판결 적용 밖이며 고발 대상이다"</span></p>
+        <p class="text-[#333] leading-relaxed mb-8">이 반론은 다른 셋과 결이 다르다. 일부 타당하기 때문이다. 2016년 판결의 논리적 보호막은 '안면부'라는 대전제 위에 서 있고, 승모근이나 종아리 같은 바디 영역은 그 보호막의 바깥이다. 이것은 상대방의 공격이 아니라, 우리 스스로 직시해야 할 현실적 경계선이다. 앞서 0-2에서 적색 구역으로 분류한 이유가 정확히 여기에 있다. 바디 시술은 현재의 판결 논리로 방어하기 어렵다. 메뉴판에서 지워라.</p>
       `,
     },
     {
-      id: "s0-03-02",
+      id: "s0-03-03",
       html: `
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">현실적 리스크를 직시하라</h3>
         <p class="text-[#333] leading-relaxed mb-4">합법이다. 대법원이 그렇게 판결했다. 9년간 단 한 번도 뒤집히지 않았다.</p>
         <p class="text-[#333] leading-relaxed mb-4">하지만 합법이라는 사실이 현장의 모든 마찰을 자동으로 소멸시켜주지는 않는다. 원장들이 알아야 할 현실은 이것이다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">민원의 경로는 열려 있다. 의협 신고센터, 불만을 품은 환자, 경쟁 의원의 제보 -- 누구든 민원을 넣을 수 있다. 민원이 접수되면 보건소는 조사를 진행하고, 보건소에서 복지부로, 복지부에서 검찰로 넘어가는 경로가 존재한다.</p>
-        <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">그러나 이것이 '하지 말아야 할 이유'가 되는가. 절대 아니다. 최종 판단의 기준은 대법원 전원합의체 판결이고, 이 철옹성을 무너뜨린 사례는 지난 9년간 단 하나도 없다. 필요한 것은 불안 앞에 멈추는 것이 아니라, 기록과 프로토콜로 완전무장하는 것이다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">민원의 경로는 열려 있다. 의협 신고센터, 불만을 품은 환자, 경쟁 의원의 제보 — 누구든 민원을 넣을 수 있다. 민원이 접수되면 보건소는 조사를 진행하고, 보건소에서 복지부로, 복지부에서 검찰로 넘어가는 경로가 존재한다.</p>
+        <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">그러나 이것이 '하지 말아야 할 이유'가 되는가. 절대 아니다. 최종 판단의 기준은 대법원 전원합의체 판결이고, 이 철옹성을 무너뜨린 사례는 지난 9년간 단 하나도 없다. 필요한 것은 불안 앞에 멈추는 것이 아니라, 기록과 프로토콜로 완전무장하는 것이다.</p>
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">현장 사례 : 기록이 원장을 지킨 순간</h3>
-        <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-4">
-          <p class="text-[#333] text-sm leading-relaxed">A 치과는 보톡스 도입 3개월 차에 인근 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 원장은 시술 동의서, 차트, 시술 전후 사진을 한 치의 빈틈 없이 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과는 명확했다. 어떠한 행정 조치 없이 종결. 기록이 없었다면, 결과가 달랐을 수 있다.</p>
-        </div>
-        <p class="text-[#999] text-sm mb-8">민원과 신고가 실제로 발생했을 때의 구체적인 48시간 골든타임 대응 매뉴얼은 <span class="text-[#1a1a1a] font-bold">STEP 5-3. 민원/신고 대응 매뉴얼</span>에서 실전 시나리오별로 상세히 다룬다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">A 치과는 보톡스 도입 3개월 차에 인근 경쟁 의원의 민원이 접수되어 보건소 조사를 받았다. 원장은 시술 동의서, 차트, 시술 전후 사진을 한 치의 빈틈 없이 보관하고 있었고, 2016년 대법원 판결문 사본을 즉시 제출했다. 결과는 명확했다. 어떠한 행정 조치 없이 종결. 기록이 없었다면, 결과가 달랐을 수 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">민원과 신고가 실제로 발생했을 때의 구체적인 48시간 골든타임 대응 매뉴얼은 'STEP 5-3. 민원·신고 대응 매뉴얼'에서 실전 시나리오별로 상세히 다룬다.</p>
       `,
     },
-    {
-      id: "s0-04",
-      html: `
-        <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-4. 글로벌 스탠다드 -- 세계는 이미 움직이고 있다</h2>
-        <p class="text-[#333] leading-relaxed mb-4">혹시 이런 생각을 한 적이 있는가. "치과의사가 보톡스를 놓는다니, 이건 한국에서만 벌어지는 기현상 아닌가?"</p>
-        <p class="text-[#333] leading-relaxed mb-6">결론부터 말한다. 천만의 말씀이다. 치과의사의 안면부 미용시술은 대한민국만의 특이한 현상이 아니라, 의료 선진국에서 이미 수십 년 전부터 확립된 글로벌 스탠다드다. 한국이 오히려 뒤늦게 합류한 셈이다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">미국 -- 치과의사 미용시술 교육의 본산</h3>
-        <p class="text-[#333] leading-relaxed mb-6">미국치과의사협회(ADA)는 산하의 평생교육인증프로그램(CERP)을 통해 보톡스와 필러 교육 프로그램을 공식 인증하고 있다. 약 절반에 달하는 주에서 치과의사의 구강/악안면 영역 보톡스/필러 시술을 명시적으로 허용하며, 치과의사가 안면미용시술을 수행하는 것은 논란의 대상이 아니라 제도권 안의 일상이다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">영국 -- 보톡스 처방 권한을 가진 유일한 치과 등록자</h3>
-        <p class="text-[#333] leading-relaxed mb-6">영국 일반치과위원회(GDC)는 치과의사를 보톡스 처방이 가능한 유일한 치과 등록 전문직으로 인정하고 있다. 보톡스는 영국에서 처방전 의약품(POM)으로 분류되며, 치과의사가 직접 처방하고 시술할 수 있는 법적 권한을 갖는다. 2021년에는 "Botulinum Toxin and Cosmetic Fillers (Children) Act 2021"이 시행되어 18세 미만에 대한 보톡스/필러 시술이 전면 금지되었는데, 이는 역으로 성인 대상 치과의사의 미용시술이 확고히 제도화되어 있음을 방증한다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">호주 -- 2009년부터 교육 체계 정착</h3>
-        <p class="text-[#333] leading-relaxed mb-6">호주는 2009년 AADFA(호주미용치과의사협회)가 설립된 이후, 치과의사의 안면미용시술 교육과 시행 체계가 일찌감치 자리를 잡았다. 한국보다 7년이나 앞선 셈이다.</p>
-      `,
-    },
+    // ─── 0-4. 글로벌 스탠다드 ───
     {
       id: "s0-04-01",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">글로벌 시장이 보내는 신호 -- 845%라는 숫자</h3>
-        <p class="text-[#333] leading-relaxed mb-6">이것은 단순히 각국의 법제도가 허용한다는 차원의 이야기가 아니다. 시장 자체가 폭발적으로 팽창하고 있다는 사실에 주목해야 한다. 미국성형외과학회(ASPS) 통계에 따르면, 2000년부터 2018년까지 18년간 보툴리눔 톡신 시술 건수는 무려 845% 증가했다. 국제 학술계에서도 치과의사의 안면미용 역할 확장을 '성장하는 분야'로 명시한 논문이 PubMed에 다수 등재되어 있으며, 해부학 교육 기반을 갖춘 치과의사야말로 가장 적합한 시술자라는 논거가 반복적으로 제기되고 있다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">한국의 좌표 -- 뒤처진 것이 아니라, 따라잡은 것이다</h3>
+        <div class="border-t border-[#eee] my-8"></div>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-4. 글로벌 스탠다드 — 세계는 이미 움직이고 있다</h2>
+        <p class="text-[#333] leading-relaxed mb-4">혹시 이런 생각을 한 적이 있는가. "치과의사가 보톡스를 놓는다니, 이건 한국에서만 벌어지는 기현상 아닌가?"</p>
+        <p class="text-[#333] leading-relaxed mb-8">결론부터 말한다. 천만의 말씀이다. 치과의사의 안면부 미용시술은 대한민국만의 특이한 현상이 아니라, 의료 선진국에서 이미 수십 년 전부터 확립된 글로벌 스탠다드다. 한국이 오히려 뒤늦게 합류한 셈이다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">미국 — 치과의사 미용시술 교육의 본산</h3>
+        <p class="text-[#333] leading-relaxed mb-8">미국치과의사협회(ADA)는 산하의 평생교육인증프로그램(CERP)을 통해 보톡스와 필러 교육 프로그램을 공식 인증하고 있다. 약 절반에 달하는 주에서 치과의사의 구강·악안면 영역 보톡스·필러 시술을 명시적으로 허용하며, 치과의사가 안면미용시술을 수행하는 것은 논란의 대상이 아니라 제도권 안의 일상이다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">영국 — 보톡스 처방 권한을 가진 유일한 치과 등록자</h3>
+        <p class="text-[#333] leading-relaxed mb-8">영국 일반치과위원회(GDC)는 치과의사를 보톡스 처방이 가능한 유일한 치과 등록 전문직으로 인정하고 있다. 보톡스는 영국에서 처방전 의약품(POM)으로 분류되며, 치과의사가 직접 처방하고 시술할 수 있는 법적 권한을 갖는다. 2021년에는 \u300EBotulinum Toxin and Cosmetic Fillers (Children) Act 2021\u300F이 시행되어 18세 미만에 대한 보톡스·필러 시술이 전면 금지되었는데, 이는 역으로 성인 대상 치과의사의 미용시술이 확고히 제도화되어 있음을 방증한다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">호주 — 2009년부터 교육 체계 정착</h3>
+        <p class="text-[#333] leading-relaxed mb-8">호주는 2009년 AADFA(호주미용치과의사협회)가 설립된 이후, 치과의사의 안면미용시술 교육과 시행 체계가 일찌감치 자리를 잡았다. 한국보다 7년이나 앞선 셈이다.</p>
+      `,
+    },
+    {
+      id: "s0-04-02",
+      html: `
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">글로벌 시장이 보내는 신호 — 845%라는 숫자</h3>
+        <p class="text-[#333] leading-relaxed mb-8">이것은 단순히 각국의 법제도가 허용한다는 차원의 이야기가 아니다. 시장 자체가 폭발적으로 팽창하고 있다는 사실에 주목해야 한다. 미국성형외과학회(ASPS) 통계에 따르면, 2000년부터 2018년까지 18년간 보툴리눔 톡신 시술 건수는 무려 845% 증가했다. 국제 학술계에서도 치과의사의 안면미용 역할 확장을 '성장하는 분야'로 명시한 논문이 PubMed에 다수 등재되어 있으며, 해부학 교육 기반을 갖춘 치과의사야말로 가장 적합한 시술자라는 논거가 반복적으로 제기되고 있다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">한국의 좌표 — 뒤처진 것이 아니라, 따라잡은 것이다</h3>
         <p class="text-[#333] leading-relaxed mb-4">정리하면 이렇다. 미국, 영국, 호주 등 의료 선진국에서는 치과의사의 안면미용시술이 이미 제도의 한복판에 자리 잡고 있다. 한국은 2016년 대법원 전원합의체 판결을 통해 이 글로벌 흐름에 사법적으로 합류했다. 뒤처진 것이 아니라, 드디어 따라잡은 것이다.</p>
         <p class="text-[#333] leading-relaxed mb-8">그럼에도 아직 주저하고 있는 원장이 있다면, 이 한 가지만 기억하라. 당신이 안면미용시술을 망설이는 동안, 지구 반대편의 치과의사들은 이미 수십 년째 같은 시술로 환자의 만족과 치과의 성장이라는 두 마리 토끼를 거머쥐고 있다. 세계는 이미 움직이고 있다. 질문은 "할 것인가, 말 것인가"가 아니라, "언제 시작할 것인가"다.</p>
       `,
     },
+    // ─── 0-5. 한의사와의 비교 ───
     {
-      id: "s0-05",
+      id: "s0-05-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-5. 한의사와의 비교 -- 같은 시장, 다른 무기</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-5. 한의사와의 비교 — 같은 시장, 다른 무기</h2>
         <p class="text-[#333] leading-relaxed mb-4">미용 시장의 문 앞에 서 있는 것은 치과의사만이 아니다. 한의계 역시 이 거대한 시장에 적극적으로 진입을 시도하고 있다. 서울시한의사회는 피부미용센터를 개설했고, HIFU, 레이저, 보톡스, 필러 교육을 진행 중이다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">하지만 같은 문을 두드린다고 해서 같은 열쇠를 쥐고 있는 것은 아니다. 법적 조건에서 치과의사와 한의사 사이에는 좁힐 수 없는 결정적 격차가 존재한다.</p>
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">치과의사 vs 한의사 -- 법적 조건 비교</h3>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">보톡스 시술</h4>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사는 대법원 무죄 확정(2013도850). 한의사는 전문의약품 처방권 자체가 없다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필러 시술</h4>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사는 보톡스 판결과 동일한 논리 구조로 방어 근거를 갖추고 있다. 한의사는 대법원에서 유죄가 확정되었다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">레이저 시술</h4>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사는 대법원 무죄 확정(2013도7796). 한의사는 대법원에서 유죄가 확정되었다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">해부학 교육</h4>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사는 안면 해부학을 학부 정규 과정에서 6년간 혹독하게 훈련받는다. 한의사는 한의학 기반이며, 서양 해부학 교육은 제한적이다.</p>
-        <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">주사 숙련도</h4>
-        <p class="text-[#333] leading-relaxed mb-6">치과의사는 매일 구강 내 마취 주사를 놓으며 손끝의 정밀함을 벼려왔다. 한의사의 주사 시술 빈도는 이에 비할 바가 아니다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">하지만 같은 문을 두드린다고 해서 같은 열쇠를 쥐고 있는 것은 아니다. 법적 조건에서 치과의사와 한의사 사이에는 좁힐 수 없는 결정적 격차가 존재한다.</p>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">치과의사 vs 한의사 — 법적 조건 비교</h3>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 시술 :</span> 치과의사는 대법원 무죄 확정(2013도850). 한의사는 전문의약품 처방권 자체가 없다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 시술 :</span> 치과의사는 보톡스 판결과 동일한 논리 구조로 방어 근거를 갖추고 있다. 한의사는 대법원에서 유죄가 확정되었다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 레이저 시술 :</span> 치과의사는 대법원 무죄 확정(2013도7796). 한의사는 대법원에서 유죄가 확정되었다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 해부학 교육 :</span> 치과의사는 안면 해부학을 학부 정규 과정에서 6년간 혹독하게 훈련받는다. 한의사는 한의학 기반이며, 서양 해부학 교육은 제한적이다.</p>
+        <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 주사 숙련도 :</span> 치과의사는 매일 구강 내 마취 주사를 놓으며 손끝의 정밀함을 벼려왔다. 한의사의 주사 시술 빈도는 이에 비할 바가 아니다.</p>
         <p class="text-[#1a1a1a] font-bold leading-relaxed mb-4">한마디로 정리하면 이렇다. 치과의사는 '무죄', 한의사는 '유죄'. 이보다 명쾌한 비교가 있을 수 없다.</p>
         <p class="text-[#333] leading-relaxed mb-8">그런데도 한의계가 이 시장에 사활을 걸고 진입을 시도한다는 사실 자체가, 역설적으로 이 시장의 압도적인 매력도를 반증한다. 법적으로 문이 닫혀 있는 쪽도 기를 쓰고 들어오려는 시장에, 법적으로 문이 활짝 열려 있는 치과의사가 들어가지 않을 이유가 어디에 있는가.</p>
       `,
     },
     {
-      id: "s0-05-01",
+      id: "s0-05-02",
       html: `
-        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">최근 한의사 판례 동향 -- 진단기기는 허용, 침습 시술은 여전히 불법</h3>
+        <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">최근 한의사 판례 동향 — 진단기기는 허용, 침습 시술은 여전히 불법</h3>
         <p class="text-[#333] leading-relaxed mb-4">오해를 방지하기 위해 최근 판례의 흐름도 정확히 짚고 넘어간다.</p>
         <p class="text-[#333] leading-relaxed mb-4">2022년 대법원 전원합의체(2016도21314)는 한의사의 초음파 진단기기 사용을 면허 범위 내로 인정했다. 주목할 점은, 이 판결이 치과의사 보톡스 판결(2013도850)의 논리를 핵심 근거로 직접 인용했다는 사실이다. 치과의사의 미용시술 합법성이 흔들리기는커녕, 다른 직역의 판결에서까지 선례로 원용되며 더욱 단단한 반석으로 굳어지고 있는 것이다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">이후 뇌파계(2023년), X-ray 골밀도 측정기(2024~2025년) 등 한의사의 비침습 진단기기 사용 허용이 확대되는 추세다. 그러나 핵심을 놓쳐서는 안 된다. <span class="text-[#1a1a1a] font-bold">허용된 것은 오직 비침습 '진단'기기뿐이다.</span> 보톡스(전문의약품 처방 불가), 필러(대법원 유죄 확정), IPL/레이저(유죄 확정) 등 침습적 시술 영역의 문은 여전히 한의사에게 굳게 닫혀 있다. 리도카인 등 전문의약품 사용 역시 유죄가 유지되고 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">이후 뇌파계(2023년), X-ray 골밀도 측정기(2024~2025년) 등 한의사의 비침습 진단기기 사용 허용이 확대되는 추세다. 그러나 핵심을 놓쳐서는 안 된다. 허용된 것은 오직 비침습 '진단'기기뿐이다. 보톡스(전문의약품 처방 불가), 필러(대법원 유죄 확정), IPL·레이저(유죄 확정) 등 침습적 시술 영역의 문은 여전히 한의사에게 굳게 닫혀 있다. 리도카인 등 전문의약품 사용 역시 유죄가 유지되고 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">진단기기 허용과 침습 시술 허용은 차원이 완전히 다른 문제다. 이 둘을 혼동해 "한의사도 미용시술이 가능해지는 추세"라고 읽는 것은 판례를 읽지 못하는 오독이다.</p>
         <p class="text-[#333] leading-relaxed mb-8">치과의사는 해부학적 교육 기반, 전문의약품 처방권, 그리고 대법원의 사법적 무죄 확정이라는 세 가지 무기를 모두 장착하고 있다. 이 시장에 진입할 수 있는 조건이 가장 완벽하게 갖춰진 직역이, 가장 신중하게 망설이고 있는 아이러니. 이 책이 그 망설임을 끝내기 위해 존재한다.</p>
       `,
     },
+    // ─── 0-6. 9년간의 법적 안정성 ───
     {
-      id: "s0-06",
+      id: "s0-06-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-6. 9년간의 법적 안정성 -- 단 한 번도 번복되지 않았다</h2>
-        <p class="text-[#333] leading-relaxed mb-6">2016년 판결 직후, 의협은 비상대책위를 구성하고 의료법 개정을 통한 전면 차단을 선언했다. 피부과 전문의들은 의료법 제2조 제2항 제2호 등이 치과의사에게 안면부 의료행위를 허용해 건강권과 직업의 자유를 침해한다며 헌법소원(2016헌마897)을 제기했다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">결과는 참담했다 -- 상대방에게. 헌법재판소는 2016년 11월 1일 이를 각하했다. 청구기간 도과, 그리고 나머지 규정은 치과의사 허용 범위를 직접 정한 것이 아니라는 이유였다. 본안 심사에 진입조차 하지 못한 것이다. 사법부의 문턱에서 되돌려 보내진 셈이다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">이후 9년간의 흐름을 추적하면, 이 판결의 철옹성이 얼마나 견고한지 더욱 선명하게 드러난다.</p>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-6. 9년간의 법적 안정성 — 단 한 번도 번복되지 않았다</h2>
+        <p class="text-[#333] leading-relaxed mb-4">2016년 판결 직후, 의협은 비상대책위를 구성하고 의료법 개정을 통한 전면 차단을 선언했다. 피부과 전문의들은 의료법 제2조 제2항 제2호 등이 치과의사에게 안면부 의료행위를 허용해 건강권과 직업의 자유를 침해한다며 헌법소원(2016헌마897)을 제기했다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">결과는 참담했다 — 상대방에게. 헌법재판소는 2016년 11월 1일 이를 각하했다. 청구기간 도과, 그리고 나머지 규정은 치과의사 허용 범위를 직접 정한 것이 아니라는 이유였다. 본안 심사에 진입조차 하지 못한 것이다. 사법부의 문턱에서 되돌려 보내진 셈이다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">이후 9년간의 흐름을 추적하면, 이 판결의 철옹성이 얼마나 견고한지 더욱 선명하게 드러난다.</p>
         <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">판결 이후 9년간의 타임라인</h3>
-        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">2016년 판결 직후 :</span> 의협, 의료법 개정 추진 -- 입법 불성사.</p>
-        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">2016년 11월 :</span> 피부과 전문의 헌법소원(2016헌마897) -- 각하. 본안 심사에 진입조차 못 함.</p>
-        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">2022년 12월 :</span> 한의사 초음파 판결(2016도21314 전원합의체)에서 치과의사 보톡스 판결(2013도850)의 논리를 핵심 근거로 직접 인용 -- 판결의 논리가 약해지기는커녕 오히려 강화.</p>
-        <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">2024년 2월 :</span> 보건복지부, "의사/치과의사만 직접 시술 가능" 원칙 재확인 -- 치과의사 미용시술 합법성을 행정부가 재차 공인.</p>
-        <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">2016~2026년 :</span> 치과의사가 안면미용시술로 유죄 확정된 공개 사례 -- <span class="text-[#1a1a1a] font-bold">단 하나도 없다.</span></p>
-        <p class="text-[#333] leading-relaxed mb-4">9년이다. 9년이라는 세월 동안 의료법 개정도, 헌법소원도, 새로운 판례도, 행정 제재도 -- 이 판결을 흔들어본 시도는 전부 있었으나, 성공한 것은 단 하나도 없다.</p>
-        <p class="text-[#333] leading-relaxed mb-8">전원합의체 판결은 대법원장을 포함한 대법관 전원이 참여해 내린 대한민국 사법체계의 최종 해석이다. 하급 법원은 이를 뒤집을 수 없으며, 오직 또 다른 전원합의체 판결로만 번복이 가능하다. 그리고 그 번복을 시도할 법적 근거도, 사회적 동력도, 현재로서는 어디에도 존재하지 않는다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2016년 판결 직후 :</span> 의협, 의료법 개정 추진 — 입법 불성사.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2016년 11월 :</span> 피부과 전문의 헌법소원(2016헌마897) — 각하. 본안 심사에 진입조차 못 함.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2022년 12월 :</span> 한의사 초음파 판결(2016도21314 전원합의체)에서 치과의사 보톡스 판결(2013도850)의 논리를 핵심 근거로 직접 인용 — 판결의 논리가 약해지기는커녕 오히려 강화.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2024년 2월 :</span> 보건복지부, "의사·치과의사만 직접 시술 가능" 원칙 재확인 — 치과의사 미용시술 합법성을 행정부가 재차 공인.</p>
+        <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 2016~2026년 :</span> 치과의사가 안면미용시술로 유죄 확정된 공개 사례 — 단 하나도 없다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">9년이다. 9년이라는 세월 동안 의료법 개정도, 헌법소원도, 새로운 판례도, 행정 제재도 — 이 판결을 흔들어본 시도는 전부 있었으나, 성공한 것은 단 하나도 없다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">전원합의체 판결은 대법원장을 포함한 대법관 전원이 참여해 내린 대한민국 사법체계의 최종 해석이다. 하급 법원은 이를 뒤집을 수 없으며, 오직 또 다른 전원합의체 판결로만 번복이 가능하다. 그리고 그 번복을 시도할 법적 근거도, 사회적 동력도, 현재로서는 어디에도 존재하지 않는다.</p>
         <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">결론은 단호하다. 이 판결은 흔들리지 않았고, 앞으로도 흔들릴 가능성은 극히 낮다. 원장들이 세워야 할 전략의 토대는 충분히 단단하다.</p>
       `,
     },
+    // ─── 0-7. 실무 리스크 최소화 5원칙 ───
     {
-      id: "s0-07",
+      id: "s0-07-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-7. 실무 리스크 최소화 5원칙 -- 합법의 방패 위에 기록의 갑옷을 입혀라</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">0-7. 실무 리스크 최소화 5원칙 — 합법의 방패 위에 기록의 갑옷을 입혀라</h2>
         <p class="text-[#333] leading-relaxed mb-4">합법성은 확정되어 있다. 대법원이 그렇게 선언했고, 9년간 단 한 번도 번복되지 않았다.</p>
-        <p class="text-[#333] leading-relaxed mb-6">하지만 합법이라는 방패만 믿고 빈손으로 진료실에 서는 것은 어리석다. 전장에서 방패만 든 병사와, 방패 위에 갑옷까지 걸친 병사의 생존율은 하늘과 땅 차이다. 기록과 프로토콜이 바로 그 갑옷이다.</p>
-        <p class="text-[#333] leading-relaxed mb-8">민원이 접수되든, 보건소 조사가 나오든, 경찰 고발이 들어오든 -- 기록이 완벽한 치과는 흔들리지 않는다. 기록이 없는 치과는 합법임에도 불필요한 소모전에 휘말린다. 차이를 만드는 것은 합법 여부가 아니라, 합법을 증명할 수 있는 기록의 밀도다.</p>
-        <p class="text-[#1a1a1a] font-bold text-lg leading-relaxed mb-6">현장에서 반드시 지켜야 할 5가지 원칙을 박아둔다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">하지만 합법이라는 방패만 믿고 빈손으로 진료실에 서는 것은 어리석다. 전장에서 방패만 든 병사와, 방패 위에 갑옷까지 걸친 병사의 생존율은 하늘과 땅 차이다. 기록과 프로토콜이 바로 그 갑옷이다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">민원이 접수되든, 보건소 조사가 나오든, 경찰 고발이 들어오든 — 기록이 완벽한 치과는 흔들리지 않는다. 기록이 없는 치과는 합법임에도 불필요한 소모전에 휘말린다. 차이를 만드는 것은 합법 여부가 아니라, 합법을 증명할 수 있는 기록의 밀도다.</p>
+        <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">현장에서 반드시 지켜야 할 5가지 원칙을 박아둔다.</p>
         <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">1. 시술 전 동의서를 반드시 징구하라.</h4>
-        <p class="text-[#333] leading-relaxed mb-6">충분한 설명 후 서면 동의서를 받는 것은 선택이 아니라 필수다. 동의서에는 최소한 다음 항목이 빠짐없이 포함되어야 한다 -- 시술명, 시술 부위, 사용 제품명과 용량, 예상 효과 및 지속 기간, 가능한 부작용, 환자 서명과 날짜. 이 한 장의 종이가 민원 발생 시 원장을 보호하는 가장 강력한 1차 방어선이 된다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">충분한 설명 후 서면 동의서를 받는 것은 선택이 아니라 필수다. 동의서에는 최소한 다음 항목이 빠짐없이 포함되어야 한다 — 시술명, 시술 부위, 사용 제품명과 용량, 예상 효과 및 지속 기간, 가능한 부작용, 환자 서명과 날짜. 이 한 장의 종이가 민원 발생 시 원장을 보호하는 가장 강력한 1차 방어선이 된다.</p>
         <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">2. 차트와 사진을 철벽같이 보존하라.</h4>
-        <p class="text-[#333] leading-relaxed mb-6">시술 전후 사진 촬영과 차트 기재는 습관이 아니라 시스템으로 박아야 한다. 매 시술마다 예외 없이 기록하고, 최소 5년 이상 보관하라. 분쟁이 터졌을 때 동의서가 방패라면, 차트와 사진은 원장의 시술이 정당하고 안전했음을 입증하는 결정적 증거다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">시술 전후 사진 촬영과 차트 기재는 습관이 아니라 시스템으로 박아야 한다. 매 시술마다 예외 없이 기록하고, 최소 5년 이상 보관하라. 분쟁이 터졌을 때 동의서가 방패라면, 차트와 사진은 원장의 시술이 정당하고 안전했음을 입증하는 결정적 증거다.</p>
         <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">3. 판결문 사본을 치과에 비치하라.</h4>
-        <p class="text-[#333] leading-relaxed mb-6">2016년 대법원 판결문(2013도850) 사본을 치과 내에 비치해 두어라. 보건소 조사가 나왔을 때, 환자가 "치과에서 이런 시술을 해도 되는 거냐"고 물었을 때, 꺼내 보여줄 수 있는 즉각적인 무기가 된다. A4 몇 장이 만들어내는 신뢰감과 안도감은 생각보다 크다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">2016년 대법원 판결문(2013도850) 사본을 치과 내에 비치해 두어라. 보건소 조사가 나왔을 때, 환자가 "치과에서 이런 시술을 해도 되는 거냐"고 물었을 때, 꺼내 보여줄 수 있는 즉각적인 무기가 된다. A4 몇 장이 만들어내는 신뢰감과 안도감은 생각보다 크다.</p>
         <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">4. 전문 채널을 확보해 두어라.</h4>
-        <p class="text-[#333] leading-relaxed mb-6">법률 자문, 의료배상보험, 민원 대응과 관련된 문의는 대한치과의사협회(치협) 또는 전문 법률 채널을 통해 신속하게 처리할 수 있는 경로를 미리 확보해 두어야 한다. 문제가 터진 뒤에 채널을 찾는 것은 이미 늦다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">법률 자문, 의료배상보험, 민원 대응과 관련된 문의는 대한치과의사협회(치협) 또는 전문 법률 채널을 통해 신속하게 처리할 수 있는 경로를 미리 확보해 두어야 한다. 문제가 터진 뒤에 채널을 찾는 것은 이미 늦다.</p>
         <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">5. SOP를 표준화하라.</h4>
-        <p class="text-[#333] leading-relaxed mb-6">동의서 양식, 시술 전후 사진 촬영 절차, 차트 기재 방식, 제품 관리 기록까지 -- 미용시술 관련 모든 운영 절차를 표준화된 SOP(Standard Operating Procedure, 표준 운영 절차)로 정립하라. 개인의 성실함에 의존하는 시스템은 언젠가 반드시 구멍이 뚫린다. 시스템이 지키는 치과만이 오래 간다.</p>
-        <p class="text-[#999] text-sm mb-8">동의서 양식, 차트 기록 가이드, SOP 표준의 구체적인 실전 템플릿은 <span class="text-[#1a1a1a] font-bold">STEP 2. 운영 시스템 구축</span>에서 상세히 다룬다. 민원과 신고가 실제로 발생했을 때의 48시간 골든타임 대응 매뉴얼은 <span class="text-[#1a1a1a] font-bold">STEP 5-3. 민원/신고 대응 매뉴얼</span>에서 시나리오별로 펼쳐낸다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">동의서 양식, 시술 전후 사진 촬영 절차, 차트 기재 방식, 제품 관리 기록까지 — 미용시술 관련 모든 운영 절차를 표준화된 SOP(Standard Operating Procedure, 표준 운영 절차)로 정립하라. 개인의 성실함에 의존하는 시스템은 언젠가 반드시 구멍이 뚫린다. 시스템이 지키는 치과만이 오래 간다.</p>
+        <p class="text-[#333] leading-relaxed mb-8">동의서 양식, 차트 기록 가이드, SOP 표준의 구체적인 실전 템플릿은 'STEP 2. 운영 시스템 구축'에서 상세히 다룬다. 민원과 신고가 실제로 발생했을 때의 48시간 골든타임 대응 매뉴얼은 'STEP 5-3. 민원·신고 대응 매뉴얼'에서 시나리오별로 펼쳐낸다.</p>
       `,
     },
+    // ─── STEP 0 Closing ───
     {
-      id: "s0-closing",
+      id: "s0-closing-01",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">이 책이 시작되는 이유</h2>
-        <p class="text-[#333] leading-relaxed mb-4">치과의사의 미용시술은 합법이다. 대법원 전원합의체가 확인했고, 9년간 단 한 번도 번복되지 않았으며, 미국/영국/호주의 글로벌 스탠다드와도 완벽하게 궤를 같이한다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">치과의사의 미용시술은 합법이다. 대법원 전원합의체가 확인했고, 9년간 단 한 번도 번복되지 않았으며, 미국·영국·호주의 글로벌 스탠다드와도 완벽하게 궤를 같이한다.</p>
         <p class="text-[#333] leading-relaxed mb-4">하지만 합법인 것과 잘 하는 것은 전혀 다른 차원의 문제다.</p>
-        <p class="text-[#333] leading-relaxed mb-4">합법이라는 흔들림 없는 법적 토대 위에서, 어떤 시술을 선택하고(STEP 1), 어떻게 운영 시스템을 구축하고(STEP 2), 팀과 공간을 어떻게 세팅하고(STEP 3), 환자를 어떻게 유입시키고(STEP 4), 리스크를 어떻게 관리하는가(STEP 5) -- 그것이 이 책의 나머지 전부다.</p>
+        <p class="text-[#333] leading-relaxed mb-4">합법이라는 흔들림 없는 법적 토대 위에서, 어떤 시술을 선택하고(STEP 1), 어떻게 운영 시스템을 구축하고(STEP 2), 팀과 공간을 어떻게 세팅하고(STEP 3), 환자를 어떻게 유입시키고(STEP 4), 리스크를 어떻게 관리하는가(STEP 5) — 그것이 이 책의 나머지 전부다.</p>
         <p class="text-[#333] leading-relaxed mb-8">STEP 0이 "내가 이걸 해도 되는가"라는 질문에 마침표를 찍는 단계였다면, STEP 1부터는 "이 거대한 시장을 어떻게 압도적으로 선점할 것인가"라는 경영자의 질문에 대한 실행의 답을 펼쳐낸다.</p>
       `,
     },
     {
-      id: "s0-summary",
+      id: "s0-closing-02",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
         <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">서머리</h2>
-        <ul class="space-y-3 mb-8">
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">1.</span> 치과의사의 안면미용시술은 대법원 전원합의체 판결(2013도850, 보톡스)과 동일 법리 적용 확정 판결(2013도7796, 레이저)로 합법이 최종 확정되었다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">2.</span> 전원합의체 판결은 대한민국 사법체계의 최종 해석이며, 오직 또 다른 전원합의체 판결로만 변경이 가능하다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">3.</span> 판결은 '안면부'를 치과의사의 진료 영역으로, '미용 목적'의 시술도 합법으로 명확히 인정했다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">4.</span> 2016년부터 2026년까지 9년간, 이 판결을 뒤집는 입법이나 판례는 단 하나도 존재하지 않는다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">5.</span> 한의사 대비 치과의사가 법적으로 가장 완전한 조건 -- 사법적 무죄 확정, 전문의약품 처방권, 해부학 교육 기반 -- 을 보유하고 있다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">6.</span> 합법이지만, 기록(동의서/차트/사진)과 프로토콜로 리스크를 철저히 관리해야 한다.</li>
-          <li class="text-[#333] leading-relaxed"><span class="text-[#1a1a1a] font-bold">7.</span> 안면부 밖(승모근/바디) 시술은 판결 논리의 적용이 어려우므로, 시술 범위를 안면부로 한정하라.</li>
-        </ul>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 치과의사의 안면미용시술은 대법원 전원합의체 판결(2013도850, 보톡스)과 동일 법리 적용 확정 판결(2013도7796, 레이저)로 합법이 최종 확정되었다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 전원합의체 판결은 대한민국 사법체계의 최종 해석이며, 오직 또 다른 전원합의체 판결로만 변경이 가능하다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 판결은 '안면부'를 치과의사의 진료 영역으로, '미용 목적'의 시술도 합법으로 명확히 인정했다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 2016년부터 2026년까지 9년간, 이 판결을 뒤집는 입법이나 판례는 단 하나도 존재하지 않는다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 한의사 대비 치과의사가 법적으로 가장 완전한 조건 — 사법적 무죄 확정, 전문의약품 처방권, 해부학 교육 기반 — 을 보유하고 있다.</p>
+        <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶</span> 합법이지만, 기록(동의서·차트·사진)과 프로토콜로 리스크를 철저히 관리해야 한다.</p>
+        <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶</span> 안면부 밖(승모근·바디) 시술은 판결 논리의 적용이 어려우므로, 시술 범위를 안면부로 한정하라.</p>
       `,
     },
     {
-      id: "s0-checklist",
+      id: "s0-closing-03",
       html: `
         <div class="border-t border-[#eee] my-8"></div>
-        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">체크리스트 -- 이 STEP을 완료했다면 아래를 확인하라</h2>
+        <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">체크리스트 — 이 STEP을 완료했다면 아래를 확인하라</h2>
         <ul class="space-y-3 mb-8">
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>대법원 전원합의체 판결(2013도850)과 동일 법리 적용 확정 판결(2013도7796)의 결론을 설명할 수 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>안면부 시술이 합법인 이유를 5가지 근거로 정리할 수 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>부위별 허용 범위 3단계(녹색/황색/적색)를 구분할 수 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>상대방 반론 4가지에 대한 대응 논리를 알고 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>안면 외 부위(승모근/바디) 시술의 법적 리스크를 이해하고 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>한의사 대비 치과의사의 법적 우위를 설명할 수 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>실무 리스크 최소화 5원칙을 치과에 적용할 준비가 되어 있다</li>
-          <li class="text-[#333] leading-relaxed flex items-start gap-2"><span class="shrink-0 w-5 h-5 border border-[#ddd] rounded inline-block mt-0.5"></span>판결문 사본을 치과에 비치했거나 비치할 계획이 있다</li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">대법원 전원합의체 판결(2013도850)과 동일 법리 적용 확정 판결(2013도7796)의 결론을 설명할 수 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">안면부 시술이 합법인 이유를 5가지 근거로 정리할 수 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">부위별 허용 범위 3단계(녹색·황색·적색)를 구분할 수 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">상대방 반론 4가지에 대한 대응 논리를 알고 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">안면 외 부위(승모근·바디) 시술의 법적 리스크를 이해하고 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">한의사 대비 치과의사의 법적 우위를 설명할 수 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">실무 리스크 최소화 5원칙을 치과에 적용할 준비가 되어 있다</span></li>
+          <li class="flex items-start gap-3"><span class="text-[#C4929B] font-bold mt-0.5">☐</span><span class="text-[#333]">판결문 사본을 치과에 비치했거나 비치할 계획이 있다</span></li>
         </ul>
       `,
     },
