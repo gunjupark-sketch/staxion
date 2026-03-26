@@ -382,20 +382,20 @@ export const step1Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다. 보톡스가 근육을, 필러가 볼륨을 다룬다면, 스킨부스터는 피부 자체의 질을 끌어올리는 영역이다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위·제품에 따라 20~40분. 전안면 시술 시 최대 1시간.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 다점 주입 방식으로 보톡스보다 통증 체감이 높다. 표면마취(EMLA) 필수 권장.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 미세 멍·붉은 자국 발생 가능. 2~5일 내 소실.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 물광주사·리쥬란은 시술 직후 보습감 체감, 본격 효과 2~3회 시술 후. 쥬베룩은 4~6주 후.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 다점 주입 방식으로 보톡스보다 통증 체감이 높다. 표면마취(EMLA) 필수 권장. 물광기(메조건) 사용 시 통증 경감.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 미세 멍·붉은 자국 발생 가능. 2~5일 내 소실. 당일 세안·메이크업 주의.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 물광주사·리쥬란은 시술 직후 보습감 체감, 본격 효과 2~3회 시술 후. 쥬베룩은 4~6주 후부터 점진적 개선.</p>
       <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염·염증, 자가면역질환, 켈로이드 체질.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">프로그램 구조</h4>
-      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 단회 시술이 아니라 프로그램 시술이다. 3~4주 간격으로 3회 1코스가 기본이며, 이후 3~6개월 간격으로 유지 시술을 진행한다. 환자에게 "3회까지는 투자, 그 이후부터 유지"라는 프레임을 처음부터 심어야 중도 이탈을 줄일 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 단회 시술이 아니라 프로그램 시술이다. 3~4주 간격으로 3회 1코스가 기본이며, 이후 3~6개월 간격으로 유지 시술을 진행한다. 1회 시술로 판단하지 않는다. 환자에게 "3회까지는 투자, 그 이후부터 유지"라는 프레임을 처음부터 심어야 중도 이탈을 줄일 수 있다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시술 방식 차이</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반)</span> : 진피 얕은 층에 다점 주입. 수동 주입 또는 물광기 사용. 시술이 가장 단순하다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반)</span> : 진피층 중간 깊이에 수동 다점 주입. 크로스해칭 테크닉. 통증이 상대적으로 강하다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA)</span> : 진피 깊은 층에 주입. 콜라겐 재생 유도. 효과 발현이 느린 대신 지속 기간이 길다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 쥬베룩 1회 약 264,000원, 리쥬란 1회 약 300,000원. 보톡스의 4~5배에 달하는 건당 매출이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반 — 스킨바이브, 릴리이드M 등) :</span> 진피 얕은 층에 다점 주입. 수동 주입 또는 물광기(메조건) 사용. 시술이 가장 단순하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 진피층 중간 깊이에 수동 다점 주입. 크로스해칭(격자형 주입) 테크닉이 일반적. 통증이 상대적으로 강하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 진피 깊은 층에 주입. 콜라겐 재생 유도가 목적이므로 주입 깊이가 핵심. 효과 발현이 느린 대신 지속 기간이 길다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성 세 가지를 반드시 이해해야 한다.</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다. 보톡스나 필러와 달리, 제품 브랜드가 곧 시술의 이름이 되는 시장이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다. 1회 시술이 끝이 아니라 3회 연속 내원의 시작이라는 점이 수익 구조에서 결정적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 쥬베룩 1회(2cc) 시장 중간값 약 264,000원, 리쥬란 1회(2cc) 약 300,000원. 25~30만 원대다. 보톡스의 4~5배에 달하는 건당 매출이다.</p>
     `,
   },
   {
@@ -405,7 +405,7 @@ export const step1Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
       <p class="text-[#333] leading-relaxed mb-4">솔직하게 말하면, 스킨부스터에서 치과만의 해부학적 우위는 크지 않다. 진피층 주입이므로 혈관 해부학 지식이 필수적인 필러와는 성격이 다르다.</p>
       <p class="text-[#333] leading-relaxed mb-4">하지만 치과가 갖는 구조적 이점은 존재한다. 보톡스와 필러로 이미 형성된 미용 시술 환자 기반이 그것이다. "보톡스 맞으러 왔는데, 피부도 좋아질 수 있다고요?" — 이 한마디가 스킨부스터의 시작점이다. 외부에서 신규 환자를 모집하는 것이 아니라, 이미 신뢰가 형성된 기존 미용 환자에게 자연스럽게 확장 제안을 하는 것이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">치과가 갖는 또 하나의 구조적 이점은 마취 역량이다. 스킨부스터는 다점 주입 특성상 통증 체감이 높은 시술이다. 특히 리쥬란은 시술 통증이 극심한 것으로 알려져 있어, "리쥬란 맞고 싶은데 너무 아프다"는 것이 잠재 환자의 가장 흔한 진입 장벽이다. 치과의사는 국소마취에 가장 숙련된 의료인이다. 표면마취만으로 부족한 경우 국소침윤마취나 신경차단마취를 추가 적용할 수 있다. "거의 안 아팠다"는 경험이 재방문과 입소문의 가장 강력한 동력이 된다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">치과가 갖는 또 하나의 구조적 이점은 마취 역량이다. 스킨부스터는 다점 주입 특성상 통증 체감이 높은 시술이다. 특히 리쥬란은 시술 통증이 극심한 것으로 알려져 있어, "리쥬란 맞고 싶은데 너무 아프다"는 것이 잠재 환자의 가장 흔한 진입 장벽이다. 치과의사는 국소마취에 가장 숙련된 의료인이다. 표면마취(EMLA)만으로 부족한 경우, 시술 부위에 맞춰 국소침윤마취나 신경차단마취를 추가 적용할 수 있다. "거의 안 아팠다"는 경험이 재방문과 입소문의 가장 강력한 동력이 된다. 피부과에서 표면마취 크림만으로 버티게 하는 것과, 치과에서 통증을 원천 차단하고 시술하는 것 — 환자 입장에서 어느 쪽을 선택할지는 명확하다.</p>
     `,
   },
   {
@@ -416,7 +416,8 @@ export const step1Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러와 달리, 전제 조건이 충족되지 않은 상태에서 도입하면 환자 모집이 어렵고 재고 부담만 늘어난다. 아래 세 가지가 반드시 갖춰져야 한다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다. 미용 환자 기반이 없는 상태에서 스킨부스터만 단독으로 도입하는 것은 고객 없는 가게를 여는 것과 다르지 않다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다. 스킨부스터는 이 환자들에게 제안하는 확장 메뉴다. 미용 환자 기반이 없는 상태에서 스킨부스터만 단독으로 도입하는 것은 고객 없는 가게를 여는 것과 다르지 않다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">전제 조건이 충족되었다면, 도입 전략의 핵심은 제품 선택이다. 시장에 제품이 많고, 환자가 제품명을 지정해서 찾아오는 구조이기 때문에, 어떤 제품으로 시작하느냐가 곧 포지션이 된다.</p>
     `,
   },
   {
@@ -424,52 +425,103 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
-      <p class="text-[#333] leading-relaxed mb-6">스킨부스터 시장은 보톡스·필러와 달리, 제품 브랜드가 곧 시장 구간을 결정한다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">스킨부스터 시장은 보톡스·필러와 달리, 제품 브랜드가 곧 시장 구간을 결정한다. 동일 제품군 안에서의 가격 편차보다 제품군 간의 가격 차이가 훨씬 크다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시장 가격 구간 (1회 시술 기준)</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반) :</span> 80,000~150,000원. 입문 가격대.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 200,000~350,000원 (2cc). 환자 인지도 최고.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 200,000~300,000원 (2cc). 콜라겐 재생 차별점.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 기타 PN 계열 :</span> 150,000~250,000원. 후발 제품군.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 — 스킨부스터 특수 변수</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 패키지(3회) vs 1회 단가 :</span> 3회 1코스 패키지 가격을 반드시 설계하라. 1회 단가 대비 7~10% 할인이 적정선이다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 제품 지명 구매 대응 :</span> 리쥬란과 쥬베룩은 가격대가 비슷하지만 효과 발현 속도와 특성이 다르다. 비교표를 상담실에 비치하라.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 콤보 패키지 :</span> 보톡스+스킨부스터, 필러+스킨부스터 콤보를 설계하면 객단가가 올라간다. 동시 시술 시 5~8% 할인.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반) :</span> 80,000~150,000원. 스킨부스터 시장의 입문 가격대.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 200,000~350,000원 (2cc 기준). 환자 인지도가 가장 높은 제품군.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 200,000~300,000원 (2cc 기준). 콜라겐 재생이라는 차별점.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 기타 PN 계열(리즈넥, 쥬벨룩볼륨 등) :</span> 150,000~250,000원. 후발 제품군.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-6">[건주확인] 수가 데이터(3사 통합)에서 스킨부스터 카테고리 정밀 추출 시 구간 재조정 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-8">치과 권장 포지셔닝 : 각 제품군 시장 중간값 이상. 스킨부스터는 보톡스와 달리 저가 경쟁이 구조적으로 어렵다. 제품 원가 자체가 높고, 환자가 제품을 지명해서 찾아오기 때문에 가격보다 제품 구색과 시술 품질(통증 관리 포함)이 선택 기준이 된다.</p>
     `,
   },
   {
     id: "s1-1-3-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 물광주사 (스킨바이브/릴리이드M) :</span> 가격이 낮고 시술이 단순하며, 진입 장벽이 가장 낮다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN 기반. 환자 인지도가 가장 높다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임) :</span> PDLLA+HA 기반. 효과 발현이 4~6주로 느려 기대치 관리가 필수적이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 주사기 : 30~32G 미세 바늘.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 표면마취 크림 : EMLA 크림. 비용 미미.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 물광기/메조건 (선택) : 200만~500만 원. 수요 확인 후 도입.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 냉장보관 : 리쥬란 냉장(2~8°C), 쥬베룩 상온 보관 가능.</p>
-      <p class="text-[#333] leading-relaxed mb-8">▶ 시술 전후 사진 촬영 장비 (권장) : 효과가 즉각적이지 않으므로 전후 비교 사진이 필수.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 — 스킨부스터 특수 변수</h4>
+      <p class="text-[#333] leading-relaxed mb-4">(통합 가격 설계 원칙은 STEP 1 2장 "수가체계 설계"를 참조하라. 여기서는 스킨부스터에만 적용되는 변수를 다룬다.)</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 패키지(3회) vs 1회 단가 :</span> 3회 1코스 패키지 가격을 반드시 설계하라. 1회 단가 대비 7~10% 할인이 적정선이다. 환자 입장에서 "3회 다 해야 효과"라면 패키지가 자연스럽다. 패키지 결제는 중도 이탈을 줄이고 매출 예측 가능성을 높인다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 제품 지명 구매 대응 :</span> 리쥬란과 쥬베룩은 가격대가 비슷하지만 효과 발현 속도와 특성이 다르다. 두 제품의 차이를 설명할 수 있는 비교표를 상담실에 비치하고, "어떤 피부 고민이냐에 따라 추천이 달라진다"는 프레임으로 상담하라.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 콤보 패키지 :</span> 보톡스+스킨부스터, 필러+스킨부스터 콤보를 설계하면 객단가가 올라간다. 동시 시술 시 5~8% 할인 수준이면 환자 입장에서 충분한 유인이 된다. 단, 할인율이 아니라 "한 번 내원에 두 가지를 해결한다"는 편의성이 진짜 셀링 포인트다.</p>
     `,
   },
   {
     id: "s1-1-3-06",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사 1회 :</span> 판매가 약 100,000~150,000원. 건당 마진 약 70,000~100,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란 1회(2cc) :</span> 판매가 약 300,000원. 건당 마진 약 150,000~200,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 1회(2cc) :</span> 판매가 약 264,000원. 건당 마진 약 130,000~170,000원.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명의 프로그램 환자만 확보해도 400만 원 이상 매출이 발생한다. 소수 환자로도 의미 있는 매출 구조.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 물광주사 (스킨바이브/릴리이드M) :</span> 스킨바이브는 갈더마 제조의 비교차결합 HA, 릴리이드M은 BMI코리아(한국비엠아이코리아) 제조의 HA+PN(폴리뉴클레오타이드) 조합이다. 가격이 낮고, 시술이 단순하며, 진입 장벽이 가장 낮다. 스킨부스터의 첫 발로 가장 적합하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN(폴리뉴클레오타이드) 기반. 환자 인지도가 가장 높다. HB 버전이 통증이 적어 환자 만족도가 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임/바임글로벌) :</span> PDLLA+HA 기반. 콜라겐 재생이라는 차별점이 있다. 다만 효과 발현이 4~6주로 느려, 환자 기대치 관리가 필수적이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주사기 :</span> 30~32G 미세 바늘. 제품에 따라 전용 바늘이 동봉되기도 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림 :</span> EMLA 크림. 스킨부스터는 다점 주입이므로 보톡스보다 마취 필요성이 높다. 비용 미미.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광기/메조건 (선택) :</span> 200만~500만 원. 물광주사 계열에서 균일한 주입과 시술 속도 향상에 효과적. 수요가 확인된 후 도입하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 냉장보관 :</span> 제품별 보관 조건 상이. 리쥬란 냉장(2~8°C), 쥬베룩 상온 보관 가능. 반드시 제품별 보관 기준을 확인하라.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 시술 전후 사진 촬영 장비 (권장) :</span> 스킨부스터는 효과가 즉각적이지 않으므로, 시술 전후 비교 사진이 환자 만족도 관리에 필수적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">(초기 도입 총 투자 합계는 8번 "도입 시 준비사항"의 체크리스트를 참조하라.)</p>
     `,
   },
   {
     id: "s1-1-3-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 시술 난이도는 낮음에서 중간이다. 진피층에 균일하게 주입하는 테크닉이 핵심이며, 보톡스·필러에서 축적한 주사 핸들링 경험이 그대로 이전된다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">물광주사 계열은 수동 주입 또는 물광기(메조건)를 활용한다. 물광기 사용 시 균일한 주입이 쉬워지지만, 장비 투자(200만~500만 원)가 추가된다. 초기에는 수동 주입으로 시작하고, 수요가 확인되면 장비를 도입하는 단계적 접근이 현실적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">핵심 주의사항은 주입 깊이다. 너무 얕으면 표면에 구슬 같은 돌출이 생기고, 너무 깊으면 효과가 떨어진다. 진피층 정중앙을 일관되게 유지하는 것이 시술의 품질을 결정한다.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-08",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 수익 구조는 보톡스·필러와 결이 다르다. 단건 마진도 높지만, 프로그램 기반(3회 1코스)이라는 구조 자체가 수익의 예측 가능성을 높인다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사 1회 :</span> 판매가 약 100,000~150,000원. 재료비 약 30,000~50,000원. 건당 마진 약 70,000~100,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란 1회(2cc) :</span> 판매가 약 300,000원. 건당 마진 약 150,000~200,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 1회(2cc) :</span> 판매가 약 264,000원. 건당 마진 약 130,000~170,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-4">3회 1코스 패키지로 운영하면, 1명의 환자가 3~4주 간격으로 3회 내원한다. 리쥬란 기준 1코스 매출 약 900,000원, 마진 약 450,000~600,000원이다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명의 프로그램 환자만 확보해도 400만 원 이상 매출이 발생한다. 소수 환자로도 의미 있는 매출 구조가 만들어지는 것이다.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-09",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 스킨부스터 제품 1~2개 (필수) :</span> 물광주사 계열 + 리쥬란 또는 쥬베룩 중 1종. 초기 재고 비용 약 55,000~110,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 30~32G 바늘 (필수) :</span> 미세 주입용.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광기/메조건 (선택) :</span> 200만~500만 원. 초기에는 수동 주입으로 시작 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림 (권장) :</span> EMLA 크림.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 0원 (메디스테이션 제공).</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 약 55,000~110,000원 (물광기 제외). 물광기 포함 시 200만~500만 원 추가.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-10",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러 대비 사고 리스크가 낮은 편이다. 진피층 주입이므로 혈관폐색 위험이 필러보다 현저히 낮다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 멍·부종 (흔함) :</span> 다점 주입 특성상 미세 멍이 보톡스보다 많을 수 있다. 2~5일 내 소실. 시술 전 반드시 고지.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 구슬 형태 돌출 (가끔) :</span> 주입이 너무 얕을 때 발생. 대부분 1~2주 내 자연 흡수.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 다점 주입이므로 무균 조작이 중요.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 특이 반응 — 지연성 결절 (드묾) :</span> PDLLA 성분 특성상 시술 후 수주~수개월 뒤 결절이 나타날 수 있다. 환자에게 사전 고지 필수.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 전 필수 고지 사항</h4>
+      <p class="text-[#333] leading-relaxed mb-8">물광주사·리쥬란은 시술 직후부터 피부 보습감을 느낄 수 있으나, 탄력 개선 등 본격적 효과는 2~3회 시술 후 나타난다. 쥬베룩은 효과 발현이 4~6주 후로 느리다. 3회 1코스를 완료해야 의미 있는 결과를 기대할 수 있다는 점을 반드시 안내하라.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-11",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
       <p class="text-[#333] leading-relaxed mb-4">보톡스 없이 필러를 도입하지 않듯, 보톡스와 필러 없이 스킨부스터를 도입하지 않는다. 이 순서는 원칙이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 해부학적 고유 영역이 아니다. 하지만 보톡스와 필러로 미용 시술의 기반을 다진 치과에게, 스킨부스터는 세 번째 수익의 축이 된다. 프로그램 기반 구조(3회 1코스)가 만들어내는 예측 가능한 매출, 소수 환자로도 의미 있는 마진, 그리고 환자가 제품명을 지정해서 찾아오는 지명 구매 구조 — 이 세 가지가 스킨부스터를 치과의 미용시술 라인업에서 빼놓을 수 없는 이유다.</p>
       <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명. 그것이면 충분하다. 그 5명을 만드는 것은 외부 마케팅이 아니라, 이미 보톡스와 필러로 신뢰를 쌓은 기존 환자에게 "피부도 함께 관리해 보시겠어요?"라는 한마디다.</p>
     `,
   },
@@ -481,8 +533,7 @@ export const step1Data: Section[] = [
       <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4장. 실리프팅 (Thread Lifting) — 지붕은 기둥을 세운 뒤에 올린다</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 시술 난이도가 가장 높다. 치과의 고유 영역이 아니며, 결과 편차가 크고, 환자 기대치 관리가 어렵다. 1차 런칭 메인 시술로 절대 적합하지 않다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">이 점을 처음부터 명확히 해둔다. 보톡스가 문을 열고, 필러가 기둥을 세우고, 스킨부스터로 층을 쌓은 후에야 실리프팅이라는 지붕을 올릴 수 있다. 이 순서를 건너뛰면 구조가 무너진다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 시술 난이도가 가장 높다. 치과의 고유 영역이 아니며, 결과 편차가 크고, 환자 기대치 관리가 어렵다. 1차 런칭 메인 시술로 절대 적합하지 않다. 보톡스가 문을 열고, 필러가 기둥을 세우고, 스킨부스터로 층을 쌓은 후에야 실리프팅이라는 지붕을 올릴 수 있다. 이 순서를 건너뛰면 구조가 무너진다.</p>
       <p class="text-[#333] leading-relaxed mb-8">그럼에도 이 챕터에서 실리프팅을 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다. 리스크가 높은 만큼 리턴도 크다. 관건은 "할 것인가 말 것인가"가 아니라, "언제, 어떤 조건에서 시작할 것인가"다.</p>
     `,
   },
@@ -490,30 +541,149 @@ export const step1Data: Section[] = [
     id: "s1-1-4-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">도입 전제 조건</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 + 스킨부스터 안정</span></p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 별도 고급 교육 이수</span> : 카데바(해부 실습체) 실습 포함 전문 교육 반드시 이수.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 경험 축적</span> : 모노실부터 시작하여 최소 50케이스 이상 쌓은 후 코그실로.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 시술 주체</span> : 대표원장 직접 시술만 가능.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 생체흡수성 실(Thread)을 피부 아래에 삽입하여 처진 조직을 물리적으로 끌어올리고, 동시에 실 주변으로 콜라겐 재생을 유도하는 시술이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실의 유형</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (Mono Thread) :</span> 돌기 없는 매끈한 실이다. 리프팅 효과보다 콜라겐 자극·피부 탄력 개선이 주 목적이다. 난이도가 낮아 실리프팅의 첫 단계로 적합하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 코그실 (Cog Thread) :</span> 실 표면에 돌기(코그, 바브)가 있어 조직을 물리적으로 끌어올린다. 리프팅 효과가 명확한 대신, 시술 난이도와 합병증 위험이 모노실보다 높다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실 재질별 분류</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO (폴리디옥사논) :</span> 대표 제품: 민트실 (360도 코그). 분해 시작 3개월, 효과 지속 6~9개월.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PLLA (폴리-L-유산) :</span> 대표 제품: 실루엣소프트 (콘 구조). 분해 시작 6개월, 효과 지속 1~2년.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ PCL (폴리카프로락톤) :</span> 대표 제품: 미스코. 분해 시작 12개월 이상, 효과 지속 2~3년.</p>
     `,
   },
   {
     id: "s1-1-4-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">수익성 분석</h3>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 1회 :</span> 판매가 약 1,000,000~1,500,000원. 건당 마진 약 800,000~1,300,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스(건당 마진 2~6만 원)의 20배, 필러(건당 마진 10만 원)의 10배에 달하는 건당 마진이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">다만, 이 수익은 "잘 했을 때"의 수치다. 결과 편차가 크고 기대치 관리가 어려운 시술이기 때문에, 수익성만 보고 덤비면 안 된다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위와 실 개수에 따라 30분~1시간.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 국소마취 필수. 삽입 과정에서 당김과 이물감이 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 3~7일. 멍 가능. 입 크게 벌리기·과도한 표정 2주간 자제.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시 리프팅 효과 + 1~3개월에 걸쳐 콜라겐 재생으로 점진적 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 혈액응고장애.</p>
     `,
   },
   {
     id: "s1-1-4-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅에서 치과의 해부학적 우위는 보톡스만큼 직접적이지는 않다. 하지만 무시할 수 없는 연결점이 존재한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 주요 시술 부위인 하안면부 — 턱선, 볼처짐, 입꼬리 — 는 치과의사가 일상적으로 다루는 해부학적 영역과 겹친다. 안면신경(VII)의 분지, 이하선관(Parotid duct), 안면동맥의 주행 경로에 대한 이해는 실의 삽입 경로를 설계하고 합병증을 피하는 데 직접적으로 기여한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">특히 하안면 리프팅은 치과의 기존 시술(보톡스 교근, 필러 턱끝·입꼬리)과 시너지가 강하다. "보톡스로 사각턱을 줄이고, 필러로 턱끝을 세우고, 실리프팅으로 턱선을 당긴다" — 이 하안면 토탈 솔루션은 치과에서만 원스톱으로 제공할 수 있는 동선이다.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-05",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 도입 전략은 보톡스·필러와 근본적으로 다르다. "시작할 자격이 갖춰졌는가"의 문제다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 + 스킨부스터 안정 :</span> 세 분야 모두 안정적으로 운영되고 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 별도 고급 교육 이수 :</span> 카데바(해부 실습체) 실습을 포함한 전문 교육을 반드시 이수해야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 경험 축적 :</span> 모노실부터 시작하여 최소 50케이스 이상의 경험을 쌓은 후 코그실로 넘어가라.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 시술 주체 :</span> 대표원장 직접 시술만 가능하다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">단계적 접근</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 모노실 :</span> 콜라겐 자극·피부 탄력 개선 목적. 훈련 단계다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 코그실 하안면 :</span> 턱선, 볼처짐 리프팅. 모노실 50케이스 이상 축적 후 진입.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 코그실 중안면 :</span> 광대·볼 리프팅. 고난도 영역.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-06",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (10~20본) :</span> 200,000~400,000원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인] 시장 중간값 정밀 데이터 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 (양측 6~10본) :</span> 500,000~1,500,000원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인] 재질별·제품별 세분화 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 풀페이스 :</span> 1,000,000~3,000,000원 이상.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 프리미엄 시장 가격대 확인 필요.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-07",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 단계 — PDO 모노실 :</span> 가장 보편적이고 안전하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 단계 — PDO 코그실 (민트실 360도 코그 등) :</span> 초기 코그실 도입에 가장 적합하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 프리미엄 확장 — PLLA (실루엣소프트) 또는 PCL (미스코).</span></p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실리프팅 전용 캐뉼라/니들 :</span> 제품에 포함되는 경우가 대부분.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제 :</span> 리도카인 + 에피네프린. 기존 치과 재고 활용 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 :</span> 실리프팅은 침습 시술이다. 무균 조작 원칙 철저.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 실리프팅 전용.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 제품별 공급가(본당 단가) 데이터 필요.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-08",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 도입 난이도가 가장 높다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">교육 경로</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 이론 교육 :</span> 안면 해부학(SMAS층, 안면신경 분지, 이하선관), 실 재질별 특성.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 카데바 실습 :</span> 반드시 거쳐야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 모노실 임상 :</span> 50케이스 이상 축적.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 4단계 — 코그실 임상 :</span> 전문가 감독 하에 초기 시술 진행.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 핵심 주의사항</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 삽입 깊이 :</span> 너무 얕으면 실이 표면에 비치거나 돌출. 너무 깊으면 리프팅 효과가 없다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 텐션 조절 :</span> 과도한 텐션은 딤플(피부 함몰)과 부자연스러운 표정을 만든다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 실의 개수, 삽입 경로, 텐션을 양측 동일하게 맞추는 것이 핵심이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 출구점 관리 :</span> 실 삽입 후 출구점에서 실이 돌출되지 않도록 꼼꼼히 처리.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-09",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 건당 객단가가 가장 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 1회 :</span> 판매가 약 1,000,000~1,500,000원. 재료비 약 100,000~200,000원. 건당 마진 약 800,000~1,300,000원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-4">[건주확인] 재료비 범위 정밀 확인 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 월 5건 시술 시 :</span> 매출 약 545만 원, 마진 약 450만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-8">보톡스의 20배, 필러의 10배에 달하는 건당 마진이다. 다만, 결과 편차가 크고 기대치 관리가 어렵기 때문에, 불만족 환자가 발생하면 재시술·환불·평판 훼손 비용이 마진을 상쇄할 수 있다.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-10",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 모노실 (학습용) :</span> [건주확인] 본당 단가·1세트 비용 확인 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 코그실 :</span> [건주확인] 본당 단가·1세트 비용 확인 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제 (필수) :</span> 기존 치과 재고 활용 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 (필수). 동의서 양식 (필수). 시술 전후 사진 촬영 장비 (필수).</span></p>
+      <p class="text-[#333] leading-relaxed mb-2">합계 : 약 35만~90만 원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 제품 확정 후 정밀 산출 필요.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-11",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 딤플 — 피부 함몰 (가끔) :</span> 텐션 과도 또는 삽입 깊이 불균일 시 발생. 대부분 2~4주 내 자연 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 비대칭 (가끔) :</span> 좌우 차이에서 발생. 2주 후 최종 확인, 필요 시 보정.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실 돌출 (드묾) :</span> 삽입 깊이 너무 얕을 때. 돌출 부분 절단 제거.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 발적·열감 지속 시 항생제 투여.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 기대치 불일치 (흔함) :</span> 실리프팅의 가장 흔한 '합병증'이다. 시술 전 반복 안내 필수.</p>
+    `,
+  },
+  {
+    id: "s1-1-4-12",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
       <p class="text-[#333] leading-relaxed mb-4">실리프팅은 미용치과의 지붕이다. 건당 마진이 보톡스의 20배, 필러의 10배에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">충분한 교육(카데바 실습 포함), 단계적 경험 축적(모노실 50케이스+), 철저한 기대치 관리, 빈틈없는 기록. 이 네 가지를 갖추지 않은 상태에서 건당 마진에 눈이 멀어 뛰어드는 것은 권하지 않는다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">하지만 이 지붕은 기둥 없이 올릴 수 없다. 충분한 교육(카데바 실습 포함), 단계적 경험 축적(모노실 50케이스+), 철저한 기대치 관리, 빈틈없는 기록. 이 네 가지를 갖추지 않은 상태에서 건당 마진에 눈이 멀어 뛰어드는 것은 권하지 않는다.</p>
     `,
   },
 
@@ -532,21 +702,103 @@ export const step1Data: Section[] = [
     id: "s1-1-5-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">장비별 투자·수익 구조</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 슈링크 유니버스 (HIFU) :</span> 장비가 1,000~2,000만 원. 시술 단가 10~15만 원. 건당 마진 약 7~12만 원. 투자 회수(월 10건) 약 12개월.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리프테라V (HIFU) :</span> 장비가 800~1,500만 원. 투자 회수(월 10건) 약 12개월.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 인모드 (RF) :</span> 장비가 3,000~4,500만 원. 투자 회수(월 10건) 약 18개월.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 울쎄라 프라임 (HIFU) :</span> 장비가 5,000만~1억 원. 초기 치과 대상이 아니다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">치과 초기 도입 권장 — 슈링크 유니버스. 투자 대비 회수 기간이 가장 짧고, 보톡스 재방문 환자에게 크로스셀이 가장 용이하다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비는 에너지(초음파, 고주파 등)를 피부 깊숙이 전달하여 콜라겐 수축과 재생을 유도하는 비침습 또는 최소침습 시술이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">주요 장비 원리</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ HIFU (고강도 집속 초음파) :</span> 초음파 에너지를 피부 특정 깊이에 집중시켜 열 응고점을 만든다. 슈링크, 리프테라, 울쎄라가 대표적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ RF (고주파) :</span> 고주파 에너지로 진피층과 피하지방층에 열을 전달. 인모드가 대표적이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 30분~1시간 30분.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> HIFU는 뼈 근처에서 통증감. RF는 열감. 표면마취 또는 국소마취 선택적 적용.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 대부분 즉시 일상 복귀. 부종·발적 1~3일.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시 약간의 타이트닝 + 1~3개월에 걸쳐 점진적 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 금속 임플란트(RF), 피부 감염, 심박조율기 착용자(RF).</p>
     `,
   },
   {
     id: "s1-1-5-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">이 챕터의 핵심 메시지는 처음부터 끝까지 하나다. 감이 아니라 숫자로 판단하라.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">장비가 얼마인가. 카트리지 단가가 얼마인가. 내 치과에서 월 몇 건 시술이 현실적인가. 투자 회수까지 몇 개월이 걸리는가. 이 네 가지 숫자가 도입 전에 서 있지 않으면, 수천만 원짜리 장비가 진료실 한켠에서 먼지만 쌓이는 장식품이 될 수 있다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-8">리프팅 장비에서 치과만의 해부학적 우위는 크지 않다. 하지만 구조적 이점은 존재한다. 첫째, 기존 미용 환자 기반. 둘째, 하안면 토탈 솔루션이다.</p>
+    `,
+  },
+  {
+    id: "s1-1-5-04",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비 도입은 '시술 전략'이 아니라 '투자 전략'이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 안정 운영 :</span> 미용 환자 기반이 없는 상태에서 장비를 먼저 도입하면, 장비는 있는데 환자가 없는 상황이 된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 월 최소 환자 수 예측.</span></p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ ROI 계산 완료 :</span> 장비가, 카트리지 단가, 시술 단가, 예상 월 건수, 투자 회수 기간 — 이 다섯 가지 숫자가 도입 전에 반드시 서 있어야 한다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">치과 초기 도입 권장 — 슈링크 유니버스</p>
+    `,
+  },
+  {
+    id: "s1-1-5-05",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 슈링크 유니버스 (HIFU) :</span> 장비가 1,000~2,000만 원. 시술 단가 10~15만 원. 투자 회수(월 10건) 약 12개월.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리프테라V (HIFU) :</span> 장비가 800~1,500만 원. 시술 단가 8~12만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 인모드 (RF) :</span> 장비가 3,000~4,500만 원. 시술 단가 15~25만 원. 투자 회수(월 10건) 약 18개월.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 울쎄라 프라임 (HIFU) :</span> 장비가 5,000만~1억 원. 시술 단가 100~170만 원.</p>
+    `,
+  },
+  {
+    id: "s1-1-5-06",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">장비 선택 시 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장비가 vs 렌탈.</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 카트리지/팁 단가.</span></p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인] 장비별 카트리지 단가 정밀 비교표 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 유지보수 비용. 인허가·안전 인증. 업그레이드 경로.</span></p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mt-6 mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비의 시술 난이도 자체는 중간 수준이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 주의사항</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 에너지 과다 :</span> 보수적 세팅으로 시작.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 뼈 근처 통증 :</span> HIFU는 뼈에 가까운 부위에서 통증이 강하다. 사전 고지 필수.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 간격 :</span> HIFU는 최소 3개월 간격.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기 부위 :</span> 갑상선 위, 안구 주변(HIFU), 금속 임플란트 부위(RF).</p>
+    `,
+  },
+  {
+    id: "s1-1-5-07",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실전 시뮬레이션 — 슈링크 유니버스 기준</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장비 투자 1,500만 원, 시술 단가 12만 원, 카트리지 비용 3만 원, 건당 마진 9만 원.</span></p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 월 15건 시술 시 :</span> 월 마진 135만 원. 투자 회수 약 11개월.</p>
+      <p class="text-[#333] leading-relaxed mb-8">현실 체크 — 보톡스 월 50건 이상이면 그중 20~30%가 리프팅에 관심. 보톡스 월 10건 미만이면 비현실적이다.</p>
+    `,
+  },
+  {
+    id: "s1-1-5-08",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리프팅 장비 1대 (필수) :</span> 슈링크 유니버스 권장. 800~2,000만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 카트리지/팁 초기 재고.</span></p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인]</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림. 동의서 양식. 시술 전후 사진 촬영 장비.</span></p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-6">합계 : 1,000만~2,000만 원.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증·불편감 (흔함).</span> <span class="text-[#1a1a1a] font-bold">▶ 발적·부종 (흔함).</span> <span class="text-[#1a1a1a] font-bold">▶ 화상 (드묾).</span></p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 신경 손상 (극히 드묾).</span> <span class="text-[#1a1a1a] font-bold">▶ 지방 위축 (드묾).</span> <span class="text-[#1a1a1a] font-bold">▶ 기대치 불일치 (가끔).</span></p>
+    `,
+  },
+  {
+    id: "s1-1-5-09",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">리프팅 장비는 미용치과의 다섯 번째 확장이다. 감이 아니라 숫자로 판단하라.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">장비가, 카트리지 단가, 월 시술 건수, 투자 회수 기간 — 이 네 가지 숫자가 도입 전에 서 있지 않으면 수천만 원짜리 장비가 먼지만 쌓이는 장식품이 될 수 있다.</p>
     `,
   },
 
@@ -565,20 +817,91 @@ export const step1Data: Section[] = [
     id: "s1-1-6-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">검토 순위</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 아쿠아필링기 :</span> 장비가 200~500만 원. 보톡스·필러 환자에게 +3~5만 원 관리 메뉴로 추가.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — LDM :</span> 장비가 2,000~4,000만 원. 스킨부스터와 병행.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — IPL :</span> 장비가 1,500~3,000만 원. 피부과와의 직접 경쟁이 불가피.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 4순위 — 포텐자 :</span> 장비가 3,000~5,000만 원. 치과에서 최우선으로 검토할 장비는 아니다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">레이저/피부 장비는 다양한 파장의 빛 에너지 또는 물리적 방법을 이용하여 피부의 색소, 혈관, 모공, 질감 문제를 개선하는 시술의 총칭이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">치과에서 현실적으로 검토 가능한 장비 유형</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 아쿠아필링기 :</span> 물과 용액을 이용한 피부 딥클렌징·각질 제거.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ LDM :</span> 초음파 진동으로 약물 흡수를 촉진하는 장비.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ IPL :</span> 광선을 이용한 색소·홍조·혈관 치료.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 포텐자 :</span> 미세침 + 고주파로 모공, 흉터, 피부 탄력 개선.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 20분~1시간.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 아쿠아필링 거의 없음. IPL 가벼운 따끔거림. 포텐자 표면마취 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 아쿠아필링·LDM 다운타임 없음. IPL 발적 1~2일. 포텐자 3~5일.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 아쿠아필링 즉시. IPL·포텐자 1~4주 점진적 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> IPL — 광과민증, 최근 태닝, 임산부. 포텐자 — 켈로이드 체질, 피부 감염.</p>
     `,
   },
   {
     id: "s1-1-6-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">'있으면 좋지만 없어도 되는' 분야다. 치과의 미용시술 라인업에서 마지막에 올라가는 선반이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">이것을 넘어서는 기대를 갖고 수천만 원짜리 IPL이나 포텐자를 도입한다면, 그것은 치과의 미용시술 확장이 아니라 피부과와의 정면 경쟁이 된다. 그리고 그 경쟁에서 치과가 우위를 점하기는 어렵다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-8">이 분야에서 치과만의 해부학적 우위는 사실상 없다. 치과가 접근하는 유일한 논리는 기존 미용 시술의 부가가치 향상이다.</p>
+    `,
+  },
+  {
+    id: "s1-1-6-04",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 + 스킨부스터 안정 운영.</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리프팅 장비 도입 여부 검토 완료.</span></p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 추가 투자 여력 확인.</span></p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">검토 순위</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 아쿠아필링기 (200~500만 원).</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — LDM (2,000~4,000만 원).</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — IPL (1,500~3,000만 원).</span></p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 4순위 — 포텐자 (3,000~5,000만 원).</span></p>
+    `,
+  },
+  {
+    id: "s1-1-6-05",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 아쿠아필링 :</span> 시술 단가 30,000~50,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ LDM :</span> 시술 단가 30,000~50,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ IPL :</span> 시술 단가 50,000~150,000원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인]</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 포텐자 :</span> 시술 단가 200,000~400,000원.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인]</p>
+    `,
+  },
+  {
+    id: "s1-1-6-06",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5~8. 제품/장비 가이드, 도입 난이도, 수익성 분석, 준비사항</h3>
+      <p class="text-[#333] leading-relaxed mb-6">치과 초기 도입 권장 — 아쿠아필링기. 200~500만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-6">아쿠아필링·LDM은 시술 난이도가 가장 낮다. 스탭 교육 후 운영 가능.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실전 시뮬레이션 — 아쿠아필링기 기준</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 장비 투자 300만 원, 시술 단가 30,000원, 소모품 비용 약 5,000~8,000원/건.</span></p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인]</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 약 22,000~25,000원.</span></p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 월 20건 시술 시 :</span> 월 추가 매출 60만 원. 투자 회수 약 5~7개월.</p>
+      <p class="text-[#333] leading-relaxed mb-8">초기 주의사항: IPL 화상, 포텐자 감염, 태닝 후 IPL 금기.</p>
+    `,
+  },
+  {
+    id: "s1-1-6-07",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 화상 (드묾 — IPL).</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 색소 침착 악화 (드묾 — IPL).</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾 — 포텐자).</span></p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 일시적 발적·부종 (흔함).</span></p>
+    `,
+  },
+  {
+    id: "s1-1-6-08",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
+      <p class="text-[#333] leading-relaxed mb-4">'있으면 좋지만 없어도 되는' 분야다. 아쿠아필링기를 300만 원에 도입, 보톡스·필러 시술 환자에게 +3만 원 관리 메뉴로 추가 제안하여, 월 20건 x 3만 원 = 60만 원 추가 매출. 5개월 만에 장비가 회수.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">이것을 넘어서는 기대를 갖고 수천만 원짜리 IPL이나 포텐자를 도입한다면, 그것은 치과의 미용시술 확장이 아니라 피부과와의 정면 경쟁이 된다.</p>
     `,
   },
 
