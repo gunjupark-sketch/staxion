@@ -534,156 +534,148 @@ export const step1Data: Section[] = [
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">4장. 실리프팅 (Thread Lifting) — 지붕은 기둥을 세운 뒤에 올린다</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
       <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 시술 난이도가 가장 높다. 치과의 고유 영역이 아니며, 결과 편차가 크고, 환자 기대치 관리가 어렵다. 1차 런칭 메인 시술로 절대 적합하지 않다. 보톡스가 문을 열고, 필러가 기둥을 세우고, 스킨부스터로 층을 쌓은 후에야 실리프팅이라는 지붕을 올릴 수 있다. 이 순서를 건너뛰면 구조가 무너진다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">그럼에도 이 챕터에서 실리프팅을 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다. 리스크가 높은 만큼 리턴도 크다. 관건은 "할 것인가 말 것인가"가 아니라, "언제, 어떤 조건에서 시작할 것인가"다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">그럼에도 이 챕터에서 실리프팅을 다루는 이유는 분명하다. 1회 시술 객단가가 수십만 원에서 수백만 원에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이기 때문이다. 리스크가 높은 만큼 리턴도 크다. 관건은 "할 것인가 말 것인가"가 아니라, "언제, 어떤 조건에서 시작할 것인가"다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 생체흡수성 실(Thread)을 피부 아래에 삽입하여 처진 조직을 물리적으로 끌어올리는 시술이다. 실이 조직을 당기는 물리적 리프팅 효과와, 실 주변으로 콜라겐 재생을 유도하는 이중 효과를 갖는다. 결과가 즉시 눈에 보이지만, 그만큼 기대치 관리가 핵심이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위와 실 개수에 따라 30분~1시간.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 마취 :</span> 국소마취 필수. 삽입 과정에서 당김과 이물감이 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 3~7일. 멍 가능. 입 크게 벌리기와 과도한 표정은 2주간 자제.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시 리프팅 효과가 나타나고, 1~3개월에 걸쳐 콜라겐 재생으로 점진적 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 혈액응고장애.</p>
     `,
   },
   {
     id: "s1-1-4-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 생체흡수성 실(Thread)을 피부 아래에 삽입하여 처진 조직을 물리적으로 끌어올리고, 동시에 실 주변으로 콜라겐 재생을 유도하는 시술이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실의 유형</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (Mono Thread) :</span> 돌기 없는 매끈한 실이다. 리프팅 효과보다 콜라겐 자극·피부 탄력 개선이 주 목적이다. 난이도가 낮아 실리프팅의 첫 단계로 적합하다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 코그실 (Cog Thread) :</span> 실 표면에 돌기(코그, 바브)가 있어 조직을 물리적으로 끌어올린다. 리프팅 효과가 명확한 대신, 시술 난이도와 합병증 위험이 모노실보다 높다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실의 유형 — 무엇을 피부 아래에 넣는가</h4>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅에 사용하는 실은 크게 모노실과 코그실로 나뉜다. 둘의 차이는 실 표면 구조에 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (Mono Thread) :</span> 돌기 없는 매끈한 실이다. 리프팅 효과보다 콜라겐 자극과 피부 탄력 개선이 주 목적이다. 난이도가 낮아 1단계 훈련용으로 적합하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 코그실 (Cog Thread) :</span> 실 표면에 돌기(코그, 바브)가 있어 조직을 물리적으로 끌어올린다. 리프팅 효과가 명확한 대신 시술 난이도와 합병증 위험이 높다. 2단계 이후에 진입한다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">실 재질별 분류</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO (폴리디옥사논) :</span> 대표 제품: 민트실 (360도 코그). 분해 시작 3개월, 효과 지속 6~9개월.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PLLA (폴리-L-유산) :</span> 대표 제품: 실루엣소프트 (콘 구조). 분해 시작 6개월, 효과 지속 1~2년.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ PCL (폴리카프로락톤) :</span> 대표 제품: 미스코. 분해 시작 12개월 이상, 효과 지속 2~3년.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO (폴리디옥사논) :</span> 효과 지속 6~9개월. 초기 도입에 가장 보편적인 재질이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PLLA (폴리-L-유산) :</span> 효과 지속 1~2년. 콜라겐 재생 효과가 상대적으로 강하다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ PCL (폴리카프로락톤) :</span> 효과 지속 2~3년. 프리미엄 포지셔닝에 적합하다.</p>
     `,
   },
   {
     id: "s1-1-4-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위와 실 개수에 따라 30분~1시간.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 국소마취 필수. 삽입 과정에서 당김과 이물감이 있다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 3~7일. 멍 가능. 입 크게 벌리기·과도한 표정 2주간 자제.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시 리프팅 효과 + 1~3개월에 걸쳐 콜라겐 재생으로 점진적 개선.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 혈액응고장애.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 주요 시술 부위는 하안면부다. 턱선, 볼처짐, 입꼬리 — 치과의사가 일상적으로 다루는 해부학적 영역과 겹친다. 안면신경(VII)의 분지, 이하선관(Parotid duct), 안면동맥의 주행 경로에 대한 이해는 실의 삽입 경로를 설계하고 합병증을 피하는 데 직접 기여한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">하안면 리프팅은 치과의 기존 시술과 시너지가 강하다. 보톡스로 사각턱을 줄이고, 필러로 턱끝을 세우고, 실리프팅으로 턱선을 당긴다. 이 하안면 토탈 솔루션은 치과에서만 원스톱으로 제공할 수 있는 동선이다.</p>
     `,
   },
   {
     id: "s1-1-4-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅에서 치과의 해부학적 우위는 보톡스만큼 직접적이지는 않다. 하지만 무시할 수 없는 연결점이 존재한다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 주요 시술 부위인 하안면부 — 턱선, 볼처짐, 입꼬리 — 는 치과의사가 일상적으로 다루는 해부학적 영역과 겹친다. 안면신경(VII)의 분지, 이하선관(Parotid duct), 안면동맥의 주행 경로에 대한 이해는 실의 삽입 경로를 설계하고 합병증을 피하는 데 직접적으로 기여한다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">특히 하안면 리프팅은 치과의 기존 시술(보톡스 교근, 필러 턱끝·입꼬리)과 시너지가 강하다. "보톡스로 사각턱을 줄이고, 필러로 턱끝을 세우고, 실리프팅으로 턱선을 당긴다" — 이 하안면 토탈 솔루션은 치과에서만 원스톱으로 제공할 수 있는 동선이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 도입 전략은 보톡스나 필러와 근본적으로 다르다. "시작할 자격이 갖춰졌는가"의 문제다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건 4가지</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 기본 3개 분야 안정 :</span> 보톡스, 필러, 스킨부스터 모두 안정적으로 운영되고 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 카데바 실습 이수 :</span> 해부 실습체를 활용한 전문 교육을 반드시 거쳐야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 50케이스 축적 :</span> 모노실로 시작하여 최소 50케이스 이상의 경험을 쌓은 후 코그실로 넘어간다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 대표원장 직접 시술 :</span> 실리프팅은 위임 시술이 불가능하다. 대표원장만 직접 시술한다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">3단계 로드맵</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 모노실 :</span> 콜라겐 자극과 피부 탄력 개선이 목적이다. 훈련 단계다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 코그실 하안면 :</span> 턱선, 볼처짐 리프팅. 모노실 50케이스 이상 축적 후 진입한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 코그실 중안면 :</span> 광대와 볼 리프팅. 고난도 영역이다.</p>
     `,
   },
   {
     id: "s1-1-4-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅의 도입 전략은 보톡스·필러와 근본적으로 다르다. "시작할 자격이 갖춰졌는가"의 문제다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">도입 전제 조건</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 + 필러 + 스킨부스터 안정 :</span> 세 분야 모두 안정적으로 운영되고 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 별도 고급 교육 이수 :</span> 카데바(해부 실습체) 실습을 포함한 전문 교육을 반드시 이수해야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 경험 축적 :</span> 모노실부터 시작하여 최소 50케이스 이상의 경험을 쌓은 후 코그실로 넘어가라.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 시술 주체 :</span> 대표원장 직접 시술만 가능하다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">단계적 접근</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 모노실 :</span> 콜라겐 자극·피부 탄력 개선 목적. 훈련 단계다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 코그실 하안면 :</span> 턱선, 볼처짐 리프팅. 모노실 50케이스 이상 축적 후 진입.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 코그실 중안면 :</span> 광대·볼 리프팅. 고난도 영역.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 가격 구간</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (10~20본) :</span> 20만~40만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 (양측 6~10본) :</span> 50만~150만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 코그실 풀페이스 :</span> 100만~300만 원 이상.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 특수변수</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 부위별 패키지 :</span> 본수가 아닌 부위 단위로 패키지를 구성한다. 환자에게 본수 계산을 시키지 않는다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 재시술 할인 :</span> 6~12개월 후 재시술 시 10~15% 할인을 적용하면 재방문율이 올라간다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 하안면 토탈 패키지 :</span> 보톡스+필러+실리프팅을 묶어 200만 원 이상으로 설계한다. 치과만 가능한 원스톱 동선이다.</p>
     `,
   },
   {
     id: "s1-1-4-06",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 (10~20본) :</span> 200,000~400,000원.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인] 시장 중간값 정밀 데이터 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 (양측 6~10본) :</span> 500,000~1,500,000원.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-2">[건주확인] 재질별·제품별 세분화 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 풀페이스 :</span> 1,000,000~3,000,000원 이상.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 프리미엄 시장 가격대 확인 필요.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">단계별 추천 제품</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 단계 :</span> PDO 모노실. 가장 보편적이고 안전하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 단계 :</span> PDO 코그실 (민트실 360도 코그 등). 초기 코그실 도입에 가장 적합하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 프리미엄 :</span> PLLA 또는 PCL. 효과 지속 기간이 길어 프리미엄 포지셔닝에 활용한다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비 및 도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 전용 캐뉼라/니들 :</span> 제품에 동봉되는 경우가 대부분이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제 :</span> 리도카인 + 에피네프린. 기존 치과 재고를 활용할 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 :</span> 실리프팅은 침습 시술이다. 무균 조작 원칙을 철저히 지킨다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 전용 동의서 :</span> 실리프팅 전용 동의서를 별도로 준비한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 촬영 장비 :</span> 시술 전후 사진 기록은 필수다.</p>
     `,
   },
   {
     id: "s1-1-4-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 모노실 단계 — PDO 모노실 :</span> 가장 보편적이고 안전하다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 단계 — PDO 코그실 (민트실 360도 코그 등) :</span> 초기 코그실 도입에 가장 적합하다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 프리미엄 확장 — PLLA (실루엣소프트) 또는 PCL (미스코).</span></p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실리프팅 전용 캐뉼라/니들 :</span> 제품에 포함되는 경우가 대부분.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제 :</span> 리도카인 + 에피네프린. 기존 치과 재고 활용 가능.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 :</span> 실리프팅은 침습 시술이다. 무균 조작 원칙 철저.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 실리프팅 전용.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 제품별 공급가(본당 단가) 데이터 필요.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 도입 난이도가 가장 높다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">교육 4단계</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 이론 :</span> 안면 해부학(SMAS층, 안면신경 분지, 이하선관), 실 재질별 특성을 학습한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 카데바 실습 :</span> 반드시 거쳐야 한다. 이 단계를 건너뛰면 안 된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 모노실 임상 :</span> 50케이스 이상 축적한다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 4단계 — 코그실 임상 :</span> 전문가 감독 하에 초기 시술을 진행한다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">핵심 주의사항 4가지</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 삽입 깊이 :</span> 너무 얕으면 실이 표면에 비치거나 돌출된다. 너무 깊으면 리프팅 효과가 없다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 텐션 조절 :</span> 과도한 텐션은 딤플(피부 함몰)과 부자연스러운 표정을 만든다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 실의 개수, 삽입 경로, 텐션을 양측 동일하게 맞추는 것이 핵심이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 출구점 관리 :</span> 실 삽입 후 출구점에서 실이 돌출되지 않도록 꼼꼼히 처리한다.</p>
     `,
   },
   {
     id: "s1-1-4-08",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 도입 난이도가 가장 높다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">교육 경로</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 이론 교육 :</span> 안면 해부학(SMAS층, 안면신경 분지, 이하선관), 실 재질별 특성.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 카데바 실습 :</span> 반드시 거쳐야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 모노실 임상 :</span> 50케이스 이상 축적.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 4단계 — 코그실 임상 :</span> 전문가 감독 하에 초기 시술 진행.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 핵심 주의사항</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 삽입 깊이 :</span> 너무 얕으면 실이 표면에 비치거나 돌출. 너무 깊으면 리프팅 효과가 없다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 텐션 조절 :</span> 과도한 텐션은 딤플(피부 함몰)과 부자연스러운 표정을 만든다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 실의 개수, 삽입 경로, 텐션을 양측 동일하게 맞추는 것이 핵심이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 출구점 관리 :</span> 실 삽입 후 출구점에서 실이 돌출되지 않도록 꼼꼼히 처리.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 1회 :</span> 판매가 100만~150만 원. 재료비 10만~20만 원. 건당 마진 약 80만~130만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 월 5건 시술 시 :</span> 마진 약 450만 원.</p>
+      <p class="text-[#333] leading-relaxed mb-8">건당 마진이 보톡스의 약 20배에 달한다. 다만 비대칭 리스크가 존재한다. 환불 1건이 발생하면 보톡스 20건의 마진이 날아간다. 높은 마진의 이면에는 높은 결과 편차가 있다.</p>
     `,
   },
   {
     id: "s1-1-4-09",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 6개 분야 중 건당 객단가가 가장 높다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 코그실 하안면 1회 :</span> 판매가 약 1,000,000~1,500,000원. 재료비 약 100,000~200,000원. 건당 마진 약 800,000~1,300,000원.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-4">[건주확인] 재료비 범위 정밀 확인 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 월 5건 시술 시 :</span> 매출 약 545만 원, 마진 약 450만 원.</p>
-      <p class="text-[#333] leading-relaxed mb-8">보톡스의 20배, 필러의 10배에 달하는 건당 마진이다. 다만, 결과 편차가 크고 기대치 관리가 어렵기 때문에, 불만족 환자가 발생하면 재시술·환불·평판 훼손 비용이 마진을 상쇄할 수 있다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 모노실 (학습용)</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 코그실</span></p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제</span> — 기존 치과 재고 활용 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 / 동의서 양식 / 촬영 장비</span></p>
+      <p class="text-[#333] leading-relaxed mb-6">합계 약 35만~90만 원 + 카데바 교육비 별도.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">주요 부작용</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 딤플 (가끔) :</span> 텐션 과도 또는 삽입 깊이 불균일 시 발생한다. 대부분 2~4주 내 자연 개선된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 비대칭 (가끔) :</span> 좌우 차이에서 발생한다. 2주 후 최종 확인하고 필요 시 보정한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실 돌출 (드묾) :</span> 삽입 깊이가 너무 얕을 때 발생한다. 돌출 부분을 절단 제거한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 발적과 열감이 지속되면 항생제를 투여한다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 기대치 불일치 (흔함) :</span> 실리프팅의 가장 흔한 '합병증'이다. 시술 전 반복 안내가 필수다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">동의서 고지사항</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 타임라인 :</span> 즉시 리프팅 + 1~3개월 점진 개선. 최종 결과는 2주 후 판단한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2주간 주의사항 :</span> 입 크게 벌리기, 과도한 표정, 안면 마사지를 금한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 합병증 서명 확인 :</span> 딤플, 비대칭, 실 돌출 가능성을 고지하고 서명을 받는다.</p>
     `,
   },
   {
     id: "s1-1-4-10",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 모노실 (학습용) :</span> [건주확인] 본당 단가·1세트 비용 확인 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ PDO 코그실 :</span> [건주확인] 본당 단가·1세트 비용 확인 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 국소마취제 (필수) :</span> 기존 치과 재고 활용 가능.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 소독 세트 (필수). 동의서 양식 (필수). 시술 전후 사진 촬영 장비 (필수).</span></p>
-      <p class="text-[#333] leading-relaxed mb-2">합계 : 약 35만~90만 원.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-8">[건주확인] 제품 확정 후 정밀 산출 필요.</p>
-    `,
-  },
-  {
-    id: "s1-1-4-11",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 딤플 — 피부 함몰 (가끔) :</span> 텐션 과도 또는 삽입 깊이 불균일 시 발생. 대부분 2~4주 내 자연 개선.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 비대칭 (가끔) :</span> 좌우 차이에서 발생. 2주 후 최종 확인, 필요 시 보정.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 실 돌출 (드묾) :</span> 삽입 깊이 너무 얕을 때. 돌출 부분 절단 제거.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 발적·열감 지속 시 항생제 투여.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 기대치 불일치 (흔함) :</span> 실리프팅의 가장 흔한 '합병증'이다. 시술 전 반복 안내 필수.</p>
-    `,
-  },
-  {
-    id: "s1-1-4-12",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 미용치과의 지붕이다. 건당 마진이 보톡스의 20배, 필러의 10배에 달하며, '리프팅까지 하는 치과'라는 프리미엄 이미지를 구축할 수 있는 유일한 시술이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">하지만 이 지붕은 기둥 없이 올릴 수 없다. 충분한 교육(카데바 실습 포함), 단계적 경험 축적(모노실 50케이스+), 철저한 기대치 관리, 빈틈없는 기록. 이 네 가지를 갖추지 않은 상태에서 건당 마진에 눈이 멀어 뛰어드는 것은 권하지 않는다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">실리프팅은 미용치과의 지붕이다. 지붕은 기둥을 세운 뒤에 올린다. 건당 마진이 보톡스의 20배에 달하지만, 순서를 지키지 않으면 구조가 무너진다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">4가지가 갖춰져야 시작할 수 있다. 충분한 교육(카데바 실습 포함), 단계적 경험 축적(모노실 50케이스 이상), 철저한 기대치 관리, 빈틈없는 기록. 이 순서가 마진과 리스크의 차이를 만든다.</p>
     `,
   },
 
