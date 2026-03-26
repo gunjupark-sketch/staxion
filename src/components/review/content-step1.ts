@@ -378,14 +378,20 @@ export const step1Data: Section[] = [
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 스킨부스터 (Skin Booster) — 세 번째 수익의 축</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
       <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 고유 영역이 아니다. 구강이나 안면 근육과 직접적인 관련이 없는, 피부 진피층을 대상으로 하는 시술이다. 그렇다면 왜 이 책에서 다루는가. 치과가 스킨부스터를 도입하는 이유는 해부학적 강점이 아니라, 보톡스와 필러로 확보한 미용 시술 역량과 환자 신뢰를 기반으로 수익 영역을 확장하기 위함이다. 1순위 보톡스, 2순위 필러가 안정적으로 안착한 뒤, 그 위에 올리는 세 번째 층이다.</p>
-    `,
-  },
-  {
-    id: "s1-1-3-02",
-    html: `
-      <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다. 보톡스가 근육을, 필러가 볼륨을 다룬다면, 스킨부스터는 피부 자체의 질을 끌어올리는 영역이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위·제품에 따라 20~40분. 전안면 시술 시 최대 1시간.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 다점 주입 방식으로 보톡스보다 통증 체감이 높다. 표면마취(EMLA) 필수 권장.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 미세 멍·붉은 자국 발생 가능. 2~5일 내 소실.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 물광주사·리쥬란은 시술 직후 보습감 체감, 본격 효과 2~3회 시술 후. 쥬베룩은 4~6주 후.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염·염증, 자가면역질환, 켈로이드 체질.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">프로그램 구조</h4>
+      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 단회 시술이 아니라 프로그램 시술이다. 3~4주 간격으로 3회 1코스가 기본이며, 이후 3~6개월 간격으로 유지 시술을 진행한다. 환자에게 "3회까지는 투자, 그 이후부터 유지"라는 프레임을 처음부터 심어야 중도 이탈을 줄일 수 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시술 방식 차이</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반)</span> : 진피 얕은 층에 다점 주입. 수동 주입 또는 물광기 사용. 시술이 가장 단순하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반)</span> : 진피층 중간 깊이에 수동 다점 주입. 크로스해칭 테크닉. 통증이 상대적으로 강하다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA)</span> : 진피 깊은 층에 주입. 콜라겐 재생 유도. 효과 발현이 느린 대신 지속 기간이 길다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다.</p>
@@ -393,18 +399,62 @@ export const step1Data: Section[] = [
     `,
   },
   {
+    id: "s1-1-3-02",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">솔직하게 말하면, 스킨부스터에서 치과만의 해부학적 우위는 크지 않다. 진피층 주입이므로 혈관 해부학 지식이 필수적인 필러와는 성격이 다르다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">하지만 치과가 갖는 구조적 이점은 존재한다. 보톡스와 필러로 이미 형성된 미용 시술 환자 기반이 그것이다. "보톡스 맞으러 왔는데, 피부도 좋아질 수 있다고요?" — 이 한마디가 스킨부스터의 시작점이다. 외부에서 신규 환자를 모집하는 것이 아니라, 이미 신뢰가 형성된 기존 미용 환자에게 자연스럽게 확장 제안을 하는 것이다.</p>
+      <p class="text-[#333] leading-relaxed mb-8">치과가 갖는 또 하나의 구조적 이점은 마취 역량이다. 스킨부스터는 다점 주입 특성상 통증 체감이 높은 시술이다. 특히 리쥬란은 시술 통증이 극심한 것으로 알려져 있어, "리쥬란 맞고 싶은데 너무 아프다"는 것이 잠재 환자의 가장 흔한 진입 장벽이다. 치과의사는 국소마취에 가장 숙련된 의료인이다. 표면마취만으로 부족한 경우 국소침윤마취나 신경차단마취를 추가 적용할 수 있다. "거의 안 아팠다"는 경험이 재방문과 입소문의 가장 강력한 동력이 된다.</p>
+    `,
+  },
+  {
     id: "s1-1-3-03",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러와 달리, 전제 조건이 충족되지 않은 상태에서 도입하면 환자 모집이 어렵고 재고 부담만 늘어난다. 아래 세 가지가 반드시 갖춰져야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다. 미용 환자 기반이 없는 상태에서 스킨부스터만 단독으로 도입하는 것은 고객 없는 가게를 여는 것과 다르지 않다.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-04",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-6">스킨부스터 시장은 보톡스·필러와 달리, 제품 브랜드가 곧 시장 구간을 결정한다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시장 가격 구간 (1회 시술 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반) :</span> 80,000~150,000원. 입문 가격대.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 200,000~350,000원 (2cc). 환자 인지도 최고.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 200,000~300,000원 (2cc). 콜라겐 재생 차별점.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 기타 PN 계열 :</span> 150,000~250,000원. 후발 제품군.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 — 스킨부스터 특수 변수</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 패키지(3회) vs 1회 단가 :</span> 3회 1코스 패키지 가격을 반드시 설계하라. 1회 단가 대비 7~10% 할인이 적정선이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 제품 지명 구매 대응 :</span> 리쥬란과 쥬베룩은 가격대가 비슷하지만 효과 발현 속도와 특성이 다르다. 비교표를 상담실에 비치하라.</p>
+      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 콤보 패키지 :</span> 보톡스+스킨부스터, 필러+스킨부스터 콤보를 설계하면 객단가가 올라간다. 동시 시술 시 5~8% 할인.</p>
+    `,
+  },
+  {
+    id: "s1-1-3-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 물광주사 (스킨바이브/릴리이드M) :</span> 가격이 낮고 시술이 단순하며, 진입 장벽이 가장 낮다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN 기반. 환자 인지도가 가장 높다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임) :</span> PDLLA+HA 기반. 효과 발현이 4~6주로 느려 기대치 관리가 필수적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임) :</span> PDLLA+HA 기반. 효과 발현이 4~6주로 느려 기대치 관리가 필수적이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 주사기 : 30~32G 미세 바늘.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 표면마취 크림 : EMLA 크림. 비용 미미.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 물광기/메조건 (선택) : 200만~500만 원. 수요 확인 후 도입.</p>
+      <p class="text-[#333] leading-relaxed mb-2">▶ 냉장보관 : 리쥬란 냉장(2~8°C), 쥬베룩 상온 보관 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-8">▶ 시술 전후 사진 촬영 장비 (권장) : 효과가 즉각적이지 않으므로 전후 비교 사진이 필수.</p>
     `,
   },
   {
-    id: "s1-1-3-04",
+    id: "s1-1-3-06",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
@@ -415,7 +465,7 @@ export const step1Data: Section[] = [
     `,
   },
   {
-    id: "s1-1-3-05",
+    id: "s1-1-3-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
