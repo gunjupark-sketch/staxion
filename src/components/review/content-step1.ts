@@ -221,48 +221,38 @@ export const step1Data: Section[] = [
   {
     id: "s1-1-2-01",
     html: `
-      <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">2장. 필러 (Dermal Filler) — 보톡스 다음의 진짜 수익 엔진</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
-      <p class="text-[#333] leading-relaxed mb-8">필러는 보톡스 다음으로 도입 빈도가 높지만, 보톡스와는 근본적으로 다른 차원의 시술이다. 보톡스가 근육을 이완시키는 시술이라면, 필러는 조직에 물질을 직접 주입하여 볼륨을 만드는 시술이다. 리스크의 성격과 크기가 다르고, 그만큼 요구되는 역량의 깊이도 다르다.</p>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-4">필러(Dermal Filler)는 피부 아래 조직에 충전물질을 주입하여 볼륨 회복, 주름 충전, 얼굴 윤곽 개선을 수행하는 시술이다. 대부분 히알루론산(HA) 기반이며, 문제 발생 시 히알루로니다제로 용해가 가능하다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">HA 필러의 핵심 특성</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 교차결합 (Cross-linking) :</span> BDDE 등으로 HA 분자를 결합시킨 것이다. 교차결합도가 높을수록 단단하고 오래 유지된다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 점탄성 (Viscoelasticity) :</span> 형태를 유지하는 탄성과, 자연스럽게 퍼지는 점성의 균형이다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 단상 vs 이상 :</span> 단상(균일 겔, 벨로테로 등)과 이상(입자+겔, 레스틸렌 등)으로 나뉜다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위당 15~30분. 마취 포함 30~45분.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 27~30G 바늘 또는 캐뉼라 사용. 대부분 제품에 리도카인 포함.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 2~5일. 최종 결과는 2주 후.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시. 단, 부종이 빠지면서 약간 줄어든다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 영구필러 시술 이력.</p>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스 다음으로 도입 빈도가 높지만, 보톡스와는 근본적으로 다른 차원의 시술이다. 보톡스가 근육을 이완시키는 시술이라면, 필러는 조직에 물질을 직접 주입하여 볼륨을 만드는 시술이다. 리스크의 성격과 크기가 다르고, 그만큼 요구되는 역량의 깊이도 다르다. 바꿔 말하면, 보톡스가 미용치과의 '입구'였다면, 필러는 본격적인 '수익 엔진'이 시동 걸리는 지점이다.</p>
     `,
   },
   {
     id: "s1-1-2-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
-      <p class="text-[#333] leading-relaxed mb-4">필러의 주요 시술 부위 — 입술, 턱끝, 팔자주름, 입꼬리 — 는 모두 구강 주변에 위치한다. 하악 신경, 이신경, 안면동맥 등의 주행 경로에 대한 임상적 친숙도는 치과의사가 타 진료과 대비 압도적으로 높다.</p>
-      <p class="text-[#333] leading-relaxed mb-6">특히 하치조신경차단(IANB) 마취를 일상적으로 시행하면서 축적된 해부학적 감각은 필러 시술의 안전성과 직결된다.</p>
-      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
-        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시 :</span> 임플란트 보철 완료 후 환자에게 이렇게 제안한다. "치아는 완성됐는데, 입술 볼륨이 줄어서 전체 비율이 아쉽습니다. 입술 필러 1cc면 치아와 입술 비율이 훨씬 자연스러워집니다."</p>
-      </div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러(Dermal Filler)는 피부 아래 조직에 충전물질을 주입하여 볼륨 회복, 주름 충전, 얼굴 윤곽 개선을 수행하는 시술이다. 대부분 히알루론산(HA) 기반이며, 문제 발생 시 히알루로니다제로 용해가 가능하다는 점이 안전성의 핵심 근거다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">HA 필러의 핵심 특성 세 가지를 반드시 이해해야 한다.</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 교차결합 (Cross-linking) :</span> BDDE 등으로 HA 분자를 결합시킨 것이다. 교차결합도가 높을수록 단단하고 오래 유지된다. 부위별로 적합한 제품이 달라지는 이유가 바로 이것이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 점탄성 (Viscoelasticity) :</span> 형태를 유지하는 탄성과, 자연스럽게 퍼지는 점성의 균형이다. 제품 선택의 핵심 기준이 된다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 단상 vs 이상 :</span> 단상(균일 겔, 벨로테로 등)과 이상(입자+겔, 레스틸렌 등)으로 나뉜다. 부위별 적합성에 차이가 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위당 15~30분. 마취 포함 30~45분.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 27~30G 바늘 또는 캐뉼라 사용. 대부분 제품에 리도카인이 포함되어 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 부종 2~5일. 멍 가능. 최종 결과는 2주 후.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 즉시. 단, 부종이 빠지면서 약간 줄어든다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염, 자가면역질환, 켈로이드 체질, 영구필러 시술 이력.</p>
     `,
   },
   {
     id: "s1-1-2-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
-      <p class="text-[#333] leading-relaxed mb-6">필러에서 치과의 포지션은 보톡스와 근본적으로 다르다. 보톡스는 가격 경쟁이 핵심이었지만, 필러는 안전성이 핵심이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">치과 필러 도입 3단계 로드맵</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 입술, 턱끝 (리스크 낮음) :</span> 즉시 시작하라. 치과의 해부학적 강점이 가장 직접적으로 발휘되는 하안면부다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 팔자주름, 입꼬리 (리스크 중간) :</span> 1단계에서 최소 30케이스 이상의 경험을 축적한 후 진입하라.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 볼, 관자놀이 (리스크 중~높음) :</span> 2단계가 안정적으로 안착한 후, 별도의 전문 교육을 이수하고 진입하라.</p>
-      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-8">
-        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#f59e0b] font-bold">주의:</span> 코 필러와 이마 필러는 실명 위험이 있는 고위험 시술이다. 충분한 교육과 경험 없이 시도해서는 안 된다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러의 주요 시술 부위 — 입술, 턱끝, 팔자주름, 입꼬리 — 는 모두 구강 주변에 위치한다. 하악 신경, 이신경, 안면동맥 등의 주행 경로에 대한 임상적 친숙도는 치과의사가 타 진료과 대비 압도적으로 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">특히 하치조신경차단(IANB) 마취를 일상적으로 시행하면서 축적된 해부학적 감각은 필러 시술의 안전성과 직결된다. 바늘 끝이 어디에 닿고 있는지를 감각으로 아는 것은 교과서 지식과는 차원이 다른 무기다.</p>
+      <div class="bg-[#fdf2f5] border-l-4 border-[#C4929B] p-4 mb-8">
+        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#C4929B] font-bold">실전 예시 :</span> 임플란트 보철 완료 후 환자에게 이렇게 제안한다. "치아는 완성됐는데, 입술 볼륨이 줄어서 전체 비율이 아쉽습니다. 입술 필러 1cc면 치아와 입술 비율이 훨씬 자연스러워집니다." 이런 제안은 치과의 치료 연장선 위에서만 가능하다. 임플란트 보철의 결과물을 눈앞에서 확인하면서 안면 윤곽까지 연결하는 동선 — 피부과에서는 구조적으로 불가능한 치과만의 특권이다.</p>
       </div>
     `,
   },
@@ -270,90 +260,134 @@ export const step1Data: Section[] = [
     id: "s1-1-2-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">권장 운영 가격대</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 입술 1cc :</span> 시장 중간값 130,000원. 치과 권장가 130,000~180,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 턱끝 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 팔자주름 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원. 2단계 이후 도입.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러에서 치과의 포지션은 보톡스와 근본적으로 다르다. 보톡스는 가격 경쟁이 핵심이었지만, 필러는 안전성이 핵심이다. 이유는 단순하다. 필러는 잘못 주입하면 혈관을 막아 피부괴사나 실명을 유발할 수 있는 시술이기 때문이다. 안전하게 시술할 수 있다는 신뢰가 곧 가격의 정당성이 된다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">치과 필러 도입 3단계 로드맵</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1단계 — 입술, 턱끝 (리스크 낮음) :</span> 즉시 시작하라. 치과의 해부학적 강점이 가장 직접적으로 발휘되는 하안면부다. 보톡스로 미용 시술의 문을 연 환자에게 자연스럽게 제안할 수 있는 첫 번째 확장이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2단계 — 팔자주름, 입꼬리 (리스크 중간) :</span> 1단계에서 최소 30케이스 이상의 경험을 축적한 후 진입하라. 주입 깊이와 혈관 주행에 대한 감각이 충분히 체화된 상태에서 확장하는 것이 원칙이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3단계 — 볼, 관자놀이 (리스크 중~높음) :</span> 2단계가 안정적으로 안착한 후, 별도의 전문 교육을 이수하고 진입하라. 이 영역은 숙련도가 안전과 직결된다.</p>
+      <div class="bg-[#fff8f0] border-l-4 border-[#f59e0b] p-4 mb-8">
+        <p class="text-[#333] text-sm leading-relaxed"><span class="text-[#f59e0b] font-bold">주의:</span> 명심해야 한다. 코 필러와 이마 필러는 실명 위험이 있는 고위험 시술이다. 충분한 교육과 경험 없이 시도해서는 안 된다. 이 두 부위는 3단계 이후에도 별도의 심화 과정이 반드시 선행되어야 한다.</p>
+      </div>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">보톡스와의 전략적 차이</h4>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스를 통해 미용 시술의 입구를 열고, 필러에서 실질적인 수익을 가져가는 것 — 이것이 치과 미용시술의 기본 매출 구조다. 필러의 도입 전략은 '저가 vs 프리미엄'이 아니라, '안전한 부위에서 시작하여 점진적으로 확장한다'는 단계적 접근이 핵심이다. 순서를 건너뛰는 것은 리스크를 건너뛰는 것이 아니라, 리스크를 껴안는 것이다.</p>
     `,
   },
   {
     id: "s1-1-2-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
-      <p class="text-[#333] leading-relaxed mb-6">초기 도입 치과에는 국산 일반 등급 HA 필러(뉴라미스, 채움, 벨라스트 등)를 추천한다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필수 장비/도구</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 27G/30G 바늘 :</span> 정밀 주입용.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 캐뉼라 22~25G :</span> 혈관 천공 위험을 낮춘다. 팔자주름·턱끝 시술 시 권장.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 히알루로니다제 :</span> 필수 구비. 혈관폐색 발생 시 즉시 투여. 시술실에 항시 비치하라. 이것은 선택이 아니라 생존 장비다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 신경차단 마취 :</span> 인프라오비탈/멘탈 신경차단. 치과의사의 일상 술기 그대로다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">권장 운영 가격대</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 입술 1cc :</span> 시장 중간값 130,000원. 치과 권장가 130,000~180,000원. 가장 빈번한 첫 필러 시술이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 턱끝 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원. 시술이 단순하고 생산성이 높다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 팔자주름 1cc :</span> 시장 중간값 150,000원. 치과 권장가 150,000~200,000원. 2단계 이후 도입.</p>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스와 달리 극단적인 저가 경쟁이 덜하다. 시술의 난이도와 리스크가 높기 때문에, 환자도 '싼 곳'보다 '안전한 곳'을 찾는 경향이 강하다. 이것이 치과에게 유리한 구조다. "해부학을 가장 잘 아는 의료인이 시술한다"는 가치 자체가 가격의 정당성을 만든다.</p>
     `,
   },
   {
     id: "s1-1-2-06",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
-      <p class="text-[#333] leading-relaxed mb-6">필러는 보톡스보다 확실히 난이도가 높다. 보톡스가 "어디에 얼마나"의 2차원 판단이라면, 필러는 "어디에, 얼마나, 어떤 깊이로, 어떤 속도로, 어떤 방향으로, 혈관은 어디에 있는지"까지 고려해야 하는 다차원 판단이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 핵심 주의사항</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 속도 :</span> 천천히. 급하게 밀어 넣으면 혈관 내 주입 위험이 높아진다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 깊이 :</span> 부위마다 적정 레이어가 다르다. 입술은 점막 하, 턱끝은 골막 상.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 아스피레이션 :</span> 주입 전 피스톤을 살짝 당겨 혈액 역류를 확인하는 습관을 반드시 들여라.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 시술 전 사진을 반드시 촬영하고, 양측을 번갈아 가며 소량씩 주입하는 것이 원칙이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
+      <p class="text-[#333] leading-relaxed mb-4">초기 도입 치과에는 국산 일반 등급 HA 필러(뉴라미스, 채움, 벨라스트 등)를 추천한다. 선택의 이유는 세 가지다.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">첫째,</span> 히알루로니다제로 용해 가능하다. 초보 시술자에게 가장 중요한 안전망이다. 문제가 생겼을 때 되돌릴 수 있다는 것은 심리적으로도, 실무적으로도 결정적인 차이를 만든다.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">둘째,</span> 점도별 라인업을 보유하고 있다. 부위별로 적합한 제품을 같은 브랜드 안에서 선택할 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">셋째,</span> 가격 대비 충분한 품질이다. 시장 판매가 13만 원 기준으로 충분한 마진을 확보할 수 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필수 장비/도구</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 27G/30G 바늘 :</span> 정밀 주입용.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 캐뉼라 22~25G :</span> 혈관 천공 위험을 낮춘다. 팔자주름·턱끝 시술 시 권장.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 히알루로니다제 :</span> 필수 구비. 혈관폐색 발생 시 즉시 투여해야 한다. 시술실에 항시 비치하라. 이것은 선택이 아니라 생존 장비다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 신경차단 마취 :</span> 인프라오비탈/멘탈 신경차단. 치과의사의 일상 술기 그대로다.</p>
     `,
   },
   {
     id: "s1-1-2-07",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">수익 시뮬레이션 (입술/턱끝 1cc 기준)</h4>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 평균 판매가 : 150,000원. 재료비 : 약 50,000원. 건당 마진 : 약 100,000원. 마진율 : 약 67%.</p>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스 프리미엄형의 건당 마진이 58,000원이었다. 필러는 건당 100,000원. 약 1.7배다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">월 수익 시뮬레이션</h4>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 주 5건 시술 시 : 월 200만 원 마진.</p>
-      <p class="text-[#333] leading-relaxed mb-8">▶ 주 10건 시술 시 : 월 400만 원 마진. 보톡스(월 150~300만 원) + 필러(월 200~400만 원) = 월 350~700만 원의 미용시술 추가 매출 구조.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스보다 확실히 난이도가 높다. 보톡스가 "어디에 얼마나"의 2차원 판단이라면, 필러는 "어디에, 얼마나, 어떤 깊이로, 어떤 속도로, 어떤 방향으로, 혈관은 어디에 있는지"까지 고려해야 하는 다차원 판단이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">하지만 치과의사에게는 결정적인 이점이 있다. 매일 구강 내에서 마취 주사를 놓으며 체화된 바늘 끝의 감각, 하치조신경차단을 수행하면서 훈련된 해부학적 방향 감각 — 이것들이 필러 시술의 학습 곡선을 대폭 단축시킨다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 시술 시 핵심 주의사항</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 속도 :</span> 천천히. 급하게 밀어 넣으면 혈관 내 주입 위험이 높아진다. 저항이 느껴지면 즉시 멈추고 위치를 재확인하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주입 깊이 :</span> 부위마다 적정 레이어가 다르다. 입술은 점막 하(submucosal), 턱끝은 골막 상(supraperiosteal). 깊이를 틀리면 결과가 부자연스러워진다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 아스피레이션(흡인 테스트) :</span> 주입 전 피스톤을 살짝 당겨 혈액 역류를 확인하는 습관을 반드시 들여라. 캐뉼라 사용 시에는 혈관 천공 위험이 낮지만, 바늘 사용 시에는 필수 절차다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 대칭 :</span> 필러는 보톡스보다 비대칭이 눈에 훨씬 잘 띈다. 시술 전 사진을 반드시 촬영하고, 양측을 번갈아 가며 소량씩 주입하는 것이 원칙이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">교육 경로</h4>
+      <p class="text-[#333] leading-relaxed mb-4">1단계 부위(입술, 턱끝) 시술을 위한 핵심 교육은 보톡스 대비 깊이가 필요하다. 주사 핸들링만으로는 부족하고, 혈관 해부학과 합병증 대응 프로토콜까지 반드시 포함된 과정을 이수해야 한다.</p>
     `,
   },
   {
     id: "s1-1-2-08",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
-      <p class="text-[#333] leading-relaxed mb-2">▶ HA 필러 1~2시린지 (필수) : 시린지당 25,000~50,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 히알루로니다제 (필수) : 1바이알. 혈관폐색 응급 대응용. 반드시 시술실에 비치.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 캐뉼라 22~25G (권장) : 혈관 천공 위험 감소.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 27G/30G 바늘 (필수) : 정밀 주입용.</p>
-      <p class="text-[#333] leading-relaxed mb-2">▶ 동의서 양식 (필수) : 0원 (메디스테이션 제공).</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 약 50만 원. 보톡스(25만 원)에서 추가 25만 원으로 두 번째 수익 엔진을 장착하는 셈이다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">7. 수익성 분석</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 치과 미용시술의 수익 구조에서 핵심 엔진 역할을 한다. 보톡스가 환자를 데려오는 입구라면, 필러는 실질적인 마진을 만들어내는 본진이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">수익 시뮬레이션 (입술/턱끝 1cc 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 평균 판매가 :</span> 150,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 재료비 (필러 1cc) :</span> 약 50,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 약 100,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 마진율 :</span> 약 67%.</p>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스 프리미엄형의 건당 마진이 58,000원이었다. 필러는 건당 100,000원. 약 1.7배다. 시술 시간은 보톡스보다 길지만(15~30분 vs 5~15분), 시간당 생산성은 여전히 높다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">월 수익 시뮬레이션</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주 5건 시술 시 :</span> 월 20건 × 100,000원 = 월 200만 원 마진.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주 10건 시술 시 :</span> 월 40건 × 100,000원 = 월 400만 원 마진.</p>
+      <p class="text-[#333] leading-relaxed mb-4">여기에 보톡스 매출이 더해지면, 보톡스(월 150~300만 원) + 필러(월 200~400만 원) = 월 350~700만 원의 미용시술 추가 매출 구조가 만들어진다. 기존 치과 매출에 이 숫자가 순수하게 얹어지는 것이다.</p>
     `,
   },
   {
     id: "s1-1-2-09",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
-      <p class="text-[#333] leading-relaxed mb-6">필러는 보톡스와 리스크의 차원이 다르다. 최대 부작용은 혈관폐색으로 인한 피부괴사와 실명이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">혈관폐색 응급 프로토콜</h4>
-      <p class="text-[#333] leading-relaxed mb-4">골든타임은 극도로 짧다. 피부괴사 방지는 4시간, 실명 방지는 90분이다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 1 —</span> 주입 즉시 중단.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 2 —</span> 히알루로니다제 450~1500IU를 폐색 의심 부위에 즉시 주사 (HDPH 프로토콜).</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 3 —</span> 온찜질로 혈관 확장 유도. 냉찜질은 금지.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 4 —</span> 니트로글리세린 패치 2% 도포.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 5 —</span> 아스피린 투여.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 눈 증상 발생 시 —</span> 즉시 안과 응급 전원. 망막동맥폐색은 90분 이내가 골든타임이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">히알루로니다제는 선택 장비가 아니라 생존 장비다. 반드시 비치하라.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">8. 도입 시 준비사항</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스보다 초기 투자가 약간 높지만, 여전히 별도 장비 투자 없이 기존 치과 인프라를 그대로 활용할 수 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 구비 체크리스트</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ HA 필러 1~2시린지 (필수) :</span> 시린지당 25,000~50,000원. 1~2개면 충분하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 히알루로니다제 (필수) :</span> 1바이알. 혈관폐색 응급 대응용. 반드시 시술실에 비치.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 캐뉼라 22~25G (권장) :</span> 혈관 천공 위험 감소. 팔자·턱끝 시술 시 필수급.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 27G/30G 바늘 (필수) :</span> 정밀 주입용.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 0원 (메디스테이션 제공). 필러 전용 동의서에는 혈관폐색 위험을 포함한 합병증 고지가 반드시 포함되어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 거울 — 반신/전신 (권장) :</span> 보톡스 도입 시 이미 구비했다면 추가 비용 없음.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 약 50만 원. 보톡스(25만 원)에서 추가 25만 원으로 두 번째 수익 엔진을 장착하는 셈이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">재고 관리</h4>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 미개봉 상태에서 상온 보관이 가능한 제품이 대부분이다(제품별 확인 필수). 개봉 후에는 즉시 사용이 원칙이며, 잔여분은 폐기한다. 1시린지 1cc가 1인 1부위 시술에 해당하므로, 보톡스처럼 환자를 몰아서 예약할 필요는 없다. 수요에 맞춰 시린지 단위로 재고를 관리하면 된다.</p>
     `,
   },
   {
     id: "s1-1-2-10",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
+      <p class="text-[#333] leading-relaxed mb-4">필러는 보톡스와 리스크의 차원이 다르다. 보톡스의 최대 부작용이 안검하수(눈꺼풀 처짐, 2~4주 자연 회복)였다면, 필러의 최대 부작용은 혈관폐색으로 인한 피부괴사와 실명이다. 빈도는 극히 낮지만, 발생 시 비가역적 손상을 초래할 수 있다. 이것이 필러 시술에서 기록과 프로토콜이 보톡스보다 훨씬 더 엄격해야 하는 이유다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">주요 부작용</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 멍·부종 (흔함) :</span> 자연 소실(2~5일). 냉찜질로 대응. 시술 전 환자에게 미리 고지하면 불안을 줄일 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 결절·덩어리 (가끔) :</span> 주입이 고르지 않거나 너무 얕을 때 발생. 마사지로 분산 가능하며, 심할 경우 히알루로니다제로 용해.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 좌우 비대칭 (가끔) :</span> 2주 후 최종 결과 확인. 부족한 쪽에 보정 주입 가능.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 혈관폐색 (드묾, 그러나 치명적) :</span> 필러가 혈관 내로 들어가 혈류를 차단하는 사고다. 즉시 대응하지 않으면 피부괴사, 최악의 경우 실명으로 이어질 수 있다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 주입 부위 발적, 열감, 통증이 지속되면 감염을 의심. 항생제 투여.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">혈관폐색 응급 프로토콜 — 반드시 숙지하라</h4>
+      <p class="text-[#333] leading-relaxed mb-4">필러의 가장 심각한 합병증은 혈관폐색으로 인한 피부괴사 또는 실명이다. 골든타임은 극도로 짧다. 피부괴사 방지는 4시간, 실명 방지는 90분이다. 아래 프로토콜을 시술실에 게시하고, 원장과 모든 스탭이 반드시 숙지해야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 인지 :</span> 피부색 변화(blanching 또는 보라색), 극심한 통증, 망상형 색 변화가 나타나면 혈관폐색을 의심하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 1</span> — 주입 즉시 중단.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 2</span> — 히알루로니다제 450~1500IU를 폐색 의심 부위 및 주변에 즉시 주사한다. HDPH(고용량 펄스) 프로토콜이다. 고용량을 주저하지 마라. 부족하게 넣어서 후회하는 것보다 충분히 넣는 것이 압도적으로 안전하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 3</span> — 온찜질로 혈관 확장을 유도한다. 냉찜질은 금지다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 4</span> — 니트로글리세린 패치 2% 도포(혈관 확장 보조).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 즉시 5</span> — 아스피린 투여(혈전 예방).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 추적 :</span> 1시간 후 재평가. 개선이 없으면 히알루로니다제를 추가 투여한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 눈 증상 발생 시 :</span> 즉시 안과 응급 전원. 망막동맥폐색은 90분 이내가 골든타임이다. 1분이 아깝다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">히알루로니다제는 '혹시 몰라서 구비하는 것'이 아니다. '반드시 쓸 일이 있을 것'을 전제로 구비하는 것이다. 필러 시술을 하면서 히알루로니다제를 구비하지 않는 것은, 소화기를 비치하지 않고 불을 다루는 것과 다르지 않다.</p>
+      <p class="text-[#333] text-sm italic leading-relaxed mb-6">상세 응급 프로토콜(HDPH 용량 계산, 스탭 훈련, 차트 기록 원칙)은 'STEP 2-5. 응급 대응 프로토콜'에서 다룬다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 전 필수 고지 사항 (동의서 포함)</h4>
+      <p class="text-[#333] leading-relaxed mb-4">효과는 즉시 나타나며, 부종이 빠지면서 최종 결과는 2주 후 확정된다. 지속기간은 제품과 부위에 따라 6개월~18개월이며, 반영구적이지 않다. 시술 후 12시간 동안 시술 부위에 강한 압력을 가하지 않도록 안내하고, 당일 음주와 사우나는 금지다. 멍과 부종은 정상적인 반응이며 수일 내 소실된다는 점을 미리 고지하여 환자의 불안을 선제적으로 차단하라. 혈관폐색 가능성과 대응 방법은 동의서에 반드시 포함해야 한다.</p>
+    `,
+  },
+  {
+    id: "s1-1-2-11",
+    html: `
+      <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
-      <p class="text-[#333] leading-relaxed mb-4">보톡스가 문을 여는 열쇠였다면, 필러는 그 문 너머의 첫 번째 방이다. 건당 마진 10만 원, 마진율 67%. 보톡스의 약 1.7배.</p>
-      <p class="text-[#333] leading-relaxed mb-4">도입 전략의 핵심은 단순하다. 안전한 부위(입술, 턱끝)에서 교두보를 확보하고, 경험과 숙련도를 쌓은 뒤 팔자주름, 볼, 관자놀이로 영토를 확장하라. 순서를 건너뛰지 마라.</p>
+      <p class="text-[#333] leading-relaxed mb-4">보톡스가 문을 여는 열쇠였다면, 필러는 그 문 너머의 첫 번째 방이다. 수익성은 보톡스를 상회하고, 공장형 저가 경쟁에 휘말릴 가능성이 적다.</p>
+      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">다만, 필러를 도입하는 순간 치과는 '주사를 놓는 곳'에서 '얼굴에 물질을 넣는 곳'으로 한 단계 이동한다. 히알루로니다제 상시 구비, 혈관폐색 응급 프로토콜 숙지, 시술 전후 사진 촬영 — 이 표준을 갖추지 않은 채 필러를 시작하는 것은 권하지 않는다.</p>
       <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">초기 투자 약 50만 원. 보톡스와 금액 차이는 크지 않지만, 그 사이에 놓인 책임의 무게는 분명히 다르다. 그리고 그 책임의 무게를 감당할 수 있는 해부학적 역량을 가장 확실하게 갖추고 있는 직역이 바로 치과의사라는 사실 — 이것이 필러를 치과에서 도입해야 하는 가장 근본적인 이유다.</p>
     `,
   },
@@ -362,76 +396,75 @@ export const step1Data: Section[] = [
   {
     id: "s1-1-3-01",
     html: `
-      <div class="border-t border-[#eee] my-8"></div>
       <h2 class="text-2xl font-bold text-[#1a1a1a] mb-6">3장. 스킨부스터 (Skin Booster) — 세 번째 수익의 축</h2>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">이 챕터에서 다루는 내용</h3>
       <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 고유 영역이 아니다. 구강이나 안면 근육과 직접적인 관련이 없는, 피부 진피층을 대상으로 하는 시술이다. 그렇다면 왜 이 책에서 다루는가. 치과가 스킨부스터를 도입하는 이유는 해부학적 강점이 아니라, 보톡스와 필러로 확보한 미용 시술 역량과 환자 신뢰를 기반으로 수익 영역을 확장하기 위함이다. 1순위 보톡스, 2순위 필러가 안정적으로 안착한 뒤, 그 위에 올리는 세 번째 층이다.</p>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
-      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다. 보톡스가 근육을, 필러가 볼륨을 다룬다면, 스킨부스터는 피부 자체의 질을 끌어올리는 영역이다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위·제품에 따라 20~40분. 전안면 시술 시 최대 1시간.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 다점 주입 방식으로 보톡스보다 통증 체감이 높다. 표면마취(EMLA) 필수 권장. 물광기(메조건) 사용 시 통증 경감.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 미세 멍·붉은 자국 발생 가능. 2~5일 내 소실. 당일 세안·메이크업 주의.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 물광주사·리쥬란은 시술 직후 보습감 체감, 본격 효과 2~3회 시술 후. 쥬베룩은 4~6주 후부터 점진적 개선.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염·염증, 자가면역질환, 켈로이드 체질.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">프로그램 구조</h4>
-      <p class="text-[#333] leading-relaxed mb-6">스킨부스터는 단회 시술이 아니라 프로그램 시술이다. 3~4주 간격으로 3회 1코스가 기본이며, 이후 3~6개월 간격으로 유지 시술을 진행한다. 1회 시술로 판단하지 않는다. 환자에게 "3회까지는 투자, 그 이후부터 유지"라는 프레임을 처음부터 심어야 중도 이탈을 줄일 수 있다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시술 방식 차이</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반 — 스킨바이브, 릴리이드M 등) :</span> 진피 얕은 층에 다점 주입. 수동 주입 또는 물광기(메조건) 사용. 시술이 가장 단순하다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 진피층 중간 깊이에 수동 다점 주입. 크로스해칭(격자형 주입) 테크닉이 일반적. 통증이 상대적으로 강하다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 진피 깊은 층에 주입. 콜라겐 재생 유도가 목적이므로 주입 깊이가 핵심. 효과 발현이 느린 대신 지속 기간이 길다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성 세 가지를 반드시 이해해야 한다.</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다. 보톡스나 필러와 달리, 제품 브랜드가 곧 시술의 이름이 되는 시장이다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다. 1회 시술이 끝이 아니라 3회 연속 내원의 시작이라는 점이 수익 구조에서 결정적이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 쥬베룩 1회(2cc) 시장 중간값 약 264,000원, 리쥬란 1회(2cc) 약 300,000원. 25~30만 원대다. 보톡스의 4~5배에 달하는 건당 매출이다.</p>
     `,
   },
   {
     id: "s1-1-3-02",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
-      <p class="text-[#333] leading-relaxed mb-4">솔직하게 말하면, 스킨부스터에서 치과만의 해부학적 우위는 크지 않다. 진피층 주입이므로 혈관 해부학 지식이 필수적인 필러와는 성격이 다르다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">하지만 치과가 갖는 구조적 이점은 존재한다. 보톡스와 필러로 이미 형성된 미용 시술 환자 기반이 그것이다. "보톡스 맞으러 왔는데, 피부도 좋아질 수 있다고요?" — 이 한마디가 스킨부스터의 시작점이다. 외부에서 신규 환자를 모집하는 것이 아니라, 이미 신뢰가 형성된 기존 미용 환자에게 자연스럽게 확장 제안을 하는 것이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">치과가 갖는 또 하나의 구조적 이점은 마취 역량이다. 스킨부스터는 다점 주입 특성상 통증 체감이 높은 시술이다. 특히 리쥬란은 시술 통증이 극심한 것으로 알려져 있어, "리쥬란 맞고 싶은데 너무 아프다"는 것이 잠재 환자의 가장 흔한 진입 장벽이다. 치과의사는 국소마취에 가장 숙련된 의료인이다. 표면마취(EMLA)만으로 부족한 경우, 시술 부위에 맞춰 국소침윤마취나 신경차단마취를 추가 적용할 수 있다. "거의 안 아팠다"는 경험이 재방문과 입소문의 가장 강력한 동력이 된다. 피부과에서 표면마취 크림만으로 버티게 하는 것과, 치과에서 통증을 원천 차단하고 시술하는 것 — 환자 입장에서 어느 쪽을 선택할지는 명확하다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">1. 시술 개요</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 피부 진피층에 히알루론산(HA), 폴리뉴클레오타이드(PN), PDLLA 등 피부 재생 성분을 직접 주입하여 피부 보습, 탄력, 질감을 개선하는 시술이다. 보톡스가 근육을, 필러가 볼륨을 다룬다면, 스킨부스터는 피부 자체의 질을 끌어올리는 영역이다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 기본 정보</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 시간 :</span> 부위·제품에 따라 20~40분. 전안면 시술 시 최대 1시간.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 통증 :</span> 다점 주입 방식으로 보톡스보다 통증 체감이 높다. 표면마취(EMLA) 필수 권장. 물광기(메조건) 사용 시 통증 경감.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 회복기간 :</span> 시술 직후 미세 멍·붉은 자국 발생 가능. 2~5일 내 소실. 당일 세안·메이크업 주의.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 효과 발현 :</span> 물광주사·리쥬란은 시술 직후 보습감 체감, 본격 효과 2~3회 시술 후. 쥬베룩은 4~6주 후부터 점진적 개선.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 금기사항 :</span> 임산부/수유부, 시술 부위 감염·염증, 자가면역질환, 켈로이드 체질.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">프로그램 구조</h4>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 단회 시술이 아니라 프로그램 시술이다. 3~4주 간격으로 3회 1코스가 기본이며, 이후 3~6개월 간격으로 유지 시술을 진행한다. 1회 시술로 판단하지 않는다. 환자에게 "3회까지는 투자, 그 이후부터 유지"라는 프레임을 처음부터 심어야 중도 이탈을 줄일 수 있다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시술 방식 차이</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반 — 스킨바이브, 릴리이드M 등) :</span> 진피 얕은 층에 다점 주입. 수동 주입 또는 물광기(메조건) 사용. 시술이 가장 단순하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 진피층 중간 깊이에 수동 다점 주입. 크로스해칭(격자형 주입) 테크닉이 일반적. 통증이 상대적으로 강하다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 진피 깊은 층에 주입. 콜라겐 재생 유도가 목적이므로 주입 깊이가 핵심. 효과 발현이 느린 대신 지속 기간이 길다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시장 특성 세 가지를 반드시 이해해야 한다.</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 환자 지명 구매 :</span> "쥬베룩 해주세요", "리쥬란 맞으러 왔어요" — 환자가 제품명을 알고 찾아온다. 보톡스나 필러와 달리, 제품 브랜드가 곧 시술의 이름이 되는 시장이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 프로그램 기반 :</span> 3~4주 간격으로 3회 1코스가 기본이다. 재방문이 프로그램 자체에 내장되어 있다. 1회 시술이 끝이 아니라 3회 연속 내원의 시작이라는 점이 수익 구조에서 결정적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 건당 마진 :</span> 쥬베룩 1회(2cc) 시장 중간값 약 264,000원, 리쥬란 1회(2cc) 약 300,000원. 25~30만 원대다. 보톡스의 4~5배에 달하는 건당 매출이다.</p>
     `,
   },
   {
     id: "s1-1-3-03",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러와 달리, 전제 조건이 충족되지 않은 상태에서 도입하면 환자 모집이 어렵고 재고 부담만 늘어난다. 아래 세 가지가 반드시 갖춰져야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다. 스킨부스터는 이 환자들에게 제안하는 확장 메뉴다. 미용 환자 기반이 없는 상태에서 스킨부스터만 단독으로 도입하는 것은 고객 없는 가게를 여는 것과 다르지 않다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">전제 조건이 충족되었다면, 도입 전략의 핵심은 제품 선택이다. 시장에 제품이 많고, 환자가 제품명을 지정해서 찾아오는 구조이기 때문에, 어떤 제품으로 시작하느냐가 곧 포지션이 된다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">2. 치과와의 연결점</h3>
+      <p class="text-[#333] leading-relaxed mb-4">솔직하게 말하면, 스킨부스터에서 치과만의 해부학적 우위는 크지 않다. 진피층 주입이므로 혈관 해부학 지식이 필수적인 필러와는 성격이 다르다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">하지만 치과가 갖는 구조적 이점은 존재한다. 보톡스와 필러로 이미 형성된 미용 시술 환자 기반이 그것이다. "보톡스 맞으러 왔는데, 피부도 좋아질 수 있다고요?" — 이 한마디가 스킨부스터의 시작점이다. 외부에서 신규 환자를 모집하는 것이 아니라, 이미 신뢰가 형성된 기존 미용 환자에게 자연스럽게 확장 제안을 하는 것이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">치과가 갖는 또 하나의 구조적 이점은 마취 역량이다. 스킨부스터는 다점 주입 특성상 통증 체감이 높은 시술이다. 특히 리쥬란은 시술 통증이 극심한 것으로 알려져 있어, "리쥬란 맞고 싶은데 너무 아프다"는 것이 잠재 환자의 가장 흔한 진입 장벽이다. 치과의사는 국소마취에 가장 숙련된 의료인이다. 표면마취(EMLA)만으로 부족한 경우, 시술 부위에 맞춰 국소침윤마취나 신경차단마취를 추가 적용할 수 있다. "거의 안 아팠다"는 경험이 재방문과 입소문의 가장 강력한 동력이 된다. 피부과에서 표면마취 크림만으로 버티게 하는 것과, 치과에서 통증을 원천 차단하고 시술하는 것 — 환자 입장에서 어느 쪽을 선택할지는 명확하다.</p>
     `,
   },
   {
     id: "s1-1-3-04",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
-      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
-      <p class="text-[#333] leading-relaxed mb-6">스킨부스터 시장은 보톡스·필러와 달리, 제품 브랜드가 곧 시장 구간을 결정한다. 동일 제품군 안에서의 가격 편차보다 제품군 간의 가격 차이가 훨씬 크다.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시장 가격 구간 (1회 시술 기준)</h4>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반) :</span> 80,000~150,000원. 스킨부스터 시장의 입문 가격대.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 200,000~350,000원 (2cc 기준). 환자 인지도가 가장 높은 제품군.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 200,000~300,000원 (2cc 기준). 콜라겐 재생이라는 차별점.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 기타 PN 계열(리즈넥, 쥬벨룩볼륨 등) :</span> 150,000~250,000원. 후발 제품군.</p>
-      <p class="text-[#C4929B] text-sm leading-relaxed mb-6">[건주확인] 수가 데이터(3사 통합)에서 스킨부스터 카테고리 정밀 추출 시 구간 재조정 필요.</p>
-      <p class="text-[#333] leading-relaxed mb-8">치과 권장 포지셔닝 : 각 제품군 시장 중간값 이상. 스킨부스터는 보톡스와 달리 저가 경쟁이 구조적으로 어렵다. 제품 원가 자체가 높고, 환자가 제품을 지명해서 찾아오기 때문에 가격보다 제품 구색과 시술 품질(통증 관리 포함)이 선택 기준이 된다.</p>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">3. 도입 전략 포지션</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러와 달리, 전제 조건이 충족되지 않은 상태에서 도입하면 환자 모집이 어렵고 재고 부담만 늘어난다. 아래 세 가지가 반드시 갖춰져야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 보톡스 운영 안정 :</span> 월 20건 이상 시술이 꾸준히 돌아가고 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 필러 도입 완료 :</span> 최소 1단계(입술/턱끝)에서 30케이스 이상의 경험이 축적되어 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 미용 환자 재방문 형성 :</span> 보톡스와 필러 재방문 환자가 존재해야 한다. 스킨부스터는 이 환자들에게 제안하는 확장 메뉴다. 미용 환자 기반이 없는 상태에서 스킨부스터만 단독으로 도입하는 것은 고객 없는 가게를 여는 것과 다르지 않다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">전제 조건이 충족되었다면, 도입 전략의 핵심은 제품 선택이다. 시장에 제품이 많고, 환자가 제품명을 지정해서 찾아오는 구조이기 때문에, 어떤 제품으로 시작하느냐가 곧 포지션이 된다.</p>
     `,
   },
   {
     id: "s1-1-3-05",
     html: `
       <div class="border-t border-[#eee] my-8"></div>
+      <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">4. 시장 현황 / 가격대</h3>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터 시장은 보톡스·필러와 달리, 제품 브랜드가 곧 시장 구간을 결정한다. 동일 제품군 안에서의 가격 편차보다 제품군 간의 가격 차이가 훨씬 크다.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">제품군별 시장 가격 구간 (1회 시술 기준)</h4>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사(HA 기반) :</span> 80,000~150,000원. 스킨부스터 시장의 입문 가격대.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란(PN 기반) :</span> 200,000~350,000원 (2cc 기준). 환자 인지도가 가장 높은 제품군.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩(PDLLA+HA) :</span> 200,000~300,000원 (2cc 기준). 콜라겐 재생이라는 차별점.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 기타 PN 계열(리즈넥, 쥬벨룩볼륨 등) :</span> 150,000~250,000원. 후발 제품군.</p>
+      <p class="text-[#C4929B] text-sm leading-relaxed mb-6">[건주확인] 수가 데이터(3사 통합)에서 스킨부스터 카테고리 정밀 추출 시 구간 재조정 필요.</p>
+      <p class="text-[#333] leading-relaxed mb-4">치과 권장 포지셔닝 : 각 제품군 시장 중간값 이상. 스킨부스터는 보톡스와 달리 저가 경쟁이 구조적으로 어렵다. 제품 원가 자체가 높고, 환자가 제품을 지명해서 찾아오기 때문에 가격보다 제품 구색과 시술 품질(통증 관리 포함)이 선택 기준이 된다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">가격 설계 — 스킨부스터 특수 변수</h4>
       <p class="text-[#333] leading-relaxed mb-4">(통합 가격 설계 원칙은 STEP 1 2장 "수가체계 설계"를 참조하라. 여기서는 스킨부스터에만 적용되는 변수를 다룬다.)</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 패키지(3회) vs 1회 단가 :</span> 3회 1코스 패키지 가격을 반드시 설계하라. 1회 단가 대비 7~10% 할인이 적정선이다. 환자 입장에서 "3회 다 해야 효과"라면 패키지가 자연스럽다. 패키지 결제는 중도 이탈을 줄이고 매출 예측 가능성을 높인다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 제품 지명 구매 대응 :</span> 리쥬란과 쥬베룩은 가격대가 비슷하지만 효과 발현 속도와 특성이 다르다. 두 제품의 차이를 설명할 수 있는 비교표를 상담실에 비치하고, "어떤 피부 고민이냐에 따라 추천이 달라진다"는 프레임으로 상담하라.</p>
-      <p class="text-[#333] leading-relaxed mb-8"><span class="text-[#1a1a1a] font-bold">▶ 콤보 패키지 :</span> 보톡스+스킨부스터, 필러+스킨부스터 콤보를 설계하면 객단가가 올라간다. 동시 시술 시 5~8% 할인 수준이면 환자 입장에서 충분한 유인이 된다. 단, 할인율이 아니라 "한 번 내원에 두 가지를 해결한다"는 편의성이 진짜 셀링 포인트다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 제품 지명 구매 대응 :</span> 리쥬란과 쥬베룩은 가격대가 비슷하지만 효과 발현 속도와 특성이 다르다. 두 제품의 차이를 설명할 수 있는 비교표를 상담실에 비치하고, "어떤 피부 고민이냐에 따라 추천이 달라진다"는 프레임으로 상담하라. 환자가 지정한 제품이 아닌 다른 제품을 추천해야 할 때, 이유를 설명할 수 있어야 한다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 콤보 패키지 :</span> 보톡스+스킨부스터, 필러+스킨부스터 콤보를 설계하면 객단가가 올라간다. 동시 시술 시 5~8% 할인 수준이면 환자 입장에서 충분한 유인이 된다. 단, 할인율이 아니라 "한 번 내원에 두 가지를 해결한다"는 편의성이 진짜 셀링 포인트다.</p>
     `,
   },
   {
@@ -441,15 +474,15 @@ export const step1Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">5. 제품 / 장비 가이드</h3>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">초기 도입 추천 제품</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 1순위 — 물광주사 (스킨바이브/릴리이드M) :</span> 스킨바이브는 갈더마 제조의 비교차결합 HA, 릴리이드M은 BMI코리아(한국비엠아이코리아) 제조의 HA+PN(폴리뉴클레오타이드) 조합이다. 가격이 낮고, 시술이 단순하며, 진입 장벽이 가장 낮다. 스킨부스터의 첫 발로 가장 적합하다.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN(폴리뉴클레오타이드) 기반. 환자 인지도가 가장 높다. HB 버전이 통증이 적어 환자 만족도가 높다.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임/바임글로벌) :</span> PDLLA+HA 기반. 콜라겐 재생이라는 차별점이 있다. 다만 효과 발현이 4~6주로 느려, 환자 기대치 관리가 필수적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 2순위 — 리쥬란HB (파마리서치) :</span> PN(폴리뉴클레오타이드) 기반. 환자 인지도가 가장 높다. HB 버전이 통증이 적어 환자 만족도가 높다. "리쥬란 맞으러 왔어요"라고 찾아오는 환자가 있다면, 이 제품을 구비하지 않을 이유가 없다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 3순위 — 쥬베룩 스킨 (바임/바임글로벌) :</span> PDLLA+HA 기반. 콜라겐 재생이라는 차별점이 있다. 다만 효과 발현이 4~6주로 느려, 환자 기대치 관리가 필수적이다. "바로 효과가 보이는 시술이 아닙니다. 4~6주 후부터 피부가 달라지기 시작합니다" — 이 안내를 시술 전에 반드시 해야 한다.</p>
       <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">필요 장비/도구</h4>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 주사기 :</span> 30~32G 미세 바늘. 제품에 따라 전용 바늘이 동봉되기도 한다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림 :</span> EMLA 크림. 스킨부스터는 다점 주입이므로 보톡스보다 마취 필요성이 높다. 비용 미미.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광기/메조건 (선택) :</span> 200만~500만 원. 물광주사 계열에서 균일한 주입과 시술 속도 향상에 효과적. 수요가 확인된 후 도입하라.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 냉장보관 :</span> 제품별 보관 조건 상이. 리쥬란 냉장(2~8°C), 쥬베룩 상온 보관 가능. 반드시 제품별 보관 기준을 확인하라.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 시술 전후 사진 촬영 장비 (권장) :</span> 스킨부스터는 효과가 즉각적이지 않으므로, 시술 전후 비교 사진이 환자 만족도 관리에 필수적이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">(초기 도입 총 투자 합계는 8번 "도입 시 준비사항"의 체크리스트를 참조하라.)</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 시술 전후 사진 촬영 장비 (권장) :</span> 스킨부스터는 효과가 즉각적이지 않으므로, 시술 전후 비교 사진이 환자 만족도 관리에 필수적이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">(초기 도입 총 투자 합계는 8번 "도입 시 준비사항"의 체크리스트를 참조하라.)</p>
     `,
   },
   {
@@ -459,7 +492,7 @@ export const step1Data: Section[] = [
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">6. 도입 난이도 / 교육</h3>
       <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 시술 난이도는 낮음에서 중간이다. 진피층에 균일하게 주입하는 테크닉이 핵심이며, 보톡스·필러에서 축적한 주사 핸들링 경험이 그대로 이전된다.</p>
       <p class="text-[#333] leading-relaxed mb-4">물광주사 계열은 수동 주입 또는 물광기(메조건)를 활용한다. 물광기 사용 시 균일한 주입이 쉬워지지만, 장비 투자(200만~500만 원)가 추가된다. 초기에는 수동 주입으로 시작하고, 수요가 확인되면 장비를 도입하는 단계적 접근이 현실적이다.</p>
-      <p class="text-[#333] leading-relaxed mb-8">핵심 주의사항은 주입 깊이다. 너무 얕으면 표면에 구슬 같은 돌출이 생기고, 너무 깊으면 효과가 떨어진다. 진피층 정중앙을 일관되게 유지하는 것이 시술의 품질을 결정한다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">핵심 주의사항은 주입 깊이다. 너무 얕으면 표면에 구슬 같은 돌출이 생기고, 너무 깊으면 효과가 떨어진다. 진피층 정중앙을 일관되게 유지하는 것이 시술의 품질을 결정한다.</p>
     `,
   },
   {
@@ -470,9 +503,9 @@ export const step1Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-4">스킨부스터의 수익 구조는 보톡스·필러와 결이 다르다. 단건 마진도 높지만, 프로그램 기반(3회 1코스)이라는 구조 자체가 수익의 예측 가능성을 높인다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광주사 1회 :</span> 판매가 약 100,000~150,000원. 재료비 약 30,000~50,000원. 건당 마진 약 70,000~100,000원.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 리쥬란 1회(2cc) :</span> 판매가 약 300,000원. 건당 마진 약 150,000~200,000원.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 1회(2cc) :</span> 판매가 약 264,000원. 건당 마진 약 130,000~170,000원.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 1회(2cc) :</span> 판매가 약 264,000원. 건당 마진 약 130,000~170,000원.</p>
       <p class="text-[#333] leading-relaxed mb-4">3회 1코스 패키지로 운영하면, 1명의 환자가 3~4주 간격으로 3회 내원한다. 리쥬란 기준 1코스 매출 약 900,000원, 마진 약 450,000~600,000원이다.</p>
-      <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명의 프로그램 환자만 확보해도 400만 원 이상 매출이 발생한다. 소수 환자로도 의미 있는 매출 구조가 만들어지는 것이다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">월 5명의 프로그램 환자만 확보해도 400만 원 이상 매출이 발생한다. 소수 환자로도 의미 있는 매출 구조가 만들어지는 것이다. 보톡스(다수 환자, 소액 마진)와 정반대의 구조다.</p>
     `,
   },
   {
@@ -484,8 +517,8 @@ export const step1Data: Section[] = [
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 스킨부스터 제품 1~2개 (필수) :</span> 물광주사 계열 + 리쥬란 또는 쥬베룩 중 1종. 초기 재고 비용 약 55,000~110,000원.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 30~32G 바늘 (필수) :</span> 미세 주입용.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 물광기/메조건 (선택) :</span> 200만~500만 원. 초기에는 수동 주입으로 시작 가능.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림 (권장) :</span> EMLA 크림.</p>
-      <p class="text-[#333] leading-relaxed mb-4"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 0원 (메디스테이션 제공).</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 표면마취 크림 (권장) :</span> EMLA 크림. 스킨부스터는 다점 주입이므로 마취가 환자 만족도에 영향을 준다.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 동의서 양식 (필수) :</span> 0원 (메디스테이션 제공).</p>
       <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">합계 : 약 55,000~110,000원 (물광기 제외). 물광기 포함 시 200만~500만 원 추가.</p>
     `,
   },
@@ -494,13 +527,13 @@ export const step1Data: Section[] = [
     html: `
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">9. 유의사항 / 사고대응</h3>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러 대비 사고 리스크가 낮은 편이다. 진피층 주입이므로 혈관폐색 위험이 필러보다 현저히 낮다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 보톡스·필러 대비 사고 리스크가 낮은 편이다. 진피층 주입이므로 혈관폐색 위험이 필러보다 현저히 낮다. 다만, 다음 부작용에 대한 인지와 대응은 필수다.</p>
       <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 멍·부종 (흔함) :</span> 다점 주입 특성상 미세 멍이 보톡스보다 많을 수 있다. 2~5일 내 소실. 시술 전 반드시 고지.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 구슬 형태 돌출 (가끔) :</span> 주입이 너무 얕을 때 발생. 대부분 1~2주 내 자연 흡수.</p>
-      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 다점 주입이므로 무균 조작이 중요.</p>
-      <p class="text-[#333] leading-relaxed mb-6"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 특이 반응 — 지연성 결절 (드묾) :</span> PDLLA 성분 특성상 시술 후 수주~수개월 뒤 결절이 나타날 수 있다. 환자에게 사전 고지 필수.</p>
-      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 전 필수 고지 사항</h4>
-      <p class="text-[#333] leading-relaxed mb-8">물광주사·리쥬란은 시술 직후부터 피부 보습감을 느낄 수 있으나, 탄력 개선 등 본격적 효과는 2~3회 시술 후 나타난다. 쥬베룩은 효과 발현이 4~6주 후로 느리다. 3회 1코스를 완료해야 의미 있는 결과를 기대할 수 있다는 점을 반드시 안내하라.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 구슬 형태 돌출 (가끔) :</span> 주입이 너무 얕을 때 발생. 대부분 1~2주 내 자연 흡수. 심할 경우 마사지로 분산.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 감염 (드묾) :</span> 다점 주입이므로 무균 조작이 중요. 발적·열감이 지속되면 항생제 투여.</p>
+      <p class="text-[#333] leading-relaxed mb-2"><span class="text-[#1a1a1a] font-bold">▶ 쥬베룩 특이 반응 — 지연성 결절 (드묾) :</span> PDLLA 성분 특성상 시술 후 수주~수개월 뒤 결절이 나타날 수 있다. 환자에게 사전 고지 필수.</p>
+      <h4 class="text-lg font-bold text-[#1a1a1a] mb-3">시술 전 필수 고지 사항 (동의서 포함)</h4>
+      <p class="text-[#333] leading-relaxed mb-4">물광주사·리쥬란은 시술 직후부터 피부 보습감을 느낄 수 있으나, 탄력 개선 등 본격적 효과는 2~3회 시술 후 나타난다. 쥬베룩은 효과 발현이 4~6주 후로 느리다. 3회 1코스를 완료해야 의미 있는 결과를 기대할 수 있다는 점을 반드시 안내하라. 시술 당일 음주와 사우나는 금지. 다점 주입으로 인한 미세 멍과 붉은 자국은 정상 반응이며 수일 내 소실된다.</p>
     `,
   },
   {
@@ -509,7 +542,7 @@ export const step1Data: Section[] = [
       <div class="border-t border-[#eee] my-8"></div>
       <h3 class="text-xl font-semibold text-[#1a1a1a] mb-4">10. 종합 정리</h3>
       <p class="text-[#333] leading-relaxed mb-4">보톡스 없이 필러를 도입하지 않듯, 보톡스와 필러 없이 스킨부스터를 도입하지 않는다. 이 순서는 원칙이다.</p>
-      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 해부학적 고유 영역이 아니다. 하지만 보톡스와 필러로 미용 시술의 기반을 다진 치과에게, 스킨부스터는 세 번째 수익의 축이 된다. 프로그램 기반 구조(3회 1코스)가 만들어내는 예측 가능한 매출, 소수 환자로도 의미 있는 마진, 그리고 환자가 제품명을 지정해서 찾아오는 지명 구매 구조 — 이 세 가지가 스킨부스터를 치과의 미용시술 라인업에서 빼놓을 수 없는 이유다.</p>
+      <p class="text-[#333] leading-relaxed mb-4">스킨부스터는 치과의 해부학적 고유 영역이 아니다. 이 점을 처음부터 인정했다. 하지만 보톡스와 필러로 미용 시술의 기반을 다진 치과에게, 스킨부스터는 세 번째 수익의 축이 된다. 프로그램 기반 구조(3회 1코스)가 만들어내는 예측 가능한 매출, 소수 환자로도 의미 있는 마진, 그리고 환자가 제품명을 지정해서 찾아오는 지명 구매 구조 — 이 세 가지가 스킨부스터를 치과의 미용시술 라인업에서 빼놓을 수 없는 이유다.</p>
       <p class="text-[#1a1a1a] font-bold leading-relaxed mb-8">월 5명. 그것이면 충분하다. 그 5명을 만드는 것은 외부 마케팅이 아니라, 이미 보톡스와 필러로 신뢰를 쌓은 기존 환자에게 "피부도 함께 관리해 보시겠어요?"라는 한마디다.</p>
     `,
   },
