@@ -23,6 +23,29 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
   const measureRef = useRef<HTMLDivElement>(null);
   const [viewMode, setViewMode] = useState<"spread" | "scroll">("spread");
 
+  // 편집 모드
+  const [editMode, setEditMode] = useState(false);
+  const [editedHtmlMap, setEditedHtmlMap] = useState<Record<string, string>>({});
+  const [saveStatus, setSaveStatus] = useState<Record<string, "saving" | "saved" | "error">>({});
+  const originalHtmlRef = useRef<Record<string, string>>({});
+
+  // 저장된 편집 내용 로드
+  useEffect(() => {
+    fetchSavedEdits();
+  }, []);
+
+  const fetchSavedEdits = async () => {
+    try {
+      const res = await fetch("/api/review-content");
+      const data = await res.json();
+      if (data.edits && Object.keys(data.edits).length > 0) {
+        setEditedHtmlMap(data.edits);
+      }
+    } catch {
+      // 무시 — 원본 콘텐츠 사용
+    }
+  };
+
   useEffect(() => {
     fetchAllCounts();
   }, []);
@@ -33,15 +56,20 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
   }, [activeTab]);
 
   // 섹션을 페이지 단위로 분할
-  const sections = useMemo(() => contentData[activeTab] || [], [activeTab]);
+  const sections = useMemo(() => {
+    const baseSections = contentData[activeTab] || [];
+    // 편집 내용 병합
+    return baseSections.map((s) => ({
+      ...s,
+      html: editedHtmlMap[s.id] ?? s.html,
+    }));
+  }, [activeTab, editedHtmlMap]);
 
   useEffect(() => {
     if (sections.length === 0) {
       setPages([]);
       return;
     }
-    // 각 섹션을 하나의 페이지 아이템으로 취급
-    // 실제 높이 측정 후 페이지 분할
     paginateSections();
   }, [sections]);
 
@@ -99,6 +127,58 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     }
   };
 
+  // 편집 내용 저장
+  const saveEdit = useCallback(async (sectionId: string, html: string) => {
+    setSaveStatus((prev) => ({ ...prev, [sectionId]: "saving" }));
+    try {
+      const res = await fetch("/api/review-content", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          section_id: sectionId,
+          html,
+          updated_by: authorName,
+        }),
+      });
+      if (res.ok) {
+        setEditedHtmlMap((prev) => ({ ...prev, [sectionId]: html }));
+        setSaveStatus((prev) => ({ ...prev, [sectionId]: "saved" }));
+        // 2초 후 상태 클리어
+        setTimeout(() => {
+          setSaveStatus((prev) => {
+            const next = { ...prev };
+            if (next[sectionId] === "saved") delete next[sectionId];
+            return next;
+          });
+        }, 2000);
+      } else {
+        setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+      }
+    } catch {
+      setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+    }
+  }, [authorName]);
+
+  // blur 핸들러: 편집 내용이 변경되었으면 저장
+  const handleBlur = useCallback(
+    (sectionId: string, e: React.FocusEvent<HTMLDivElement>) => {
+      const newHtml = e.currentTarget.innerHTML;
+      const originalHtml = originalHtmlRef.current[sectionId];
+      if (newHtml && newHtml !== originalHtml) {
+        saveEdit(sectionId, newHtml);
+      }
+    },
+    [saveEdit]
+  );
+
+  // focus 핸들러: 편집 시작 시 원본 저장
+  const handleFocus = useCallback(
+    (sectionId: string, e: React.FocusEvent<HTMLDivElement>) => {
+      originalHtmlRef.current[sectionId] = e.currentTarget.innerHTML;
+    },
+    []
+  );
+
   const totalSpreads = Math.ceil(pages.length / 2);
   const leftPageIndex = currentSpread * 2;
   const rightPageIndex = currentSpread * 2 + 1;
@@ -113,6 +193,8 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
   // 키보드 네비게이션
   useEffect(() => {
     const handler = (e: KeyboardEvent) => {
+      // 편집 모드에서는 키보드 네비게이션 비활성화
+      if (editMode) return;
       if (e.key === "ArrowRight" || e.key === " ") {
         e.preventDefault();
         goNext();
@@ -124,7 +206,7 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
-  }, [currentSpread, totalSpreads]);
+  }, [currentSpread, totalSpreads, editMode]);
 
   const handlePrint = () => {
     window.print();
@@ -135,6 +217,76 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     for (const s of sections) map.set(s.id, s);
     return map;
   }, [sections]);
+
+  // 섹션 클릭 핸들러
+  const handleSectionClick = useCallback(
+    (sectionId: string) => {
+      // 편집 모드에서는 코멘트 패널 열지 않음
+      if (editMode) return;
+      setActiveSectionId(activeSectionId === sectionId ? null : sectionId);
+    },
+    [editMode, activeSectionId]
+  );
+
+  // 섹션 렌더링 헬퍼
+  const renderSection = (section: { id: string; html: string }) => {
+    const status = saveStatus[section.id];
+
+    if (editMode) {
+      return (
+        <div
+          key={section.id}
+          className="relative mb-8 rounded-lg px-4 py-2 -mx-4 transition-colors border border-dashed border-[#C4929B]/30 hover:border-[#C4929B]/60"
+        >
+          {status && (
+            <span
+              className={`absolute -right-2 -top-2 px-2 py-0.5 rounded-full text-[10px] font-medium z-10 ${
+                status === "saving"
+                  ? "bg-yellow-100 text-yellow-700"
+                  : status === "saved"
+                  ? "bg-green-100 text-green-700"
+                  : "bg-red-100 text-red-700"
+              }`}
+            >
+              {status === "saving" ? "저장 중..." : status === "saved" ? "저장됨" : "오류"}
+            </span>
+          )}
+          {commentCounts[section.id] && !status && (
+            <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
+              {commentCounts[section.id]}
+            </span>
+          )}
+          <div
+            contentEditable
+            suppressContentEditableWarning
+            onFocus={(e) => handleFocus(section.id, e)}
+            onBlur={(e) => handleBlur(section.id, e)}
+            dangerouslySetInnerHTML={{ __html: section.html }}
+            className="outline-none focus:ring-1 focus:ring-[#C4929B]/40 rounded"
+          />
+        </div>
+      );
+    }
+
+    return (
+      <div
+        key={section.id}
+        className={`relative mb-8 cursor-pointer rounded-lg px-4 py-2 -mx-4 transition-colors ${
+          activeSectionId === section.id
+            ? "bg-[#C4929B]/5 ring-1 ring-[#C4929B]/20"
+            : "hover:bg-[#f9f5f6]"
+        }`}
+        onClick={() => handleSectionClick(section.id)}
+      >
+        {commentCounts[section.id] && (
+          <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
+            {commentCounts[section.id]}
+          </span>
+        )}
+        <div dangerouslySetInnerHTML={{ __html: section.html }} />
+      </div>
+    );
+  };
 
   const renderPage = (pageIndex: number, side: "left" | "right") => {
     const pageSections = pages[pageIndex];
@@ -168,28 +320,7 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
         {pageSections.map((sectionId) => {
           const section = sectionMap.get(sectionId);
           if (!section) return null;
-          return (
-            <div
-              key={section.id}
-              className={`relative mb-8 cursor-pointer rounded-lg px-4 py-2 -mx-4 transition-colors ${
-                activeSectionId === section.id
-                  ? "bg-[#C4929B]/5 ring-1 ring-[#C4929B]/20"
-                  : "hover:bg-[#f9f5f6]"
-              }`}
-              onClick={() =>
-                setActiveSectionId(
-                  activeSectionId === section.id ? null : section.id
-                )
-              }
-            >
-              {commentCounts[section.id] && (
-                <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
-                  {commentCounts[section.id]}
-                </span>
-              )}
-              <div dangerouslySetInnerHTML={{ __html: section.html }} />
-            </div>
-          );
+          return renderSection(section);
         })}
         {/* 페이지 번호 */}
         <div
@@ -233,6 +364,25 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
                 }`}
               >
                 📜 스크롤
+              </button>
+
+              <div className="w-px h-5 bg-[#ccc] mx-1" />
+
+              <button
+                onClick={() => {
+                  setEditMode(!editMode);
+                  if (editMode) {
+                    // 편집 모드 종료 시 코멘트 패널 닫기
+                    setActiveSectionId(null);
+                  }
+                }}
+                className={`px-3 py-1.5 text-xs rounded-md transition-colors ${
+                  editMode
+                    ? "bg-[#C4929B] text-white"
+                    : "bg-white text-[#666] hover:bg-[#f0f0f0]"
+                }`}
+              >
+                {editMode ? "✏️ 편집 모드 ON" : "✏️ 편집 모드"}
               </button>
             </div>
 
@@ -309,28 +459,7 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
                   {pageSections.map((sectionId) => {
                     const section = sectionMap.get(sectionId);
                     if (!section) return null;
-                    return (
-                      <div
-                        key={section.id}
-                        className={`relative mb-8 cursor-pointer rounded-lg px-4 py-2 -mx-4 transition-colors ${
-                          activeSectionId === section.id
-                            ? "bg-[#C4929B]/5 ring-1 ring-[#C4929B]/20"
-                            : "hover:bg-[#f9f5f6]"
-                        }`}
-                        onClick={() =>
-                          setActiveSectionId(
-                            activeSectionId === section.id ? null : section.id
-                          )
-                        }
-                      >
-                        {commentCounts[section.id] && (
-                          <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
-                            {commentCounts[section.id]}
-                          </span>
-                        )}
-                        <div dangerouslySetInnerHTML={{ __html: section.html }} />
-                      </div>
-                    );
+                    return renderSection(section);
                   })}
                   {/* 페이지 번호 */}
                   <div className={`absolute bottom-6 ${idx % 2 === 0 ? "left-10" : "right-10"} text-xs text-[#bbb]`}>
@@ -342,8 +471,8 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
           )}
         </div>
 
-        {/* 코멘트 패널 */}
-        {activeSectionId && (
+        {/* 코멘트 패널 — 편집 모드가 아닐 때만 표시 */}
+        {activeSectionId && !editMode && (
           <CommentPanel
             sectionId={activeSectionId}
             authorName={authorName}
