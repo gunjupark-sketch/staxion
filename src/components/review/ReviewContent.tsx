@@ -4,6 +4,179 @@ import { useState, useEffect, useRef, useCallback, useMemo } from "react";
 import { CommentPanel } from "./CommentPanel";
 import { contentData } from "./content-data";
 
+// ─── 플로팅 서식 툴바 ───
+function FormatToolbar() {
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+  const [activeFormats, setActiveFormats] = useState<Set<string>>(new Set());
+  const toolbarRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const updateToolbar = () => {
+      const sel = window.getSelection();
+      if (!sel || sel.isCollapsed || !sel.rangeCount) {
+        setPos(null);
+        return;
+      }
+
+      // contentEditable 내부인지 확인
+      const anchor = sel.anchorNode?.parentElement?.closest("[contenteditable]");
+      if (!anchor) {
+        setPos(null);
+        return;
+      }
+
+      const range = sel.getRangeAt(0);
+      const rect = range.getBoundingClientRect();
+      if (rect.width === 0) {
+        setPos(null);
+        return;
+      }
+
+      // 현재 서식 상태 감지
+      const formats = new Set<string>();
+      if (document.queryCommandState("bold")) formats.add("bold");
+      if (document.queryCommandState("italic")) formats.add("italic");
+      if (document.queryCommandState("underline")) formats.add("underline");
+      setActiveFormats(formats);
+
+      setPos({
+        top: rect.top + window.scrollY - 48,
+        left: rect.left + window.scrollX + rect.width / 2,
+      });
+    };
+
+    document.addEventListener("selectionchange", updateToolbar);
+    return () => document.removeEventListener("selectionchange", updateToolbar);
+  }, []);
+
+  const exec = (cmd: string, value?: string) => {
+    document.execCommand(cmd, false, value);
+    // 서식 적용 후 상태 갱신
+    const formats = new Set<string>();
+    if (document.queryCommandState("bold")) formats.add("bold");
+    if (document.queryCommandState("italic")) formats.add("italic");
+    if (document.queryCommandState("underline")) formats.add("underline");
+    setActiveFormats(formats);
+  };
+
+  if (!pos) return null;
+
+  const btnBase =
+    "w-8 h-8 flex items-center justify-center rounded text-sm transition-colors";
+  const btnActive = "bg-[#C4929B] text-white";
+  const btnNormal = "text-[#555] hover:bg-[#f0f0f0]";
+
+  return (
+    <div
+      ref={toolbarRef}
+      className="fixed z-50 flex items-center gap-0.5 bg-white rounded-lg shadow-lg border border-[#ddd] px-1 py-1"
+      style={{ top: pos.top, left: pos.left, transform: "translateX(-50%)" }}
+      onMouseDown={(e) => e.preventDefault()}
+    >
+      {/* 글자 크기 */}
+      <select
+        className="h-8 text-xs border-none bg-transparent text-[#555] focus:outline-none cursor-pointer px-1"
+        onChange={(e) => {
+          exec("fontSize", e.target.value);
+          e.target.value = "";
+        }}
+        defaultValue=""
+      >
+        <option value="" disabled>
+          크기
+        </option>
+        <option value="1">아주 작게</option>
+        <option value="2">작게</option>
+        <option value="3">보통</option>
+        <option value="4">크게</option>
+        <option value="5">아주 크게</option>
+        <option value="6">매우 크게</option>
+        <option value="7">최대</option>
+      </select>
+
+      <div className="w-px h-5 bg-[#ddd] mx-0.5" />
+
+      {/* 제목 레벨 */}
+      <select
+        className="h-8 text-xs border-none bg-transparent text-[#555] focus:outline-none cursor-pointer px-1"
+        onChange={(e) => {
+          exec("formatBlock", e.target.value);
+          e.target.value = "";
+        }}
+        defaultValue=""
+      >
+        <option value="" disabled>
+          스타일
+        </option>
+        <option value="h1">제목 1</option>
+        <option value="h2">제목 2</option>
+        <option value="h3">제목 3</option>
+        <option value="h4">제목 4</option>
+        <option value="p">본문</option>
+      </select>
+
+      <div className="w-px h-5 bg-[#ddd] mx-0.5" />
+
+      <button
+        className={`${btnBase} font-bold ${activeFormats.has("bold") ? btnActive : btnNormal}`}
+        onClick={() => exec("bold")}
+        title="굵게 (Cmd+B)"
+      >
+        B
+      </button>
+      <button
+        className={`${btnBase} italic ${activeFormats.has("italic") ? btnActive : btnNormal}`}
+        onClick={() => exec("italic")}
+        title="기울임 (Cmd+I)"
+      >
+        I
+      </button>
+      <button
+        className={`${btnBase} underline ${activeFormats.has("underline") ? btnActive : btnNormal}`}
+        onClick={() => exec("underline")}
+        title="밑줄 (Cmd+U)"
+      >
+        U
+      </button>
+
+      <div className="w-px h-5 bg-[#ddd] mx-0.5" />
+
+      {/* 텍스트 색상 */}
+      <label className={`${btnBase} ${btnNormal} cursor-pointer relative`} title="글자 색">
+        <span className="text-base">A</span>
+        <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-1 bg-[#C4929B] rounded-full" />
+        <input
+          type="color"
+          className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+          onChange={(e) => exec("foreColor", e.target.value)}
+        />
+      </label>
+
+      {/* 배경 색상 */}
+      <label className={`${btnBase} ${btnNormal} cursor-pointer relative`} title="배경 색">
+        <span className="text-base bg-yellow-200 px-1 rounded">A</span>
+        <input
+          type="color"
+          defaultValue="#FFFF00"
+          className="absolute inset-0 opacity-0 cursor-pointer w-full h-full"
+          onChange={(e) => exec("hiliteColor", e.target.value)}
+        />
+      </label>
+
+      <div className="w-px h-5 bg-[#ddd] mx-0.5" />
+
+      {/* 서식 제거 */}
+      <button
+        className={`${btnBase} ${btnNormal}`}
+        onClick={() => exec("removeFormat")}
+        title="서식 제거"
+      >
+        <span className="text-xs line-through">T</span>
+      </button>
+    </div>
+  );
+}
+
 interface ReviewContentProps {
   activeTab: string;
   authorName: string;
@@ -470,6 +643,9 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
             </div>
           )}
         </div>
+
+          {/* 서식 툴바 — 편집 모드일 때만 표시 */}
+        {editMode && <FormatToolbar />}
 
         {/* 코멘트 패널 — 편집 모드가 아닐 때만 표시 */}
         {activeSectionId && !editMode && (
