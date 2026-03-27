@@ -71,7 +71,11 @@ function FormatToolbar() {
       ref={toolbarRef}
       className="fixed z-50 flex items-center gap-0.5 bg-white rounded-lg shadow-lg border border-[#ddd] px-1 py-1"
       style={{ top: pos.top, left: pos.left, transform: "translateX(-50%)" }}
-      onMouseDown={(e) => e.preventDefault()}
+      onMouseDown={(e) => {
+        // select, option 요소는 기본 동작 허용 (드롭다운 열리도록)
+        const tag = (e.target as HTMLElement).tagName;
+        if (tag !== "SELECT" && tag !== "OPTION") e.preventDefault();
+      }}
     >
       {/* 글자 크기 */}
       <select
