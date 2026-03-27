@@ -220,6 +220,8 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
       }
     } catch {
       // 무시 — 원본 콘텐츠 사용
+    } finally {
+      setEditsLoaded(true);
     }
   };
 
@@ -304,48 +306,61 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     }
   };
 
-  // 편집 내용 저장
-  const saveEdit = useCallback(async (sectionId: string, html: string) => {
-    setSaveStatus((prev) => ({ ...prev, [sectionId]: "saving" }));
-    try {
-      const res = await fetch("/api/review-content", {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          section_id: sectionId,
-          html,
-          updated_by: authorName,
-        }),
-      });
-      if (res.ok) {
-        setEditedHtmlMap((prev) => ({ ...prev, [sectionId]: html }));
-        setSaveStatus((prev) => ({ ...prev, [sectionId]: "saved" }));
-        // 2초 후 상태 클리어
-        setTimeout(() => {
-          setSaveStatus((prev) => {
-            const next = { ...prev };
-            if (next[sectionId] === "saved") delete next[sectionId];
-            return next;
-          });
-        }, 2000);
-      } else {
-        setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
-      }
-    } catch {
-      setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
-    }
-  }, [authorName]);
+  // 미저장 변경 사항 추적
+  const [pendingChanges, setPendingChanges] = useState<Record<string, string>>({});
+  const [isSaving, setIsSaving] = useState(false);
 
-  // blur 핸들러: 편집 내용이 변경되었으면 저장
+  // 전체 저장
+  const saveAllChanges = useCallback(async () => {
+    const entries = Object.entries(pendingChanges);
+    if (entries.length === 0) return;
+
+    setIsSaving(true);
+    let allOk = true;
+    for (const [sectionId, html] of entries) {
+      setSaveStatus((prev) => ({ ...prev, [sectionId]: "saving" }));
+      try {
+        const res = await fetch("/api/review-content", {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            section_id: sectionId,
+            html,
+            updated_by: authorName,
+          }),
+        });
+        if (res.ok) {
+          setEditedHtmlMap((prev) => ({ ...prev, [sectionId]: html }));
+          setSaveStatus((prev) => ({ ...prev, [sectionId]: "saved" }));
+        } else {
+          setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+          allOk = false;
+        }
+      } catch {
+        setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+        allOk = false;
+      }
+    }
+    if (allOk) {
+      setPendingChanges({});
+    }
+    setIsSaving(false);
+    // 2초 후 상태 배지 클리어
+    setTimeout(() => {
+      setSaveStatus({});
+    }, 2000);
+  }, [pendingChanges, authorName]);
+
+  // blur 핸들러: 변경 감지만 하고 pendingChanges에 추가 (저장은 안 함)
   const handleBlur = useCallback(
     (sectionId: string, e: React.FocusEvent<HTMLDivElement>) => {
       const newHtml = e.currentTarget.innerHTML;
       const originalHtml = originalHtmlRef.current[sectionId];
       if (newHtml && newHtml !== originalHtml) {
-        saveEdit(sectionId, newHtml);
+        setPendingChanges((prev) => ({ ...prev, [sectionId]: newHtml }));
       }
     },
-    [saveEdit]
+    []
   );
 
   // focus 핸들러: 편집 시작 시 원본 저장
@@ -355,6 +370,8 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     },
     []
   );
+
+  const pendingCount = Object.keys(pendingChanges).length;
 
   const totalSpreads = Math.ceil(pages.length / 2);
   const leftPageIndex = currentSpread * 2;
@@ -405,14 +422,19 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     [editMode, activeSectionId]
   );
 
+  // 편집 내용 로드 완료 여부 추적
+  const [editsLoaded, setEditsLoaded] = useState(false);
+
   // 섹션 렌더링 헬퍼
   const renderSection = (section: { id: string; html: string }) => {
     const status = saveStatus[section.id];
+    // html 내용 기반 key로 강제 리렌더링 (contentEditable DOM 갱신용)
+    const htmlKey = `${section.id}-${section.html.length}`;
 
     if (editMode) {
       return (
         <div
-          key={section.id}
+          key={htmlKey}
           className="relative mb-8 rounded-lg px-4 py-2 -mx-4 transition-colors border border-dashed border-[#C4929B]/30 hover:border-[#C4929B]/60"
         >
           {status && (
@@ -428,7 +450,12 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
               {status === "saving" ? "저장 중..." : status === "saved" ? "저장됨" : "오류"}
             </span>
           )}
-          {commentCounts[section.id] && !status && (
+          {pendingChanges[section.id] && !status && (
+            <span className="absolute -right-2 -top-2 px-2 py-0.5 rounded-full text-[10px] font-medium z-10 bg-orange-100 text-orange-700">
+              미저장
+            </span>
+          )}
+          {commentCounts[section.id] && !status && !pendingChanges[section.id] && (
             <span className="absolute -right-2 -top-2 w-5 h-5 rounded-full bg-[#C4929B] text-white text-[10px] flex items-center justify-center">
               {commentCounts[section.id]}
             </span>
@@ -447,7 +474,7 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
 
     return (
       <div
-        key={section.id}
+        key={htmlKey}
         className={`relative mb-8 cursor-pointer rounded-lg px-4 py-2 -mx-4 transition-colors ${
           activeSectionId === section.id
             ? "bg-[#C4929B]/5 ring-1 ring-[#C4929B]/20"
@@ -547,9 +574,12 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
 
               <button
                 onClick={() => {
+                  if (editMode && pendingCount > 0) {
+                    if (!confirm(`저장하지 않은 변경 ${pendingCount}건이 있습니다. 편집 모드를 종료하시겠습니까?`)) return;
+                    setPendingChanges({});
+                  }
                   setEditMode(!editMode);
                   if (editMode) {
-                    // 편집 모드 종료 시 코멘트 패널 닫기
                     setActiveSectionId(null);
                   }
                 }}
@@ -561,6 +591,20 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
               >
                 {editMode ? "✏️ 편집 모드 ON" : "✏️ 편집 모드"}
               </button>
+
+              {editMode && (
+                <button
+                  onClick={saveAllChanges}
+                  disabled={pendingCount === 0 || isSaving}
+                  className={`px-3 py-1.5 text-xs rounded-md transition-colors ${
+                    pendingCount > 0
+                      ? "bg-[#1a1a1a] text-white hover:bg-[#333]"
+                      : "bg-white text-[#ccc] cursor-not-allowed"
+                  }`}
+                >
+                  {isSaving ? "저장 중..." : pendingCount > 0 ? `💾 저장 (${pendingCount})` : "💾 저장"}
+                </button>
+              )}
             </div>
 
             {viewMode === "spread" && pages.length > 0 && (
