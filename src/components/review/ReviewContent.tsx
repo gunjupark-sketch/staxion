@@ -351,16 +351,35 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
     }, 2000);
   }, [pendingChanges, authorName]);
 
-  // blur 핸들러: 변경 감지만 하고 pendingChanges에 추가 (저장은 안 함)
+  // blur 자동저장 + pendingChanges 추적 (2중 안전장치)
   const handleBlur = useCallback(
     (sectionId: string, e: React.FocusEvent<HTMLDivElement>) => {
       const newHtml = e.currentTarget.innerHTML;
       const originalHtml = originalHtmlRef.current[sectionId];
       if (newHtml && newHtml !== originalHtml) {
+        // pendingChanges에 추가
         setPendingChanges((prev) => ({ ...prev, [sectionId]: newHtml }));
+        // 자동저장도 실행
+        setSaveStatus((prev) => ({ ...prev, [sectionId]: "saving" }));
+        fetch("/api/review-content", {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ section_id: sectionId, html: newHtml, updated_by: authorName }),
+        }).then((res) => {
+          if (res.ok) {
+            setEditedHtmlMap((prev) => ({ ...prev, [sectionId]: newHtml }));
+            setPendingChanges((prev) => { const n = { ...prev }; delete n[sectionId]; return n; });
+            setSaveStatus((prev) => ({ ...prev, [sectionId]: "saved" }));
+            setTimeout(() => setSaveStatus((prev) => { const n = { ...prev }; if (n[sectionId] === "saved") delete n[sectionId]; return n; }), 2000);
+          } else {
+            setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+          }
+        }).catch(() => {
+          setSaveStatus((prev) => ({ ...prev, [sectionId]: "error" }));
+        });
       }
     },
-    []
+    [authorName]
   );
 
   // focus 핸들러: 편집 시작 시 원본 저장
@@ -594,15 +613,17 @@ export function ReviewContent({ activeTab, authorName }: ReviewContentProps) {
 
               {editMode && (
                 <button
-                  onClick={saveAllChanges}
-                  disabled={pendingCount === 0 || isSaving}
+                  onMouseDown={(e) => {
+                    e.preventDefault(); // blur 방지
+                    saveAllChanges();
+                  }}
                   className={`px-3 py-1.5 text-xs rounded-md transition-colors ${
-                    pendingCount > 0
+                    pendingCount > 0 && !isSaving
                       ? "bg-[#1a1a1a] text-white hover:bg-[#333]"
-                      : "bg-white text-[#ccc] cursor-not-allowed"
+                      : "bg-white text-[#ccc]"
                   }`}
                 >
-                  {isSaving ? "저장 중..." : pendingCount > 0 ? `💾 저장 (${pendingCount})` : "💾 저장"}
+                  {isSaving ? "저장 중..." : pendingCount > 0 ? `💾 저장 (${pendingCount})` : "💾 저장됨"}
                 </button>
               )}
             </div>
